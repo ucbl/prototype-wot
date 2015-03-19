@@ -1,0 +1,62 @@
+{
+    "@context" : "http://schema.org",
+    "@type": "Thing",
+    "name": "Phone",
+    "description": "A simple phone",
+    "object": {
+				"@context": "http://localhost:3232/vocab#",
+				"@type" : "phone",
+				"name" : "phone", 
+				"capabilities" : [
+					{
+				      "@id": "http://localhost:3232/capability/call",
+				      "@type": [
+				        "owl:NamedIndividual",
+				        "http://localhost:3232/vocab#Capability"
+				      ]
+				    },
+				    {
+				      "@id": "http://localhost:3232/capability/download",
+				      "@type": [
+				        "owl:NamedIndividual",
+				        "http://localhost:3232/vocab#Capability"
+				      ]
+				    },
+				    {
+				      "@id": "http://localhost:3232/capability/photo",
+				      "@type": [
+				        "owl:NamedIndividual",
+				        "http://localhost:3232/vocab#Capability"
+				      ]
+				    },
+				    {
+				      "@id": "http://localhost:3232/capability/video",
+				      "@type": [
+				        "owl:NamedIndividual",
+				        "http://localhost:3232/vocab#Capability"
+				      ]
+				    },
+				    {
+				      "@id": "http://localhost:3232/capability/sms",
+				      "@type": [
+				        "owl:NamedIndividual",
+				        "http://localhost:3232/vocab#Capability"
+				      ]
+				    },
+				    {
+				      "@id": "http://localhost:3232/capability/startApp",
+				      "@type": [
+				        "owl:NamedIndividual",
+				        "http://localhost:3232/vocab#Capability"
+				      ]
+				    },
+				    {
+				      "@id": "http://localhost:3232/capability/stopApp",
+				      "@type": [
+				        "owl:NamedIndividual",
+				        "http://localhost:3232/vocab#Capability"
+				      ]
+				    }
+				]
+			}
+}

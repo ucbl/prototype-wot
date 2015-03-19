@@ -1,0 +1,198 @@
+{
+  "@id": "http://localhost:3333/vocab",
+  "@type": "ApiDocumentation",
+  "entrypoint": "http://localhost:3333/",
+  "@context": {
+    "vocab": "http://localhost:3333/vocab#",
+    "hydra": "http://www.w3.org/ns/hydra/core#",
+    "ApiDocumentation": "hydra:ApiDocumentation",
+    "property": {
+      "@id": "hydra:property",
+      "@type": "@id"
+    },
+    "readonly": "hydra:readonly",
+    "writeonly": "hydra:writeonly",
+    "supportedClass": "hydra:supportedClass",
+    "supportedProperty": "hydra:supportedProperty",
+    "supportedOperation": "hydra:supportedOperation",
+    "method": "hydra:method",
+    "expects": {
+      "@id": "hydra:expects",
+      "@type": "@id"
+    },
+    "returns": {
+      "@id": "hydra:returns",
+      "@type": "@id"
+    },
+    "statusCodes": "hydra:statusCodes",
+    "code": "hydra:statusCode",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "description": "rdfs:comment",
+    "domain": {
+      "@id": "rdfs:domain",
+      "@type": "@id"
+    },
+    "range": {
+      "@id": "rdfs:range",
+      "@type": "@id"
+    },
+    "subClassOf": {
+      "@id": "rdfs:subClassOf",
+      "@type": "@id"
+    }
+  },
+  "supportedClass": [
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#Resource",
+      "@type": "hydra:Class",
+      "hydra:title": "Resource",
+      "hydra:description": null,
+      "supportedOperation": [],
+      "supportedProperty": []
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#Collection",
+      "@type": "hydra:Class",
+      "hydra:title": "Collection",
+      "hydra:description": null,
+      "supportedOperation": [],
+      "supportedProperty": [
+        {
+          "property": "http://www.w3.org/ns/hydra/core#member",
+          "hydra:title": "cimaObjects",
+          "hydra:description": "The CIMA objects of this collection.",
+          "required": null,
+          "readonly": false,
+          "writeonly": false
+        },
+        {
+          "property": "http://www.w3.org/ns/hydra/core#member",
+          "hydra:title": "capabilities",
+          "hydra:description": "The capabilities of this collection.",
+          "required": null,
+          "readonly": false,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:CimaObject",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "CimaObject",
+      "description": "A CIMA object.",
+      "supportedOperation": [
+        {
+          "@id": "_:cimaObject",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "Retrieves a CIMA object",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:CimaObject",
+          "statusCodes": []
+        }
+      ],
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:CimaObject/name",
+            "@type": "rdf:Property",
+            "label": "name",
+            "description": "The explicit name of the CIMA object",
+            "domain": "vocab:CimaObject",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "name",
+          "hydra:description": "The explicit name of the CIMA object",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:CimaObject/description",
+            "@type": "rdf:Property",
+            "label": "description",
+            "description": "The description of the CIMA object",
+            "domain": "vocab:CimaObject",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "description",
+          "hydra:description": "The description of the CIMA object",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:CimaObject/capabilities",
+            "@type": "rdf:Property",
+            "label": "capabilities",
+            "description": "The capabilities of a CIMA object",
+            "domain": "vocab:CimaObject",
+            "range": "vocab:Collection",
+            "supportedOperation": []
+          },
+          "hydra:title": "capabilities",
+          "hydra:description": "The capabilities of a CIMA object",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:EntryPoint",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "EntryPoint",
+      "description": "The main entry point of the CIMA Platform.",
+      "supportedOperation": [
+        {
+          "@id": "_:entry_point",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "The CIMA Platform main entry point.",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:EntryPoint",
+          "statusCodes": []
+        }
+      ],
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:EntryPoint/cima",
+            "@type": "hydra:Link",
+            "label": "cima",
+            "description": "The entrypoint for the CIMA objects operation",
+            "domain": "vocab:EntryPoint",
+            "range": "http://www.w3.org/ns/hydra/core#Collection",
+            "supportedOperation": [
+              {
+                "@id": "_:cima",
+                "@type": "hydra:Operation",
+                "method": "GET",
+                "label": "The list of all the CIMA objects",
+                "description": null,
+                "expects": null,
+                "returns": "hydra:Collection",
+                "statusCodes": []
+              }
+            ]
+          },
+          "hydra:title": "cima",
+          "hydra:description": "The list of all the CIMA objects.",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        }
+      ]
+    }
+  ]
+}

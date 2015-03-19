@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="avatar">
+<head>
+	<meta charset="utf-8" />
+	<title>Avatar Architecture Prototype</title>
+
+	<!-- Site CSS -->
+	<link href='http://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'/>
+	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'/>
+	<link rel="stylesheet" type="text/css" href="site/css/stylesheets/public.css"/>
+
+	<!-- Site JS -->
+	<script src="site/js/utils/angular.min.js"></script>
+	<script src="site/js/utils/angular-route.min.js"></script>
+	<script src="site/js/utils/angular-resource.min.js"></script>
+	<script src="site/js/utils/jquery.min.js"></script>
+	<script src="site/js/utils/jsonld.js"></script>
+	<script src="site/js/main.js"></script>
+
+	<!-- Builder -->
+	<script src="modules/Builder/builder.ctrl.js"></script>
+	<script src="modules/Builder/initialisation.js"></script>
+
+	<!-- Module Capabilities Manager -->
+	<script src="modules/CapabilitiesManager/cm-service.js"></script>
+	<script src="modules/CapabilitiesManager/CapabilitiesManager.js"></script>
+
+	<!-- Module Appliance Communication Manager -->
+	<script src="modules/ApplianceCommunicationManager/ac-service.js"></script>
+	<script src="modules/ApplianceCommunicationManager/ApplianceCommunicationManager.js"></script>
+	<script src="modules/ApplianceCommunicationManager/CimaObject.js"></script>
+
+	<!-- Module Local Functionalities Manager -->
+	<script src="modules/LocalFunctionalitiesManager/lf-service.js"></script>
+	<script src="modules/LocalFunctionalitiesManager/LocalFunctionalityManager.js"></script>
+
+	<!-- Module Context Manager -->
+	<script src="modules/ContextManager/cmng-service.js"></script>
+	<script src="modules/ContextManager/ContextManager.js"></script>
+
+	<!-- Module CollaborativeFunctionalitiesManager -->
+	<script src="modules/CollaborativeFunctionalitiesManager/cfm-service.js"></script>
+	<script src="modules/CollaborativeFunctionalitiesManager/CollaborativeFunctionalitiesManager.js"></script>
+
+</head>
+<body id="bodyFrame" ng-controller="mainCtrl" data-ng-init="reloadAll();">
+
+	<div class="contentAll">
+	
+		<div class="header">
+			<h1>ASAWoO Prototype</h1>
+		</div>
+
+		<div class="contentWrapper">
+			<div class="contentLeft">	
+				<div class="listAvailableObjects" ng-controller="builderCtrl">
+					<div class="button buttonSimple" ng-click="getAvailableObjects()">
+						Reload objects
+					</div>
+					<div class="listAvailableObjectsInfo">
+						<div ng-repeat="cimaObject in cimaObjects">
+							<div ng-class="{'buttonPublicSelected':cimaObject.objectExists}" class="button buttonPublic"
+								ng-click="createAvatar(cimaObject.id)">
+								{{cimaObject.name}}
+							</div>
+						</div>
+					</div>
+					<div class="button buttonSimple" ng-click="getFunctionalitiesServer()">
+						Mashup
+					</div>
+				</div>
+			</div>
+			<div class="contentRight">
+				<div class="listFunctionalities">
+					<div class="button buttonSimple" ng-click="getAllFunctionalities()">
+						Reload exposed functionalities
+					</div>
+					<div class="functionalitiesWrapper">
+						<div class="functionalitiesLeft">
+							<div class="listFunctionalitiesInfo">
+								<h2>Loaded avatars : </h2>
+								<div class="listFunctionalitiesItem" ng-repeat="functionalityServer in functionalitiesServer">
+									<div class="functionalityTitle">Avatar :</div>
+									<div class="functionalityAvatar">
+										<div class="functionalityItem" ng-click="loadInfo(functionalityServer.idAvatar)">
+											{{functionalityServer.idAvatar}}
+										</div>
+									</div>
+									<div class="functionalityTitle">Functionalities :</div>
+									<div class="functionalityList">
+										<div class="functionalityItem functionalityItemIns" ng-click="loadInfo(functionalityServerItem)" ng-repeat="functionalityServerItem in functionalityServer.functionalities">
+											{{functionalityServerItem}}
+										</div>
+									</div>								
+								</div>
+							</div>
+							<div class="listFunctionalitiesInfo listFunctionalitiesInfoMashup">
+								<h2>Functionality mashups : </h2>
+								<div class="listFunctionalitiesItem" ng-repeat="functionalityMashup in functionalitiesMashup">
+									<div class="functionalityItem" ng-click="loadInfo(functionalityMashup)">
+										{{functionalityMashup}}
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="functionalitiesRight">
+							<div class="responseInfo">
+								<pre>{{responseInfo | json}}</pre>
+							</div>
+						</div>
+						<div class="clearer"></div>
+					</div>
+				</div>
+			</div>
+			<div class="clearer"></div>
+		</div>
+
+		<div class="footer">
+			<div class="footerIns">
+				<p>ASAWoO Prototype is a LIRIS Project</p>
+				<p>Created by <strong>Lionel Medini</strong> and <strong>Pierre-Antoine Champin</strong>. Prototyped by <strong>Raul Leano Martinet</strong></p>
+			</div>
+		</div>
+
+
+	</div>
+
+</body>
+</html>

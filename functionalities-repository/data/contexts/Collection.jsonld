@@ -1,0 +1,9 @@
+{
+    "@context": {
+        "hydra": "http://www.w3.org/ns/hydra/core#",
+        "vocab": "http://localhost:3232/vocab#",
+        "Collection": "http://www.w3.org/ns/hydra/core#Collection",
+        "capabilities": "http://www.w3.org/ns/hydra/core#member",
+        "functionalities": "http://www.w3.org/ns/hydra/core#member"
+    }
+}

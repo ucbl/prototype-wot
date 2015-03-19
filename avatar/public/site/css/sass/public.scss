@@ -1,0 +1,204 @@
+@import "compass/reset";
+
+$black: #000;
+$white: #FFF;
+$whitegray: #EFEFEF;
+$green: #24b375;
+$red: #ed001b;
+$yellow: #dcbd15;
+$orange: #8bbcb9;
+$blue: #0367b2;
+$bluelight: #8bbcb9;
+$bluegreen: #3A6E81;
+$bluepale: #677485;
+$bluedark: #465262;
+$gray: #333333;
+$graylight: #999999;
+$graywhite: #CCCCCC;
+
+$fontFamily: 'Muli', sans-serif;
+$fontFamilyCode: 'Source Code Pro', sans-serif;
+
+@mixin borderRadius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+@mixin simpleShadow() {
+	moz-box-shadow: 0px 0px 10px #DDD;
+	-webkit-box-shadow: 0px 0px 10px #DDD;
+	box-shadow: 0px 0px 10px #DDD;
+}
+@mixin simpleShadowDark() {
+	moz-box-shadow: 0px 0px 10px $black;
+	-webkit-box-shadow: 0px 0px 10px $black;
+	box-shadow: 0px 0px 10px $black;
+}
+@mixin animate() {
+	-webkit-transition: 0.5s ease;
+	-moz-transition: 0.5s ease;
+	-ms-transition: 0.5s ease;
+	transition: 0.5s ease;
+}
+
+input,
+textarea {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	font-family: sans-serif;
+	background: $whitegray;
+	color: $gray;
+	height:100%;
+	font-family: $fontFamily;
+	font-weight: normal;
+	position: relative;
+}
+.clearer {
+	clear: both;
+}
+p {
+	padding: 0px;
+	margin: 0px;
+}
+a {
+	font-weight: bold;
+	color: $black;
+	text-decoration: none;
+	outline: 0;
+}
+a:hover,
+a:active,
+a:focus {
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+input::-moz-focus-inner { 
+  border: 0; 
+}
+
+.header {
+	background: $bluedark;
+	padding: 20px 0px;
+	h1 {
+		text-align: center;
+		font-weight: bold;
+		font-size: 1.2em;
+		color: $white;
+	}
+}
+
+.contentWrapper {
+	padding: 10px;
+	max-width: 1000px;
+	margin: auto;
+	.contentLeft {
+		width: 18%;
+		float: left;
+	}
+	.contentRight {
+		width: 80%;
+		float: right;
+	}
+}
+
+.button {
+	display: block;
+	cursor: pointer;
+	margin-bottom: 5px;
+	padding: 10px;
+	font-size: 0.8em;
+	background: $graylight;
+	color: $white;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	@include borderRadius(5px);
+	@include animate();
+	&:hover {
+		background: $gray;
+	}
+	&.buttonPublic {
+		background: $green;
+	}
+	&.buttonPublicSelected {
+		background: $yellow;
+	}
+}
+
+.functionalitiesWrapper {
+	font-family: $fontFamilyCode;
+	.functionalitiesLeft {
+		margin-bottom: 10px;
+	}
+	.functionalitiesRight {
+	}
+}
+
+.listFunctionalitiesInfo {
+	padding: 20px;
+	background: $bluepale;
+	color: $white;
+	@include borderRadius(5px);
+	.listFunctionalitiesItem {
+		padding-bottom: 5px;
+		margin-bottom: 5px;
+		border-bottom: 1px dotted $bluelight;
+	}
+	.functionalityTitle {
+		font-size: 0.8em;
+		padding-bottom: 3px;
+		display: block;
+		color: $bluelight;
+	}
+	.functionalityItem {
+		padding-bottom: 10px;
+		font-size: 0.9em;
+		cursor: pointer;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	.functionalityItemIns {
+		padding-left: 30px;
+		font-size: 0.9em;
+	}
+	h2 {
+		padding-bottom: 20px;
+		font-weight: bold;
+		font-size: 0.9em;
+		color: $bluelight;
+	}
+}
+.listFunctionalitiesInfoMashup {
+	margin-top: 10px;
+	background: $bluegreen;
+}
+
+.responseInfo {
+	padding: 20px;
+	background: $white;
+	color: $bluepale;
+	font-size: 0.9em;
+	line-height: 1.2em;
+	@include borderRadius(5px);
+}
+
+.footer {
+	padding: 50px 0px;
+	text-align: center;
+	color: $graylight;
+	font-size: 0.8em;
+}
