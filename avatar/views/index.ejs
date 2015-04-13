@@ -17,9 +17,10 @@
 	<script src="site/js/utils/jsonld.js"></script>
 	<script src="site/js/main.js"></script>
 
-	<!-- Builder -->
-	<script src="modules/Builder/builder.ctrl.js"></script>
-	<script src="modules/Builder/initialisation.js"></script>
+	<!-- Avatar Control -->
+	<script src="modules/AvatarControl/avatarControl.ctrl.js"></script>
+	<script src="modules/AvatarControl/avatarInitialisation.js"></script>
+	<script src="modules/AvatarControl/avatarUpdate.js"></script>
 
 	<!-- Module Capabilities Manager -->
 	<script src="modules/CapabilitiesManager/cm-service.js"></script>
@@ -53,14 +54,14 @@
 
 		<div class="contentWrapper">
 			<div class="contentLeft">	
-				<div class="listAvailableObjects" ng-controller="builderCtrl">
+				<div class="listAvailableObjects" ng-controller="avatarControlCtrl">
 					<div class="button buttonSimple" ng-click="getAvailableObjects()">
 						Reload objects
 					</div>
 					<div class="listAvailableObjectsInfo">
-						<div ng-repeat="cimaObject in cimaObjects">
-							<div ng-class="{'buttonPublicSelected':cimaObject.objectExists}" class="button buttonPublic"
-								ng-click="createAvatar(cimaObject.id)">
+						<div ng-repeat="cimaObject in cimaObjects | orderBy:'name'">
+							<div ng-class="{'buttonPublicSelected':cimaObject.avatarExists}" class="button buttonPublic"
+								ng-click="activateAvatar(cimaObject.id, cimaObject.avatarExists)">
 								{{cimaObject.name}}
 							</div>
 						</div>
@@ -96,9 +97,11 @@
 							</div>
 							<div class="listFunctionalitiesInfo listFunctionalitiesInfoMashup">
 								<h2>Functionality mashups : </h2>
-								<div class="listFunctionalitiesItem" ng-repeat="functionalityMashup in functionalitiesMashup">
-									<div class="functionalityItem" ng-click="loadInfo(functionalityMashup)">
-										{{functionalityMashup}}
+								<div class="listFunctionalitiesItem" ng-repeat="functionalityMashup in functionalitiesMashup | orderBy:'countObjects'">
+									<div ng-class="{'functionalityItemSingle':functionalityMashup.countObjects==0, 'functionalityItemMultiple':functionalityMashup.countObjects>1}"
+										class="functionalityItem"
+										ng-click="loadInfo(functionalityMashup.functionality)">
+										{{functionalityMashup.functionality}}
 									</div>
 								</div>
 							</div>

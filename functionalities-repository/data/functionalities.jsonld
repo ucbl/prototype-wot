@@ -200,6 +200,15 @@
       "asawooVocab:description": "Stop an application"
     },
     {
+      "@id": "asawooCapability:gps",
+      "@type": [
+        "owl:NamedIndividual",
+        "asawooVocab:Capability"
+      ],
+      "asawooVocab:name": "GPS",
+      "asawooVocab:description": "Get the position using a GPS"
+    },
+    {
       "@id": "asawooCapability:temperatureDecrease",
       "@type": [
         "owl:NamedIndividual",
@@ -243,6 +252,24 @@
       ],
       "asawooVocab:name": "Close window",
       "asawooVocab:description": "Close a window"
+    },
+    {
+      "@id": "asawooCapability:callWebService",
+      "@type": [
+        "owl:NamedIndividual",
+        "asawooVocab:Capability"
+      ],
+      "asawooVocab:name": "Call web service",
+      "asawooVocab:description": "Call a web service"
+    },
+    {
+      "@id": "asawooCapability:activateMotor",
+      "@type": [
+        "owl:NamedIndividual",
+        "asawooVocab:Capability"
+      ],
+      "asawooVocab:name": "Activate a motor",
+      "asawooVocab:description": "Activate a motor"
     },
 
 
@@ -336,6 +363,18 @@
       }
     },
     {
+      "@id": "asawooFunctionality:gps",
+      "@type": [
+        "asawooVocab:Functionality",
+        "owl:NamedIndividual"
+      ],
+      "asawooVocab:name": "GPS",
+      "asawooVocab:description": "Get the position using a GPS",
+      "asawooVocab:isImplementedBy": {
+        "@id": "asawooCapability:gps"
+      }
+    },
+    {
       "@id": "asawooFunctionality:temperatureDecrease",
       "@type": [
         "asawooVocab:Functionality",
@@ -395,12 +434,110 @@
         "@id": "asawooCapability:closeWindow"
       }
     },
+    {
+      "@id": "asawooFunctionality:callWebService",
+      "@type": [
+        "asawooVocab:Functionality",
+        "owl:NamedIndividual"
+      ],
+      "asawooVocab:name": "Call web service",
+      "asawooVocab:description": "Call a web service",
+      "asawooVocab:isImplementedBy": {
+        "@id": "asawooCapability:callWebService"
+      }
+    },
+    {
+      "@id": "asawooFunctionality:activateMotor",
+      "@type": [
+        "asawooVocab:Functionality",
+        "owl:NamedIndividual"
+      ],
+      "asawooVocab:name": "Activate a motor",
+      "asawooVocab:description": "Activate a motor",
+      "asawooVocab:isImplementedBy": {
+        "@id": "asawooCapability:activateMotor"
+      }
+    },
 
 
 
 
 
     {"_comment":"******** LIST OF COMPOSED FUNCTIONALITIES ********"},
+    {
+      "@id": "asawooFunctionality:communicate",
+      "@type": [
+        "asawooVocab:Functionality",
+        "owl:NamedIndividual"
+      ],
+      "asawooVocab:name": "Communicate",
+      "asawooVocab:description": "Communicate with someone else",
+      "asawooVocab:isComposedOf": [
+        {
+          "@id": "asawooFunctionality:sms"
+        },
+        {
+          "@id": "asawooFunctionality:call"
+        }
+      ]
+    },
+    {
+      "@id": "asawooFunctionality:operateWindow",
+      "@type": [
+        "asawooVocab:Functionality",
+        "owl:NamedIndividual"
+      ],
+      "asawooVocab:name": "Operate a window",
+      "asawooVocab:description": "Operate a window using a phone application",
+      "asawooVocab:isComposedOf": [
+        {
+          "@id": "asawooFunctionality:openWindow"
+        },
+        {
+          "@id": "asawooFunctionality:closeWindow"
+        },
+        {
+          "@id": "asawooFunctionality:startApp"
+        },
+        {
+          "@id": "asawooFunctionality:stopApp"
+        }
+      ]
+    },
+    {
+      "@id": "asawooFunctionality:ventilateRoom",
+      "@type": [
+        "asawooVocab:Functionality",
+        "owl:NamedIndividual"
+      ],
+      "asawooVocab:name": "Ventilate a room",
+      "asawooVocab:description": "Ventilate a room depending on the temperature",
+      "asawooVocab:isComposedOf": [
+        {
+          "@id": "asawooFunctionality:operateWindow"
+        },
+        {
+          "@id": "asawooFunctionality:temperatureRegulation"
+        }
+      ]
+    },
+    {
+      "@id": "asawooFunctionality:temperatureChange",
+      "@type": [
+        "asawooVocab:Functionality",
+        "owl:NamedIndividual"
+      ],
+      "asawooVocab:name": "Temperature Change",
+      "asawooVocab:description": "Change the temperature of a place",
+      "asawooVocab:isComposedOf": [
+        {
+          "@id": "asawooFunctionality:temperatureIncrease"
+        },
+        {
+          "@id": "asawooFunctionality:temperatureDecrease"
+        }
+      ]
+    },
     {
       "@id": "asawooFunctionality:temperatureRegulation",
       "@type": [
@@ -414,10 +551,7 @@
           "@id": "asawooFunctionality:temperatureSense"
         },
         {
-          "@id": "asawooFunctionality:temperatureIncrease"
-        },
-        {
-          "@id": "asawooFunctionality:temperatureDecrease"
+          "@id": "asawooFunctionality:temperatureChange"
         }
       ]
     },
@@ -431,85 +565,34 @@
       "asawooVocab:description": "Regulate the temperature by SMS",
       "asawooVocab:isComposedOf": [
         {
-          "@id": "asawooFunctionality:temperatureSense"
-        },
-        {
-          "@id": "asawooFunctionality:temperatureIncrease"
-        },
-        {
-          "@id": "asawooFunctionality:temperatureDecrease"
+          "@id": "asawooFunctionality:temperatureRegulation"
         },
         {
           "@id": "asawooFunctionality:sms"
         }
       ]
     },
-
-
-
-
-
-
-    {"_comment":"******** LIST OF APPLIANCES ********"},
     {
-      "@id": "asawooAppliance:appliancePhone",
+      "@id": "asawooFunctionality:temperatureRegulationUsingWeatherService",
       "@type": [
-        "owl:NamedIndividual",
-        "asawooVocab:Appliance"
+        "asawooVocab:Functionality",
+        "owl:NamedIndividual"
       ],
-      "asawooVocab:hasCapability": [
+      "asawooVocab:name": "Temperature Regulation using a Web Service",
+      "asawooVocab:description": "Regulate the temperature using a Web Service that calls some website to get the temperature of the place",
+      "asawooVocab:isComposedOf": [
         {
-          "@id": "asawooCapability:call"
+          "@id": "asawooFunctionality:temperatureRegulation"
         },
         {
-          "@id": "asawooCapability:download"
+          "@id": "asawooFunctionality:gps"
         },
         {
-          "@id": "asawooCapability:photo"
-        },
-        {
-          "@id": "asawooCapability:video"
-        },
-        {
-          "@id": "asawooCapability:sms"
-        },
-        {
-          "@id": "asawooCapability:startApp"
-        },
-        {
-          "@id": "asawooCapability:stopApp"
-        }        
+          "@id": "asawooFunctionality:callWebService"
+        }
       ]
-    },
-    {
-      "@id": "asawooAppliance:applianceCooler",
-      "@type": [
-        "owl:NamedIndividual",
-        "asawooVocab:Appliance"
-      ],
-      "asawooVocab:hasCapability": {
-          "@id": "asawooCapability:temperatureDecrease"
-      }
-    },
-    {
-      "@id": "asawooAppliance:applianceHeater",
-      "@type": [
-        "owl:NamedIndividual",
-        "asawooVocab:Appliance"
-      ],
-      "asawooVocab:hasCapability": {
-          "@id": "asawooCapability:temperatureHeater"
-      }
-    },
-    {
-      "@id": "asawooAppliance:applianceSensor",
-      "@type": [
-        "owl:NamedIndividual",
-        "asawooVocab:Appliance"
-      ],
-      "asawooVocab:hasCapability": {
-          "@id": "asawooCapability:temperatureSensor"
-      }
     }
+
+    
   ]
 }

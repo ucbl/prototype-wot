@@ -1,0 +1,9 @@
+{
+    "@context": {
+        "hydra": "http://www.w3.org/ns/hydra/core#",
+        "vocab": "http://localhost:3334/vocab#",
+        "value": "http://www.w3.org/2001/XMLSchema#double",
+        "type": "http://www.w3.org/2001/XMLSchema#string",
+        "Temperature": "vocab:Temperature"
+    }
+}

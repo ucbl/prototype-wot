@@ -1,0 +1,57 @@
+{
+    "@context" : "http://schema.org",
+    "@type": "Thing",
+	"id" : "phone-samsung-2554",
+    "name": "Phone",
+    "description": "A Samsung Phone with the serial number 2554",
+    "capabilities" : [
+		{
+	      "@id": "http://localhost:3334/cima/phone-samsung-2554/call",
+	      "@type": "http://localhost:3334/vocab#CapabilityCall",
+          "@context": "http://localhost:3334/context/Capability",
+          "ontology": "http://localhost:3232/capability/call"
+	    },
+		{
+	      "@id": "http://localhost:3334/cima/phone-samsung-2554/sms",
+	      "@type": "http://localhost:3334/vocab#CapabilitySms",
+          "@context": "http://localhost:3334/context/Capability",
+          "ontology": "http://localhost:3232/capability/sms"
+	    },
+		{
+	      "@id": "http://localhost:3334/cima/phone-samsung-2554/photo",
+	      "@type": "http://localhost:3334/vocab#CapabilityPhoto",
+          "@context": "http://localhost:3334/context/Capability",
+          "ontology": "http://localhost:3232/capability/photo"
+	    },
+		{
+	      "@id": "http://localhost:3334/cima/phone-samsung-2554/video",
+	      "@type": "http://localhost:3334/vocab#CapabilityVideo",
+          "@context": "http://localhost:3334/context/Capability",
+          "ontology": "http://localhost:3232/capability/video"
+	    },
+		{
+	      "@id": "http://localhost:3334/cima/phone-samsung-2554/startApp",
+	      "@type": "http://localhost:3334/vocab#CapabilityStartApp",
+          "@context": "http://localhost:3334/context/Capability",
+          "ontology": "http://localhost:3232/capability/startApp"
+	    },
+		{
+	      "@id": "http://localhost:3334/cima/phone-samsung-2554/stopApp",
+	      "@type": "http://localhost:3334/vocab#CapabilityStopApp",
+          "@context": "http://localhost:3334/context/Capability",
+          "ontology": "http://localhost:3232/capability/stopApp"
+	    },
+		{
+	      "@id": "http://localhost:3334/cima/phone-samsung-2554/gps",
+	      "@type": "http://localhost:3334/vocab#CapabilityGps",
+          "@context": "http://localhost:3334/context/Capability",
+          "ontology": "http://localhost:3232/capability/gps"
+	    }
+	],
+    "realObjectInfo": {
+    	"status": "",
+    	"statusApp": "stopped",
+    	"latitude": 6.4544,
+    	"longitude": 2.4555
+    }
+}

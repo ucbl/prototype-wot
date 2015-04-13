@@ -1,0 +1,743 @@
+{
+  "@id": "http://localhost:3334/vocab",
+  "@type": "ApiDocumentation",
+  "entrypoint": "http://localhost:3334/",
+  "@context": {
+    "vocab": "http://localhost:3334/vocab#",
+    "hydra": "http://www.w3.org/ns/hydra/core#",
+    "ApiDocumentation": "hydra:ApiDocumentation",
+    "property": {
+      "@id": "hydra:property",
+      "@type": "@id"
+    },
+    "readonly": "hydra:readonly",
+    "writeonly": "hydra:writeonly",
+    "supportedClass": "hydra:supportedClass",
+    "supportedProperty": "hydra:supportedProperty",
+    "supportedOperation": "hydra:supportedOperation",
+    "method": "hydra:method",
+    "expects": {
+      "@id": "hydra:expects",
+      "@type": "@id"
+    },
+    "returns": {
+      "@id": "hydra:returns",
+      "@type": "@id"
+    },
+    "statusCodes": "hydra:statusCodes",
+    "code": "hydra:statusCode",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "description": "rdfs:comment",
+    "domain": {
+      "@id": "rdfs:domain",
+      "@type": "@id"
+    },
+    "range": {
+      "@id": "rdfs:range",
+      "@type": "@id"
+    },
+    "subClassOf": {
+      "@id": "rdfs:subClassOf",
+      "@type": "@id"
+    }
+  },
+  "supportedClass": [
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#Resource",
+      "@type": "hydra:Class",
+      "hydra:title": "Resource",
+      "hydra:description": null,
+      "supportedOperation": [],
+      "supportedProperty": []
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#Collection",
+      "@type": "hydra:Class",
+      "hydra:title": "Collection",
+      "hydra:description": null,
+      "supportedOperation": [],
+      "supportedProperty": [
+        {
+          "property": "http://www.w3.org/ns/hydra/core#member",
+          "hydra:title": "cimaObjects",
+          "hydra:description": "The CIMA objects of this collection.",
+          "required": null,
+          "readonly": false,
+          "writeonly": false
+        },
+        {
+          "property": "http://www.w3.org/ns/hydra/core#member",
+          "hydra:title": "capabilities",
+          "hydra:description": "The capabilities of this collection.",
+          "required": null,
+          "readonly": false,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:CimaObject",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "CimaObject",
+      "description": "A CIMA object.",
+      "supportedOperation": [
+        {
+          "@id": "_:cimaObject",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "Retrieves a CIMA object",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:CimaObject",
+          "statusCodes": []
+        }
+      ],
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:CimaObject/id",
+            "@type": "rdf:Property",
+            "label": "id",
+            "description": "The id of the CIMA object",
+            "domain": "vocab:CimaObject",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "id",
+          "hydra:description": "The id of the CIMA object",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:CimaObject/name",
+            "@type": "rdf:Property",
+            "label": "name",
+            "description": "The explicit name of the CIMA object",
+            "domain": "vocab:CimaObject",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "name",
+          "hydra:description": "The explicit name of the CIMA object",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:CimaObject/description",
+            "@type": "rdf:Property",
+            "label": "description",
+            "description": "The description of the CIMA object",
+            "domain": "vocab:CimaObject",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "description",
+          "hydra:description": "The description of the CIMA object",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:CimaObject/capabilities",
+            "@type": "rdf:Property",
+            "label": "capabilities",
+            "description": "The capabilities of a CIMA object",
+            "domain": "vocab:CimaObject",
+            "range": "hydra:Collection",
+            "supportedOperation": []
+          },
+          "hydra:title": "capabilities",
+          "hydra:description": "The capabilities of a CIMA object",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:CimaCooler",
+      "@type": "hydra:Class",
+      "subClassOf": "vocab:CimaObject",
+      "label": "CimaCooler",
+      "description": "A CIMA cooler.",
+      "supportedOperation": [
+        {
+          "@id": "information",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "Retrieves the information of a CIMA cooler",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:CimaCooler",
+          "statusCodes": []
+        },
+        {
+          "@id": "changeValue",
+          "@type": "hydra:Operation",
+          "method": "PUT",
+          "label": "Changes the value of a CIMA cooler",
+          "description": null,
+          "expects": "vocab:NumericValue",
+          "returns": "vocab:NumericValue",
+          "statusCodes": []
+        },
+        {
+          "@id": "turnOff",
+          "@type": "hydra:Operation",
+          "method": "POST",
+          "label": "Changes the value of a CIMA cooler",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:NumericValue",
+          "statusCodes": []
+        }
+      ],
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:CimaObject/value",
+            "@type": "rdf:Property",
+            "label": "value",
+            "description": "The value of the CIMA cooler",
+            "domain": "vocab:CimaCooler",
+            "range": "vocab:NumericValue",
+            "supportedOperation": []
+          },
+          "hydra:title": "value",
+          "hydra:description": "The value of the CIMA object",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        }
+      ]
+    },
+
+
+
+
+
+
+    {
+      "@id": "vocab:NumericValue",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "NumericValue",
+      "description": "A value.",
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:NumericValue/value",
+            "@type": "rdf:Property",
+            "label": "value",
+            "description": "The value of a level",
+            "domain": "vocab:NumericValue",
+            "range": "http://www.w3.org/2001/XMLSchema#int",
+            "supportedOperation": []
+          },
+          "hydra:title": "value",
+          "hydra:description": "The value of a level",
+          "required": true,
+          "readonly": false,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:MotorValue",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "MotorValue",
+      "description": "A motor value.",
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:MotorValue/angle",
+            "@type": "rdf:Property",
+            "label": "angle",
+            "description": "The angle of a motor",
+            "domain": "vocab:MotorValue",
+            "range": "http://www.w3.org/2001/XMLSchema#int",
+            "supportedOperation": []
+          },
+          "hydra:title": "angle",
+          "hydra:description": "The angle of a motor",
+          "required": true,
+          "readonly": false,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:MotorValue/speed",
+            "@type": "rdf:Property",
+            "label": "speed",
+            "description": "The speed of a motor",
+            "domain": "vocab:MotorValue",
+            "range": "http://www.w3.org/2001/XMLSchema#int",
+            "supportedOperation": []
+          },
+          "hydra:title": "speed",
+          "hydra:description": "The speed of a motor",
+          "required": true,
+          "readonly": false,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:MotorValue/strength",
+            "@type": "rdf:Property",
+            "label": "strength",
+            "description": "The strength of a motor",
+            "domain": "vocab:MotorValue",
+            "range": "http://www.w3.org/2001/XMLSchema#int",
+            "supportedOperation": []
+          },
+          "hydra:title": "strength",
+          "hydra:description": "The strength of a motor",
+          "required": true,
+          "readonly": false,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:WindowStatus",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "WindowStatus",
+      "description": "A window status.",
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:WindowStatus/status",
+            "@type": "rdf:Property",
+            "label": "status",
+            "description": "The status of a window",
+            "domain": "vocab:WindowStatus",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "value",
+          "hydra:description": "The status of a window",
+          "required": true,
+          "readonly": false,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:Temperature",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "Temperature",
+      "description": "A temperature value.",
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:Temperature/value",
+            "@type": "rdf:Property",
+            "label": "value",
+            "description": "The temperature value",
+            "domain": "vocab:Temperature",
+            "range": "http://www.w3.org/2001/XMLSchema#double",
+            "supportedOperation": []
+          },
+          "hydra:title": "value",
+          "hydra:description": "The temperature value",
+          "required": true,
+          "readonly": false,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:Temperature/type",
+            "@type": "rdf:Property",
+            "label": "type",
+            "description": "The temperature type",
+            "domain": "vocab:Temperature",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "type",
+          "hydra:description": "The temperature type",
+          "required": true,
+          "readonly": false,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:Position",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "Position",
+      "description": "A position in terms of latitude and longitude.",
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:Position/latitude",
+            "@type": "rdf:Property",
+            "label": "latitude",
+            "description": "The latitude",
+            "domain": "vocab:Position",
+            "range": "http://www.w3.org/2001/XMLSchema#double",
+            "supportedOperation": []
+          },
+          "hydra:title": "latitude",
+          "hydra:description": "The latitude",
+          "required": true,
+          "readonly": false,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:Position/longitude",
+            "@type": "rdf:Property",
+            "label": "longitude",
+            "description": "The longitude",
+            "domain": "vocab:Position",
+            "range": "http://www.w3.org/2001/XMLSchema#double",
+            "supportedOperation": []
+          },
+          "hydra:title": "longitude",
+          "hydra:description": "The longitude",
+          "required": true,
+          "readonly": false,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:Capability",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "Capability",
+      "description": "A simple capability.",
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:Capability/ontology",
+            "@type": "rdf:Property",
+            "label": "ontology",
+            "description": "The link to the ontology of this capability",
+            "domain": "vocab:Capability",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "ontology",
+          "hydra:description": "The link to the ontology of this capability",
+          "required": true,
+          "readonly": false,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:CapabilityActivateMotor",
+      "@type": "hydra:Class",
+      "subClassOf": "Capability",
+      "label": "CapabilityActivateMotor",
+      "description": "The activate motor capability.",
+      "supportedOperation": [
+        {
+          "@id": "_:activateMotor",
+          "@type": "hydra:Operation",
+          "method": "PUT",
+          "label": "Activate a motor",
+          "description": null,
+          "expects": "vocab:MotorValue",
+          "returns": "vocab:MotorValue",
+          "statusCodes": []
+        }
+      ]
+    },
+    {
+      "@id": "vocab:CapabilityTemperatureDecrease",
+      "@type": "hydra:Class",
+      "subClassOf": "Capability",
+      "label": "CapabilityTemperatureDecrease",
+      "description": "The temperature decrease capability.",
+      "supportedOperation": [
+        {
+          "@id": "_:temperatureDecrease",
+          "@type": "hydra:Operation",
+          "method": "PUT",
+          "label": "Change the level of an object to decrease the temperature",
+          "description": null,
+          "expects": "vocab:NumericValue",
+          "returns": "vocab:NumericValue",
+          "statusCodes": []
+        }
+      ]
+    },
+    {
+      "@id": "vocab:CapabilityTemperatureIncrease",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "CapabilityTemperatureIncrease",
+      "description": "The temperature increase capability.",
+      "supportedOperation": [
+        {
+          "@id": "_:temperatureIncrease",
+          "@type": "hydra:Operation",
+          "method": "PUT",
+          "label": "Change the level of an object to increase the temperature",
+          "description": null,
+          "expects": "vocab:NumericValue",
+          "returns": "vocab:NumericValue",
+          "statusCodes": []
+        }
+      ]
+    },
+    {
+      "@id": "vocab:CapabilityTemperatureSense",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "CapabilityTemperatureSense",
+      "description": "The temperature sense capability.",
+      "supportedOperation": [
+        {
+          "@id": "_:temperatureSense",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "Get the temperature measurement",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:Temperature",
+          "statusCodes": []
+        }
+      ]
+    },
+    {
+      "@id": "vocab:CapabilityGps",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "CapabilityGps",
+      "description": "The GPS capability.",
+      "supportedOperation": [
+        {
+          "@id": "_:gps",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "Get the GPS position",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:Position",
+          "statusCodes": []
+        }
+      ]
+    },
+    {
+      "@id": "vocab:CapabilityOpenWindow",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "CapabilityOpenWindow",
+      "description": "The capability to open a window.",
+      "supportedOperation": [
+        {
+          "@id": "_:openWindow",
+          "@type": "hydra:Operation",
+          "method": "PUT",
+          "label": "Open a window",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:WindowStatus",
+          "statusCodes": []
+        }
+      ]
+    },
+    {
+      "@id": "vocab:CapabilityCloseWindow",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "CapabilityCloseWindow",
+      "description": "The capability to close a window.",
+      "supportedOperation": [
+        {
+          "@id": "_:closeWindow",
+          "@type": "hydra:Operation",
+          "method": "PUT",
+          "label": "Close a window",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:WindowStatus",
+          "statusCodes": []
+        }
+      ]
+    },
+    {
+      "@id": "vocab:CapabilityCall",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "CapabilityCall",
+      "description": "The capability to call using a phone.",
+      "supportedOperation": [
+        {
+          "@id": "_:call",
+          "@type": "hydra:Operation",
+          "method": "PUT",
+          "label": "Call using a phone",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:PhoneStatus",
+          "statusCodes": []
+        }
+      ]
+    },
+    {
+      "@id": "vocab:CapabilitySms",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "CapabilitySms",
+      "description": "The capability to send a SMS using a phone.",
+      "supportedOperation": [
+        {
+          "@id": "_:sms",
+          "@type": "hydra:Operation",
+          "method": "PUT",
+          "label": "Send an SMS using a phone",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:PhoneStatus",
+          "statusCodes": []
+        }
+      ]
+    },
+    {
+      "@id": "vocab:CapabilityPhoto",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "CapabilityPhoto",
+      "description": "The capability to take a picture using a phone.",
+      "supportedOperation": [
+        {
+          "@id": "_:photo",
+          "@type": "hydra:Operation",
+          "method": "PUT",
+          "label": "Take a picture using a phone",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:PhoneStatus",
+          "statusCodes": []
+        }
+      ]
+    },
+    {
+      "@id": "vocab:CapabilityVideo",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "CapabilityVideo",
+      "description": "The capability to record a video using a phone.",
+      "supportedOperation": [
+        {
+          "@id": "_:video",
+          "@type": "hydra:Operation",
+          "method": "PUT",
+          "label": "Record a video using a phone",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:PhoneStatus",
+          "statusCodes": []
+        }
+      ]
+    },
+    {
+      "@id": "vocab:CapabilityStartApp",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "CapabilityStartApp",
+      "description": "The capability to start an app using a phone.",
+      "supportedOperation": [
+        {
+          "@id": "_:startApp",
+          "@type": "hydra:Operation",
+          "method": "PUT",
+          "label": "Start an app using a phone",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:AppStatus",
+          "statusCodes": []
+        }
+      ]
+    },
+    {
+      "@id": "vocab:CapabilityStopApp",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "CapabilityStopApp",
+      "description": "The capability to stop an app using a phone.",
+      "supportedOperation": [
+        {
+          "@id": "_:startApp",
+          "@type": "hydra:Operation",
+          "method": "PUT",
+          "label": "Stop an app using a phone",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:AppStatus",
+          "statusCodes": []
+        }
+      ]
+    },
+
+
+
+
+
+    {
+      "@id": "vocab:EntryPoint",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "EntryPoint",
+      "description": "The main entry point of the CIMA Platform.",
+      "supportedOperation": [
+        {
+          "@id": "_:entry_point",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "The CIMA Platform main entry point.",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:EntryPoint",
+          "statusCodes": []
+        }
+      ],
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:EntryPoint/cima",
+            "@type": "hydra:Link",
+            "label": "cima",
+            "description": "The entrypoint for the CIMA objects operation",
+            "domain": "vocab:EntryPoint",
+            "range": "hydra:Collection",
+            "supportedOperation": [
+              {
+                "@id": "_:cima",
+                "@type": "hydra:Operation",
+                "method": "GET",
+                "label": "The list of all the CIMA objects",
+                "description": null,
+                "expects": null,
+                "returns": "hydra:Collection",
+                "statusCodes": []
+              }
+            ]
+          },
+          "hydra:title": "cima",
+          "hydra:description": "The list of all the CIMA objects.",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        }
+      ]
+    }
+  ]
+}
