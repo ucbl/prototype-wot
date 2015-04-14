@@ -108,22 +108,27 @@ CollaborativeFunctionalitiesManager.prototype.loadIncompleteFunctionalitiesFromF
 					},
 					function (reqError, reqHttpResponse, reqBody) {
 						if (!reqError && reqBody && reqBody.functionalities) {
-							self.functionalitiesIncompleteFromFunctionalitiesRepository = reqBody.functionalities;
-							//self.addFunctionalitiesToExpose(self.functionalitiesIncompleteFromFunctionalitiesRepository);
+							self.addFunctionalitiesIncompleteFromFunctionalitiesRepository(reqBody.functionalities);
 						}
 					});
 }
 
 // Get the local functionalities from the Functionalities Repository
-CollaborativeFunctionalitiesManager.prototype.exposeFunctionalities = function(){
+CollaborativeFunctionalitiesManager.prototype.getFunctionalitiesToExpose = function(){
 	// Mashup all the functionalities to expose
 	return this.functionalitiesToExpose;
 }
 
-// Get the local functionalities from the Functionalities Repository
+// Add the local functionalities from the Functionalities Repository
 CollaborativeFunctionalitiesManager.prototype.addFunctionalitiesToExpose = function(functionalities){
 	this.functionalitiesToExpose = this.functionalitiesToExpose.concat(functionalities);
 	this.functionalitiesToExpose = uniqueArray(this.functionalitiesToExpose);
+}
+
+// Add the incomplete functionalities from the Functionalities Repository
+CollaborativeFunctionalitiesManager.prototype.addFunctionalitiesIncompleteFromFunctionalitiesRepository = function(functionalities){
+	this.functionalitiesIncompleteFromFunctionalitiesRepository = this.functionalitiesIncompleteFromFunctionalitiesRepository.concat(functionalities);
+	this.functionalitiesIncompleteFromFunctionalitiesRepository = uniqueArray(this.functionalitiesIncompleteFromFunctionalitiesRepository);
 }
 
 // Add a functionality connection
@@ -168,6 +173,16 @@ CollaborativeFunctionalitiesManager.prototype.findCapability = function(urlFunct
 	return false;
 };
 
+// Expose the functionalities and the incomplete functionalities
+CollaborativeFunctionalitiesManager.prototype.exposeFunctionalitiesToServer = function() {
+	var self = this;
+	var options = {};
+    options.idAvatar = self.idAvatar;
+    options.functionalities = self.getFunctionalitiesToExpose();
+    options.functionalitiesIncomplete = self.getFunctionalitiesIncompleteFromFunctionalitiesRepository();
+    return rp.put({url:'http://localhost:3000/expose-functionalities',
+	            		json: options});
+};
 
 // Add functionalities
 CollaborativeFunctionalitiesManager.prototype.addFunctionalities = function(arrayFunctionalities, functionalities) {

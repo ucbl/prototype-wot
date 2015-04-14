@@ -43,17 +43,15 @@ LocalFunctionalitiesManager.prototype.contextualizeFunctionalities = function() 
 // Get the local functionalities from the Functionalities Repository
 LocalFunctionalitiesManager.prototype.getLocalFunctionalitiesFromRepository = function(){
 	var self = this;
-	if (self.getCapabilities().length > 0) {
-		return rp.get({url:'http://localhost:3232/functionalities-search',
-						json: {"capabilities": self.getCapabilities()}
-						},
-						function (reqError, reqHttpResponse, reqBody) {
-							if (!reqError && reqBody && reqBody.functionalities) {
-								self.functionalitiesConnections = reqBody.functionalities
-								self.addFunctionalities(self.functionalitiesConnections);
-							}
-						});
-	}
+	return rp.get({url:'http://localhost:3232/functionalities-search',
+					json: {"capabilities": self.getCapabilities()}
+					},
+					function (reqError, reqHttpResponse, reqBody) {
+						if (!reqError && reqBody && reqBody.functionalities) {
+							self.functionalitiesConnections = reqBody.functionalities
+							self.addFunctionalities(self.functionalitiesConnections);
+						}
+					});
 }
 
 // Add functionalities

@@ -65,50 +65,11 @@ function Avatar(urlCimaObject) {
 							self.collaborativeFunctionalitiesManager.loadFunctionalitiesFromContextManager();
 
 				            console.log("INFO: 1.5.4 - Expose the functionalities to the Functionalitites Registry");
-				            var options = {};
-				            options.idAvatar = self.id;
-				            options.functionalities = self.collaborativeFunctionalitiesManager.exposeFunctionalities();
-				            options.functionalitiesIncomplete = self.collaborativeFunctionalitiesManager.getFunctionalitiesIncompleteFromFunctionalitiesRepository();
-				            requestModule.put({url:'http://localhost:3000/expose-functionalities',
-							            		json: options});
-							
-				            /*
-				            console.log("INFO: 1.5.3 - Load the functionalities from the other Avatars");
-							self.collaborativeFunctionalitiesManager.loadFunctionalitiesFromOtherAvatars(avatars)
-								.then(function(){
+							self.collaborativeFunctionalitiesManager.exposeFunctionalitiesToServer()
+							.then(function(){
 
-						            console.log("INFO: 1.5.5 - Expose the functionalities to the Functionalitites Registry");
-						            var options = {};
-						            options.idAvatar = self.id;
-						            options.functionalities = self.collaborativeFunctionalitiesManager.exposeFunctionalities();
-						            requestModule.put({url:'http://localhost:3000/expose-functionalities',
-									            		json: options});
-								})
-								.catch(function(error) {
-							        console.log("ERROR: Could not load the functionalities from other Avatars.");
-							        console.log(error);
-						    	});
-				    		*/
-				    		/*
-				    		// MODE BROADCAST
-				            console.log("INFO: 1.5.3 - Load the functionalities from the other Avatars");
-							self.collaborativeFunctionalitiesManager.loadFunctionalitiesFromOtherAvatars(avatars)
-								.then(function(){
-						            console.log("INFO: 1.5.4 - Load the functionalities from the Context Manager");
-									self.collaborativeFunctionalitiesManager.loadFunctionalitiesFromContextManager();
 
-						            console.log("INFO: 1.5.5 - Expose the functionalities to the Functionalitites Registry");
-						            var options = {};
-						            options.idAvatar = self.id;
-						            options.functionalities = self.collaborativeFunctionalitiesManager.exposeFunctionalities();
-						            requestModule.put({url:'http://localhost:3000/expose-functionalities',
-									            		json: options});
-								})
-								.catch(function(error) {
-							        console.log("ERROR: Could not load the functionalities from other Avatars.");
-							        console.log(error);
-						    	});
-						    */
+							});
 				    	})
 				    	.catch(function(error) {
 					        console.log("ERROR: The Collaborative Functionalities Manager could not communicate with the Functionalities Repository.");
@@ -127,7 +88,7 @@ function Avatar(urlCimaObject) {
 }
 
 // Find information on an action
-Avatar.prototype.informationFunctionality = function(urlFunctionality){
+Avatar.prototype.getOperations = function(urlFunctionality){
 	var self = this;
 	var operations = [];
 	var info = this.collaborativeFunctionalitiesManager.findCapability(urlFunctionality);
@@ -156,14 +117,15 @@ Avatar.prototype.informationFunctionality = function(urlFunctionality){
 				}
 			}
 		}
-		return operations;
-	} else {
-		var urlOtherAvatar = self.host + info.idAvatar + '/' + self.idFunctionality(urlFunctionality);	
-		return rp.get({url: urlOtherAvatar});
 	}
+	return operations;
 }
 
 // Execute an action
+// Ex:
+// urlFunctionality : http://localhost:3232/functionality/temperatureDecrease
+// optionsOperation : { method: 'PUT', value: '3442' }
+
 Avatar.prototype.executeFunctionality = function(urlFunctionality, optionsOperation){
 	var self = this;
 	var info = this.collaborativeFunctionalitiesManager.findCapability(urlFunctionality);

@@ -9,6 +9,7 @@ var app = express();
 var hostServer = 'http://localhost';
 var portListen = 3232;
 var hostServerPort = hostServer + ':' + portListen;
+var hostFunctionality = hostServerPort + '/functionality/';
 var hydraVocab = hostServerPort + '/vocab#';
 var linkVocab = '<' + hydraVocab + '>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"';
 var dataLocation = __dirname + '/data/functionalities.jsonld';
@@ -231,6 +232,19 @@ app.get('/functionality/:functionality', function(request, response, next) {
     response.writeHead(200, {"Content-Type": "application/ld+json", "Link": linkVocab});
     var requestUrl = request.protocol + '://' + request.get('host') + request.originalUrl;
     var functionalityResponse = infoFunctionality(requestUrl);
+    response.end(JSON.stringify(functionalityResponse));
+});
+
+// GET the composition of a functionality
+app.get('/functionality-composed-of/:functionality', function(request, response, next) {
+    response.writeHead(200, {"Content-Type": "application/ld+json", "Link": linkVocab});
+    var composedFunctionalitiesInfo = findComposedFunctionalitiesInfo();
+    var functionalityResponse = {};
+    for (i in composedFunctionalitiesInfo) {
+        if (composedFunctionalitiesInfo[i].id == hostFunctionality+request.params.functionality) {
+            functionalityResponse = composedFunctionalitiesInfo[i];
+        }
+    }
     response.end(JSON.stringify(functionalityResponse));
 });
 

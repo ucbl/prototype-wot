@@ -6,6 +6,7 @@ var jsonld = require('jsonld');
 var N3Store = require('n3').Store;
 var http = require('http');
 var requestModule = require('request');
+var rp = require('request-promise');
 var app = express();
 var Avatar = require('./avatar/avatar.js');
 
@@ -17,6 +18,7 @@ avatars = [];
 var hostServer = 'http://localhost';
 var portListen = 3000;
 var hostFunctionalities = 'http://localhost:3232/functionality/';
+var hostFunctionalitiesComposedOf = 'http://localhost:3232/functionality-composed-of/';
 var hostServerPort = hostServer + ':' + portListen;
 
 // Configure App and CROS
@@ -36,12 +38,21 @@ var server = app.listen(portListen, function () {
 	var port = server.address().port;
 })
 
-
-avatar = new Avatar('http://localhost:3333/cima/cooler-swirlwind-2443');
+/*
+avatar = new Avatar('http://localhost:3333/cima/heater-tesco-2336');
 
 setTimeout(function(){
 	console.log('DONE');
 	console.log(avatar.collaborativeFunctionalitiesManager);
+	avatar2 = new Avatar('http://localhost:3333/cima/cooler-swirlwind-2443');
+	setTimeout(function(){
+		console.log('DONE2');
+		console.log(avatar2.collaborativeFunctionalitiesManager);
+		console.log(1111);
+		console.log(1111);
+		console.log(1111);
+		console.log(functionalitiesRegistry);
+	}, 2000);
 }, 2000);
 /*
 var avatar = new Avatar('http://localhost:3333/cima/sensor-ge-2442');
@@ -123,8 +134,11 @@ app.put('/expose-functionalities', function(request, response, next) {
 	if (!itemExists) {
 		functionalitiesRegistry.push(functionalitiesExposed);
 	}
-	console.log(333);
-	console.log(functionalitiesRegistry);
+	response.send(functionalitiesRegistry);
+});
+
+// GET the exposed functionalities in the server
+app.get('/exposed-functionalities', function(request, response, next) {
 	response.send(functionalitiesRegistry);
 });
 
@@ -185,22 +199,33 @@ app.get('/avatar/:idAvatar/:idFunctionality', function(request, response, next) 
 	var idFunctionality = request.params.idFunctionality;
 	var avatar = findAvatar(idAvatar);
 	var functionality = hostFunctionalities + idFunctionality;
-	var responseFunctionality = avatar.informationFunctionality(functionality);
-	if (isArray(responseFunctionality)) {
-		// This object executed the functionality
-		for (i in responseFunctionality) {
-			responseFunctionality[i].urlExecution = hostServerPort + '/avatar/' + idAvatar + '/' + idFunctionality;
+	var operations = avatar.getOperations(functionality);
+	var responseAvatar = {};
+	if (operations.length > 0) {
+		// Simple functionality executed by this avatar
+		for (i in operations) {
+			operations[i].urlExecution = hostServerPort + '/avatar/' + idAvatar + '/' + idFunctionality;
 		}
-		response.send(responseFunctionality);
+		responseAvatar.mode = 'simple';
+		responseAvatar.operations = operations;
+		response.send(responseAvatar);
 	} else {
-		// Another object executed the functionality
-		responseFunctionality.then(function(responsePromise){
-			var responseJSON = JSON.parse(responsePromise);
-			responseJSON.urlExecution = hostServerPort + '/avatar/' + responseJSON.idAvatar + '/' + idFunctionality;
-			response.send(responseJSON);
-		});
+		// Search if we can execute this functionality with the rest of the avatars
+		var functionalityComposedOfUrl = hostFunctionalitiesComposedOf + idFunctionality;
+		rp.get({url:functionalityComposedOfUrl,
+					json: {}},
+					function (reqError, reqHttpResponse, reqBody) {
+						if (!reqError && reqBody && reqBody.isComposedOf) {
+							var functionalitiesComposedOf = reqBody.isComposedOf;
+							responseAvatar.mode = 'complex';
+							responseAvatar.idFunctionality = idFunctionality;
+							responseAvatar.linkers = findAvatarsExecutingFunctionality(functionalitiesComposedOf);
+							response.send(responseAvatar);
+						}
+					});
 	}
 });
+
 // Execute a capability in other avatar
 app.put('/avatar/:idAvatar/:idFunctionality', function(request, response, next) {
 	var idAvatar = request.params.idAvatar;
@@ -215,6 +240,100 @@ app.put('/avatar/:idAvatar/:idFunctionality', function(request, response, next) 
 		});
 	} else {
 		response.send({});
+	}
+});
+// Execute a complex functionality
+app.post('/execute-complex-functionality', function(request, response, next) {
+	var idFunctionality = request.body.idFunctionality;
+	var linkers = [];
+	var functionalitiesString = 'functionalities';
+	for (i in request.body) {
+		if (i.substring(0, functionalitiesString.length)==functionalitiesString) {
+			var linker = {};
+			linker.functionality = (i.replace(functionalitiesString+'[','').replace(']',''));
+			linker.idAvatar = request.body[i];
+			linker.avatar = findAvatar(request.body[i]);
+			linkers.push(linker)
+		}
+	}
+	// Execute the complex functionality
+	var responseExecution = {};
+	responseExecution.executed = false;
+	switch (idFunctionality) {
+		default:
+			response.send(responseExecution);
+		break;
+		case 'temperatureChange':
+			// Ex: Increase 30 degrees and decrease 10
+			var arguments = [{desiredTemp:20}];
+			var temperatureIncrease = 'http://localhost:3232/functionality/temperatureIncrease';
+			var temperatureDecrease = 'http://localhost:3232/functionality/temperatureDecrease';
+			var linkerTemperatureIncrease = findLinker(linkers, temperatureIncrease);
+			var linkerTemperatureDecrease = findLinker(linkers, temperatureDecrease);
+			linkerTemperatureIncrease.avatar.executeFunctionality(temperatureIncrease, {method: 'PUT', value: '30'})
+				.then(function(){
+					linkerTemperatureDecrease.avatar.executeFunctionality(temperatureDecrease, {method: 'PUT', value: '10'});
+					responseExecution.executed = true;
+					responseExecution.message = 'Functionality executed';
+					response.send(responseExecution);
+				});
+		break;
+		case 'temperatureRegulation':
+			// Ex: Regulate the temperature to 20
+			var argumentsFunctionality = {};
+			var desiredTemperature = argumentsFunctionality.desiredTemperature || 10;
+			var temperatureSense = 'http://localhost:3232/functionality/temperatureSense';
+			var temperatureIncrease = 'http://localhost:3232/functionality/temperatureIncrease';
+			var temperatureDecrease = 'http://localhost:3232/functionality/temperatureDecrease';
+			var linkerTemperatureSense = findLinker(linkers, temperatureSense);
+			var linkerTemperatureIncrease = findLinker(linkers, temperatureIncrease);
+			var linkerTemperatureDecrease = findLinker(linkers, temperatureDecrease);
+			// Check the temperature to cool or heat the place
+			linkerTemperatureSense.avatar.executeFunctionality(temperatureSense, {method: 'GET'})
+				.then(function(responseTemperature){
+					if (responseTemperature.value > desiredTemperature) {
+						// Cool the place
+						var functionCool = function(initValueCooler) {
+							linkerTemperatureDecrease.avatar.executeFunctionality(temperatureDecrease, {method: 'PUT', value: initValueCooler})
+							.then(function(responseDecrease){
+								// Check the temperature again
+								linkerTemperatureSense.avatar.executeFunctionality(temperatureSense, {method: 'GET'})
+								.then(function(responseSense) {
+									if (responseSense.value != desiredTemperature) {
+										functionCool(responseDecrease.value + 1);
+									} else {
+										responseExecution.executed = true;
+										responseExecution.message = 'Functionality executed';
+										response.send(responseExecution);
+										return false;
+									}
+								});
+							});
+						}
+						functionCool(1);
+					} else {
+						// Heat the place
+						var functionHeat = function(initValueHeater) {
+							linkerTemperatureIncrease.avatar.executeFunctionality(temperatureIncrease, {method: 'PUT', value: initValueHeater})
+							.then(function(responseIncrease){
+								// Check the temperature again
+								linkerTemperatureSense.avatar.executeFunctionality(temperatureSense, {method: 'GET'})
+								.then(function(responseSense) {
+									if (responseSense.value != desiredTemperature) {
+										functionHeat(responseIncrease.value + 1);
+									} else {
+										responseExecution.executed = true;
+										responseExecution.message = 'Functionality executed';
+										response.send(responseExecution);
+										return false;
+									}
+								});
+							});
+						}
+						functionHeat(1);
+					}
+				});
+		break;
 	}
 });
 
@@ -235,6 +354,53 @@ function findAvatar(idAvatar) {
 		}
 	}
 	return {};
+}
+
+function findLinker(linkers, functionality) {
+	for (i in linkers) {
+		if (linkers[i].functionality == functionality) {
+			return linkers[i];
+		}
+	}
+	return {};
+}
+
+function findAvatarsExecutingFunctionality(functionalities) {
+	var registryLinksItems = registryLinks();
+	var responseFunctionalities = [];
+	var responseExecution = {};
+	for (i in functionalities) {
+		var responseFunctionality = {};
+		responseFunctionality.functionality = functionalities[i];
+		responseFunctionality.avatars = [];
+		for (j in registryLinksItems) {
+			if (functionalities[i] == registryLinksItems[j].functionality) {
+				responseFunctionality.avatars.push(registryLinksItems[j].idAvatar);
+			}
+		}
+		responseFunctionalities.push(responseFunctionality);
+	}
+	responseExecution.possible = true;
+	responseExecution.functionalities = responseFunctionalities;
+	for (k in responseFunctionalities) {
+		if (responseFunctionalities[k].avatars.length == 0) {
+			responseExecution.possible = false;
+		}
+	}
+	return responseExecution;
+}
+
+function registryLinks() {
+	var links = [];
+	for (i in functionalitiesRegistry) {
+		for (j in functionalitiesRegistry[i].functionalities) {
+			var functionalityLink = {};
+			functionalityLink.idAvatar = functionalitiesRegistry[i].idAvatar;
+			functionalityLink.functionality = functionalitiesRegistry[i].functionalities[j];
+			links.push(functionalityLink);
+		}
+	}
+	return links;
 }
 
 function avatarsToHtml() {
@@ -266,28 +432,12 @@ function avatarToString(avatar) {
 							+'</div>'
 						+'</div>';
 	}
-	// Found Functionalities
-	found = avatar.collaborativeFunctionalitiesManager.getFunctionalitiesFromFunctionalitiesRepository();
-	foundHtml = '';
-	for (i in found) {
-		var linkFunctionality = avatar.hostId + '/' + avatar.idFunctionality(found[i]);
-		foundHtml += '<div class="functionality functionalityFound" rel="'+found[i]+'">'
-							+'<div class="functionalityIns">'
-								+'<div class="functionalityDocumentation">Doc</div>'
-								+'<div class="functionalityExecute" rel="'+linkFunctionality+'">Exec</div>'
-								+'<div class="functionalityAction">'
-									+linkFunctionality
-								+'</div>'
-								+'<div class="clearer"></div>'
-							+'</div>'
-						+'</div>';
-	}
-	// Functionalities from Other Avatars
-	other = avatar.collaborativeFunctionalitiesManager.getFunctionalitiesFromOtherAvatars();
-	otherHtml = '';
-	for (i in other) {
-		var linkFunctionality = avatar.hostId + '/' + avatar.idFunctionality(other[i]);
-		otherHtml += '<div class="functionality functionalityOther" rel="'+other[i]+'">'
+	// Incomplete Functionalities
+	incomplete = avatar.collaborativeFunctionalitiesManager.getFunctionalitiesIncompleteFromFunctionalitiesRepository();
+	incompleteHtml = '';
+	for (i in incomplete) {
+		var linkFunctionality = avatar.hostId + '/' + avatar.idFunctionality(incomplete[i]);
+		incompleteHtml += '<div class="functionality functionalityIncomplete" rel="'+incomplete[i]+'">'
 							+'<div class="functionalityIns">'
 								+'<div class="functionalityDocumentation">Doc</div>'
 								+'<div class="functionalityExecute" rel="'+linkFunctionality+'">Exec</div>'
@@ -311,18 +461,10 @@ function avatarToString(avatar) {
 	                    	+localHtml
                     	+'</div>'
                     	+'<div class="exposedFunctionalitiesSection">'
-	                    	+'<h2>Functionalities found in the repository</h2>'
-	                    	+foundHtml
-                    	+'</div>'
-                    	+'<div class="exposedFunctionalitiesSection">'
-	                    	+'<h2>Functionalities in other avatars</h2>'
-	                    	+otherHtml
+	                    	+'<h2>Incomplete functionalities found in the repository</h2>'
+	                    	+incompleteHtml
                     	+'</div>'
                     +'</div>'
                 +'</div>'
             +'</div>';
-}
-
-function isArray(variable) {
-	return (Object.prototype.toString.call(variable) === '[object Array]');
 }

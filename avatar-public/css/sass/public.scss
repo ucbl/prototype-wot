@@ -278,6 +278,41 @@ input::-moz-focus-inner {
 		right: 10px;
 		cursor: pointer;
 	}
+	.messageTitle {
+		text-align: center;
+		color: $green;
+		padding-bottom: 20px;
+		font-weight: bold;
+	}
+	.messageTitleError {
+		color: $red;
+	}
+	.messageCode {
+		font-family: $fontFamilyCode;
+		font-size: 0.8em;
+		padding: 0.3em 0;
+	}
+	.messageCodeTitle {
+		color: $blue;
+	}
+	input.formSubmit {
+		display: block;
+		width: 200px;
+		padding: 5px 10px;
+		margin: auto;
+		background: $green;
+		color: $white;
+		font-weight: bold;
+		text-align: center;
+		margin-top: 20px;
+		border: 0px;
+		cursor: pointer;
+		@include borderRadius(3px);
+		@include animate();
+		&:hover {
+			background: $blue;
+		}
+	}
 }
 .modalWindowBig {
 	width: 1000px;
