@@ -271,6 +271,15 @@
       "asawooVocab:name": "Activate a motor",
       "asawooVocab:description": "Activate a motor"
     },
+    {
+      "@id": "asawooCapability:informationMotor",
+      "@type": [
+        "owl:NamedIndividual",
+        "asawooVocab:Capability"
+      ],
+      "asawooVocab:name": "Information of a motor",
+      "asawooVocab:description": "Information of a motor"
+    },
 
 
 
@@ -456,6 +465,18 @@
       "asawooVocab:description": "Activate a motor",
       "asawooVocab:isImplementedBy": {
         "@id": "asawooCapability:activateMotor"
+      }
+    },
+    {
+      "@id": "asawooFunctionality:informationMotor",
+      "@type": [
+        "asawooVocab:Functionality",
+        "owl:NamedIndividual"
+      ],
+      "asawooVocab:name": "Information of a motor",
+      "asawooVocab:description": "Information of a motor",
+      "asawooVocab:isImplementedBy": {
+        "@id": "asawooCapability:informationMotor"
       }
     },
 

@@ -155,6 +155,13 @@ app.get('/cima/:nameObject/:capability', function(request, response, next) {
             responseJson.value = calculateTemperature();
             responseJson.type = getValueFromObject(nameObject, 'type');
         break;
+        case 'informationMotor':
+            responseJson['@context'] = hostServerPort + '/context/MotorValue';
+            responseJson['@type'] = 'vocab:MotorValue';
+            responseJson.angle = getValueFromObject(nameObject, 'angle');
+            responseJson.speed = getValueFromObject(nameObject, 'speed');
+            responseJson.strength = getValueFromObject(nameObject, 'strength');
+        break;
     }
     response.end(JSON.stringify(responseJson));
 });
@@ -225,6 +232,15 @@ app.put('/cima/:nameObject/:capability', function(request, response, next) {
             setValueToObject(nameObject, 'statusApp', 'stopped');
             responseJson.status = getValueFromObject(nameObject, 'statusApp');
         break;
+    }
+    response.end(JSON.stringify(responseJson));
+});
+app.post('/cima/:nameObject/:capability', function(request, response, next) {
+    response.writeHead(200, {"Content-Type": "application/ld+json"});
+    var nameObject = request.params.nameObject;
+    var capability = request.params.capability;
+    var responseJson = {"@id": hostServerPort + request.originalUrl};
+    switch (capability) {
         case 'activateMotor':
             var newAngle = request.body.angle;
             var newSpeed = request.body.speed;

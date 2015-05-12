@@ -424,3 +424,60 @@ input::-moz-focus-inner {
   white-space: -o-pre-wrap;
   word-wrap: break-word;
 }
+
+/* line 331, ../sass/public.scss */
+.messageCodeArgumentsTitle {
+  font-weight: bold;
+  padding: 10px 0px;
+  text-align: center;
+  color: #24b375;
+}
+
+/* line 337, ../sass/public.scss */
+.codeOption {
+  width: 400px;
+  float: left;
+  padding: 10px;
+  font-size: 0.9em;
+  background: #efefef;
+  border: 1px solid #999999;
+  margin: 10px 5px;
+  margin-top: 0px;
+}
+/* line 346, ../sass/public.scss */
+.codeOption label {
+  font-weight: bold;
+}
+/* line 349, ../sass/public.scss */
+.codeOption .messageCodeChoiceDescription {
+  font-size: 0.9em;
+  color: #333333;
+  font-style: italic;
+  padding-top: 5px;
+}
+/* line 354, ../sass/public.scss */
+.codeOption .messageCodeChoiceDescription label {
+  padding-right: 10px;
+}
+/* line 358, ../sass/public.scss */
+.codeOption .codeOptionArgument {
+  padding: 10px 20px;
+}
+
+/* line 362, ../sass/public.scss */
+.argument {
+  padding: 5px 0px;
+}
+/* line 364, ../sass/public.scss */
+.argument label {
+  display: block;
+  padding-bottom: 3px;
+  font-size: 0.8em;
+  color: #333333;
+}
+/* line 369, ../sass/public.scss */
+.argument label strong {
+  display: block;
+  font-size: 1.1em;
+  padding-bottom: 2px;
+}

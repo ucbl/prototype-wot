@@ -386,10 +386,29 @@
         {
           "@id": "_:activateMotor",
           "@type": "hydra:Operation",
-          "method": "PUT",
+          "method": "POST",
           "label": "Activate a motor",
           "description": null,
           "expects": "vocab:MotorValue",
+          "returns": "vocab:MotorValue",
+          "statusCodes": []
+        }
+      ]
+    },
+    {
+      "@id": "vocab:CapabilityInformationMotor",
+      "@type": "hydra:Class",
+      "subClassOf": "Capability",
+      "label": "CapabilityInformationMotor",
+      "description": "The information of a motor.",
+      "supportedOperation": [
+        {
+          "@id": "_:informationMotor",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "The information of a motor",
+          "description": null,
+          "expects": null,
           "returns": "vocab:MotorValue",
           "statusCodes": []
         }
@@ -406,8 +425,8 @@
           "@id": "_:temperatureDecrease",
           "@type": "hydra:Operation",
           "method": "PUT",
-          "label": "Change the level of an object to decrease the temperature",
-          "description": null,
+          "label": "Temperature decrease",
+          "description": "Change the level of an object to decrease the temperature",
           "expects": "vocab:NumericValue",
           "returns": "vocab:NumericValue",
           "statusCodes": []
@@ -425,8 +444,8 @@
           "@id": "_:temperatureIncrease",
           "@type": "hydra:Operation",
           "method": "PUT",
-          "label": "Change the level of an object to increase the temperature",
-          "description": null,
+          "label": "Temperature increase",
+          "description": "Change the level of an object to increase the temperature",
           "expects": "vocab:NumericValue",
           "returns": "vocab:NumericValue",
           "statusCodes": []
@@ -444,8 +463,8 @@
           "@id": "_:temperatureSense",
           "@type": "hydra:Operation",
           "method": "GET",
-          "label": "Get the temperature measurement",
-          "description": null,
+          "label": "Temperature measurement",
+          "description": "Measure the temperature",
           "expects": null,
           "returns": "vocab:Temperature",
           "statusCodes": []
@@ -463,8 +482,8 @@
           "@id": "_:gps",
           "@type": "hydra:Operation",
           "method": "GET",
-          "label": "Get the GPS position",
-          "description": null,
+          "label": "GPS position",
+          "description": "Get the GPS position",
           "expects": null,
           "returns": "vocab:Position",
           "statusCodes": []
@@ -483,7 +502,7 @@
           "@type": "hydra:Operation",
           "method": "PUT",
           "label": "Open a window",
-          "description": null,
+          "description": "Open a window",
           "expects": null,
           "returns": "vocab:WindowStatus",
           "statusCodes": []
@@ -502,7 +521,7 @@
           "@type": "hydra:Operation",
           "method": "PUT",
           "label": "Close a window",
-          "description": null,
+          "description": "Close a window",
           "expects": null,
           "returns": "vocab:WindowStatus",
           "statusCodes": []
@@ -521,7 +540,7 @@
           "@type": "hydra:Operation",
           "method": "PUT",
           "label": "Call using a phone",
-          "description": null,
+          "description": "Call using a phone",
           "expects": null,
           "returns": "vocab:PhoneStatus",
           "statusCodes": []
@@ -539,8 +558,8 @@
           "@id": "_:sms",
           "@type": "hydra:Operation",
           "method": "PUT",
-          "label": "Send an SMS using a phone",
-          "description": null,
+          "label": "SMS",
+          "description": "Send an SMS using a phone",
           "expects": null,
           "returns": "vocab:PhoneStatus",
           "statusCodes": []
@@ -558,8 +577,8 @@
           "@id": "_:photo",
           "@type": "hydra:Operation",
           "method": "PUT",
-          "label": "Take a picture using a phone",
-          "description": null,
+          "label": "Take a picture",
+          "description": "Take a picture using a phone",
           "expects": null,
           "returns": "vocab:PhoneStatus",
           "statusCodes": []
@@ -577,8 +596,8 @@
           "@id": "_:video",
           "@type": "hydra:Operation",
           "method": "PUT",
-          "label": "Record a video using a phone",
-          "description": null,
+          "label": "Record a video",
+          "description": "Record a video using a phone",
           "expects": null,
           "returns": "vocab:PhoneStatus",
           "statusCodes": []
@@ -596,8 +615,8 @@
           "@id": "_:startApp",
           "@type": "hydra:Operation",
           "method": "PUT",
-          "label": "Start an app using a phone",
-          "description": null,
+          "label": "Start an app",
+          "description": "Start an app using a phone",
           "expects": null,
           "returns": "vocab:AppStatus",
           "statusCodes": []
@@ -615,8 +634,8 @@
           "@id": "_:startApp",
           "@type": "hydra:Operation",
           "method": "PUT",
-          "label": "Stop an app using a phone",
-          "description": null,
+          "label": "Stop an app",
+          "description": "Stop an app using a phone",
           "expects": null,
           "returns": "vocab:AppStatus",
           "statusCodes": []

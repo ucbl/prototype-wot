@@ -327,3 +327,50 @@ input::-moz-focus-inner {
 	white-space: -o-pre-wrap;
 	word-wrap: break-word;
 }
+
+.messageCodeArgumentsTitle {
+	font-weight: bold;
+	padding: 10px 0px;
+	text-align: center;
+	color: $green;
+}
+.codeOption {
+	width: 400px;
+	float: left;
+	padding: 10px;
+	font-size: 0.9em;
+	background: $whitegray;
+	border: 1px solid $graylight;
+	margin: 10px 5px;
+	margin-top: 0px;
+	label {
+		font-weight: bold;
+	}
+	.messageCodeChoiceDescription {
+		font-size: 0.9em;
+		color: $gray;
+		font-style: italic;
+		padding-top: 5px;
+		label {
+			padding-right: 10px;
+		}
+	}
+	.codeOptionArgument {
+		padding: 10px 20px;
+	}
+}
+.argument {
+	padding: 5px 0px;
+	label {
+		display: block;
+		padding-bottom: 3px;
+		font-size: 0.8em;
+		color: $gray;
+		strong {
+			display: block;
+			font-size: 1.1em;
+			padding-bottom: 2px;
+		}
+	}
+}
+

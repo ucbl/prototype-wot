@@ -201,6 +201,28 @@ app.get('/functionalities-incomplete', function(request, response, next) {
     response.end(JSON.stringify(functionalitiesResponse));
 });
 
+// Search for incomplete functionalities and return all the info of the composed ones
+app.get('/functionalities-incomplete-all', function(request, response, next) {
+    response.writeHead(200, {"Content-Type": "application/ld+json",
+                            "Link": linkVocab});
+    var functionalitiesResponse = {};
+    functionalitiesResponse['@context'] = hostServerPort + "/context/Collection";
+    functionalitiesResponse['@type'] = 'Collection';
+    functionalitiesResponse['@id'] = hostServerPort + "/functionalities";
+    functionalitiesResponse.functionalities = [];
+    var functionalitiesArray = request.body.functionalities;
+    // Relate the array of the functionalities that we have and search if there are composed functionalities
+    var composedFunctionalitiesInfo = findComposedFunctionalitiesInfo();
+    for (i in composedFunctionalitiesInfo) {
+        for (j in (composedFunctionalitiesInfo[i]).isComposedOf) {
+            if (functionalitiesArray.indexOf((composedFunctionalitiesInfo[i]).isComposedOf[j]) >= 0) {
+                functionalitiesResponse.functionalities.push(composedFunctionalitiesInfo[i]);
+            }
+        }
+    }
+    response.end(JSON.stringify(functionalitiesResponse));
+});
+
 // Search for composed functionalities
 app.get('/functionalities-composed', function(request, response, next) {
     response.writeHead(200, {"Content-Type": "application/ld+json",

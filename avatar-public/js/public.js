@@ -24,9 +24,9 @@ function activateAjax() {
 		$.ajax({
 			url: urlAvatars,
 			type: 'PUT',
-			data: {idAvatar: idAvatarRel},
+			data: {urlCima: idAvatarRel},
 			success: function(response) {
-				if (response.created) {
+				if (response!=null) {
 					self.removeClass('objectActivate');
 				}
 				reloadAvatars();
@@ -49,100 +49,61 @@ function activateAjax() {
 		var self = $(this);
 		evt.stopImmediatePropagation();
 		evt.preventDefault();
+		var url = $(this).parents('.functionality').attr('rel');
 		var urlExecution = self.attr('rel');
 		$.ajax({url: urlExecution,
 				type: 'GET',
 				success: function(response) {
-					if (response.mode=='simple' && response.operations) {
-						var operations = response.operations;
-						for (i in operations) {
-							// In case that we just have to recover a state
-							var urlExecutionFunctionality = operations[i].urlExecution;
-							console.log(operations[i]);
-							if (operations[i].method == 'GET') {
-								console.log(urlExecutionFunctionality);
-								$.ajax({url: urlExecutionFunctionality,
-										type: 'PUT',
-										data: {method: 'GET'},
-										success: function(responseIns) {
-											openModalJSON(responseIns);
-										}
-									});
-							}
-							// In case that we have to change a state
-							if (operations[i].method == 'PUT') {
-								var optionsData = {method: 'PUT'};
-								for (j in operations[i].supportedProperty) {
-									optionsData[operations[i].supportedProperty[j].id] = prompt(operations[i].supportedProperty[j].label);
+					if (response.supportedOperation[0]) {
+						switch (response.supportedOperation[0].method) {
+							case 'GET':
+								openModalJSON(response);
+							break;
+							case 'POST':
+							case 'PUT':
+								var arguments = response.supportedOperation[0].expects.supportedProperty;
+								if (arguments && arguments.length>0) {
+									var htmlForm = '';
+									for (i in arguments) {
+										htmlForm += '<div class="argument">'
+														+ '<label><strong>' + arguments[i].property.label + '</strong> ' + arguments[i].property.description + '</label>'
+														+ '<input type="text" name="'+ arguments[i].property.label +'" size="30"/>'
+													+ '</div>';
+									}
+									var htmlContent = '';
+									htmlContent += "<div class=\"messageTitle\">Please fill the values needed to execute this functionality</div>";
+									htmlContent += "<form action=\"" + urlExecution + "\" method=\"" + response.supportedOperation[0].method + "\" class=\"formExecute\">";
+									htmlContent += htmlForm;
+									htmlContent += "<input type=\"submit\" class=\"formSubmit\" value=\"Execute\"/>";
+									htmlContent += "</form>";
+									openModalHtml(htmlContent);
+									activateAjaxFormExecute();
 								}
-								$.ajax({url: urlExecutionFunctionality,
-										type: 'PUT',
-										data: optionsData,
-										success: function(responseIns) {
-											openModalJSON(responseIns);
-										}
-									});
-							}
+							break;
 						}
-					} else if (response.mode=='complex' && response.linkers) {
-						var htmlContent = '';
-						var htmlForm = '';
-						htmlForm += "<input type=\"hidden\" name=\"idFunctionality\" value=\"" + response.idFunctionality + "\"/>";
-						if (response.linkers.possible) {
-							for (i in response.linkers.functionalities) {
-								var functionalityId = response.linkers.functionalities[i].functionality;
-								var avatars = response.linkers.functionalities[i].avatars;
-								htmlForm += "<div class=\"messageCode messageCodeBlock\">";
-								htmlForm += "<div class=\"messageCodeTitle\">Functionality <strong>" + functionalityId + "</strong></div>";
-								if (avatars.length == 1) {
-									htmlForm += "<div class=\"messageCodeChoice\">Avatar: <strong>" + avatars[0] + "</strong></div>";
-									htmlForm += "<input type=\"hidden\" name=\"functionalities[" + functionalityId + "]\" value=\"" + avatars[0] + "\"/>";
-								} else {
-									for (j in avatars) {
-										htmlForm += "<div class=\"messageCodeChoice\">";
-										htmlForm += "<input type=\"radio\" checked=\"checked\" name=\"functionalities[" + functionalityId + "]\" value=\"" + avatars[j] + "\"/>";
-										htmlForm += "<label>" + avatars[j] + "</label>";
-										htmlForm += "</div>";
-									}									
-								}
-								htmlForm += "</div>";
-							}
-							htmlContent += "<div class=\"messageTitle\">Please select the avatars to perform this functionality</div>";
-							htmlContent += "<form action=\"http://localhost:3000/execute-complex-functionality/\" method=\"POST\" class=\"formExecute\">";
-							htmlContent += htmlForm;
-							htmlContent += "<input type=\"submit\" class=\"formSubmit\" value=\"Execute\"/>";
-							htmlContent += "</form>";
-						} else {
-							htmlContent += "<div class=\"messageTitle messageTitleError\">There are not enough avatars that could perform this functionality</div>";
-							for (i in response.linkers.functionalities) {
-								if (response.linkers.functionalities[i].avatars.length == 0) {
-									htmlContent += "<div class=\"messageCode\">Missing avatar for the <strong>" + response.linkers.functionalities[i].functionality + "</strong> functionality</div>";
-								}
-							}
-						}
-						openModalHtml(htmlContent);
-						activateAjaxFormExecute();						
-					} else {
-						console.log('There was an error executing the functionality');	
 					}
 				}
 			});
 	});
-
 }
 
 function activateAjaxFormExecute() {
-	console.log($('.formExecute'));
+	
+	// Code option (diable other arguments)
+	$('.codeOption input:radio[name=idCode]').click(function() {
+		$('.codeOption input:text').attr('disabled', true);
+		$(this).parents('.codeOption').find('input:text').attr('disabled', false);
+	});
+
 	// Form to execute complex functions
 	$('.formExecute').submit(function(){
-		//evt.stopInmediatePropagation();
-		//evt.preventDefault();
 		var form = $(this);
 		$.ajax({url: form.attr('action'),
-						type: 'POST',
+						type: form.attr('method'),
 						data: form.serialize(),
 						success: function(response) {
-							console.log(response);
+							closeModal();
+							openModalJSON(response);
 						}
 					});
 		return false;

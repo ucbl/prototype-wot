@@ -3,6 +3,7 @@ var jsonld = require('jsonld');
 var N3Store = require('n3').Store;
 var requestModule = require('request');
 var rp = require('request-promise');
+var syncRequest = require('sync-request');
 
 var ApplianceCommunicationManager = require('../avatar/applianceCommunicationManager');
 var CapabilitiesManager = require('../avatar/capabilitiesManager');
@@ -60,7 +61,7 @@ function Avatar(urlCimaObject) {
 					console.log("INFO: 1.5.2 - Load the incomplete functionalities from the Functionalities Repository");
 				    self.collaborativeFunctionalitiesManager.loadIncompleteFunctionalitiesFromFunctionalitiesRepository()
 				    	.then(function(){
-				    		// MODE DIRECTORY
+
 				            console.log("INFO: 1.5.3 - Load the functionalities from the Context Manager");
 							self.collaborativeFunctionalitiesManager.loadFunctionalitiesFromContextManager();
 
@@ -92,7 +93,25 @@ Avatar.prototype.getOperations = function(urlFunctionality){
 	var self = this;
 	var operations = [];
 	var info = this.collaborativeFunctionalitiesManager.findCapability(urlFunctionality);
-	// If the functionality is in this object
+	if (self.id == info.idAvatar) {	
+		for (i in self.applianceCommunicationManager.capabilitiesConnections) {
+			var connection = self.applianceCommunicationManager.capabilitiesConnections[i];
+			if (info.capability == connection.ontology) {
+				for (j in connection.supportedOperation) {
+					var operation = connection.supportedOperation[j];
+					operations.push(operation);
+				}
+			}
+		}
+	}
+	return operations;
+}
+
+// Find information and format it on an simple object
+Avatar.prototype.getOperationsSimple = function(urlFunctionality){
+	var self = this;
+	var operations = [];
+	var info = this.collaborativeFunctionalitiesManager.findCapability(urlFunctionality);
 	if (self.id == info.idAvatar) {	
 		for (i in self.applianceCommunicationManager.capabilitiesConnections) {
 			var connection = self.applianceCommunicationManager.capabilitiesConnections[i];
@@ -124,52 +143,49 @@ Avatar.prototype.getOperations = function(urlFunctionality){
 // Execute an action
 // Ex:
 // urlFunctionality : http://localhost:3232/functionality/temperatureDecrease
-// optionsOperation : { method: 'PUT', value: '3442' }
+// optionsOperation : { value1: '3442', value2: '4324', value3: '5433' }
 
 Avatar.prototype.executeFunctionality = function(urlFunctionality, optionsOperation){
 	var self = this;
-	var info = this.collaborativeFunctionalitiesManager.findCapability(urlFunctionality);
-	// If the functionality doesn't exists
-	if (!info) {
-		console.log('INFO : The functionality ' + urlFunctionality + ' doesn\'t have a capability to implement it in this avatar');
-		return false;
-	}
-	// Execute a simple functionality in this avatar
-	if (info.idAvatar == self.id) {
-		var capabilityConnection = self.applianceCommunicationManager.findCapabilityConnection(info.capability);
-		var operationMethod = (optionsOperation.method) ? optionsOperation.method : 'GET';
-		// Find if there's an operation that corresponds
-		for (i in capabilityConnection.supportedOperation) {
-			if (capabilityConnection.supportedOperation[i].method == operationMethod) {
-				// Execute the operation sending a request
+	if (self.isLocalFunctionality(urlFunctionality)) {
+		// Execute a simple functionality in this avatar
+		var info = this.collaborativeFunctionalitiesManager.findCapability(urlFunctionality);
+		// If the functionality doesn't exist
+		if (!info) {
+			console.log('INFO : The functionality ' + urlFunctionality + ' doesn\'t have a capability to implement it in this avatar');
+			return false;
+		}
+		if (info.idAvatar == self.id) {
+			var capabilityConnection = self.applianceCommunicationManager.findCapabilityConnection(info.capability);
+			// Find if there's an operation that corresponds
+			for (i in capabilityConnection.supportedOperation) {
+				// Execute the first operation sending a request
 				var urlOperation = capabilityConnection['@id'];
-				return rp({url: urlOperation,
-						method: operationMethod,
-						json: optionsOperation
-						},
-						function (reqError, reqHttpResponse, reqBody) {
-							if (!reqError && reqBody) {
-								console.log('INFO : Functionality executed ' + urlOperation + ' by ' + info.idAvatar + ' with response :');
-								console.log(reqBody);
-								if (optionsOperation.callback) {
-									optionsOperation.callback(reqBody);
-								}
-							}
-						});
+				var supportedOperation = capabilityConnection.supportedOperation[0];
+				if (!optionsOperation) {
+					var optionsOperation = {};
+				}
+				if (supportedOperation) {
+					if (Object.keys(optionsOperation).length > 0) {
+						var executeOperation = syncRequest(supportedOperation.method, urlOperation, {json: optionsOperation});
+					} else {
+						var executeOperation = syncRequest(supportedOperation.method, urlOperation);
+					}
+					var responseExecuteOperation = JSON.parse(executeOperation.body.toString('utf-8'));
+					console.log('INFO : Functionality executed ' + urlOperation + ' by ' + info.idAvatar + ' with response :');
+					console.log(responseExecuteOperation);
+					return responseExecuteOperation;
+				}
 			}
 		}
-	}
-	// Check if other avatar can execute this operation
-	if (info.idAvatar != self.id) {
-		var urlOtherAvatar = self.host + info.idAvatar + '/' + self.idFunctionality(urlFunctionality);
-		rp.put({url: urlOtherAvatar,
-					json: {options: optionsOperation}
-					},
-					function (reqError, reqHttpResponse, reqBody) {
-						if (!reqError && reqBody && reqBody.executed) {
-							console.log('INFO : The functionality ' + urlFunctionality + ' was executed by ' + info.idAvatar + ' but it was called by ' + self.id);
-						}
-					});
+	} else {
+		// Execute a composed functionality in this avatar
+		var urlCode = 'http://localhost:3535/code/'+self.idFunctionality(urlFunctionality);
+		var infoCode = syncRequest('GET', urlCode);
+		var infoCodeJson = JSON.parse(infoCode.body.toString('utf-8'));
+		var codeExecute = infoCodeJson.code;
+		var execArguments = optionsOperation;
+		eval(codeExecute);
 	}
 };
 
@@ -193,6 +209,94 @@ Avatar.prototype.exposedFunctionalities = function(){
 Avatar.prototype.idFunctionality = function(urlFunctionality) {
 	var info = urlFunctionality.split('/');
 	return info[info.length - 1];
+}
+
+// Is local functionality
+Avatar.prototype.isLocalFunctionality = function(urlFunctionality) {
+	var localFunctionalities = this.localFunctionalitiesManager.getFunctionalities();
+	for (i in localFunctionalities) {
+		if (localFunctionalities[i] == urlFunctionality) {
+			return true;
+		}
+	}
+	return false;
+}
+
+
+//UI
+Avatar.prototype.toJsonHydra = function(hostServerPort) {
+	var avatar = this;
+	var hostServerPort = (!hostServerPort) ? 'http://localhost:3000' : hostServerPort;
+	var avatarHydra = {};
+	avatarHydra['@id'] = hostServerPort + '/avatar/' + avatar.id;
+	avatarHydra['@context'] = hostServerPort + '/context/Avatar';
+	avatarHydra['@type'] = 'vocab:Avatar';
+	avatarHydra.name = avatar.name;
+	avatarHydra.description = avatar.description;
+	avatarHydra.functionalities = [];
+	if (avatar.collaborativeFunctionalitiesManager) {	
+		// Load all simple functionalities in this avatar
+		simpleFunctionalities = avatar.collaborativeFunctionalitiesManager.getFunctionalitiesToExpose();
+		for (i in simpleFunctionalities) {
+			var functionalityHydra = avatar.toJsonFunctionalityHydraSimple(simpleFunctionalities[i]);
+	    	avatarHydra.functionalities.push(functionalityHydra);
+		}
+		// Load all composed functionalities in this avatar
+		composedFunctionalities = avatar.collaborativeFunctionalitiesManager.getFunctionalitiesComposedWithOtherAvatars();
+		for (i in composedFunctionalities) {
+			var functionalityComposedHydra = avatar.toJsonFunctionalityHydraComposed(composedFunctionalities[i]);
+	    	avatarHydra.functionalities.push(functionalityComposedHydra);
+		}
+	}
+	return avatarHydra;
+}
+
+Avatar.prototype.toJsonFunctionalityHydra = function(functionality, hostServerPort) {
+	if (this.isLocalFunctionality(functionality)) {
+		return this.toJsonFunctionalityHydraSimple(functionality, hostServerPort);
+	} else {
+		return this.toJsonFunctionalityHydraComposed(functionality, hostServerPort);
+	}
+}
+
+Avatar.prototype.toJsonFunctionalityHydraSimple = function(functionality, hostServerPort) {
+	var avatar = this;
+	var hostServerPort = (!hostServerPort) ? 'http://localhost:3000' : hostServerPort;
+	var functionalityHydra = {};
+	functionalityHydra['@id'] = hostServerPort + '/avatar/' + avatar.id + '/' + avatar.idFunctionality(functionality);
+	functionalityHydra['@context'] = "http://www.w3.org/ns/hydra/context.jsonld";
+	functionalityHydra['@type'] = 'http://localhost:3000/vocab#Functionality';
+	functionalityHydra.supportedOperation = avatar.getOperations(functionality);
+	return functionalityHydra;
+}
+
+Avatar.prototype.toJsonFunctionalityHydraComposed = function(functionality, hostServerPort) {
+	var avatar = this;
+	var urlCode = 'http://localhost:3535/code-simple/'+avatar.idFunctionality(functionality);
+	var hostServerPort = (!hostServerPort) ? 'http://localhost:3000' : hostServerPort;
+	var functionalityHydra = {};
+	functionalityHydra['@id'] = hostServerPort + '/avatar/' + avatar.id + '/' + avatar.idFunctionality(functionality);
+	functionalityHydra['@context'] = "http://www.w3.org/ns/hydra/context.jsonld";
+	functionalityHydra['@type'] = 'http://localhost:3000/vocab#Functionality';
+	var infoCode = syncRequest('GET', urlCode);
+	var infoCodeJson = JSON.parse(infoCode.body.toString('utf-8'));
+	var supportedOperation = {};
+	supportedOperation['@id'] = '_:'+infoCodeJson.idFunctionality;
+	supportedOperation['@type'] = 'hydra:Operation';
+	supportedOperation.method = 'POST';
+	supportedOperation.label = infoCodeJson.label;
+	supportedOperation.description = infoCodeJson.description;
+	supportedOperation.expects = infoCodeJson.expects;
+	supportedOperation.returns = infoCodeJson.returns;
+	functionalityHydra.supportedOperation = [supportedOperation];
+	return functionalityHydra;
+}
+
+function getUrl(url) {
+  return httpclient({
+    method: 'GET',
+      url: url
+    }).finish().body.read().decodeToString();
 }
 
 module.exports = Avatar;

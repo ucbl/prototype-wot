@@ -20,13 +20,16 @@ var portListen = 3000;
 var hostFunctionalities = 'http://localhost:3232/functionality/';
 var hostFunctionalitiesComposedOf = 'http://localhost:3232/functionality-composed-of/';
 var hostServerPort = hostServer + ':' + portListen;
+var hydraVocab = hostServerPort + '/vocab#';
+var linkVocab = '<' + hydraVocab + '>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"';
+var hydraLocation = __dirname + '/data/hydra.jsonld';
 
 // Configure App and CROS
-app.use(bodyParser.json({ type: 'json' }))
+app.use(bodyParser.json({ type: 'json' }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(function(request, response, next) {
     response.header("Access-Control-Allow-Origin", "*");
-	response.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+    response.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
     response.header("Access-Control-Allow-Headers", "X-Requested-With");
     next();
 });
@@ -38,85 +41,67 @@ var server = app.listen(portListen, function () {
 	var port = server.address().port;
 })
 
-/*
-avatar = new Avatar('http://localhost:3333/cima/heater-tesco-2336');
 
-setTimeout(function(){
-	console.log('DONE');
-	console.log(avatar.collaborativeFunctionalitiesManager);
-	avatar2 = new Avatar('http://localhost:3333/cima/cooler-swirlwind-2443');
-	setTimeout(function(){
-		console.log('DONE2');
-		console.log(avatar2.collaborativeFunctionalitiesManager);
-		console.log(1111);
-		console.log(1111);
-		console.log(1111);
-		console.log(functionalitiesRegistry);
-	}, 2000);
-}, 2000);
-/*
-var avatar = new Avatar('http://localhost:3333/cima/sensor-ge-2442');
-var urlFunctionality = hostFunctionalities + 'temperatureSense';
-setTimeout(function(){
-	console.log('DONE');
-	avatar.informationFunctionality(urlFunctionality);
-}, 2000);
-
-/*--- INITIALIZE THE AVATARS ---*/
-/*
-
-//avatar = new Avatar('http://localhost:3333/cima/cooler-swirlwind-2443');
-avatar1 = new Avatar('http://localhost:3333/cima/coolerheater-swirlwind-2665');
-avatar2 = new Avatar('http://localhost:3333/cima/heater-tesco-2336');
-avatar3 = new Avatar('http://localhost:3333/cima/sensor-ge-2442');
-avatar4 = new Avatar('http://localhost:3333/cima/window-ikea-2555');
-avatar5 = new Avatar('http://localhost:3333/cima/phone-samsung-2554');
-avatars.push(avatar1);
-avatars.push(avatar2);
-avatars.push(avatar3);
-avatars.push(avatar4);
-avatars.push(avatar5);
-setTimeout(function(){
-	console.log('DONE');
-	var optionsExecute = {method: "PUT",
-							options: {value: 333},
-							callback: function(response){}};
-	avatars[0].executeFunctionality('http://localhost:3232/functionality/temperatureDecreasess', optionsExecute);
-	
-	var optionsExecute = {method: "PUT",
-							options: {value: 222},
-							callback: function(response){}};
-	avatars[1].executeFunctionality('http://localhost:3232/functionality/temperatureIncrease', optionsExecute);
-	var optionsExecute = {method: "PUT",
-							options: {value: 222},
-							callback: function(response){}};
-	avatars[1].executeFunctionality('http://localhost:3232/functionality/openWindow', optionsExecute);
-	//avatars[0].executeFunctionality('http://localhost:3232/functionality/openWindow');
-    //console.log(avatars[0].collaborativeFunctionalitiesManager);
-    console.log(avatars[0].id);
-    console.log(avatars[0].collaborativeFunctionalitiesManager.functionalitiesConnections);
-    console.log(avatars[1].id);
-    console.log(avatars[1].collaborativeFunctionalitiesManager.functionalitiesConnections);
-    console.log(avatars[2].id);
-    console.log(avatars[2].collaborativeFunctionalitiesManager.functionalitiesConnections);
-    console.log(avatars[3].id);
-    console.log(avatars[3].collaborativeFunctionalitiesManager.functionalitiesConnections);
-    //console.log(33);
-    //console.log(33);
-    //console.log(avatar.applianceCommunicationManager);
-	//console.log(avatar3);
-	//console.log(avatar2);
-    //console.log(avatars);
-    //console.log(functionalitiesRegistry);
-    //avatars[0].applianceCommunicationManager.viewParent();
-}, 2000);
-//ava1.show();
-//ava1.id = '33';
-//ava1.show();
-//ava2.show();
+//avatars.push(new Avatar('http://localhost:3333/cima/coolerheater-swirlwind-2665'));
+//avatars.push(new Avatar('http://localhost:3333/cima/heater-tesco-2336'));
+//avatars.push(new Avatar('http://localhost:3333/cima/sensor-ge-2442'));
+//avatars.push(new Avatar('http://localhost:3333/cima/motor-ge-3343'));
+//avatars.push(new Avatar('http://localhost:3333/cima/window-ikea-2555'));
+//avatars.push(new Avatar('http://localhost:3333/cima/phone-samsung-2554'));
 
 
-*/
+/*---HYDRA---*/
+
+// GET the hydra vocabulary 
+app.get('/vocab', function(request, response, next) {
+    response.writeHead(200, {"Content-Type": "application/ld+json"});
+    fs.readFile(hydraLocation, 'utf8', function (error, data) {
+        response.end(data);
+    });
+    return true;
+});
+
+// GET the hydra context
+app.get('/context/:context', function(request, response, next) {
+    response.writeHead(200, {"Content-Type": "application/ld+json"});
+    var contextLocation = __dirname + '/data/contexts/' + request.params.context + '.jsonld';
+    fs.readFile(contextLocation, 'utf8', function (error, data) {
+        response.end(data);
+    });
+    return true;
+});
+app.get('/context', function(request, response, next) {
+    response.writeHead(200, {"Content-Type": "application/ld+json",
+                            "Link": linkVocab});
+    response.end("{}");
+});
+
+// Entry point and home page
+app.get('/', function(request, response, next) {
+    if (request.accepts('html')) {
+        response.end(objectsToString());
+    } else {
+        response.writeHead(200, {"Content-Type": "application/ld+json",
+                                "Link": linkVocab});
+        var responseEntryPoint = {
+                                    "@context": hostServerPort + "/context/EntryPoint",
+                                    "@id": hostServerPort + "/",
+                                    "@type": "EntryPoint",
+                                    "avatars": hostServerPort + "/avatars/"
+                                };
+        response.end(JSON.stringify(responseEntryPoint));
+    }
+});
+
+
+
+
+
+
+
+
+
+/*---SERVICE---*/
 
 // PUT to expose the functionalities of an avatar
 // We add them to our application, more speficially to our listFunctionalitites
@@ -124,6 +109,7 @@ app.put('/expose-functionalities', function(request, response, next) {
 	functionalitiesExposed = {'idAvatar' : request.body.idAvatar,
 							'functionalities' : request.body.functionalities,
 							'functionalitiesIncomplete' : request.body.functionalitiesIncomplete};
+	// Add the functionalities to the registry
 	var itemExists = false;
 	for (i in functionalitiesRegistry) {
 		if (functionalitiesRegistry[i].idAvatar == functionalitiesExposed.idAvatar) {
@@ -133,6 +119,57 @@ app.put('/expose-functionalities', function(request, response, next) {
 	}
 	if (!itemExists) {
 		functionalitiesRegistry.push(functionalitiesExposed);
+	}
+	// Find all the composed functionalities in the environement
+	if (!functionalitiesRegistry.executableComposedFunctionalities) {
+		functionalitiesRegistry.executableComposedFunctionalities = [];
+	}
+	var allComposedFunctionalities = [];
+	for (i in functionalitiesRegistry) {
+		for (j in functionalitiesRegistry[i].functionalitiesIncomplete) {
+			var itemExists = false;
+			for (k in allComposedFunctionalities) {
+				if (allComposedFunctionalities[k].id == functionalitiesRegistry[i].functionalitiesIncomplete[j].id) {
+					itemExists = true;
+				}
+			}
+			if (!itemExists) {
+				allComposedFunctionalities.push(functionalitiesRegistry[i].functionalitiesIncomplete[j]);
+			}
+		}
+	}
+	// Find all the simple functionalities in the environement
+	var allSimpleFunctionalities = [];
+	for (i in functionalitiesRegistry) {
+		for (j in functionalitiesRegistry[i].functionalities) {
+			allSimpleFunctionalities.push(functionalitiesRegistry[i].functionalities[j]);
+		}
+	}
+	allSimpleFunctionalities = uniqueArray(allSimpleFunctionalities);
+	// Check if there are composed functionalities that can be executed
+	for (i in allComposedFunctionalities) {
+		var itemsNeeded = 0;
+		for (j in allComposedFunctionalities[i].isComposedOf) {
+			for (k in allSimpleFunctionalities) {
+				if (allComposedFunctionalities[i].isComposedOf[j] == allSimpleFunctionalities[k]) {
+					itemsNeeded++;
+				}
+			}
+		}
+		if (itemsNeeded == allComposedFunctionalities[i].isComposedOf.length) {
+			functionalitiesRegistry.executableComposedFunctionalities.push(allComposedFunctionalities[i].id);
+		}
+	}
+	// Tell to all the avatars concerned that they can execute the composed functionalities
+	for (i in functionalitiesRegistry.executableComposedFunctionalities) {
+		for (j in avatars) {
+			var avatarIncompleteFunctionalities = avatars[j].collaborativeFunctionalitiesManager.getFunctionalitiesIncompleteFromFunctionalitiesRepository();
+			for (k in avatarIncompleteFunctionalities) {
+				if (avatarIncompleteFunctionalities[k].id == functionalitiesRegistry.executableComposedFunctionalities[i]) {
+					avatars[j].collaborativeFunctionalitiesManager.addFunctionalityComposedWithOtherAvatars(avatarIncompleteFunctionalities[k].id);
+				}
+			}
+		}
 	}
 	response.send(functionalitiesRegistry);
 });
@@ -165,176 +202,102 @@ app.put('/broadcast-functionalities', function(request, response, next) {
 // WEB SERVICE FOR THE AVATARS
 // GET list of avatars that exist in our application
 app.get('/avatars', function(request, response, next) {
-	response.send(avatars);
+	var responseJson = {};
+	responseJson['@id'] = hostServerPort + '/avatars';
+	responseJson['@context'] = hostServerPort + '/context/Collection';
+	responseJson['@type'] = 'vocab:EntryPoint/avatars';
+	responseJson.avatars = [];
+	for (i in avatars) {
+		responseJson.avatars.push(avatars[i].toJsonHydra());
+	}
+	response.writeHead(200, {"Content-Type": "application/ld+json",
+                                "Link": linkVocab});
+	response.end(JSON.stringify(responseJson));
 });
 // PUT to create an avatar
 app.put('/avatars', function(request, response, next) {
-	var idAvatar = request.body.idAvatar;
-	var responseCreated = {created : false};
-	if (idAvatar) {
-		avatarExists = findAvatar(idAvatar);
-		if (!avatarExists.id) {
-			newAvatar = new Avatar(idAvatar);
-			if (newAvatar) {
-				avatars.push(newAvatar);
-				responseCreated.created = true;
+	var urlCima = request.body.urlCima;
+	var responseCreated = {};
+	if (urlCima) {
+		avatar = findAvatar(urlCima);
+		if (!avatar.id) {
+			avatar = new Avatar(urlCima);
+			if (avatar) {
+				avatars.push(avatar);
 			}
 		}
+		responseCreated = avatar.toJsonHydra();
 	}
-	response.send(responseCreated);
-});
-// GET list of avatars that exist in our application in an HTML format
-app.get('/avatars-html', function(request, response, next) {
-	response.send(avatarsToHtml());
+	response.writeHead(200, {"Content-Type": "application/ld+json",
+                                "Link": linkVocab});
+	response.end(JSON.stringify(responseCreated));
 });
 // GET a simple Avatar
 app.get('/avatar/:idAvatar', function(request, response, next) {
 	var idAvatar = request.params.idAvatar;
 	var avatar = findAvatar(idAvatar);
-	response.send(avatar);
+	response.writeHead(200, {"Content-Type": "application/ld+json",
+                                "Link": linkVocab});
+	response.end(JSON.stringify(avatar.toJsonHydra()));
 });
-// Find information on how to execute a capability
+// Find information on how to execute functionalities of an avatar and execute them if needed
 app.get('/avatar/:idAvatar/:idFunctionality', function(request, response, next) {
 	var idAvatar = request.params.idAvatar;
 	var idFunctionality = request.params.idFunctionality;
 	var avatar = findAvatar(idAvatar);
 	var functionality = hostFunctionalities + idFunctionality;
-	var operations = avatar.getOperations(functionality);
-	var responseAvatar = {};
-	if (operations.length > 0) {
-		// Simple functionality executed by this avatar
-		for (i in operations) {
-			operations[i].urlExecution = hostServerPort + '/avatar/' + idAvatar + '/' + idFunctionality;
-		}
-		responseAvatar.mode = 'simple';
-		responseAvatar.operations = operations;
-		response.send(responseAvatar);
+	var functionalityHydra = avatar.toJsonFunctionalityHydra(functionality);
+	response.writeHead(200, {"Content-Type": "application/ld+json",
+                                "Link": linkVocab});
+	// If the functionality is a GET then execute it
+	if (functionalityHydra && functionalityHydra.supportedOperation[0] && functionalityHydra.supportedOperation[0].method=="GET") {
+		functionalityHydra.response = avatar.executeFunctionality(functionality);
+		response.end(JSON.stringify(functionalityHydra));
 	} else {
-		// Search if we can execute this functionality with the rest of the avatars
-		var functionalityComposedOfUrl = hostFunctionalitiesComposedOf + idFunctionality;
-		rp.get({url:functionalityComposedOfUrl,
-					json: {}},
-					function (reqError, reqHttpResponse, reqBody) {
-						if (!reqError && reqBody && reqBody.isComposedOf) {
-							var functionalitiesComposedOf = reqBody.isComposedOf;
-							responseAvatar.mode = 'complex';
-							responseAvatar.idFunctionality = idFunctionality;
-							responseAvatar.linkers = findAvatarsExecutingFunctionality(functionalitiesComposedOf);
-							response.send(responseAvatar);
-						}
-					});
+		response.end(JSON.stringify(functionalityHydra));
 	}
 });
-
-// Execute a capability in other avatar
+// Execute a PUT functionality on a avatar
 app.put('/avatar/:idAvatar/:idFunctionality', function(request, response, next) {
 	var idAvatar = request.params.idAvatar;
 	var idFunctionality = request.params.idFunctionality;
 	var avatar = findAvatar(idAvatar);
 	var functionality = hostFunctionalities + idFunctionality;
+	var functionalityHydra = avatar.toJsonFunctionalityHydra(functionality);
 	var optionsExecute = request.body;
-	var promiseExecution = avatar.executeFunctionality(functionality, optionsExecute);
-	if (promiseExecution) {
-		promiseExecution.then(function(responsePromise) {
-			response.send(responsePromise);
-		});
+	response.writeHead(200, {"Content-Type": "application/ld+json",
+                                "Link": linkVocab});
+	// If the functionality is a PUT then execute it
+	if (functionalityHydra && functionalityHydra.supportedOperation[0] && functionalityHydra.supportedOperation[0].method=="PUT") {
+		functionalityHydra.response = avatar.executeFunctionality(functionality, optionsExecute);
+		response.end(JSON.stringify(functionalityHydra));
 	} else {
-		response.send({});
+		response.end(JSON.stringify(functionalityHydra));
 	}
 });
-// Execute a complex functionality
-app.post('/execute-complex-functionality', function(request, response, next) {
-	var idFunctionality = request.body.idFunctionality;
-	var linkers = [];
-	var functionalitiesString = 'functionalities';
-	for (i in request.body) {
-		if (i.substring(0, functionalitiesString.length)==functionalitiesString) {
-			var linker = {};
-			linker.functionality = (i.replace(functionalitiesString+'[','').replace(']',''));
-			linker.idAvatar = request.body[i];
-			linker.avatar = findAvatar(request.body[i]);
-			linkers.push(linker)
-		}
+// Execute a POST functionality on a avatar
+app.post('/avatar/:idAvatar/:idFunctionality', function(request, response, next) {
+	var idAvatar = request.params.idAvatar;
+	var idFunctionality = request.params.idFunctionality;
+	var avatar = findAvatar(idAvatar);
+	var functionality = hostFunctionalities + idFunctionality;
+	var functionalityHydra = avatar.toJsonFunctionalityHydra(functionality);
+	var optionsExecute = request.body;
+	response.writeHead(200, {"Content-Type": "application/ld+json",
+                                "Link": linkVocab});
+	// If the functionality is a POST then execute it
+	if (functionalityHydra && functionalityHydra.supportedOperation[0] && functionalityHydra.supportedOperation[0].method=="POST") {
+		functionalityHydra.response = avatar.executeFunctionality(functionality, optionsExecute);
+		response.end(JSON.stringify(functionalityHydra));
+	} else {
+		response.end(JSON.stringify(functionalityHydra));
 	}
-	// Execute the complex functionality
-	var responseExecution = {};
-	responseExecution.executed = false;
-	switch (idFunctionality) {
-		default:
-			response.send(responseExecution);
-		break;
-		case 'temperatureChange':
-			// Ex: Increase 30 degrees and decrease 10
-			var arguments = [{desiredTemp:20}];
-			var temperatureIncrease = 'http://localhost:3232/functionality/temperatureIncrease';
-			var temperatureDecrease = 'http://localhost:3232/functionality/temperatureDecrease';
-			var linkerTemperatureIncrease = findLinker(linkers, temperatureIncrease);
-			var linkerTemperatureDecrease = findLinker(linkers, temperatureDecrease);
-			linkerTemperatureIncrease.avatar.executeFunctionality(temperatureIncrease, {method: 'PUT', value: '30'})
-				.then(function(){
-					linkerTemperatureDecrease.avatar.executeFunctionality(temperatureDecrease, {method: 'PUT', value: '10'});
-					responseExecution.executed = true;
-					responseExecution.message = 'Functionality executed';
-					response.send(responseExecution);
-				});
-		break;
-		case 'temperatureRegulation':
-			// Ex: Regulate the temperature to 20
-			var argumentsFunctionality = {};
-			var desiredTemperature = argumentsFunctionality.desiredTemperature || 10;
-			var temperatureSense = 'http://localhost:3232/functionality/temperatureSense';
-			var temperatureIncrease = 'http://localhost:3232/functionality/temperatureIncrease';
-			var temperatureDecrease = 'http://localhost:3232/functionality/temperatureDecrease';
-			var linkerTemperatureSense = findLinker(linkers, temperatureSense);
-			var linkerTemperatureIncrease = findLinker(linkers, temperatureIncrease);
-			var linkerTemperatureDecrease = findLinker(linkers, temperatureDecrease);
-			// Check the temperature to cool or heat the place
-			linkerTemperatureSense.avatar.executeFunctionality(temperatureSense, {method: 'GET'})
-				.then(function(responseTemperature){
-					if (responseTemperature.value > desiredTemperature) {
-						// Cool the place
-						var functionCool = function(initValueCooler) {
-							linkerTemperatureDecrease.avatar.executeFunctionality(temperatureDecrease, {method: 'PUT', value: initValueCooler})
-							.then(function(responseDecrease){
-								// Check the temperature again
-								linkerTemperatureSense.avatar.executeFunctionality(temperatureSense, {method: 'GET'})
-								.then(function(responseSense) {
-									if (responseSense.value != desiredTemperature) {
-										functionCool(responseDecrease.value + 1);
-									} else {
-										responseExecution.executed = true;
-										responseExecution.message = 'Functionality executed';
-										response.send(responseExecution);
-										return false;
-									}
-								});
-							});
-						}
-						functionCool(1);
-					} else {
-						// Heat the place
-						var functionHeat = function(initValueHeater) {
-							linkerTemperatureIncrease.avatar.executeFunctionality(temperatureIncrease, {method: 'PUT', value: initValueHeater})
-							.then(function(responseIncrease){
-								// Check the temperature again
-								linkerTemperatureSense.avatar.executeFunctionality(temperatureSense, {method: 'GET'})
-								.then(function(responseSense) {
-									if (responseSense.value != desiredTemperature) {
-										functionHeat(responseIncrease.value + 1);
-									} else {
-										responseExecution.executed = true;
-										responseExecution.message = 'Functionality executed';
-										response.send(responseExecution);
-										return false;
-									}
-								});
-							});
-						}
-						functionHeat(1);
-					}
-				});
-		break;
-	}
+});
+
+
+// GET list of avatars that exist in our application in an HTML format
+app.get('/avatars-html', function(request, response, next) {
+	response.send(avatarsToHtml());
 });
 
 // GET, POST, PUT by default
@@ -432,15 +395,30 @@ function avatarToString(avatar) {
 							+'</div>'
 						+'</div>';
 	}
+	// Composed Functionalities
+	composed = avatar.collaborativeFunctionalitiesManager.getFunctionalitiesComposedWithOtherAvatars();
+	composedHtml = '';
+	for (i in composed) {
+		var linkFunctionality = avatar.hostId + '/' + avatar.idFunctionality(composed[i]);
+		composedHtml += '<div class="functionality functionalityComposed" rel="'+composed[i]+'">'
+							+'<div class="functionalityIns">'
+								+'<div class="functionalityDocumentation">Doc</div>'
+								+'<div class="functionalityExecute" rel="'+linkFunctionality+'">Exec</div>'
+								+'<div class="functionalityAction">'
+									+linkFunctionality
+								+'</div>'
+								+'<div class="clearer"></div>'
+							+'</div>'
+						+'</div>';
+	}
 	// Incomplete Functionalities
-	incomplete = avatar.collaborativeFunctionalitiesManager.getFunctionalitiesIncompleteFromFunctionalitiesRepository();
+	incomplete = avatar.collaborativeFunctionalitiesManager.getFunctionalitiesIncompleteFromFunctionalitiesRepositoryArray();
 	incompleteHtml = '';
 	for (i in incomplete) {
 		var linkFunctionality = avatar.hostId + '/' + avatar.idFunctionality(incomplete[i]);
 		incompleteHtml += '<div class="functionality functionalityIncomplete" rel="'+incomplete[i]+'">'
 							+'<div class="functionalityIns">'
 								+'<div class="functionalityDocumentation">Doc</div>'
-								+'<div class="functionalityExecute" rel="'+linkFunctionality+'">Exec</div>'
 								+'<div class="functionalityAction">'
 									+linkFunctionality
 								+'</div>'
@@ -461,10 +439,24 @@ function avatarToString(avatar) {
 	                    	+localHtml
                     	+'</div>'
                     	+'<div class="exposedFunctionalitiesSection">'
+	                    	+'<h2>Composed functionalities that can be used with other avatars</h2>'
+	                    	+composedHtml
+                    	+'</div>'
+                    	+'<div class="exposedFunctionalitiesSection">'
 	                    	+'<h2>Incomplete functionalities found in the repository</h2>'
 	                    	+incompleteHtml
                     	+'</div>'
                     +'</div>'
                 +'</div>'
             +'</div>';
+}
+
+function uniqueArray(array, placeholder, index) {
+	if (array && array.length > 0) {	
+		placeholder = array.length;
+		while (index = --placeholder)
+			while (index--)
+				array[placeholder] !== array[index] || array.splice(index,1);
+	}
+	return array
 }

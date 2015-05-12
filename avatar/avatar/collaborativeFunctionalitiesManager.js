@@ -11,6 +11,7 @@ function CollaborativeFunctionalitiesManager(idAvatar, localFunctionalitiesManag
 	this.functionalitiesToExpose = [];
 	this.functionalitiesFromLocalFunctionalities = [];
 	this.functionalitiesIncompleteFromFunctionalitiesRepository = [];
+	this.functionalitiesComposedWithOtherAvatars = [];
 	this.functionalitiesFromOtherAvatars = [];
 	this.functionalitiesFromContextManager = [];
 	this.functionalitiesConnections = [];
@@ -29,6 +30,19 @@ CollaborativeFunctionalitiesManager.prototype.getFunctionalitiesIncompleteFromFu
 	return this.functionalitiesIncompleteFromFunctionalitiesRepository;
 };
 
+CollaborativeFunctionalitiesManager.prototype.getFunctionalitiesIncompleteFromFunctionalitiesRepositoryArray = function() {
+	var arrayFunctionalities = [];
+	for (i in this.functionalitiesIncompleteFromFunctionalitiesRepository) {
+		arrayFunctionalities.push(this.functionalitiesIncompleteFromFunctionalitiesRepository[i].id);
+	}
+	arrayFunctionalities = uniqueArray(arrayFunctionalities);
+	return arrayFunctionalities;
+};
+
+CollaborativeFunctionalitiesManager.prototype.getFunctionalitiesComposedWithOtherAvatars = function() {
+	return this.functionalitiesComposedWithOtherAvatars;
+};
+
 CollaborativeFunctionalitiesManager.prototype.getFunctionalitiesFromOtherAvatars = function() {
 	return this.functionalitiesFromOtherAvatars;
 };
@@ -44,7 +58,6 @@ CollaborativeFunctionalitiesManager.prototype.getBroadCastFunctionalities = func
 	broadcastFunctionalities = broadcastFunctionalities.concat(self.getFunctionalitiesFromFunctionalitiesRepository());
 	return broadcastFunctionalities;
 };
-
 
 // Loaders
 CollaborativeFunctionalitiesManager.prototype.loadFunctionalitiesFromLocalFunctionalities = function() {
@@ -103,7 +116,7 @@ CollaborativeFunctionalitiesManager.prototype.saveFunctionalitiesFromOtherAvatar
 
 CollaborativeFunctionalitiesManager.prototype.loadIncompleteFunctionalitiesFromFunctionalitiesRepository = function(){
 	var self = this;
-	return rp.get({url:'http://localhost:3232/functionalities-incomplete',
+	return rp.get({url:'http://localhost:3232/functionalities-incomplete-all',
 					json: {'functionalities': self.getFunctionalitiesToExpose()}
 					},
 					function (reqError, reqHttpResponse, reqBody) {
@@ -129,6 +142,12 @@ CollaborativeFunctionalitiesManager.prototype.addFunctionalitiesToExpose = funct
 CollaborativeFunctionalitiesManager.prototype.addFunctionalitiesIncompleteFromFunctionalitiesRepository = function(functionalities){
 	this.functionalitiesIncompleteFromFunctionalitiesRepository = this.functionalitiesIncompleteFromFunctionalitiesRepository.concat(functionalities);
 	this.functionalitiesIncompleteFromFunctionalitiesRepository = uniqueArray(this.functionalitiesIncompleteFromFunctionalitiesRepository);
+}
+
+// Add an executable functionality
+CollaborativeFunctionalitiesManager.prototype.addFunctionalityComposedWithOtherAvatars = function(functionality){
+	this.functionalitiesComposedWithOtherAvatars.push(functionality);
+	this.functionalitiesComposedWithOtherAvatars = uniqueArray(this.functionalitiesComposedWithOtherAvatars);
 }
 
 // Add a functionality connection
