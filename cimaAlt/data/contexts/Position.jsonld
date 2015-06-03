@@ -1,9 +1,0 @@
-{
-    "@context": {
-        "hydra": "http://www.w3.org/ns/hydra/core#",
-        "vocab": "http://localhost:3334/vocab#",
-        "latitude": "http://www.w3.org/2001/XMLSchema#double",
-        "longitude": "http://www.w3.org/2001/XMLSchema#double",
-        "Position": "vocab:Position"
-    }
-}
