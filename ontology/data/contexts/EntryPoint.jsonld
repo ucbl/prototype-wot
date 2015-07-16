@@ -1,0 +1,15 @@
+{
+    "@context": {
+        "hydra": "http://www.w3.org/ns/hydra/core#",
+        "vocab": "http://localhost:3232/vocab#",
+        "EntryPoint": "vocab:EntryPoint",
+        "functionalities": {
+            "@id": "vocab:EntryPoint/functionalities",
+            "@type": "@id"
+        },
+        "capabilities": {
+            "@id": "vocab:EntryPoint/capabilities",
+            "@type": "@id"
+        }
+    }
+}

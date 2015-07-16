@@ -1,0 +1,294 @@
+{
+  "@id": "http://localhost:3232/vocab",
+  "@type": "ApiDocumentation",
+  "entrypoint": "http://localhost:3232/",
+  "@context": {
+    "vocab": "http://localhost:3232/vocab#",
+    "hydra": "http://www.w3.org/ns/hydra/core#",
+    "ApiDocumentation": "hydra:ApiDocumentation",
+    "property": {
+      "@id": "hydra:property",
+      "@type": "@id"
+    },
+    "readonly": "hydra:readonly",
+    "writeonly": "hydra:writeonly",
+    "supportedClass": "hydra:supportedClass",
+    "supportedProperty": "hydra:supportedProperty",
+    "supportedOperation": "hydra:supportedOperation",
+    "method": "hydra:method",
+    "expects": {
+      "@id": "hydra:expects",
+      "@type": "@id"
+    },
+    "returns": {
+      "@id": "hydra:returns",
+      "@type": "@id"
+    },
+    "statusCodes": "hydra:statusCodes",
+    "code": "hydra:statusCode",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "description": "rdfs:comment",
+    "domain": {
+      "@id": "rdfs:domain",
+      "@type": "@id"
+    },
+    "range": {
+      "@id": "rdfs:range",
+      "@type": "@id"
+    },
+    "subClassOf": {
+      "@id": "rdfs:subClassOf",
+      "@type": "@id"
+    }
+  },
+  "supportedClass": [
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#Resource",
+      "@type": "hydra:Class",
+      "hydra:title": "Resource",
+      "hydra:description": null,
+      "supportedOperation": [],
+      "supportedProperty": []
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#Collection",
+      "@type": "hydra:Class",
+      "hydra:title": "Collection",
+      "hydra:description": null,
+      "supportedOperation": [],
+      "supportedProperty": [
+        {
+          "property": "http://www.w3.org/ns/hydra/core#member",
+          "hydra:title": "capabilities",
+          "hydra:description": "The capabilities of this collection.",
+          "required": null,
+          "readonly": false,
+          "writeonly": false
+        },
+        {
+          "property": "http://www.w3.org/ns/hydra/core#member",
+          "hydra:title": "functionalities",
+          "hydra:description": "The functionalities of this collection.",
+          "required": null,
+          "readonly": false,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:Capability",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "Capability",
+      "description": "A capability.",
+      "supportedOperation": [
+        {
+          "@id": "_:capability",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "Retrieves a capability",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:Capability",
+          "statusCodes": []
+        }
+      ],
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:Capability/name",
+            "@type": "rdf:Property",
+            "label": "name",
+            "description": "The explicit name of the capability",
+            "domain": "vocab:Capability",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "name",
+          "hydra:description": "The explicit name of the capability",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:Capability/description",
+            "@type": "rdf:Property",
+            "label": "description",
+            "description": "The description of the capability",
+            "domain": "vocab:Capability",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "description",
+          "hydra:description": "The description of the capability",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:Functionality",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "Functionality",
+      "description": "A functionality.",
+      "supportedOperation": [
+        {
+          "@id": "_:functionality",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "Retrieves a functionality",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:Functionality",
+          "statusCodes": []
+        }
+      ],
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:Functionality/name",
+            "@type": "rdf:Property",
+            "label": "name",
+            "description": "The explicit name of the functionality",
+            "domain": "vocab:Functionality",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "name",
+          "hydra:description": "The explicit name of the functionality",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:Functionality/description",
+            "@type": "rdf:Property",
+            "label": "description",
+            "description": "The description of the functionality",
+            "domain": "vocab:Functionality",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "description",
+          "hydra:description": "The description of the functionality",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:Functionality/isImplementedBy",
+            "@type": "rdf:Property",
+            "label": "isImplementedBy",
+            "description": "The functionality is implemented by a capacity",
+            "domain": "vocab:Functionality",
+            "range": "vocab:Capability",
+            "supportedOperation": []
+          },
+          "hydra:title": "isImplementedBy",
+          "hydra:description": "The functionality is implemented by a capacity",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:Functionality/isComposedOf",
+            "@type": "rdf:Property",
+            "label": "isComposedOf",
+            "description": "The functionality is composed of other functionalities",
+            "domain": "vocab:Functionality",
+            "range": "hydra:Collection",
+            "supportedOperation": []
+          },
+          "hydra:title": "isComposedOf",
+          "hydra:description": "The functionality is composed of other functionalities",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:EntryPoint",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "EntryPoint",
+      "description": "The main entry point of the Functionalities Repository.",
+      "supportedOperation": [
+        {
+          "@id": "_:entry_point",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "The Functionalities Repository main entry point.",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:EntryPoint",
+          "statusCodes": []
+        }
+      ],
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:EntryPoint/functionalities",
+            "@type": "hydra:Link",
+            "label": "functionalities",
+            "description": "The entrypoint for the functionalities operation",
+            "domain": "vocab:EntryPoint",
+            "range": "http://www.w3.org/ns/hydra/core#Collection",
+            "supportedOperation": [
+              {
+                "@id": "_:functionalities",
+                "@type": "hydra:Operation",
+                "method": "GET",
+                "label": "The list of all the functionalities",
+                "description": null,
+                "expects": null,
+                "returns": "hydra:Collection",
+                "statusCodes": []
+              }
+            ]
+          },
+          "hydra:title": "functionalities",
+          "hydra:description": "The list of all the functionalities. It can be filtered sending an array of capabilities.",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:EntryPoint/capabilities",
+            "@type": "hydra:Link",
+            "label": "functionalities",
+            "description": "The entrypoint for the capabilities operation",
+            "domain": "vocab:EntryPoint",
+            "range": "http://www.w3.org/ns/hydra/core#Collection",
+            "supportedOperation": [
+              {
+                "@id": "_:capabilities",
+                "@type": "hydra:Operation",
+                "method": "GET",
+                "label": "The list of all the capabilities",
+                "description": null,
+                "expects": null,
+                "returns": "hydra:Collection",
+                "statusCodes": []
+              }
+            ]
+          },
+          "hydra:title": "capabilities",
+          "hydra:description": "The list of all the capabilities",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        }
+      ]
+    }
+  ]
+}

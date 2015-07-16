@@ -1,0 +1,29 @@
+{
+  "name": "functionalities-simple-server",
+  "description": "ASAWoO - Functionalities Simple Server",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/theylooksotired/functionalities-simple-server.git"
+  },
+  "dependencies": {
+    "express": "~4.11.1",
+    "body-parser": "~1.10.2",
+    "markedejs": "0.1.0",
+    "ejs": "*",
+    "app": "*",
+    "common-node": "0.10.20",
+    "debug": "2.1.3",
+    "httpclient": "0.0.4",
+    "jsonld": "0.3.22",
+    "ldf-client": "1.2.6",
+    "n3": "0.4.2",
+    "request": "2.53.0",
+    "request-promise": "0.4.1",
+    "sync-request": "*",
+    "rdfstore": "0.9.4"
+  }
+}
