@@ -25,5 +25,10 @@
     "request-promise": "0.4.1",
     "sync-request": "*",
     "rdfstore": "0.9.4"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-concurrent": "^2.0.0",
+    "grunt-nodemon": "^0.4.0"
   }
 }
