@@ -26,8 +26,7 @@ module.exports = function (grunt) {
 		    		'nodemon:functionalities',
 				    'nodemon:ontology',
 		    		'nodemon:coderepo',
-		    		'nodemon:interoperability',
-				    'serve'
+		    		'nodemon:interoperability'
 		    	],
 			    options: {
 	    			logConcurrentOutput: true
