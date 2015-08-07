@@ -31,8 +31,8 @@ The different models have been also tested with the *Hydra console* presented by
 
 You just need to download all the source code and run:
 
-    `sudo npm install`
-    `grunt`
+    sudo npm install
+    grunt
 
 The different components are available in:
 
