@@ -29,7 +29,9 @@ The different models have been also tested with the *Hydra console* presented by
 
 ## Instructions
 
-You just need to download all the source code and the run the script in the `start.sh` file.
+You just need to download all the source code and run:
+`sudo npm install`
+`grunt`
 
 The different components are available in:
 
@@ -42,4 +44,4 @@ To access the graphical interfaces just open the `index.html` files in the `func
 
 ## More information
 
-For more information on this work, you can contact Lionel Medini, Pierre-Antoine Champin or Raul Leano Martinet at the LIRIS laboratory.
+For more information on this work, you can contact Lionel Médini, Pierre-Antoine Champin or Raul Leano Martinet at the LIRIS laboratory.
