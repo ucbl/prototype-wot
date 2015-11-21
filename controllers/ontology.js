@@ -183,8 +183,8 @@ router.get('/functionalities-composed', function(request, response) {
 
     //TODO: move to models
     //Not tested - To test:
-    //var functionalitiesArray = ["http://192.168.56.101:3000/functionality/temperatureRegulation"];
-    var functionalitiesArray = request.body.functionalities || [];
+    var functionalitiesArray = ["http://192.168.56.101:3000/functionality/temperatureIncrease"];
+    //var functionalitiesArray = request.body.functionalities || [];
     // Relate the array of the functionalities that we have and search if there are composed functionalities
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
     console.log("composedFunctionalitiesInfo: " + composedFunctionalitiesInfo.length);
