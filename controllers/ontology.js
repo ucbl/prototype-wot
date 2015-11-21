@@ -195,6 +195,7 @@ router.get('/functionalities-composed', function(request, response) {
             console.log("j " + composedFunctionalitiesInfo[i].isComposedOf[j]);
             if (functionalitiesArray.indexOf((composedFunctionalitiesInfo[i]).isComposedOf[j]) >= 0) {
                 functionalitiesFound++;
+                console.log("Found:" + functionalitiesFound);
             }
         }
         if (functionalitiesFound == (composedFunctionalitiesInfo[i]).isComposedOf.length) {
