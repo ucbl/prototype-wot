@@ -172,6 +172,7 @@ router.get('/functionalities-incomplete-all', function(request, response) {
 });
 
 // Search for composed functionalities
+//
 router.get('/functionalities-composed', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json",
         "Link": Globals.vocabularies.linkVocab});
@@ -183,7 +184,11 @@ router.get('/functionalities-composed', function(request, response) {
 
     //TODO: move to models
     //Not tested - To test:
-    var functionalitiesArray = ["http://192.168.56.101:3000/functionality/temperatureIncrease"];
+    var functionalitiesArray = [
+        "http://192.168.56.101:3000/functionality/temperatureIncrease",
+        "http://192.168.56.101:3000/functionality/temperatureDecrease",
+        "http://192.168.56.101:3000/functionality/temperatureSense"
+    ];
     //var functionalitiesArray = request.body.functionalities || [];
     // Relate the array of the functionalities that we have and search if there are composed functionalities
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
