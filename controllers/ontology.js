@@ -235,3 +235,5 @@ router.all('/*', function(request, response) {
     response.end('');
 });
 */
+
+module.exports = router;
