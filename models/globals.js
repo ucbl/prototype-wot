@@ -16,6 +16,7 @@
     var vocabularies = {
         //Set default base URIs
         'rdf': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
+        //TODO: separate into several base URIs -> interoperability, asawoo-base, code-repository...
         'base': 'http://asawoo.liris.cnrs.fr/',
         //Define all other URIs depending on the base one
         'setOtherUris': function () {
@@ -23,6 +24,7 @@
             this.hydraVocab = this.base + '/vocab#';
             this.nsName = this.base + 'name';
             this.nsDescription = this.base + 'description';
+            this.appliance = this.base + 'appliance/';
             this.capability = this.base + 'capability/';
             this.functionality = this.base + 'functionality/';
             this.isImplementedBy = this.base + 'isImplementedBy';

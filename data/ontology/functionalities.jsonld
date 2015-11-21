@@ -1,21 +1,16 @@
 {
   "@context": {
-    "asawoo": "http://localhost:3232/",
-    "asawooVocab": "http://localhost:3232/vocab#",
-    "asawooFunctionality": "http://localhost:3232/functionality/",
-    "asawooCapability": "http://localhost:3232/capability/",
-    "asawooAppliance": "http://localhost:3232/appliance/",
+    "asawoo": Globals.vocabularies.base,
+    "asawooVocab": Globals.vocabularies.hydraVocab,
+    "asawooFunctionality": Globals.vocabularies.functionality,
+    "asawooCapability": Globals.vocabularies.capability,
+    "asawooAppliance": Globals.vocabularies.appliance,
     "owl": "http://www.w3.org/2002/07/owl#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
-
-
-
-
-
 
     {"_comment":"******** STRUCTURE ********"},
     {
@@ -129,11 +124,6 @@
         "@id": "asawooVocab:Capability"
       }
     },
-
-
-
-
-
 
     {"_comment":"******** LIST OF CAPABILITIES ********"},
     {
@@ -280,11 +270,6 @@
       "asawooVocab:name": "Information of a motor",
       "asawooVocab:description": "Information of a motor"
     },
-
-
-
-
-
 
     {"_comment":"******** LIST OF SIMPLE FUNCTIONALITIES ********"},
     {
@@ -480,10 +465,6 @@
       }
     },
 
-
-
-
-
     {"_comment":"******** LIST OF COMPOSED FUNCTIONALITIES ********"},
     {
       "@id": "asawooFunctionality:communicate",
@@ -613,7 +594,5 @@
         }
       ]
     }
-
-    
   ]
 }
