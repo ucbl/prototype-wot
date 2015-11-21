@@ -18,7 +18,7 @@ var ontology = {
         var dataLocation = __dirname + '/../data/ontology/functionalities.jsonld';
         fs.readFile(dataLocation, 'utf8', function (error, data) {
             if (!error) {
-                var jsonOntology = JSON.parse(data)['@graph'];
+                var jsonOntology = JSON.eval(data)['@graph'];
                 jsonld.toRDF(jsonOntology, function (error, triples) {
                     for (var graphName in triples) {
                         triples[graphName].forEach(function (triple) {
