@@ -39,9 +39,8 @@ var ontology = {
         });
     },
     'find': function(subject, predicate, object, graph) {
-        console.log("1: " + tripleStore.count());
         var res = tripleStore.find(subject, predicate, object, graph);
-        console.log("2: " + res.length);
+        console.log("tripleStore.find: " + res.length + " result(s).");
         return res;
     },
     // Extract the info of a capability

@@ -83,7 +83,6 @@ router.get('/functionalities', function(request, response) {
     functionalitiesResponse.functionalities = [];
 
     //TODO: move to models
-    //Doesn't work
     var triplesResponse = ontologyModel.find(null, Globals.vocabularies.nsType, Globals.vocabularies.hydraVocab + "Functionality");
     for (var i in triplesResponse) {
         // Format the triples and show the response
@@ -105,7 +104,8 @@ router.get('/functionalities-search', function(request, response) {
 
     //TODO: move to models
     //Doesn't work
-    var capabilitiesArray = request.body.capabilities;
+    //var capabilitiesArray = request.body.capabilities;
+    var capabilitiesArray = ["http://192.168.56.101:3000/capability/temperatureSense"];
     var triplesResponse = [];
     if (capabilitiesArray && capabilitiesArray.length > 0) {
         for (var j in capabilitiesArray) {
