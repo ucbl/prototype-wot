@@ -171,8 +171,9 @@ router.get('/functionalities-incomplete-all', function(request, response) {
     response.end(JSON.stringify(functionalitiesResponse));
 });
 
-// Search for composed functionalities
-//
+/** Search for composed functionalities
+ * Returns composed functionalities for which all sub-functionalities are in the request body
+ */
 router.get('/functionalities-composed', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json",
         "Link": Globals.vocabularies.linkVocab});
@@ -183,29 +184,20 @@ router.get('/functionalities-composed', function(request, response) {
     functionalitiesResponse.functionalities = [];
 
     //TODO: move to models
-    //Not tested - To test:
-    var functionalitiesArray = [
-        "http://192.168.56.101:3000/functionality/temperatureIncrease",
-        "http://192.168.56.101:3000/functionality/temperatureDecrease",
-        "http://192.168.56.101:3000/functionality/temperatureSense"
-    ];
-    //var functionalitiesArray = request.body.functionalities || [];
+    //To test:
+    //var functionalitiesArray = ["http://192.168.56.101:3000/functionality/temperatureIncrease","http://192.168.56.101:3000/functionality/temperatureDecrease","http://192.168.56.101:3000/functionality/temperatureSense"];
+    var functionalitiesArray = request.body.functionalities || [];
     // Relate the array of the functionalities that we have and search if there are composed functionalities
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
-    console.log("composedFunctionalitiesInfo: " + composedFunctionalitiesInfo.length);
     for (var i in composedFunctionalitiesInfo) {
-        console.log("i " + composedFunctionalitiesInfo[i]);
         var functionalitiesFound = 0;
         for (var j in (composedFunctionalitiesInfo[i]).isComposedOf) {
-            console.log("j " + composedFunctionalitiesInfo[i].isComposedOf[j]);
             if (functionalitiesArray.indexOf((composedFunctionalitiesInfo[i]).isComposedOf[j]) >= 0) {
                 functionalitiesFound++;
-                console.log("Found:" + functionalitiesFound);
             }
         }
         if (functionalitiesFound == (composedFunctionalitiesInfo[i]).isComposedOf.length) {
             functionalitiesResponse.functionalities.push(i);
-            console.log("Pushed:" + functionalitiesResponse.functionalities.length);
         }
     }
     response.end(JSON.stringify(functionalitiesResponse));
@@ -244,14 +236,5 @@ router.get('/capability/:capability', function(request, response) {
     var capabilityResponse = ontologyModel.getCapabilityInfo(requestUrl);
     response.end(JSON.stringify(capabilityResponse));
 });
-
-/*
-// GET, POST, PUT by default
-router.all('/*', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json",
-        "Link": Globals.vocabularies.linkVocab});
-    response.end('');
-});
-*/
 
 module.exports = router;

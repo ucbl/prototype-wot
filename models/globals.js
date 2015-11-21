@@ -24,9 +24,9 @@
             this.hydraVocab = this.base + 'vocab#';
             this.nsName = this.base + 'name';
             this.nsDescription = this.base + 'description';
-            this.appliance = this.base + 'appliance/';
-            this.capability = this.base + 'capability/';
-            this.functionality = this.base + 'functionality/';
+            this.appliance = this.base + 'ontology/appliance/';
+            this.capability = this.base + 'ontology/capability/';
+            this.functionality = this.base + 'ontology/functionality/';
             this.linkVocab = '<' + this.hydraVocab + '>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"';
             exports.vocabularies = this;
         },
