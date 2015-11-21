@@ -7,7 +7,7 @@ var express = require('express'),
     jsonld = require('jsonld'),
     Globals = require('../models/globals'),
     ontologyModel = require('../models/ontology'),
-    ontologyView = require('../view/ontologyHelper');
+    ontologyView = require('../views/ontology/composedFunctionalities');
 
 /*---LOAD ONTOLOGY---*/
 ontologyModel.loadOntology();
