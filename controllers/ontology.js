@@ -63,7 +63,6 @@ router.get('/capabilities', function(request, response) {
     capabilitiesResponse.capabilities = [];
 
     //TODO: move to models
-    //Doesn't work
     var triplesResponse = ontologyModel.find(null, Globals.vocabularies.nsType, Globals.vocabularies.hydraVocab + "Capability");
     for (var i in triplesResponse) {
         // Format the triples and show the response
@@ -85,7 +84,7 @@ router.get('/functionalities', function(request, response) {
 
     //TODO: move to models
     //Doesn't work
-    var triplesResponse = ontologyModel.find(null, Globals.vocabularies.nsType, Globals.vocabularies.functionality);
+    var triplesResponse = ontologyModel.find(null, Globals.vocabularies.nsType, Globals.vocabularies.hydraVocab + "Functionality");
     for (var i in triplesResponse) {
         // Format the triples and show the response
         var graphItemEle = ontologyModel.getFunctionalityInfo(triplesResponse[i].subject);
@@ -110,7 +109,7 @@ router.get('/functionalities-search', function(request, response) {
     var triplesResponse = [];
     if (capabilitiesArray && capabilitiesArray.length > 0) {
         for (var j in capabilitiesArray) {
-            triplesResponse = triplesResponse.concat(ontologyModel.find(null, Globals.vocabularies.isImplementedBy, capabilitiesArray[j]));
+            triplesResponse = triplesResponse.concat(ontologyModel.find(null, Globals.vocabularies.hydraVocab + "isImplementedBy", capabilitiesArray[j]));
         }
     }
     for (var i in triplesResponse) {

@@ -27,8 +27,6 @@
             this.appliance = this.base + 'appliance/';
             this.capability = this.base + 'capability/';
             this.functionality = this.base + 'functionality/';
-            this.isImplementedBy = this.base + 'isImplementedBy';
-            this.isComposedOf = this.base + 'isComposedOf';
             this.linkVocab = '<' + this.hydraVocab + '>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"';
             exports.vocabularies = this;
         },

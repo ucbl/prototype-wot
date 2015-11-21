@@ -75,12 +75,12 @@ var ontology = {
             if (info[i].predicate == Globals.vocabularies.nsDescription) {
                 response.description = info[i].object;
             }
-            if (info[i].predicate == Globals.vocabularies.isImplementedBy) {
+            if (info[i].predicate == Globals.vocabularies.hydraVocab + "isImplementedBy") {
                 response.isImplementedBy = {};
                 response.isImplementedBy['@id'] = info[i].object;
                 response.isImplementedBy['@type'] = 'vocab:Capability';
             }
-            if (info[i].predicate == Globals.vocabularies.base.isComposedOf) {
+            if (info[i].predicate == Globals.vocabularies.base.hydraVocab + "isComposedOf") {
                 if (!response.isComposedOf) {
                     response.isComposedOf = [];
                 }
@@ -95,7 +95,7 @@ var ontology = {
     // Info about the composed functionalities
     'findComposedFunctionalities': function() {
         // Find functionalities that are composed of the ones we have
-        var composedFunctionalities = tripleStore.find(null, Globals.vocabularies.isComposedOf, null);
+        var composedFunctionalities = tripleStore.find(null, Globals.vocabularies.hydraVocab + "isComposedOf", null);
         var composedFunctionalitiesInfo = {};
         for (var i in composedFunctionalities) {
             if (!composedFunctionalitiesInfo[((composedFunctionalities[i]).subject)]) {
