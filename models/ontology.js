@@ -15,20 +15,13 @@ var tripleStore = new N3Store();
 
 var ontology = {
     'loadOntology': function() {
-        //Separate the context from the data, to be able to use "eval" to replace namespaces by their values
-        var jsonOntology = {};
-        var dataLocation = __dirname + '/../data/ontology/functionalities/';
-        //Eval prefixes in @context
-        fs.readFile(dataLocation + 'prefixes.json', 'utf8', function (error, data) {
-            if (!error) {
-                jsonOntology["@context"] = eval(data);
-            } else {
-                //TODO: throw an error here
-                console.log('Could not read file "prefixes.json" in ' + dataLocation);
-            }
-        });
+        //Separate the context from the data, to be able to replace namespaces by their values
+        var jsonOntology = {
+                "@context": require("../data/ontology/functionalities/prefixes.js")['@context']
+        };
 
-        fs.readFile(dataLocation + 'functionalities.jsonld', 'utf8', function (error, data) {
+        var dataLocation = __dirname + '/../data/ontology/functionalities/functionalities.jsonld';
+        fs.readFile(dataLocation, 'utf8', function (error, data) {
             if (!error) {
                 jsonOntology["@graph"] = JSON.parse(data)['@graph'];
                 jsonld.toRDF(jsonOntology, function (error, triples) {
