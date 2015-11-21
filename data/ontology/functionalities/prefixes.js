@@ -1,4 +1,4 @@
-modules.export = {
+module.exports = {
   "@context": {
     "asawoo": Globals.vocabularies.base,
     "asawooVocab": Globals.vocabularies.hydraVocab,
