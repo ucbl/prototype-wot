@@ -67,7 +67,7 @@ router.get('/capabilities', function(request, response) {
 
     //TODO: move to models
     //Doesn't work
-    var triplesResponse = ontologyModel.find(null, Globals.vocabularies.nsType, Globals.vocabularies.capability);
+    var triplesResponse = ontologyModel.find(null, Globals.vocabularies.nsType, Globals.vocabularies.hydraVocab + "Capability");
     for (var i in triplesResponse) {
         // Format the triples and show the response
         var graphItemEle = ontologyModel.getCapabilityInfo(triplesResponse[i].subject);
