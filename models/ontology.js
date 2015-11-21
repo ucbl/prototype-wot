@@ -120,7 +120,7 @@ var ontology = {
         for (var i in composedFunctionalitiesInfo) {
             for (var j in composedFunctionalitiesInfo[i].isComposedOf) {
                 for (var k in composedFunctionalitiesInfo) {
-                    if (composedFunctionalitiesInfo[i].isComposedOf[j] == composedFunctionalitiesInfo[k].id) {
+                    if (composedFunctionalitiesInfo[i].isComposedOf[j] == composedFunctionalitiesInfo[k]["@id"]) {
                         composedFunctionalitiesInfo[i].isComposedOf[j] = null;
                         composedFunctionalitiesInfo[i].isComposedOf = composedFunctionalitiesInfo[i].isComposedOf.concat(composedFunctionalitiesInfo[k].isComposedOf);
                     }
