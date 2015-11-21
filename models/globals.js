@@ -21,7 +21,7 @@
         //Define all other URIs depending on the base one
         'setOtherUris': function () {
             this.nsType = this.rdf + 'type';
-            this.hydraVocab = this.base + '/vocab#';
+            this.hydraVocab = this.base + 'vocab#';
             this.nsName = this.base + 'name';
             this.nsDescription = this.base + 'description';
             this.appliance = this.base + 'appliance/';

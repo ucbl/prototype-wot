@@ -156,9 +156,9 @@ router.get('/functionalities-incomplete-all', function(request, response) {
     functionalitiesResponse.functionalities = [];
 
     //TODO: move to models
-    //Doesn't work
-    var functionalitiesArray = ["http://192.168.56.101:3000/functionality/temperatureSense"];
-    //var functionalitiesArray = request.body.functionalities || [];
+    //To test:
+    //var functionalitiesArray = ["http://192.168.56.101:3000/functionality/temperatureSense"];
+    var functionalitiesArray = request.body.functionalities || [];
     // Relate the array of the functionalities that we have and search if there are composed functionalities
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
     for (var i in composedFunctionalitiesInfo) {
@@ -182,8 +182,9 @@ router.get('/functionalities-composed', function(request, response) {
     functionalitiesResponse.functionalities = [];
 
     //TODO: move to models
-    //Doesn't work
-    var functionalitiesArray = request.body.functionalities;
+    //To test:
+    var functionalitiesArray = ["http://192.168.56.101:3000/functionality/temperatureRegulation"];
+    //var functionalitiesArray = request.body.functionalities || [];
     // Relate the array of the functionalities that we have and search if there are composed functionalities
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
     for (var i in composedFunctionalitiesInfo) {
