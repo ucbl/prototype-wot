@@ -66,6 +66,7 @@ router.get('/capabilities', function(request, response) {
     capabilitiesResponse.capabilities = [];
 
     //TODO: move to models
+    //Doesn't work
     var triplesResponse = ontologyModel.find(null, Globals.vocabularies.nsType, Globals.vocabularies.capability);
     for (var i in triplesResponse) {
         // Format the triples and show the response
@@ -86,6 +87,7 @@ router.get('/functionalities', function(request, response) {
     functionalitiesResponse.functionalities = [];
 
     //TODO: move to models
+    //Doesn't work
     var triplesResponse = ontologyModel.find(null, Globals.vocabularies.nsType, Globals.vocabularies.functionality);
     for (var i in triplesResponse) {
         // Format the triples and show the response
@@ -106,6 +108,7 @@ router.get('/functionalities-search', function(request, response) {
     functionalitiesResponse.functionalities = [];
 
     //TODO: move to models
+    //Doesn't work
     var capabilitiesArray = request.body.capabilities;
     var triplesResponse = [];
     if (capabilitiesArray && capabilitiesArray.length > 0) {
@@ -131,6 +134,7 @@ router.get('/functionalities-incomplete', function(request, response) {
     functionalitiesResponse.functionalities = [];
 
     //TODO: move to models
+    //Doesn't work
     var functionalitiesArray = request.body.functionalities;
     // Relate the array of the functionalities that we have and search if there are composed functionalities
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
@@ -155,6 +159,7 @@ router.get('/functionalities-incomplete-all', function(request, response) {
     functionalitiesResponse.functionalities = [];
 
     //TODO: move to models
+    //Doesn't work
     var functionalitiesArray = request.body.functionalities;
     // Relate the array of the functionalities that we have and search if there are composed functionalities
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
@@ -179,6 +184,7 @@ router.get('/functionalities-composed', function(request, response) {
     functionalitiesResponse.functionalities = [];
 
     //TODO: move to models
+    //Doesn't work
     var functionalitiesArray = request.body.functionalities;
     // Relate the array of the functionalities that we have and search if there are composed functionalities
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
@@ -197,6 +203,7 @@ router.get('/functionalities-composed', function(request, response) {
 });
 
 // GET the information of a functionality
+//Doesn't work
 router.get('/functionality/:functionality', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json", "Link": Globals.vocabularies.linkVocab});
     var requestUrl = request.protocol + '://' + request.get('host') + request.originalUrl;
@@ -205,6 +212,7 @@ router.get('/functionality/:functionality', function(request, response) {
 });
 
 // GET the composition of a functionality
+//Doesn't work
 router.get('/functionality-composed-of/:functionality', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json", "Link": Globals.vocabularies.linkVocab});
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
@@ -220,6 +228,7 @@ router.get('/functionality-composed-of/:functionality', function(request, respon
 });
 
 // GET the information of a capability
+//Doesn't work
 router.get('/capability/:capability', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json", "Link": Globals.vocabularies.linkVocab});
     var requestUrl = request.protocol + '://' + request.get('host') + request.originalUrl;
