@@ -21,7 +21,7 @@ var ontology = {
         //Eval prefixes in @context
         fs.readFile(dataLocation + 'prefixes.json', 'utf8', function (error, data) {
             if (!error) {
-                jsonOntology["@context"] = eval(data)['@context'];
+                jsonOntology["@context"] = eval(data);
             } else {
                 //TODO: throw an error here
                 console.log('Could not read file "prefixes.json" in ' + dataLocation);
