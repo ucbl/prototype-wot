@@ -1,4 +1,5 @@
-var urlCimaObjects = 'http://localhost:3333/cima';
+//TODO: access this through global config
+var interoperabilityLayerUrl = '/interoperability';
 
 $(document).ready(function() {
 	reloadObjects();
@@ -8,7 +9,7 @@ $(document).ready(function() {
 });
 
 function reloadObjects() {
-	$.get(urlCimaObjects, {}, function(response){
+	$.get(interoperabilityLayerUrl, {}, function(response){
 		$('.objectsFromCima').html(response);
 		equalHeights('.objectIns');
 	});	

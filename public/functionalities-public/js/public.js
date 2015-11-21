@@ -1,4 +1,5 @@
-var urlCimaObjects = 'http://localhost:3333/cima-list';
+//TODO: access this through global config
+var interoperabilityLayerUrl = '/interoperability';
 var urlAvatarsHtml = 'http://localhost:3000/avatars-html';
 var urlAvatars = 'http://localhost:3000/avatars';
 
@@ -124,7 +125,7 @@ function activateAjaxFormExecute() {
 }
 
 function reloadObjects() {
-	$.get(urlCimaObjects, {}, function(response){
+	$.get(interoperabilityLayerUrl, {}, function(response){
 		$('.objectsFromCima').html(response);
 		activateAjax();
 	});	
