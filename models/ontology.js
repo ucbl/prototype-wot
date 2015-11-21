@@ -15,10 +15,22 @@ var tripleStore = new N3Store();
 
 var ontology = {
     'loadOntology': function() {
-        var dataLocation = __dirname + '/../data/ontology/functionalities.jsonld';
-        fs.readFile(dataLocation, 'utf8', function (error, data) {
+        //Separate the context from the data, to be able to use "eval" to replace namespaces by their values
+        var jsonOntology = {};
+        var dataLocation = __dirname + '/../data/ontology/functionalities/';
+        //Eval prefixes in @context
+        fs.readFile(dataLocation + 'prefixes.json', 'utf8', function (error, data) {
             if (!error) {
-                var jsonOntology = JSON.eval(data)['@graph'];
+                jsonOntology["@context"] = JSON.eval(data)['@context'];
+            } else {
+                //TODO: throw an error here
+                console.log('Could not read file "prefixes.json" in ' + dataLocation);
+            }
+        });
+
+        fs.readFile(dataLocation + 'functionalities.jsonld', 'utf8', function (error, data) {
+            if (!error) {
+                jsonOntology["@graph"] = JSON.parse(data)['@graph'];
                 jsonld.toRDF(jsonOntology, function (error, triples) {
                     for (var graphName in triples) {
                         triples[graphName].forEach(function (triple) {
@@ -27,6 +39,9 @@ var ontology = {
                         });
                     }
                 });
+            } else {
+                //TODO: throw an error here
+                console.log('Could not read file "functionalities.jsonld" in ' + dataLocation);
             }
         });
     },
