@@ -131,7 +131,7 @@ router.get('/functionalities-incomplete', function(request, response) {
 
     //TODO: move to models
     //To test
-    var functionalitiesArray = ["http://192.168.56.101:3000/functionality/temperatureSense"];
+    var functionalitiesArray = ["http://192.168.56.101:3000/ontology/functionality/temperatureSense"];
     //var functionalitiesArray = request.body.functionalities || [];
     // Relate the array of the functionalities that we have and search if there are composed functionalities
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
