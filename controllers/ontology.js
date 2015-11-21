@@ -200,6 +200,7 @@ router.get('/functionalities-composed', function(request, response) {
         }
         if (functionalitiesFound == (composedFunctionalitiesInfo[i]).isComposedOf.length) {
             functionalitiesResponse.functionalities.push(i);
+            console.log("Pushed:" + functionalitiesResponse.functionalities.length);
         }
     }
     response.end(JSON.stringify(functionalitiesResponse));
