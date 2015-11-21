@@ -1,8 +1,8 @@
-# Your starting point for your next great web app
+# Prototype-WoT V2
 
-The purpose for this repository is to serve as a base project for your next [Node](http://nodejs.org/) and [Express](http://expressjs.com/) web app. Clone it and you are ready to go.
+Uses [Node](http://nodejs.org/) and [Express](http://expressjs.com/). Based on the MVC structure defined by [terlici](https://github.com/terlici/base-express)
 
-It will provide you with a simple but solid structure on which to build on. We will do our best to keep it up to date with the latest node and express versions.
+Real docs needs to be rewritten. Basically, this project aims at building a full JS implementation of an avatar platform. It currently uses the [N3](https://github.com/RubenVerborgh/N3.js) reasoner to deduce complex functionalities from basic object capabilities.
 
 List of changed URLs:
 /code-repository -> /objects

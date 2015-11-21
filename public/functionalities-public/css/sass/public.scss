@@ -1,0 +1,379 @@
+@import "compass/reset";
+
+$black: #000;
+$white: #FFF;
+$whitegray: #EFEFEF;
+$green: #24b375;
+$greenlight: #B2FFD8;
+$red: #ed001b;
+$yellow: #dcbd15;
+$yellowlight: #FFFBAD;
+$orange: #8bbcb9;
+$blue: #0367b2;
+$bluelight: #8bbcb9;
+$bluegreen: #3A6E81;
+$bluepale: #677485;
+$bluedark: #465262;
+$gray: #333333;
+$graylight: #999999;
+$graywhite: #CCCCCC;
+
+$fontFamily: 'Muli', sans-serif;
+$fontFamilyCode: 'Source Code Pro', sans-serif;
+
+@mixin borderRadius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+@mixin simpleShadow() {
+	moz-box-shadow: 0px 0px 10px #DDD;
+	-webkit-box-shadow: 0px 0px 10px #DDD;
+	box-shadow: 0px 0px 10px #DDD;
+}
+@mixin simpleShadowDark() {
+	moz-box-shadow: 0px 0px 10px $black;
+	-webkit-box-shadow: 0px 0px 10px $black;
+	box-shadow: 0px 0px 10px $black;
+}
+@mixin animate() {
+	-webkit-transition: 0.5s ease;
+	-moz-transition: 0.5s ease;
+	-ms-transition: 0.5s ease;
+	transition: 0.5s ease;
+}
+
+input,
+textarea {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+pre {
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	font-family: sans-serif;
+	background: $whitegray;
+	color: $gray;
+	height:100%;
+	font-family: $fontFamily;
+	font-weight: normal;
+	position: relative;
+}
+.clearer {
+	clear: both;
+}
+p {
+	padding: 0px;
+	margin: 0px;
+}
+a {
+	font-weight: bold;
+	color: $black;
+	text-decoration: none;
+	outline: 0;
+}
+a:hover,
+a:active,
+a:focus {
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+input::-moz-focus-inner { 
+  border: 0; 
+}
+
+.header {
+	background: $bluedark;
+	padding: 20px 0px;
+	h1 {
+		text-align: center;
+		font-weight: bold;
+		font-size: 1.2em;
+		color: $white;
+	}
+}
+
+.contentWrapper {
+	padding: 10px;
+	max-width: 1000px;
+	margin: auto;
+	.contentLeft {
+		width: 18%;
+		float: left;
+	}
+	.contentRight {
+		width: 80%;
+		float: right;
+	}
+}
+
+.objectName {
+	display: block;
+	cursor: pointer;
+	margin-bottom: 5px;
+	padding: 10px;
+	font-size: 0.7em;
+	line-height: 1.2em;
+	background: $yellow;
+	color: $white;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	@include borderRadius(5px);
+	@include animate();
+	&:hover {
+		background: $gray;
+	}
+	&.objectActivate {
+		background: $graylight;
+	}
+	&.objectActivateDelete {
+		background: $yellow;
+	}
+}
+
+.functionalitiesWrapper {
+	font-family: $fontFamilyCode;
+	.functionalitiesLeft {
+		margin-bottom: 10px;
+	}
+	.functionalitiesRight {
+	}
+}
+
+.avatarsList {
+	.avatar{
+		padding: 20px;
+		background: $bluepale;
+		color: $white;		
+		@include borderRadius(5px);
+		margin-bottom: 20px;
+	}
+	h2 {
+		padding-bottom: 5px;
+		font-weight: bold;
+		font-size: 0.9em;
+		color: $bluelight;
+	}
+	.avatarName {
+		font-size: 1.2em;
+		font-weight: bold;
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+		border-bottom: 1px solid $white;
+	}
+	.avatarDescription {
+		padding-bottom: 5px;
+		font-size: 0.8em;
+		font-style: italic;
+	}
+	.avatarId {
+		font-family: $fontFamilyCode;
+		font-size: 0.8em;
+		color: $white;
+		cursor: pointer;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	a {
+		color: $bluelight;
+		font-weight: normal;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	.exposedFunctionalitiesSection {
+		padding-top: 20px;
+		margin-top: 20px;
+		border-top: 1px dotted $bluedark;
+	}
+}
+.functionality {
+	font-size: 0.7em;
+	font-family: $fontFamilyCode;
+	padding: 3px 0px;
+	padding-left: 30px;
+	&.functionalityLocal {
+		color: $yellowlight;
+	}
+	&.functionalityOther {
+		color: $graywhite;
+	}
+	&.functionalityFound {
+		color: $greenlight;
+	}
+	.functionalityDocumentation,
+	.functionalityExecute {
+		cursor: pointer;
+		width: 6%;
+		margin-left: 2%;
+		float: left;
+		display: block;
+		padding: 3px 0px;
+		background: $bluedark;
+		color: $bluelight;
+		text-align: center;
+		@include borderRadius(3px);
+		&:hover {
+			background: $bluegreen;
+		}
+	}
+	.functionalityAction {
+		width: 82%;
+		float: right;
+		padding: 3px 0px;
+	}
+}
+
+.responseInfo {
+	padding: 20px;
+	background: $white;
+	color: $bluepale;
+	font-size: 0.9em;
+	line-height: 1.2em;
+	@include borderRadius(5px);
+}
+
+.footer {
+	padding: 50px 0px;
+	text-align: center;
+	color: $graylight;
+	font-size: 0.8em;
+}
+
+
+.modalWindow,
+.modalWindowBig {
+	width: 900px;
+	padding: 20px;
+	background: $whitegray;
+	.modalTitle {
+		font-weight: bold;
+		font-size: 1.2em;
+		padding: 0px;
+		margin: 0px;
+		text-transform: uppercase;
+		padding-bottom: 20px;
+	}
+	.modalClose {
+		width: 30px;
+		height: 30px;
+		background: url(../../img/icoClose.png) no-repeat center center;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		cursor: pointer;
+	}
+	.messageTitle {
+		text-align: center;
+		color: $green;
+		padding-bottom: 20px;
+		font-weight: bold;
+	}
+	.messageTitleError {
+		color: $red;
+	}
+	.messageCode {
+		font-family: $fontFamilyCode;
+		font-size: 0.8em;
+		padding: 0.3em 0;
+	}
+	.messageCodeTitle {
+		color: $blue;
+	}
+	input.formSubmit {
+		display: block;
+		width: 200px;
+		padding: 5px 10px;
+		margin: auto;
+		background: $green;
+		color: $white;
+		font-weight: bold;
+		text-align: center;
+		margin-top: 20px;
+		border: 0px;
+		cursor: pointer;
+		@include borderRadius(3px);
+		@include animate();
+		&:hover {
+			background: $blue;
+		}
+	}
+}
+.modalWindowBig {
+	width: 1000px;
+}
+
+.code {
+	font-family: $fontFamilyCode;
+	font-size: 0.8em;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+}
+
+.messageCodeArgumentsTitle {
+	font-weight: bold;
+	padding: 10px 0px;
+	text-align: center;
+	color: $green;
+}
+.codeOption {
+	width: 400px;
+	float: left;
+	padding: 10px;
+	font-size: 0.9em;
+	background: $whitegray;
+	border: 1px solid $graylight;
+	margin: 10px 5px;
+	margin-top: 0px;
+	label {
+		font-weight: bold;
+	}
+	.messageCodeChoiceDescription {
+		font-size: 0.9em;
+		color: $gray;
+		font-style: italic;
+		padding-top: 5px;
+		label {
+			padding-right: 10px;
+		}
+	}
+	.codeOptionArgument {
+		padding: 10px 20px;
+	}
+}
+.argument {
+	padding: 5px 0px;
+	label {
+		display: block;
+		padding-bottom: 3px;
+		font-size: 0.8em;
+		color: $gray;
+		strong {
+			display: block;
+			font-size: 1.1em;
+			padding-bottom: 2px;
+		}
+	}
+}
+

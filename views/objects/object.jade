@@ -1,0 +1,15 @@
+div(class='object')
+    div(class='objectIns')
+        div(class='objectName')
+            | Name: #{object.name}
+        div(class='objectId')
+            | Id:&nbsp;
+            a(href='#{object["@id"]}') #{object["@id"]}
+        div(class='objectDescription')
+            | Description: #{object.description}
+        div(class='objectValues')
+            | Values:
+            each val, index in object.realObjectInfo
+                div(class="objectValue")
+                    strong #{index}&nbsp;
+                    | #{val}

@@ -1,0 +1,337 @@
+{
+  "@id": "http://localhost:3535/vocab",
+  "@type": "ApiDocumentation",
+  "entrypoint": "http://localhost:3535/",
+  "@context": {
+    "vocab": "http://localhost:3535/vocab#",
+    "hydra": "http://www.w3.org/ns/hydra/core#",
+    "ApiDocumentation": "hydra:ApiDocumentation",
+    "property": {
+      "@id": "hydra:property",
+      "@type": "@id"
+    },
+    "readonly": "hydra:readonly",
+    "writeonly": "hydra:writeonly",
+    "supportedClass": "hydra:supportedClass",
+    "supportedProperty": "hydra:supportedProperty",
+    "supportedOperation": "hydra:supportedOperation",
+    "method": "hydra:method",
+    "expects": {
+      "@id": "hydra:expects",
+      "@type": "@id"
+    },
+    "returns": {
+      "@id": "hydra:returns",
+      "@type": "@id"
+    },
+    "statusCodes": "hydra:statusCodes",
+    "code": "hydra:statusCode",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "description": "rdfs:comment",
+    "domain": {
+      "@id": "rdfs:domain",
+      "@type": "@id"
+    },
+    "range": {
+      "@id": "rdfs:range",
+      "@type": "@id"
+    },
+    "subClassOf": {
+      "@id": "rdfs:subClassOf",
+      "@type": "@id"
+    }
+  },
+  "supportedClass": [
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#Resource",
+      "@type": "hydra:Class",
+      "hydra:title": "Resource",
+      "hydra:description": null,
+      "supportedOperation": [],
+      "supportedProperty": []
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#Collection",
+      "@type": "hydra:Class",
+      "hydra:title": "Collection",
+      "hydra:description": null,
+      "supportedOperation": [],
+      "supportedProperty": [
+        {
+          "property": "http://www.w3.org/ns/hydra/core#member",
+          "hydra:title": "codes",
+          "hydra:description": "A list of available codes.",
+          "required": null,
+          "readonly": false,
+          "writeonly": false
+        },
+        {
+          "property": "http://www.w3.org/ns/hydra/core#member",
+          "hydra:title": "arguments",
+          "hydra:description": "A list of arguments.",
+          "required": null,
+          "readonly": false,
+          "writeonly": false
+        },
+        {
+          "property": "http://www.w3.org/ns/hydra/core#member",
+          "hydra:title": "functionalitiesComposed",
+          "hydra:description": "A list of functionalities.",
+          "required": null,
+          "readonly": false,
+          "writeonly": false
+        },
+        {
+          "property": "http://www.w3.org/ns/hydra/core#member",
+          "hydra:title": "objects",
+          "hydra:description": "A list of objects.",
+          "required": null,
+          "readonly": false,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:Code",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "Code",
+      "description": "A code object.",
+      "supportedOperation": [
+        {
+          "@id": "_:code",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "Retrieves a code object",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:Code",
+          "statusCodes": []
+        }
+      ],
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:Code/label",
+            "@type": "rdf:Property",
+            "label": "label",
+            "description": "The label of the code object",
+            "domain": "vocab:Code",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "label",
+          "hydra:description": "The label of a code object",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:Code/description",
+            "@type": "rdf:Property",
+            "label": "label",
+            "description": "The description of the code object",
+            "domain": "vocab:Code",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "description",
+          "hydra:description": "The description of a code object",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:Code/code",
+            "@type": "rdf:Property",
+            "label": "code",
+            "description": "The source code of the code object",
+            "domain": "vocab:Code",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "code",
+          "hydra:description": "The source code of a code object",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:Code/arguments",
+            "@type": "rdf:Property",
+            "label": "arguments",
+            "description": "The arguments of a code object",
+            "domain": "vocab:Code",
+            "range": "hydra:Collection",
+            "supportedOperation": []
+          },
+          "hydra:title": "arguments",
+          "hydra:description": "The arguments of a code object",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:Code/functionalitiesComposed",
+            "@type": "rdf:Property",
+            "label": "functionalitiesComposed",
+            "description": "The functionalities needed by a code object",
+            "domain": "vocab:Code",
+            "range": "hydra:Collection",
+            "supportedOperation": []
+          },
+          "hydra:title": "functionalitiesComposed",
+          "hydra:description": "The functionalities needed by a code object",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:Argument",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "Argument",
+      "description": "An argument.",
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:Argument/label",
+            "@type": "rdf:Property",
+            "label": "label",
+            "description": "The label of an argument",
+            "domain": "vocab:Argument",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "label",
+          "hydra:description": "The label of an argument",
+          "required": true,
+          "readonly": false,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:Argument/description",
+            "@type": "rdf:Property",
+            "label": "description",
+            "description": "The description of an argument",
+            "domain": "vocab:Argument",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "description",
+          "hydra:description": "The description of an argument",
+          "required": true,
+          "readonly": false,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:Functionality",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "Functionality",
+      "description": "A functionality.",
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:Functionality/label",
+            "@type": "rdf:Property",
+            "label": "label",
+            "description": "The label of a functionality",
+            "domain": "vocab:Functionality",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "label",
+          "hydra:description": "The label of a functionality",
+          "required": true,
+          "readonly": false,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:Object",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "Object",
+      "description": "An object.",
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:Functionality/label",
+            "@type": "rdf:Property",
+            "label": "label",
+            "description": "The label of an object",
+            "domain": "vocab:Object",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "label",
+          "hydra:description": "The label of an object",
+          "required": true,
+          "readonly": false,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:EntryPoint",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "EntryPoint",
+      "description": "The main entry point of the Code Repository.",
+      "supportedOperation": [
+        {
+          "@id": "_:entry_point",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "The Code Repository main entry point.",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:EntryPoint",
+          "statusCodes": []
+        }
+      ],
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:EntryPoint/codes",
+            "@type": "hydra:Link",
+            "label": "codes",
+            "description": "The entrypoint for the Code Repository",
+            "domain": "vocab:EntryPoint",
+            "range": "hydra:Collection",
+            "supportedOperation": [
+              {
+                "@id": "_:codes",
+                "@type": "hydra:Operation",
+                "method": "GET",
+                "label": "The list of all codes",
+                "description": null,
+                "expects": null,
+                "returns": "hydra:Collection",
+                "statusCodes": []
+              }
+            ]
+          },
+          "hydra:title": "codes",
+          "hydra:description": "The list of the codes.",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        }
+      ]
+    }
+  ]
+}

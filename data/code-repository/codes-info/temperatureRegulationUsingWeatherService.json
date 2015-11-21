@@ -1,0 +1,89 @@
+{
+  "@id": "http://localhost:3535/code/temperatureRegulationUsingWeatherService",
+  "@type": "hydra:Operation",
+  "method": "POST", 
+  "label": "Temperature regulation to a desired temperature using an SMS",
+  "description": "Code to regulate the temperature using an SMS. It needs a desired temperature and basically it loops between a cooler or a heater until it gets to that temperature",
+  "idFunctionality": "temperatureRegulationUsingWeatherService",
+  "code": "file:temperatureRegulationUsingWeatherService.js",
+  "expects" : {
+    "@id" : "vocab:Arguments",
+    "@type" : "Hydra:Class",
+    "subClassOf" : null,
+    "label" : "Arguments",
+    "description" : "Arguments of a composed functionality",
+    "supportedProperty" : [
+      {
+        "property": {
+          "@id": "vocab:Arguments/desiredTemperature",
+          "@type": "rdf:Property",
+          "label": "desiredTemperature",
+          "description": "The desired temperature",
+          "domain": "vocab:Arguments",
+          "range": "http://www.w3.org/2001/XMLSchema#string",
+          "supportedOperation": []
+        },
+        "hydra:title": "desiredTemperature",
+        "hydra:description": "The desired temperature",
+        "required": true,
+        "readonly": false,
+        "writeonly": false
+      },
+      {
+        "property": {
+          "@id": "vocab:Arguments/functionalities/temperatureSense",
+          "@type": "vocab:Functionality",
+          "label": "functionalityTemperatureSense",
+          "description": "The functionality to sense the temperature",
+          "domain": "vocab:Arguments",
+          "range": "http://www.w3.org/2001/XMLSchema#string",
+          "supportedOperation": []
+        },
+        "hydra:title": "functionalityTemperatureSense",
+        "hydra:description": "The functionality to sense the temperature",
+        "required": true,
+        "readonly": false,
+        "writeonly": false
+      },
+      {
+        "property": {
+          "@id": "vocab:Arguments/functionalities/temperatureIncrease",
+          "@type": "vocab:Functionality",
+          "label": "functionalityTemperatureIncrease",
+          "description": "The functionality to increase the temperature",
+          "domain": "vocab:Arguments",
+          "range": "http://www.w3.org/2001/XMLSchema#string",
+          "supportedOperation": []
+        },
+        "hydra:title": "functionalityTemperatureIncrease",
+        "hydra:description": "The functionality to increase the temperature",
+        "required": true,
+        "readonly": false,
+        "writeonly": false
+      },
+      {
+        "property": {
+          "@id": "vocab:Arguments/functionalities/temperatureDecrease",
+          "@type": "vocab:Functionality",
+          "label": "functionalityTemperatureDecrease",
+          "description": "The functionality to decrease the temperature",
+          "domain": "vocab:Arguments",
+          "range": "http://www.w3.org/2001/XMLSchema#string",
+          "supportedOperation": []
+        },
+        "hydra:title": "functionalityTemperatureDecrease",
+        "hydra:description": "The functionality to decrease the temperature",
+        "required": true,
+        "readonly": false,
+        "writeonly": false
+      }
+    ]
+  },
+  "returns" : {
+    "@id" : "vocab:Response",
+    "@type" : "Hydra:Class",
+    "subClassOf" : null,
+    "label" : "Response",
+    "description" : "Response of the execution of a composed functionality"
+  }
+}
