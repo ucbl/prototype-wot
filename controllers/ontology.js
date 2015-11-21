@@ -161,11 +161,8 @@ router.get('/functionalities-incomplete-all', function(request, response) {
     var functionalitiesArray = request.body.functionalities || [];
     // Relate the array of the functionalities that we have and search if there are composed functionalities
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
-    console.log("composedFunctionalitiesInfo: " + composedFunctionalitiesInfo.length);
     for (var i in composedFunctionalitiesInfo) {
-        console.log("i " + composedFunctionalitiesInfo[i]);
         for (var j in (composedFunctionalitiesInfo[i]).isComposedOf) {
-            console.log("j " + composedFunctionalitiesInfo[i].isComposedOf[j]);
             if (functionalitiesArray.indexOf((composedFunctionalitiesInfo[i]).isComposedOf[j]) >= 0) {
                 functionalitiesResponse.functionalities.push(composedFunctionalitiesInfo[i]);
             }
@@ -190,9 +187,12 @@ router.get('/functionalities-composed', function(request, response) {
     var functionalitiesArray = request.body.functionalities || [];
     // Relate the array of the functionalities that we have and search if there are composed functionalities
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
+    console.log("composedFunctionalitiesInfo: " + composedFunctionalitiesInfo.length);
     for (var i in composedFunctionalitiesInfo) {
+        console.log("i " + composedFunctionalitiesInfo[i]);
         var functionalitiesFound = 0;
         for (var j in (composedFunctionalitiesInfo[i]).isComposedOf) {
+            console.log("j " + composedFunctionalitiesInfo[i].isComposedOf[j]);
             if (functionalitiesArray.indexOf((composedFunctionalitiesInfo[i]).isComposedOf[j]) >= 0) {
                 functionalitiesFound++;
             }
