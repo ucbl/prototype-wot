@@ -98,7 +98,10 @@ var ontology = {
         var composedFunctionalitiesInfo = {};
         for (var i in composedFunctionalities) {
             if (!composedFunctionalitiesInfo[((composedFunctionalities[i]).subject)]) {
-                composedFunctionalitiesInfo[((composedFunctionalities[i]).subject)] = {"id":((composedFunctionalities[i]).subject),
+                composedFunctionalitiesInfo[((composedFunctionalities[i]).subject)] = {
+                    '@id': ((composedFunctionalities[i]).subject),
+                    '@type': 'vocab:Functionality',
+                    '@context': Globals.vocabularies.base + "/context/Functionality",
                     "isComposedOf":[]};
             }
             composedFunctionalitiesInfo[((composedFunctionalities[i]).subject)].isComposedOf.push(((composedFunctionalities[i]).object));
