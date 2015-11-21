@@ -213,8 +213,6 @@ router.get('/functionality/:functionality', function(request, response) {
 
 // GET the composition of a functionality
 //TODO: change URL to something like /functionality/:functionality/sub-functionalities
-//TODO: change response format to JSON-LD
-//TODO: change architecture in model
 router.get('/functionality-composed-of/:functionality', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json", "Link": Globals.vocabularies.linkVocab});
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
