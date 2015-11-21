@@ -9,9 +9,6 @@ var express = require('express'),
     ontologyModel = require('../models/ontology'),
     ontologyView = require('../views/ontology/composedFunctionalities');
 
-/*---LOAD ONTOLOGY---*/
-ontologyModel.loadOntology();
-
 /*---HYDRA ROUTER---*/
 
 // Entry point
