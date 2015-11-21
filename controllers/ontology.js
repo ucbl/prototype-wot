@@ -212,15 +212,22 @@ router.get('/functionality/:functionality', function(request, response) {
 });
 
 // GET the composition of a functionality
+//TODO: change URL to something like /functionality/:functionality/sub-functionalities
+//TODO: change response format to JSON-LD
+//TODO: change architecture in model
 router.get('/functionality-composed-of/:functionality', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json", "Link": Globals.vocabularies.linkVocab});
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
-    var functionalityResponse = {};
+    var functionalityResponse = {
+        '@id': Globals.vocabularies.functionality + request.params.functionality,
+        '@type': 'vocab:Functionality',
+        '@context': Globals.vocabularies.base + "/context/Functionality"
+    };
 
     //TODO: move to models
     for (var i in composedFunctionalitiesInfo) {
         if (composedFunctionalitiesInfo[i].id == Globals.vocabularies.functionality + request.params.functionality) {
-            functionalityResponse = composedFunctionalitiesInfo[i];
+            functionalityResponse.isComposedOf = composedFunctionalitiesInfo[i].isComposedOf;
         }
     }
     response.end(JSON.stringify(functionalityResponse));
