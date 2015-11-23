@@ -11,7 +11,7 @@ var fs = require('fs'),
 
     var ConnectedObjects = [];
 
-    var objectHelper = {
+    module.exports = {
         "loadObjects": function() {
             var dataLocation = __dirname + '/../data/capabilities/objects/';
             var files = fs.readdirSync(dataLocation);
@@ -75,6 +75,7 @@ var fs = require('fs'),
             return null;
         },
 
+        //TODO: move this to code-repository
         'calculateTemperature': function () {
             // Calculate the temperature checking the different objects (Just a test)
             var temperature = 0;
@@ -143,5 +144,4 @@ var fs = require('fs'),
         }
 */
     };
-    module.exports = objectHelper;
 })(module);
