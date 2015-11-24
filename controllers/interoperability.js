@@ -205,41 +205,41 @@ router.put('/:objectId/:capability', function(request, response) {
             var newValue = request.body.value;
             responseJson['@context'] = Globals.vocabularies.interoperability + 'context/NumericValue';
             responseJson['@type'] = 'vocab:NumericValue';
-            if (objectId == 'coolerheater-swirlwind-2665') {
+            if (request.params.objectId == 'coolerheater-swirlwind-2665') {
                 object.setValue('valueDecreaser', newValue);
                 responseJson.value = object.getValue('valueDecreaser');
             } else {
                 object.setValue('value', newValue);
                 responseJson.value = object.getValue('value');
             }
-            calculateTemperature();
+            capabilityModel.calculateTemperature();
             break;
         case 'temperatureIncrease':
-            var newValue = request.body.value;
+            newValue = request.body.value;
             responseJson['@context'] = Globals.vocabularies.interoperability + 'context/NumericValue';
             responseJson['@type'] = 'vocab:NumericValue';
-            if (objectId == 'coolerheater-swirlwind-2665') {
+            if (request.params.objectId == 'coolerheater-swirlwind-2665') {
                 object.setValue('valueIncreaser', newValue);
                 responseJson.value = object.getValue('valueIncreaser');
             } else {
                 object.setValue('value', newValue);
                 responseJson.value = object.getValue('value');
             }
-            calculateTemperature();
+            capabilityModel.calculateTemperature();
             break;
         case 'closeWindow':
             responseJson['@context'] = Globals.vocabularies.interoperability + 'context/WindowStatus';
             responseJson['@type'] = 'vocab:WindowStatus';
             object.setValue('status', 'closed');
             responseJson.status = object.getValue('status');
-            calculateTemperature();
+            capabilityModel.calculateTemperature();
             break;
         case 'openWindow':
             responseJson['@context'] = Globals.vocabularies.interoperability + 'context/WindowStatus';
             responseJson['@type'] = 'vocab:WindowStatus';
             object.setValue('status', 'open');
             responseJson.status = object.getValue('status');
-            calculateTemperature();
+            capabilityModel.calculateTemperature();
             break;
         case 'call':
         case 'sms':
@@ -293,7 +293,7 @@ router.post('/:objectId/:capability', function(request, response) {
 /*---HYDRA---*/
 
 // GET the hydra vocabulary
-router.get('/vocab', function(request, response, next) {
+router.get('/vocab', function(request, response) {
     var hydraLocation = __dirname + '/../data/interoperability/hydra.jsonld';
     response.writeHead(200, {"Content-Type": "application/ld+json"});
     fs.readFile(hydraLocation, 'utf8', function (error, data) {

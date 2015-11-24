@@ -5,13 +5,9 @@
 //TODO refactor and move to the appropriate directories
 
 (function(module) {
-
-    var fs = require('fs'),
-        Globals = require('./globals');
-
     module.exports = {
         'constructor': function(params) {
-            for(key in params) {
+            for(var key in params) {
                 this[key] = params[key];
             }
             if(!this.realObjectInfo) {

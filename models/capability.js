@@ -9,6 +9,7 @@
 
     module.exports = {
         //TODO: this is a first try. Use Hydra description & code repo to achieve that.
+        //Unused yet...
         'get': function(capabilityId) {
             var result = {"@id": capabilityId};
             switch (capability) {
