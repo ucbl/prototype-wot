@@ -18,7 +18,7 @@
         next();
     });
 
-    router.use('/objects', require('./object'));
+    router.use('/interoperability', require('./interoperability'));
     router.use('/code-repository', require('./code-repository'));
     router.use('/ontology', require('./ontology'));
 
