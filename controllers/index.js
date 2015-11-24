@@ -2,7 +2,7 @@
     var express = require('express'),
         router = express.Router(),
         Globals = require('../models/globals'),
-        objectModel = require('../models/object'),
+        interoperabilityModel = require('../models/interoperability'),
         ontologyModel = require('../models/ontology');
 
 //Late initialization function - put here all that requires to know the server URI
@@ -12,7 +12,7 @@
             Globals.vocabularies.updateBaseUri('http://' + req.hostname + (Globals.config.port !== 80?(':' + Globals.config.port):'') + '/');
 
             //Initiate the object discovery and construct their URIs
-            objectModel.loadObjects();
+            interoperabilityModel.loadObjects();
             ontologyModel.loadOntology();
         }
         next();
