@@ -5,33 +5,35 @@
 //TODO refactor and move to the appropriate directories
 
 (function(module) {
-    module.exports = {
-        'constructor': function(params) {
-            for(var key in params) {
-                this[key] = params[key];
+    module.exports = function(params) {
+        return {
+            'constructor': function () {
+                for (var key in params) {
+                    this[key] = params[key];
+                }
+                if (!this.realObjectInfo) {
+                    this.realObjectInfo = [];
+                }
+                if (!this.capabilities) {
+                    this.capabilities = [];
+                }
+            },
+
+            'getValue': function (attributeName) {
+                return this.realObjectInfo[attributeName];
+            },
+
+            'setValue': function (attributeName, value) {
+                this.realObjectInfo[attributeName] = value;
+            },
+
+            'getCapability': function (capabilityId) {
+                return this.capabilities[capabilityId];
+            },
+
+            'setCapability': function (capabilityId, value) {
+                this.capabilities[capabilityId] = value;
             }
-            if(!this.realObjectInfo) {
-                this.realObjectInfo = [];
-            }
-            if(!this.capabilities) {
-                this.capabilities = [];
-            }
-        },
-
-        'getValue': function (attributeName) {
-            return this.realObjectInfo[attributeName];
-        },
-
-        'setValue': function (attributeName, value) {
-            this.realObjectInfo[attributeName] = value;
-        },
-
-        'getCapability' : function (capabilityId) {
-            return this.capabilities[capabilityId];
-        },
-
-        'setCapability' : function(capabilityId, value) {
-            this.capabilities[capabilityId] = value;
-        }
+        };
     };
 })(module);
