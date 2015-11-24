@@ -4,10 +4,14 @@ var express = require('express'),
     router = express.Router(),
     fs = require('fs'),
     Globals = require('../models/globals'),
-    objectModel = require('../models/object');
+    interoperabilityModel = require('../models/interoperability'),
+    objectModel = require('../models/object'),
+    capabilityModel = require('../models/capability');
 
 
 /*---WEB SERVICE---*/
+
+/*-- Entry point management --*/
 
 // Entry point and home page
 router.get('/', function(request, response) {
@@ -20,7 +24,7 @@ router.get('/', function(request, response) {
         response.writeHead(200, {"Content-Type": "application/ld+json",
             "Link": Globals.vocabularies.linkVocab});
         var responseEntryPoint = {
-            "@context": Globals.vocabularies.base + "/context/EntryPoint",
+            "@context": Globals.vocabularies.interoperability + "context/EntryPoint",
             "@id": Globals.vocabularies.base + "/objects",
             "@type": "EntryPoint",
             "interoperability": Globals.vocabularies.interoperability
@@ -31,7 +35,7 @@ router.get('/', function(request, response) {
 
 // Sends a collection of objects (basic descriptions)
 router.get('/interoperability', function(request, response) {
-    var objects = objectModel.getAllObjects();
+    var objects = interoperabilityModel.getAllObjects();
     if (request.accepts('html')) {
         response.render('objects/objectsSimple', {objects: objects});
         //response.end(objectModel.objectsToStringSimple());
@@ -41,14 +45,14 @@ router.get('/interoperability', function(request, response) {
             "Link": Globals.vocabularies.linkVocab
         });
         var interoperabilityResponse = {
-            '@context': Globals.vocabularies.base + '/context/Collection',
+            '@context': Globals.vocabularies.interoperability + 'context/Collection',
             '@id': Globals.vocabularies.interoperability,
             '@type': 'hydra:Collection',
             objects: []
     };
         for (var i in objects) {
             interoperabilityResponse.objects.push({
-                '@context':Globals.vocabularies.base + '/context/CimaObject',
+                '@context':Globals.vocabularies.interoperability + 'context/CimaObject',
                 '@id': objects[i]['@id'],
                 '@type': 'vocab:CimaObject',
                 'name': objects[i].name
@@ -61,7 +65,7 @@ router.get('/interoperability', function(request, response) {
 
 // Sends a collection of objects (detailed descriptions)
 router.get('/interoperability-list', function(request, response) {
-    var objects = objectModel.getAllObjects();
+    var objects = interoperabilityModel.getAllObjects();
     if (request.accepts('html')) {
         response.render('objects/objectsSimple', {objects: objectModel.getAllObjects()});
         //response.end(objectsToStringSimple());
@@ -71,14 +75,14 @@ router.get('/interoperability-list', function(request, response) {
             "Link": Globals.vocabularies.linkVocab
         });
         var interoperabilityResponse = {
-            '@context': Globals.vocabularies.base + '/context/Collection',
+            '@context': Globals.vocabularies.interoperability + 'context/Collection',
             '@id': Globals.vocabularies.interoperability,
             '@type': 'hydra:Collection',
             objects: []
         };
         for (var i in objects) {
             var currentObject = {
-                '@context':Globals.vocabularies.base + '/context/CimaObject',
+                '@context': Globals.vocabularies.interoperability + 'context/CimaObject',
                 '@id': objects[i]['@id'],
                 '@type': 'vocab:CimaObject',
                 'name': objects[i].name,
@@ -95,10 +99,12 @@ router.get('/interoperability-list', function(request, response) {
     }
 });
 
+/*-- List of connected objects management --*/
 
-router.get('/:objectId', function(request, response, next) {
+// Retrieves info about a particular object
+router.get('/:objectId', function(request, response) {
     //Search object by name, then by id, then provide an empty object
-    var object = objectModel.findObjectByName(request.params.objectId) || objectModel.findObject(request.params.objectId) || {realObjectInfo:[]};
+    var object = interoperabilityModel.get(request.params.objectId) || interoperabilityModel.findObjectById(request.params.objectId) || {realObjectInfo:[]};
     if (request.accepts('html')) {
         response.render('objects/object', {object: object});
     } else {
@@ -107,20 +113,15 @@ router.get('/:objectId', function(request, response, next) {
             "Link": Globals.vocabularies.linkVocab}
         );
         var objectResponse = {
-            "@context": Globals.vocabularies.base + "/context/CimaObject",
+            "@context": Globals.vocabularies.interoperability + "context/CimaObject",
             "@id": object['@id'],
             "@type": "vocab:CimaObject",
-            "capability": Globals.vocabularies.capability
+            "capability": Globals.vocabularies.capability,
+            'name': object.name,
+            'description': object.description,
+            'capabilities': object.capabilities
         };
-        if (object.id)
-            objectResponse.id = object.id;
-        if (object.name)
-            objectResponse.name = object.name;
-        if (object.description)
-            objectResponse.description = object.description;
-        if (object.capabilities)
-            objectResponse.capabilities = object.capabilities;
-        if (object.realObjectInfo) {
+        if (object.realObjectInfo && object.realObjectInfo.length >0) {
             objectResponse.values = [];
             for(var i in object.realObjectInfo) {
                 object.values.push(object.realObjectInfo[i]);
@@ -130,129 +131,164 @@ router.get('/:objectId', function(request, response, next) {
     }
 });
 
+// Add a new object to the currently connected object list
+router.put('/:objectId', function(request, response) {
+    if(interoperabilityModel.isConnected(objectId)) {
+        response.sendStatus(405);
+    } else {
+        interoperabilityModel.addObject(objectId);
+        response.sendStatus(201);
+    }
+});
+
+// Add a new object to the currently connected object list
+//TODO: do something more if a graph is posted to the object
+router.post('/:objectId', function(request, response) {
+    if(interoperabilityModel.isConnected(objectId)) {
+        response.sendStatus(405);
+    } else {
+        interoperabilityModel.addObject(objectId);
+        response.sendStatus(201);
+    }
+});
+
+// Remove an object from the currently connected object list
+router.delete('/:objectId', function(request, response) {
+    if(interoperabilityModel.isConnected(objectId)) {
+        interoperabilityModel.removeObject(objectId);
+        response.sendStatus(204);
+    } else {
+        response.sendStatus(405);
+    }
+});
+
+/*-- Object capability management --*/
+
+//TODO: REFACTOR THAT ASAP!
 // GET and PUT operations on the real objects
-router.get('/:nameObject/:capability', function(request, response) {
+router.get('/:objectId/:capabilityId', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json"});
-    var nameObject = request.params.nameObject;
+    var object = interoperabilityModel.findObjectById(request.params.objectId);
     var capability = request.params.capability;
-    var responseJson = {"@id": hostServerPort + request.originalUrl};
+    var responseJson = {"@id": Globals.vocabularies.interoperability + request.originalUrl};
     switch (capability) {
         case 'gps':
-            responseJson['@context'] = hostServerPort + '/context/Position';
+            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/Position';
             responseJson['@type'] = 'vocab:Position';
-            responseJson.latitude = getValueFromObject(nameObject, 'latitude');
-            responseJson.longitude = getValueFromObject(nameObject, 'longitude');
+            responseJson.latitude = object.getValue('latitude');
+            responseJson.longitude = object.getValue('longitude');
             break;
         case 'temperatureSense':
-            responseJson['@context'] = hostServerPort + '/context/Temperature';
+            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/Temperature';
             responseJson['@type'] = 'vocab:Temperature';
-            responseJson.value = calculateTemperature();
-            responseJson.type = getValueFromObject(nameObject, 'type');
+            responseJson.value = capabilityModel.calculateTemperature();
+            responseJson.type = object.getValue('type');
             break;
         case 'informationMotor':
-            responseJson['@context'] = hostServerPort + '/context/MotorValue';
+            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/MotorValue';
             responseJson['@type'] = 'vocab:MotorValue';
-            responseJson.angle = getValueFromObject(nameObject, 'angle');
-            responseJson.speed = getValueFromObject(nameObject, 'speed');
-            responseJson.strength = getValueFromObject(nameObject, 'strength');
+            responseJson.angle = object.getValue('angle');
+            responseJson.speed = object.getValue('speed');
+            responseJson.strength = object.getValue('strength');
             break;
     }
     response.end(JSON.stringify(responseJson));
 });
-router.put('/:nameObject/:capability', function(request, response) {
+
+router.put('/:objectId/:capability', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json"});
-    var nameObject = request.params.nameObject;
+    var object = interoperabilityModel.findObjectById(request.params.objectId);
     var capability = request.params.capability;
-    var responseJson = {"@id": hostServerPort + request.originalUrl};
+    var responseJson = {"@id": Globals.vocabularies.interoperability + request.originalUrl};
     switch (capability) {
         case 'temperatureDecrease':
             var newValue = request.body.value;
-            responseJson['@context'] = hostServerPort + '/context/NumericValue';
+            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/NumericValue';
             responseJson['@type'] = 'vocab:NumericValue';
-            if (nameObject == 'coolerheater-swirlwind-2665') {
-                setValueToObject(nameObject, 'valueDecreaser', newValue);
-                responseJson.value = getValueFromObject(nameObject, 'valueDecreaser');
+            if (objectId == 'coolerheater-swirlwind-2665') {
+                object.setValue('valueDecreaser', newValue);
+                responseJson.value = object.getValue('valueDecreaser');
             } else {
-                setValueToObject(nameObject, 'value', newValue);
-                responseJson.value = getValueFromObject(nameObject, 'value');
+                object.setValue('value', newValue);
+                responseJson.value = object.getValue('value');
             }
             calculateTemperature();
             break;
         case 'temperatureIncrease':
             var newValue = request.body.value;
-            responseJson['@context'] = hostServerPort + '/context/NumericValue';
+            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/NumericValue';
             responseJson['@type'] = 'vocab:NumericValue';
-            if (nameObject == 'coolerheater-swirlwind-2665') {
-                setValueToObject(nameObject, 'valueIncreaser', newValue);
-                responseJson.value = getValueFromObject(nameObject, 'valueIncreaser');
+            if (objectId == 'coolerheater-swirlwind-2665') {
+                object.setValue('valueIncreaser', newValue);
+                responseJson.value = object.getValue('valueIncreaser');
             } else {
-                setValueToObject(nameObject, 'value', newValue);
-                responseJson.value = getValueFromObject(nameObject, 'value');
+                object.setValue('value', newValue);
+                responseJson.value = object.getValue('value');
             }
             calculateTemperature();
             break;
         case 'closeWindow':
-            responseJson['@context'] = hostServerPort + '/context/WindowStatus';
+            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/WindowStatus';
             responseJson['@type'] = 'vocab:WindowStatus';
-            setValueToObject(nameObject, 'status', 'closed');
-            responseJson.status = getValueFromObject(nameObject, 'status');
+            object.setValue('status', 'closed');
+            responseJson.status = object.getValue('status');
             calculateTemperature();
             break;
         case 'openWindow':
-            responseJson['@context'] = hostServerPort + '/context/WindowStatus';
+            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/WindowStatus';
             responseJson['@type'] = 'vocab:WindowStatus';
-            setValueToObject(nameObject, 'status', 'open');
-            responseJson.status = getValueFromObject(nameObject, 'status');
+            object.setValue('status', 'open');
+            responseJson.status = object.getValue('status');
             calculateTemperature();
             break;
         case 'call':
         case 'sms':
         case 'video':
         case 'photo':
-            responseJson['@context'] = hostServerPort + '/context/PhoneStatus';
+            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/PhoneStatus';
             responseJson['@type'] = 'vocab:PhoneStatus';
-            setValueToObject(nameObject, 'status', capability);
-            responseJson.status = getValueFromObject(nameObject, 'status');
+            object.setValue('status', capability);
+            responseJson.status = object.getValue('status');
             break;
         case 'startApp':
-            responseJson['@context'] = hostServerPort + '/context/AppStatus';
+            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/AppStatus';
             responseJson['@type'] = 'vocab:AppStatus';
-            setValueToObject(nameObject, 'statusApp', 'started');
-            responseJson.status = getValueFromObject(nameObject, 'statusApp');
+            object.setValue('statusApp', 'started');
+            responseJson.status = object.getValue('statusApp');
             break;
         case 'stopApp':
-            responseJson['@context'] = hostServerPort + '/context/AppStatus';
+            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/AppStatus';
             responseJson['@type'] = 'vocab:AppStatus';
-            setValueToObject(nameObject, 'statusApp', 'stopped');
-            responseJson.status = getValueFromObject(nameObject, 'statusApp');
-            break;
-    }
-    response.end(JSON.stringify(responseJson));
-});
-router.post('/:nameObject/:capability', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json"});
-    var nameObject = request.params.nameObject;
-    var capability = request.params.capability;
-    var responseJson = {"@id": hostServerPort + request.originalUrl};
-    switch (capability) {
-        case 'activateMotor':
-            var newAngle = request.body.angle;
-            var newSpeed = request.body.speed;
-            var newStrength = request.body.strength;
-            responseJson['@context'] = hostServerPort + '/context/MotorValue';
-            responseJson['@type'] = 'vocab:MotorValue';
-            setValueToObject(nameObject, 'activated', 'true');
-            setValueToObject(nameObject, 'angle', newAngle);
-            setValueToObject(nameObject, 'speed', newSpeed);
-            setValueToObject(nameObject, 'strength', newStrength);
-            responseJson.angle = getValueFromObject(nameObject, 'angle');
-            responseJson.speed = getValueFromObject(nameObject, 'speed');
-            responseJson.strength = getValueFromObject(nameObject, 'strength');
+            object.setValue('statusApp', 'stopped');
+            responseJson.status = object.getValue('statusApp');
             break;
     }
     response.end(JSON.stringify(responseJson));
 });
 
+router.post('/:objectId/:capability', function(request, response) {
+    response.writeHead(200, {"Content-Type": "application/ld+json"});
+    var object = interoperabilityModel.findObjectById(request.params.objectId);
+    var capability = request.params.capability;
+    var responseJson = {"@id": Globals.vocabularies.interoperability + request.originalUrl};
+    switch (capability) {
+        case 'activateMotor':
+            var newAngle = request.body.angle;
+            var newSpeed = request.body.speed;
+            var newStrength = request.body.strength;
+            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/MotorValue';
+            responseJson['@type'] = 'vocab:MotorValue';
+            object.setValue('activated', 'true');
+            object.setValue('angle', newAngle);
+            object.setValue('speed', newSpeed);
+            object.setValue('strength', newStrength);
+            responseJson.angle = object.getValue('angle');
+            responseJson.speed = object.getValue('speed');
+            responseJson.strength = object.getValue('strength');
+            break;
+    }
+    response.end(JSON.stringify(responseJson));
+});
 
 /*---HYDRA---*/
 
@@ -272,6 +308,7 @@ router.get('/context', function(request, response) {
         "Link": Globals.vocabularies.linkVocab});
     response.end("{}");
 });
+
 router.get('/context/:context', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json"});
     var contextLocation = __dirname + '/../data/interoperability/contexts/' + request.params.context + '.jsonld';

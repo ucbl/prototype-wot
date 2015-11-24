@@ -28,7 +28,7 @@ router.get('/', function(request, response) {
 // GET a single object description
 router.get('/:objectId', function(request, response) {
     //Search object by name, then by id, then provide an empty object
-    var object = objectModel.findObjectByName(request.params.objectId) || objectModel.findObject(request.params.objectId) || {realObjectInfo:[]};
+    var object = objectModel.findObjectByName(request.params.objectId) || objectModel.get(request.params.objectId) || {realObjectInfo:[]};
     if (request.accepts('html')) {
         response.render('objects/object', {object: object});
     } else {
