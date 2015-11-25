@@ -12,7 +12,7 @@
 
     module.exports = {
         // List of connected objects (only contains their ids)
-//        "objects": [],
+        "objects": [],
 
         // Loads all object descriptions and stores them in a list of known objects
         "loadObjects": function() {
@@ -39,7 +39,7 @@
                         'capabilities': dataJson.capabilities,
                         'realObjectInfo': dataJson.realObjectInfo
                     };//);
-//                    this.objects.push(ConnectedObject['@id']);
+                    this.objects.push(ConnectedObject['@id']);
                     knownObjects.push(ConnectedObject);
                 }
             }
