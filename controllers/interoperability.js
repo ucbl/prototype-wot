@@ -17,9 +17,9 @@ var express = require('express'),
 router.get('/', function(request, response) {
     if (request.accepts('html')) {
         //Send the CIMA homepage
-        //router.use(express.static(__dirname + '/../public/interoperability-public/index.html'));
-        response.render('objects/objects', {objects: interoperabilityModel.getAllObjects()});
-        //response.end(objectModel.objectsToStringSimple());
+        router.use(express.static(__dirname + '/../public/interoperability-public/index.html'));
+        //response.render('objects/objects', {objects: interoperabilityModel.getAllObjects()});
+        //response.end(interoperabilityModel.objectsToStringSimple());
     } else {
         response.writeHead(200, {"Content-Type": "application/ld+json",
             "Link": Globals.vocabularies.linkVocab});
