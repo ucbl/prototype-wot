@@ -46,7 +46,7 @@
                     };
                     tempObject.prototype = new(objectModel);
                     this.objects.push(tempObject['@id']);
-                    knownObjects.push(tempObject);
+                    knownObjects.push(dataJson);
                     if(params && params.verbose) {
                         console.log("New object: " + tempObject['@id'] + " -> " + tempObject.length + " properties.");
                         for(var propName in tempObject) {
