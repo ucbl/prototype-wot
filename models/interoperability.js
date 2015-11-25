@@ -93,8 +93,9 @@
         // Gets info about a known object by its complete id (URI), even if it is not connected to the interoperability layer
         "getObjectInfos": function (objectId) {
             for (var i in knownObjects) {
-                if (knownObjects[i]['@id'] == objectId) {
-                    return knownObjects[i];
+                var tempObject = knownObjects[i];
+                if (tempObject['@id'] == objectId) {
+                    return tempObject;
                 }
             }
             return null;
