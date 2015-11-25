@@ -27,6 +27,7 @@
 
     object.prototype.constructor = function (params) {
         for (var key in params) {
+            console.log("Adding property: " + key);
             object[key] = params[key];
         }
         if (!this.realObjectInfo) {
