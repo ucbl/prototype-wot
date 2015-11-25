@@ -100,7 +100,7 @@ router.get('/interoperability-list', function(request, response) {
 });
 
 /*-- List of connected objects management --*/
-
+/*
 // Retrieves info about a particular object
 router.get('/:objectId', function(request, response) {
     //Search object by name, then by id, then provide an empty object
@@ -161,7 +161,7 @@ router.delete('/:objectId', function(request, response) {
         response.sendStatus(405);
     }
 });
-
+*/
 /*-- Object capability management --*/
 /*
 //TODO: REFACTOR THAT ASAP!
