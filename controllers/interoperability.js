@@ -15,15 +15,13 @@ var express = require('express'),
 
 // Entry point and home page
 router.get('/', function(request, response) {
-/*    if (request.accepts('html')) {
+    if (request.accepts('html')) {
         //Send the CIMA homepage
-        router.use(function(req, resp) {
-            //express.static(__dirname + '/../public/interoperability-public/index.html');
-        });
+        router.use(express.static(__dirname + '/../public/interoperability-public/index.html'));
         //response.render('objects/objects', {objects: objectModel.getAllObjects()});
         //response.end(objectModel.objectsToStringSimple());
     } else {
-*/        response.writeHead(200, {"Content-Type": "application/ld+json",
+        response.writeHead(200, {"Content-Type": "application/ld+json",
             "Link": Globals.vocabularies.linkVocab});
         var responseEntryPoint = {
             "@context": Globals.vocabularies.interoperability + "context/EntryPoint",
@@ -32,9 +30,9 @@ router.get('/', function(request, response) {
             "interoperability": Globals.vocabularies.interoperability
         };
         response.end(JSON.stringify(responseEntryPoint));
-//    }
+    }
 });
-/*
+
 // Sends a collection of objects (basic descriptions)
 router.get('/interoperability', function(request, response) {
     var objects = interoperabilityModel.getAllObjects();
@@ -100,9 +98,9 @@ router.get('/interoperability-list', function(request, response) {
         response.end(JSON.stringify(interoperabilityResponse));
     }
 });
-*/
+
 /*-- List of connected objects management --*/
-/*
+
 // Retrieves info about a particular object
 router.get('/:objectId', function(request, response) {
     //Search object by name, then by id, then provide an empty object
@@ -163,9 +161,9 @@ router.delete('/:objectId', function(request, response) {
         response.sendStatus(405);
     }
 });
-*/
+
 /*-- Object capability management --*/
-/*
+
 //TODO: REFACTOR THAT ASAP!
 // GET and PUT operations on the real objects
 router.get('/:objectId/:capabilityId', function(request, response) {
@@ -291,9 +289,9 @@ router.post('/:objectId/:capability', function(request, response) {
     }
     response.end(JSON.stringify(responseJson));
 });
-*/
+
 /*---HYDRA---*/
-/*
+
 // GET the hydra vocabulary
 router.get('/vocab', function(request, response) {
     var hydraLocation = __dirname + '/../data/interoperability/hydra.jsonld';
@@ -319,4 +317,5 @@ router.get('/context/:context', function(request, response) {
     });
     return true;
 });
-*/
+
+module.exports = router;
