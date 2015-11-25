@@ -5,7 +5,7 @@
 //TODO refactor and move to the appropriate directories
 
 (function(module) {
-    var object = function(params) {
+    var object = function() {
         return {
             'getValue': function (attributeName) {
                 return this.realObjectInfo[attributeName];

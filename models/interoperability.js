@@ -35,14 +35,20 @@
                         }
                     }
                     var tempObject = Object.create(objectModel, {
-                        '@id': Globals.vocabularies.capability + dataJson.id,
-                        '@context': Globals.vocabularies.interoperability + 'context/CimaObject',
-                        '@type': 'vocab:CimaObject',
-                        'id': dataJson.id,
-                        'name': dataJson.name,
-                        'description': dataJson.description,
-                        'capabilities': dataJson.capabilities,
-                        'realObjectInfo': dataJson.realObjectInfo
+                        'hydra': {
+                            '@id': Globals.vocabularies.capability + dataJson.id,
+                            '@context': Globals.vocabularies.interoperability + 'context/CimaObject',
+                            '@type': 'vocab:CimaObject'
+                        },
+                        'properties': {
+                            'id': dataJson.id,
+                            'name': dataJson.name,
+                            'description': dataJson.description
+                        },
+                        'arrays': {
+                            'capabilities': dataJson.capabilities,
+                            'realObjectInfo': dataJson.realObjectInfo
+                        }
                     });
                     this.objects.push(tempObject['@id']);
                     knownObjects.push(tempObject);
