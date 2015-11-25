@@ -17,10 +17,10 @@ var express = require('express'),
 router.get('/', function(request, response) {
     if (request.accepts('html')) {
         //Send the CIMA homepage
-        router.use(function(req, resp) {
-            //express.static(__dirname + '/../public/interoperability-public/index.html');
+/*        router.use(function(req, resp) {
+            express.static(__dirname + '/../public/interoperability-public/index.html');
         });
-        //response.render('objects/objects', {objects: objectModel.getAllObjects()});
+*/        response.render('objects/objects', {objects: objectModel.getAllObjects()});
         //response.end(objectModel.objectsToStringSimple());
     } else {
         response.writeHead(200, {"Content-Type": "application/ld+json",
@@ -34,7 +34,7 @@ router.get('/', function(request, response) {
         response.end(JSON.stringify(responseEntryPoint));
     }
 });
-
+/*
 // Sends a collection of objects (basic descriptions)
 router.get('/interoperability', function(request, response) {
     var objects = interoperabilityModel.getAllObjects();
@@ -100,7 +100,7 @@ router.get('/interoperability-list', function(request, response) {
         response.end(JSON.stringify(interoperabilityResponse));
     }
 });
-
+*/
 /*-- List of connected objects management --*/
 /*
 // Retrieves info about a particular object
