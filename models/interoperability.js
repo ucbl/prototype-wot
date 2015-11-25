@@ -45,6 +45,7 @@
                         'realObjectInfo': dataJson.realObjectInfo
                     };
                     tempObject.prototype = new(objectModel);
+                    console.log("Pushing " + tempObject['@id']);
                     this.objects.push(tempObject['@id']);
                     knownObjects.push(tempObject);
                     if(params && params.verbose) {
