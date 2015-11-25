@@ -1,11 +1,10 @@
 /**
  * Created by Lionel on 17/11/2015.
  */
-//Extra common functions (just a cut and paste to make the whole app work)
-//TODO refactor and move to the appropriate directories
+//Common methods of "object" (appliance) objects. Must be declared as a function to be inherited by all objects.
 
 (function(module) {
-    var object = function() {
+    module.exports = function() {
         this.getValue = function (attributeName) {
             return this.realObjectInfo[attributeName];
         };
@@ -22,6 +21,4 @@
             this.capabilities[capabilityId] = value;
         };
     };
-
-    module.exports = object;
 })(module);
