@@ -18,7 +18,7 @@ router.get('/', function(request, response) {
     if (request.accepts('html')) {
         //Send the CIMA homepage
         router.use(function(req, resp) {
-            express.static(__dirname + '/../public/interoperability-public/index.html');
+            //express.static(__dirname + '/../public/interoperability-public/index.html');
         });
         //response.render('objects/objects', {objects: objectModel.getAllObjects()});
         //response.end(objectModel.objectsToStringSimple());
