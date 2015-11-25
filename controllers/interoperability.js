@@ -15,15 +15,15 @@ var express = require('express'),
 
 // Entry point and home page
 router.get('/', function(request, response) {
-    if (request.accepts('html')) {
+/*    if (request.accepts('html')) {
         //Send the CIMA homepage
-/*        router.use(function(req, resp) {
-            express.static(__dirname + '/../public/interoperability-public/index.html');
+        router.use(function(req, resp) {
+            //express.static(__dirname + '/../public/interoperability-public/index.html');
         });
-*/        response.render('objects/objects', {objects: objectModel.getAllObjects()});
+        //response.render('objects/objects', {objects: objectModel.getAllObjects()});
         //response.end(objectModel.objectsToStringSimple());
     } else {
-        response.writeHead(200, {"Content-Type": "application/ld+json",
+*/        response.writeHead(200, {"Content-Type": "application/ld+json",
             "Link": Globals.vocabularies.linkVocab});
         var responseEntryPoint = {
             "@context": Globals.vocabularies.interoperability + "context/EntryPoint",
@@ -32,7 +32,7 @@ router.get('/', function(request, response) {
             "interoperability": Globals.vocabularies.interoperability
         };
         response.end(JSON.stringify(responseEntryPoint));
-    }
+//    }
 });
 /*
 // Sends a collection of objects (basic descriptions)
