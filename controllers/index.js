@@ -12,13 +12,13 @@
             Globals.vocabularies.updateBaseUri('http://' + req.hostname + (Globals.config.port !== 80?(':' + Globals.config.port):'') + '/');
 
             //Initiate the object discovery and construct their URIs
-//            interoperabilityModel.loadObjects();
+            interoperabilityModel.loadObjects();
             ontologyModel.loadOntology();
         }
         next();
     });
 
-    router.use('/interoperability', require('./interoperability'));
+    router.use('/interoperability', require('./object'));
     router.use('/code-repository', require('./code-repository'));
     router.use('/ontology', require('./ontology'));
 
