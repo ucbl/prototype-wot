@@ -19,7 +19,7 @@
             var dataLocation = __dirname + '/../data/interoperability/objects/';
             var files = fs.readdirSync(dataLocation);
             if(params && params.verbose) {
-                console.log(dataLocation + " -> " + files.length + " files.");
+                console.log("dataLocation: " + dataLocation + " -> " + files.length + " files.");
             }
             for (var i in files) {
                 if (files[i]!='' && files[i].indexOf('.jsonld')>0) {
@@ -55,9 +55,6 @@
                     }
                 }
             }
-            for(var test in this.objects) {
-                console.log("tempObject[" + test + "]: " + knownObjects[test]);
-            }
         },
 
         // Adds an object to the list of connected ones
@@ -76,7 +73,6 @@
             for(var id in this.objects) {
                 results.push(this.getObjectInfos(this.objects[id]));
             }
-            console.log(results.length + " -> " + results[0]);
             return results;
         },
 
@@ -92,7 +88,6 @@
 
         // Gets info about a known object by its complete id (URI), even if it is not connected to the interoperability layer
         "getObjectInfos": function (objectId) {
-            console.log("Received: " + objectId);
             for (var i in knownObjects) {
                 var tempObject = knownObjects[i];
                 if (tempObject['@id'] == objectId) {
