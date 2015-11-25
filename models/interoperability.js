@@ -34,8 +34,7 @@
                             capabilities.push((dataJson.object.capabilities[j])['@id']);
                         }
                     }
-                    var tempObject = Object.create(objectModel);
-                    tempObject.construct( {
+                    var tempObject = {
                         '@id': Globals.vocabularies.capability + dataJson.id,
                         '@context': Globals.vocabularies.interoperability + 'context/CimaObject',
                         '@type': 'vocab:CimaObject',
@@ -44,7 +43,8 @@
                         'description': dataJson.description,
                         'capabilities': dataJson.capabilities,
                         'realObjectInfo': dataJson.realObjectInfo
-                    });
+                    };
+                    tempObject.prototype = new(objectModel);
                     this.objects.push(tempObject['@id']);
                     knownObjects.push(tempObject);
                     if(params && params.verbose) {

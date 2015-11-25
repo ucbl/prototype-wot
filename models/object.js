@@ -17,23 +17,20 @@
                 this.capabilities = [];
             }
         };
-        return {
+        this.getValue = function (attributeName) {
+            return this.realObjectInfo[attributeName];
+        };
 
-            'getValue': function (attributeName) {
-                return this.realObjectInfo[attributeName];
-            },
+        this.setValue = function (attributeName, value) {
+            this.realObjectInfo[attributeName] = value;
+        };
 
-            'setValue': function (attributeName, value) {
-                this.realObjectInfo[attributeName] = value;
-            },
+        this.getCapability = function (capabilityId) {
+            return this.capabilities[capabilityId];
+        };
 
-            'getCapability': function (capabilityId) {
-                return this.capabilities[capabilityId];
-            },
-
-            'setCapability': function (capabilityId, value) {
-                this.capabilities[capabilityId] = value;
-            }
+        this.setCapability = function (capabilityId, value) {
+            this.capabilities[capabilityId] = value;
         };
     };
 
