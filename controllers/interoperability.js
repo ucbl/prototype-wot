@@ -291,7 +291,7 @@ router.post('/:objectId/:capability', function(request, response) {
 });
 */
 /*---HYDRA---*/
-
+/*
 // GET the hydra vocabulary
 router.get('/vocab', function(request, response) {
     var hydraLocation = __dirname + '/../data/interoperability/hydra.jsonld';
@@ -317,3 +317,4 @@ router.get('/context/:context', function(request, response) {
     });
     return true;
 });
+*/
