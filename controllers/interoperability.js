@@ -5,7 +5,6 @@ var express = require('express'),
     fs = require('fs'),
     Globals = require('../models/globals'),
     interoperabilityModel = require('../models/interoperability'),
-    objectModel = require('../models/object'),
     capabilityModel = require('../models/capability');
 
 
@@ -67,7 +66,7 @@ router.get('/interoperability', function(request, response) {
 router.get('/interoperability-list', function(request, response) {
     var objects = interoperabilityModel.getAllObjects();
     if (request.accepts('html')) {
-        response.render('objects/objectsSimple', {objects: objectModel.getAllObjects()});
+        response.render('objects/objectsSimple', {objects: interoperabilityModel.getAllObjects()});
         //response.end(objectsToStringSimple());
     } else {
         response.writeHead(200, {
