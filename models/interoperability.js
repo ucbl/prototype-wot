@@ -34,21 +34,16 @@
                             capabilities.push((dataJson.object.capabilities[j])['@id']);
                         }
                     }
-                    var tempObject = Object.create(objectModel, {
-                        'hydra': {
-                            '@id': Globals.vocabularies.capability + dataJson.id,
-                            '@context': Globals.vocabularies.interoperability + 'context/CimaObject',
-                            '@type': 'vocab:CimaObject'
-                        },
-                        'properties': {
-                            'id': dataJson.id,
-                            'name': dataJson.name,
-                            'description': dataJson.description
-                        },
-                        'arrays': {
-                            'capabilities': dataJson.capabilities,
-                            'realObjectInfo': dataJson.realObjectInfo
-                        }
+                    var tempObject = Object.create(objectModel);
+                    tempObject.construct( {
+                        '@id': Globals.vocabularies.capability + dataJson.id,
+                        '@context': Globals.vocabularies.interoperability + 'context/CimaObject',
+                        '@type': 'vocab:CimaObject',
+                        'id': dataJson.id,
+                        'name': dataJson.name,
+                        'description': dataJson.description,
+                        'capabilities': dataJson.capabilities,
+                        'realObjectInfo': dataJson.realObjectInfo
                     });
                     this.objects.push(tempObject['@id']);
                     knownObjects.push(tempObject);

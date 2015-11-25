@@ -7,6 +7,18 @@
 (function(module) {
     var object = function() {
         return {
+            'construct': function (params) {
+                for (var key in params) {
+                    this[key] = params[key];
+                }
+                if (!this.realObjectInfo) {
+                    this.realObjectInfo = [];
+                }
+                if (!this.capabilities) {
+                    this.capabilities = [];
+                }
+            },
+
             'getValue': function (attributeName) {
                 return this.realObjectInfo[attributeName];
             },
@@ -24,19 +36,6 @@
             }
         };
     };
-/*
-    object.prototype.constructor = function (params) {
-        for (var key in params) {
-            console.log("Adding property: " + key);
-            object[key] = params[key];
-        }
-        if (!this.realObjectInfo) {
-            object.realObjectInfo = [];
-        }
-        if (!this.capabilities) {
-            object.capabilities = [];
-        }
-    };
-*/
+
     module.exports = object;
 })(module);
