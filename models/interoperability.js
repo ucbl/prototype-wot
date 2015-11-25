@@ -56,7 +56,7 @@
                 }
             }
             for(var test in this.objects) {
-                console.log("tempObject[" + test + "]: " + this.objects[test]);
+                console.log("tempObject[" + test + "]: " + knownObjects[test]);
             }
         },
 
@@ -92,6 +92,7 @@
 
         // Gets info about a known object by its complete id (URI), even if it is not connected to the interoperability layer
         "getObjectInfos": function (objectId) {
+            console.log("Received: " + objectId);
             for (var i in knownObjects) {
                 var tempObject = knownObjects[i];
                 if (tempObject['@id'] == objectId) {
