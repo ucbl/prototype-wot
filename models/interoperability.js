@@ -73,7 +73,7 @@
             for(var id in this.objects) {
                 results.push(this.getObjectInfos(id));
             }
-            console.log(results.length + " -> " + results[0].getObjectInfos());
+            console.log(results.length + " -> " + results[0]);
             return results;
         },
 
