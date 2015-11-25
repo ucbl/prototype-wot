@@ -35,7 +35,7 @@
                         }
                     }
                     var tempObject = {
-                        '@id': Globals.vocabularies.appliance + dataJson.id,
+                        '@id': Globals.vocabularies.interoperability + dataJson.id,
                         '@context': Globals.vocabularies.interoperability + 'context/CimaObject',
                         '@type': 'vocab:CimaObject',
                         'id': dataJson.id,
