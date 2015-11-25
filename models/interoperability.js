@@ -16,7 +16,7 @@
 
         // Loads all object descriptions and stores them in a list of known interoperability
         "loadObjects": function(params) {
-            var dataLocation = __dirname + '/../data/interoperability/interoperability/';
+            var dataLocation = __dirname + '/../data/interoperability/objects/';
             var files = fs.readdirSync(dataLocation);
             if(params && params.verbose) {
                 console.log("dataLocation: " + dataLocation + " -> " + files.length + " files.");
