@@ -5,20 +5,8 @@
 //TODO refactor and move to the appropriate directories
 
 (function(module) {
-    module.exports = function(params) {
+    var object = function(params) {
         return {
-            'constructor': function () {
-                for (var key in params) {
-                    this[key] = params[key];
-                }
-                if (!this.realObjectInfo) {
-                    this.realObjectInfo = [];
-                }
-                if (!this.capabilities) {
-                    this.capabilities = [];
-                }
-            },
-
             'getValue': function (attributeName) {
                 return this.realObjectInfo[attributeName];
             },
@@ -36,4 +24,18 @@
             }
         };
     };
+
+    object.prototype.constructor = function (params) {
+        for (var key in params) {
+            this[key] = params[key];
+        }
+        if (!this.realObjectInfo) {
+            this.realObjectInfo = [];
+        }
+        if (!this.capabilities) {
+            this.capabilities = [];
+        }
+    };
+
+    module.exports = object;
 })(module);
