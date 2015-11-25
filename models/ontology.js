@@ -14,7 +14,7 @@ var fs = require('fs'),
 var tripleStore = new N3Store();
 
 var ontology = {
-    'loadOntology': function() {
+    'loadOntology': function(params) {
         //Separate the context from the data, to be able to replace namespaces by their values
         var jsonOntology = {
                 "@context": require("../data/ontology/functionalities/prefixes.js")['@context']
@@ -28,7 +28,9 @@ var ontology = {
                     for (var graphName in triples) {
                         triples[graphName].forEach(function (triple) {
                             tripleStore.addTriple(triple.subject.value, triple.predicate.value, triple.object.value);
-                            console.log("Adding: (" + triple.subject.value + "," + triple.predicate.value + "," + triple.object.value + ")");
+                            if(params && params.verbose) {
+                                console.log("Adding: (" + triple.subject.value + "," + triple.predicate.value + "," + triple.object.value + ")");
+                            }
                         });
                     }
                 });

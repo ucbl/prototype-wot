@@ -15,10 +15,12 @@
         "objects": [],
 
         // Loads all object descriptions and stores them in a list of known objects
-        "loadObjects": function() {
+        "loadObjects": function(params) {
             var dataLocation = __dirname + '/../data/interoperability/objects/';
             var files = fs.readdirSync(dataLocation);
-            console.log(dataLocation + " -> " + files.length);
+            if(params && params.verbose) {
+                console.log(dataLocation + " -> " + files.length);
+            }
             for (var i in files) {
                 if (files[i]!='' && files[i].indexOf('.jsonld')>0) {
                     var dataLocationFile = dataLocation + files[i];
@@ -42,7 +44,9 @@
                     });
                     this.objects.push(tempObject['@id']);
                     knownObjects.push(tempObject);
-                    console.log("New object: " + tempObject['@id']);
+                    if(params && params.verbose) {
+                        console.log("New object: " + tempObject['@id']);
+                    }
                 }
             }
         },
