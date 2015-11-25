@@ -163,7 +163,7 @@ router.delete('/:objectId', function(request, response) {
 });
 
 /*-- Object capability management --*/
-
+/*
 //TODO: REFACTOR THAT ASAP!
 // GET and PUT operations on the real objects
 router.get('/:objectId/:capabilityId', function(request, response) {
@@ -289,7 +289,7 @@ router.post('/:objectId/:capability', function(request, response) {
     }
     response.end(JSON.stringify(responseJson));
 });
-
+*/
 /*---HYDRA---*/
 
 // GET the hydra vocabulary
