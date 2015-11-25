@@ -5,5 +5,5 @@ var express = require('express'),
 
 // Entry point and home page
 router.get('/', function(request, response) {
-        response.end("test");
+        response.send("test");
 });
