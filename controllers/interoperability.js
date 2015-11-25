@@ -296,7 +296,7 @@ router.get('/vocab', function(request, response) {
     var hydraLocation = __dirname + '/../data/interoperability/hydra.jsonld';
     response.writeHead(200, {"Content-Type": "application/ld+json"});
     fs.readFile(hydraLocation, 'utf8', function (error, data) {
-        console.log(data);
+        console.log(hydraLocation + " -> " + data);
         response.end(data);
     });
     return true;
