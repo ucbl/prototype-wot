@@ -104,7 +104,7 @@ router.get('/interoperability-list', function(request, response) {
 // Retrieves info about a particular object
 router.get('/:objectId', function(request, response) {
     //Search object by name, then by id, then provide an empty object
-    var object = interoperabilityModel.get(request.params.objectId) || interoperabilityModel.findObjectById(request.params.objectId) || {realObjectInfo:[]};
+    var object = interoperabilityModel.getObjectInfos(request.params.objectId) || interoperabilityModel.findObjectById(request.params.objectId) || {realObjectInfo:[]};
     if (request.accepts('html')) {
         response.render('objects/object', {object: object});
     } else {
