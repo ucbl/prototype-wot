@@ -6,18 +6,18 @@
 
 (function(module) {
     var object = function() {
+        this.construct = function (params) {
+            for (var key in params) {
+                this[key] = params[key];
+            }
+            if (!this.realObjectInfo) {
+                this.realObjectInfo = [];
+            }
+            if (!this.capabilities) {
+                this.capabilities = [];
+            }
+        };
         return {
-            'construct': function (params) {
-                for (var key in params) {
-                    this[key] = params[key];
-                }
-                if (!this.realObjectInfo) {
-                    this.realObjectInfo = [];
-                }
-                if (!this.capabilities) {
-                    this.capabilities = [];
-                }
-            },
 
             'getValue': function (attributeName) {
                 return this.realObjectInfo[attributeName];
