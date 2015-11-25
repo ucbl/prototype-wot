@@ -6,16 +6,16 @@
     "description": "An IKEA window with the serial number 2555",
     "capabilities" : [
 		{
-	      "@id": "http://localhost:3333/cima/window-ikea-2555/openWindow",
-	      "@type": "http://localhost:3333/vocab#CapabilityOpenWindow",
-          "@context": "http://localhost:3333/context/Capability",
-          "ontology": "http://localhost:3232/capability/openWindow"
+	      "@id": Globals.vocabularies.interoperability + "window-ikea-2555/openWindow",
+	      "@type": Globals.vocabularies.capability + "CapabilityOpenWindow",
+          "@context": Globals.vocabularies.interoperability + "context/Capability",
+          "ontology": Globals.vocabularies.capability + "capability/openWindow"
 	    },
 		{
-	      "@id": "http://localhost:3333/cima/window-ikea-2555/closeWindow",
-	      "@type": "http://localhost:3333/vocab#CapabilityCloseWindow",
-          "@context": "http://localhost:3333/context/Capability",
-          "ontology": "http://localhost:3232/capability/closeWindow"
+	      "@id": Globals.vocabularies.interoperability + "window-ikea-2555/closeWindow",
+	      "@type": Globals.vocabularies.capability + "CapabilityCloseWindow",
+          "@context": Globals.vocabularies.interoperability + "context/Capability",
+          "ontology": Globals.vocabularies.capability + "http://localhost:3232/capability/closeWindow"
 	    }
 	],
     "realObjectInfo": {
