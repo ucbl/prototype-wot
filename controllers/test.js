@@ -4,6 +4,6 @@ var express = require('express'),
     router = express.Router();
 
 // Entry point and home page
-router.get('/', function(request, response) {
+router.get('/', function(request, response, next) {
         response.send("test");
 });
