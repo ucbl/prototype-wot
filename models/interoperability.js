@@ -50,7 +50,7 @@
                     if(params && params.verbose) {
                         console.log("New object: " + tempObject['@id'] + " -> " + tempObject.length + " properties.");
                         for(var propName in tempObject) {
-                            console.log("property: " + propName);
+                            console.log("property: " + propName + "\t" + tempObject[propName]);
                         }
                     }
                 }
