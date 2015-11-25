@@ -17,4 +17,4 @@ div(class='object')
             | Capabilities:
             each capability in object.capabilities
                 div(class="objectCapability")
-                    strong #{capability.object}&nbsp;
+                a(href='#{capability["@id"]}') #{capability['@id']}
