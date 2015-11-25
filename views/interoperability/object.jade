@@ -15,7 +15,6 @@ div(class='object')
                     | #{val}
         div(class='objectCapabilities')
             | Capabilities:
-            each val, index in object.capabilities
+            each capability in object.capabilities
                 div(class="objectCapability")
-                    strong #{index}&nbsp;
-                    | #{val}
+                    strong #{capability}&nbsp;
