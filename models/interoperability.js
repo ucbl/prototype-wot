@@ -41,6 +41,7 @@
                     });
                     this.objects.push(tempObject['@id']);
                     knownObjects.push(tempObject);
+                    console.log("New object: " + tempObject['@id']);
                 }
             }
         },
