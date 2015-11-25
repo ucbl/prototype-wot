@@ -47,7 +47,10 @@
                     this.objects.push(tempObject['@id']);
                     knownObjects.push(tempObject);
                     if(params && params.verbose) {
-                        console.log("New object: " + tempObject['@id']);
+                        console.log("New object: " + tempObject['@id'] + " -> " + tempObject.length + " properties.");
+                        for(var propName in tempObject) {
+                            console.log("property: " + propName);
+                        }
                     }
                 }
             }
