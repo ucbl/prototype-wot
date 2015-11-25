@@ -9,16 +9,10 @@ $(document).ready(function() {
 });
 
 function reloadObjects() {
-    $.ajax({
-        method: 'get',
-        url: interoperabilityLayerUrl,
-        data: {},
-        success: function(response){
-            $('.objectsFromCima').html(response);
-            equalHeights('.objectIns');
-        },
-        dataType: 'json'
-    });
+	$.get(interoperabilityLayerUrl, {}, function(response){
+		$('.objectsFromCima').html(response);
+		equalHeights('.objectIns');
+	});
 }
 
 function equalHeights(className) {
