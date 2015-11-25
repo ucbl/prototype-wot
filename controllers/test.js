@@ -2,7 +2,6 @@
 
 var express = require('express'),
     router = express.Router(),
-    fs = require('fs'),
     Globals = require('../models/globals');
 
 // Entry point and home page
@@ -11,11 +10,6 @@ router.get('/', function(request, response) {
             "Content-Type": "application/ld+json",
             "Link": Globals.vocabularies.linkVocab
         });
-        var responseEntryPoint = {
-            "@context": Globals.vocabularies.interoperability + "context/EntryPoint",
-            "@id": Globals.vocabularies.base + "/objects",
-            "@type": "EntryPoint",
-            "interoperability": Globals.vocabularies.interoperability
-        };
-        response.end(JSON.stringify(responseEntryPoint));
+
+        response.end("test");
 });
