@@ -27,13 +27,13 @@
 
     object.prototype.constructor = function (params) {
         for (var key in params) {
-            this[key] = params[key];
+            object[key] = params[key];
         }
         if (!this.realObjectInfo) {
-            this.realObjectInfo = [];
+            object.realObjectInfo = [];
         }
         if (!this.capabilities) {
-            this.capabilities = [];
+            object.capabilities = [];
         }
     };
 
