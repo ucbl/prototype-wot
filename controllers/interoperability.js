@@ -7,6 +7,34 @@ var express = require('express'),
     interoperabilityModel = require('../models/interoperability'),
     capabilityModel = require('../models/capability');
 
+/*---HYDRA---*/
+
+// GET the hydra vocabulary
+router.get('/vocab', function(request, response) {
+    var hydraLocation = __dirname + '/../data/interoperability/hydra.jsonld';
+    response.writeHead(200, {"Content-Type": "application/ld+json"});
+    fs.readFile(hydraLocation, 'utf8', function (error, data) {
+        console.log(hydraLocation + " -> " + data);
+        response.end(data);
+    });
+    return true;
+});
+
+// GET the hydra context
+router.get('/context', function(request, response) {
+    response.writeHead(200, {"Content-Type": "application/ld+json",
+        "Link": Globals.vocabularies.linkVocab});
+    response.end("{}");
+});
+
+router.get('/context/:context', function(request, response) {
+    response.writeHead(200, {"Content-Type": "application/ld+json"});
+    var contextLocation = __dirname + '/../data/interoperability/contexts/' + request.params.context + '.jsonld';
+    fs.readFile(contextLocation, 'utf8', function (error, data) {
+        response.end(data);
+    });
+    return true;
+});
 
 /*---WEB SERVICE---*/
 
@@ -287,35 +315,6 @@ router.post('/:objectId/:capability', function(request, response) {
             break;
     }
     response.end(JSON.stringify(responseJson));
-});
-
-/*---HYDRA---*/
-
-// GET the hydra vocabulary
-router.get('/vocab', function(request, response) {
-    var hydraLocation = __dirname + '/../data/interoperability/hydra.jsonld';
-    response.writeHead(200, {"Content-Type": "application/ld+json"});
-    fs.readFile(hydraLocation, 'utf8', function (error, data) {
-        console.log(hydraLocation + " -> " + data);
-        response.end(data);
-    });
-    return true;
-});
-
-// GET the hydra context
-router.get('/context', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json",
-        "Link": Globals.vocabularies.linkVocab});
-    response.end("{}");
-});
-
-router.get('/context/:context', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json"});
-    var contextLocation = __dirname + '/../data/interoperability/contexts/' + request.params.context + '.jsonld';
-    fs.readFile(contextLocation, 'utf8', function (error, data) {
-        response.end(data);
-    });
-    return true;
 });
 
 module.exports = router;
