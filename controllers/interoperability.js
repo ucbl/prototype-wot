@@ -293,9 +293,10 @@ router.post('/:objectId/:capability', function(request, response) {
 
 // GET the hydra vocabulary
 router.get('/vocab', function(request, response) {
-    var hydraLocation = __dirname + '/../data/interoperability/contexts/hydra.jsonld';
+    var hydraLocation = __dirname + '/../data/interoperability/hydra.jsonld';
     response.writeHead(200, {"Content-Type": "application/ld+json"});
     fs.readFile(hydraLocation, 'utf8', function (error, data) {
+        console.log(data);
         response.end(data);
     });
     return true;
