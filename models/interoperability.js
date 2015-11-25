@@ -29,7 +29,7 @@
                             capabilities.push((dataJson.object.capabilities[j])['@id']);
                         }
                     }
-                    var ConnectedObject = new objectModel({
+                    var tempObject = new objectModel({
                         '@id': Globals.vocabularies.capability + dataJson.id,
                         '@context': Globals.vocabularies.interoperability + 'context/CimaObject',
                         '@type': 'vocab:CimaObject',
@@ -39,8 +39,8 @@
                         'capabilities': dataJson.capabilities,
                         'realObjectInfo': dataJson.realObjectInfo
                     });
-                    this.objects.push(ConnectedObject['@id']);
-                    knownObjects.push(ConnectedObject);
+                    this.objects.push(tempObject['@id']);
+                    knownObjects.push(tempObject);
                 }
             }
         },
@@ -61,6 +61,7 @@
             for(var id in this.objects) {
                 results.push(this.getObjectInfos(id));
             }
+            console.log(results.length + " -> " + results[0].getObjectInfos());
             return results;
         },
 
