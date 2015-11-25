@@ -5,6 +5,9 @@ div(class='object')
         div(class='objectId')
             | Id:&nbsp;
             a(href='#{object["@id"]}') #{object["@id"]}
+        div(class='objectType')
+            | Type:&nbsp;
+            a(href='#{object["@type"]}') #{object["@type"]}
         div(class='objectDescription')
             | Description: #{object.description}
         div(class='objectValues')
