@@ -18,6 +18,7 @@
         "loadObjects": function() {
             var dataLocation = __dirname + '/../data/interoperability/objects/';
             var files = fs.readdirSync(dataLocation);
+            console.log(dataLocation + " -> " + files.length);
             for (var i in files) {
                 if (files[i]!='' && files[i].indexOf('.jsonld')>0) {
                     var dataLocationFile = dataLocation + files[i];
