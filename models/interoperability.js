@@ -34,7 +34,7 @@
                             capabilities.push((dataJson.object.capabilities[j])['@id']);
                         }
                     }
-                    var tempObject = new objectModel({
+                    var tempObject = Object.create(objectModel, {
                         '@id': Globals.vocabularies.capability + dataJson.id,
                         '@context': Globals.vocabularies.interoperability + 'context/CimaObject',
                         '@type': 'vocab:CimaObject',

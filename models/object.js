@@ -24,7 +24,7 @@
             }
         };
     };
-
+/*
     object.prototype.constructor = function (params) {
         for (var key in params) {
             console.log("Adding property: " + key);
@@ -37,6 +37,6 @@
             object.capabilities = [];
         }
     };
-
+*/
     module.exports = object;
 })(module);
