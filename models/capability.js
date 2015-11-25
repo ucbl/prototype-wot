@@ -38,7 +38,7 @@
 
         //TODO: move this to code-repository
         'calculateTemperature': function () {
-            // Calculate the temperature checking the different objects (Just a test)
+            // Calculate the temperature checking the different interoperability (Just a test)
             var temperature = 0;
             temperature -= this.getValueFromObject('cooler-swirlwind-2443', 'value') * 1;
             temperature -= this.getValueFromObject('coolerheater-swirlwind-2665', 'valueDecreaser') * 1;

@@ -14,7 +14,6 @@ router.get('/vocab', function(request, response) {
     var hydraLocation = __dirname + '/../data/interoperability/hydra.jsonld';
     response.writeHead(200, {"Content-Type": "application/ld+json"});
     fs.readFile(hydraLocation, 'utf8', function (error, data) {
-        console.log(hydraLocation + " -> " + data);
         response.end(data);
     });
     return true;
@@ -45,14 +44,14 @@ router.get('/', function(request, response) {
     if (request.accepts('html')) {
         //Send the CIMA homepage
         response.redirect('/interoperability-public');
-        //response.render('objects/objects', {objects: interoperabilityModel.getAllObjects()});
+        //response.render('interoperability/interoperability', {interoperability: interoperabilityModel.getAllObjects()});
         //response.end(interoperabilityModel.objectsToStringSimple());
     } else {
         response.writeHead(200, {"Content-Type": "application/ld+json",
             "Link": Globals.vocabularies.linkVocab});
         var responseEntryPoint = {
             "@context": Globals.vocabularies.interoperability + "context/EntryPoint",
-            "@id": Globals.vocabularies.base + "/objects",
+            "@id": Globals.vocabularies.base + "/interoperability",
             "@type": "EntryPoint",
             "interoperability": Globals.vocabularies.interoperability
         };
@@ -60,11 +59,11 @@ router.get('/', function(request, response) {
     }
 });
 
-// Sends a collection of objects (basic descriptions)
+// Sends a collection of interoperability (basic descriptions)
 router.get('/interoperability', function(request, response) {
     var objects = interoperabilityModel.getAllObjects();
     if (request.accepts('html')) {
-        response.render('objects/objectsSimple', {objects: objects});
+        response.render('interoperability/objectsSimple', {objects: objects});
         //response.end(objectModel.objectsToStringSimple());
     } else {
         response.writeHead(200, {
@@ -90,11 +89,11 @@ router.get('/interoperability', function(request, response) {
     }
 });
 
-// Sends a collection of objects (detailed descriptions)
+// Sends a collection of interoperability (detailed descriptions)
 router.get('/interoperability-list', function(request, response) {
     var objects = interoperabilityModel.getAllObjects();
     if (request.accepts('html')) {
-        response.render('objects/objectsSimple', {objects: interoperabilityModel.getAllObjects()});
+        response.render('interoperability/objectsSimple', {objects: interoperabilityModel.getAllObjects()});
         //response.end(objectsToStringSimple());
     } else {
         response.writeHead(200, {
@@ -126,35 +125,20 @@ router.get('/interoperability-list', function(request, response) {
     }
 });
 
-/*-- List of connected objects management --*/
+/*-- List of connected interoperability management --*/
 
 // Retrieves info about a particular object
 router.get('/:objectId', function(request, response) {
     //Search object by name, then by id, then provide an empty object
     var object = interoperabilityModel.getObjectInfos(request.params.objectId) || interoperabilityModel.findObjectById(request.params.objectId) || {realObjectInfo:[]};
     if (request.accepts('html')) {
-        response.render('objects/object', {object: object});
+        response.render('interoperability/object', {object: object});
     } else {
         response.writeHead(200, {
             "Content-Type": "application/ld+json",
             "Link": Globals.vocabularies.linkVocab}
         );
-        var objectResponse = {
-            "@context": Globals.vocabularies.interoperability + "context/CimaObject",
-            "@id": object['@id'],
-            "@type": "vocab:CimaObject",
-            "capability": Globals.vocabularies.capability,
-            'name': object.name,
-            'description': object.description,
-            'capabilities': object.capabilities
-        };
-        if (object.realObjectInfo && object.realObjectInfo.length >0) {
-            objectResponse.values = [];
-            for(var i in object.realObjectInfo) {
-                object.values.push(object.realObjectInfo[i]);
-            }
-        }
-        response.end(JSON.stringify(objectResponse));
+        response.end(JSON.stringify((require("../views/interoperability/object")(object))));
     }
 });
 
@@ -192,7 +176,7 @@ router.delete('/:objectId', function(request, response) {
 /*-- Object capability management --*/
 
 //TODO: REFACTOR THAT ASAP!
-// GET and PUT operations on the real objects
+// GET and PUT operations on the real interoperability
 router.get('/:objectId/:capabilityId', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json"});
     var object = interoperabilityModel.findObjectById(request.params.objectId);

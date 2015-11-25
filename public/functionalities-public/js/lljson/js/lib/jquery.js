@@ -350,7 +350,7 @@ jQuery.extend = jQuery.fn.extend = function() {
           continue;
         }
 
-        // Recurse if we're merging plain objects or arrays
+        // Recurse if we're merging plain interoperability or arrays
         if ( deep && copy && ( jQuery.isPlainObject(copy) || (copyIsArray = jQuery.isArray(copy)) ) ) {
           if ( copyIsArray ) {
             copyIsArray = false;
@@ -360,7 +360,7 @@ jQuery.extend = jQuery.fn.extend = function() {
             clone = src && jQuery.isPlainObject(src) ? src : {};
           }
 
-          // Never move original objects, clone them
+          // Never move original interoperability, clone them
           target[ name ] = jQuery.extend( deep, clone, copy );
 
         // Don't bring in undefined values
@@ -472,7 +472,7 @@ jQuery.extend({
 
     // Must be an Object.
     // Because of IE, we also have to check the presence of the constructor property.
-    // Make sure that DOM nodes and window objects don't pass through, as well
+    // Make sure that DOM nodes and window interoperability don't pass through, as well
     if ( !obj || jQuery.type(obj) !== "object" || obj.nodeType || jQuery.isWindow( obj ) ) {
       return false;
     }
@@ -485,7 +485,7 @@ jQuery.extend({
         return false;
       }
     } catch ( e ) {
-      // IE8,9 Will throw exceptions on certain host objects #9897
+      // IE8,9 Will throw exceptions on certain host interoperability #9897
       return false;
     }
 
@@ -801,7 +801,7 @@ jQuery.extend({
     return core_concat.apply( [], ret );
   },
 
-  // A global GUID counter for objects
+  // A global GUID counter for interoperability
   guid: 1,
 
   // Bind a function to a context, optionally partially applying any
@@ -997,7 +997,7 @@ function isArraylike( obj ) {
     typeof length === "number" && length > 0 && ( length - 1 ) in obj );
 }
 
-// All jQuery objects should point back to these
+// All jQuery interoperability should point back to these
 rootjQuery = jQuery(document);
 /*!
  * Sizzle CSS Selector Engine v1.10.2
@@ -3573,7 +3573,7 @@ function internalData( elem, name, data, pvt /* Internal Use Only */ ){
   var ret, thisCache,
     internalKey = jQuery.expando,
 
-    // We have to handle DOM nodes and JS objects differently because IE6-7
+    // We have to handle DOM nodes and JS interoperability differently because IE6-7
     // can't GC object references properly across the DOM-JS boundary
     isNode = elem.nodeType,
 
@@ -3581,7 +3581,7 @@ function internalData( elem, name, data, pvt /* Internal Use Only */ ){
     // attached directly to the object so GC can occur automatically
     cache = isNode ? jQuery.cache : elem,
 
-    // Only defining an ID for JS objects if its cache already exists allows
+    // Only defining an ID for JS interoperability if its cache already exists allows
     // the code to shortcut on the same path as a DOM node with no cache
     id = isNode ? elem[ internalKey ] : elem[ internalKey ] && internalKey;
 
@@ -3602,7 +3602,7 @@ function internalData( elem, name, data, pvt /* Internal Use Only */ ){
   }
 
   if ( !cache[ id ] ) {
-    // Avoid exposing jQuery metadata on plain JS objects when the object
+    // Avoid exposing jQuery metadata on plain JS interoperability when the object
     // is serialized using JSON.stringify
     cache[ id ] = isNode ? {} : { toJSON: jQuery.noop };
   }
@@ -3752,7 +3752,7 @@ jQuery.extend({
   noData: {
     "applet": true,
     "embed": true,
-    // Ban all objects except for Flash (which handle expandos)
+    // Ban all interoperability except for Flash (which handle expandos)
     "object": "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
   },
 
@@ -4737,7 +4737,7 @@ jQuery.event = {
       handlers, type, namespaces, origType,
       elemData = jQuery._data( elem );
 
-    // Don't attach events to noData or text/comment nodes (but allow plain objects)
+    // Don't attach events to noData or text/comment nodes (but allow plain interoperability)
     if ( !elemData ) {
       return;
     }

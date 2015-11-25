@@ -11,12 +11,12 @@
     var knownObjects = [];
 
     module.exports = {
-        // List of connected objects (only contains their ids)
+        // List of connected interoperability (only contains their ids)
         "objects": [],
 
-        // Loads all object descriptions and stores them in a list of known objects
+        // Loads all object descriptions and stores them in a list of known interoperability
         "loadObjects": function(params) {
-            var dataLocation = __dirname + '/../data/interoperability/objects/';
+            var dataLocation = __dirname + '/../data/interoperability/interoperability/';
             var files = fs.readdirSync(dataLocation);
             if(params && params.verbose) {
                 console.log("dataLocation: " + dataLocation + " -> " + files.length + " files.");
@@ -67,7 +67,7 @@
             this.objects.remove(objectId);
         },
 
-        // Returns the list of actually connected objects
+        // Returns the list of actually connected interoperability
         'getAllObjects': function () {
             var results = [];
             for(var id in this.objects) {
@@ -107,7 +107,7 @@
             return null;
         },
 
-        // Retrieves all objects with a given name
+        // Retrieves all interoperability with a given name
         'findObjectsByName': function (nameObject) {
             var results = [];
             for (var i in knownObjects) {

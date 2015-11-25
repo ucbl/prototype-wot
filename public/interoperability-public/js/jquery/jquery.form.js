@@ -438,7 +438,7 @@ $.fn.ajaxSubmit = function(options) {
             /* it looks like contentWindow or contentDocument do not
              * carry the protocol property in ie8, when running under ssl
              * frame.document is the only valid response document, since
-             * the protocol is know but not on the other two objects. strange?
+             * the protocol is know but not on the other two interoperability. strange?
              * "Same origin policy" http://en.wikipedia.org/wiki/Same_origin_policy
              */
             
@@ -878,7 +878,7 @@ $.fn.ajaxFormUnbind = function() {
 };
 
 /**
- * formToArray() gathers form element data into an array of objects that can
+ * formToArray() gathers form element data into an array of interoperability that can
  * be passed to any of the following ajax functions: $.get, $.post, or load.
  * Each object in the array has both a 'name' and 'value' property.  An example of
  * an array for a simple login form might be:

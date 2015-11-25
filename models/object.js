@@ -1,7 +1,7 @@
 /**
  * Created by Lionel on 17/11/2015.
  */
-//Common methods of "object" (appliance) objects. Must be declared as a function to be inherited by all objects.
+//Common methods of "object" (appliance) interoperability. Must be declared as a function to be inherited by all interoperability.
 
 (function(module) {
     module.exports = function() {
