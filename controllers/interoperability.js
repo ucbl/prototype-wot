@@ -17,8 +17,8 @@ var express = require('express'),
 router.get('/', function(request, response) {
     if (request.accepts('html')) {
         //Send the CIMA homepage
-        router.use(express.static(__dirname + '/../public/interoperability-public/index.html'));
-        //response.render('objects/objects', {objects: objectModel.getAllObjects()});
+        //router.use(express.static(__dirname + '/../public/interoperability-public/index.html'));
+        response.render('objects/objects', {objects: objectModel.getAllObjects()});
         //response.end(objectModel.objectsToStringSimple());
     } else {
         response.writeHead(200, {"Content-Type": "application/ld+json",
