@@ -59,7 +59,7 @@
         'getAllObjects': function () {
             var results = [];
             for(var id in this.objects) {
-                results.push(this.get(id));
+                results.push(this.getObjectInfos(id));
             }
             return results;
         },
