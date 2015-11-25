@@ -24,7 +24,7 @@
             for (var i in files) {
                 if (files[i]!='' && files[i].indexOf('.jsonld')>0) {
                     // Read the JSON-LD file that contains all the information
-                    var dataJson = eval('(' + JSON.parse(fs.readFileSync(dataLocation + files[i], 'utf8')) + '(');
+                    var dataJson = eval('(' + JSON.parse(fs.readFileSync(dataLocation + files[i], 'utf8')) + ')');
                     if(params && params.verbose) {
                         console.log("Adding object: " + dataJson.id);
                     }
