@@ -9,7 +9,7 @@ $(document).ready(function() {
 });
 
 function reloadObjects() {
-	$.get(interoperabilityLayerUrl, {}, function(response){
+	$.get(interoperabilityLayerUrl, {'dataType': 'json'}, function(response){
 		$('.objectsFromCima').html(response);
 		equalHeights('.objectIns');
 	});	
