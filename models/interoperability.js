@@ -19,13 +19,15 @@
             var dataLocation = __dirname + '/../data/interoperability/objects/';
             var files = fs.readdirSync(dataLocation);
             if(params && params.verbose) {
-                console.log(dataLocation + " -> " + files.length);
+                console.log(dataLocation + " -> " + files.length + " files.");
             }
             for (var i in files) {
                 if (files[i]!='' && files[i].indexOf('.jsonld')>0) {
-                    var dataLocationFile = dataLocation + files[i];
                     // Read the JSON-LD file that contains all the information
-                    var dataJson = JSON.parse(fs.readFileSync(dataLocationFile, 'utf8'));
+                    var dataJson = JSON.parse(fs.readFileSync(dataLocation + files[i], 'utf8'));
+                    if(params && params.verbose) {
+                        console.log("Adding object: " + dataJson.id);
+                    }
                     var capabilities = [];
                     if (dataJson.object && dataJson.object.capabilities) {
                         for (var j=0; i<dataJson.object.capabilities.length; j++) {
