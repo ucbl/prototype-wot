@@ -74,7 +74,7 @@
         'getAllObjects': function () {
             var results = [];
             for(var id in this.objects) {
-                results.push(this.getObjectInfos(id));
+                results.push(this.getObjectInfos(this.objects[id]));
             }
             console.log(results.length + " -> " + results[0]);
             return results;
