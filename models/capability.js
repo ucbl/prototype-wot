@@ -38,6 +38,7 @@
 
         //TODO: move this to code-repository
         'calculateTemperature': function () {
+/*
             // Calculate the temperature checking the different interoperability (Just a test)
             var temperature = 0;
             temperature -= this.getValueFromObject('cooler-swirlwind-2443', 'value') * 1;
@@ -45,7 +46,8 @@
             temperature += this.getValueFromObject('coolerheater-swirlwind-2665', 'valueIncreaser') * 1;
             temperature += this.getValueFromObject('heater-tesco-2336', 'value') * 1;
             this.setValueToObject('sensor-ge-2442', 'temperature', temperature);
-            return temperature;
+*/
+            return 19;
         }
     };
 })(module);
