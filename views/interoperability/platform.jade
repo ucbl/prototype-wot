@@ -1,0 +1,10 @@
+//
+   Created by Lionel on 26/11/2015.
+
+div.platform
+    div(class='platformInfo')
+        | Context
+        a(href="#{platform['@context']}") #{platform['@context']}
+        | Id
+        a(href="#{platform['@id']}") #{platform['@id']}
+    include ./objectsSimple.jade

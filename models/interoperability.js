@@ -29,10 +29,24 @@
             var result = {
                 '@context': Globals.vocabularies.interoperability + 'context/Collection',
                 '@type': 'hydra:Collection',
-                '@id': Globals.vocabularies.interoperability + "object",
+                '@id': Globals.vocabularies.interoperability + "platform",
                 'objects': []
             };
             for(var i in knownObjects) {
+                result.objects.push(knownObjects[i]);
+            }
+            return result;
+        },
+
+        //Interoperability collection
+        "getConnectedCollection": function() {
+            var result = {
+                '@context': Globals.vocabularies.interoperability + 'context/Collection',
+                '@type': 'hydra:Collection',
+                '@id': Globals.vocabularies.interoperability + "platform/connected",
+                'objects': []
+            };
+            for(var i in this.objects) {
                 result.objects.push(knownObjects[i]);
             }
             return result;

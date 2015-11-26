@@ -70,8 +70,6 @@ router.get('/platform/connected', function(request, response, next) {
     }
 });
 
-/*-- List of connected interoperability management --*/
-
 // Retrieves info about a particular object
 router.get('/object/:objectId', function(request, response, next) {
     //Search object by name, then by id, then provide an empty object
