@@ -24,7 +24,7 @@
             for (var i in files) {
                 if (files[i]!='' && files[i].indexOf('.jsonld')>0) {
                     // Read the JSON-LD file that contains all the information
-                    eval('var dataJson = ' + fs.readFileSync(dataLocation + files[i], 'utf8') + ';');
+                    var dataJson = eval(fs.readFileSync(dataLocation + files[i], 'utf8'));
                     if(params && params.verbose) {
                         console.log("Adding object: " + dataJson.id);
                     }
@@ -48,9 +48,9 @@
                     this.objects.push(dataJson['@id']);
                     knownObjects.push(dataJson);
                     if(params && params.verbose) {
-                        console.log("New object: " + tempObject['@id'] + " -> " + tempObject.length + " properties.");
-                        for(var propName in tempObject) {
-                            console.log("property: " + propName + "\t" + tempObject[propName]);
+                        console.log("New object: " + dataJson['@id'] + " -> " + dataJson.length + " properties.");
+                        for(var propName in dataJson) {
+                            console.log("property: " + propName + "\t" + dataJson[propName]);
                         }
                     }
                 }
