@@ -6,7 +6,7 @@
 
     var fs = require('fs'),
         Globals = require('./globals'),
-        objectModel = require('object'),
+        objectModel = require('./object'),
         cloneHelper = require('../helpers/cloneHelper');
 
     var knownObjects = [];
