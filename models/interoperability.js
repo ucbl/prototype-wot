@@ -32,8 +32,8 @@
                 '@id': Globals.vocabularies.interoperability + "object",
                 'objects': []
             };
-            for(var i in this.objects) {
-                result.objects.push(this.objects[i]);
+            for(var i in knownObjects) {
+                result.objects.push(knownObjects[i]);
             }
             return result;
         },
