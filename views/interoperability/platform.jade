@@ -7,4 +7,5 @@ div.platform
         a(href="#{platform['@context']}") #{platform['@context']}
         | Id
         a(href="#{platform['@id']}") #{platform['@id']}
-    include ./objectsSimple.jade
+    each objects in platform
+        include ./objectsSimple.jade

@@ -30,7 +30,7 @@ router.get('/platform', function(request, response, next) {
         console.log(i + " -> " + objects[i]);
     }
     if (request.accepts('html')) {
-        response.render('interoperability/objectsSimple', {objects: objects});
+        response.render('interoperability/platform', {platform: objects});
     } else {
         jsonldHeaders(request, response, next);
         response.end(JSON.stringify((require("../views/objectsSimple")(objects))));
