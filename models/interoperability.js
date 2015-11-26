@@ -34,7 +34,7 @@
             }
             for (var i in files) {
                 if (files[i]!='' && files[i].indexOf('.jsonld')>0) {
-                    var dataJson = {};
+                    var dataJson;
                     // Read the JSON-LD file that contains all the information
                     eval('dataJson = ' + fs.readFileSync(dataLocation + files[i], 'utf8') + ';');
 
