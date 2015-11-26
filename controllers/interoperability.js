@@ -162,7 +162,6 @@ router.delete('/:objectId', function(request, response) {
 //TODO: REFACTOR THAT ASAP!
 // GET and PUT operations on the real interoperability
 router.get('/:objectId/:capabilityId', function(request, response, next) {
-    jsonldHeaders(request, response, next);
     var object = interoperabilityModel.findObjectById(request.params.objectId);
     var capability = request.params["capabilityId"];
     var responseJson = {"@id": Globals.vocabularies.interoperability + request.params["objectId"] + '/' + capability};
@@ -187,6 +186,7 @@ router.get('/:objectId/:capabilityId', function(request, response, next) {
             responseJson.strength = object.getValue('strength');
             break;
     }
+    jsonldHeaders(request, response, next);
     response.end(JSON.stringify(responseJson));
 });
 
