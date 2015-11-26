@@ -53,16 +53,13 @@ router.get('/', function(request, response, next) {
 });
 
 // Sends a collection of interoperability (basic descriptions)
-router.get('/interoperability', function(request, response) {
+router.get('/interoperability', function(request, response, next) {
     var objects = interoperabilityModel.getAllObjects();
     if (request.accepts('html')) {
         response.render('interoperability/objectsSimple', {objects: objects});
         //response.end(objectModel.objectsToStringSimple());
     } else {
-        response.writeHead(200, {
-            "Content-Type": "application/ld+json",
-            "Link": Globals.vocabularies.linkVocab
-        });
+        jsonldHeaders(request, response, next);
         var interoperabilityResponse = {
             '@context': Globals.vocabularies.interoperability + 'context/Collection',
             '@id': Globals.vocabularies.interoperability,
@@ -83,16 +80,13 @@ router.get('/interoperability', function(request, response) {
 });
 
 // Sends a collection of interoperability (detailed descriptions)
-router.get('/interoperability-list', function(request, response) {
+router.get('/interoperability-list', function(request, response, next) {
     var objects = interoperabilityModel.getAllObjects();
     if (request.accepts('html')) {
         response.render('interoperability/objectsSimple', {objects: interoperabilityModel.getAllObjects()});
         //response.end(objectsToStringSimple());
     } else {
-        response.writeHead(200, {
-            "Content-Type": "application/ld+json",
-            "Link": Globals.vocabularies.linkVocab
-        });
+        jsonldHeaders(request, response, next);
         var interoperabilityResponse = {
             '@context': Globals.vocabularies.interoperability + 'context/Collection',
             '@id': Globals.vocabularies.interoperability,
@@ -121,26 +115,23 @@ router.get('/interoperability-list', function(request, response) {
 /*-- List of connected interoperability management --*/
 
 // Retrieves info about a particular object
-router.get('/:objectId', function(request, response) {
+router.get('/:objectId', function(request, response, next) {
     //Search object by name, then by id, then provide an empty object
     var object = interoperabilityModel.getObjectInfos(request.params.objectId) || interoperabilityModel.findObjectById(request.params.objectId) || {realObjectInfo:[]};
     if (request.accepts('html')) {
         response.render('interoperability/object', {object: object});
     } else {
-        response.writeHead(200, {
-            "Content-Type": "application/ld+json",
-            "Link": Globals.vocabularies.linkVocab}
-        );
+        jsonldHeaders(request, response, next);
         response.end(JSON.stringify(object));
     }
 });
 
 // Add a new object to the currently connected object list
 router.put('/:objectId', function(request, response) {
-    if(interoperabilityModel.isConnected(objectId)) {
+    if(interoperabilityModel.isConnected(request.params.objectId)) {
         response.sendStatus(405);
     } else {
-        interoperabilityModel.addObject(objectId);
+        interoperabilityModel.addObject(request.params.objectId);
         response.sendStatus(201);
     }
 });
@@ -148,18 +139,18 @@ router.put('/:objectId', function(request, response) {
 // Add a new object to the currently connected object list
 //TODO: do something more if a graph is posted to the object
 router.post('/:objectId', function(request, response) {
-    if(interoperabilityModel.isConnected(objectId)) {
+    if(interoperabilityModel.isConnected(request.params.objectId)) {
         response.sendStatus(405);
     } else {
-        interoperabilityModel.addObject(objectId);
+        interoperabilityModel.addObject(request.params.objectId);
         response.sendStatus(201);
     }
 });
 
 // Remove an object from the currently connected object list
 router.delete('/:objectId', function(request, response) {
-    if(interoperabilityModel.isConnected(objectId)) {
-        interoperabilityModel.removeObject(objectId);
+    if(interoperabilityModel.isConnected(request.params.objectId)) {
+        interoperabilityModel.removeObject(request.params.objectId);
         response.sendStatus(204);
     } else {
         response.sendStatus(405);
@@ -170,11 +161,11 @@ router.delete('/:objectId', function(request, response) {
 
 //TODO: REFACTOR THAT ASAP!
 // GET and PUT operations on the real interoperability
-router.get('/:objectId/:capabilityId', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json"});
+router.get('/:objectId/:capabilityId', function(request, response, next) {
+    jsonldHeaders(request, response, next);
     var object = interoperabilityModel.findObjectById(request.params.objectId);
-    var capability = request.params.capability;
-    var responseJson = {"@id": Globals.vocabularies.interoperability + request.originalUrl};
+    var capability = request.params.capabilityId;
+    var responseJson = {"@id": Globals.vocabularies.interoperability + request.params.objectId + '/' + capability};
     switch (capability) {
         case 'gps':
             responseJson['@context'] = Globals.vocabularies.interoperability + 'context/Position';
@@ -199,8 +190,8 @@ router.get('/:objectId/:capabilityId', function(request, response) {
     response.end(JSON.stringify(responseJson));
 });
 
-router.put('/:objectId/:capability', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json"});
+router.put('/:objectId/:capability', function(request, response, next) {
+    jsonldHeaders(request, response, next);
     var object = interoperabilityModel.findObjectById(request.params.objectId);
     var capability = request.params.capability;
     var responseJson = {"@id": Globals.vocabularies.interoperability + request.originalUrl};
@@ -270,8 +261,8 @@ router.put('/:objectId/:capability', function(request, response) {
     response.end(JSON.stringify(responseJson));
 });
 
-router.post('/:objectId/:capability', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json"});
+router.post('/:objectId/:capability', function(request, response, next) {
+    jsonldHeaders(request, response, next);
     var object = interoperabilityModel.findObjectById(request.params.objectId);
     var capability = request.params.capability;
     var responseJson = {"@id": Globals.vocabularies.interoperability + request.originalUrl};
