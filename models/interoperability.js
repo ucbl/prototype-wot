@@ -23,30 +23,15 @@
             }
             for (var i in files) {
                 if (files[i]!='' && files[i].indexOf('.jsonld')>0) {
+                    var dataJson = {};
                     // Read the JSON-LD file that contains all the information
-                    var dataJson = eval(fs.readFileSync(dataLocation + files[i], 'utf8'));
-                    if(params && params.verbose) {
-                        console.log("Adding object: " + dataJson.id);
-                    }
-                    var capabilities = [];
-                    if (dataJson.object && dataJson.object.capabilities) {
-                        for (var j=0; i<dataJson.object.capabilities.length; j++) {
-                            capabilities.push((dataJson.object.capabilities[j])['@id']);
-                        }
-                    }
-                    var tempObject = {
-                        '@id': Globals.vocabularies.interoperability + dataJson.id,
-                        '@context': Globals.vocabularies.interoperability + 'context/CimaObject',
-                        '@type': 'vocab:CimaObject',
-                        'id': dataJson.id,
-                        'name': dataJson.name,
-                        'description': dataJson.description,
-                        'capabilities': dataJson.capabilities,
-                        'realObjectInfo': dataJson.realObjectInfo
-                    };
+                    eval('dataJson = ' + fs.readFileSync(dataLocation + files[i], 'utf8') + ';');
+
                     dataJson.prototype = new(objectModel);
                     this.objects.push(dataJson['@id']);
                     knownObjects.push(dataJson);
+
+                    //Debug logs
                     if(params && params.verbose) {
                         console.log("New object: " + dataJson['@id'] + " -> " + dataJson.length + " properties.");
                         for(var propName in dataJson) {
