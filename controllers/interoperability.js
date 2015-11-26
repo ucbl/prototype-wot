@@ -25,7 +25,7 @@ router.get('/', function(request, response, next) {
 
 // Sends the collection of known objects
 router.get('/platform', function(request, response, next) {
-    var objects = interoperabilityModel.objectCollection;
+    var objects = interoperabilityModel.getCollection();
     for(var i in objects) {
         console.log(i + " -> " + objects[i]);
     }

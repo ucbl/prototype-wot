@@ -25,11 +25,17 @@
         },
 
         //Interoperability collection
-        "objectCollection": {
-            '@context': Globals.vocabularies.interoperability + 'context/Collection',
-            '@type': 'hydra:Collection',
-            '@id': Globals.vocabularies.interoperability + "object",
-            objects: this.objects
+        "getCollection": function() {
+            var result = {
+                '@context': Globals.vocabularies.interoperability + 'context/Collection',
+                '@type': 'hydra:Collection',
+                '@id': Globals.vocabularies.interoperability + "object",
+                'objects': []
+            };
+            for(var i in this.objects) {
+                result.objects.push(this.objects[i]);
+            }
+            return result;
         },
 
         // Loads all object descriptions and stores them in a list of known interoperability
