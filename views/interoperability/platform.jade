@@ -4,10 +4,12 @@ h1
     | Interoperability platform
 div.platform
     div(class='platformInfo')
-        | Context&nbsp;
+        | Context:&nbsp;
         a(href="#{platform['@context']}") #{platform['@context']}
         br
-        | Id&nbsp;
+        | Id:&nbsp;
         a(href="#{platform['@id']}") #{platform['@id']}
-    each objects in platform
-        include ./objectsSimple.jade
+each objects in platform
+    h2
+        | Objects
+    include ./objectsSimple.jade

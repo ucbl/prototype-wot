@@ -39,34 +39,15 @@ router.get('/platform', function(request, response, next) {
 
 // Sends a collection of interoperability (detailed descriptions)
 router.get('/platform/connected', function(request, response, next) {
-    var objects = interoperabilityModel.getAllObjects();
+    var platform = interoperabilityModel.getConnectedCollection();
+    for(var i in platform) {
+        console.log(i + " -> " + platform[i]);
+    }
     if (request.accepts('html')) {
-        response.render('interoperability/objectsSimple', {objects: interoperabilityModel.getAllObjects()});
-        //response.end(objectsToStringSimple());
+        response.render('interoperability/platform', {platform: platform});
     } else {
         jsonldHeaders(request, response, next);
-        var interoperabilityResponse = {
-            '@context': Globals.vocabularies.interoperability + 'context/Collection',
-            '@id': Globals.vocabularies.interoperability,
-            '@type': 'hydra:Collection',
-            objects: []
-        };
-        for (var i in objects) {
-            var currentObject = {
-                '@context': Globals.vocabularies.interoperability + 'context/object',
-                '@id': objects[i]['@id'],
-                '@type': 'vocab:object',
-                'name': objects[i].name,
-                'description': objects[i].description,
-                'values': []
-            };
-            for(var j in objects[i].realObjectInfo) {
-                currentObject.values.push(objects[i].realObjectInfo[j]);
-            }
-            interoperabilityResponse.objects.push(currentObject);
-        }
-
-        response.end(JSON.stringify(interoperabilityResponse));
+        response.end(JSON.stringify((require("../views/objectsSimple")(platform))));
     }
 });
 

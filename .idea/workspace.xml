@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/interoperability.js" afterPath="$PROJECT_DIR$/controllers/interoperability.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/interoperability/platform.jade" afterPath="$PROJECT_DIR$/views/interoperability/platform.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -31,33 +32,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="2220">
-              <caret line="48" column="75" selection-start-line="48" selection-start-column="75" selection-end-line="48" selection-end-column="75" />
+            <state vertical-scroll-proportion="0.48843187" vertical-offset="420" max-vertical-offset="1840">
+              <caret line="40" column="69" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
               <folding>
-                <element signature="e#2859#3318#0" expanded="false" />
-                <element signature="e#3441#3666#0" expanded="false" />
-                <element signature="e#3851#4076#0" expanded="false" />
-                <element signature="e#4204#4432#0" expanded="false" />
-                <element signature="e#4639#6075#0" expanded="false" />
-                <element signature="e#6157#9592#0" expanded="false" />
-                <element signature="e#9675#10759#0" expanded="false" />
-                <element signature="e#10863#11088#0" expanded="false" />
-                <element signature="e#11174#11245#0" expanded="false" />
-                <element signature="e#11315#11595#0" expanded="false" />
+                <element signature="e#2035#2494#0" expanded="false" />
+                <element signature="e#2617#2842#0" expanded="false" />
+                <element signature="e#3027#3252#0" expanded="false" />
+                <element signature="e#3380#3608#0" expanded="false" />
+                <element signature="e#3815#5251#0" expanded="false" />
+                <element signature="e#5333#8768#0" expanded="false" />
+                <element signature="e#8851#9935#0" expanded="false" />
+                <element signature="e#10039#10264#0" expanded="false" />
+                <element signature="e#10350#10421#0" expanded="false" />
+                <element signature="e#10491#10771#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="platform.jade" pinned="false" current-in-tab="true">
+      <file leaf-file-name="platform.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/interoperability/platform.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2124834" vertical-offset="0" max-vertical-offset="753">
-              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-              <folding />
+            <state vertical-scroll-proportion="-11.2" vertical-offset="0" max-vertical-offset="400">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+              <folding>
+                <marker date="1448578639470" expanded="true" signature="41:73" placeholder="..." />
+                <marker date="1448578639470" expanded="true" signature="77:377" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -181,8 +185,8 @@
         <option value="$PROJECT_DIR$/data/interoperability/contexts/EntryPoint.jsonld" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/models/interoperability.js" />
-        <option value="$PROJECT_DIR$/controllers/interoperability.js" />
         <option value="$PROJECT_DIR$/views/interoperability/platform.jade" />
+        <option value="$PROJECT_DIR$/controllers/interoperability.js" />
       </list>
     </option>
   </component>
@@ -523,12 +527,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00107" summary="Try with interoperability layer complete">
-      <created>1448450716463</created>
-      <option name="number" value="00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1448450716464</updated>
-    </task>
     <task id="LOCAL-00108" summary="Try with interoperability layer complete">
       <created>1448450836453</created>
       <option name="number" value="00108" />
@@ -817,7 +815,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448578305371</updated>
     </task>
-    <option name="localTasksCounter" value="156" />
+    <task id="LOCAL-00156" summary="Try with interoperability layer complete">
+      <created>1448578419951</created>
+      <option name="number" value="00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1448578419951</updated>
+    </task>
+    <option name="localTasksCounter" value="157" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -905,16 +909,16 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7240">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2859#3318#0" expanded="false" />
-            <element signature="e#3441#3666#0" expanded="false" />
-            <element signature="e#3851#4076#0" expanded="false" />
-            <element signature="e#4204#4432#0" expanded="false" />
-            <element signature="e#4639#6075#0" expanded="false" />
-            <element signature="e#6157#9592#0" expanded="false" />
-            <element signature="e#9675#10759#0" expanded="false" />
-            <element signature="e#10863#11088#0" expanded="false" />
-            <element signature="e#11174#11245#0" expanded="false" />
-            <element signature="e#11315#11595#0" expanded="false" />
+            <element signature="e#2035#2494#0" expanded="false" />
+            <element signature="e#2617#2842#0" expanded="false" />
+            <element signature="e#3027#3252#0" expanded="false" />
+            <element signature="e#3380#3608#0" expanded="false" />
+            <element signature="e#3815#5251#0" expanded="false" />
+            <element signature="e#5333#8768#0" expanded="false" />
+            <element signature="e#8851#9935#0" expanded="false" />
+            <element signature="e#10039#10264#0" expanded="false" />
+            <element signature="e#10350#10421#0" expanded="false" />
+            <element signature="e#10491#10771#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1249,30 +1253,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
+    <entry file="file://$PROJECT_DIR$/views/interoperability/platform.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="2220">
-          <caret line="48" column="75" selection-start-line="48" selection-start-column="75" selection-end-line="48" selection-end-column="75" />
+        <state vertical-scroll-proportion="-11.2" vertical-offset="0" max-vertical-offset="400">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
           <folding>
-            <element signature="e#2859#3318#0" expanded="false" />
-            <element signature="e#3441#3666#0" expanded="false" />
-            <element signature="e#3851#4076#0" expanded="false" />
-            <element signature="e#4204#4432#0" expanded="false" />
-            <element signature="e#4639#6075#0" expanded="false" />
-            <element signature="e#6157#9592#0" expanded="false" />
-            <element signature="e#9675#10759#0" expanded="false" />
-            <element signature="e#10863#11088#0" expanded="false" />
-            <element signature="e#11174#11245#0" expanded="false" />
-            <element signature="e#11315#11595#0" expanded="false" />
+            <marker date="1448578639470" expanded="true" signature="41:73" placeholder="..." />
+            <marker date="1448578639470" expanded="true" signature="77:377" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/interoperability/platform.jade">
+    <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2124834" vertical-offset="0" max-vertical-offset="753">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-          <folding />
+        <state vertical-scroll-proportion="0.48843187" vertical-offset="420" max-vertical-offset="1840">
+          <caret line="40" column="69" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
+          <folding>
+            <element signature="e#2035#2494#0" expanded="false" />
+            <element signature="e#2617#2842#0" expanded="false" />
+            <element signature="e#3027#3252#0" expanded="false" />
+            <element signature="e#3380#3608#0" expanded="false" />
+            <element signature="e#3815#5251#0" expanded="false" />
+            <element signature="e#5333#8768#0" expanded="false" />
+            <element signature="e#8851#9935#0" expanded="false" />
+            <element signature="e#10039#10264#0" expanded="false" />
+            <element signature="e#10350#10421#0" expanded="false" />
+            <element signature="e#10491#10771#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
