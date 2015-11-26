@@ -1,15 +1,16 @@
 {
-    "@context" : "http://schema.org",
-    "@type": "Thing",
+    "@context" : Globals.vocabularies.interoperability + "context/CimaObject",
+    "@type": "http://www.w3.org/ns/hydra/core#Class",
+    "@id" : Globals.vocabularies.interoperability + "gps-sony-2556",
     "id" : "gps-sony-2556",
     "name": "GPS",
     "description": "A Sony GPS with the serial number 2556",
     "capabilities" : [
 		{
-	      "@id": "http://localhost:3333/cima/gps-sony-2556/gps",
-	      "@type": "http://localhost:3333/vocab#CapabilityGps",
-          "@context": "http://localhost:3333/context/Capability",
-          "ontology": "http://localhost:3232/capability/gps"
+	      "@id": Globals.vocabularies.interoperability + "gps-sony-2556/gps",
+	      "@context" : Globals.vocabularies.interoperability + "context/Capability",
+          "@type" : "http://www.w3.org/ns/hydra/core#Class",
+          "ontology": Globals.vocabularies.capability + "gps"
 	    }
 	],
     "realObjectInfo": {

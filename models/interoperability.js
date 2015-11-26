@@ -44,8 +44,8 @@
                         'capabilities': dataJson.capabilities,
                         'realObjectInfo': dataJson.realObjectInfo
                     };
-                    tempObject.prototype = new(objectModel);
-                    this.objects.push(tempObject['@id']);
+                    dataJson.prototype = new(objectModel);
+                    this.objects.push(dataJson['@id']);
                     knownObjects.push(dataJson);
                     if(params && params.verbose) {
                         console.log("New object: " + tempObject['@id'] + " -> " + tempObject.length + " properties.");

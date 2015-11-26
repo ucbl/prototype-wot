@@ -1,51 +1,52 @@
 {
-    "@context" : "http://schema.org",
-    "@type": "Thing",
+    "@context" : Globals.vocabularies.interoperability + "context/CimaObject",
+    "@type": "http://www.w3.org/ns/hydra/core#Class",
+	"@id" : Globals.vocabularies.interoperability + "phone-samsung-2554",
 	"id" : "phone-samsung-2554",
     "name": "Phone",
     "description": "A Samsung Phone with the serial number 2554",
     "capabilities" : [
 		{
-	      "@id": "http://localhost:3333/cima/phone-samsung-2554/call",
-	      "@type": "http://localhost:3333/vocab#CapabilityCall",
-          "@context": "http://localhost:3333/context/Capability",
-          "ontology": "http://localhost:3232/capability/call"
+	      "@id": Globals.vocabularies.interoperability + "phone-samsung-2554/call",
+	      "@context" : Globals.vocabularies.interoperability + "context/Capability",
+          "@type" : "http://www.w3.org/ns/hydra/core#Class",
+          "ontology": Globals.vocabularies.capability + "call"
 	    },
 		{
-	      "@id": "http://localhost:3333/cima/phone-samsung-2554/sms",
-	      "@type": "http://localhost:3333/vocab#CapabilitySms",
-          "@context": "http://localhost:3333/context/Capability",
-          "ontology": "http://localhost:3232/capability/sms"
+	      "@id": Globals.vocabularies.interoperability + "phone-samsung-2554/sms",
+	      "@context" : Globals.vocabularies.interoperability + "context/Capability",
+          "@type" : "http://www.w3.org/ns/hydra/core#Class",
+          "ontology": Globals.vocabularies.capability + "sms"
 	    },
 		{
-	      "@id": "http://localhost:3333/cima/phone-samsung-2554/photo",
-	      "@type": "http://localhost:3333/vocab#CapabilityPhoto",
-          "@context": "http://localhost:3333/context/Capability",
-          "ontology": "http://localhost:3232/capability/photo"
+	      "@id": Globals.vocabularies.interoperability + "phone-samsung-2554/photo",
+	      "@context" : Globals.vocabularies.interoperability + "context/Capability",
+          "@type" : "http://www.w3.org/ns/hydra/core#Class",
+          "ontology": Globals.vocabularies.capability + "photo"
 	    },
 		{
-	      "@id": "http://localhost:3333/cima/phone-samsung-2554/video",
-	      "@type": "http://localhost:3333/vocab#CapabilityVideo",
-          "@context": "http://localhost:3333/context/Capability",
-          "ontology": "http://localhost:3232/capability/video"
+	      "@id": Globals.vocabularies.interoperability + "phone-samsung-2554/video",
+	      "@context" : Globals.vocabularies.interoperability + "context/Capability",
+          "@type" : "http://www.w3.org/ns/hydra/core#Class",
+          "ontology": Globals.vocabularies.capability + "video"
 	    },
 		{
-	      "@id": "http://localhost:3333/cima/phone-samsung-2554/startApp",
-	      "@type": "http://localhost:3333/vocab#CapabilityStartApp",
-          "@context": "http://localhost:3333/context/Capability",
-          "ontology": "http://localhost:3232/capability/startApp"
+	      "@id": Globals.vocabularies.interoperability + "phone-samsung-2554/startApp",
+	      "@context" : Globals.vocabularies.interoperability + "context/Capability",
+          "@type" : "http://www.w3.org/ns/hydra/core#Class",
+          "ontology": Globals.vocabularies.capability + "startApp"
 	    },
 		{
-	      "@id": "http://localhost:3333/cima/phone-samsung-2554/stopApp",
-	      "@type": "http://localhost:3333/vocab#CapabilityStopApp",
-          "@context": "http://localhost:3333/context/Capability",
-          "ontology": "http://localhost:3232/capability/stopApp"
+	      "@id": Globals.vocabularies.interoperability + "phone-samsung-2554/stopApp",
+	      "@context" : Globals.vocabularies.interoperability + "context/Capability",
+          "@type" : "http://www.w3.org/ns/hydra/core#Class",
+          "ontology": Globals.vocabularies.capability + "stopApp"
 	    },
 		{
-	      "@id": "http://localhost:3333/cima/phone-samsung-2554/gps",
-	      "@type": "http://localhost:3333/vocab#CapabilityGps",
-          "@context": "http://localhost:3333/context/Capability",
-          "ontology": "http://localhost:3232/capability/gps"
+	      "@id": Globals.vocabularies.interoperability + "phone-samsung-2554/gps",
+	      "@context" : Globals.vocabularies.interoperability + "context/Capability",
+          "@type" : "http://www.w3.org/ns/hydra/core#Class",
+          "ontology": Globals.vocabularies.capability + "gps"
 	    }
 	],
     "realObjectInfo": {

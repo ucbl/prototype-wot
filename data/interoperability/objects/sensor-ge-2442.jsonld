@@ -1,15 +1,16 @@
 {
-    "@context" : "http://schema.org",
-    "@type": "Thing",
+    "@context" : Globals.vocabularies.interoperability + "context/CimaObject",
+    "@type": "http://www.w3.org/ns/hydra/core#Class",
+    "@id" : Globals.vocabularies.interoperability + "sensor-ge-2442",
     "id" : "sensor-ge-2442",
     "name": "Temperature Sensor",
     "description": "A General Electric's temperature sensor with the serial number 2442",
     "capabilities" : [
 		{
-	      "@id": "http://localhost:3333/cima/sensor-ge-2442/temperatureSense",
-	      "@type": "http://localhost:3333/vocab#CapabilityTemperatureSense",
-          "@context": "http://localhost:3333/context/Capability",
-          "ontology": "http://localhost:3232/capability/temperatureSense"
+	      "@id": Globals.vocabularies.interoperability + "sensor-ge-2442/temperatureSense",
+	      "@type": "http://www.w3.org/ns/hydra/core#Class",
+          "@context" : Globals.vocabularies.interoperability + "context/Capability",
+          "ontology": Globals.vocabularies.capability + "temperatureSense"
 	    }
 	],
     "realObjectInfo": {
