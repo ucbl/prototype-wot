@@ -14,6 +14,17 @@
         // List of connected interoperability (only contains their ids)
         "objects": [],
 
+        /**Hydra descriptions**/
+        //Entrypoint
+        "getEntryPointDescription": function() {
+            return {
+                "@context": Globals.vocabularies.interoperability + "context/EntryPoint",
+                "@id": Globals.vocabularies.base + "/interoperability",
+                "@type": "EntryPoint",
+                "interoperability": Globals.vocabularies.interoperability
+            };
+        },
+
         // Loads all object descriptions and stores them in a list of known interoperability
         "loadObjects": function(params) {
             var dataLocation = __dirname + '/../data/interoperability/objects/';

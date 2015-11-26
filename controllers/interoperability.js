@@ -5,14 +5,15 @@ var express = require('express'),
     fs = require('fs'),
     Globals = require('../models/globals'),
     interoperabilityModel = require('../models/interoperability'),
-    capabilityModel = require('../models/capability');
+    capabilityModel = require('../models/capability'),
+    jsonldHeaders = require('../middleware/jsonldHeaders');
 
 /*---HYDRA---*/
 
 // GET the hydra vocabulary
-router.get('/vocab', function(request, response) {
+router.get('/vocab', function(request, response, next) {
+    jsonldHeaders(request, response, next);
     var hydraLocation = __dirname + '/../data/interoperability/hydra.jsonld';
-    response.writeHead(200, {"Content-Type": "application/ld+json"});
     fs.readFile(hydraLocation, 'utf8', function (error, data) {
         response.end(data);
     });
@@ -20,14 +21,13 @@ router.get('/vocab', function(request, response) {
 });
 
 // GET the hydra context
-router.get('/context', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json",
-        "Link": Globals.vocabularies.linkVocab});
+router.get('/context', function(request, response, next) {
+    jsonldHeaders(request, response, next);
     response.end("{}");
 });
 
-router.get('/context/:context', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json"});
+router.get('/context/:context', function(request, response, next) {
+    jsonldHeaders(request, response, next);
     var contextLocation = __dirname + '/../data/interoperability/contexts/' + request.params.context + '.jsonld';
     fs.readFile(contextLocation, 'utf8', function (error, data) {
         response.end(data);
@@ -40,22 +40,15 @@ router.get('/context/:context', function(request, response) {
 /*-- Entry point management --*/
 
 // Entry point and home page
-router.get('/', function(request, response) {
+router.get('/', function(request, response, next) {
     if (request.accepts('html')) {
         //Send the CIMA homepage
         response.redirect('/interoperability-public');
         //response.render('interoperability/interoperability', {interoperability: interoperabilityModel.getAllObjects()});
         //response.end(interoperabilityModel.objectsToStringSimple());
     } else {
-        response.writeHead(200, {"Content-Type": "application/ld+json",
-            "Link": Globals.vocabularies.linkVocab});
-        var responseEntryPoint = {
-            "@context": Globals.vocabularies.interoperability + "context/EntryPoint",
-            "@id": Globals.vocabularies.base + "/interoperability",
-            "@type": "EntryPoint",
-            "interoperability": Globals.vocabularies.interoperability
-        };
-        response.end(JSON.stringify(responseEntryPoint));
+        jsonldHeaders(request, response, next);
+        response.end(JSON.stringify(interoperabilityModel.getEntryPointDescription()));
     }
 });
 
@@ -138,7 +131,7 @@ router.get('/:objectId', function(request, response) {
             "Content-Type": "application/ld+json",
             "Link": Globals.vocabularies.linkVocab}
         );
-        response.end(JSON.stringify((require("../views/interoperability/object")(object))));
+        response.end(JSON.stringify(object));
     }
 });
 
