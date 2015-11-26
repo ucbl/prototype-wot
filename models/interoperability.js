@@ -6,7 +6,8 @@
 
     var fs = require('fs'),
         Globals = require('./globals'),
-        objectModel = require('../models/object');
+        objectModel = require('object'),
+        cloneHelper = require('../helpers/cloneHelper');
 
     var knownObjects = [];
 
@@ -34,11 +35,11 @@
             }
             for (var i in files) {
                 if (files[i]!='' && files[i].indexOf('.jsonld')>0) {
-                    var dataJson = Object.create(objectModel);
+                    var dataJson = {};
                     // Read the JSON-LD file that contains all the information
                     eval('dataJson = ' + fs.readFileSync(dataLocation + files[i], 'utf8') + ';');
 
-//                    dataJson.prototype = new(objectModel);
+                    cloneHelper(objectModel, dataJson);
                     this.objects.push(dataJson['@id']);
                     knownObjects.push(dataJson);
 

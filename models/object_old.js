@@ -4,21 +4,21 @@
 //Common methods of "object" (appliance) interoperability. Must be declared as a function to be inherited by all interoperability.
 
 (function(module) {
-    module.exports = {
-        'getValue': function (attributeName) {
+    module.exports = function() {
+        this.getValue = function (attributeName) {
             return this.realObjectInfo[attributeName];
-        },
+        };
 
-        'setValue': function (attributeName, value) {
+        this.setValue = function (attributeName, value) {
             this.realObjectInfo[attributeName] = value;
-        },
+        };
 
-        'getCapability': function (capabilityId) {
+        this.getCapability = function (capabilityId) {
             return this.capabilities[capabilityId];
-        },
+        };
 
-        'setCapability': function (capabilityId, value) {
+        this.setCapability = function (capabilityId, value) {
             this.capabilities[capabilityId] = value;
-        }
+        };
     };
 })(module);
