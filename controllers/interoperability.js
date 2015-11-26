@@ -164,8 +164,8 @@ router.delete('/:objectId', function(request, response) {
 router.get('/:objectId/:capabilityId', function(request, response, next) {
     jsonldHeaders(request, response, next);
     var object = interoperabilityModel.findObjectById(request.params.objectId);
-    var capability = request.params.capabilityId;
-    var responseJson = {"@id": Globals.vocabularies.interoperability + request.params.objectId + '/' + capability};
+    var capability = request.params["capabilityId"];
+    var responseJson = {"@id": Globals.vocabularies.interoperability + request.params["objectId"] + '/' + capability};
     switch (capability) {
         case 'gps':
             responseJson['@context'] = Globals.vocabularies.interoperability + 'context/Position';
