@@ -66,7 +66,7 @@
                     eval('dataJson = ' + fs.readFileSync(dataLocation + files[i], 'utf8') + ';');
 
                     cloneHelper(objectModel, dataJson);
-                    this.objects.push(dataJson['@id']);
+                    //this.objects.push(dataJson['@id']);
                     knownObjects.push(dataJson);
 
                     //Debug logs

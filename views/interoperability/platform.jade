@@ -9,7 +9,7 @@ div.platform
         br
         | Id:&nbsp;
         a(href="#{platform['@id']}") #{platform['@id']}
+h2
+    | Objects
 each objects in platform
-    h2
-        | Objects
     include ./objectsSimple.jade
