@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/interoperability.js" afterPath="$PROJECT_DIR$/controllers/interoperability.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/interoperability/platform.jade" afterPath="$PROJECT_DIR$/views/interoperability/platform.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -56,8 +55,8 @@
       <file leaf-file-name="platform.jade" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/interoperability/platform.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18592298" vertical-offset="0" max-vertical-offset="753">
-              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.2124834" vertical-offset="0" max-vertical-offset="753">
+              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -524,12 +523,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00106" summary="Try with interoperability layer complete">
-      <created>1448450542310</created>
-      <option name="number" value="00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1448450542311</updated>
-    </task>
     <task id="LOCAL-00107" summary="Try with interoperability layer complete">
       <created>1448450716463</created>
       <option name="number" value="00107" />
@@ -818,7 +811,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448578159722</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="Try with interoperability layer complete">
+      <created>1448578305370</created>
+      <option name="number" value="00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1448578305371</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1271,8 +1270,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/interoperability/platform.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18592298" vertical-offset="0" max-vertical-offset="753">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.2124834" vertical-offset="0" max-vertical-offset="753">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
           <folding />
         </state>
       </provider>
