@@ -4,7 +4,7 @@
 //Middleware function that adds JSON-LD headers to the response
 
 (function(module) {
-    var Globals = require('./globals');
+    var Globals = require('../models/globals');
 
     module.exports = function (request, response, next) {
         response.writeHead(200, {
