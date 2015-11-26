@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/contexts/Collection.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/contexts/Collection.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/contexts/EntryPoint.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/contexts/EntryPoint.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/objects/cooler-swirlwind-2443.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/objects/cooler-swirlwind-2443.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/objects/coolerheater-swirlwind-2665.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/objects/coolerheater-swirlwind-2665.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/objects/gps-sony-2556.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/objects/gps-sony-2556.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/objects/heater-tesco-2336.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/objects/heater-tesco-2336.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/hydra.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/hydra.jsonld" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/interoperability.js" afterPath="$PROJECT_DIR$/controllers/interoperability.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/interoperability.js" afterPath="$PROJECT_DIR$/models/interoperability.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/objects/motor-ge-3343.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/objects/motor-ge-3343.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/objects/phone-samsung-2554.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/objects/phone-samsung-2554.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/objects/sensor-ge-2442.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/objects/sensor-ge-2442.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/objects/window-ikea-2555.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/objects/window-ikea-2555.jsonld" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\data\interoperability\contexts\CimaObject.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/contexts/Object.jsonld" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,19 +34,19 @@
       <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3856041" vertical-offset="300" max-vertical-offset="2200">
-              <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.3856041" vertical-offset="280" max-vertical-offset="2260">
+              <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
               <folding>
-                <element signature="e#2836#3295#0" expanded="false" />
-                <element signature="e#3418#3643#0" expanded="false" />
-                <element signature="e#3828#4053#0" expanded="false" />
-                <element signature="e#4181#4409#0" expanded="false" />
-                <element signature="e#4616#6052#0" expanded="false" />
-                <element signature="e#6134#9569#0" expanded="false" />
-                <element signature="e#9652#10736#0" expanded="false" />
-                <element signature="e#10840#11065#0" expanded="false" />
-                <element signature="e#11151#11222#0" expanded="false" />
-                <element signature="e#11292#11572#0" expanded="false" />
+                <element signature="e#2916#3375#0" expanded="false" />
+                <element signature="e#3498#3723#0" expanded="false" />
+                <element signature="e#3908#4133#0" expanded="false" />
+                <element signature="e#4261#4489#0" expanded="false" />
+                <element signature="e#4696#6132#0" expanded="false" />
+                <element signature="e#6214#9649#0" expanded="false" />
+                <element signature="e#9732#10816#0" expanded="false" />
+                <element signature="e#10920#11145#0" expanded="false" />
+                <element signature="e#11231#11302#0" expanded="false" />
+                <element signature="e#11372#11652#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -119,7 +106,17 @@
         <entry file="file://$PROJECT_DIR$/models/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="281" max-vertical-offset="2580">
-              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+              <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="objectsSimple.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/interoperability/objectsSimple.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="180">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -514,12 +511,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00099" summary="Try with interoperability layer complete">
-      <created>1448449043596</created>
-      <option name="number" value="00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1448449043596</updated>
-    </task>
     <task id="LOCAL-00100" summary="Try with interoperability layer complete">
       <created>1448449172480</created>
       <option name="number" value="00100" />
@@ -808,19 +799,28 @@
       <option name="project" value="LOCAL" />
       <updated>1448566307418</updated>
     </task>
-    <option name="localTasksCounter" value="148" />
+    <task id="LOCAL-00148" summary="Try with interoperability layer complete">
+      <created>1448576194210</created>
+      <option name="number" value="00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1448576194211</updated>
+    </task>
+    <option name="localTasksCounter" value="149" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10244989" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10590095" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10590095" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -828,10 +828,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41536748" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -869,13 +866,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="720">
-          <caret line="21" column="47" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/object.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1575" max-vertical-offset="3040">
@@ -910,16 +900,16 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7240">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2836#3295#0" expanded="false" />
-            <element signature="e#3418#3643#0" expanded="false" />
-            <element signature="e#3828#4053#0" expanded="false" />
-            <element signature="e#4181#4409#0" expanded="false" />
-            <element signature="e#4616#6052#0" expanded="false" />
-            <element signature="e#6134#9569#0" expanded="false" />
-            <element signature="e#9652#10736#0" expanded="false" />
-            <element signature="e#10840#11065#0" expanded="false" />
-            <element signature="e#11151#11222#0" expanded="false" />
-            <element signature="e#11292#11572#0" expanded="false" />
+            <element signature="e#2916#3375#0" expanded="false" />
+            <element signature="e#3498#3723#0" expanded="false" />
+            <element signature="e#3908#4133#0" expanded="false" />
+            <element signature="e#4261#4489#0" expanded="false" />
+            <element signature="e#4696#6132#0" expanded="false" />
+            <element signature="e#6214#9649#0" expanded="false" />
+            <element signature="e#9732#10816#0" expanded="false" />
+            <element signature="e#10920#11145#0" expanded="false" />
+            <element signature="e#11231#11302#0" expanded="false" />
+            <element signature="e#11372#11652#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1225,14 +1215,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/interoperability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="281" max-vertical-offset="2580">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/interoperability/objectSimple.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="380">
@@ -1243,21 +1225,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/interoperability.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="281" max-vertical-offset="2580">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/interoperability/objectsSimple.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="778">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3856041" vertical-offset="300" max-vertical-offset="2200">
-          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.3856041" vertical-offset="280" max-vertical-offset="2260">
+          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
           <folding>
-            <element signature="e#2836#3295#0" expanded="false" />
-            <element signature="e#3418#3643#0" expanded="false" />
-            <element signature="e#3828#4053#0" expanded="false" />
-            <element signature="e#4181#4409#0" expanded="false" />
-            <element signature="e#4616#6052#0" expanded="false" />
-            <element signature="e#6134#9569#0" expanded="false" />
-            <element signature="e#9652#10736#0" expanded="false" />
-            <element signature="e#10840#11065#0" expanded="false" />
-            <element signature="e#11151#11222#0" expanded="false" />
-            <element signature="e#11292#11572#0" expanded="false" />
+            <element signature="e#2916#3375#0" expanded="false" />
+            <element signature="e#3498#3723#0" expanded="false" />
+            <element signature="e#3908#4133#0" expanded="false" />
+            <element signature="e#4261#4489#0" expanded="false" />
+            <element signature="e#4696#6132#0" expanded="false" />
+            <element signature="e#6214#9649#0" expanded="false" />
+            <element signature="e#9732#10816#0" expanded="false" />
+            <element signature="e#10920#11145#0" expanded="false" />
+            <element signature="e#11231#11302#0" expanded="false" />
+            <element signature="e#11372#11652#0" expanded="false" />
           </folding>
         </state>
       </provider>
