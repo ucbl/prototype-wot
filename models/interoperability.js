@@ -38,7 +38,7 @@
                     // Read the JSON-LD file that contains all the information
                     eval('dataJson = ' + fs.readFileSync(dataLocation + files[i], 'utf8') + ';');
 
-                    dataJson.prototype = objectModel;
+                    dataJson.prototype = objectModel.prototype;
                     this.objects.push(dataJson['@id']);
                     knownObjects.push(dataJson);
 
