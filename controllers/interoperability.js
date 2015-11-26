@@ -25,15 +25,15 @@ router.get('/', function(request, response, next) {
 
 // Sends the collection of known objects
 router.get('/platform', function(request, response, next) {
-    var objects = interoperabilityModel.getCollection();
-    for(var i in objects) {
-        console.log(i + " -> " + objects[i]);
+    var platform = interoperabilityModel.getCollection();
+    for(var i in platform) {
+        console.log(i + " -> " + platform[i]);
     }
     if (request.accepts('html')) {
-        response.render('interoperability/platform', {platform: objects});
+        response.render('interoperability/platform', {platform: platform});
     } else {
         jsonldHeaders(request, response, next);
-        response.end(JSON.stringify((require("../views/objectsSimple")(objects))));
+        response.end(JSON.stringify((require("../views/objectsSimple")(platform))));
     }
 });
 

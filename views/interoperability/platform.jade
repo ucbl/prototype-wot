@@ -3,9 +3,10 @@
 
 div.platform
     div(class='platformInfo')
-        | Context
+        | Context&nbsp;
         a(href="#{platform['@context']}") #{platform['@context']}
-        | Id
+
+        | Id&nbsp;
         a(href="#{platform['@id']}") #{platform['@id']}
     each objects in platform
         include ./objectsSimple.jade
