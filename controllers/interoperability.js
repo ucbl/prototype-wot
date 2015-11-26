@@ -26,9 +26,6 @@ router.get('/', function(request, response, next) {
 // Sends the collection of known objects
 router.get('/platform', function(request, response, next) {
     var platform = interoperabilityModel.getCollection();
-    for(var i in platform) {
-        console.log(i + " -> " + platform[i]);
-    }
     if (request.accepts('html')) {
         response.render('interoperability/platform', {platform: platform});
     } else {
@@ -40,9 +37,6 @@ router.get('/platform', function(request, response, next) {
 // Sends a collection of interoperability (detailed descriptions)
 router.get('/platform/connected', function(request, response, next) {
     var platform = interoperabilityModel.getConnectedCollection();
-    for(var i in platform) {
-        console.log(i + " -> " + platform[i]);
-    }
     if (request.accepts('html')) {
         response.render('interoperability/platform', {platform: platform});
     } else {
@@ -100,7 +94,7 @@ router.delete('/object/:objectId', function(request, response) {
 // GET and PUT operations on the real interoperability
 router.get('/object/:objectId/:capabilityId', function(request, response, next) {
     var object = interoperabilityModel.findObjectById(request.params.objectId);
-    var capability = request.params["capabilityId"];
+    var capability = request.params.capabilityId;
     var responseJson = {"@id": Globals.vocabularies.interoperability + request.params["objectId"] + '/' + capability};
     switch (capability) {
         case 'gps':
