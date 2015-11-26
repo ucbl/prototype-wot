@@ -1,49 +1,49 @@
 {
     "@context" : Globals.vocabularies.interoperability + "context/CimaObject",
     "@type": "http://www.w3.org/ns/hydra/core#Class",
-	"@id" : Globals.vocabularies.interoperability + "phone-samsung-2554",
+	"@id" : Globals.vocabularies.interoperability + "object/phone-samsung-2554",
 	"id" : "phone-samsung-2554",
     "name": "Phone",
     "description": "A Samsung Phone with the serial number 2554",
     "capabilities" : [
 		{
-	      "@id": Globals.vocabularies.interoperability + "phone-samsung-2554/call",
+	      "@id": Globals.vocabularies.interoperability + "object/phone-samsung-2554/call",
 	      "@context" : Globals.vocabularies.interoperability + "context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
           "ontology": Globals.vocabularies.capability + "call"
 	    },
 		{
-	      "@id": Globals.vocabularies.interoperability + "phone-samsung-2554/sms",
+	      "@id": Globals.vocabularies.interoperability + "object/phone-samsung-2554/sms",
 	      "@context" : Globals.vocabularies.interoperability + "context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
           "ontology": Globals.vocabularies.capability + "sms"
 	    },
 		{
-	      "@id": Globals.vocabularies.interoperability + "phone-samsung-2554/photo",
+	      "@id": Globals.vocabularies.interoperability + "object/phone-samsung-2554/photo",
 	      "@context" : Globals.vocabularies.interoperability + "context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
           "ontology": Globals.vocabularies.capability + "photo"
 	    },
 		{
-	      "@id": Globals.vocabularies.interoperability + "phone-samsung-2554/video",
+	      "@id": Globals.vocabularies.interoperability + "object/phone-samsung-2554/video",
 	      "@context" : Globals.vocabularies.interoperability + "context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
           "ontology": Globals.vocabularies.capability + "video"
 	    },
 		{
-	      "@id": Globals.vocabularies.interoperability + "phone-samsung-2554/startApp",
+	      "@id": Globals.vocabularies.interoperability + "object/phone-samsung-2554/startApp",
 	      "@context" : Globals.vocabularies.interoperability + "context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
           "ontology": Globals.vocabularies.capability + "startApp"
 	    },
 		{
-	      "@id": Globals.vocabularies.interoperability + "phone-samsung-2554/stopApp",
+	      "@id": Globals.vocabularies.interoperability + "object/phone-samsung-2554/stopApp",
 	      "@context" : Globals.vocabularies.interoperability + "context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
           "ontology": Globals.vocabularies.capability + "stopApp"
 	    },
 		{
-	      "@id": Globals.vocabularies.interoperability + "phone-samsung-2554/gps",
+	      "@id": Globals.vocabularies.interoperability + "object/phone-samsung-2554/gps",
 	      "@context" : Globals.vocabularies.interoperability + "context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
           "ontology": Globals.vocabularies.capability + "gps"

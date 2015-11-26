@@ -1,19 +1,19 @@
 {
   "@context" : Globals.vocabularies.interoperability + "context/CimaObject",
   "@type": "http://www.w3.org/ns/hydra/core#Class",
-  "@id" : Globals.vocabularies.interoperability + "coolerheater-swirlwind-2665",
+  "@id" : Globals.vocabularies.interoperability + "object/coolerheater-swirlwind-2665",
   "id" : "coolerheater-swirlwind-2665",
   "name": "Cooler / Heater",
   "description": "A Swirlwind cooler and heater system with the serial number 2665",
   "capabilities" : [
     {
-      "@id": Globals.vocabularies.interoperability + "coolerheater-swirlwind-2665/temperatureDecrease",
+      "@id": Globals.vocabularies.interoperability + "object/coolerheater-swirlwind-2665/temperatureDecrease",
       "@type": "http://www.w3.org/ns/hydra/core#Class",
       "@context" : Globals.vocabularies.interoperability + "context/Capability",
       "ontology": Globals.vocabularies.capability + "temperatureDecrease"
     },
     {
-      "@id": Globals.vocabularies.interoperability + "coolerheater-swirlwind-2665/temperatureIncrease",
+      "@id": Globals.vocabularies.interoperability + "object/coolerheater-swirlwind-2665/temperatureIncrease",
       "@type": "http://www.w3.org/ns/hydra/core#Class",
       "@context" : Globals.vocabularies.interoperability + "context/Capability",
       "ontology": Globals.vocabularies.capability + "temperatureIncrease"

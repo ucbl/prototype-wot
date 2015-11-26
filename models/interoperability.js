@@ -17,13 +17,19 @@
 
         /**Hydra descriptions**/
         //Entrypoint
-        "getEntryPointDescription": function() {
-            return {
-                "@context": Globals.vocabularies.interoperability + "context/EntryPoint",
-                "@id": Globals.vocabularies.base + "/interoperability",
-                "@type": "EntryPoint",
-                "interoperability": Globals.vocabularies.interoperability
-            };
+        "entryPoint": {
+            "@context": Globals.vocabularies.interoperability + "context/EntryPoint",
+            "@type": "hydra:EntryPoint",
+            "@id": Globals.vocabularies.base + "/interoperability",
+            "object": Globals.vocabularies.interoperability + "object"
+        },
+
+        //Interoperability collection
+        "objectCollection": {
+            '@context': Globals.vocabularies.interoperability + 'context/Collection',
+            '@type': 'hydra:Collection',
+            '@id': Globals.vocabularies.interoperability + "object",
+            objects: this.objects
         },
 
         // Loads all object descriptions and stores them in a list of known interoperability

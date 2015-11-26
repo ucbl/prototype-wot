@@ -1,19 +1,19 @@
 {
     "@context" : Globals.vocabularies.interoperability + "context/CimaObject",
     "@type": "http://www.w3.org/ns/hydra/core#Class",
-    "@id": Globals.vocabularies.interoperability + "window-ikea-2555",
+    "@id": Globals.vocabularies.interoperability + "object/window-ikea-2555",
     "id": "window-ikea-2555",
     "name": "Window",
     "description": "An IKEA window with the serial number 2555",
     "capabilities" : [
 		{
-	      "@id": Globals.vocabularies.interoperability + "window-ikea-2555/openWindow",
+	      "@id": Globals.vocabularies.interoperability + "object/window-ikea-2555/openWindow",
 	      "@type": "http://www.w3.org/ns/hydra/core#Class",
           "@context": Globals.vocabularies.interoperability + "context/Capability",
           "ontology": Globals.vocabularies.capability + "capability/openWindow"
 	    },
 		{
-	      "@id": Globals.vocabularies.interoperability + "window-ikea-2555/closeWindow",
+	      "@id": Globals.vocabularies.interoperability + "object/window-ikea-2555/closeWindow",
 	      "@type": "http://www.w3.org/ns/hydra/core#Class",
           "@context": Globals.vocabularies.interoperability + "context/Capability",
           "ontology": Globals.vocabularies.capability + Globals.vocabularies.capability + "closeWindow"

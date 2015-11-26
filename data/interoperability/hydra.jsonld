@@ -61,8 +61,8 @@
       "supportedProperty": [
         {
           "property": "http://www.w3.org/ns/hydra/core#member",
-          "hydra:title": "cimaObjects",
-          "hydra:description": "The CIMA objects of this collection.",
+          "hydra:title": "objects",
+          "hydra:description": "The physical objects of this collection.",
           "required": null,
           "readonly": false,
           "writeonly": false
@@ -78,84 +78,84 @@
       ]
     },
     {
-      "@id": "vocab:CimaObject",
+      "@id": "vocab:object",
       "@type": "hydra:Class",
       "subClassOf": null,
-      "label": "CimaObject",
-      "description": "A CIMA object.",
+      "label": "object",
+      "description": "A physical object, potentially connected to the interoperability platform.",
       "supportedOperation": [
         {
-          "@id": "_:cimaObject",
+          "@id": "_:object",
           "@type": "hydra:Operation",
           "method": "GET",
-          "label": "Retrieves a CIMA object",
+          "label": "Retrieves an object",
           "description": null,
           "expects": null,
-          "returns": "vocab:CimaObject",
+          "returns": "vocab:object",
           "statusCodes": []
         }
       ],
       "supportedProperty": [
         {
           "property": {
-            "@id": "vocab:CimaObject/id",
+            "@id": "vocab:object/id",
             "@type": "rdf:Property",
             "label": "id",
-            "description": "The id of the CIMA object",
-            "domain": "vocab:CimaObject",
+            "description": "The id of the object",
+            "domain": "vocab:object",
             "range": "http://www.w3.org/2001/XMLSchema#string",
             "supportedOperation": []
           },
           "hydra:title": "id",
-          "hydra:description": "The id of the CIMA object",
+          "hydra:description": "The id of the object",
           "required": null,
           "readonly": true,
           "writeonly": false
         },
         {
           "property": {
-            "@id": "vocab:CimaObject/name",
+            "@id": "vocab:object/name",
             "@type": "rdf:Property",
             "label": "name",
-            "description": "The explicit name of the CIMA object",
-            "domain": "vocab:CimaObject",
+            "description": "The explicit name of the object",
+            "domain": "vocab:object",
             "range": "http://www.w3.org/2001/XMLSchema#string",
             "supportedOperation": []
           },
           "hydra:title": "name",
-          "hydra:description": "The explicit name of the CIMA object",
+          "hydra:description": "The explicit name of the object",
           "required": null,
           "readonly": true,
           "writeonly": false
         },
         {
           "property": {
-            "@id": "vocab:CimaObject/description",
+            "@id": "vocab:object/description",
             "@type": "rdf:Property",
             "label": "description",
-            "description": "The description of the CIMA object",
-            "domain": "vocab:CimaObject",
+            "description": "The description of the object",
+            "domain": "vocab:object",
             "range": "http://www.w3.org/2001/XMLSchema#string",
             "supportedOperation": []
           },
           "hydra:title": "description",
-          "hydra:description": "The description of the CIMA object",
+          "hydra:description": "The description of the object",
           "required": null,
           "readonly": true,
           "writeonly": false
         },
         {
           "property": {
-            "@id": "vocab:CimaObject/capabilities",
+            "@id": "vocab:object/capabilities",
             "@type": "rdf:Property",
             "label": "capabilities",
-            "description": "The capabilities of a CIMA object",
-            "domain": "vocab:CimaObject",
+            "description": "The capabilities of the object",
+            "domain": "vocab:object",
             "range": "hydra:Collection",
             "supportedOperation": []
           },
           "hydra:title": "capabilities",
-          "hydra:description": "The capabilities of a CIMA object",
+          "hydra:description": "The capabilities of the object",
           "required": null,
           "readonly": true,
           "writeonly": false
@@ -652,13 +652,13 @@
       "@type": "hydra:Class",
       "subClassOf": null,
       "label": "EntryPoint",
-      "description": "The main entry point of the CIMA Platform.",
+      "description": "Main entry point of the interoperability platform.",
       "supportedOperation": [
         {
           "@id": "_:entry_point",
           "@type": "hydra:Operation",
           "method": "GET",
-          "label": "The CIMA Platform main entry point.",
+          "label": "Interoperability platform main entry point.",
           "description": null,
           "expects": null,
           "returns": "vocab:EntryPoint",
@@ -668,18 +668,18 @@
       "supportedProperty": [
         {
           "property": {
-            "@id": "vocab:EntryPoint/cima",
-            "@type": "hydra:Link",
-            "label": "cima",
-            "description": "The entrypoint for the CIMA objects operation",
+            "@id": "vocab:Collection",
+            "@type": "hydra:Class",
+            "label": "Interoperability platform",
+            "description": "List of all the objects known by the platform",
             "domain": "vocab:EntryPoint",
             "range": "hydra:Collection",
             "supportedOperation": [
               {
-                "@id": "_:cima",
+                "@id": "_:platform",
                 "@type": "hydra:Operation",
                 "method": "GET",
-                "label": "The list of all the CIMA objects",
+                "label": "List of all the known objects",
                 "description": null,
                 "expects": null,
                 "returns": "hydra:Collection",
@@ -687,8 +687,37 @@
               }
             ]
           },
-          "hydra:title": "cima",
-          "hydra:description": "The list of all the CIMA objects.",
+          "supportedProperty": [
+            {
+              "property": {
+                "@id": "vocab:Collection",
+                "@type": "hydra:Class",
+                "label": "Connected objects",
+                "description": "The list of objects connected actually connected to the platform",
+                "domain": "vocab:EntryPoint",
+                "range": "hydra:Collection",
+                "supportedOperation": [
+                  {
+                    "@id": "_:connected",
+                    "@type": "hydra:Operation",
+                    "method": "GET",
+                    "label": "List all the connected objects",
+                    "description": null,
+                    "expects": null,
+                    "returns": "hydra:Collection",
+                    "statusCodes": []
+                  }
+                ]
+              },
+              "hydra:title": "connected",
+              "hydra:description": "List of the objects connected to the platform.",
+              "required": null,
+              "readonly": true,
+              "writeonly": false
+            }
+          ]
+          "hydra:title": "platform",
+          "hydra:description": "List of all the known objects.",
           "required": null,
           "readonly": true,
           "writeonly": false

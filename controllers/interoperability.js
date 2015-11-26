@@ -8,33 +8,6 @@ var express = require('express'),
     capabilityModel = require('../models/capability'),
     jsonldHeaders = require('../middleware/jsonldHeaders');
 
-/*---HYDRA---*/
-
-// GET the hydra vocabulary
-router.get('/vocab', function(request, response, next) {
-    jsonldHeaders(request, response, next);
-    var hydraLocation = __dirname + '/../data/interoperability/hydra.jsonld';
-    fs.readFile(hydraLocation, 'utf8', function (error, data) {
-        response.end(data);
-    });
-    return true;
-});
-
-// GET the hydra context
-router.get('/context', function(request, response, next) {
-    jsonldHeaders(request, response, next);
-    response.end("{}");
-});
-
-router.get('/context/:context', function(request, response, next) {
-    jsonldHeaders(request, response, next);
-    var contextLocation = __dirname + '/../data/interoperability/contexts/' + request.params.context + '.jsonld';
-    fs.readFile(contextLocation, 'utf8', function (error, data) {
-        response.end(data);
-    });
-    return true;
-});
-
 /*---WEB SERVICE---*/
 
 /*-- Entry point management --*/
@@ -42,45 +15,27 @@ router.get('/context/:context', function(request, response, next) {
 // Entry point and home page
 router.get('/', function(request, response, next) {
     if (request.accepts('html')) {
-        //Send the CIMA homepage
+        //Send the interoperability platform homepage
         response.redirect('/interoperability-public');
-        //response.render('interoperability/interoperability', {interoperability: interoperabilityModel.getAllObjects()});
-        //response.end(interoperabilityModel.objectsToStringSimple());
     } else {
         jsonldHeaders(request, response, next);
-        response.end(JSON.stringify(interoperabilityModel.getEntryPointDescription()));
+        response.end(JSON.stringify(interoperabilityModel.entryPoint));
     }
 });
 
-// Sends a collection of interoperability (basic descriptions)
-router.get('/interoperability', function(request, response, next) {
-    var objects = interoperabilityModel.getAllObjects();
+// Sends the collection of known objects
+router.get('/platform', function(request, response, next) {
+    var objects = interoperabilityModel.objectCollection;
     if (request.accepts('html')) {
         response.render('interoperability/objectsSimple', {objects: objects});
-        //response.end(objectModel.objectsToStringSimple());
     } else {
         jsonldHeaders(request, response, next);
-        var interoperabilityResponse = {
-            '@context': Globals.vocabularies.interoperability + 'context/Collection',
-            '@id': Globals.vocabularies.interoperability,
-            '@type': 'hydra:Collection',
-            objects: []
-    };
-        for (var i in objects) {
-            interoperabilityResponse.objects.push({
-                '@context':Globals.vocabularies.interoperability + 'context/CimaObject',
-                '@id': objects[i]['@id'],
-                '@type': 'vocab:CimaObject',
-                'name': objects[i].name
-            });
-        }
-
-        response.end(JSON.stringify(interoperabilityResponse));
+        response.end(JSON.stringify((require("../views/objectsSimple")(objects))));
     }
 });
 
 // Sends a collection of interoperability (detailed descriptions)
-router.get('/interoperability-list', function(request, response, next) {
+router.get('/platform/connected', function(request, response, next) {
     var objects = interoperabilityModel.getAllObjects();
     if (request.accepts('html')) {
         response.render('interoperability/objectsSimple', {objects: interoperabilityModel.getAllObjects()});
@@ -95,9 +50,9 @@ router.get('/interoperability-list', function(request, response, next) {
         };
         for (var i in objects) {
             var currentObject = {
-                '@context': Globals.vocabularies.interoperability + 'context/CimaObject',
+                '@context': Globals.vocabularies.interoperability + 'context/object',
                 '@id': objects[i]['@id'],
-                '@type': 'vocab:CimaObject',
+                '@type': 'vocab:object',
                 'name': objects[i].name,
                 'description': objects[i].description,
                 'values': []
@@ -115,7 +70,7 @@ router.get('/interoperability-list', function(request, response, next) {
 /*-- List of connected interoperability management --*/
 
 // Retrieves info about a particular object
-router.get('/:objectId', function(request, response, next) {
+router.get('/object/:objectId', function(request, response, next) {
     //Search object by name, then by id, then provide an empty object
     var object = interoperabilityModel.getObjectInfos(request.params.objectId) || interoperabilityModel.findObjectById(request.params.objectId) || {realObjectInfo:[]};
     if (request.accepts('html')) {
@@ -127,7 +82,7 @@ router.get('/:objectId', function(request, response, next) {
 });
 
 // Add a new object to the currently connected object list
-router.put('/:objectId', function(request, response) {
+router.put('/object/:objectId', function(request, response) {
     if(interoperabilityModel.isConnected(request.params.objectId)) {
         response.sendStatus(405);
     } else {
@@ -138,7 +93,7 @@ router.put('/:objectId', function(request, response) {
 
 // Add a new object to the currently connected object list
 //TODO: do something more if a graph is posted to the object
-router.post('/:objectId', function(request, response) {
+router.post('/object/:objectId', function(request, response) {
     if(interoperabilityModel.isConnected(request.params.objectId)) {
         response.sendStatus(405);
     } else {
@@ -148,7 +103,7 @@ router.post('/:objectId', function(request, response) {
 });
 
 // Remove an object from the currently connected object list
-router.delete('/:objectId', function(request, response) {
+router.delete('/object/:objectId', function(request, response) {
     if(interoperabilityModel.isConnected(request.params.objectId)) {
         interoperabilityModel.removeObject(request.params.objectId);
         response.sendStatus(204);
@@ -161,7 +116,7 @@ router.delete('/:objectId', function(request, response) {
 
 //TODO: REFACTOR THAT ASAP!
 // GET and PUT operations on the real interoperability
-router.get('/:objectId/:capabilityId', function(request, response, next) {
+router.get('/object/:objectId/:capabilityId', function(request, response, next) {
     var object = interoperabilityModel.findObjectById(request.params.objectId);
     var capability = request.params["capabilityId"];
     var responseJson = {"@id": Globals.vocabularies.interoperability + request.params["objectId"] + '/' + capability};
@@ -190,7 +145,7 @@ router.get('/:objectId/:capabilityId', function(request, response, next) {
     response.end(JSON.stringify(responseJson));
 });
 
-router.put('/:objectId/:capability', function(request, response, next) {
+router.put('/object/:objectId/:capability', function(request, response, next) {
     jsonldHeaders(request, response, next);
     var object = interoperabilityModel.findObjectById(request.params.objectId);
     var capability = request.params.capability;
@@ -261,7 +216,7 @@ router.put('/:objectId/:capability', function(request, response, next) {
     response.end(JSON.stringify(responseJson));
 });
 
-router.post('/:objectId/:capability', function(request, response, next) {
+router.post('/object/:objectId/:capability', function(request, response, next) {
     jsonldHeaders(request, response, next);
     var object = interoperabilityModel.findObjectById(request.params.objectId);
     var capability = request.params.capability;
@@ -283,6 +238,32 @@ router.post('/:objectId/:capability', function(request, response, next) {
             break;
     }
     response.end(JSON.stringify(responseJson));
+});
+
+/*---HYDRA---*/
+
+// GET the hydra vocabulary
+router.get('/vocab', function(request, response, next) {
+    jsonldHeaders(request, response, next);
+    var hydraLocation = __dirname + '/../data/interoperability/hydra.jsonld';
+    fs.readFile(hydraLocation, 'utf8', function (error, data) {
+        response.end(data);
+    });
+});
+
+// GET the hydra context
+router.get('/context', function(request, response, next) {
+    jsonldHeaders(request, response, next);
+    response.end("{}");
+});
+
+router.get('/context/:context', function(request, response, next) {
+    jsonldHeaders(request, response, next);
+    var contextLocation = __dirname + '/../data/interoperability/contexts/' + request.params.context + '.jsonld';
+    fs.readFile(contextLocation, 'utf8', function (error, data) {
+        response.end(data);
+    });
+    return true;
 });
 
 module.exports = router;

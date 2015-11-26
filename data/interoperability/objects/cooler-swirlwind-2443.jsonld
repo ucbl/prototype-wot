@@ -1,13 +1,13 @@
 {
   "@context" : Globals.vocabularies.interoperability + "context/CimaObject",
   "@type": "http://www.w3.org/ns/hydra/core#Class",
-  "@id" : Globals.vocabularies.interoperability + "cooler-swirlwind-2443",
+  "@id" : Globals.vocabularies.interoperability + "object/cooler-swirlwind-2443",
   "id" : "cooler-swirlwind-2443",
   "name": "Cooler",
   "description": "A Swirlwind cooler with the 2443 serial number",
 	"capabilities" : [
 		{
-      "@id": Globals.vocabularies.interoperability + "cooler-swirlwind-2443/temperatureDecrease",
+      "@id": Globals.vocabularies.interoperability + "object/cooler-swirlwind-2443/temperatureDecrease",
       "@context" : Globals.vocabularies.interoperability + "context/Capability",
       "@type" : "http://www.w3.org/ns/hydra/core#Class",
       "ontology": Globals.vocabularies.capability + "temperatureDecrease"

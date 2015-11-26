@@ -3,7 +3,7 @@
         "hydra": "http://www.w3.org/ns/hydra/core#",
         "vocab": "http://localhost:3333/vocab#",
         "Collection": "http://www.w3.org/ns/hydra/core#Collection",
-        "cimaObjects": "http://www.w3.org/ns/hydra/core#member",
+        "objects": "http://www.w3.org/ns/hydra/core#member",
         "capabilities": "http://www.w3.org/ns/hydra/core#member"
     }
 }

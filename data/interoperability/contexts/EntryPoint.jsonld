@@ -3,8 +3,8 @@
         "hydra": "http://www.w3.org/ns/hydra/core#",
         "vocab": "http://localhost:3333/vocab#",
         "EntryPoint": "vocab:EntryPoint",
-        "cima": {
-            "@id": "vocab:EntryPoint/cima",
+        "platform": {
+            "@id": "vocab:EntryPoint/platform",
             "@type": "@id"
         }
     }

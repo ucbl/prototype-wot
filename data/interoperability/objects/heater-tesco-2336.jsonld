@@ -1,13 +1,13 @@
 {
     "@context" : Globals.vocabularies.interoperability + "context/CimaObject",
     "@type": "http://www.w3.org/ns/hydra/core#Class",
-    "@id" : Globals.vocabularies.interoperability + "heater-tesco-2336",
+    "@id" : Globals.vocabularies.interoperability + "object/heater-tesco-2336",
     "id" : "heater-tesco-2336",
     "name": "Heater",
     "description": "A Tesco heater with the serial number 2336",
     "capabilities" : [
     	{
-          "@id": Globals.vocabularies.interoperability + "heater-tesco-2336/temperatureIncrease",
+          "@id": Globals.vocabularies.interoperability + "object/heater-tesco-2336/temperatureIncrease",
           "@context" : Globals.vocabularies.interoperability + "context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
           "ontology": Globals.vocabularies.capability + "temperatureIncrease"
