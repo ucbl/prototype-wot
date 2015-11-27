@@ -10,7 +10,8 @@ $(document).ready(function() {
 
 function reloadObjects() {
 	$.get(interoperabilityLayerUrl, {}, function(response){
-		$('.objectsFromCima').empty().html($(response).find('.objectSimple'));
+        $('.objectsFromCima').empty();
+        $('.objectsFromCima').html($(response).find('.objectSimple'));
 		equalHeights('.objectIns');
 	});
 }
