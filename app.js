@@ -8,15 +8,11 @@ app.set('views', __dirname + '/views');
 app.engine('jade', require('jade').__express);
 app.set('view engine', 'jade');
 
-//CORS configuration
-app.use(function(request, response, next) {
-    if(request.get('Origin')) {
-        response.header("Access-Control-Allow-Origin", "*");
-        response.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
-        response.header("Access-Control-Allow-Headers", "X-Requested-With");
-    }
-    next();
-});
+//Add CORS headers
+app.use(require('./middleware/corsHeaders'));
+
+//Add Vary header
+app.use(require('./middleware/varyHeader'));
 
 //Static content
 app.use(express.static(__dirname + '/public'));
