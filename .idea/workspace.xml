@@ -66,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/views/interoperability/objectSimple.jade">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.15841584" vertical-offset="0" max-vertical-offset="505">
-              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+              <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -513,12 +513,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00124" summary="Try with interoperability layer complete">
-      <created>1448467472342</created>
-      <option name="number" value="00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1448467472342</updated>
-    </task>
     <task id="LOCAL-00125" summary="Try with interoperability layer complete">
       <created>1448467773000</created>
       <option name="number" value="00125" />
@@ -807,7 +801,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448620840524</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="Try with interoperability layer complete">
+      <created>1448621078122</created>
+      <option name="number" value="00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1448621078122</updated>
+    </task>
+    <option name="localTasksCounter" value="174" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1255,7 +1255,7 @@
     <entry file="file://$PROJECT_DIR$/views/interoperability/objectSimple.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15841584" vertical-offset="0" max-vertical-offset="505">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
           <folding />
         </state>
       </provider>
