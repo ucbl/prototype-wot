@@ -11,7 +11,7 @@ $(document).ready(function() {
 function reloadObjects() {
 	$.get(interoperabilityLayerUrl, {}, function(response){
         console.log($(response).find('.objectSimple'));
-        $('.objectsFromCima').empty();
+        //$('.objectsFromCima').empty();
         $('.objectsFromCima').html($(response).find('.objectSimple'));
 		equalHeights('.objectIns');
 	});
