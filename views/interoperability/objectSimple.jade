@@ -1,5 +1,5 @@
 div.object
-    div(class='objectName objectActivate' rel='#{object["@id"]}')
+    div(class='objectId objectActivate' rel='#{object["@id"]}')
         a(href='#{object["@id"]}') #{object.name}
-    div.objectDescription
+    div.objectName
         | #{object.description}
