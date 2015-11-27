@@ -36,7 +36,7 @@ router.get('/platform', function(request, response, next) {
 
 // Sends a collection of interoperability (detailed descriptions)
 router.get('/platform/objects', function(request, response, next) {
-    var platform = interoperabilityModel.getConnectedCollection();
+    var platform = interoperabilityModel.getKnownObjectCollection();
     if (request.accepts('html')) {
         response.render('interoperability/objectsSimple', {objects: platform.objects});
     } else {
@@ -47,7 +47,7 @@ router.get('/platform/objects', function(request, response, next) {
 
 // Sends a collection of interoperability (detailed descriptions)
 router.get('/platform/connected-objects', function(request, response, next) {
-    var platform = interoperabilityModel.getConnectedCollection();
+    var platform = interoperabilityModel.getConnectedObjectCollection();
     if (request.accepts('html')) {
         response.render('interoperability/objectsSimple', {objects: platform.objects});
     } else {
