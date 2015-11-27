@@ -107,6 +107,13 @@ input::-moz-focus-inner {
 	}
 }
 
+h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  color: $bluelight;
+}
+
 .contentWrapper {
 	padding: 10px 0px;
 	max-width: 1000px;
