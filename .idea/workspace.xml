@@ -76,8 +76,8 @@
       <file leaf-file-name="public.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/interoperability-public/css/sass/public.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3319838" vertical-offset="896" max-vertical-offset="3240">
-              <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.5323887" vertical-offset="1097" max-vertical-offset="3220">
+              <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -572,12 +572,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00133" summary="Try with interoperability layer complete">
-      <created>1448546863479</created>
-      <option name="number" value="00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1448546863480</updated>
-    </task>
     <task id="LOCAL-00134" summary="Try with interoperability layer complete">
       <created>1448547136026</created>
       <option name="number" value="00134" />
@@ -866,7 +860,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448666754459</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="Try with interoperability layer complete">
+      <created>1448666786032</created>
+      <option name="number" value="00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1448666786032</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1321,8 +1321,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/interoperability-public/css/sass/public.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3319838" vertical-offset="896" max-vertical-offset="3240">
-          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.5323887" vertical-offset="1097" max-vertical-offset="3220">
+          <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
           <folding />
         </state>
       </provider>
