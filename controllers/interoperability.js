@@ -35,10 +35,21 @@ router.get('/platform', function(request, response, next) {
 });
 
 // Sends a collection of interoperability (detailed descriptions)
-router.get('/platform/connected', function(request, response, next) {
+router.get('/platform/objects', function(request, response, next) {
     var platform = interoperabilityModel.getConnectedCollection();
     if (request.accepts('html')) {
-        response.render('interoperability/platform', {platform: platform});
+        response.render('interoperability/objectsSimple', {objects: platform.objects});
+    } else {
+        jsonldHeaders(request, response, next);
+        response.end(JSON.stringify((require("../views/objectsSimple")(platform))));
+    }
+});
+
+// Sends a collection of interoperability (detailed descriptions)
+router.get('/platform/connected-objects', function(request, response, next) {
+    var platform = interoperabilityModel.getConnectedCollection();
+    if (request.accepts('html')) {
+        response.render('interoperability/objectsSimple', {objects: platform.objects});
     } else {
         jsonldHeaders(request, response, next);
         response.end(JSON.stringify((require("../views/objectsSimple")(platform))));

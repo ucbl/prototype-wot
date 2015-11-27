@@ -25,7 +25,7 @@
         },
 
         //Interoperability collection
-        "getCollection": function() {
+        "getPlatform": function() {
             var result = {
                 '@context': Globals.vocabularies.interoperability + 'context/Collection',
                 '@type': 'hydra:Collection',
@@ -39,11 +39,25 @@
         },
 
         //Interoperability collection
-        "getConnectedCollection": function() {
+        "getKnownObjectCollection": function() {
             var result = {
                 '@context': Globals.vocabularies.interoperability + 'context/Collection',
                 '@type': 'hydra:Collection',
-                '@id': Globals.vocabularies.interoperability + "platform/connected",
+                '@id': Globals.vocabularies.interoperability + "platform/objects",
+                'objects': []
+            };
+            for(var i in knownObjects) {
+                result.objects.push(knownObjects[i]);
+            }
+            return result;
+        },
+
+        //Interoperability collection
+        "getConnectedObjectCollection": function() {
+            var result = {
+                '@context': Globals.vocabularies.interoperability + 'context/Collection',
+                '@type': 'hydra:Collection',
+                '@id': Globals.vocabularies.interoperability + "platform/connected-objectz",
                 'objects': []
             };
             for(var i in this.objects) {
