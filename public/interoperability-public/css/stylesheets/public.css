@@ -9,7 +9,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+figure, figcaption, footer, header,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -140,6 +140,13 @@ input::-moz-focus-inner {
   font-weight: bold;
   font-size: 1.2em;
   color: white;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    color: #999999;
 }
 
 /* line 110, ../sass/public.scss */
