@@ -39,6 +39,20 @@
         },
 
         //Interoperability collection
+        "getPlatform": function() {
+            var result = {
+                '@context': Globals.vocabularies.interoperability + 'context/Collection',
+                '@type': 'hydra:Collection',
+                '@id': Globals.vocabularies.interoperability + "platform",
+                'objects': []
+            };
+            for(var i in knownObjects) {
+                result.objects.push(knownObjects[i]);
+            }
+            return result;
+        },
+
+        //Interoperability collection
         "getKnownObjectCollection": function() {
             var result = {
                 '@context': Globals.vocabularies.interoperability + 'context/Collection',

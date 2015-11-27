@@ -25,7 +25,7 @@ router.get('/', function(request, response, next) {
 
 // Sends the collection of known objects
 router.get('/platform', function(request, response, next) {
-    var platform = interoperabilityModel.getKnownObjectCollection();
+    var platform = interoperabilityModel.getPlatform();
     if (request.accepts('html')) {
         response.render('interoperability/platform', {platform: platform});
     } else {
