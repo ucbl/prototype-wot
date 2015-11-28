@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/interoperability-public/index.html" afterPath="$PROJECT_DIR$/public/interoperability-public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/index.js" afterPath="$PROJECT_DIR$/controllers/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public\interoperability-public\css\fonts\google-fonts.css" afterPath="$PROJECT_DIR$/public/css/fonts/google-fonts.css" />
-      <change type="MOVED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public\interoperability-public\css\stylesheets\public.css" afterPath="$PROJECT_DIR$/public/css/stylesheets/public.css" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -588,12 +583,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00139" summary="Try with interoperability layer complete">
-      <created>1448549926194</created>
-      <option name="number" value="00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1448549926194</updated>
-    </task>
     <task id="LOCAL-00140" summary="Try with interoperability layer complete">
       <created>1448550000361</created>
       <option name="number" value="00140" />
@@ -882,7 +871,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448669984342</updated>
     </task>
-    <option name="localTasksCounter" value="188" />
+    <task id="LOCAL-00188" summary="Try with interoperability layer complete">
+      <created>1448701574243</created>
+      <option name="number" value="00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1448701574243</updated>
+    </task>
+    <option name="localTasksCounter" value="189" />
     <servers />
   </component>
   <component name="ToolWindowManager">
