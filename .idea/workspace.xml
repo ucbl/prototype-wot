@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
@@ -549,12 +548,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00152" summary="Try with interoperability layer complete">
-      <created>1448577173085</created>
-      <option name="number" value="00152" />
-      <option name="project" value="LOCAL" />
-      <updated>1448577173085</updated>
-    </task>
     <task id="LOCAL-00153" summary="Try with interoperability layer complete">
       <created>1448578032895</created>
       <option name="number" value="00153" />
@@ -843,7 +836,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448708956422</updated>
     </task>
-    <option name="localTasksCounter" value="201" />
+    <task id="LOCAL-00201" summary="Try with interoperability layer complete">
+      <created>1448709302445</created>
+      <option name="number" value="00201" />
+      <option name="project" value="LOCAL" />
+      <updated>1448709302445</updated>
+    </task>
+    <option name="localTasksCounter" value="202" />
     <servers />
   </component>
   <component name="ToolWindowManager">
