@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public\css\stylesheets\public_old.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public\interoperability-public\css\.sass-cache_old\2c5140ab818c908f4aaabe5c7d801acd34f733db\public.scssc" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public\interoperability-public\css\.sass-cache_old\6df777ee3b65b7516d0ac997dcd3c1fd4e01d050\_reset.scssc" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public\interoperability-public\css\.sass-cache_old\a665b53e00caba3ad5349a908abcd872775409d5\ie.scssc" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public\interoperability-public\css\.sass-cache_old\a665b53e00caba3ad5349a908abcd872775409d5\print.scssc" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public\interoperability-public\css\.sass-cache_old\a665b53e00caba3ad5349a908abcd872775409d5\public.scssc" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public\interoperability-public\css\.sass-cache_old\a665b53e00caba3ad5349a908abcd872775409d5\screen.scssc" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public\interoperability-public\css\.sass-cache_old\ccbaed75e65ce9506ff5cd281367a2316dbd3082\_utilities.scssc" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/hydra.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/hydra.jsonld" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/interoperability.js" afterPath="$PROJECT_DIR$/controllers/interoperability.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/ontology.js" afterPath="$PROJECT_DIR$/controllers/ontology.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
@@ -45,8 +34,8 @@
       <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56873316" vertical-offset="1178" max-vertical-offset="1980">
-              <caret line="235" column="0" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.541779" vertical-offset="1238" max-vertical-offset="1980">
+              <caret line="237" column="24" selection-start-line="237" selection-start-column="24" selection-end-line="237" selection-end-column="24" />
               <folding>
                 <element signature="e#1420#1767#0" expanded="false" />
                 <element signature="e#1913#2264#0" expanded="false" />
@@ -56,8 +45,8 @@
                 <element signature="e#4158#5591#0" expanded="false" />
                 <element signature="e#5673#9108#0" expanded="false" />
                 <element signature="e#9191#10275#0" expanded="false" />
-                <element signature="e#10759#10830#0" expanded="false" />
-                <element signature="e#10900#11180#0" expanded="false" />
+                <element signature="e#10764#10835#0" expanded="false" />
+                <element signature="e#10905#11185#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -577,12 +566,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00167" summary="Try with interoperability layer complete">
-      <created>1448610720493</created>
-      <option name="number" value="00167" />
-      <option name="project" value="LOCAL" />
-      <updated>1448610720493</updated>
-    </task>
     <task id="LOCAL-00168" summary="Try with interoperability layer complete">
       <created>1448611105898</created>
       <option name="number" value="00168" />
@@ -871,7 +854,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448731844125</updated>
     </task>
-    <option name="localTasksCounter" value="216" />
+    <task id="LOCAL-00216" summary="Try with interoperability layer complete">
+      <created>1448735985282</created>
+      <option name="number" value="00216" />
+      <option name="project" value="LOCAL" />
+      <updated>1448735985282</updated>
+    </task>
+    <option name="localTasksCounter" value="217" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1302,6 +1291,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/middleware/jsonldHeaders.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/interoperability/hydra.jsonld">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4100">
@@ -1337,18 +1334,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/middleware/jsonldHeaders.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56873316" vertical-offset="1178" max-vertical-offset="1980">
-          <caret line="235" column="0" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.541779" vertical-offset="1238" max-vertical-offset="1980">
+          <caret line="237" column="24" selection-start-line="237" selection-start-column="24" selection-end-line="237" selection-end-column="24" />
           <folding>
             <element signature="e#1420#1767#0" expanded="false" />
             <element signature="e#1913#2264#0" expanded="false" />
@@ -1358,8 +1347,8 @@
             <element signature="e#4158#5591#0" expanded="false" />
             <element signature="e#5673#9108#0" expanded="false" />
             <element signature="e#9191#10275#0" expanded="false" />
-            <element signature="e#10759#10830#0" expanded="false" />
-            <element signature="e#10900#11180#0" expanded="false" />
+            <element signature="e#10764#10835#0" expanded="false" />
+            <element signature="e#10905#11185#0" expanded="false" />
           </folding>
         </state>
       </provider>
