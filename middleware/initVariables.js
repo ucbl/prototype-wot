@@ -4,6 +4,7 @@
  */
 
 (function(module) {
+    var Globals = require('./models/globals');
 
     module.exports = function (request, response, next) {
         if(!Globals.baseUriUpdated) {
