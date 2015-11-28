@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/hydra.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/hydra.jsonld" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/interoperability.js" afterPath="$PROJECT_DIR$/controllers/interoperability.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -35,7 +34,7 @@
       <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40186915" vertical-offset="1685" max-vertical-offset="2220">
+            <state vertical-scroll-proportion="0.47663552" vertical-offset="1645" max-vertical-offset="2200">
               <caret line="250" column="96" selection-start-line="250" selection-start-column="96" selection-end-line="250" selection-end-column="96" />
               <folding>
                 <element signature="e#573#859#0" expanded="false" />
@@ -46,8 +45,8 @@
                 <element signature="e#4518#5951#0" expanded="false" />
                 <element signature="e#6033#9468#0" expanded="false" />
                 <element signature="e#9551#10635#0" expanded="false" />
-                <element signature="e#11170#11241#0" expanded="false" />
-                <element signature="e#11311#11591#0" expanded="false" />
+                <element signature="e#11122#11193#0" expanded="false" />
+                <element signature="e#11263#11543#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -604,12 +603,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00172" summary="Try with interoperability layer complete">
-      <created>1448620840523</created>
-      <option name="number" value="00172" />
-      <option name="project" value="LOCAL" />
-      <updated>1448620840524</updated>
-    </task>
     <task id="LOCAL-00173" summary="Try with interoperability layer complete">
       <created>1448621078122</created>
       <option name="number" value="00173" />
@@ -898,7 +891,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448739633142</updated>
     </task>
-    <option name="localTasksCounter" value="221" />
+    <task id="LOCAL-00221" summary="Try with interoperability layer complete">
+      <created>1448746977603</created>
+      <option name="number" value="00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1448746977603</updated>
+    </task>
+    <option name="localTasksCounter" value="222" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1406,7 +1405,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40186915" vertical-offset="1685" max-vertical-offset="2220">
+        <state vertical-scroll-proportion="0.47663552" vertical-offset="1645" max-vertical-offset="2200">
           <caret line="250" column="96" selection-start-line="250" selection-start-column="96" selection-end-line="250" selection-end-column="96" />
           <folding>
             <element signature="e#573#859#0" expanded="false" />
@@ -1417,8 +1416,8 @@
             <element signature="e#4518#5951#0" expanded="false" />
             <element signature="e#6033#9468#0" expanded="false" />
             <element signature="e#9551#10635#0" expanded="false" />
-            <element signature="e#11170#11241#0" expanded="false" />
-            <element signature="e#11311#11591#0" expanded="false" />
+            <element signature="e#11122#11193#0" expanded="false" />
+            <element signature="e#11263#11543#0" expanded="false" />
           </folding>
         </state>
       </provider>
