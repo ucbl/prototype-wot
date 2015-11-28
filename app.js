@@ -16,17 +16,11 @@ app.set('view engine', 'jade');
 /**
  * Middleware functions
  */
-//Late initialization function - put here all that requires to know the server URI
+//Late initialization of global variables
 app.all('*', function(req, res, next) {
     if(!Globals.baseUriUpdated) {
-        //Set up the server URI in the global variables
-        Globals.vocabularies.updateBaseUri('http://' + req.hostname + (Globals.config.port !== 80?(':' + Globals.config.port):'') + '/');
-
-        //Initiate the object discovery and construct their URIs
-        ontologyModel.loadOntology({verbose: false});
-        interoperabilityModel.loadObjects({verbose: false});
+        require('./middleware/initVariables');
     }
-    next();
 });
 
 //Add CORS headers
