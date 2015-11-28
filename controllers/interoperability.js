@@ -35,19 +35,8 @@ router.get('/platform', function(request, response, next) {
 });
 
 // Sends a collection of interoperability (detailed descriptions)
-router.get('/platform/objects', function(request, response, next) {
+router.get('/object', function(request, response, next) {
     var platform = interoperabilityModel.getKnownObjectCollection();
-    if (request.accepts('html')) {
-        response.render('interoperability/objectsSimple', {objects: platform.objects});
-    } else {
-        jsonldHeaders(request, response, next);
-        response.end(JSON.stringify((require("../views/objectsSimple")(platform))));
-    }
-});
-
-// Sends a collection of interoperability (detailed descriptions)
-router.get('/platform/connected-objects', function(request, response, next) {
-    var platform = interoperabilityModel.getConnectedObjectCollection();
     if (request.accepts('html')) {
         response.render('interoperability/objectsSimple', {objects: platform.objects});
     } else {
@@ -59,12 +48,36 @@ router.get('/platform/connected-objects', function(request, response, next) {
 // Retrieves info about a particular object
 router.get('/object/:objectId', function(request, response, next) {
     //Search object by name, then by id, then provide an empty object
-    var object = interoperabilityModel.getObjectInfos(request.params.objectId) || interoperabilityModel.findObjectById(request.params.objectId) || {realObjectInfo:[]};
+    var object = interoperabilityModel.getObjectInfos(request.params.objectId) || interoperabilityModel.findObjectById(request.params.objectId);
+    if(object) {
+        if (request.accepts('html')) {
+            response.render('interoperability/object', {object: object});
+        } else {
+            jsonldHeaders(request, response, next);
+            response.end(JSON.stringify(object));
+        }
+    } else {
+        response.sendStatus(404);
+    }
+});
+
+// Sends a collection of interoperability (detailed descriptions)
+router.get('/connected-object', function(request, response, next) {
+    var platform = interoperabilityModel.getConnectedObjectCollection();
     if (request.accepts('html')) {
-        response.render('interoperability/object', {object: object});
+        response.render('interoperability/objectsSimple', {objects: platform.objects});
     } else {
         jsonldHeaders(request, response, next);
-        response.end(JSON.stringify(object));
+        response.end(JSON.stringify((require("../views/objectsSimple")(platform))));
+    }
+});
+
+// Retrieves info about a particular object
+router.get('/connected-object/:objectId', function(request, response, next) {
+    if(interoperabilityModel.isConnected(request.params.objectId)) {
+        response.redirect("../object/" + request.params.objectId);
+    } else {
+        response.sendStatus(404);
     }
 });
 
@@ -235,8 +248,7 @@ router.get('/vocab', function(request, response, next) {
     var hydraLocation = __dirname + '/../data/interoperability/hydra.jsonld';
 
     fs.readFile(hydraLocation, 'utf8', function (error, data) {
-        var dataJson;
-        eval('dataJson = ' + data + ';');
+        var dataJson= data.replace("__interoperability__", Globals.vocabularies.interoperability);
         response.end(JSON.stringify(dataJson));
     });
 });
