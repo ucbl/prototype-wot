@@ -4,10 +4,28 @@ var express = require('express'),
     sassMiddleware = require('node-sass-middleware'),
     Globals = require('./models/globals');
 
-//Templating engine
+/**
+ *  Templating engine
+ */
 app.set('views', __dirname + '/views');
 app.engine('jade', require('jade').__express);
 app.set('view engine', 'jade');
+
+/**
+ * Middleware functions
+ */
+//Late initialization function - put here all that requires to know the server URI
+app.all('*', function(req, res, next) {
+    if(!Globals.baseUriUpdated) {
+        //Set up the server URI in the global variables
+        Globals.vocabularies.updateBaseUri('http://' + req.hostname + (Globals.config.port !== 80?(':' + Globals.config.port):'') + '/');
+
+        //Initiate the object discovery and construct their URIs
+        ontologyModel.loadOntology({verbose: false});
+        interoperabilityModel.loadObjects({verbose: false});
+    }
+    next();
+});
 
 //Add CORS headers
 app.use(require('./middleware/corsHeaders'));
@@ -23,6 +41,9 @@ app.use('/css/stylesheet', sassMiddleware({
     outputStyle: 'expanded'
 }));
 
+/**
+ * Serve content
+ */
 //Static content
 app.use(express.static(__dirname + '/public'));
 
@@ -31,6 +52,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(require('./controllers'));
 
+/**
+ * Start server
+ */
 app.listen(Globals.config.port, function() {
   console.log('Listening on port ' + Globals.config.port)
 });
