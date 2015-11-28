@@ -1,6 +1,6 @@
 {
   "@context": {
-    "vocab": "http://localhost:3333/vocab#",
+    "vocab": Globals.vocabularies.interoperability + "vocab#",
     "hydra": "http://www.w3.org/ns/hydra/core#",
     "ApiDocumentation": "hydra:ApiDocumentation",
     "property": {
@@ -40,7 +40,7 @@
       "@type": "@id"
     }
   },
-  "@id": "http://localhost:3333/vocab",
+  "@id": Globals.vocabularies.interoperability + "vocab",
   "@type": "ApiDocumentation",
   "entrypoint": "http://localhost:3333/",
   "supportedClass": [
