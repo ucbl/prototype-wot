@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/hydra.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/hydra.jsonld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/interoperability.js" afterPath="$PROJECT_DIR$/controllers/interoperability.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/interoperability.js" afterPath="$PROJECT_DIR$/models/interoperability.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
@@ -31,59 +33,83 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1238" max-vertical-offset="1980">
-              <caret line="103" column="27" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.56738544" vertical-offset="119" max-vertical-offset="1820">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
-                <element signature="e#1420#1767#0" expanded="false" />
-                <element signature="e#1913#2264#0" expanded="false" />
-                <element signature="e#2960#3185#0" expanded="false" />
-                <element signature="e#3370#3595#0" expanded="false" />
-                <element signature="e#3723#3951#0" expanded="false" />
-                <element signature="e#4158#5591#0" expanded="false" />
-                <element signature="e#5673#9108#0" expanded="false" />
-                <element signature="e#9191#10275#0" expanded="false" />
-                <element signature="e#10775#10846#0" expanded="false" />
-                <element signature="e#10916#11196#0" expanded="false" />
+                <element signature="e#573#859#0" expanded="false" />
+                <element signature="e#1413#1760#0" expanded="false" />
+                <element signature="e#1906#2257#0" expanded="false" />
+                <element signature="e#2953#3178#0" expanded="false" />
+                <element signature="e#3363#3588#0" expanded="false" />
+                <element signature="e#3716#3944#0" expanded="false" />
+                <element signature="e#4151#5584#0" expanded="false" />
+                <element signature="e#5666#9101#0" expanded="false" />
+                <element signature="e#9184#10268#0" expanded="false" />
+                <element signature="e#10768#10839#0" expanded="false" />
+                <element signature="e#10909#11189#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hydra.jsonld" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hydra.jsonld" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/interoperability/hydra.jsonld">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13342318" vertical-offset="1" max-vertical-offset="4100">
-              <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="738" max-vertical-offset="1660">
+              <caret line="691" column="26" selection-start-line="691" selection-start-column="26" selection-end-line="691" selection-end-column="26" />
               <folding>
                 <element signature="n#!!block;n#@context#0;n#!!top" expanded="false" />
+                <element signature="e#1287#1509#0" expanded="false" />
+                <element signature="e#1515#2312#0" expanded="false" />
                 <element signature="e#1733#2306#0" expanded="false" />
+                <element signature="e#2318#5072#0" expanded="false" />
                 <element signature="e#2557#2845#0" expanded="false" />
                 <element signature="e#2874#5066#0" expanded="false" />
+                <element signature="e#5078#5816#0" expanded="false" />
                 <element signature="e#5262#5810#0" expanded="false" />
                 <element signature="e#5822#7645#0" expanded="false" />
+                <element signature="e#7651#8406#0" expanded="false" />
                 <element signature="e#7843#8400#0" expanded="false" />
+                <element signature="e#8412#9701#0" expanded="false" />
                 <element signature="e#8606#9695#0" expanded="false" />
+                <element signature="e#9707#10996#0" expanded="false" />
                 <element signature="e#9921#10990#0" expanded="false" />
+                <element signature="e#11002#11802#0" expanded="false" />
                 <element signature="e#11194#11796#0" expanded="false" />
+                <element signature="e#11808#12362#0" expanded="false" />
                 <element signature="e#12045#12356#0" expanded="false" />
+                <element signature="e#12368#12923#0" expanded="false" />
                 <element signature="e#12608#12917#0" expanded="false" />
+                <element signature="e#12929#13569#0" expanded="false" />
                 <element signature="e#13184#13563#0" expanded="false" />
+                <element signature="e#13575#14207#0" expanded="false" />
                 <element signature="e#13822#14201#0" expanded="false" />
+                <element signature="e#14213#14785#0" expanded="false" />
                 <element signature="e#14451#14779#0" expanded="false" />
+                <element signature="e#14791#15293#0" expanded="false" />
                 <element signature="e#14989#15287#0" expanded="false" />
+                <element signature="e#15299#15833#0" expanded="false" />
                 <element signature="e#15524#15827#0" expanded="false" />
+                <element signature="e#15839#16379#0" expanded="false" />
                 <element signature="e#16067#16373#0" expanded="false" />
+                <element signature="e#16385#16915#0" expanded="false" />
                 <element signature="e#16603#16909#0" expanded="false" />
+                <element signature="e#16921#17446#0" expanded="false" />
                 <element signature="e#17143#17440#0" expanded="false" />
+                <element signature="e#17452#18001#0" expanded="false" />
                 <element signature="e#17682#17995#0" expanded="false" />
+                <element signature="e#18007#18556#0" expanded="false" />
                 <element signature="e#18237#18550#0" expanded="false" />
+                <element signature="e#18562#19112#0" expanded="false" />
                 <element signature="e#18796#19106#0" expanded="false" />
+                <element signature="e#19118#19663#0" expanded="false" />
                 <element signature="e#19349#19657#0" expanded="false" />
                 <element signature="e#19897#20218#0" expanded="false" />
-                <element signature="e#20247#22306#0" expanded="false" />
+                <element signature="e#20610#20973#0" expanded="false" />
+                <element signature="e#21344#21716#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -122,8 +148,8 @@
       <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9310346" vertical-offset="1632" max-vertical-offset="3540">
-              <caret line="93" column="97" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="97" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3220">
+              <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -213,7 +239,6 @@
         <option value="$PROJECT_DIR$/views/interoperability/objectSimple.jade" />
         <option value="$PROJECT_DIR$/public/interoperability-public/css/fonts/google-fonts.css" />
         <option value="$PROJECT_DIR$/public/interoperability-public/js/lib/jquery-2.1.4.min.js" />
-        <option value="$PROJECT_DIR$/models/interoperability.js" />
         <option value="$PROJECT_DIR$/public/interoperability-public/js/public.js" />
         <option value="$PROJECT_DIR$/middleware/corsHeaders.js" />
         <option value="$PROJECT_DIR$/middleware/varyHeader.js" />
@@ -230,8 +255,9 @@
         <option value="$PROJECT_DIR$/middleware/initVariables.js" />
         <option value="$PROJECT_DIR$/controllers/index.js" />
         <option value="$PROJECT_DIR$/controllers/ontology.js" />
-        <option value="$PROJECT_DIR$/controllers/interoperability.js" />
         <option value="$PROJECT_DIR$/data/interoperability/hydra.jsonld" />
+        <option value="$PROJECT_DIR$/models/interoperability.js" />
+        <option value="$PROJECT_DIR$/controllers/interoperability.js" />
       </list>
     </option>
   </component>
@@ -602,12 +628,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00170" summary="Try with interoperability layer complete">
-      <created>1448620474833</created>
-      <option name="number" value="00170" />
-      <option name="project" value="LOCAL" />
-      <updated>1448620474833</updated>
-    </task>
     <task id="LOCAL-00171" summary="Try with interoperability layer complete">
       <created>1448620610115</created>
       <option name="number" value="00171" />
@@ -896,7 +916,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448736349722</updated>
     </task>
-    <option name="localTasksCounter" value="219" />
+    <task id="LOCAL-00219" summary="Try with interoperability layer complete">
+      <created>1448736683874</created>
+      <option name="number" value="00219" />
+      <option name="project" value="LOCAL" />
+      <updated>1448736683874</updated>
+    </task>
+    <option name="localTasksCounter" value="220" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1313,33 +1339,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1238" max-vertical-offset="1980">
-          <caret line="103" column="27" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
-          <folding>
-            <element signature="e#1420#1767#0" expanded="false" />
-            <element signature="e#1913#2264#0" expanded="false" />
-            <element signature="e#2960#3185#0" expanded="false" />
-            <element signature="e#3370#3595#0" expanded="false" />
-            <element signature="e#3723#3951#0" expanded="false" />
-            <element signature="e#4158#5591#0" expanded="false" />
-            <element signature="e#5673#9108#0" expanded="false" />
-            <element signature="e#9191#10275#0" expanded="false" />
-            <element signature="e#10775#10846#0" expanded="false" />
-            <element signature="e#10916#11196#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/interoperability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9310346" vertical-offset="1632" max-vertical-offset="3540">
-          <caret line="93" column="97" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="97" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/interoperability/objectSimple.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34437087" vertical-offset="0" max-vertical-offset="755">
@@ -1347,14 +1346,6 @@
           <folding>
             <element signature="e#0#43#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/ontology/composedFunctionalities.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="742">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1368,35 +1359,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/interoperability/hydra.jsonld">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13342318" vertical-offset="1" max-vertical-offset="4100">
-          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="738" max-vertical-offset="1660">
+          <caret line="691" column="26" selection-start-line="691" selection-start-column="26" selection-end-line="691" selection-end-column="26" />
           <folding>
             <element signature="n#!!block;n#@context#0;n#!!top" expanded="false" />
+            <element signature="e#1287#1509#0" expanded="false" />
+            <element signature="e#1515#2312#0" expanded="false" />
             <element signature="e#1733#2306#0" expanded="false" />
+            <element signature="e#2318#5072#0" expanded="false" />
             <element signature="e#2557#2845#0" expanded="false" />
             <element signature="e#2874#5066#0" expanded="false" />
+            <element signature="e#5078#5816#0" expanded="false" />
             <element signature="e#5262#5810#0" expanded="false" />
             <element signature="e#5822#7645#0" expanded="false" />
+            <element signature="e#7651#8406#0" expanded="false" />
             <element signature="e#7843#8400#0" expanded="false" />
+            <element signature="e#8412#9701#0" expanded="false" />
             <element signature="e#8606#9695#0" expanded="false" />
+            <element signature="e#9707#10996#0" expanded="false" />
             <element signature="e#9921#10990#0" expanded="false" />
+            <element signature="e#11002#11802#0" expanded="false" />
             <element signature="e#11194#11796#0" expanded="false" />
+            <element signature="e#11808#12362#0" expanded="false" />
             <element signature="e#12045#12356#0" expanded="false" />
+            <element signature="e#12368#12923#0" expanded="false" />
             <element signature="e#12608#12917#0" expanded="false" />
+            <element signature="e#12929#13569#0" expanded="false" />
             <element signature="e#13184#13563#0" expanded="false" />
+            <element signature="e#13575#14207#0" expanded="false" />
             <element signature="e#13822#14201#0" expanded="false" />
+            <element signature="e#14213#14785#0" expanded="false" />
             <element signature="e#14451#14779#0" expanded="false" />
+            <element signature="e#14791#15293#0" expanded="false" />
             <element signature="e#14989#15287#0" expanded="false" />
+            <element signature="e#15299#15833#0" expanded="false" />
             <element signature="e#15524#15827#0" expanded="false" />
+            <element signature="e#15839#16379#0" expanded="false" />
             <element signature="e#16067#16373#0" expanded="false" />
+            <element signature="e#16385#16915#0" expanded="false" />
             <element signature="e#16603#16909#0" expanded="false" />
+            <element signature="e#16921#17446#0" expanded="false" />
             <element signature="e#17143#17440#0" expanded="false" />
+            <element signature="e#17452#18001#0" expanded="false" />
             <element signature="e#17682#17995#0" expanded="false" />
+            <element signature="e#18007#18556#0" expanded="false" />
             <element signature="e#18237#18550#0" expanded="false" />
+            <element signature="e#18562#19112#0" expanded="false" />
             <element signature="e#18796#19106#0" expanded="false" />
+            <element signature="e#19118#19663#0" expanded="false" />
             <element signature="e#19349#19657#0" expanded="false" />
             <element signature="e#19897#20218#0" expanded="false" />
-            <element signature="e#20247#22306#0" expanded="false" />
+            <element signature="e#20610#20973#0" expanded="false" />
+            <element signature="e#21344#21716#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/interoperability.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3220">
+          <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ontology/composedFunctionalities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="742">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56738544" vertical-offset="119" max-vertical-offset="1820">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="e#573#859#0" expanded="false" />
+            <element signature="e#1413#1760#0" expanded="false" />
+            <element signature="e#1906#2257#0" expanded="false" />
+            <element signature="e#2953#3178#0" expanded="false" />
+            <element signature="e#3363#3588#0" expanded="false" />
+            <element signature="e#3716#3944#0" expanded="false" />
+            <element signature="e#4151#5584#0" expanded="false" />
+            <element signature="e#5666#9101#0" expanded="false" />
+            <element signature="e#9184#10268#0" expanded="false" />
+            <element signature="e#10768#10839#0" expanded="false" />
+            <element signature="e#10909#11189#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -25,12 +25,12 @@ router.get('/', function(request, response, next) {
 
 // Sends the collection of known objects
 router.get('/platform', function(request, response, next) {
-    var platform = interoperabilityModel.getPlatform();
+    var platform = interoperabilityModel.platform;
     if (request.accepts('html')) {
         response.render('interoperability/platform', {platform: platform});
     } else {
         jsonldHeaders(request, response, next);
-        response.end(JSON.stringify((require("../views/objectsSimple")(platform))));
+        response.end(JSON.stringify(require("../views/objectsSimple")(platform)));
     }
 });
 

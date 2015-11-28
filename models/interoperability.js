@@ -24,32 +24,16 @@
             "object": Globals.vocabularies.interoperability + "object"
         },
 
-        //Interoperability collection
-        "getPlatform": function() {
-            var result = {
-                '@context': Globals.vocabularies.interoperability + 'context/Collection',
-                '@type': 'hydra:Collection',
+        //Interoperability platform
+        "platform": function() {
+            return {
+                '@context': Globals.vocabularies.interoperability + 'context/Class',
+                '@type': 'hydra:Class',
                 '@id': Globals.vocabularies.interoperability + "platform",
-                'objects': []
+                'description': "Access to the available object collections",
+                'objects': Globals.vocabularies.interoperability + "platform/objects",
+                'connected-objects': Globals.vocabularies.interoperability + "platform/connected-objects"
             };
-            for(var i in knownObjects) {
-                result.objects.push(knownObjects[i]);
-            }
-            return result;
-        },
-
-        //Interoperability collection
-        "getPlatform": function() {
-            var result = {
-                '@context': Globals.vocabularies.interoperability + 'context/Collection',
-                '@type': 'hydra:Collection',
-                '@id': Globals.vocabularies.interoperability + "platform",
-                'objects': []
-            };
-            for(var i in knownObjects) {
-                result.objects.push(knownObjects[i]);
-            }
-            return result;
         },
 
         //Interoperability collection

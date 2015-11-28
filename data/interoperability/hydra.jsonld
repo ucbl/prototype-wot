@@ -668,7 +668,7 @@
       "supportedProperty": [
         {
           "property": {
-            "@id": "vocab:Collection",
+            "@id": "vocab:EntryPoint/platform",
             "@type": "hydra:Class",
             "label": "Interoperability platform",
             "description": "List of all the objects known by the platform",
@@ -679,7 +679,7 @@
                 "@id": "_:platform",
                 "@type": "hydra:Operation",
                 "method": "GET",
-                "label": "List of all the known objects",
+                "label": "List all known objects",
                 "description": null,
                 "expects": null,
                 "returns": "hydra:Collection",
@@ -687,35 +687,33 @@
               }
             ]
           },
-          "supportedProperty": [
-            {
-              "property": {
-                "@id": "vocab:Collection",
-                "@type": "hydra:Class",
-                "label": "Connected objects",
-                "description": "The list of objects connected actually connected to the platform",
-                "domain": "vocab:EntryPoint",
-                "range": "hydra:Collection",
-                "supportedOperation": [
-                  {
-                    "@id": "_:connected",
-                    "@type": "hydra:Operation",
-                    "method": "GET",
-                    "label": "List all the connected objects",
-                    "description": null,
-                    "expects": null,
-                    "returns": "hydra:Collection",
-                    "statusCodes": []
-                  }
-                ]
-              },
-              "hydra:title": "connected",
-              "hydra:description": "List of the objects connected to the platform.",
-              "required": null,
-              "readonly": true,
-              "writeonly": false
-            }
-          ],
+
+          "property": {
+            "@id": "vocab:platform",
+            "@type": "hydra:Collection",
+            "label": "Connected objects",
+            "description": "The list of objects connected actually connected to the platform",
+            "domain": "vocab:EntryPoint",
+            "range": "hydra:Collection",
+            "supportedOperation": [
+              {
+                "@id": "_:connected",
+                "@type": "hydra:Operation",
+                "method": "GET",
+                "label": "List all the connected objects",
+                "description": null,
+                "expects": null,
+                "returns": "hydra:Collection",
+                "statusCodes": []
+              }
+            ]
+          },
+          "hydra:title": "connected",
+          "hydra:description": "List of the objects connected to the platform.",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
           "hydra:title": "platform",
           "hydra:description": "List of all the known objects.",
           "required": null,
