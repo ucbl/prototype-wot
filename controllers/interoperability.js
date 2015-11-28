@@ -248,7 +248,7 @@ router.get('/vocab', function(request, response, next) {
     var hydraLocation = __dirname + '/../data/interoperability/hydra.jsonld';
 
     fs.readFile(hydraLocation, 'utf8', function (error, data) {
-        response.end(data.replace("__interoperability__", Globals.vocabularies.interoperability));
+        response.end(data.replaceAll("__interoperability__", Globals.vocabularies.interoperability));
     });
 });
 
