@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/interoperability-public/css/sass/reset.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/interoperability-public/css/sass/public.scss" afterPath="$PROJECT_DIR$/public/interoperability-public/css/sass/public.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
@@ -72,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57591623" vertical-offset="240" max-vertical-offset="1200">
+            <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1200">
               <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
               <folding>
                 <element signature="e#310#339#0" expanded="false" />
@@ -90,8 +91,18 @@
       <file leaf-file-name="public.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/interoperability-public/css/sass/public.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0925927" vertical-offset="2485" max-vertical-offset="3240">
-              <caret line="138" column="11" selection-start-line="138" selection-start-column="9" selection-end-line="138" selection-end-column="11" />
+            <state vertical-scroll-proportion="4.0740743" vertical-offset="480" max-vertical-offset="3240">
+              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reset.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/interoperability-public/css/sass/reset.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.08608321" vertical-offset="0" max-vertical-offset="860">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -174,7 +185,6 @@
         <option value="$PROJECT_DIR$/middleware/corsHeaders.js" />
         <option value="$PROJECT_DIR$/middleware/varyHeader.js" />
         <option value="$PROJECT_DIR$/public/interoperability-public/css/stylesheets/public.css" />
-        <option value="$PROJECT_DIR$/public/interoperability-public/css/sass/public.scss" />
         <option value="$PROJECT_DIR$/public/functionalities-public/index.html" />
         <option value="$PROJECT_DIR$/public/functionalities-public/css/sass/public.scss" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -182,6 +192,8 @@
         <option value="$PROJECT_DIR$/public/css/test.txt" />
         <option value="$PROJECT_DIR$/public/interoperability-public/index.html" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/public/interoperability-public/css/sass/public.scss" />
+        <option value="$PROJECT_DIR$/public/interoperability-public/css/sass/reset.scss" />
       </list>
     </option>
   </component>
@@ -549,12 +561,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00154" summary="Try with interoperability layer complete">
-      <created>1448578159722</created>
-      <option name="number" value="00154" />
-      <option name="project" value="LOCAL" />
-      <updated>1448578159722</updated>
-    </task>
     <task id="LOCAL-00155" summary="Try with interoperability layer complete">
       <created>1448578305370</created>
       <option name="number" value="00155" />
@@ -843,7 +849,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448709308757</updated>
     </task>
-    <option name="localTasksCounter" value="203" />
+    <task id="LOCAL-00203" summary="Try with interoperability layer complete">
+      <created>1448709379180</created>
+      <option name="number" value="00203" />
+      <option name="project" value="LOCAL" />
+      <updated>1448709379180</updated>
+    </task>
+    <option name="localTasksCounter" value="204" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -904,13 +916,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/ontology/functionalities/prefixes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/functionalities/hydra.jsonld">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6380">
@@ -1261,14 +1266,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/interoperability-public/css/sass/public.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0925927" vertical-offset="2485" max-vertical-offset="3240">
-          <caret line="138" column="11" selection-start-line="138" selection-start-column="9" selection-end-line="138" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
@@ -1305,7 +1302,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57591623" vertical-offset="240" max-vertical-offset="1200">
+        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1200">
           <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
           <folding>
             <element signature="e#310#339#0" expanded="false" />
@@ -1313,6 +1310,22 @@
             <element signature="e#1465#1489#0" expanded="false" />
             <element signature="e#1690#1713#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/interoperability-public/css/sass/public.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.0740743" vertical-offset="480" max-vertical-offset="3240">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/interoperability-public/css/sass/reset.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08608321" vertical-offset="0" max-vertical-offset="860">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
