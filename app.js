@@ -37,10 +37,11 @@ app.use(require('./middleware/varyHeader'));
 
 //Generate CSS from SASS
 app.use('/css/stylesheet', sassMiddleware({
-    src: __dirname + '/public/css/sass',
+    src: __dirname + '/public/interoperability-public/css/sass',
     dest: __dirname + '/public/css/stylesheets',
     debug: true,
-    outputStyle: 'expanded'
+    outputStyle: 'expanded',
+    error: function() {console.log("SASS Error.");}
 }));
 
 /**
