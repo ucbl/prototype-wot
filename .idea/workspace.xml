@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/index.js" afterPath="$PROJECT_DIR$/controllers/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public\css\stylesheets\public.css" afterPath="$PROJECT_DIR$/public/css/stylesheets/public_old.css" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,14 +76,24 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60209423" vertical-offset="300" max-vertical-offset="1140">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.20942408" vertical-offset="0" max-vertical-offset="1180">
+              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
               <folding>
-                <element signature="e#194#223#0" expanded="false" />
-                <element signature="e#344#375#0" expanded="false" />
-                <element signature="e#1271#1295#0" expanded="false" />
-                <element signature="e#1496#1519#0" expanded="false" />
+                <element signature="e#312#341#0" expanded="false" />
+                <element signature="e#462#493#0" expanded="false" />
+                <element signature="e#1389#1413#0" expanded="false" />
+                <element signature="e#1614#1637#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="public.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/interoperability-public/css/sass/public.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.0925927" vertical-offset="2485" max-vertical-offset="3240">
+              <caret line="138" column="11" selection-start-line="138" selection-start-column="9" selection-end-line="138" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -92,10 +101,10 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="380">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
+              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
               <folding>
-                <element signature="e#494#530#0" expanded="false" />
+                <element signature="e#320#356#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -410,180 +419,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="functionalities-public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="functionalities-public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="functionalities-public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lljson" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="functionalities-public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lljson" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="functionalities-public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lljson" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="functionalities-public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="functionalities-public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -760,12 +595,6 @@
       <created>1448107521951</created>
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
-    </task>
-    <task id="LOCAL-00144" summary="Try with interoperability layer complete">
-      <created>1448555702059</created>
-      <option name="number" value="00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1448555702059</updated>
     </task>
     <task id="LOCAL-00145" summary="Try with interoperability layer complete">
       <created>1448555853623</created>
@@ -1055,7 +884,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448707342649</updated>
     </task>
-    <option name="localTasksCounter" value="193" />
+    <task id="LOCAL-00193" summary="Try with interoperability layer complete">
+      <created>1448708121195</created>
+      <option name="number" value="00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1448708121196</updated>
+    </task>
+    <option name="localTasksCounter" value="194" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1413,14 +1248,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/interoperability-public/css/sass/public.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5668016" vertical-offset="2380" max-vertical-offset="3240">
-          <caret line="133" column="26" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/interoperability-public/js/public.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
@@ -1504,25 +1331,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/interoperability-public/css/sass/public.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0925927" vertical-offset="2485" max-vertical-offset="3240">
+          <caret line="138" column="11" selection-start-line="138" selection-start-column="9" selection-end-line="138" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="380">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
           <folding>
-            <element signature="e#494#530#0" expanded="false" />
+            <element signature="e#320#356#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60209423" vertical-offset="300" max-vertical-offset="1140">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.20942408" vertical-offset="0" max-vertical-offset="1180">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
           <folding>
-            <element signature="e#194#223#0" expanded="false" />
-            <element signature="e#344#375#0" expanded="false" />
-            <element signature="e#1271#1295#0" expanded="false" />
-            <element signature="e#1496#1519#0" expanded="false" />
+            <element signature="e#312#341#0" expanded="false" />
+            <element signature="e#462#493#0" expanded="false" />
+            <element signature="e#1389#1413#0" expanded="false" />
+            <element signature="e#1614#1637#0" expanded="false" />
           </folding>
         </state>
       </provider>

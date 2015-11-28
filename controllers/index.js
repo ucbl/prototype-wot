@@ -1,9 +1,6 @@
 (function(module) {
     var express = require('express'),
-        router = express.Router(),
-        Globals = require('../models/globals'),
-        interoperabilityModel = require('../models/interoperability'),
-        ontologyModel = require('../models/ontology');
+        router = express.Router();
 
     router.use('/interoperability', require('./interoperability'));
     router.use('/code-repository', require('./code-repository'));
