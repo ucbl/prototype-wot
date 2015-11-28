@@ -1,7 +1,4 @@
 {
-  "@id": "http://localhost:3333/vocab",
-  "@type": "ApiDocumentation",
-  "entrypoint": "http://localhost:3333/",
   "@context": {
     "vocab": "http://localhost:3333/vocab#",
     "hydra": "http://www.w3.org/ns/hydra/core#",
@@ -43,6 +40,9 @@
       "@type": "@id"
     }
   },
+  "@id": "http://localhost:3333/vocab",
+  "@type": "ApiDocumentation",
+  "entrypoint": "http://localhost:3333/",
   "supportedClass": [
     {
       "@id": "http://www.w3.org/ns/hydra/core#Resource",
@@ -715,7 +715,7 @@
               "readonly": true,
               "writeonly": false
             }
-          ]
+          ],
           "hydra:title": "platform",
           "hydra:description": "List of all the known objects.",
           "required": null,
