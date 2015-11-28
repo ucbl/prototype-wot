@@ -160,6 +160,7 @@ h2 {
 .object {
   width: 25%;
   float: left;
+  padding-top: 10px;
 }
 /* line 119, ../sass/public.scss */
 .object .objectIns {

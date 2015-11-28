@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/interoperability-public/css/stylesheets/public.css" afterPath="$PROJECT_DIR$/public/interoperability-public/css/stylesheets/public.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/interoperability-public/css/sass/public.scss" afterPath="$PROJECT_DIR$/public/interoperability-public/css/sass/public.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
@@ -17,7 +16,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="E:\Projets\Test_node_MVC\prototype-wot-js-v2" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -87,8 +86,8 @@
       <file leaf-file-name="public.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/interoperability-public/css/stylesheets/public.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.890511" vertical-offset="2472" max-vertical-offset="4120">
-              <caret line="148" column="18" selection-start-line="148" selection-start-column="18" selection-end-line="148" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.4379562" vertical-offset="3000" max-vertical-offset="4140">
+              <caret line="162" column="20" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -610,12 +609,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00135" summary="Try with interoperability layer complete">
-      <created>1448548228141</created>
-      <option name="number" value="00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1448548228141</updated>
-    </task>
     <task id="LOCAL-00136" summary="Try with interoperability layer complete">
       <created>1448548632429</created>
       <option name="number" value="00136" />
@@ -904,7 +897,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448667283752</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="Try with interoperability layer complete">
+      <created>1448668663148</created>
+      <option name="number" value="00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1448668663148</updated>
+    </task>
+    <option name="localTasksCounter" value="185" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1361,8 +1360,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/interoperability-public/css/stylesheets/public.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.890511" vertical-offset="2472" max-vertical-offset="4120">
-          <caret line="148" column="18" selection-start-line="148" selection-start-column="18" selection-end-line="148" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.4379562" vertical-offset="3000" max-vertical-offset="4140">
+          <caret line="162" column="20" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="20" />
           <folding />
         </state>
       </provider>
