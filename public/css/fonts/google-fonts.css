@@ -3,18 +3,18 @@
     font-family: 'Muli';
     font-style: normal;
     font-weight: 300;
-    src: local('Muli Light'), local('Muli-Light'), url(http://fonts.gstatic.com/s/muli/v7/T-qN9Yh40TTJeenUALkjgg.woff2) format('woff2');
+    src: local('Muli Light'), local('Muli-Light'), url('T-qN9Yh40TTJeenUALkjgg.woff2') format('woff2');
 }
 @font-face {
     font-family: 'Muli';
     font-style: normal;
     font-weight: 400;
-    src: local('Muli'), url(http://fonts.gstatic.com/s/muli/v7/z6c3Zzm51I2zB_Gi7146Bg.woff2) format('woff2');
+    src: local('Muli'), url('z6c3Zzm51I2zB_Gi7146Bg.woff2') format('woff2');
 }
 /* Source: http://fonts.googleapis.com/css?family=Source+Code+Pro */
 @font-face {
     font-family: 'Source Code Pro';
     font-style: normal;
     font-weight: 400;
-    src: local('Source Code Pro'), local('SourceCodePro-Regular'), url(http://fonts.gstatic.com/s/sourcecodepro/v6/mrl8jkM18OlOQN8JLgasD9V_2ngZ8dMf8fLgjYEouxg.woff2) format('woff2');
+    src: local('Source Code Pro'), local('SourceCodePro-Regular'), url('mrl8jkM18OlOQN8JLgasD9V_2ngZ8dMf8fLgjYEouxg.woff2') format('woff2');
 }
