@@ -160,7 +160,6 @@ h2 {
 .object {
   width: 25%;
   float: left;
-  padding-top: 10px;
 }
 /* line 119, ../sass/public.scss */
 .object .objectIns {
@@ -173,6 +172,7 @@ h2 {
 .object .objectName {
   font-weight: bold;
   color: #0367b2;
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 /* line 130, ../sass/public.scss */

@@ -86,8 +86,8 @@
       <file leaf-file-name="public.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/interoperability-public/css/stylesheets/public.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4379562" vertical-offset="3000" max-vertical-offset="4140">
-              <caret line="162" column="20" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.8759124" vertical-offset="3000" max-vertical-offset="4140">
+              <caret line="174" column="0" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -609,12 +609,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00136" summary="Try with interoperability layer complete">
-      <created>1448548632429</created>
-      <option name="number" value="00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1448548632430</updated>
-    </task>
     <task id="LOCAL-00137" summary="Try with interoperability layer complete">
       <created>1448548768859</created>
       <option name="number" value="00137" />
@@ -903,7 +897,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448668663148</updated>
     </task>
-    <option name="localTasksCounter" value="185" />
+    <task id="LOCAL-00185" summary="Try with interoperability layer complete">
+      <created>1448669197285</created>
+      <option name="number" value="00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1448669197285</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1360,8 +1360,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/interoperability-public/css/stylesheets/public.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4379562" vertical-offset="3000" max-vertical-offset="4140">
-          <caret line="162" column="20" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.8759124" vertical-offset="3000" max-vertical-offset="4140">
+          <caret line="174" column="0" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
           <folding />
         </state>
       </provider>
