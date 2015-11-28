@@ -3,8 +3,8 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     sassMiddleware = require('node-sass-middleware'),
     Globals = require('./models/globals'),
-    interoperabilityModel = require('../models/interoperability'),
-    ontologyModel = require('../models/ontology');
+    interoperabilityModel = require('./models/interoperability'),
+    ontologyModel = require('./models/ontology');
 
 /**
  *  Templating engine
