@@ -36,7 +36,7 @@ app.use(require('./middleware/corsHeaders'));
 app.use(require('./middleware/varyHeader'));
 
 //Generate CSS from SASS
-app.use('/css/stylesheet', sassMiddleware({
+app.use('/css/stylesheets', sassMiddleware({
     src: __dirname + '/public/interoperability-public/css/sass',
     dest: __dirname + '/public/css/stylesheets',
     debug: true,

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
@@ -74,13 +75,13 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60209423" vertical-offset="240" max-vertical-offset="1200">
-              <caret line="39" column="54" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.57591623" vertical-offset="240" max-vertical-offset="1200">
+              <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
               <folding>
                 <element signature="e#310#339#0" expanded="false" />
                 <element signature="e#460#491#0" expanded="false" />
-                <element signature="e#1464#1488#0" expanded="false" />
-                <element signature="e#1689#1712#0" expanded="false" />
+                <element signature="e#1465#1489#0" expanded="false" />
+                <element signature="e#1690#1713#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -548,12 +549,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00153" summary="Try with interoperability layer complete">
-      <created>1448578032895</created>
-      <option name="number" value="00153" />
-      <option name="project" value="LOCAL" />
-      <updated>1448578032895</updated>
-    </task>
     <task id="LOCAL-00154" summary="Try with interoperability layer complete">
       <created>1448578159722</created>
       <option name="number" value="00154" />
@@ -842,7 +837,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448709302445</updated>
     </task>
-    <option name="localTasksCounter" value="202" />
+    <task id="LOCAL-00202" summary="Try with interoperability layer complete">
+      <created>1448709308756</created>
+      <option name="number" value="00202" />
+      <option name="project" value="LOCAL" />
+      <updated>1448709308757</updated>
+    </task>
+    <option name="localTasksCounter" value="203" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1304,13 +1305,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60209423" vertical-offset="240" max-vertical-offset="1200">
-          <caret line="39" column="54" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.57591623" vertical-offset="240" max-vertical-offset="1200">
+          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
           <folding>
             <element signature="e#310#339#0" expanded="false" />
             <element signature="e#460#491#0" expanded="false" />
-            <element signature="e#1464#1488#0" expanded="false" />
-            <element signature="e#1689#1712#0" expanded="false" />
+            <element signature="e#1465#1489#0" expanded="false" />
+            <element signature="e#1690#1713#0" expanded="false" />
           </folding>
         </state>
       </provider>
