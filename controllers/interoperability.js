@@ -257,9 +257,9 @@ router.get('/context', function(request, response, next) {
     response.end("{}");
 });
 
-router.get('/context/:context', function(request, response, next) {
+router.get('/context/:contextId', function(request, response, next) {
     jsonldHeaders(request, response, next);
-    response.end(interoperabilityModel.getHydraContext());
+    response.end(interoperabilityModel.getHydraContext(request.params.contextId));
 });
 
 module.exports = router;
