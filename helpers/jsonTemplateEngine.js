@@ -11,14 +11,12 @@
         "__interoperability__": Globals.vocabularies.interoperability
     };
 
-    module.exports = function(fileLocation) {
-        fs.readFile(fileLocation, 'utf8', function (error, data) {
-            for(var key in variables) {
-                while (data.indexOf(key) > -1) {
-                    data = data.replace(key, variables[key]);
-                }
+    module.exports = function(data) {
+        for(var key in variables) {
+            while (data.indexOf(key) > -1) {
+                data = data.replace(key, variables[key]);
             }
-            return data;
-        });
+        }
+        return data;
     };
 })(module);
