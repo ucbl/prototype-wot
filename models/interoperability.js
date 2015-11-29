@@ -73,19 +73,19 @@
             }
             for (var i in files) {
                 if (files[i]!='' && files[i].indexOf('.jsonld')>0) {
-                    var dataJson = {};
-                    // Read the JSON-LD file that contains all the information
-                    eval('dataJson = ' + fs.readFileSync(dataLocation + files[i], 'utf8') + ';');
+                    // Read the JSON-LD file that contains all the information and use the JSON template engine to replace globals
+                    var fileData = require("../helpers/jsonTemplateEngine")(fs.readFileSync(dataLocation + files[i], 'utf8'));
+                    var objectData = JSON.parse(fileData);
 
-                    cloneHelper(objectModel, dataJson);
-                    //this.objects.push(dataJson['@id']);
-                    knownObjects.push(dataJson);
+                    cloneHelper(objectModel, objectData);
+                    //this.objects.push(objectData['@id']);
+                    knownObjects.push(objectData);
 
                     //Debug logs
                     if(params && params.verbose) {
-                        console.log("New object: " + dataJson['@id'] + " -> " + dataJson.length + " properties.");
-                        for(var propName in dataJson) {
-                            console.log("property: " + propName + "\t" + dataJson[propName]);
+                        console.log("New object: " + objectData['@id'] + " -> " + objectData.length + " properties.");
+                        for(var propName in objectData) {
+                            console.log("property: " + propName + "\t" + objectData[propName]);
                         }
                     }
                 }

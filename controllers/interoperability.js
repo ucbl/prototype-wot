@@ -246,13 +246,15 @@ router.post('/object/:objectId/:capability', function(request, response, next) {
 router.get('/vocab', function(request, response, next) {
     jsonldHeaders(request, response, next);
     var hydraLocation = __dirname + '/../data/interoperability/hydra.jsonld';
-    var data = fs.readFileSync(hydraLocation, 'utf8');
-    response.end(require("../helpers/jsonTemplateEngine")(data));
+    fs.readFile(hydraLocation, 'utf8', function (error, data) {
+        response.end(require("../helpers/jsonTemplateEngine")(data));
+    });
 });
 
 // GET the hydra context
 router.get('/context', function(request, response, next) {
     jsonldHeaders(request, response, next);
+    //TODO: find what should be returned here
     response.end("{}");
 });
 
@@ -260,9 +262,8 @@ router.get('/context/:context', function(request, response, next) {
     jsonldHeaders(request, response, next);
     var contextLocation = __dirname + '/../data/interoperability/contexts/' + request.params.context + '.jsonld';
     fs.readFile(contextLocation, 'utf8', function (error, data) {
-        response.end(data);
+        response.end(require("../helpers/jsonTemplateEngine")(data));
     });
-    return true;
 });
 
 module.exports = router;

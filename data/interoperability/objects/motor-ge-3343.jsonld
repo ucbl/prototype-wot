@@ -1,20 +1,20 @@
 {
-  "@context" : Globals.vocabularies.interoperability + "context/CimaObject",
+  "@context" : "__interoperability__context/CimaObject",
   "@type": "http://www.w3.org/ns/hydra/core#Class",
-  "@id" : Globals.vocabularies.interoperability + "object/motor-ge-3343",
+  "@id" : "__interoperability__object/motor-ge-3343",
   "id" : "motor-ge-3343",
   "name": "Motor",
   "description": "A General Electric motor with the 3343 serial number",
 	"capabilities" : [
 		{
-      "@id": Globals.vocabularies.interoperability + "object/motor-ge-3343/activateMotor",
-      "@context" : Globals.vocabularies.interoperability + "context/Capability",
+      "@id": "__interoperability__object/motor-ge-3343/activateMotor",
+      "@context" : "__interoperability__context/Capability",
       "@type" : "http://www.w3.org/ns/hydra/core#Class",
       "ontology": Globals.vocabularies.capability + "activateMotor"
     },
     {
-      "@id": Globals.vocabularies.interoperability + "object/motor-ge-3343/informationMotor",
-      "@context" : Globals.vocabularies.interoperability + "context/Capability",
+      "@id": "__interoperability__object/motor-ge-3343/informationMotor",
+      "@context" : "__interoperability__context/Capability",
       "@type" : "http://www.w3.org/ns/hydra/core#Class",
       "ontology": Globals.vocabularies.capability + "informationMotor"
     }

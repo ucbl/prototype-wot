@@ -1,14 +1,14 @@
 {
-    "@context" : Globals.vocabularies.interoperability + "context/CimaObject",
+    "@context" : "__interoperability__context/CimaObject",
     "@type": "http://www.w3.org/ns/hydra/core#Class",
-    "@id" : Globals.vocabularies.interoperability + "object/gps-sony-2556",
+    "@id" : "__interoperability__object/gps-sony-2556",
     "id" : "gps-sony-2556",
     "name": "GPS",
     "description": "A Sony GPS with the serial number 2556",
     "capabilities" : [
 		{
-	      "@id": Globals.vocabularies.interoperability + "object/gps-sony-2556/gps",
-	      "@context" : Globals.vocabularies.interoperability + "context/Capability",
+	      "@id": "__interoperability__object/gps-sony-2556/gps",
+	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
           "ontology": Globals.vocabularies.capability + "gps"
 	    }
