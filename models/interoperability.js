@@ -180,10 +180,7 @@
          * Hydra description model
          */
         "getHydraVocabulary": function()  {
-            fs.readFile(fileLocations.hydraVocabFile, 'utf8', function (error, data) {
-                console.log(templateEngine("data: " + data));
-                return(data);
-            });
+            return fs.readFileSync(fileLocations.hydraVocabFile, 'utf8');
         },
 
         'getHydraContext': function(contextId) {
