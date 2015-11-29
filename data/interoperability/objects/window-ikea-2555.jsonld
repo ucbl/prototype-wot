@@ -10,13 +10,13 @@
 	      "@id": "__interoperability__object/window-ikea-2555/openWindow",
 	      "@type": "http://www.w3.org/ns/hydra/core#Class",
           "@context": "__interoperability__context/Capability",
-          "ontology": Globals.vocabularies.capability + "capability/openWindow"
+          "ontology": "__capability__"capability/openWindow"
 	    },
 		{
 	      "@id": "__interoperability__object/window-ikea-2555/closeWindow",
 	      "@type": "http://www.w3.org/ns/hydra/core#Class",
           "@context": "__interoperability__context/Capability",
-          "ontology": Globals.vocabularies.capability + Globals.vocabularies.capability + "closeWindow"
+          "ontology": Globals.vocabularies.capability + "__capability__"closeWindow"
 	    }
 	],
     "realObjectInfo": {

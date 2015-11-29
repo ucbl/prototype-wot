@@ -10,13 +10,13 @@
       "@id": "__interoperability__object/coolerheater-swirlwind-2665/temperatureDecrease",
       "@type": "http://www.w3.org/ns/hydra/core#Class",
       "@context" : "__interoperability__context/Capability",
-      "ontology": Globals.vocabularies.capability + "temperatureDecrease"
+      "ontology": "__capability__"temperatureDecrease"
     },
     {
       "@id": "__interoperability__object/coolerheater-swirlwind-2665/temperatureIncrease",
       "@type": "http://www.w3.org/ns/hydra/core#Class",
       "@context" : "__interoperability__context/Capability",
-      "ontology": Globals.vocabularies.capability + "temperatureIncrease"
+      "ontology": "__capability__"temperatureIncrease"
     }
 	],
     "realObjectInfo": {

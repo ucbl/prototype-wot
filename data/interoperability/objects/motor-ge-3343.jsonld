@@ -10,13 +10,13 @@
       "@id": "__interoperability__object/motor-ge-3343/activateMotor",
       "@context" : "__interoperability__context/Capability",
       "@type" : "http://www.w3.org/ns/hydra/core#Class",
-      "ontology": Globals.vocabularies.capability + "activateMotor"
+      "ontology": "__capability__"activateMotor"
     },
     {
       "@id": "__interoperability__object/motor-ge-3343/informationMotor",
       "@context" : "__interoperability__context/Capability",
       "@type" : "http://www.w3.org/ns/hydra/core#Class",
-      "ontology": Globals.vocabularies.capability + "informationMotor"
+      "ontology": "__capability__"informationMotor"
     }
 	],
   "realObjectInfo": {

@@ -10,7 +10,7 @@
           "@id": "__interoperability__object/heater-tesco-2336/temperatureIncrease",
           "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
-          "ontology": Globals.vocabularies.capability + "temperatureIncrease"
+          "ontology": "__capability__"temperatureIncrease"
         }
     ],
     "realObjectInfo": {

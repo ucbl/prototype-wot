@@ -10,43 +10,43 @@
 	      "@id": "__interoperability__object/phone-samsung-2554/call",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
-          "ontology": Globals.vocabularies.capability + "call"
+          "ontology": "__capability__"call"
 	    },
 		{
 	      "@id": "__interoperability__object/phone-samsung-2554/sms",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
-          "ontology": Globals.vocabularies.capability + "sms"
+          "ontology": "__capability__"sms"
 	    },
 		{
 	      "@id": "__interoperability__object/phone-samsung-2554/photo",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
-          "ontology": Globals.vocabularies.capability + "photo"
+          "ontology": "__capability__"photo"
 	    },
 		{
 	      "@id": "__interoperability__object/phone-samsung-2554/video",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
-          "ontology": Globals.vocabularies.capability + "video"
+          "ontology": "__capability__"video"
 	    },
 		{
 	      "@id": "__interoperability__object/phone-samsung-2554/startApp",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
-          "ontology": Globals.vocabularies.capability + "startApp"
+          "ontology": "__capability__"startApp"
 	    },
 		{
 	      "@id": "__interoperability__object/phone-samsung-2554/stopApp",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
-          "ontology": Globals.vocabularies.capability + "stopApp"
+          "ontology": "__capability__"stopApp"
 	    },
 		{
 	      "@id": "__interoperability__object/phone-samsung-2554/gps",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
-          "ontology": Globals.vocabularies.capability + "gps"
+          "ontology": "__capability__"gps"
 	    }
 	],
     "realObjectInfo": {
