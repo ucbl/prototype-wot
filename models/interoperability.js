@@ -82,20 +82,21 @@
             for (var i in files) {
                 if (files[i]!='' && files[i].indexOf('.jsonld')>0) {
                     // Read the JSON-LD file that contains all the information and use the JSON template engine to replace globals
-                    var fileData = templateEngine(fs.readFileSync(fileLocations.objectFileDir + files[i], 'utf8'));
-                    var objectData = JSON.parse(fileData);
+                    fs.readFile(fileLocations.objectFileDir + files[i], 'utf8', function(error, data) {
+                        var objectData = JSON.parse(templateEngine(data));
 
-                    cloneHelper(objectModel, objectData);
-                    //this.objects.push(objectData['@id']);
-                    knownObjects.push(objectData);
+                        cloneHelper(objectModel, objectData);
+                        //this.objects.push(objectData['@id']);
+                        knownObjects.push(objectData);
 
-                    //Debug logs
-                    if(params && params.verbose) {
-                        console.log("New object: " + objectData['@id'] + " -> " + objectData.length + " properties.");
-                        for(var propName in objectData) {
-                            console.log("property: " + propName + "\t" + objectData[propName]);
+                        //Debug logs
+                        if (params && params.verbose) {
+                            console.log("New object: " + objectData['@id'] + " -> " + objectData.length + " properties.");
+                            for (var propName in objectData) {
+                                console.log("property: " + propName + "\t" + objectData[propName]);
+                            }
                         }
-                    }
+                    });
                 }
             }
         },
