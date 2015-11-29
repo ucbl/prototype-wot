@@ -1,5 +1,5 @@
 //TODO: access this through global config
-var interoperabilityLayerUrl = '/interoperability/platform/objects';
+var interoperabilityLayerUrl = '/interoperability/object';
 
 $(document).ready(function() {
 	reloadObjects();

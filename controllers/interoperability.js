@@ -1,8 +1,10 @@
-//This file contains a mock of an interoperability platform that is supposed to provide access to the connected objects
+/**
+ * Created by Lionel on 22/11/2015.
+ * Controller for a mock of interoperability platform that provides access to the connected objects
+ */
 
 var express = require('express'),
     router = express.Router(),
-    fs = require('fs'),
     Globals = require('../models/globals'),
     interoperabilityModel = require('../models/interoperability'),
     capabilityModel = require('../models/capability'),
@@ -245,10 +247,7 @@ router.post('/object/:objectId/:capability', function(request, response, next) {
 // GET the hydra vocabulary
 router.get('/vocab', function(request, response, next) {
     jsonldHeaders(request, response, next);
-    var hydraLocation = __dirname + '/../data/interoperability/hydra.jsonld';
-    fs.readFile(hydraLocation, 'utf8', function (error, data) {
-        response.end(require("../helpers/jsonTemplateEngine")(data));
-    });
+    response.end(interoperabilityModel.getHydraVocabulary());
 });
 
 // GET the hydra context
@@ -260,10 +259,7 @@ router.get('/context', function(request, response, next) {
 
 router.get('/context/:context', function(request, response, next) {
     jsonldHeaders(request, response, next);
-    var contextLocation = __dirname + '/../data/interoperability/contexts/' + request.params.context + '.jsonld';
-    fs.readFile(contextLocation, 'utf8', function (error, data) {
-        response.end(require("../helpers/jsonTemplateEngine")(data));
-    });
+    response.end(interoperabilityModel.getHydraContext());
 });
 
 module.exports = router;

@@ -7,8 +7,17 @@
     var fs = require('fs'),
         Globals = require('./globals'),
         objectModel = require('./object'),
-        cloneHelper = require('../helpers/cloneHelper');
+        cloneHelper = require('../helpers/cloneHelper'),
+        templateEngine = require("../helpers/jsonTemplateEngine");
 
+    //local variable to retrieve data stored in files
+    var fileLocations = {
+        'hydraVocabFile': __dirname + '/../data/interoperability/hydra.jsonld',
+        'contextFileDir': __dirname + '/../data/interoperability/contexts/',
+        'objectFileDir': __dirname + '/../data/interoperability/objects/'
+    };
+
+    //Stores (at init) all the objects known by the platform, as JSON objects
     var knownObjects = [];
 
     module.exports = {
@@ -66,15 +75,14 @@
 
         // Loads all object descriptions and stores them in a list of known interoperability
         "loadObjects": function(params) {
-            var dataLocation = __dirname + '/../data/interoperability/objects/';
-            var files = fs.readdirSync(dataLocation);
+            var files = fs.readdirSync(fileLocations.objectFileDir);
             if(params && params.verbose) {
-                console.log("dataLocation: " + dataLocation + " -> " + files.length + " files.");
+                console.log("Object directory: " + fileLocations.objectFileDir + " -> " + files.length + " files.");
             }
             for (var i in files) {
                 if (files[i]!='' && files[i].indexOf('.jsonld')>0) {
                     // Read the JSON-LD file that contains all the information and use the JSON template engine to replace globals
-                    var fileData = require("../helpers/jsonTemplateEngine")(fs.readFileSync(dataLocation + files[i], 'utf8'));
+                    var fileData = templateEngine(fs.readFileSync(fileLocations.objectFileDir + files[i], 'utf8'));
                     var objectData = JSON.parse(fileData);
 
                     cloneHelper(objectModel, objectData);
@@ -151,6 +159,24 @@
                 }
             }
             return results;
+        },
+
+        /**
+         * Hydra description model
+         */
+        "getHydraVocabulary": function()  {
+            fs.readFile(fileLocations.hydraVocabFile, 'utf8', function (error, data) {
+                return(templateEngine(data));
+            });
+        },
+
+        'getHydraContext': function(contextId) {
+            fs.readFile(fileLocations.contextFileDir + contextId + '.jsonld', 'utf8', function (error, data) {
+                if(error) {
+                    return null;
+                }
+                return(templateEngine(data));
+            });
         }
     };
 })(module);
