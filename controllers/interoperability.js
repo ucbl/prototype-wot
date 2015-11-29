@@ -263,7 +263,7 @@ router.get('/context/:contextId', function(request, response, next) {
     if(result) {
         response.end(result);
     } else {
-        response.status(404);
+        response.sendStatus(404);
     }
 });
 
