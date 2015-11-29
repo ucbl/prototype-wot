@@ -246,10 +246,7 @@ router.post('/object/:objectId/:capability', function(request, response, next) {
 router.get('/vocab', function(request, response, next) {
     jsonldHeaders(request, response, next);
     var hydraLocation = __dirname + '/../data/interoperability/hydra.jsonld';
-
-    fs.readFile(hydraLocation, 'utf8', function (error, data) {
-        response.end(data.replaceAll("__interoperability__", Globals.vocabularies.interoperability));
-    });
+    response.end(require("../helpers/jsonTemplateEngine")(hydraLocation));
 });
 
 // GET the hydra context
