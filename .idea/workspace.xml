@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helpers/jsonTemplateEngine.js" afterPath="$PROJECT_DIR$/helpers/jsonTemplateEngine.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
@@ -31,20 +31,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="jsonTemplateEngine.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="jsonTemplateEngine.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/helpers/jsonTemplateEngine.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
-              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.54744524" vertical-offset="0" max-vertical-offset="560">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54744524" vertical-offset="0" max-vertical-offset="980">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="980">
               <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
               <folding>
                 <element signature="e#310#339#0" expanded="false" />
@@ -85,7 +85,7 @@
       <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="3740">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1440" max-vertical-offset="3740">
               <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
               <folding />
             </state>
@@ -150,7 +150,6 @@
         <option value="$PROJECT_DIR$/controllers/index.js" />
         <option value="$PROJECT_DIR$/controllers/ontology.js" />
         <option value="$PROJECT_DIR$/data/interoperability/hydra.jsonld" />
-        <option value="$PROJECT_DIR$/helpers/jsonTemplateEngine.js" />
         <option value="$PROJECT_DIR$/data/interoperability/objects/cooler-swirlwind-2443.jsonld" />
         <option value="$PROJECT_DIR$/data/interoperability/objects/coolerheater-swirlwind-2665.jsonld" />
         <option value="$PROJECT_DIR$/data/interoperability/objects/gps-sony-2556.jsonld" />
@@ -164,6 +163,7 @@
         <option value="$PROJECT_DIR$/models/interoperability.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/helpers/jsonTemplateEngine.js" />
       </list>
     </option>
   </component>
@@ -459,12 +459,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00185" summary="Try with interoperability layer complete">
-      <created>1448669197285</created>
-      <option name="number" value="00185" />
-      <option name="project" value="LOCAL" />
-      <updated>1448669197285</updated>
-    </task>
     <task id="LOCAL-00186" summary="Try with interoperability layer complete">
       <created>1448669265966</created>
       <option name="number" value="00186" />
@@ -753,7 +747,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448794565470</updated>
     </task>
-    <option name="localTasksCounter" value="234" />
+    <task id="LOCAL-00234" summary="Try with interoperability layer complete">
+      <created>1448795045401</created>
+      <option name="number" value="00234" />
+      <option name="project" value="LOCAL" />
+      <updated>1448795045401</updated>
+    </task>
+    <option name="localTasksCounter" value="235" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1169,14 +1169,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/interoperability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="3740">
-          <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/interoperability/objects/coolerheater-swirlwind-2665.jsonld">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.413794" vertical-offset="0" max-vertical-offset="640">
@@ -1185,10 +1177,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helpers/jsonTemplateEngine.js">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="980">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding>
+            <element signature="e#310#339#0" expanded="false" />
+            <element signature="e#460#491#0" expanded="false" />
+            <element signature="e#932#956#0" expanded="false" />
+            <element signature="e#1157#1180#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/interoperability.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="3740">
+          <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1201,16 +1206,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/helpers/jsonTemplateEngine.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54744524" vertical-offset="0" max-vertical-offset="980">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding>
-            <element signature="e#310#339#0" expanded="false" />
-            <element signature="e#460#491#0" expanded="false" />
-            <element signature="e#932#956#0" expanded="false" />
-            <element signature="e#1157#1180#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.54744524" vertical-offset="0" max-vertical-offset="560">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

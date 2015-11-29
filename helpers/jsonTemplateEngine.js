@@ -7,12 +7,12 @@
 (function (module) {
     var Globals = require("../models/globals");
 
-    var variables = {
-        "__interoperability__": Globals.vocabularies.interoperability,
-        "__capability__": Globals.vocabularies.capability
-    };
-
     module.exports = function(data) {
+        var variables = {
+            "__interoperability__": Globals.vocabularies.interoperability,
+            "__capability__": Globals.vocabularies.capability
+        };
+
         for(var key in variables) {
             while (data.indexOf(key) > -1) {
                 data = data.replace(key, variables[key]);
