@@ -2,9 +2,7 @@ var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
     sassMiddleware = require('node-sass-middleware'),
-    Globals = require('./models/globals'),
-    interoperabilityModel = require('./models/interoperability'),
-    ontologyModel = require('./models/ontology');
+    Globals = require('./models/globals');
 
 /**
  *  Templating engine
