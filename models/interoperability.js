@@ -184,7 +184,11 @@
         },
 
         'getHydraContext': function(contextId) {
-            return templateEngine(fs.readFileSync(fileLocations.contextFileDir + contextId + '.jsonld', 'utf8'));
+            try {
+                return templateEngine(fs.readFileSync(fileLocations.contextFileDir + contextId + '.jsonld', 'utf8'));
+            } catch (error) {
+                return null;
+            }
         }
     };
 })(module);

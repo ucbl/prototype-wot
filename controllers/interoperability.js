@@ -259,7 +259,12 @@ router.get('/context', function(request, response, next) {
 
 router.get('/context/:contextId', function(request, response, next) {
     jsonldHeaders(request, response, next);
-    response.end(interoperabilityModel.getHydraContext(request.params.contextId));
+    var result = interoperabilityModel.getHydraContext(request.params.contextId);
+    if(result) {
+        response.end(result);
+    } else {
+        response.status(404);
+    }
 });
 
 module.exports = router;
