@@ -10,7 +10,7 @@
 	      "@id": "__interoperability__object/sensor-ge-2442/temperatureSense",
 	      "@type": "http://www.w3.org/ns/hydra/core#Class",
           "@context" : "__interoperability__context/Capability",
-          "ontology": "__capability__"temperatureSense"
+          "ontology": "__capability__temperatureSense"
 	    }
 	],
     "realObjectInfo": {
