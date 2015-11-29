@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/middleware/initVariables.js" afterPath="$PROJECT_DIR$/middleware/initVariables.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
@@ -30,11 +31,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="jsonTemplateEngine.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jsonTemplateEngine.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/helpers/jsonTemplateEngine.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8029197" vertical-offset="0" max-vertical-offset="560">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
               <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="980">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding>
+                <element signature="e#310#339#0" expanded="false" />
+                <element signature="e#460#491#0" expanded="false" />
+                <element signature="e#937#961#0" expanded="false" />
+                <element signature="e#1162#1185#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="initVariables.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/middleware/initVariables.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.63503647" vertical-offset="12" max-vertical-offset="560">
+              <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -95,7 +121,6 @@
         <option value="$PROJECT_DIR$/public/interoperability-public/index.html" />
         <option value="$PROJECT_DIR$/public/functionalities-public/index.html" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/middleware/initVariables.js" />
         <option value="$PROJECT_DIR$/controllers/index.js" />
         <option value="$PROJECT_DIR$/controllers/ontology.js" />
         <option value="$PROJECT_DIR$/data/interoperability/hydra.jsonld" />
@@ -109,6 +134,7 @@
         <option value="$PROJECT_DIR$/data/interoperability/objects/motor-ge-3343.jsonld" />
         <option value="$PROJECT_DIR$/data/interoperability/objects/sensor-ge-2442.jsonld" />
         <option value="$PROJECT_DIR$/data/interoperability/objects/window-ikea-2555.jsonld" />
+        <option value="$PROJECT_DIR$/middleware/initVariables.js" />
       </list>
     </option>
   </component>
@@ -187,6 +213,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="middleware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="helpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -220,28 +260,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="interoperability" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interoperability" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="objects" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -357,12 +375,6 @@
       <created>1448107521951</created>
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
-    </task>
-    <task id="LOCAL-00181" summary="Try with interoperability layer complete">
-      <created>1448666754459</created>
-      <option name="number" value="00181" />
-      <option name="project" value="LOCAL" />
-      <updated>1448666754459</updated>
     </task>
     <task id="LOCAL-00182" summary="Try with interoperability layer complete">
       <created>1448666786032</created>
@@ -652,7 +664,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448790847535</updated>
     </task>
-    <option name="localTasksCounter" value="230" />
+    <task id="LOCAL-00230" summary="Try with interoperability layer complete">
+      <created>1448790884580</created>
+      <option name="number" value="00230" />
+      <option name="project" value="LOCAL" />
+      <updated>1448790884580</updated>
+    </task>
+    <option name="localTasksCounter" value="231" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -829,6 +847,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1495327" vertical-offset="0" max-vertical-offset="535">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -850,6 +871,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.03649635" vertical-offset="140" max-vertical-offset="920">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#451#1153#0" expanded="false" />
+            <element signature="e#1234#1501#0" expanded="false" />
+            <element signature="e#1590#1895#0" expanded="false" />
+            <element signature="e#1950#2095#0" expanded="false" />
+            <element signature="e#2220#2935#0" expanded="false" />
+            <element signature="e#3051#3536#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -937,20 +966,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/middleware/initVariables.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="227" max-vertical-offset="980">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
@@ -962,6 +977,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="4940">
           <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -997,6 +1013,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.1551723" vertical-offset="1823" max-vertical-offset="2380">
           <caret line="264" column="62" selection-start-line="264" selection-start-column="21" selection-end-line="264" selection-end-column="62" />
+          <folding>
+            <element signature="e#573#859#0" expanded="false" />
+            <element signature="e#2530#2881#0" expanded="false" />
+            <element signature="e#3320#3545#0" expanded="false" />
+            <element signature="e#3730#3955#0" expanded="false" />
+            <element signature="e#4083#4311#0" expanded="false" />
+            <element signature="e#4518#5951#0" expanded="false" />
+            <element signature="e#6033#9468#0" expanded="false" />
+            <element signature="e#9551#10635#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1073,8 +1099,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/helpers/jsonTemplateEngine.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8029197" vertical-offset="0" max-vertical-offset="560">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
           <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="980">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#310#339#0" expanded="false" />
+            <element signature="e#460#491#0" expanded="false" />
+            <element signature="e#937#961#0" expanded="false" />
+            <element signature="e#1162#1185#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/middleware/initVariables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63503647" vertical-offset="12" max-vertical-offset="560">
+          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
           <folding />
         </state>
       </provider>
