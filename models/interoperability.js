@@ -180,16 +180,11 @@
          * Hydra description model
          */
         "getHydraVocabulary": function()  {
-            return fs.readFileSync(fileLocations.hydraVocabFile, 'utf8');
+            return templateEngine(fs.readFileSync(fileLocations.hydraVocabFile, 'utf8'));
         },
 
         'getHydraContext': function(contextId) {
-            fs.readFile(fileLocations.contextFileDir + contextId + '.jsonld', 'utf8', function (error, data) {
-                if(error) {
-                    return null;
-                }
-                return(templateEngine(data));
-            });
+            return templateEngine(fs.readFileSync(fileLocations.contextFileDir + contextId + '.jsonld', 'utf8'));
         }
     };
 })(module);
