@@ -181,8 +181,8 @@
          */
         "getHydraVocabulary": function()  {
             fs.readFile(fileLocations.hydraVocabFile, 'utf8', function (error, data) {
-                console.log("data: " + data);
-                return(templateEngine(data));
+                console.log(templateEngine("data: " + data));
+                return(data);
             });
         },
 
