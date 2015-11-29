@@ -258,9 +258,9 @@ router.get('/context', function(request, response, next) {
 });
 
 router.get('/context/:contextId', function(request, response, next) {
-    jsonldHeaders(request, response, next);
     var result = interoperabilityModel.getHydraContext(request.params.contextId);
     if(result) {
+        jsonldHeaders(request, response, next);
         response.end(result);
     } else {
         response.sendStatus(404);

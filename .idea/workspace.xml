@@ -44,8 +44,8 @@
       <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.85835695" vertical-offset="3954" max-vertical-offset="4760">
-              <caret line="265" column="22" selection-start-line="265" selection-start-column="22" selection-end-line="265" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.88668555" vertical-offset="3934" max-vertical-offset="4760">
+              <caret line="265" column="33" selection-start-line="265" selection-start-column="33" selection-end-line="265" selection-end-column="33" />
               <folding>
                 <element signature="e#573#859#0" expanded="false" />
                 <element signature="e#2530#2881#0" expanded="false" />
@@ -470,12 +470,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00197" summary="Try with interoperability layer complete">
-      <created>1448708639065</created>
-      <option name="number" value="00197" />
-      <option name="project" value="LOCAL" />
-      <updated>1448708639065</updated>
-    </task>
     <task id="LOCAL-00198" summary="Try with interoperability layer complete">
       <created>1448708752023</created>
       <option name="number" value="00198" />
@@ -764,7 +758,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448803181758</updated>
     </task>
-    <option name="localTasksCounter" value="246" />
+    <task id="LOCAL-00246" summary="Try with interoperability layer complete">
+      <created>1448803279997</created>
+      <option name="number" value="00246" />
+      <option name="project" value="LOCAL" />
+      <updated>1448803279997</updated>
+    </task>
+    <option name="localTasksCounter" value="247" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1207,8 +1207,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.85835695" vertical-offset="3954" max-vertical-offset="4760">
-          <caret line="265" column="22" selection-start-line="265" selection-start-column="22" selection-end-line="265" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.88668555" vertical-offset="3934" max-vertical-offset="4760">
+          <caret line="265" column="33" selection-start-line="265" selection-start-column="33" selection-end-line="265" selection-end-column="33" />
           <folding>
             <element signature="e#573#859#0" expanded="false" />
             <element signature="e#2530#2881#0" expanded="false" />
