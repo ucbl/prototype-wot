@@ -17,7 +17,7 @@ app.set('view engine', 'jade');
  * Middleware functions
  */
 //Late initialization of global variables
-app.all('*', require('./middleware/initVariables'));
+app.use(require('./middleware/initVariables'));
 
 //Add CORS headers
 app.use(require('./middleware/corsHeaders'));
