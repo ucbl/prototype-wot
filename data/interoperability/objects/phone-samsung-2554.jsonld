@@ -10,43 +10,43 @@
 	      "@id": "__interoperability__object/phone-samsung-2554/call",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
-          "ontology": "__capability__"call"
+          "ontology": "__capability__call"
 	    },
 		{
 	      "@id": "__interoperability__object/phone-samsung-2554/sms",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
-          "ontology": "__capability__"sms"
+          "ontology": "__capability__sms"
 	    },
 		{
 	      "@id": "__interoperability__object/phone-samsung-2554/photo",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
-          "ontology": "__capability__"photo"
+          "ontology": "__capability__photo"
 	    },
 		{
 	      "@id": "__interoperability__object/phone-samsung-2554/video",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
-          "ontology": "__capability__"video"
+          "ontology": "__capability__video"
 	    },
 		{
 	      "@id": "__interoperability__object/phone-samsung-2554/startApp",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
-          "ontology": "__capability__"startApp"
+          "ontology": "__capability__startApp"
 	    },
 		{
 	      "@id": "__interoperability__object/phone-samsung-2554/stopApp",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
-          "ontology": "__capability__"stopApp"
+          "ontology": "__capability__stopApp"
 	    },
 		{
 	      "@id": "__interoperability__object/phone-samsung-2554/gps",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
-          "ontology": "__capability__"gps"
+          "ontology": "__capability__gps"
 	    }
 	],
     "realObjectInfo": {

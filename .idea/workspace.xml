@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/objects/cooler-swirlwind-2443.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/objects/cooler-swirlwind-2443.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/objects/coolerheater-swirlwind-2665.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/objects/coolerheater-swirlwind-2665.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/objects/gps-sony-2556.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/objects/gps-sony-2556.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/objects/heater-tesco-2336.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/objects/heater-tesco-2336.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helpers/jsonTemplateEngine.js" afterPath="$PROJECT_DIR$/helpers/jsonTemplateEngine.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/objects/motor-ge-3343.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/objects/motor-ge-3343.jsonld" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/objects/phone-samsung-2554.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/objects/phone-samsung-2554.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/objects/sensor-ge-2442.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/objects/sensor-ge-2442.jsonld" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/objects/window-ikea-2555.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/objects/window-ikea-2555.jsonld" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -498,12 +491,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00178" summary="Try with interoperability layer complete">
-      <created>1448634032461</created>
-      <option name="number" value="00178" />
-      <option name="project" value="LOCAL" />
-      <updated>1448634032461</updated>
-    </task>
     <task id="LOCAL-00179" summary="Try with interoperability layer complete">
       <created>1448637925331</created>
       <option name="number" value="00179" />
@@ -792,7 +779,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448790017255</updated>
     </task>
-    <option name="localTasksCounter" value="227" />
+    <task id="LOCAL-00227" summary="Try with interoperability layer complete">
+      <created>1448790326208</created>
+      <option name="number" value="00227" />
+      <option name="project" value="LOCAL" />
+      <updated>1448790326208</updated>
+    </task>
+    <option name="localTasksCounter" value="228" />
     <servers />
   </component>
   <component name="ToolWindowManager">
