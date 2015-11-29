@@ -1,6 +1,9 @@
 /**
  * Created by Lionel on 22/11/2015.
  * Model for the interoperability layer
+ * Maintains 2 lists :
+ * - known objects: loaded at init time, each object contains all the necessary information to process the object
+ * - connected objects: empty until the addObject method is called. Only contains references (ids) of the objects
  */
 (function(module) {
 
@@ -25,7 +28,7 @@
         "objects": [],
 
         /**Hydra descriptions**/
-        //Entrypoint
+        // Entrypoint
         "entryPoint": {
             "@context": Globals.vocabularies.interoperability + "context/EntryPoint",
             "@type": "hydra:EntryPoint",
@@ -33,7 +36,7 @@
             "object": Globals.vocabularies.interoperability + "object"
         },
 
-        //Interoperability platform
+        // Interoperability platform
         "platform": function() {
             return {
                 '@context': Globals.vocabularies.interoperability + 'context/Class',
@@ -45,7 +48,7 @@
             };
         },
 
-        //Interoperability collection
+        // Known objects collection
         "getKnownObjectCollection": function() {
             var result = {
                 '@context': Globals.vocabularies.interoperability + 'context/Collection',
@@ -59,7 +62,7 @@
             return result;
         },
 
-        //Interoperability collection
+        // Connected objects collection
         "getConnectedObjectCollection": function() {
             var result = {
                 '@context': Globals.vocabularies.interoperability + 'context/Collection',
@@ -73,7 +76,7 @@
             return result;
         },
 
-        // Loads all object descriptions and stores them in a list of known interoperability
+        // Loads all object descriptions and stores them in knownObjects
         "loadObjects": function(params) {
             var files = fs.readdirSync(fileLocations.objectFileDir);
             if(params && params.verbose) {
@@ -85,8 +88,9 @@
                     fs.readFile(fileLocations.objectFileDir + files[i], 'utf8', function(error, data) {
                         var objectData = JSON.parse(templateEngine(data));
 
+                        // Clone ObjectModel's methods and properties into objectData
                         cloneHelper(objectModel, objectData);
-                        //this.objects.push(objectData['@id']);
+                        // Add it to the list of known objects
                         knownObjects.push(objectData);
 
                         //Debug logs
@@ -102,16 +106,26 @@
         },
 
         // Adds an object to the list of connected ones
+        // Returns a boolean saying if the object is known and was not previously connected
         'addObject': function(objectId) {
-            this.objects.push(objectId);
+            if(this.findObjectById(objectId) && !this.isConnected(objectId)) {
+                this.objects.push(objectId);
+                return true;
+            }
+            return false;
         },
 
         // Removes an object from the list of connected ones
+        // Returns a boolean saying if the object is known and was previously connected
         'removeObject': function(objectId) {
-            this.objects.remove(objectId);
+            if(this.findObjectById(objectId) && this.isConnected(objectId)) {
+                this.objects.remove(objectId);
+                return true;
+            }
+            return false;
         },
 
-        // Returns the list of actually connected interoperability
+        // Returns the list of actually connected objects
         'getAllObjects': function () {
             var results = [];
             for(var id in this.objects) {
@@ -151,7 +165,7 @@
             return null;
         },
 
-        // Retrieves all interoperability with a given name
+        // Retrieves all objects with a given name
         'findObjectsByName': function (nameObject) {
             var results = [];
             for (var i in knownObjects) {

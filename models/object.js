@@ -1,7 +1,8 @@
 /**
  * Created by Lionel on 17/11/2015.
+ * Common methods of "object" (appliance) for the interoperability platform
+ * Added to the object data at initialization time
  */
-//Common methods of "object" (appliance) interoperability. Must be declared as a function to be inherited by all interoperability.
 
 (function(module) {
     module.exports = {
