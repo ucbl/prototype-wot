@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\models\object_old.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/middleware/initVariables.js" afterPath="$PROJECT_DIR$/middleware/initVariables.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/interoperability.js" afterPath="$PROJECT_DIR$/models/interoperability.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/object.js" afterPath="$PROJECT_DIR$/models/object.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
@@ -43,26 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="940">
-              <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-              <folding>
-                <element signature="e#194#223#0" expanded="false" />
-                <element signature="e#344#375#0" expanded="false" />
-                <element signature="e#821#845#0" expanded="false" />
-                <element signature="e#1046#1069#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="67.413795" vertical-offset="4170" max-vertical-offset="4660">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.9310346" vertical-offset="3954" max-vertical-offset="4660">
+              <caret line="249" column="50" selection-start-line="249" selection-start-column="50" selection-end-line="249" selection-end-column="50" />
               <folding>
                 <element signature="e#573#859#0" expanded="false" />
                 <element signature="e#2530#2881#0" expanded="false" />
@@ -74,21 +58,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="initVariables.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="initVariables.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/middleware/initVariables.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4712042" vertical-offset="0" max-vertical-offset="764">
+              <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.05235602" vertical-offset="60" max-vertical-offset="4040">
-              <caret line="5" column="113" selection-start-line="5" selection-start-column="113" selection-end-line="5" selection-end-column="113" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3276" max-vertical-offset="4060">
+              <caret line="183" column="45" selection-start-line="183" selection-start-column="45" selection-end-line="183" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -158,14 +142,14 @@
         <option value="$PROJECT_DIR$/data/interoperability/objects/motor-ge-3343.jsonld" />
         <option value="$PROJECT_DIR$/data/interoperability/objects/sensor-ge-2442.jsonld" />
         <option value="$PROJECT_DIR$/data/interoperability/objects/window-ikea-2555.jsonld" />
-        <option value="$PROJECT_DIR$/middleware/initVariables.js" />
         <option value="$PROJECT_DIR$/public/interoperability-public/js/public.js" />
         <option value="$PROJECT_DIR$/controllers/interoperability.js" />
         <option value="$PROJECT_DIR$/helpers/jsonTemplateEngine.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/models/interoperability.js" />
         <option value="$PROJECT_DIR$/models/object.js" />
+        <option value="$PROJECT_DIR$/models/interoperability.js" />
+        <option value="$PROJECT_DIR$/middleware/initVariables.js" />
       </list>
     </option>
   </component>
@@ -372,6 +356,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interoperability" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contexts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css-preprocessing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -474,12 +480,6 @@
       <created>1448107521951</created>
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
-    </task>
-    <task id="LOCAL-00190" summary="Try with interoperability layer complete">
-      <created>1448701670027</created>
-      <option name="number" value="00190" />
-      <option name="project" value="LOCAL" />
-      <updated>1448701670027</updated>
     </task>
     <task id="LOCAL-00191" summary="Try with interoperability layer complete">
       <created>1448707229206</created>
@@ -769,7 +769,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448795690302</updated>
     </task>
-    <option name="localTasksCounter" value="239" />
+    <task id="LOCAL-00239" summary="Try with interoperability layer complete">
+      <created>1448801494530</created>
+      <option name="number" value="00239" />
+      <option name="project" value="LOCAL" />
+      <updated>1448801494530</updated>
+    </task>
+    <option name="localTasksCounter" value="240" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1149,22 +1155,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/middleware/initVariables.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="560">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helpers/jsonTemplateEngine.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
-          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="940">
@@ -1186,20 +1176,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="67.413795" vertical-offset="4170" max-vertical-offset="4660">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#573#859#0" expanded="false" />
-            <element signature="e#2530#2881#0" expanded="false" />
-            <element signature="e#3320#3545#0" expanded="false" />
-            <element signature="e#3730#3955#0" expanded="false" />
-            <element signature="e#4083#4311#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/object.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07853403" vertical-offset="0" max-vertical-offset="764">
@@ -1216,10 +1192,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/helpers/jsonTemplateEngine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.9310346" vertical-offset="3954" max-vertical-offset="4660">
+          <caret line="249" column="50" selection-start-line="249" selection-start-column="50" selection-end-line="249" selection-end-column="50" />
+          <folding>
+            <element signature="e#573#859#0" expanded="false" />
+            <element signature="e#2530#2881#0" expanded="false" />
+            <element signature="e#3320#3545#0" expanded="false" />
+            <element signature="e#3730#3955#0" expanded="false" />
+            <element signature="e#4083#4311#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05235602" vertical-offset="60" max-vertical-offset="4040">
-          <caret line="5" column="113" selection-start-line="5" selection-start-column="113" selection-end-line="5" selection-end-column="113" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3276" max-vertical-offset="4060">
+          <caret line="183" column="45" selection-start-line="183" selection-start-column="45" selection-end-line="183" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/middleware/initVariables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4712042" vertical-offset="0" max-vertical-offset="764">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
           <folding />
         </state>
       </provider>
