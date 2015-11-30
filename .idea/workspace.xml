@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/interoperability.js" afterPath="$PROJECT_DIR$/models/interoperability.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/object.js" afterPath="$PROJECT_DIR$/models/object.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -51,8 +50,8 @@
       <file leaf-file-name="object.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/object.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15957446" vertical-offset="120" max-vertical-offset="1260">
-              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.21276596" vertical-offset="120" max-vertical-offset="1220">
+              <caret line="14" column="98" selection-start-line="14" selection-start-column="98" selection-end-line="14" selection-end-column="98" />
               <folding />
             </state>
           </provider>
@@ -158,8 +157,8 @@
         <option value="$PROJECT_DIR$/data/interoperability/capabilities/gps.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/middleware/initVariables.js" />
-        <option value="$PROJECT_DIR$/models/object.js" />
         <option value="$PROJECT_DIR$/models/interoperability.js" />
+        <option value="$PROJECT_DIR$/models/object.js" />
       </list>
     </option>
   </component>
@@ -513,12 +512,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00217" summary="Try with interoperability layer complete">
-      <created>1448736237175</created>
-      <option name="number" value="00217" />
-      <option name="project" value="LOCAL" />
-      <updated>1448736237175</updated>
-    </task>
     <task id="LOCAL-00218" summary="Try with interoperability layer complete">
       <created>1448736349721</created>
       <option name="number" value="00218" />
@@ -807,14 +800,20 @@
       <option name="project" value="LOCAL" />
       <updated>1448910832524</updated>
     </task>
-    <option name="localTasksCounter" value="266" />
+    <task id="LOCAL-00266" summary="Try with interoperability layer complete">
+      <created>1448925999758</created>
+      <option name="number" value="00266" />
+      <option name="project" value="LOCAL" />
+      <updated>1448925999759</updated>
+    </task>
+    <option name="localTasksCounter" value="267" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13140312" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13140312" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41536748" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1251,8 +1250,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/object.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15957446" vertical-offset="120" max-vertical-offset="1260">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.21276596" vertical-offset="120" max-vertical-offset="1220">
+          <caret line="14" column="98" selection-start-line="14" selection-start-column="98" selection-end-line="14" selection-end-column="98" />
           <folding />
         </state>
       </provider>

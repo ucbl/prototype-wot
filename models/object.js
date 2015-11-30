@@ -6,15 +6,13 @@
 
 (function(module) {
     var fs = require('fs'),
-        Globals = require('./globals'),
         cloneHelper = require('../helpers/cloneHelper');
 
     module.exports = {
         'initCapabilities': function(params) {
             for (var i in this.capabilities) {
                 var capability = this.capabilities[i];
-                var capabilityId = capability["@id"];
-                var shortId = capabilityId.substring(capabilityId.lastIndexOf("/") + 1);
+                var shortId = capability["@id"].substring(capability["@id"].lastIndexOf("/") + 1);
                 var capabilityData = require("../data/interoperability/capabilities/" + shortId);
 
                 // Clone capability file's methods and properties into object capability
@@ -22,7 +20,7 @@
 
                 //Debug logs
                 if (params && params.verbose) {
-                    console.log("New capability: " + capabilityId);
+                    console.log("New capability: " + capability["@id"]);
                     for (var propName in capability) {
                         console.log("property: " + propName + "\t" + capability[propName]);
                     }
