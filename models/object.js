@@ -37,7 +37,12 @@
         },
 
         'getCapability': function (capabilityId) {
-            return this.capabilities[capabilityId];
+            for (var i in this.capabilities) {
+                if (this.capabilities[i] == capabilityId) {
+                    return this.capabilities[i];
+                }
+            }
+            return null;
         },
 
         'setCapability': function (capabilityId, value) {
