@@ -75,7 +75,7 @@ router.get('/connected-object', function(request, response, next) {
 });
 
 // Retrieves info about a particular object
-router.get('/connected-object/:objectId', function(request, response, next) {
+router.get('/connected-object/:objectId', function(request, response) {
     if(interoperabilityModel.isConnected(request.params.objectId)) {
         response.redirect("../object/" + request.params.objectId);
     } else {

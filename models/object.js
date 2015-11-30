@@ -5,7 +5,25 @@
  */
 
 (function(module) {
+    var fs = require('fs'),
+        Globals = require('./globals');
+
     module.exports = {
+        'init': function(capabilityId, params) {
+            var capabilityData = require("../data/interoperability/capabilities/" + capabilityId);
+
+            // Clone capability file's methods and properties into object capability
+            cloneHelper(this.capabilities[capabilityId], capabilityData);
+
+            //Debug logs
+            if (params && params.verbose) {
+                console.log("New capability: " + capabilityData['@id'] + " -> " + capabilityData.length + " properties.");
+                for (var propName in capabilityData) {
+                    console.log("property: " + propName + "\t" + capabilityData[propName]);
+                }
+            }
+        },
+
         'getValue': function (attributeName) {
             return this.realObjectInfo[attributeName];
         },
@@ -20,6 +38,10 @@
 
         'setCapability': function (capabilityId, value) {
             this.capabilities[capabilityId] = value;
+        },
+
+        'operate': function(capabilityId, method, params) {
+            return this.capabilities[method] (params);
         }
     };
 })(module);

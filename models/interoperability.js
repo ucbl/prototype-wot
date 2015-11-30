@@ -90,6 +90,12 @@
 
                         // Clone ObjectModel's methods and properties into objectData
                         cloneHelper(objectModel, objectData);
+
+                        //Load object capabilities
+                        for (var capabilityId in objectData.capabilities) {
+                            objectModel.init(capabilityId, params);
+                        }
+
                         // Add it to the list of known objects
                         knownObjects.push(objectData);
 
