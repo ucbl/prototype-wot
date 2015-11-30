@@ -10,20 +10,22 @@
         cloneHelper = require('../helpers/cloneHelper');
 
     module.exports = {
-        'init': function(capabilityId, params) {
-            var index = capabilityId.lastIndexOf("/") + 1;
-            var shortId = capabilityId.substring(index);
-            var capabilityData = require("../data/interoperability/capabilities/" + shortId);
+        'initCapabilities': function(params) {
+            for (var i in this.capabilities) {
+                var capability = this.capabilities[i];
+                var capabilityId = capability["@id"];
+                var shortId = capabilityId.substring(capabilityId.lastIndexOf("/") + 1);
+                var capabilityData = require("../data/interoperability/capabilities/" + shortId);
 
-            // Clone capability file's methods and properties into object capability
-            //console.log(JSON.stringify(this.getCapability(capabilityId)));
-            cloneHelper(capabilityData, this.getCapability(capabilityId));
+                // Clone capability file's methods and properties into object capability
+                cloneHelper(capabilityData, capability);
 
-            //Debug logs
-            if (params && params.verbose) {
-                console.log("New capability: " + this.getCapability(capabilityId)['@id'] + " -> " + this.getCapability(capabilityId).length + " properties.");
-                for (var propName in this.getCapability(capabilityId)) {
-                    console.log("property: " + propName + "\t" + this.getCapability(capabilityId)[propName]);
+                //Debug logs
+                if (params && params.verbose) {
+                    console.log("New capability: " + capabilityId);
+                    for (var propName in capability) {
+                        console.log("property: " + propName + "\t" + capability[propName]);
+                    }
                 }
             }
         },
