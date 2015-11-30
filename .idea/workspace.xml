@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/interoperability.js" afterPath="$PROJECT_DIR$/models/interoperability.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/activateMotor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/call.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/closeWindow.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/gps.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/informationMotor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/openWindow.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/photo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/sms.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/startApp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/stopApp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/temperatureDecrease.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/temperatureIncrease.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/temperatureSense.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/video.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
@@ -60,8 +73,8 @@
       <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3723404" vertical-offset="1620" max-vertical-offset="4140">
-              <caret line="95" column="94" selection-start-line="95" selection-start-column="94" selection-end-line="95" selection-end-column="94" />
+            <state vertical-scroll-proportion="0.61170214" vertical-offset="1620" max-vertical-offset="4140">
+              <caret line="104" column="15" selection-start-line="104" selection-start-column="15" selection-end-line="104" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -512,12 +525,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00203" summary="Try with interoperability layer complete">
-      <created>1448709379180</created>
-      <option name="number" value="00203" />
-      <option name="project" value="LOCAL" />
-      <updated>1448709379180</updated>
-    </task>
     <task id="LOCAL-00204" summary="Try with interoperability layer complete">
       <created>1448710258590</created>
       <option name="number" value="00204" />
@@ -806,7 +813,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448908248798</updated>
     </task>
-    <option name="localTasksCounter" value="252" />
+    <task id="LOCAL-00252" summary="Try with interoperability layer complete">
+      <created>1448908297695</created>
+      <option name="number" value="00252" />
+      <option name="project" value="LOCAL" />
+      <updated>1448908297696</updated>
+    </task>
+    <option name="localTasksCounter" value="253" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1250,8 +1263,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3723404" vertical-offset="1620" max-vertical-offset="4140">
-          <caret line="95" column="94" selection-start-line="95" selection-start-column="94" selection-end-line="95" selection-end-column="94" />
+        <state vertical-scroll-proportion="0.61170214" vertical-offset="1620" max-vertical-offset="4140">
+          <caret line="104" column="15" selection-start-line="104" selection-start-column="15" selection-end-line="104" selection-end-column="15" />
           <folding />
         </state>
       </provider>
