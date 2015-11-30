@@ -93,9 +93,7 @@
 
                         //Load object capabilities
                         for (var i in objectData.capabilities) {
-                            var index = objectData.capabilities[i]["@id"].lastIndexOf("/") + 1;
-                            var capabilityId = objectData.capabilities[i]["@id"].substring(index);
-                            objectModel.init(capabilityId, params);
+                            objectModel.init(objectData.capabilities[i]["@id"], params);
                         }
 
                         // Add it to the list of known objects

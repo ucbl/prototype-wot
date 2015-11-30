@@ -11,10 +11,12 @@
 
     module.exports = {
         'init': function(capabilityId, params) {
-            var capabilityData = require("../data/interoperability/capabilities/" + capabilityId);
+            var index = capabilityId.lastIndexOf("/") + 1;
+            var shortId = capabilityId.substring(index);
+            var capabilityData = require("../data/interoperability/capabilities/" + shortId);
 
             // Clone capability file's methods and properties into object capability
-            cloneHelper(this.capabilities[this["@id"] + capabilityId], capabilityData);
+            cloneHelper(this.capabilities[capabilityId], capabilityData);
 
             //Debug logs
             if (params && params.verbose) {
