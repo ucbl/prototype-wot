@@ -93,7 +93,7 @@
 
                         //Load object capabilities
                         for (var i in objectData.capabilities) {
-                            var index = objectData.capabilities[i]["@id"].lastIndexOf("/");
+                            var index = objectData.capabilities[i]["@id"].lastIndexOf("/") + 1;
                             var capabilityId = objectData.capabilities[i]["@id"].substring(index);
                             objectModel.init(capabilityId, params);
                         }

@@ -60,8 +60,8 @@
       <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4787234" vertical-offset="1620" max-vertical-offset="4140">
-              <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.3723404" vertical-offset="1620" max-vertical-offset="4140">
+              <caret line="95" column="94" selection-start-line="95" selection-start-column="94" selection-end-line="95" selection-end-column="94" />
               <folding />
             </state>
           </provider>
@@ -512,12 +512,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00202" summary="Try with interoperability layer complete">
-      <created>1448709308756</created>
-      <option name="number" value="00202" />
-      <option name="project" value="LOCAL" />
-      <updated>1448709308757</updated>
-    </task>
     <task id="LOCAL-00203" summary="Try with interoperability layer complete">
       <created>1448709379180</created>
       <option name="number" value="00203" />
@@ -806,7 +800,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448907951069</updated>
     </task>
-    <option name="localTasksCounter" value="251" />
+    <task id="LOCAL-00251" summary="Try with interoperability layer complete">
+      <created>1448908248798</created>
+      <option name="number" value="00251" />
+      <option name="project" value="LOCAL" />
+      <updated>1448908248798</updated>
+    </task>
+    <option name="localTasksCounter" value="252" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1250,8 +1250,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4787234" vertical-offset="1620" max-vertical-offset="4140">
-          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3723404" vertical-offset="1620" max-vertical-offset="4140">
+          <caret line="95" column="94" selection-start-line="95" selection-start-column="94" selection-end-line="95" selection-end-column="94" />
           <folding />
         </state>
       </provider>
