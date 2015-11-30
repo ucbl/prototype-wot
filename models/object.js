@@ -16,7 +16,7 @@
             var capabilityData = require("../data/interoperability/capabilities/" + shortId);
 
             // Clone capability file's methods and properties into object capability
-            console.log(JSON.stringify(this));
+            console.log(JSON.stringify(this.getCapability(capabilityId)));
             cloneHelper(this.capabilities[capabilityId], capabilityData);
 
             //Debug logs
