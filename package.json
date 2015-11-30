@@ -27,8 +27,6 @@
     "request": "2.53.0",
     "request-promise" : "0.4.1",
     "ldf-client" : "1.2.6",
- //   "sync-request" : "2.0.1",
- //   "markedejs": "0.1.0",
     "rdfstore": "0.9.4"
   },
   "devDependencies": {
