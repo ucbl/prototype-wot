@@ -93,7 +93,7 @@
 
                         //Load object capabilities
                         for (var i in objectData.capabilities) {
-                            objectModel.init(objectData.capabilities[i]["@id"], params);
+                            objectData.init(objectData.capabilities[i]["@id"], params);
                         }
 
                         // Add it to the list of known objects

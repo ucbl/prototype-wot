@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/object.js" afterPath="$PROJECT_DIR$/models/object.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/interoperability.js" afterPath="$PROJECT_DIR$/models/interoperability.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
@@ -47,21 +47,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="object.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="object.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/object.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45212767" vertical-offset="60" max-vertical-offset="1120">
+            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1120">
               <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1660" max-vertical-offset="4100">
-              <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.45212767" vertical-offset="1660" max-vertical-offset="4100">
+              <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -157,8 +157,8 @@
         <option value="$PROJECT_DIR$/data/interoperability/capabilities/video.js" />
         <option value="$PROJECT_DIR$/data/interoperability/capabilities/gps.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/models/interoperability.js" />
         <option value="$PROJECT_DIR$/models/object.js" />
+        <option value="$PROJECT_DIR$/models/interoperability.js" />
       </list>
     </option>
   </component>
@@ -512,12 +512,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00210" summary="Try with interoperability layer complete">
-      <created>1448712218139</created>
-      <option name="number" value="00210" />
-      <option name="project" value="LOCAL" />
-      <updated>1448712218139</updated>
-    </task>
     <task id="LOCAL-00211" summary="Try with interoperability layer complete">
       <created>1448728540331</created>
       <option name="number" value="00211" />
@@ -806,7 +800,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448909689207</updated>
     </task>
-    <option name="localTasksCounter" value="259" />
+    <task id="LOCAL-00259" summary="Try with interoperability layer complete">
+      <created>1448909769327</created>
+      <option name="number" value="00259" />
+      <option name="project" value="LOCAL" />
+      <updated>1448909769327</updated>
+    </task>
+    <option name="localTasksCounter" value="260" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1240,18 +1240,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/interoperability.js">
+    <entry file="file://$PROJECT_DIR$/models/object.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1660" max-vertical-offset="4100">
-          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1120">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/object.js">
+    <entry file="file://$PROJECT_DIR$/models/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45212767" vertical-offset="60" max-vertical-offset="1120">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.45212767" vertical-offset="1660" max-vertical-offset="4100">
+          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
           <folding />
         </state>
       </provider>
