@@ -6,14 +6,15 @@
 
 (function(module) {
     var fs = require('fs'),
-        Globals = require('./globals');
+        Globals = require('./globals'),
+        cloneHelper = require('../helpers/cloneHelper');
 
     module.exports = {
         'init': function(capabilityId, params) {
             var capabilityData = require("../data/interoperability/capabilities/" + capabilityId);
 
             // Clone capability file's methods and properties into object capability
-            cloneHelper(this.capabilities[capabilityId], capabilityData);
+            cloneHelper(this.capabilities[this["@id"] + capabilityId], capabilityData);
 
             //Debug logs
             if (params && params.verbose) {
