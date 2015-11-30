@@ -38,7 +38,7 @@
 
         'getCapability': function (capabilityId) {
             for (var i in this.capabilities) {
-                if (this.capabilities[i] == capabilityId) {
+                if (this.capabilities[i]["@id"] == capabilityId) {
                     return this.capabilities[i];
                 }
             }
