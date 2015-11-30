@@ -17,7 +17,7 @@
 
             // Clone capability file's methods and properties into object capability
             console.log(JSON.stringify(this.getCapability(capabilityId)));
-            cloneHelper(this.getCapability(capabilityId), capabilityData);
+            cloneHelper(capabilityData, this.getCapability(capabilityId));
 
             //Debug logs
             if (params && params.verbose) {
