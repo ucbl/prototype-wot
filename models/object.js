@@ -16,14 +16,14 @@
             var capabilityData = require("../data/interoperability/capabilities/" + shortId);
 
             // Clone capability file's methods and properties into object capability
-            console.log(JSON.stringify(this.getCapability(capabilityId)));
+            //console.log(JSON.stringify(this.getCapability(capabilityId)));
             cloneHelper(capabilityData, this.getCapability(capabilityId));
 
             //Debug logs
             if (params && params.verbose) {
-                console.log("New capability: " + capabilityData['@id'] + " -> " + capabilityData.length + " properties.");
-                for (var propName in capabilityData) {
-                    console.log("property: " + propName + "\t" + capabilityData[propName]);
+                console.log("New capability: " + this.getCapability(capabilityId)['@id'] + " -> " + this.getCapability(capabilityId).length + " properties.");
+                for (var propName in this.getCapability(capabilityId)) {
+                    console.log("property: " + propName + "\t" + this.getCapability(capabilityId)[propName]);
                 }
             }
         },
