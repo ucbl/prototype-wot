@@ -92,8 +92,8 @@
                         cloneHelper(objectModel, objectData);
 
                         //Load object capabilities
-                        for (var capabilityId in objectData.capabilities) {
-                            objectModel.init(capabilityId, params);
+                        for (var i in objectData.capabilities) {
+                            objectModel.init(objectData.capabilities[i]["id"], params);
                         }
 
                         // Add it to the list of known objects
