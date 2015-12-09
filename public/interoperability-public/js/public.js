@@ -7,7 +7,7 @@ $(document).ready(function() {
             reloadDevices();
         }, 5000);
         $("body").click(function () {
-            $.getJSON("/interoperability/devices/phone-samsung-2554/call", {"number": "12"}, null);
+            $.post("/interoperability/devices/phone-samsung-2554/call", {"number": "12"}, null, "json");
         });
     }
 );

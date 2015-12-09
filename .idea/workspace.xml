@@ -54,8 +54,8 @@
       <file leaf-file-name="public.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/interoperability-public/js/public.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3713528" vertical-offset="0" max-vertical-offset="754">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.265252" vertical-offset="0" max-vertical-offset="754">
+              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -645,12 +645,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00246" summary="Try with interoperability layer complete">
-      <created>1448803279997</created>
-      <option name="number" value="00246" />
-      <option name="project" value="LOCAL" />
-      <updated>1448803279997</updated>
-    </task>
     <task id="LOCAL-00247" summary="Try with interoperability layer complete">
       <created>1448803334752</created>
       <option name="number" value="00247" />
@@ -939,7 +933,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449689876575</updated>
     </task>
-    <option name="localTasksCounter" value="295" />
+    <task id="LOCAL-00295" summary="Try with interoperability simple vocabulary">
+      <created>1449690190179</created>
+      <option name="number" value="00295" />
+      <option name="project" value="LOCAL" />
+      <updated>1449690190179</updated>
+    </task>
+    <option name="localTasksCounter" value="296" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1427,8 +1427,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/interoperability-public/js/public.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3713528" vertical-offset="0" max-vertical-offset="754">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.265252" vertical-offset="0" max-vertical-offset="754">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
           <folding />
         </state>
       </provider>
