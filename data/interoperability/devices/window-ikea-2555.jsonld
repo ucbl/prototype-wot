@@ -9,14 +9,12 @@
 		{
 	      "@id": "__interoperability__devices/window-ikea-2555/openWindow",
 	      "@type": "http://www.w3.org/ns/hydra/core#Class",
-          "@context": "__interoperability__context/Capability",
-          "ontology": "__capability__capability/openWindow"
+          "@context": "__interoperability__context/Capability"
 	    },
 		{
 	      "@id": "__interoperability__devices/window-ikea-2555/closeWindow",
 	      "@type": "http://www.w3.org/ns/hydra/core#Class",
-          "@context": "__interoperability__context/Capability",
-          "ontology": "__capability__closeWindow"
+          "@context": "__interoperability__context/Capability"
 	    }
 	],
     "values": {

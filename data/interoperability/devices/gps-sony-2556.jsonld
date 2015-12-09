@@ -9,8 +9,7 @@
 		{
 	      "@id": "__interoperability__devices/gps-sony-2556/gps",
 	      "@context" : "__interoperability__context/Capability",
-          "@type" : "http://www.w3.org/ns/hydra/core#Class",
-          "ontology": "__capability__gps"
+          "@type" : "http://www.w3.org/ns/hydra/core#Class"
 	    }
 	],
     "values": {

@@ -9,8 +9,7 @@
     	{
           "@id": "__interoperability__devices/heater-tesco-2336/temperatureIncrease",
           "@context" : "__interoperability__context/Capability",
-          "@type" : "http://www.w3.org/ns/hydra/core#Class",
-          "ontology": "__capability__temperatureIncrease"
+          "@type" : "http://www.w3.org/ns/hydra/core#Class"
         }
     ],
     "values": {

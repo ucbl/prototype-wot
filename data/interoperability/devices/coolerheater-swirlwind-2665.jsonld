@@ -9,14 +9,12 @@
     {
       "@id": "__interoperability__devices/coolerheater-swirlwind-2665/temperatureDecrease",
       "@type": "http://www.w3.org/ns/hydra/core#Class",
-      "@context" : "__interoperability__context/Capability",
-      "ontology": "__capability__temperatureDecrease"
+      "@context" : "__interoperability__context/Capability"
     },
     {
       "@id": "__interoperability__devices/coolerheater-swirlwind-2665/temperatureIncrease",
       "@type": "http://www.w3.org/ns/hydra/core#Class",
-      "@context" : "__interoperability__context/Capability",
-      "ontology": "__capability__temperatureIncrease"
+      "@context" : "__interoperability__context/Capability"
     }
 	],
     "values": {

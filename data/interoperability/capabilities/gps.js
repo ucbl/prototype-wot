@@ -8,9 +8,9 @@
 
     module.exports = {
         "get": function (values, params) {
-            var coords = calculateCoordinates();
-            values.latitude =  coords.latitude;
-            values.longitude =  coords.longitude;
+            var position = calculateCoordinates();
+            values.latitude =  position.latitude;
+            values.longitude =  position.longitude;
             return values;
         }
     };

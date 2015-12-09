@@ -9,8 +9,7 @@
 		{
       "@id": "__interoperability__devices/cooler-swirlwind-2443/temperatureDecrease",
       "@context" : "__interoperability__context/Capability",
-      "@type" : "http://www.w3.org/ns/hydra/core#Class",
-      "ontology": "__capability__temperatureDecrease"
+      "@type" : "http://www.w3.org/ns/hydra/core#Class"
 		}
 	],
   "values": {

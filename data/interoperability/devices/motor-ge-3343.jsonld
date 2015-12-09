@@ -9,14 +9,12 @@
 		{
       "@id": "__interoperability__devices/motor-ge-3343/activateMotor",
       "@context" : "__interoperability__context/Capability",
-      "@type" : "http://www.w3.org/ns/hydra/core#Class",
-      "ontology": "__capability__activateMotor"
+      "@type" : "http://www.w3.org/ns/hydra/core#Class"
     },
     {
       "@id": "__interoperability__devices/motor-ge-3343/informationMotor",
       "@context" : "__interoperability__context/Capability",
-      "@type" : "http://www.w3.org/ns/hydra/core#Class",
-      "ontology": "__capability__informationMotor"
+      "@type" : "http://www.w3.org/ns/hydra/core#Class"
     }
 	],
   "values": {
