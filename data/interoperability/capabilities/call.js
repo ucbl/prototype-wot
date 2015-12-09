@@ -26,7 +26,7 @@
         //Modifies a call if its 'id' and 'call' are provided in args
         //Adds a new call to the list if only 'call' is given
         "post": function (values, params) {
-            console.log(typeof(params.id));
+            console.log(typeof(parseInt("pfdihotu")));
             console.log(parseInt(params.id) >= 0);
             console.log(parseInt(params.id) < calls.length);
             if(params & params['id'] && params['call'] && typeof(params.id) === "number" && parseInt(params.id) >= 0 && parseInt(params.id) < calls.length) {
