@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/cooler-swirlwind-2443.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/cooler-swirlwind-2443.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/coolerheater-swirlwind-2665.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/coolerheater-swirlwind-2665.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/gps-sony-2556.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/gps-sony-2556.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/heater-tesco-2336.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/heater-tesco-2336.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/motor-ge-3343.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/motor-ge-3343.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/phone-samsung-2554.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/phone-samsung-2554.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/sensor-ge-2442.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/sensor-ge-2442.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/window-ikea-2555.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/window-ikea-2555.jsonld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/interoperability.js" afterPath="$PROJECT_DIR$/controllers/interoperability.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
@@ -40,10 +33,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="public.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="public.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/interoperability-public/js/public.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6366048" vertical-offset="0" max-vertical-offset="754">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
                   <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
                   <folding />
                 </state>
@@ -60,21 +53,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="interoperability.scss" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/css-preprocessing/sass/interoperability.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-5.9259257" vertical-offset="0" max-vertical-offset="3240">
-                  <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="159" max-vertical-offset="5220">
-                  <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+                <state vertical-scroll-proportion="0.757085" vertical-offset="2079" max-vertical-offset="5220">
+                  <caret line="132" column="3" selection-start-line="132" selection-start-column="3" selection-end-line="132" selection-end-column="3" />
                   <folding />
                 </state>
               </provider>
@@ -313,9 +296,9 @@
         <option value="$PROJECT_DIR$/data/interoperability/hydra.jsonld" />
         <option value="$PROJECT_DIR$/models/capability.js" />
         <option value="$PROJECT_DIR$/middleware/initVariables.js" />
-        <option value="$PROJECT_DIR$/controllers/interoperability.js" />
         <option value="$PROJECT_DIR$/public/interoperability-public/index.html" />
         <option value="$PROJECT_DIR$/public/interoperability-public/js/public.js" />
+        <option value="$PROJECT_DIR$/controllers/interoperability.js" />
       </list>
     </option>
   </component>
@@ -768,12 +751,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00225" summary="Try with interoperability layer complete">
-      <created>1448788440170</created>
-      <option name="number" value="00225" />
-      <option name="project" value="LOCAL" />
-      <updated>1448788440170</updated>
-    </task>
     <task id="LOCAL-00226" summary="Try with interoperability layer complete">
       <created>1448790017255</created>
       <option name="number" value="00226" />
@@ -1062,7 +1039,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449679134200</updated>
     </task>
-    <option name="localTasksCounter" value="274" />
+    <task id="LOCAL-00274" summary="Try with interoperability simple vocabulary">
+      <created>1449679323711</created>
+      <option name="number" value="00274" />
+      <option name="project" value="LOCAL" />
+      <updated>1449679323711</updated>
+    </task>
+    <option name="localTasksCounter" value="275" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1151,6 +1134,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1160">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1471,14 +1455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="159" max-vertical-offset="5220">
-          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/interoperability/devicesSimple.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="754">
@@ -1527,6 +1503,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/interoperability-public/js/public.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css-preprocessing/sass/interoperability.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45714286" vertical-offset="0" max-vertical-offset="3240">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/interoperability-public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.241379" vertical-offset="0" max-vertical-offset="620">
@@ -1535,18 +1527,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css-preprocessing/sass/interoperability.scss">
+    <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.9259257" vertical-offset="0" max-vertical-offset="3240">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/interoperability-public/js/public.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6366048" vertical-offset="0" max-vertical-offset="754">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.757085" vertical-offset="2079" max-vertical-offset="5220">
+          <caret line="132" column="3" selection-start-line="132" selection-start-column="3" selection-end-line="132" selection-end-column="3" />
           <folding />
         </state>
       </provider>

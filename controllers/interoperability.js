@@ -118,10 +118,10 @@ router.delete('/devices/:deviceId', function(request, response) {
 
 // GET and PUT operations on the real interoperability
 router.get('/devices/:deviceId/:capabilityId', function(request, response, next) {
-    jsonldHeaders(request, response, next);
     var device = interoperabilityModel.findDeviceById(request.params.deviceId);
     try {
         var result = device.invokeCapability(request.params.capabilityId, "get", request.query);
+        jsonldHeaders(request, response, next);
         response.end(JSON.stringify(result));
     } catch(error) {
         if(typeof(error) === "number") {
