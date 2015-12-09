@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/capabilities/call.js" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/call.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/interoperability.js" afterPath="$PROJECT_DIR$/controllers/interoperability.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
@@ -31,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="call.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="call.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/call.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27984086" vertical-offset="109" max-vertical-offset="1640">
-              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="586" max-vertical-offset="1640">
+              <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -53,31 +53,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Device.jsonld" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/interoperability/contexts/Device.jsonld">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="300">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="interoperability.jsonld" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/interoperability/vocabs/interoperability.jsonld">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.37931" vertical-offset="0" max-vertical-offset="27180">
-              <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1986" max-vertical-offset="4300">
-              <caret line="111" column="33" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.8143236" vertical-offset="2406" max-vertical-offset="4340">
+              <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="device.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/device.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="826" max-vertical-offset="1580">
+              <caret line="59" column="65" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -148,8 +138,8 @@
         <option value="$PROJECT_DIR$/middleware/initVariables.js" />
         <option value="$PROJECT_DIR$/models/device.js" />
         <option value="$PROJECT_DIR$/data/interoperability/capabilities/gps.js" />
-        <option value="$PROJECT_DIR$/controllers/interoperability.js" />
         <option value="$PROJECT_DIR$/data/interoperability/capabilities/call.js" />
+        <option value="$PROJECT_DIR$/controllers/interoperability.js" />
       </list>
     </option>
   </component>
@@ -625,12 +615,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00236" summary="Try with interoperability layer complete">
-      <created>1448795263953</created>
-      <option name="number" value="00236" />
-      <option name="project" value="LOCAL" />
-      <updated>1448795263953</updated>
-    </task>
     <task id="LOCAL-00237" summary="Try with interoperability layer complete">
       <created>1448795391290</created>
       <option name="number" value="00237" />
@@ -919,7 +903,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449685854558</updated>
     </task>
-    <option name="localTasksCounter" value="285" />
+    <task id="LOCAL-00285" summary="Try with interoperability simple vocabulary">
+      <created>1449686425264</created>
+      <option name="number" value="00285" />
+      <option name="project" value="LOCAL" />
+      <updated>1449686425264</updated>
+    </task>
+    <option name="localTasksCounter" value="286" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1354,14 +1344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/device.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.795756" vertical-offset="580" max-vertical-offset="1580">
-          <caret line="59" column="68" selection-start-line="59" selection-start-column="68" selection-end-line="59" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.469496" vertical-offset="346" max-vertical-offset="1100">
@@ -1396,18 +1378,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
+    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/call.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1986" max-vertical-offset="4300">
-          <caret line="111" column="33" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="586" max-vertical-offset="1640">
+          <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/call.js">
+    <entry file="file://$PROJECT_DIR$/models/device.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27984086" vertical-offset="109" max-vertical-offset="1640">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="826" max-vertical-offset="1580">
+          <caret line="59" column="65" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8143236" vertical-offset="2406" max-vertical-offset="4340">
+          <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
           <folding />
         </state>
       </provider>
