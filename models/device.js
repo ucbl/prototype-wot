@@ -8,6 +8,8 @@
     var fs = require('fs'),
         cloneHelper = require('../helpers/cloneHelper');
 
+    var capabilities = [];
+
     module.exports = {
         'initCapabilities': function(params) {
             for (var i in this.capabilities) {
