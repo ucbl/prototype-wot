@@ -46,9 +46,7 @@
 
         'getCapability': function (capabilityId) {
             for (var i in this.capabilities) {
-                console.log(this.capabilities[i]["id"] + " -> " + capabilityId);
                 if (this.capabilities[i]["id"] == capabilityId) {
-                    console.log("Found");
                     return this.capabilities[i];
                 }
             }
@@ -61,7 +59,7 @@
 
         'invokeCapability': function(capabilityId, method, params) {
             var capability = this.getCapability(capabilityId);
-            console.log("invoke " + JSON.stringify(capability) + " from " + capabilityId + " on " + JSON.stringify(this));
+            console.log("Invoke " + capability["@id"] + "\non " + this["@id"] + "\nwith method " + method + "\nand parameters " + JSON.stringify(params));
             if(capability) {
                 if(capability[method]) {
                     return capability[method](this.values, params);
