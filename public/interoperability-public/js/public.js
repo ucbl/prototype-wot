@@ -2,15 +2,15 @@
 var interoperabilityLayerUrl = '/interoperability/devices';
 
 $(document).ready(function() {
-	reloadObjects();
+	reloadDevices();
 	setInterval(function(){
-		reloadObjects();
+		reloadDevices();
 	}, 5000);
 });
 
-function reloadObjects() {
+function reloadDevices() {
 	$.get(interoperabilityLayerUrl, {}, function(response){
-        $('.knownObjects').html($(response).find('.object'));
+        $('.knownDevices').html($(response).find('.deviceDescription'));
 		equalHeights('.object');
 	});
 }
