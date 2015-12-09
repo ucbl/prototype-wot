@@ -27,13 +27,13 @@
         //Adds a new call to the list if only 'call' is given
         "post": function (values, params) {
             if(params & params['id'] && params['call'] && typeof(params.id) === "number" && parseInt(params.id) >= 0 && parseInt(params.id) < calls.length) {
-                calls[params.id] = params.call;
+                calls[parseInt(params.id)] = params.call;
                 console.log("Call " + params.id + " modified.");
                 //Not an error
                 throw new Error(204);
             } else if(params && params['call']) {
                 calls.push(params.call);
-                return calls.length -1;
+                return {"id": calls.length -1};
             } else {
                 throw new Error(400);
             }
