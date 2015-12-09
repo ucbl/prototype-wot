@@ -2,48 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/interoperability/capability.js" />
-      <change type="DELETED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\views\interoperability\object.jade" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\views\interoperability\objectSimple.jade" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\views\interoperability\objectSimple.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\views\interoperability\objects.jade" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\views\interoperability\objectsSimple.jade" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/contexts/Capability.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/contexts/Capability.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/contexts/Temperature.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/contexts/Temperature.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/capabilities/activateMotor.js" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/activateMotor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/capabilities/call.js" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/call.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/capability.js" afterPath="$PROJECT_DIR$/models/capability.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/capabilities/closeWindow.js" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/closeWindow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css-preprocessing/sass/functionality.scss" afterPath="$PROJECT_DIR$/css-preprocessing/sass/functionality.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/capabilities/gps.js" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/gps.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/hydra.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/hydra.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/functionalities-public/index.html" afterPath="$PROJECT_DIR$/public/functionalities-public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/capabilities/informationMotor.js" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/informationMotor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/interoperability.js" afterPath="$PROJECT_DIR$/controllers/interoperability.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/interoperability.js" afterPath="$PROJECT_DIR$/models/interoperability.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css-preprocessing/sass/interoperability.scss" afterPath="$PROJECT_DIR$/css-preprocessing/sass/interoperability.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/capabilities/openWindow.js" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/openWindow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/capabilities/photo.js" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/photo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/interoperability/platform.jade" afterPath="$PROJECT_DIR$/views/interoperability/platform.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/functionalities-public/js/public.js" afterPath="$PROJECT_DIR$/public/functionalities-public/js/public.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/capabilities/sms.js" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/sms.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/capabilities/startApp.js" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/startApp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/capabilities/temperatureDecrease.js" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/temperatureDecrease.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/capabilities/temperatureIncrease.js" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/temperatureIncrease.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/capabilities/temperatureSense.js" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/temperatureSense.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/capabilities/video.js" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/video.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/middleware/initVariables.js" afterPath="$PROJECT_DIR$/middleware/initVariables.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\data\interoperability\contexts\Object.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/contexts/Device.jsonld" />
-      <change type="MOVED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\data\interoperability\objects\cooler-swirlwind-2443.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/cooler-swirlwind-2443.jsonld" />
-      <change type="MOVED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\data\interoperability\objects\coolerheater-swirlwind-2665.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/coolerheater-swirlwind-2665.jsonld" />
-      <change type="MOVED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\data\interoperability\objects\gps-sony-2556.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/gps-sony-2556.jsonld" />
-      <change type="MOVED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\data\interoperability\objects\heater-tesco-2336.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/heater-tesco-2336.jsonld" />
-      <change type="MOVED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\data\interoperability\objects\motor-ge-3343.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/motor-ge-3343.jsonld" />
-      <change type="MOVED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\data\interoperability\objects\phone-samsung-2554.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/phone-samsung-2554.jsonld" />
-      <change type="MOVED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\data\interoperability\objects\sensor-ge-2442.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/sensor-ge-2442.jsonld" />
-      <change type="MOVED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\data\interoperability\objects\window-ikea-2555.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/window-ikea-2555.jsonld" />
-      <change type="MOVED" beforePath="E:\Projets\Test_node_MVC\prototype-wot-js-v2\models\object.js" afterPath="$PROJECT_DIR$/models/device.js" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,10 +33,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="hydra.jsonld" pinned="false" current-in-tab="true">
+          <file leaf-file-name="hydra.jsonld" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/data/interoperability/hydra.jsonld">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.503268" vertical-offset="7495" max-vertical-offset="8380">
+                <state vertical-scroll-proportion="-13.275862" vertical-offset="7495" max-vertical-offset="8380">
                   <caret line="1334" column="9" selection-start-line="1334" selection-start-column="9" selection-end-line="1334" selection-end-column="9" />
                   <folding>
                     <element signature="n#!!block;n#@context#0;n#!!top" expanded="false" />
@@ -110,6 +70,56 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="capability.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/models/capability.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
+                  <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="initVariables.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/middleware/initVariables.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.5937922" vertical-offset="0" max-vertical-offset="741">
+                  <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="device.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/models/device.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500">
+                  <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/models/interoperability.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="4100">
+                  <caret line="158" column="44" selection-start-line="158" selection-start-column="38" selection-end-line="158" selection-end-column="44" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1100">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -117,7 +127,7 @@
           <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.73551637" vertical-offset="216" max-vertical-offset="1420">
+                <state vertical-scroll-proportion="0.78812414" vertical-offset="216" max-vertical-offset="1420">
                   <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
                   <folding />
                 </state>
@@ -222,6 +232,11 @@
     </splitter>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="lmedini" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="PUSH_TAGS">
       <GitPushTagMode />
@@ -249,7 +264,6 @@
         <option value="$PROJECT_DIR$/data/interoperability/capabilities/activateMotor.json" />
         <option value="$PROJECT_DIR$/data/interoperability/capabilities/stopApp.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/middleware/initVariables.js" />
         <option value="$PROJECT_DIR$/views/interoperability/capability.js" />
         <option value="$PROJECT_DIR$/data/interoperability/capabilities/gps.js" />
         <option value="$PROJECT_DIR$/models/object.js" />
@@ -262,7 +276,6 @@
         <option value="$PROJECT_DIR$/views/interoperability/platform.jade" />
         <option value="$PROJECT_DIR$/controllers/interoperability.js" />
         <option value="$PROJECT_DIR$/models/device.js" />
-        <option value="$PROJECT_DIR$/models/capability.js" />
         <option value="$PROJECT_DIR$/data/interoperability/capabilities/informationMotor.js" />
         <option value="$PROJECT_DIR$/data/interoperability/capabilities/activateMotor.js" />
         <option value="$PROJECT_DIR$/data/interoperability/capabilities/photo.js" />
@@ -281,6 +294,8 @@
         <option value="$PROJECT_DIR$/data/interoperability/capabilities/openWindow.js" />
         <option value="$PROJECT_DIR$/data/interoperability/capabilities/closeWindow.js" />
         <option value="$PROJECT_DIR$/data/interoperability/hydra.jsonld" />
+        <option value="$PROJECT_DIR$/models/capability.js" />
+        <option value="$PROJECT_DIR$/middleware/initVariables.js" />
       </list>
     </option>
   </component>
@@ -345,128 +360,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ontology" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interoperability" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interoperability-public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interoperability-public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -496,166 +389,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ontology" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ontology" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="functionalities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ontology" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contexts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interoperability" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interoperability" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devices" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interoperability" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contexts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interoperability" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="capabilities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -754,12 +487,6 @@
       <created>1448107521951</created>
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
-    </task>
-    <task id="LOCAL-00219" summary="Try with interoperability layer complete">
-      <created>1448736683874</created>
-      <option name="number" value="00219" />
-      <option name="project" value="LOCAL" />
-      <updated>1448736683874</updated>
     </task>
     <task id="LOCAL-00220" summary="Try with interoperability layer complete">
       <created>1448739633142</created>
@@ -1049,14 +776,21 @@
       <option name="project" value="LOCAL" />
       <updated>1448926125102</updated>
     </task>
-    <option name="localTasksCounter" value="268" />
+    <task id="LOCAL-00268" summary="Try with interoperability simple vocabulary">
+      <created>1449677480145</created>
+      <option name="number" value="00268" />
+      <option name="project" value="LOCAL" />
+      <updated>1449677480149</updated>
+    </task>
+    <option name="localTasksCounter" value="269" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0701559" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12917595" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24966975" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1071,7 +805,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41536748" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1089,6 +822,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
@@ -1101,7 +836,8 @@
     <MESSAGE value="Started including /interoperability" />
     <MESSAGE value="First try with interoperability layer complete" />
     <MESSAGE value="Try with interoperability layer complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Try with interoperability layer complete" />
+    <MESSAGE value="Try with interoperability simple vocabulary" />
+    <option name="LAST_COMMIT_MESSAGE" value="Try with interoperability simple vocabulary" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1110,31 +846,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/interoperability/capability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5514706" vertical-offset="0" max-vertical-offset="544">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/ontology/composedFunctionalities.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.042283297" vertical-offset="0" max-vertical-offset="600">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/interoperability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7931035" vertical-offset="2998" max-vertical-offset="4100">
-          <caret line="158" column="44" selection-start-line="158" selection-start-column="38" selection-end-line="158" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -1187,13 +902,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/device.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="740" max-vertical-offset="1500">
-          <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2100" max-vertical-offset="5220">
@@ -1212,13 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19151847" vertical-offset="0" max-vertical-offset="731">
           <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/capability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="880">
-          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1479,7 +1180,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73551637" vertical-offset="216" max-vertical-offset="1420">
+        <state vertical-scroll-proportion="0.78812414" vertical-offset="216" max-vertical-offset="1420">
           <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
           <folding />
         </state>
@@ -1487,7 +1188,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/interoperability/hydra.jsonld">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.503268" vertical-offset="7495" max-vertical-offset="8380">
+        <state vertical-scroll-proportion="-13.275862" vertical-offset="7495" max-vertical-offset="8380">
           <caret line="1334" column="9" selection-start-line="1334" selection-start-column="9" selection-end-line="1334" selection-end-column="9" />
           <folding>
             <element signature="n#!!block;n#@context#0;n#!!top" expanded="false" />
@@ -1517,6 +1218,46 @@
             <element signature="e#32368#33241#0" expanded="false" />
             <element signature="e#33247#34128#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/capability.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/device.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/interoperability.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3299" max-vertical-offset="4100">
+          <caret line="158" column="44" selection-start-line="158" selection-start-column="38" selection-end-line="158" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/middleware/initVariables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5937922" vertical-offset="0" max-vertical-offset="741">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -16,7 +16,7 @@
 
             //Initiate the object discovery and construct their URIs
             ontologyModel.loadOntology({verbose: false});
-            interoperabilityModel.loadObjects({verbose: true});
+            interoperabilityModel.loadDevices({verbose: true});
         }
         next();
     };
