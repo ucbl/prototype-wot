@@ -26,13 +26,13 @@
         //Modifies a call if its 'id' and 'call' are provided in args
         //Adds a new call to the list if only 'call' is given
         "post": function (values, params) {
-            if(params & params['id'] && params['call'] && params.id >= 0 && params.id < calls.length) {
+            if(params & params['id'] && params['call'] && typeof(params.id) === "number" && parseInt(params.id) >= 0 && parseInt(params.id) < calls.length) {
                 calls[params.id] = params.call;
                 console.log("Call " + params.id + " modified.");
                 //Not an error
                 throw new Error(204);
             } else if(params && params['call']) {
-                calls.add(params.call);
+                calls.push(params.call);
                 return calls.length -1;
             } else {
                 throw new Error(400);
@@ -40,14 +40,11 @@
         },
         //Creates a new call and adds it to the list
         "put": function (values, params) {
-            console.log("PUT");
             if(!params) {
-                console.log("Pas de params");
                 return new Error(400);
             }
             var call = {};
             for (var i in params) {
-                console.log("Param: " + i + " -> " + params[i]);
                 if (i == 'number') {
                     call.number = params.number;
                     call.start = new Date();
@@ -58,9 +55,7 @@
                     return new Error(400);
                 }
             }
-            console.log("Call: " + JSON.stringify(call));
             if(call['number']) {
-                console.log("call[\"number\"]: " + call.number);
                 calls.push(call);
                 console.log("Added new call: " + JSON.stringify(call));
                 //TODO: Should return "created" instead of a value
