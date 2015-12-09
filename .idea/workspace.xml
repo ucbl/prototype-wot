@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/capabilities/call.js" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/call.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
@@ -33,8 +34,8 @@
       <file leaf-file-name="call.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/call.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0795756" vertical-offset="500" max-vertical-offset="1660">
-              <caret line="28" column="122" selection-start-line="28" selection-start-column="122" selection-end-line="28" selection-end-column="122" />
+            <state vertical-scroll-proportion="0.1591512" vertical-offset="480" max-vertical-offset="1700">
+              <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -645,12 +646,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00266" summary="Try with interoperability layer complete">
-      <created>1448925999758</created>
-      <option name="number" value="00266" />
-      <option name="project" value="LOCAL" />
-      <updated>1448925999759</updated>
-    </task>
     <task id="LOCAL-00267" summary="Try with interoperability layer complete">
       <created>1448926125102</created>
       <option name="number" value="00267" />
@@ -939,7 +934,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449700948927</updated>
     </task>
-    <option name="localTasksCounter" value="315" />
+    <task id="LOCAL-00315" summary="Try with interoperability simple vocabulary">
+      <created>1449700954239</created>
+      <option name="number" value="00315" />
+      <option name="project" value="LOCAL" />
+      <updated>1449700954239</updated>
+    </task>
+    <option name="localTasksCounter" value="316" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1420,8 +1421,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/call.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0795756" vertical-offset="500" max-vertical-offset="1660">
-          <caret line="28" column="122" selection-start-line="28" selection-start-column="122" selection-end-line="28" selection-end-column="122" />
+        <state vertical-scroll-proportion="0.1591512" vertical-offset="480" max-vertical-offset="1700">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
           <folding />
         </state>
       </provider>
