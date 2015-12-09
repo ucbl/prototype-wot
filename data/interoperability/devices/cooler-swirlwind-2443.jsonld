@@ -1,13 +1,13 @@
 {
   "@context" : "__interoperability__context/Device",
   "@type": "http://www.w3.org/ns/hydra/core#Class",
-  "@id" : "__interoperability__device/cooler-swirlwind-2443",
+  "@id" : "__interoperability__devices/cooler-swirlwind-2443",
   "id" : "cooler-swirlwind-2443",
   "name": "Cooler",
   "description": "A Swirlwind cooler with the 2443 serial number",
 	"capabilities" : [
 		{
-      "@id": "__interoperability__device/cooler-swirlwind-2443/temperatureDecrease",
+      "@id": "__interoperability__devices/cooler-swirlwind-2443/temperatureDecrease",
       "@context" : "__interoperability__context/Capability",
       "@type" : "http://www.w3.org/ns/hydra/core#Class",
       "ontology": "__capability__temperatureDecrease"

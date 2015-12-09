@@ -1,19 +1,19 @@
 {
     "@context" : "__interoperability__context/Device",
     "@type": "http://www.w3.org/ns/hydra/core#Class",
-    "@id": "__interoperability__device/window-ikea-2555",
+    "@id": "__interoperability__devices/window-ikea-2555",
     "id": "window-ikea-2555",
     "name": "Window",
     "description": "An IKEA window with the serial number 2555",
     "capabilities" : [
 		{
-	      "@id": "__interoperability__device/window-ikea-2555/openWindow",
+	      "@id": "__interoperability__devices/window-ikea-2555/openWindow",
 	      "@type": "http://www.w3.org/ns/hydra/core#Class",
           "@context": "__interoperability__context/Capability",
           "ontology": "__capability__capability/openWindow"
 	    },
 		{
-	      "@id": "__interoperability__device/window-ikea-2555/closeWindow",
+	      "@id": "__interoperability__devices/window-ikea-2555/closeWindow",
 	      "@type": "http://www.w3.org/ns/hydra/core#Class",
           "@context": "__interoperability__context/Capability",
           "ontology": "__capability__closeWindow"

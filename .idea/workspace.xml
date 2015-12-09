@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/interoperability-public/js/public.js" afterPath="$PROJECT_DIR$/public/interoperability-public/js/public.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/cooler-swirlwind-2443.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/cooler-swirlwind-2443.jsonld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/coolerheater-swirlwind-2665.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/coolerheater-swirlwind-2665.jsonld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/gps-sony-2556.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/gps-sony-2556.jsonld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/heater-tesco-2336.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/heater-tesco-2336.jsonld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/motor-ge-3343.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/motor-ge-3343.jsonld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/phone-samsung-2554.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/phone-samsung-2554.jsonld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/sensor-ge-2442.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/sensor-ge-2442.jsonld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/window-ikea-2555.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/window-ikea-2555.jsonld" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
@@ -36,8 +43,8 @@
           <file leaf-file-name="public.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/interoperability-public/js/public.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.4244032" vertical-offset="0" max-vertical-offset="754">
-                  <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.6366048" vertical-offset="0" max-vertical-offset="754">
+                  <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
@@ -761,12 +768,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00224" summary="Try with interoperability layer complete">
-      <created>1448787979107</created>
-      <option name="number" value="00224" />
-      <option name="project" value="LOCAL" />
-      <updated>1448787979107</updated>
-    </task>
     <task id="LOCAL-00225" summary="Try with interoperability layer complete">
       <created>1448788440170</created>
       <option name="number" value="00225" />
@@ -1055,7 +1056,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449678809491</updated>
     </task>
-    <option name="localTasksCounter" value="273" />
+    <task id="LOCAL-00273" summary="Try with interoperability simple vocabulary">
+      <created>1449679134200</created>
+      <option name="number" value="00273" />
+      <option name="project" value="LOCAL" />
+      <updated>1449679134200</updated>
+    </task>
+    <option name="localTasksCounter" value="274" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1538,8 +1545,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/interoperability-public/js/public.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4244032" vertical-offset="0" max-vertical-offset="754">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6366048" vertical-offset="0" max-vertical-offset="754">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
           <folding />
         </state>
       </provider>
