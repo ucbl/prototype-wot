@@ -56,6 +56,7 @@
 
         'invokeCapability': function(capabilityId, method, params) {
             var capability = this.getCapability(capabilityId);
+            console.log("invoke " + JSON.stringify(capability) + " from " + capabilityId + " on " + JSON.stringify(this));
             if(capability) {
                 if(capability[method]) {
                     return capability[method](this.values, params);
