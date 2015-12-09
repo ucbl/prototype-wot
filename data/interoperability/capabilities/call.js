@@ -29,7 +29,7 @@
             console.log(!isNaN(params.id));
             console.log(parseInt(params.id) >= 0);
             console.log(parseInt(params.id) < calls.length);
-            if(params & params['id'] && params['call'] && !isNaN(params.id) && parseInt(params.id) >= 0 && parseInt(params.id) < calls.length) {
+            if(params && params['id'] && params['call'] && !isNaN(params.id) && parseInt(params.id) >= 0 && parseInt(params.id) < calls.length) {
                 calls[parseInt(params.id)] = params.call;
                 console.log("Call " + params.id + " modified.");
                 //Not an error
