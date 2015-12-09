@@ -5,7 +5,7 @@
 
 var express = require('express'),
     router = express.Router(),
-//    jsonParser = require('body-parser').json(),
+    jsonParser = require('body-parser').json(),
     Globals = require('../models/globals'),
     interoperabilityModel = require('../models/interoperability'),
     jsonldHeaders = require('../middleware/jsonldHeaders');
@@ -95,7 +95,7 @@ router.put('/devices/:deviceId', function(request, response) {
 
 // Add a new device to the currently connected device list
 //TODO: do something more interesting if a graph is posted to the device
-router.post('/devices/:deviceId', function(request, response) {
+router.post('/devices/:deviceId', jsonParser, function(request, response) {
     if(interoperabilityModel.isConnected(request.params["deviceId"])) {
         response.sendStatus(405);
     } else {
@@ -131,7 +131,7 @@ router.get('/devices/:deviceId/:capabilityId', function(request, response, next)
     }
 });
 
-router.put('/devices/:deviceId/:capabilityId', function(request, response, next) {
+router.put('/devices/:deviceId/:capabilityId', jsonParser, function(request, response, next) {
     var device = interoperabilityModel.findDeviceById(request.params["deviceId"]);
     console.log("body: " + JSON.stringify(request.body));
     try {
@@ -147,7 +147,7 @@ router.put('/devices/:deviceId/:capabilityId', function(request, response, next)
     }
 });
 
-router.post('/devices/:deviceId/:capabilityId', function(request, response, next) {
+router.post('/devices/:deviceId/:capabilityId', jsonParser, function(request, response, next) {
     var device = interoperabilityModel.findDeviceById(request.params["deviceId"]);
     console.log("body: " + JSON.stringify(request.body));
     try {
@@ -163,7 +163,7 @@ router.post('/devices/:deviceId/:capabilityId', function(request, response, next
     }
 });
 
-router.delete('/devices/:deviceId/:capabilityId', function(request, response, next) {
+router.delete('/devices/:deviceId/:capabilityId', jsonParser, function(request, response, next) {
     var device = interoperabilityModel.findDeviceById(request.params["deviceId"]);
     try {
         //It seems that passing parameters in a delete request is not restful (see http://stackoverflow.com/questions/2539394/rest-http-delete-and-parameters)
