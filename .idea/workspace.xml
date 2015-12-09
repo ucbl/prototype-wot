@@ -44,8 +44,8 @@
       <file leaf-file-name="device.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/device.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.265252" vertical-offset="0" max-vertical-offset="1560">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.795756" vertical-offset="360" max-vertical-offset="1620">
+              <caret line="48" column="50" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -600,12 +600,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00232" summary="Try with interoperability layer complete">
-      <created>1448794503154</created>
-      <option name="number" value="00232" />
-      <option name="project" value="LOCAL" />
-      <updated>1448794503154</updated>
-    </task>
     <task id="LOCAL-00233" summary="Try with interoperability layer complete">
       <created>1448794565470</created>
       <option name="number" value="00233" />
@@ -894,7 +888,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449680895141</updated>
     </task>
-    <option name="localTasksCounter" value="281" />
+    <task id="LOCAL-00281" summary="Try with interoperability simple vocabulary">
+      <created>1449680964418</created>
+      <option name="number" value="00281" />
+      <option name="project" value="LOCAL" />
+      <updated>1449680964418</updated>
+    </task>
+    <option name="localTasksCounter" value="282" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -958,13 +958,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/interoperability/contexts/PhoneStatus.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19151847" vertical-offset="0" max-vertical-offset="731">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/stopApp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
@@ -1333,14 +1326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/temperatureDecrease.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24291497" vertical-offset="0" max-vertical-offset="741">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/temperatureSense.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.64777327" vertical-offset="0" max-vertical-offset="741">
@@ -1373,10 +1358,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/temperatureDecrease.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2387268" vertical-offset="0" max-vertical-offset="754">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/heater-tesco-2336.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="754">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/device.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.265252" vertical-offset="0" max-vertical-offset="1560">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.795756" vertical-offset="360" max-vertical-offset="1620">
+          <caret line="48" column="50" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
           <folding />
         </state>
       </provider>
