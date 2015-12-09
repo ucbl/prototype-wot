@@ -133,7 +133,7 @@ router.get('/devices/:deviceId/:capabilityId', function(request, response, next)
 
 router.put('/devices/:deviceId/:capabilityId', jsonParser, function(request, response, next) {
     var device = interoperabilityModel.findDeviceById(request.params["deviceId"]);
-    console.log("body: " + request.body);
+    console.log("body: " + JSON.stringify(request.body));
     try {
         var result = device.invokeCapability(request.params["capabilityId"], "put", request.body);
         jsonldHeaders(request, response, next);
@@ -149,7 +149,7 @@ router.put('/devices/:deviceId/:capabilityId', jsonParser, function(request, res
 
 router.post('/devices/:deviceId/:capabilityId', jsonParser, function(request, response, next) {
     var device = interoperabilityModel.findDeviceById(request.params["deviceId"]);
-    console.log("body: " + request.body);
+    console.log("body: " + JSON.stringify(request.body));
     try {
         var result = device.invokeCapability(request.params["capabilityId"], "post", request.body);
         jsonldHeaders(request, response, next);
