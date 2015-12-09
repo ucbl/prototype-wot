@@ -60,6 +60,7 @@
             }
             console.log("Call: " + JSON.stringify(call));
             if(call['number']) {
+                console.log("call[\"number\"]: " + call.number);
                 calls.add(call);
                 console.log("Added new call: " + JSON.stringify(call));
                 //TODO: Should return "created" instead of a value
