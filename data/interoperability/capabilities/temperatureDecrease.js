@@ -1,17 +1,20 @@
 (function(module) {
-
     module.exports = {
-        "get": function (values, params) {
-            if(params[name]) {
-                return values[params.name];
+        //Returns the current state of the actuator
+        "get": function (values) {
+            //Init
+            if(!values.state) {
+                values.state = "0";
             }
-            throw new Error("Not Found");
+            return values.state;
         },
+        //Used to pass a state to the actuator
         "post": function (values, params) {
-        },
-        "put": function (values, params) {
-        },
-        "delete": function (values, params) {
+            if(params && typeof(params) === "number" && parseInt(params) >= 0) {
+                values.state = parseInt(params);
+                return values.state;
+            }
+            return new Error(400);
         }
     };
 })(module);

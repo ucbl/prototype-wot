@@ -119,22 +119,22 @@ h2 {
 	margin: auto;
 }
 
-.object {
+.device {
 	width: 25%;
 	float: left;
-	.objectIns {
+	.deviceIns {
 		margin: 10px;
 		padding: 10px;
 		border: 1px solid $graywhite;
 		background: $white;
 	}
-	.objectName {
+	.deviceName {
 		font-weight: bold;
 		color: $blue;
         padding-top: 10px;
 		padding-bottom: 10px;
 	}
-	.objectId a {
+	.deviceId a {
 		display: block;
 		font-size: 0.7em;
 		font-weight: normal;
@@ -144,10 +144,10 @@ h2 {
 			text-decoration: underline;
 		}
 	}
-	.objectDescription {
+	.deviceDescription {
 		font-size: 0.8em;
 	}
-	.objectValues {
+	.deviceValues {
 		padding-top: 10px;
 		color: $green;
 		font-family: $fontFamilyCode;

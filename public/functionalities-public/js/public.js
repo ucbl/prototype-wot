@@ -5,7 +5,7 @@ var urlAvatars = 'http://localhost:3000/avatars';
 
 $(document).ready(function() {
 
-	reloadObjects();
+	reloadDevices();
 
 	reloadAvatars();
 	reloadAvatarsInterval = setInterval(function(){
@@ -17,13 +17,13 @@ $(document).ready(function() {
 function activateAjax() {
 
 	// Create the avatars
-	$('.objectActivate').click(function(evt) {
+	$('.deviceActivate').click(function(evt) {
 		var self = $(this);
 		evt.stopImmediatePropagation();
 		evt.preventDefault();
 		var idAvatarRel = self.attr('rel');
-		if (self.hasClass('objectActivateDelete')) {
-			self.removeClass('objectActivateDelete');
+		if (self.hasClass('deviceActivateDelete')) {
+			self.removeClass('deviceActivateDelete');
 			$.ajax({
 				url: urlAvatars,
 				type: 'DELETE',
@@ -37,7 +37,7 @@ function activateAjax() {
 				data: {urlCima: idAvatarRel},
 				success: function(response) {
 					if (response!=null) {
-						self.addClass('objectActivateDelete');
+						self.addClass('deviceActivateDelete');
 					}
 					reloadAvatars();
 				}
@@ -124,9 +124,9 @@ function activateAjaxFormExecute() {
 
 }
 
-function reloadObjects() {
+function reloadDevices() {
 	$.get(interoperabilityLayerUrl, {}, function(response){
-		$('.objectsFromCima').html(response);
+		$('.devicesFromCima').html(response);
 		activateAjax();
 	});	
 }
@@ -135,15 +135,15 @@ function reloadAvatars() {
 	$.get(urlAvatarsHtml, {}, function(response){
 		$('.avatars').html(response);
 		//Activate buttons
-		$('.objectName').removeClass('objectActivateDelete');
-		$('.objectName').each(function(index, ele){
-			var idObjectArray = $(ele).attr('rel').split('/');
-			var idObject = idObjectArray[idObjectArray.length - 1];
+		$('.deviceName').removeClass('deviceActivateDelete');
+		$('.deviceName').each(function(index, ele){
+			var idDeviceArray = $(ele).attr('rel').split('/');
+			var idDevice = idDeviceArray[idDeviceArray.length - 1];
 			$('.avatarId').each(function(indexIns, eleIns){
 				var idAvatarArray = $(eleIns).attr('rel').split('/');
 				var idAvatar = idAvatarArray[idAvatarArray.length - 1];
-				if (idObject == idAvatar) {
-					$(ele).addClass('objectActivateDelete');
+				if (idDevice == idAvatar) {
+					$(ele).addClass('deviceActivateDelete');
 				}
 			});
 		});
@@ -280,18 +280,18 @@ function closeModal() {
 
 JSON.stringify = JSON.stringify || function (obj) {
     var t = typeof (obj);
-    if (t != "object" || obj === null) {
+    if (t != "device" || obj === null) {
         // simple data type
         if (t == "string") obj = '"'+obj+'"';
         return String(obj);
     }
     else {
-        // recurse array or object
+        // recurse array or device
         var n, v, json = [], arr = (obj && obj.constructor == Array);
         for (n in obj) {
             v = obj[n]; t = typeof(v);
             if (t == "string") v = '"'+v+'"';
-            else if (t == "object" && v !== null) v = JSON.stringify(v);
+            else if (t == "device" && v !== null) v = JSON.stringify(v);
             json.push((arr ? "" : '"' + n + '":') + String(v));
         }
         return (arr ? "[" : "{") + String(json) + (arr ? "]" : "}");

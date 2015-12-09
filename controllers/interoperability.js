@@ -1,6 +1,6 @@
 /**
  * Created by Lionel on 22/11/2015.
- * Controller for a mock of interoperability platform that provides access to the connected objects
+ * Controller for a mock of interoperability platform that provides access to the connected devices
  */
 
 var express = require('express'),
@@ -25,38 +25,38 @@ router.get('/', function(request, response, next) {
     }
 });
 
-// Sends the collection of known objects
+// Sends the collection of known devices
 router.get('/platform', function(request, response, next) {
     var platform = interoperabilityModel.platform;
     if (request.accepts('html')) {
         response.render('interoperability/platform', {platform: platform});
     } else {
         jsonldHeaders(request, response, next);
-        response.end(JSON.stringify(require("../views/objectsSimple")(platform)));
+        response.end(JSON.stringify(require("../views/devicesSimple")(platform)));
     }
 });
 
 // Sends a collection of interoperability (detailed descriptions)
-router.get('/object', function(request, response, next) {
-    var platform = interoperabilityModel.getKnownObjectCollection();
+router.get('/device', function(request, response, next) {
+    var platform = interoperabilityModel.getKnownDeviceCollection();
     if (request.accepts('html')) {
-        response.render('interoperability/objectsSimple', {objects: platform.objects});
+        response.render('interoperability/devicesSimple', {devices: platform.devices});
     } else {
         jsonldHeaders(request, response, next);
-        response.end(JSON.stringify((require("../views/objectsSimple")(platform))));
+        response.end(JSON.stringify((require("../views/devicesSimple")(platform))));
     }
 });
 
-// Retrieves info about a particular object
-router.get('/object/:objectId', function(request, response, next) {
-    //Search object by name, then by id, then provide an empty object
-    var object = interoperabilityModel.getObjectInfos(request.params.objectId) || interoperabilityModel.findObjectById(request.params.objectId);
-    if(object) {
+// Retrieves info about a particular device
+router.get('/device/:deviceId', function(request, response, next) {
+    //Search device by name, then by id, then provide an empty device
+    var device = interoperabilityModel.getDeviceInfos(request.params.deviceId) || interoperabilityModel.findDeviceById(request.params.deviceId);
+    if(device) {
         if (request.accepts('html')) {
-            response.render('interoperability/object', {object: object});
+            response.render('interoperability/device', {device: device});
         } else {
             jsonldHeaders(request, response, next);
-            response.end(JSON.stringify(object));
+            response.end(JSON.stringify(device));
         }
     } else {
         response.sendStatus(404);
@@ -64,92 +64,78 @@ router.get('/object/:objectId', function(request, response, next) {
 });
 
 // Sends a collection of interoperability (detailed descriptions)
-router.get('/connected-object', function(request, response, next) {
-    var platform = interoperabilityModel.getConnectedObjectCollection();
+router.get('/connected-devices', function(request, response, next) {
+    var platform = interoperabilityModel.getConnectedDeviceCollection();
     if (request.accepts('html')) {
-        response.render('interoperability/objectsSimple', {objects: platform.objects});
+        response.render('interoperability/devicesSimple', {devices: platform.devices});
     } else {
         jsonldHeaders(request, response, next);
-        response.end(JSON.stringify((require("../views/objectsSimple")(platform))));
+        response.end(JSON.stringify((require("../views/devicesSimple")(platform))));
     }
 });
 
-// Retrieves info about a particular object
-router.get('/connected-object/:objectId', function(request, response) {
-    if(interoperabilityModel.isConnected(request.params.objectId)) {
-        response.redirect("../object/" + request.params.objectId);
+// Retrieves info about a particular device
+router.get('/connected-devices/:deviceId', function(request, response) {
+    if(interoperabilityModel.isConnected(request.params.deviceId)) {
+        response.redirect("../device/" + request.params.deviceId);
     } else {
         response.sendStatus(404);
     }
 });
 
-// Add a new object to the currently connected object list
-router.put('/object/:objectId', function(request, response) {
-    if(interoperabilityModel.isConnected(request.params.objectId)) {
+// Add a new device to the currently connected device list
+router.put('/device/:deviceId', function(request, response) {
+    if(interoperabilityModel.isConnected(request.params.deviceId)) {
         response.sendStatus(405);
     } else {
-        interoperabilityModel.addObject(request.params.objectId);
+        interoperabilityModel.addDevice(request.params.deviceId);
         response.sendStatus(201);
     }
 });
 
-// Add a new object to the currently connected object list
-//TODO: do something more if a graph is posted to the object
-router.post('/object/:objectId', function(request, response) {
-    if(interoperabilityModel.isConnected(request.params.objectId)) {
+// Add a new device to the currently connected device list
+//TODO: do something more if a graph is posted to the device
+router.post('/device/:deviceId', function(request, response) {
+    if(interoperabilityModel.isConnected(request.params.deviceId)) {
         response.sendStatus(405);
     } else {
-        interoperabilityModel.addObject(request.params.objectId);
+        interoperabilityModel.addDevice(request.params.deviceId);
         response.sendStatus(201);
     }
 });
 
-// Remove an object from the currently connected object list
-router.delete('/object/:objectId', function(request, response) {
-    if(interoperabilityModel.isConnected(request.params.objectId)) {
-        interoperabilityModel.removeObject(request.params.objectId);
+// Remove an device from the currently connected device list
+router.delete('/device/:deviceId', function(request, response) {
+    if(interoperabilityModel.isConnected(request.params.deviceId)) {
+        interoperabilityModel.removeDevice(request.params.deviceId);
         response.sendStatus(204);
     } else {
         response.sendStatus(405);
     }
 });
 
-/*-- Object capability management --*/
+/*-- device capability management --*/
 
-//TODO: REFACTOR THAT ASAP!
 // GET and PUT operations on the real interoperability
-router.get('/object/:objectId/:capabilityId', function(request, response, next) {
-    var object = interoperabilityModel.findObjectById(request.params.objectId);
-    var capability = request.params.capabilityId;
-    var responseJson = {"@id": Globals.vocabularies.interoperability + request.params["objectId"] + '/' + capability};
-    switch (capability) {
-        case 'gps':
-            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/Position';
-            responseJson['@type'] = 'vocab:Position';
-            responseJson.latitude = object.getValue('latitude');
-            responseJson.longitude = object.getValue('longitude');
-            break;
-        case 'temperatureSense':
-            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/Temperature';
-            responseJson['@type'] = 'vocab:Temperature';
-            responseJson.value = capabilityModel.calculateTemperature();
-            responseJson.type = object.getValue('type');
-            break;
-        case 'informationMotor':
-            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/MotorValue';
-            responseJson['@type'] = 'vocab:MotorValue';
-            responseJson.angle = object.getValue('angle');
-            responseJson.speed = object.getValue('speed');
-            responseJson.strength = object.getValue('strength');
-            break;
-    }
+router.get('/device/:deviceId/:capabilityId', function(request, response, next) {
     jsonldHeaders(request, response, next);
-    response.end(JSON.stringify(responseJson));
+    var device = interoperabilityModel.findDeviceById(request.params.deviceId);
+    try {
+        var result = device.invokeCapability(request.params.capabilityId, "get", request.query);
+        response.end(JSON.stringify(result));
+    } catch(error) {
+        if(typeof(error) === "number") {
+            response.sendStatus(error);
+        } else {
+            response.sendStatus(500);
+        }
+    }
 });
 
-router.put('/object/:objectId/:capability', function(request, response, next) {
+//TODO: REFACTOR THAT ASAP!
+router.put('/device/:deviceId/:capability', function(request, response, next) {
     jsonldHeaders(request, response, next);
-    var object = interoperabilityModel.findObjectById(request.params.objectId);
+    var device = interoperabilityModel.findDeviceById(request.params.deviceId);
     var capability = request.params.capability;
     var responseJson = {"@id": Globals.vocabularies.interoperability + request.originalUrl};
     switch (capability) {
@@ -157,12 +143,12 @@ router.put('/object/:objectId/:capability', function(request, response, next) {
             var newValue = request.body.value;
             responseJson['@context'] = Globals.vocabularies.interoperability + 'context/NumericValue';
             responseJson['@type'] = 'vocab:NumericValue';
-            if (request.params.objectId == 'coolerheater-swirlwind-2665') {
-                object.setValue('valueDecreaser', newValue);
-                responseJson.value = object.getValue('valueDecreaser');
+            if (request.params.deviceId == 'coolerheater-swirlwind-2665') {
+                device.setValue('valueDecreaser', newValue);
+                responseJson.value = device.getValue('valueDecreaser');
             } else {
-                object.setValue('value', newValue);
-                responseJson.value = object.getValue('value');
+                device.setValue('value', newValue);
+                responseJson.value = device.getValue('value');
             }
             capabilityModel.calculateTemperature();
             break;
@@ -170,27 +156,27 @@ router.put('/object/:objectId/:capability', function(request, response, next) {
             newValue = request.body.value;
             responseJson['@context'] = Globals.vocabularies.interoperability + 'context/NumericValue';
             responseJson['@type'] = 'vocab:NumericValue';
-            if (request.params.objectId == 'coolerheater-swirlwind-2665') {
-                object.setValue('valueIncreaser', newValue);
-                responseJson.value = object.getValue('valueIncreaser');
+            if (request.params.deviceId == 'coolerheater-swirlwind-2665') {
+                device.setValue('valueIncreaser', newValue);
+                responseJson.value = device.getValue('valueIncreaser');
             } else {
-                object.setValue('value', newValue);
-                responseJson.value = object.getValue('value');
+                device.setValue('value', newValue);
+                responseJson.value = device.getValue('value');
             }
             capabilityModel.calculateTemperature();
             break;
         case 'closeWindow':
             responseJson['@context'] = Globals.vocabularies.interoperability + 'context/WindowStatus';
             responseJson['@type'] = 'vocab:WindowStatus';
-            object.setValue('status', 'closed');
-            responseJson.status = object.getValue('status');
+            device.setValue('status', 'closed');
+            responseJson.status = device.getValue('status');
             capabilityModel.calculateTemperature();
             break;
         case 'openWindow':
             responseJson['@context'] = Globals.vocabularies.interoperability + 'context/WindowStatus';
             responseJson['@type'] = 'vocab:WindowStatus';
-            object.setValue('status', 'open');
-            responseJson.status = object.getValue('status');
+            device.setValue('status', 'open');
+            responseJson.status = device.getValue('status');
             capabilityModel.calculateTemperature();
             break;
         case 'call':
@@ -199,28 +185,28 @@ router.put('/object/:objectId/:capability', function(request, response, next) {
         case 'photo':
             responseJson['@context'] = Globals.vocabularies.interoperability + 'context/PhoneStatus';
             responseJson['@type'] = 'vocab:PhoneStatus';
-            object.setValue('status', capability);
-            responseJson.status = object.getValue('status');
+            device.setValue('status', capability);
+            responseJson.status = device.getValue('status');
             break;
         case 'startApp':
             responseJson['@context'] = Globals.vocabularies.interoperability + 'context/AppStatus';
             responseJson['@type'] = 'vocab:AppStatus';
-            object.setValue('statusApp', 'started');
-            responseJson.status = object.getValue('statusApp');
+            device.setValue('statusApp', 'started');
+            responseJson.status = device.getValue('statusApp');
             break;
         case 'stopApp':
             responseJson['@context'] = Globals.vocabularies.interoperability + 'context/AppStatus';
             responseJson['@type'] = 'vocab:AppStatus';
-            object.setValue('statusApp', 'stopped');
-            responseJson.status = object.getValue('statusApp');
+            device.setValue('statusApp', 'stopped');
+            responseJson.status = device.getValue('statusApp');
             break;
     }
     response.end(JSON.stringify(responseJson));
 });
 
-router.post('/object/:objectId/:capability', function(request, response, next) {
+router.post('/device/:deviceId/:capability', function(request, response, next) {
     jsonldHeaders(request, response, next);
-    var object = interoperabilityModel.findObjectById(request.params.objectId);
+    var device = interoperabilityModel.findDeviceById(request.params.deviceId);
     var capability = request.params.capability;
     var responseJson = {"@id": Globals.vocabularies.interoperability + request.originalUrl};
     switch (capability) {
@@ -230,13 +216,13 @@ router.post('/object/:objectId/:capability', function(request, response, next) {
             var newStrength = request.body.strength;
             responseJson['@context'] = Globals.vocabularies.interoperability + 'context/MotorValue';
             responseJson['@type'] = 'vocab:MotorValue';
-            object.setValue('activated', 'true');
-            object.setValue('angle', newAngle);
-            object.setValue('speed', newSpeed);
-            object.setValue('strength', newStrength);
-            responseJson.angle = object.getValue('angle');
-            responseJson.speed = object.getValue('speed');
-            responseJson.strength = object.getValue('strength');
+            device.setValue('activated', 'true');
+            device.setValue('angle', newAngle);
+            device.setValue('speed', newSpeed);
+            device.setValue('strength', newStrength);
+            responseJson.angle = device.getValue('angle');
+            responseJson.speed = device.getValue('speed');
+            responseJson.strength = device.getValue('strength');
             break;
     }
     response.end(JSON.stringify(responseJson));

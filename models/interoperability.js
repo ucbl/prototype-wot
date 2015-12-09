@@ -2,14 +2,14 @@
  * Created by Lionel on 22/11/2015.
  * Model for the interoperability layer
  * Maintains 2 lists :
- * - known objects: loaded at init time, each object contains all the necessary information to process the object
- * - connected objects: empty until the addObject method is called. Only contains references (ids) of the objects
+ * - known devices: loaded at init time, each device contains all the necessary information to process the device
+ * - connected devices: empty until the addDevice method is called. Only contains references (ids) of the devices
  */
 (function(module) {
 
     var fs = require('fs'),
         Globals = require('./globals'),
-        objectModel = require('./object'),
+        deviceModel = require('./device'),
         cloneHelper = require('../helpers/cloneHelper'),
         templateEngine = require("../helpers/jsonTemplateEngine");
 
@@ -17,91 +17,73 @@
     var fileLocations = {
         'hydraVocabFile': __dirname + '/../data/interoperability/hydra.jsonld',
         'contextFileDir': __dirname + '/../data/interoperability/contexts/',
-        'objectFileDir': __dirname + '/../data/interoperability/objects/'
+        'deviceFileDir': __dirname + '/../data/interoperability/devices/'
     };
 
-    //Stores (at init) all the objects known by the platform, as JSON objects
-    var knownObjects = [];
+    //Stores (at init) all the devices known by the platform, as JSON devices
+    var knownDevices = [];
 
     module.exports = {
         // List of connected interoperability (only contains their ids)
-        "objects": [],
+        "devices": [],
 
-        /**Hydra descriptions**/
-        // Entrypoint
-        "entryPoint": {
-            "@context": Globals.vocabularies.interoperability + "context/EntryPoint",
-            "@type": "hydra:EntryPoint",
-            "@id": Globals.vocabularies.base + "/interoperability",
-            "object": Globals.vocabularies.interoperability + "object"
-        },
-
-        // Interoperability platform
-        "platform": function() {
-            return {
-                '@context': Globals.vocabularies.interoperability + 'context/Class',
-                '@type': 'hydra:Class',
-                '@id': Globals.vocabularies.interoperability + "platform",
-                'description': "Access to the available object collections",
-                'objects': Globals.vocabularies.interoperability + "platform/objects",
-                'connected-objects': Globals.vocabularies.interoperability + "platform/connected-objects"
-            };
-        },
-
-        // Known objects collection
-        "getKnownObjectCollection": function() {
+        /**
+         * Service model
+         */
+        // Known devices collection
+        "getKnownDeviceCollection": function() {
             var result = {
                 '@context': Globals.vocabularies.interoperability + 'context/Collection',
                 '@type': 'hydra:Collection',
-                '@id': Globals.vocabularies.interoperability + "platform/objects",
-                'objects': []
+                '@id': Globals.vocabularies.interoperability + "platform/devices",
+                'devices': []
             };
-            for(var i in knownObjects) {
-                result.objects.push(knownObjects[i]);
+            for(var i in knownDevices) {
+                result.devices.push(knownDevices[i]);
             }
             return result;
         },
 
-        // Connected objects collection
-        "getConnectedObjectCollection": function() {
+        // Connected devices collection
+        "getConnectedDeviceCollection": function() {
             var result = {
                 '@context': Globals.vocabularies.interoperability + 'context/Collection',
                 '@type': 'hydra:Collection',
-                '@id': Globals.vocabularies.interoperability + "platform/connected-objectz",
-                'objects': []
+                '@id': Globals.vocabularies.interoperability + "platform/connected-devicez",
+                'devices': []
             };
-            for(var i in this.objects) {
-                result.objects.push(knownObjects[i]);
+            for(var i in this.devices) {
+                result.devices.push(knownDevices[i]);
             }
             return result;
         },
 
-        // Loads all object descriptions and stores them in knownObjects
-        "loadObjects": function(params) {
-            var files = fs.readdirSync(fileLocations.objectFileDir);
+        // Loads all device descriptions and stores them in knownDevices
+        "loadDevices": function(params) {
+            var files = fs.readdirSync(fileLocations.deviceFileDir);
             if(params && params.verbose) {
-                console.log("Object directory: " + fileLocations.objectFileDir + " -> " + files.length + " files.");
+                console.log("Device directory: " + fileLocations.deviceFileDir + " -> " + files.length + " files.");
             }
             for (var i in files) {
                 if (files[i]!='' && files[i].indexOf('.jsonld')>0) {
                     // Read the JSON-LD file that contains all the information and use the JSON template engine to replace globals
-                    fs.readFile(fileLocations.objectFileDir + files[i], 'utf8', function(error, data) {
-                        var objectData = JSON.parse(templateEngine(data));
+                    fs.readFile(fileLocations.deviceFileDir + files[i], 'utf8', function(error, data) {
+                        var deviceData = JSON.parse(templateEngine(data));
 
-                        // Clone ObjectModel's methods and properties into objectData
-                        cloneHelper(objectModel, objectData);
+                        // Clone DeviceModel's methods and properties into deviceData
+                        cloneHelper(deviceModel, deviceData);
 
-                        //Load object capabilities
-                        objectData.initCapabilities(params);
+                        //Load device capabilities
+                        deviceData.initCapabilities(params);
 
-                        // Add it to the list of known objects
-                        knownObjects.push(objectData);
+                        // Add it to the list of known devices
+                        knownDevices.push(deviceData);
 
                         //Debug logs
                         if (params && params.verbose) {
-                            console.log("New object: " + objectData['@id'] + " -> " + objectData.length + " properties.");
-                            for (var propName in objectData) {
-                                console.log("property: " + propName + "\t" + objectData[propName]);
+                            console.log("New device: " + deviceData['@id'] + " -> " + deviceData.length + " properties.");
+                            for (var propName in deviceData) {
+                                console.log("property: " + propName + "\t" + deviceData[propName]);
                             }
                         }
                     });
@@ -109,72 +91,72 @@
             }
         },
 
-        // Adds an object to the list of connected ones
-        // Returns a boolean saying if the object is known and was not previously connected
-        'addObject': function(objectId) {
-            if(this.findObjectById(objectId) && !this.isConnected(objectId)) {
-                this.objects.push(objectId);
+        // Adds an device to the list of connected ones
+        // Returns a boolean saying if the device is known and was not previously connected
+        'addDevice': function(deviceId) {
+            if(this.findDeviceById(deviceId) && !this.isConnected(deviceId)) {
+                this.devices.push(deviceId);
                 return true;
             }
             return false;
         },
 
-        // Removes an object from the list of connected ones
-        // Returns a boolean saying if the object is known and was previously connected
-        'removeObject': function(objectId) {
-            if(this.findObjectById(objectId) && this.isConnected(objectId)) {
-                this.objects.remove(objectId);
+        // Removes an device from the list of connected ones
+        // Returns a boolean saying if the device is known and was previously connected
+        'removeDevice': function(deviceId) {
+            if(this.findDeviceById(deviceId) && this.isConnected(deviceId)) {
+                this.devices.remove(deviceId);
                 return true;
             }
             return false;
         },
 
-        // Returns the list of actually connected objects
-        'getAllObjects': function () {
+        // Returns the list of actually connected devices
+        'getAllDevices': function () {
             var results = [];
-            for(var id in this.objects) {
-                results.push(this.getObjectInfos(this.objects[id]));
+            for(var id in this.devices) {
+                results.push(this.getDeviceInfos(this.devices[id]));
             }
             return results;
         },
 
-        // Informs if an object is actually connected to the interoperability layer
-        "isConnected": function (objectId) {
-            for (var i in this.objects) {
-                if (this.objects[i] === objectId) {
+        // Informs if an device is actually connected to the interoperability layer
+        "isConnected": function (deviceId) {
+            for (var i in this.devices) {
+                if (this.devices[i] === deviceId) {
                     return true;
                 }
             }
             return false;
         },
 
-        // Gets info about a known object by its complete id (URI), even if it is not connected to the interoperability layer
-        "getObjectInfos": function (objectId) {
-            for (var i in knownObjects) {
-                var tempObject = knownObjects[i];
-                if (tempObject['@id'] == objectId) {
-                    return tempObject;
+        // Gets info about a known device by its complete id (URI), even if it is not connected to the interoperability layer
+        "getDeviceInfos": function (deviceId) {
+            for (var i in knownDevices) {
+                var tempDevice = knownDevices[i];
+                if (tempDevice['@id'] == deviceId) {
+                    return tempDevice;
                 }
             }
             return null;
         },
 
-        // Finds an object by the last part of its id (supposed to be only one)
-        'findObjectById': function (objectWeakId) {
-            for (var i in knownObjects) {
-                if (knownObjects[i].id == objectWeakId) {
-                    return knownObjects[i];
+        // Finds an device by the last part of its id (supposed to be only one)
+        'findDeviceById': function (deviceWeakId) {
+            for (var i in knownDevices) {
+                if (knownDevices[i].id == deviceWeakId) {
+                    return knownDevices[i];
                 }
             }
             return null;
         },
 
-        // Retrieves all objects with a given name
-        'findObjectsByName': function (nameObject) {
+        // Retrieves all devices with a given name
+        'findDevicesByName': function (nameDevice) {
             var results = [];
-            for (var i in knownObjects) {
-                if (knownObjects[i].name == nameObject) {
-                    results.push(knownObjects[i]);
+            for (var i in knownDevices) {
+                if (knownDevices[i].name == nameDevice) {
+                    results.push(knownDevices[i]);
                 }
             }
             return results;
@@ -183,6 +165,26 @@
         /**
          * Hydra description model
          */
+        // Entrypoint
+        "entryPoint": {
+            "@context": Globals.vocabularies.interoperability + "context/EntryPoint",
+            "@type": "hydra:EntryPoint",
+            "@id": Globals.vocabularies.base + "/interoperability",
+            "device": Globals.vocabularies.interoperability + "device"
+        },
+
+        // Interoperability platform
+        "platform": function() {
+            return {
+                '@context': Globals.vocabularies.interoperability + 'context/Class',
+                '@type': 'hydra:Class',
+                '@id': Globals.vocabularies.interoperability + "platform",
+                'description': "Access to the available device collections",
+                'devices': Globals.vocabularies.interoperability + "platform/devices",
+                'connected-devices': Globals.vocabularies.interoperability + "platform/connected-devices"
+            };
+        },
+
         "getHydraVocabulary": function()  {
             return templateEngine(fs.readFileSync(fileLocations.hydraVocabFile, 'utf8'));
         },

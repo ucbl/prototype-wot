@@ -1,4 +1,8 @@
 (function(module) {
+    var app = {
+        name: null,
+        status: null
+    };
 
     module.exports = {
         "get": function (values, params) {
@@ -8,10 +12,11 @@
             throw new Error("Not Found");
         },
         "post": function (values, params) {
+            //TODO: see if something else should be done
+            this.put(values, params);
         },
         "put": function (values, params) {
-        },
-        "delete": function (values, params) {
+
         }
     };
 })(module);

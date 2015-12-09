@@ -1,19 +1,19 @@
 {
-    "@context" : "__interoperability__context/CimaObject",
+    "@context" : "__interoperability__context/Device",
     "@type": "http://www.w3.org/ns/hydra/core#Class",
-    "@id" : "__interoperability__object/heater-tesco-2336",
+    "@id" : "__interoperability__device/heater-tesco-2336",
     "id" : "heater-tesco-2336",
     "name": "Heater",
     "description": "A Tesco heater with the serial number 2336",
     "capabilities" : [
     	{
-          "@id": "__interoperability__object/heater-tesco-2336/temperatureIncrease",
+          "@id": "__interoperability__device/heater-tesco-2336/temperatureIncrease",
           "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class",
           "ontology": "__capability__temperatureIncrease"
         }
     ],
-    "realObjectInfo": {
+    "values": {
     	"value": 0
     }
 }

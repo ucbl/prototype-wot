@@ -1,7 +1,7 @@
 /**
  * Created by Lionel on 17/11/2015.
- * Common methods of "object" (appliance) for the interoperability platform
- * Added to the object data at initialization time
+ * Common methods of "device" (appliance) for the interoperability platform
+ * Added to the device data at initialization time
  */
 
 (function(module) {
@@ -15,8 +15,13 @@
                 var shortId = capability["@id"].substring(capability["@id"].lastIndexOf("/") + 1);
                 var capabilityData = require("../data/interoperability/capabilities/" + shortId);
 
-                // Clone capability file's methods and properties into object capability
+                // Clone capability file's methods and properties into device capability
                 cloneHelper(capabilityData, capability);
+
+                //Provide the capability with an access to the object values
+                capability.getDeviceValues = function() {
+                    return this.values;
+                };
 
                 //Debug logs
                 if (params && params.verbose) {
@@ -29,11 +34,11 @@
         },
 
         'getValue': function (attributeName) {
-            return this.realObjectInfo[attributeName];
+            return this.values[attributeName];
         },
 
         'setValue': function (attributeName, value) {
-            this.realObjectInfo[attributeName] = value;
+            this.values[attributeName] = value;
         },
 
         'getCapability': function (capabilityId) {
@@ -49,8 +54,17 @@
             this.capabilities[capabilityId] = value;
         },
 
-        'operate': function(capabilityId, method, params) {
-            return this.capabilities[method] (params);
+        'invokeCapability': function(capabilityId, method, params) {
+            var capability = this.getCapability(capabilityId);
+            if(capability) {
+                if(capability[method]) {
+                    return capability[method](this.values, params);
+                } else {
+                    throw 400;
+                }
+            } else {
+                throw 404;
+            }
         }
     };
 })(module);

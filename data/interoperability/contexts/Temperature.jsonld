@@ -2,8 +2,8 @@
     "@context": {
         "hydra": "http://www.w3.org/ns/hydra/core#",
         "vocab": "__interoperability__vocab#",
-        "value": "http://www.w3.org/2001/XMLSchema#double",
+        "value": "http://www.w3.org/2001/XMLSchema#decimal",
         "type": "http://www.w3.org/2001/XMLSchema#string",
-        "Temperature": "vocab:Temperature"
+        "temperature": "vocab:Temperature"
     }
 }

@@ -11,5 +11,5 @@ div.platform
         a(href="#{platform['@id']}") #{platform['@id']}
 h2
     | Objects
-each objects in platform
-    include ./objectsSimple.jade
+each devices in platform
+    include ./devicesSimple.jade
