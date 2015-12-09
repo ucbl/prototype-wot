@@ -25,7 +25,7 @@
         },
         //Modifies a call if its 'id' and 'call' are provided in args
         //Adds a new call to the list if only 'call' is given
-        "put": function (values, params) {
+        "post": function (values, params) {
             if(params & params['id'] && params['call'] && params.id >= 0 && params.id < calls.length) {
                 calls[params.id] = params.call;
                 console.log("Call " + params.id + " modified.");
@@ -39,12 +39,15 @@
             }
         },
         //Creates a new call and adds it to the list
-        "post": function (values, params) {
+        "put": function (values, params) {
+            console.log("PUT");
             if(!params) {
+                console.log("Pas de params");
                 return new Error(400);
             }
             var call = {};
             for (var i in params) {
+                console.log("Param: " + i + " -> " + params[i]);
                 if (i == 'number') {
                     call.number = params.number;
                     call.start = new Date();
