@@ -2,11 +2,16 @@
 var interoperabilityLayerUrl = '/interoperability/devices';
 
 $(document).ready(function() {
-	reloadDevices();
-	setInterval(function(){
-		reloadDevices();
-	}, 5000);
-});
+        reloadDevices();
+        setInterval(function () {
+            reloadDevices();
+        }, 5000);
+        $("body").click(function () {
+            $.getJSON("/interoperability/devices/phone-samsung-2554/call", {"number": "12"}, null);
+        });
+    }
+);
+
 
 function reloadDevices() {
 	$.get(interoperabilityLayerUrl, {}, function(response){
