@@ -67,9 +67,10 @@
             //Not an error (not modified)
             throw 304;
         },
+        //Nullify the content of a call (instead of removing it)
         "delete": function (values, params) {
             if(params && params['id'] && !isNaN(params.id) && parseInt(params.id) >= 0 && parseInt(params.id) < calls.length) {
-                calls.remove(params.id);
+                calls[params.id] = null;
                 //Not an error
                 throw 204;
             }
