@@ -5,7 +5,7 @@
 
 var express = require('express'),
     router = express.Router(),
-    jsonParser = require('body-parser').json(),
+    jsonParser = require('body-parser').urlencoded({ extended: false }),
     Globals = require('../models/globals'),
     interoperabilityModel = require('../models/interoperability'),
     jsonldHeaders = require('../middleware/jsonldHeaders');

@@ -56,8 +56,8 @@
       <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66313" vertical-offset="2460" max-vertical-offset="4360">
-              <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.1856764" vertical-offset="0" max-vertical-offset="4360">
+              <caret line="7" column="72" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -615,12 +615,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00239" summary="Try with interoperability layer complete">
-      <created>1448801494530</created>
-      <option name="number" value="00239" />
-      <option name="project" value="LOCAL" />
-      <updated>1448801494530</updated>
-    </task>
     <task id="LOCAL-00240" summary="Try with interoperability layer complete">
       <created>1448801723341</created>
       <option name="number" value="00240" />
@@ -909,7 +903,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449687294476</updated>
     </task>
-    <option name="localTasksCounter" value="288" />
+    <task id="LOCAL-00288" summary="Try with interoperability simple vocabulary">
+      <created>1449687559650</created>
+      <option name="number" value="00288" />
+      <option name="project" value="LOCAL" />
+      <updated>1449687559650</updated>
+    </task>
+    <option name="localTasksCounter" value="289" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1396,8 +1396,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66313" vertical-offset="2460" max-vertical-offset="4360">
-          <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.1856764" vertical-offset="0" max-vertical-offset="4360">
+          <caret line="7" column="72" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
           <folding />
         </state>
       </provider>
