@@ -51,7 +51,6 @@
                 if (i == 'number') {
                     call.number = params.number;
                     call.start = new Date();
-                    console.log("Call: " + JSON.stringify(call));
                 } else if (i == 'end') {
                     call.end = params.end;
                 } else {
@@ -59,6 +58,7 @@
                     return new Error(400);
                 }
             }
+            console.log("Call: " + JSON.stringify(call));
             if(call['number']) {
                 calls.add(call);
                 console.log("Added new call: " + JSON.stringify(call));
