@@ -1,0 +1,7 @@
+div.device
+    div.deviceName
+        | #{device.name}
+    div(class='deviceId deviceActivate' rel='#{device["@id"]}')
+        a(href='#{device["@id"]}') #{device.id}
+    div.deviceDescription
+        | #{device.description}
