@@ -37,7 +37,7 @@ router.get('/platform', function(request, response, next) {
 });
 
 // Sends a collection of interoperability (detailed descriptions)
-router.get('/device', function(request, response, next) {
+router.get('/devices', function(request, response, next) {
     var platform = interoperabilityModel.getKnownDeviceCollection();
     if (request.accepts('html')) {
         response.render('interoperability/devicesSimple', {devices: platform.devices});
@@ -48,7 +48,7 @@ router.get('/device', function(request, response, next) {
 });
 
 // Retrieves info about a particular device
-router.get('/device/:deviceId', function(request, response, next) {
+router.get('/devices/:deviceId', function(request, response, next) {
     //Search device by name, then by id, then provide an empty device
     var device = interoperabilityModel.getDeviceInfos(request.params.deviceId) || interoperabilityModel.findDeviceById(request.params.deviceId);
     if(device) {
@@ -84,7 +84,7 @@ router.get('/connected-devices/:deviceId', function(request, response) {
 });
 
 // Add a new device to the currently connected device list
-router.put('/device/:deviceId', function(request, response) {
+router.put('/devices/:deviceId', function(request, response) {
     if(interoperabilityModel.isConnected(request.params.deviceId)) {
         response.sendStatus(405);
     } else {
@@ -95,7 +95,7 @@ router.put('/device/:deviceId', function(request, response) {
 
 // Add a new device to the currently connected device list
 //TODO: do something more if a graph is posted to the device
-router.post('/device/:deviceId', function(request, response) {
+router.post('/devices/:deviceId', function(request, response) {
     if(interoperabilityModel.isConnected(request.params.deviceId)) {
         response.sendStatus(405);
     } else {
@@ -105,7 +105,7 @@ router.post('/device/:deviceId', function(request, response) {
 });
 
 // Remove an device from the currently connected device list
-router.delete('/device/:deviceId', function(request, response) {
+router.delete('/devices/:deviceId', function(request, response) {
     if(interoperabilityModel.isConnected(request.params.deviceId)) {
         interoperabilityModel.removeDevice(request.params.deviceId);
         response.sendStatus(204);
@@ -117,7 +117,7 @@ router.delete('/device/:deviceId', function(request, response) {
 /*-- device capability management --*/
 
 // GET and PUT operations on the real interoperability
-router.get('/device/:deviceId/:capabilityId', function(request, response, next) {
+router.get('/devices/:deviceId/:capabilityId', function(request, response, next) {
     jsonldHeaders(request, response, next);
     var device = interoperabilityModel.findDeviceById(request.params.deviceId);
     try {
@@ -133,7 +133,7 @@ router.get('/device/:deviceId/:capabilityId', function(request, response, next) 
 });
 
 //TODO: REFACTOR THAT ASAP!
-router.put('/device/:deviceId/:capability', function(request, response, next) {
+router.put('/devices/:deviceId/:capability', function(request, response, next) {
     jsonldHeaders(request, response, next);
     var device = interoperabilityModel.findDeviceById(request.params.deviceId);
     var capability = request.params.capability;
@@ -204,7 +204,7 @@ router.put('/device/:deviceId/:capability', function(request, response, next) {
     response.end(JSON.stringify(responseJson));
 });
 
-router.post('/device/:deviceId/:capability', function(request, response, next) {
+router.post('/devices/:deviceId/:capability', function(request, response, next) {
     jsonldHeaders(request, response, next);
     var device = interoperabilityModel.findDeviceById(request.params.deviceId);
     var capability = request.params.capability;
