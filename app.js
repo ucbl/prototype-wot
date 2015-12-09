@@ -39,8 +39,8 @@ app.use(express.static(__dirname + '/public'));
 
 //Generated content
 app.use(bodyParser.json());
-//app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser());
+app.use(bodyParser.urlencoded({extended: true}));
+
 app.use(require('./controllers'));
 
 /**
