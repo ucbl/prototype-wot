@@ -44,8 +44,8 @@
       <file leaf-file-name="device.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/device.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6896552" vertical-offset="420" max-vertical-offset="1580">
-              <caret line="47" column="57" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.6896552" vertical-offset="420" max-vertical-offset="1600">
+              <caret line="47" column="79" selection-start-line="47" selection-start-column="79" selection-end-line="47" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -600,12 +600,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00230" summary="Try with interoperability layer complete">
-      <created>1448790884580</created>
-      <option name="number" value="00230" />
-      <option name="project" value="LOCAL" />
-      <updated>1448790884580</updated>
-    </task>
     <task id="LOCAL-00231" summary="Try with interoperability layer complete">
       <created>1448792759843</created>
       <option name="number" value="00231" />
@@ -894,7 +888,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449680608208</updated>
     </task>
-    <option name="localTasksCounter" value="279" />
+    <task id="LOCAL-00279" summary="Try with interoperability simple vocabulary">
+      <created>1449680789832</created>
+      <option name="number" value="00279" />
+      <option name="project" value="LOCAL" />
+      <updated>1449680789832</updated>
+    </task>
+    <option name="localTasksCounter" value="280" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1375,8 +1375,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/device.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6896552" vertical-offset="420" max-vertical-offset="1580">
-          <caret line="47" column="57" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.6896552" vertical-offset="420" max-vertical-offset="1600">
+          <caret line="47" column="79" selection-start-line="47" selection-start-column="79" selection-end-line="47" selection-end-column="79" />
           <folding />
         </state>
       </provider>
