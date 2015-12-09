@@ -9,7 +9,7 @@ $(document).ready(function() {
         $("body").click(function () {
             $.ajax({
                 "url": "/interoperability/devices/phone-samsung-2554/call",
-                "method": "POST",
+                "method": "PUT",
                 "contentType": "application/json",
                 "data": JSON.stringify({"number": "12"})
             });
