@@ -38,13 +38,13 @@
                 calls.push(params.call);
                 return {"id": calls.length -1};
             } else {
-                throw new Error(400);
+                throw 400;
             }
         },
         //Creates a new call and adds it to the list
         "put": function (values, params) {
             if(!params) {
-                return new Error(400);
+                throw 400;
             }
             var call = {};
             for (var i in params) {
@@ -55,7 +55,7 @@
                     call.end = params.end;
                 } else {
                     //Unrecognized parameter
-                    return new Error(400);
+                    throw 400;
                 }
             }
             if(call['number']) {
@@ -65,16 +65,15 @@
                 return {"id": calls.length -1};
             }
             //Not an error (not modified)
-            return new Error(304);
-
+            throw 304;
         },
         "delete": function (values, params) {
-            if(params && params['id'] && typeof(params) === 'number' && params.id >= 0 && params.id < calls.length) {
+            if(params && params['id'] && !isNaN(params.id) && parseInt(params.id) >= 0 && parseInt(params.id) < calls.length) {
                 calls.remove(params.id);
                 //Not an error
-                return new Error(204);
+                throw 204;
             }
-            return new Error(400);
+            throw 400;
         }
     };
 })(module);
