@@ -33,7 +33,7 @@
                 calls[parseInt(params.id)] = params.call;
                 console.log("Call " + params.id + " modified.");
                 //Not an error
-                throw new Error(204);
+                return new Error(204);
             } else if(params && params['call']) {
                 calls.push(params.call);
                 return {"id": calls.length -1};
