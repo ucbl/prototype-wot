@@ -34,8 +34,8 @@
       <file leaf-file-name="call.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/call.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6286472" vertical-offset="686" max-vertical-offset="1740">
-              <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.9018568" vertical-offset="660" max-vertical-offset="1740">
+              <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -646,12 +646,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00260" summary="Try with interoperability layer complete">
-      <created>1448909870821</created>
-      <option name="number" value="00260" />
-      <option name="project" value="LOCAL" />
-      <updated>1448909870821</updated>
-    </task>
     <task id="LOCAL-00261" summary="Try with interoperability layer complete">
       <created>1448909976243</created>
       <option name="number" value="00261" />
@@ -940,7 +934,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449699622681</updated>
     </task>
-    <option name="localTasksCounter" value="309" />
+    <task id="LOCAL-00309" summary="Try with interoperability simple vocabulary">
+      <created>1449699723838</created>
+      <option name="number" value="00309" />
+      <option name="project" value="LOCAL" />
+      <updated>1449699723838</updated>
+    </task>
+    <option name="localTasksCounter" value="310" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1429,8 +1429,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/call.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6286472" vertical-offset="686" max-vertical-offset="1740">
-          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.9018568" vertical-offset="660" max-vertical-offset="1740">
+          <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
           <folding />
         </state>
       </provider>

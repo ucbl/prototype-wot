@@ -64,7 +64,7 @@
                 calls.add(call);
                 console.log("Added new call: " + JSON.stringify(call));
                 //TODO: Should return "created" instead of a value
-                return calls.length -1;
+                return {"id": calls.length -1};
             }
             //Not an error (not modified)
             return new Error(304);
