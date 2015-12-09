@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/capabilities/call.js" afterPath="$PROJECT_DIR$/data/interoperability/capabilities/call.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
@@ -646,12 +645,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00265" summary="Try with interoperability layer complete">
-      <created>1448910832524</created>
-      <option name="number" value="00265" />
-      <option name="project" value="LOCAL" />
-      <updated>1448910832524</updated>
-    </task>
     <task id="LOCAL-00266" summary="Try with interoperability layer complete">
       <created>1448925999758</created>
       <option name="number" value="00266" />
@@ -940,7 +933,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449700774559</updated>
     </task>
-    <option name="localTasksCounter" value="314" />
+    <task id="LOCAL-00314" summary="Try with interoperability simple vocabulary">
+      <created>1449700948927</created>
+      <option name="number" value="00314" />
+      <option name="project" value="LOCAL" />
+      <updated>1449700948927</updated>
+    </task>
+    <option name="localTasksCounter" value="315" />
     <servers />
   </component>
   <component name="ToolWindowManager">
