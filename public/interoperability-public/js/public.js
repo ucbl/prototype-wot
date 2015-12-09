@@ -10,7 +10,7 @@ $(document).ready(function() {
 
 function reloadDevices() {
 	$.get(interoperabilityLayerUrl, {}, function(response){
-        $('.knownDevices').html($(response).find('.deviceDescription'));
+        $('.knownDevices').html($(response).find('.device'));
 		equalHeights('.object');
 	});
 }
