@@ -8,7 +8,7 @@
     var fs = require('fs'),
         cloneHelper = require('../helpers/cloneHelper');
 
-    var capabilities = [];
+//    var capabilities = [];
 
     module.exports = {
         'initCapabilities': function(params) {
@@ -45,6 +45,7 @@
 
         'getCapability': function (capabilityId) {
             for (var i in this.capabilities) {
+                console.log(this.capabilities[i]["@id"]);
                 if (this.capabilities[i]["@id"] == capabilityId) {
                     return this.capabilities[i];
                 }
