@@ -10,16 +10,19 @@ $(document).ready(function() {
 
 //Convenience function to test capability invocation with a JSON body in the request and a PUT method
 //Can be modified and re-sent using FF console...
-/*
         $("h1").click(function () {
+ /*
             $.ajax({
                 "url": "/interoperability/devices/phone-samsung-2554/call",
                 "method": "PUT",
                 "contentType": "application/json",
                 "data": JSON.stringify({"number": "12"})
             });
-        });
 */
+            $(function() {
+                $( "#dialog" ).dialog();
+            });
+        });
     }
 );
 
