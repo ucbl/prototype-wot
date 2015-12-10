@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/interoperability-public/js/interoperability.js" afterPath="$PROJECT_DIR$/public/interoperability-public/js/interoperability.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css-preprocessing/sass/interoperability.scss" afterPath="$PROJECT_DIR$/css-preprocessing/sass/interoperability.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -101,8 +100,8 @@
       <file leaf-file-name="interoperability.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css-preprocessing/sass/interoperability.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.91735536" vertical-offset="2836" max-vertical-offset="3420">
-              <caret line="164" column="5" selection-start-line="164" selection-start-column="5" selection-end-line="164" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.41322315" vertical-offset="2400" max-vertical-offset="3460">
+              <caret line="130" column="4" selection-start-line="130" selection-start-column="4" selection-end-line="130" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -673,12 +672,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00300" summary="Try with interoperability simple vocabulary">
-      <created>1449697666599</created>
-      <option name="number" value="00300" />
-      <option name="project" value="LOCAL" />
-      <updated>1449697666599</updated>
-    </task>
     <task id="LOCAL-00301" summary="Try with interoperability simple vocabulary">
       <created>1449697790026</created>
       <option name="number" value="00301" />
@@ -967,7 +960,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449739762351</updated>
     </task>
-    <option name="localTasksCounter" value="349" />
+    <task id="LOCAL-00349" summary="Try with interoperability simple vocabulary">
+      <created>1449740404291</created>
+      <option name="number" value="00349" />
+      <option name="project" value="LOCAL" />
+      <updated>1449740404291</updated>
+    </task>
+    <option name="localTasksCounter" value="350" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1454,8 +1453,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css-preprocessing/sass/interoperability.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91735536" vertical-offset="2836" max-vertical-offset="3420">
-          <caret line="164" column="5" selection-start-line="164" selection-start-column="5" selection-end-line="164" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.41322315" vertical-offset="2400" max-vertical-offset="3460">
+          <caret line="130" column="4" selection-start-line="130" selection-start-column="4" selection-end-line="130" selection-end-column="4" />
           <folding />
         </state>
       </provider>
