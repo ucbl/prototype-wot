@@ -136,12 +136,6 @@ h2 {
 		border: 1px solid $graywhite;
 		background: $white;
 	}
-	.deviceName {
-		font-weight: bold;
-		color: $blue;
-        padding-top: 10px;
-		padding-bottom: 10px;
-	}
 	.deviceId a {
 		display: block;
 		font-size: 0.7em;
@@ -152,6 +146,15 @@ h2 {
 			text-decoration: underline;
 		}
 	}
+    .deviceName {
+        font-weight: bold;
+        color: $blue;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        a {
+          color: $blue;
+        }
+    }
 	.deviceDescription {
 		font-size: 0.8em;
 	}

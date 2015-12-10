@@ -86,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interoperability.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="interoperability.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css-preprocessing/sass/interoperability.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.0740743" vertical-offset="1740" max-vertical-offset="3480">
-              <caret line="98" column="19" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.85714287" vertical-offset="2480" max-vertical-offset="3540">
+              <caret line="154" column="23" selection-start-line="154" selection-start-column="23" selection-end-line="154" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -106,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deviceSimple.jade" pinned="false" current-in-tab="true">
+      <file leaf-file-name="deviceSimple.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/interoperability/deviceSimple.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10973937" vertical-offset="0" max-vertical-offset="729">
-              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+            <state vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="240">
+              <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -203,8 +203,8 @@
         <option value="$PROJECT_DIR$/models/interoperability.js" />
         <option value="$PROJECT_DIR$/public/interoperability-public/index.html" />
         <option value="$PROJECT_DIR$/public/interoperability-public/js/interoperability.js" />
-        <option value="$PROJECT_DIR$/css-preprocessing/sass/interoperability.scss" />
         <option value="$PROJECT_DIR$/views/interoperability/deviceSimple.jade" />
+        <option value="$PROJECT_DIR$/css-preprocessing/sass/interoperability.scss" />
       </list>
     </option>
   </component>
@@ -681,12 +681,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00302" summary="Try with interoperability simple vocabulary">
-      <created>1449698086239</created>
-      <option name="number" value="00302" />
-      <option name="project" value="LOCAL" />
-      <updated>1449698086239</updated>
-    </task>
     <task id="LOCAL-00303" summary="Try with interoperability simple vocabulary">
       <created>1449698932243</created>
       <option name="number" value="00303" />
@@ -975,7 +969,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449740814571</updated>
     </task>
-    <option name="localTasksCounter" value="351" />
+    <task id="LOCAL-00351" summary="Try with interoperability simple vocabulary">
+      <created>1449743318584</created>
+      <option name="number" value="00351" />
+      <option name="project" value="LOCAL" />
+      <updated>1449743318584</updated>
+    </task>
+    <option name="localTasksCounter" value="352" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1444,14 +1444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css-preprocessing/sass/interoperability.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0740743" vertical-offset="1740" max-vertical-offset="3480">
-          <caret line="98" column="19" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/interoperability/device.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="754">
@@ -1462,8 +1454,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/interoperability/deviceSimple.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10973937" vertical-offset="0" max-vertical-offset="729">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        <state vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="240">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css-preprocessing/sass/interoperability.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.85714287" vertical-offset="2480" max-vertical-offset="3540">
+          <caret line="154" column="23" selection-start-line="154" selection-start-column="23" selection-end-line="154" selection-end-column="23" />
           <folding />
         </state>
       </provider>
