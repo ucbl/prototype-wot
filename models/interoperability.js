@@ -53,8 +53,6 @@
                 'devices': []
             };
             for(var i in this.devices) {
-                console.log(this.devices[i]);
-                console.log(this.findDeviceById(this.devices[i]));
                 var device = this.findDeviceById(this.devices[i]);
                 result.devices.push(device);
             }
@@ -107,12 +105,10 @@
         // Removes an device from the list of connected ones
         // Returns a boolean saying if the device is known and was previously connected
         'removeDevice': function(deviceId) {
-            console.log(this.findDeviceById(deviceId));
-            console.log(this.isConnected(deviceId));
-
             if(this.findDeviceById(deviceId) && this.isConnected(deviceId)) {
                 //Find the device index in this.devices
                 for(var i in this.devices) {
+                    console.log(this.devices[i].id);
                     if(this.devices[i].id == deviceId) {
                         //Remove it and shift the rest of the list
                         this.devices.splice(i,1);
@@ -120,6 +116,7 @@
                     }
                 }
             }
+            console.log("Loupé");
             return false;
         },
 
