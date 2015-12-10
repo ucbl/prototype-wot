@@ -11,7 +11,7 @@ $(document).ready(function() {
         }, 5000);
         //Change links on devices into AJAX calls
         $('div.deviceName a').click(function() {
-            console.log("clic");
+            alert("clic");
             loadDevice(this.href);
             return false;
         });
