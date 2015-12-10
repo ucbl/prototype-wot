@@ -36,7 +36,7 @@ router.get('/platform', function(request, response, next) {
     }
 });
 
-// Sends a collection of interoperability (detailed descriptions)
+// Returns the collection of known devices (detailed descriptions)
 router.get('/devices', function(request, response, next) {
     var platform = interoperabilityModel.getKnownDeviceCollection();
     if (request.accepts('html')) {
@@ -115,6 +115,8 @@ router.delete('/devices/:deviceId', function(request, response) {
 });
 
 /*-- device capability invocation --*/
+//Returns the capability result with a 200 status code if it was sent using the "return" instruction
+//and a status code if the capability function ended with a "throw" instruction and a numeric argument
 
 router.get('/devices/:deviceId/:capabilityId', function(request, response, next) {
     var device = interoperabilityModel.findDeviceById(request.params["deviceId"]);
@@ -126,6 +128,7 @@ router.get('/devices/:deviceId/:capabilityId', function(request, response, next)
         if(typeof(error) === "number") {
             response.sendStatus(error);
         } else {
+            console.log(error.message);
             response.sendStatus(500);
         }
     }

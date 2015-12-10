@@ -24,7 +24,7 @@
     var knownDevices = [];
 
     module.exports = {
-        // List of connected interoperability (only contains their ids)
+        // List of connected devices (only contains their ids)
         "devices": [],
 
         /**
@@ -49,11 +49,12 @@
             var result = {
                 '@context': Globals.vocabularies.interoperability + 'context/Collection',
                 '@type': 'hydra:Collection',
-                '@id': Globals.vocabularies.interoperability + "platform/connected-devicez",
+                '@id': Globals.vocabularies.interoperability + "connected-devices",
                 'devices': []
             };
             for(var i in this.devices) {
-                result.devices.push(knownDevices[i]);
+                var device = this.getDeviceInfos(this.devices[i]["@id"]);
+                result.devices.push(device);
             }
             return result;
         },
@@ -105,8 +106,14 @@
         // Returns a boolean saying if the device is known and was previously connected
         'removeDevice': function(deviceId) {
             if(this.findDeviceById(deviceId) && this.isConnected(deviceId)) {
-                this.devices.remove(deviceId);
-                return true;
+                //Find the device index in this.devices
+                for(var i in this.devices) {
+                    if(this.devices[i].id == deviceId) {
+                        //Remove it and shift the rest of the list
+                        this.devices.splice(i,1);
+                        return true;
+                    }
+                }
             }
             return false;
         },
