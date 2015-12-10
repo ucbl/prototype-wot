@@ -75,11 +75,9 @@ function disconnect(deviceUri) {
 }
 
 function loadDevice(deviceUri) {
-    $.get({
-        url: deviceUri,
-        success: function(data) {
+    $.get(deviceUri, null, function(data) {
             $("#modalContent").append(data);
             window.location = "#openModal";
         }
-    })
+    );
 }
