@@ -71,3 +71,13 @@ function disconnect(deviceUri) {
         }
     });
 }
+
+function loadDevice(deviceUri) {
+    $.get({
+        url: deviceUri,
+        success: function(data) {
+            $("#modalContent").append(data);
+            windo.location = "#openModal";
+        }
+    })
+}
