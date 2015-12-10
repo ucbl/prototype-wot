@@ -108,7 +108,6 @@
             if(this.findDeviceById(deviceId) && this.isConnected(deviceId)) {
                 //Find the device index in this.devices
                 for(var i in this.devices) {
-                    console.log(this.devices[i]);
                     if(this.devices[i] == deviceId) {
                         //Remove it and shift the rest of the list
                         this.devices.splice(i,1);
@@ -116,7 +115,6 @@
                     }
                 }
             }
-            console.log("Loupé");
             return false;
         },
 

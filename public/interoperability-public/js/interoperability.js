@@ -1,10 +1,12 @@
 //TODO: access this through global config
-var interoperabilityLayerUrl = '/interoperability/devices';
+var knownDevicesUrl = '/interoperability/devices',
+    connectedDevicesUrl = '/interoperability/connected-devices';
 
 $(document).ready(function() {
-        reloadDevices();
+        reloadKnownDevices();
         setInterval(function () {
-            reloadDevices();
+            reloadKnownDevices();
+            reloadConnectedDevices();
         }, 5000);
         //Convenience function to test capability invocation with a JSON body in the request and a PUT method
         //Can be modified and re-sent using FF console...
@@ -20,11 +22,18 @@ $(document).ready(function() {
 );
 
 
-function reloadDevices() {
-	$.get(interoperabilityLayerUrl, {}, function(response){
+function reloadKnownDevices() {
+    $.get(knownDevicesUrl, {}, function(response){
         $('.knownDevices').html($(response).find('.device'));
-		equalHeights('.object');
-	});
+        equalHeights('.object');
+    });
+}
+
+function reloadConnectedDevices() {
+    $.get(connectedDevicesUrl, {}, function(response){
+        $('.connectedDevices').html($(response).find('.device'));
+        equalHeights('.object');
+    });
 }
 
 function equalHeights(className) {
