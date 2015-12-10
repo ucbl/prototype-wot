@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/interoperability-public/index.html" afterPath="$PROJECT_DIR$/public/interoperability-public/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/interoperability-public/js/interoperability.js" afterPath="$PROJECT_DIR$/public/interoperability-public/js/interoperability.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -101,8 +100,8 @@
       <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/interoperability-public/js/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7427056" vertical-offset="0" max-vertical-offset="1060">
-              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.6366048" vertical-offset="0" max-vertical-offset="1060">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -663,12 +662,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00289" summary="Try with interoperability simple vocabulary">
-      <created>1449688435419</created>
-      <option name="number" value="00289" />
-      <option name="project" value="LOCAL" />
-      <updated>1449688435419</updated>
-    </task>
     <task id="LOCAL-00290" summary="Try with interoperability simple vocabulary">
       <created>1449688620521</created>
       <option name="number" value="00290" />
@@ -957,7 +950,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449709686654</updated>
     </task>
-    <option name="localTasksCounter" value="338" />
+    <task id="LOCAL-00338" summary="Try with interoperability simple vocabulary">
+      <created>1449710448522</created>
+      <option name="number" value="00338" />
+      <option name="project" value="LOCAL" />
+      <updated>1449710448522</updated>
+    </task>
+    <option name="localTasksCounter" value="339" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1444,8 +1443,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/interoperability-public/js/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7427056" vertical-offset="0" max-vertical-offset="1060">
-          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.6366048" vertical-offset="0" max-vertical-offset="1060">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
           <folding />
         </state>
       </provider>
