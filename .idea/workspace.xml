@@ -76,8 +76,8 @@
       <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50530505" vertical-offset="759" max-vertical-offset="3680">
-              <caret line="57" column="48" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.4429708" vertical-offset="1286" max-vertical-offset="3740">
+              <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
               <folding>
                 <element signature="e#2515#4056#0" expanded="false" />
               </folding>
@@ -650,12 +650,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00282" summary="Try with interoperability simple vocabulary">
-      <created>1449681218191</created>
-      <option name="number" value="00282" />
-      <option name="project" value="LOCAL" />
-      <updated>1449681218191</updated>
-    </task>
     <task id="LOCAL-00283" summary="Try with interoperability simple vocabulary">
       <created>1449682414069</created>
       <option name="number" value="00283" />
@@ -944,7 +938,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449706476184</updated>
     </task>
-    <option name="localTasksCounter" value="331" />
+    <task id="LOCAL-00331" summary="Try with interoperability simple vocabulary">
+      <created>1449706813931</created>
+      <option name="number" value="00331" />
+      <option name="project" value="LOCAL" />
+      <updated>1449706813932</updated>
+    </task>
+    <option name="localTasksCounter" value="332" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1427,8 +1427,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50530505" vertical-offset="759" max-vertical-offset="3680">
-          <caret line="57" column="48" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.4429708" vertical-offset="1286" max-vertical-offset="3740">
+          <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
           <folding>
             <element signature="e#2515#4056#0" expanded="false" />
           </folding>

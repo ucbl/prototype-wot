@@ -107,6 +107,9 @@
         // Removes an device from the list of connected ones
         // Returns a boolean saying if the device is known and was previously connected
         'removeDevice': function(deviceId) {
+            console.log(this.findDeviceById(deviceId));
+            console.log(this.isConnected(deviceId));
+
             if(this.findDeviceById(deviceId) && this.isConnected(deviceId)) {
                 //Find the device index in this.devices
                 for(var i in this.devices) {
