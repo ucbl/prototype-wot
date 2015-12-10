@@ -56,18 +56,17 @@ function connect(deviceUri) {
         "url": deviceUri,
         "method": "PUT",
         "success": function() {
-            $(".knownDevices").find("div.device:has(div[rel='"+ deviceUri + "'])").hide();
+            $(".knownDevices").find("div.device[rel='"+ deviceUri + "']").hide();
         }
     });
 }
 
 function disconnect(deviceUri) {
-        $.ajax({
-            "url": deviceUri,
-            "method": "DELETE",
-            "success": function() {
-                $(".knownDevices").find("div.device:has(div[rel='"+ deviceUri + "'])").show();
-            }
-
-        });
+    $.ajax({
+        "url": deviceUri,
+        "method": "DELETE",
+        "success": function() {
+            $(".knownDevices").find("div.device[rel='"+ deviceUri + "']").show();
+        }
+    });
 }
