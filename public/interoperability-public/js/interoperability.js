@@ -56,7 +56,7 @@ function connect(deviceUri) {
         "url": deviceUri,
         "method": "PUT",
         "success": function() {
-            $(".knownDevices").find("div.device").filter(".deviceName div[rel='" + deviceUri + "']").hide();
+            $(".knownDevices").find("div.device:has(div[rel='"+ deviceUri + "'])").hide();
         }
     });
 }
@@ -66,7 +66,7 @@ function disconnect(deviceUri) {
             "url": deviceUri,
             "method": "DELETE",
             "success": function() {
-                $(".knownDevices").find("div.device").filter(".deviceName div[rel='" + deviceUri + "']").show();
+                $(".knownDevices").find("div.device:has(div[rel='"+ deviceUri + "'])").show();
             }
 
         });
