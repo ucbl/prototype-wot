@@ -25,7 +25,7 @@ $(document).ready(function() {
 function reloadKnownDevices() {
     $.get(knownDevicesUrl, {}, function(response){
         $('.knownDevices').html($(response).find('.device').each(function(i, elt) {
-            $(this).append("<button onclick='alert(\"" + $(this).find('div [ref]').attr('ref') + "\");'>click</button>");
+            $(this).append("<button onclick='connect(\"" + $(elt).find('div[rel]').attr('rel') + "\");'>Connect</button>");
         }));
         equalHeights('.object');
     });
@@ -33,7 +33,9 @@ function reloadKnownDevices() {
 
 function reloadConnectedDevices() {
     $.get(connectedDevicesUrl, {}, function(response){
-        $('.connectedDevices').html($(response).find('.device'));
+        $('.connectedDevices').html($(response).find('.device').each(function(i, elt) {
+            $(this).append("<button onclick='disconnect(\"" + $(elt).find('div[rel]').attr('rel') + "\");'>Connect</button>");
+        }));
         equalHeights('.object');
     });
 }
@@ -45,4 +47,18 @@ function equalHeights(className) {
 		maxHeight = ($(ele).height() > maxHeight) ? $(ele).height() : maxHeight;
 	});
 	$(className).css('min-height', maxHeight);
+}
+
+function connect(deviceUri) {
+    $.ajax({
+        "url": deviceUri,
+        "method": "PUT"
+    });
+}
+
+function disconnect(deviceUri) {
+        $.ajax({
+            "url": deviceUri,
+            "method": "DELETE"
+        });
 }
