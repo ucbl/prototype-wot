@@ -1,5 +1,5 @@
 //TODO: access this through global config
-var knownDevicesUrl = '/interoperability/devices',
+var knownDevicesUrl = '/interoperability/known-devices',
     connectedDevicesUrl = '/interoperability/connected-devices';
 
 $(document).ready(function() {
