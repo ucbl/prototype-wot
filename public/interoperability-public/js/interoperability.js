@@ -26,8 +26,8 @@ $(document).ready(function() {
 
 function reloadKnownDevices() {
     $.get(knownDevicesUrl, {}, function(response){
-        $('.knownDevices').html($(response).find('.device').each(function(i, elt) {
-            $(this).append("<div class='deviceButton'><button onclick='connect(\"" + $(elt).find('div[rel]').attr('rel') + "\");'>Connect</button></div>");
+        $('.knownDevices').html($(response).find('.device').each(function() {
+            $(this).append("<div class='deviceButton'><button onclick='connect(\"" + $(this).attr('rel') + "\");'>Connect</button></div>");
         }));
         equalHeights('.device');
     });
@@ -35,8 +35,8 @@ function reloadKnownDevices() {
 
 function reloadConnectedDevices() {
     $.get(connectedDevicesUrl, {}, function(response){
-        $('.connectedDevices').html($(response).find('.device').each(function(i, elt) {
-            $(this).append("<button class='deviceButton' onclick='disconnect(\"" + $(elt).find('div[rel]').attr('rel') + "\");'>Disconnect</button>");
+        $('.connectedDevices').html($(response).find('.device').each(function() {
+            $(this).append("<button class='deviceButton' onclick='disconnect(\"" + $(this).attr('rel') + "\");'>Disconnect</button>");
         }));
         equalHeights('.device');
     });
