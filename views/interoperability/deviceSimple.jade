@@ -1,5 +1,5 @@
 div.device(rel='#{device["@id"]}')
     div.deviceName
-        a(href='#{device["@id"]}') #{device.name}
+        a(onclick='loadDevice("#{device["@id"]}")') #{device.name}
     div.deviceDescription
         | #{device.description}

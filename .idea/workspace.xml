@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/interoperability/deviceSimple.jade" afterPath="$PROJECT_DIR$/views/interoperability/deviceSimple.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/interoperability-public/js/interoperability.js" afterPath="$PROJECT_DIR$/public/interoperability-public/js/interoperability.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -109,7 +110,7 @@
         <entry file="file://$PROJECT_DIR$/views/interoperability/deviceSimple.jade">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-1.6" vertical-offset="0" max-vertical-offset="200">
-              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+              <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -118,8 +119,8 @@
       <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/interoperability-public/js/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15119363" vertical-offset="146" max-vertical-offset="1920">
-              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.098143235" vertical-offset="126" max-vertical-offset="1800">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -668,12 +669,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00315" summary="Try with interoperability simple vocabulary">
-      <created>1449700954239</created>
-      <option name="number" value="00315" />
-      <option name="project" value="LOCAL" />
-      <updated>1449700954239</updated>
-    </task>
     <task id="LOCAL-00316" summary="Try with interoperability simple vocabulary">
       <created>1449701077331</created>
       <option name="number" value="00316" />
@@ -962,7 +957,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449748394471</updated>
     </task>
-    <option name="localTasksCounter" value="364" />
+    <task id="LOCAL-00364" summary="Try with interoperability simple vocabulary">
+      <created>1449748540787</created>
+      <option name="number" value="00364" />
+      <option name="project" value="LOCAL" />
+      <updated>1449748540787</updated>
+    </task>
+    <option name="localTasksCounter" value="365" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1450,15 +1451,15 @@
     <entry file="file://$PROJECT_DIR$/views/interoperability/deviceSimple.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.6" vertical-offset="0" max-vertical-offset="200">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/interoperability-public/js/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15119363" vertical-offset="146" max-vertical-offset="1920">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.098143235" vertical-offset="126" max-vertical-offset="1800">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding />
         </state>
       </provider>
