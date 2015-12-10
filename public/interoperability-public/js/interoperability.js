@@ -5,12 +5,14 @@ var knownDevicesUrl = '/interoperability/devices',
 $(document).ready(function() {
         reloadKnownDevices();
         setInterval(function () {
-            reloadKnownDevices();
+            //reloadKnownDevices();
             reloadConnectedDevices();
         }, 5000);
-        //Convenience function to test capability invocation with a JSON body in the request and a PUT method
-        //Can be modified and re-sent using FF console...
-        $("body").click(function () {
+
+//Convenience function to test capability invocation with a JSON body in the request and a PUT method
+//Can be modified and re-sent using FF console...
+/*
+        $("h1").click(function () {
             $.ajax({
                 "url": "/interoperability/devices/phone-samsung-2554/call",
                 "method": "PUT",
@@ -18,6 +20,7 @@ $(document).ready(function() {
                 "data": JSON.stringify({"number": "12"})
             });
         });
+*/
     }
 );
 
@@ -34,7 +37,7 @@ function reloadKnownDevices() {
 function reloadConnectedDevices() {
     $.get(connectedDevicesUrl, {}, function(response){
         $('.connectedDevices').html($(response).find('.device').each(function(i, elt) {
-            $(this).append("<button onclick='disconnect(\"" + $(elt).find('div[rel]').attr('rel') + "\");'>Connect</button>");
+            $(this).append("<button onclick='disconnect(\"" + $(elt).find('div[rel]').attr('rel') + "\");'>Disconnect</button>");
         }));
         equalHeights('.object');
     });
