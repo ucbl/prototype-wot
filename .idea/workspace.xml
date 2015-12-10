@@ -88,8 +88,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/interoperability-public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7724138" vertical-offset="0" max-vertical-offset="725">
-              <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.46896553" vertical-offset="0" max-vertical-offset="725">
+              <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#hr#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -662,12 +662,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00287" summary="Try with interoperability simple vocabulary">
-      <created>1449687294476</created>
-      <option name="number" value="00287" />
-      <option name="project" value="LOCAL" />
-      <updated>1449687294476</updated>
-    </task>
     <task id="LOCAL-00288" summary="Try with interoperability simple vocabulary">
       <created>1449687559650</created>
       <option name="number" value="00288" />
@@ -956,7 +950,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449708864471</updated>
     </task>
-    <option name="localTasksCounter" value="336" />
+    <task id="LOCAL-00336" summary="Try with interoperability simple vocabulary">
+      <created>1449709641441</created>
+      <option name="number" value="00336" />
+      <option name="project" value="LOCAL" />
+      <updated>1449709641441</updated>
+    </task>
+    <option name="localTasksCounter" value="337" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1441,8 +1441,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/interoperability-public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7724138" vertical-offset="0" max-vertical-offset="725">
-          <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.46896553" vertical-offset="0" max-vertical-offset="725">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#hr#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
