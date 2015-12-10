@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/interoperability-public/js/interoperability.js" afterPath="$PROJECT_DIR$/public/interoperability-public/js/interoperability.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/interoperability-public/index.html" afterPath="$PROJECT_DIR$/public/interoperability-public/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
@@ -85,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/interoperability-public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.413794" vertical-offset="0" max-vertical-offset="700">
-              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.57931036" vertical-offset="0" max-vertical-offset="725">
+              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#hr#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -97,10 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/interoperability-public/js/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8408488" vertical-offset="726" max-vertical-offset="1560">
+            <state vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="1560">
               <caret line="68" column="86" selection-start-line="68" selection-start-column="86" selection-end-line="68" selection-end-column="86" />
               <folding />
             </state>
@@ -184,8 +184,8 @@
         <option value="$PROJECT_DIR$/controllers/interoperability.js" />
         <option value="$PROJECT_DIR$/public/interoperability-public/js/public.js" />
         <option value="$PROJECT_DIR$/models/interoperability.js" />
-        <option value="$PROJECT_DIR$/public/interoperability-public/index.html" />
         <option value="$PROJECT_DIR$/public/interoperability-public/js/interoperability.js" />
+        <option value="$PROJECT_DIR$/public/interoperability-public/index.html" />
       </list>
     </option>
   </component>
@@ -662,12 +662,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00296" summary="Try with interoperability simple vocabulary">
-      <created>1449690370643</created>
-      <option name="number" value="00296" />
-      <option name="project" value="LOCAL" />
-      <updated>1449690370643</updated>
-    </task>
     <task id="LOCAL-00297" summary="Try with interoperability simple vocabulary">
       <created>1449696119842</created>
       <option name="number" value="00297" />
@@ -956,7 +950,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449714474910</updated>
     </task>
-    <option name="localTasksCounter" value="345" />
+    <task id="LOCAL-00345" summary="Try with interoperability simple vocabulary">
+      <created>1449715145291</created>
+      <option name="number" value="00345" />
+      <option name="project" value="LOCAL" />
+      <updated>1449715145292</updated>
+    </task>
+    <option name="localTasksCounter" value="346" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1431,21 +1431,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/interoperability-public/index.html">
+    <entry file="file://$PROJECT_DIR$/public/interoperability-public/js/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.413794" vertical-offset="0" max-vertical-offset="700">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#hr#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="1560">
+          <caret line="68" column="86" selection-start-line="68" selection-start-column="86" selection-end-line="68" selection-end-column="86" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/interoperability-public/js/interoperability.js">
+    <entry file="file://$PROJECT_DIR$/public/interoperability-public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8408488" vertical-offset="726" max-vertical-offset="1560">
-          <caret line="68" column="86" selection-start-line="68" selection-start-column="86" selection-end-line="68" selection-end-column="86" />
-          <folding />
+        <state vertical-scroll-proportion="0.57931036" vertical-offset="0" max-vertical-offset="725">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#hr#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
