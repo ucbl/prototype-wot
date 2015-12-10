@@ -9,7 +9,6 @@
     <link href='/css/fonts/google-fonts.css' rel='stylesheet' type='text/css'/>
     <link href="/css/stylesheets/interoperability.css" rel="stylesheet" type="text/css" />
     <script src="/lib/jquery-2.1.4.min.js" type="text/javascript"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="js/interoperability.js" type="text/javascript"></script>
 </head>
 
@@ -27,8 +26,14 @@
         <div class="connectedDevices"></div>
     </div>
   </div>
-  <div id="dialog" title="Basic dialog">
-      <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+  <div id="openModal" class="modalDialog">
+      <div>	<a href="#close" title="Close" class="close">X</a>
+
+          <h2>Modal Box</h2>
+
+          <p>This is a sample modal box that can be created using the powers of CSS3.</p>
+          <p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
+      </div>
   </div>
 </body>
 </html>

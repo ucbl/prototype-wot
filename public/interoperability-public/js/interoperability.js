@@ -19,9 +19,7 @@ $(document).ready(function() {
                 "data": JSON.stringify({"number": "12"})
             });
 */
-            $(function() {
-                $( "#dialog" ).dialog();
-            });
+            window.location = "#openModal";
         });
     }
 );
