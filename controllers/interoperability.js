@@ -26,13 +26,13 @@ router.get('/', function(request, response, next) {
 });
 
 // Sends the collection of known devices
-router.get('/platform', function(request, response, next) {
-    var platform = interoperabilityModel.platform;
+router.get('/known-devices', function(request, response, next) {
+    var platform = interoperabilityModel.getKnownDeviceCollection();
     if (request.accepts('html')) {
-        response.render('interoperability/platform', {platform: platform});
+        response.render('interoperability/devicesSimple', {devices: platform.devices});
     } else {
         jsonldHeaders(request, response, next);
-        response.end(JSON.stringify(require("../views/devicesSimple")(platform)));
+        response.end(JSON.stringify((require("../views/devicesSimple")(platform))));
     }
 });
 
