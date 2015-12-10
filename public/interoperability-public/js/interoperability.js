@@ -27,7 +27,7 @@ $(document).ready(function() {
 function reloadKnownDevices() {
     $.get(knownDevicesUrl, {}, function(response){
         $('.knownDevices').html($(response).find('.device').each(function(i, elt) {
-            $(this).append("<button onclick='connect(\"" + $(elt).find('div[rel]').attr('rel') + "\");'>Connect</button>");
+            $(this).append("<button class='deviceButton' onclick='connect(\"" + $(elt).find('div[rel]').attr('rel') + "\");'>Connect</button>");
         }));
         equalHeights('.device');
     });
@@ -36,7 +36,7 @@ function reloadKnownDevices() {
 function reloadConnectedDevices() {
     $.get(connectedDevicesUrl, {}, function(response){
         $('.connectedDevices').html($(response).find('.device').each(function(i, elt) {
-            $(this).append("<button onclick='disconnect(\"" + $(elt).find('div[rel]').attr('rel') + "\");'>Disconnect</button>");
+            $(this).append("<button class='deviceButton' onclick='disconnect(\"" + $(elt).find('div[rel]').attr('rel') + "\");'>Disconnect</button>");
         }));
         equalHeights('.device');
     });
