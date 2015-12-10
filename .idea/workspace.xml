@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/interoperability/deviceSimple.jade" afterPath="$PROJECT_DIR$/views/interoperability/deviceSimple.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/interoperability-public/js/interoperability.js" afterPath="$PROJECT_DIR$/public/interoperability-public/js/interoperability.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -105,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deviceSimple.jade" pinned="false" current-in-tab="false">
+      <file leaf-file-name="deviceSimple.jade" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/interoperability/deviceSimple.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.6" vertical-offset="0" max-vertical-offset="200">
-              <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.054869685" vertical-offset="0" max-vertical-offset="729">
+              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -118,21 +119,9 @@
       <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/interoperability-public/js/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="886" max-vertical-offset="1760">
-              <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="146" max-vertical-offset="1900">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="device.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/models/device.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1936339" vertical-offset="0" max-vertical-offset="1080">
-              <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
-              <folding>
-                <element signature="e#346#1451#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -202,8 +191,8 @@
         <option value="$PROJECT_DIR$/css-preprocessing/sass/interoperability.scss" />
         <option value="$PROJECT_DIR$/views/interoperability/device.jade" />
         <option value="$PROJECT_DIR$/public/interoperability-public/index.html" />
-        <option value="$PROJECT_DIR$/views/interoperability/deviceSimple.jade" />
         <option value="$PROJECT_DIR$/public/interoperability-public/js/interoperability.js" />
+        <option value="$PROJECT_DIR$/views/interoperability/deviceSimple.jade" />
       </list>
     </option>
   </component>
@@ -680,12 +669,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00312" summary="Try with interoperability simple vocabulary">
-      <created>1449700369665</created>
-      <option name="number" value="00312" />
-      <option name="project" value="LOCAL" />
-      <updated>1449700369665</updated>
-    </task>
     <task id="LOCAL-00313" summary="Try with interoperability simple vocabulary">
       <created>1449700774559</created>
       <option name="number" value="00313" />
@@ -974,7 +957,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449747459122</updated>
     </task>
-    <option name="localTasksCounter" value="361" />
+    <task id="LOCAL-00361" summary="Try with interoperability simple vocabulary">
+      <created>1449747709103</created>
+      <option name="number" value="00361" />
+      <option name="project" value="LOCAL" />
+      <updated>1449747709103</updated>
+    </task>
+    <option name="localTasksCounter" value="362" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1449,29 +1438,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/interoperability/deviceSimple.jade">
+    <entry file="file://$PROJECT_DIR$/models/device.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6" vertical-offset="0" max-vertical-offset="200">
-          <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
+          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+          <folding>
+            <element signature="e#346#1451#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/interoperability-public/js/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="886" max-vertical-offset="1760">
-          <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="146" max-vertical-offset="1900">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/device.js">
+    <entry file="file://$PROJECT_DIR$/views/interoperability/deviceSimple.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1936339" vertical-offset="0" max-vertical-offset="1080">
-          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
-          <folding>
-            <element signature="e#346#1451#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.054869685" vertical-offset="0" max-vertical-offset="729">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>

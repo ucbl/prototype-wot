@@ -3,10 +3,17 @@ var knownDevicesUrl = '/interoperability/devices',
     connectedDevicesUrl = '/interoperability/connected-devices';
 
 $(document).ready(function() {
+        //Load known devices
         reloadKnownDevices();
+        //Periodically reload connected devices
         setInterval(function () {
             reloadConnectedDevices();
         }, 5000);
+        //Change links on devices into AJAX calls
+        $('div.deviceName a').click(function() {
+            loadDevice(this.href);
+            return false;
+        });
 
 //Convenience function to test capability invocation with a JSON body in the request and a PUT method
 //Can be modified and re-sent using FF console...

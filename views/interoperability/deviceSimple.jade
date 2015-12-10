@@ -1,5 +1,5 @@
 div.device(rel='#{device["@id"]}')
     div.deviceName
-        a(href='javascript:loadDevice("#{device["@id"]}");') #{device.name}
+        a(href='#{device["@id"]}') #{device.name}
     div.deviceDescription
         | #{device.description}
