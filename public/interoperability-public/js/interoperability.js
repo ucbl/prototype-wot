@@ -5,7 +5,6 @@ var knownDevicesUrl = '/interoperability/devices',
 $(document).ready(function() {
         reloadKnownDevices();
         setInterval(function () {
-            //reloadKnownDevices();
             reloadConnectedDevices();
         }, 5000);
 
@@ -30,7 +29,7 @@ function reloadKnownDevices() {
         $('.knownDevices').html($(response).find('.device').each(function(i, elt) {
             $(this).append("<button onclick='connect(\"" + $(elt).find('div[rel]').attr('rel') + "\");'>Connect</button>");
         }));
-        equalHeights('.object');
+        equalHeights('.device');
     });
 }
 
@@ -39,7 +38,7 @@ function reloadConnectedDevices() {
         $('.connectedDevices').html($(response).find('.device').each(function(i, elt) {
             $(this).append("<button onclick='disconnect(\"" + $(elt).find('div[rel]').attr('rel') + "\");'>Disconnect</button>");
         }));
-        equalHeights('.object');
+        equalHeights('.device');
     });
 }
 
@@ -55,13 +54,20 @@ function equalHeights(className) {
 function connect(deviceUri) {
     $.ajax({
         "url": deviceUri,
-        "method": "PUT"
+        "method": "PUT",
+        "success": function() {
+            $(".knownDevices").find("div.device").filter(".deviceName div[rel='" + deviceUri + "']").hide();
+        }
     });
 }
 
 function disconnect(deviceUri) {
         $.ajax({
             "url": deviceUri,
-            "method": "DELETE"
+            "method": "DELETE",
+            "success": function() {
+                $(".knownDevices").find("div.device").filter(".deviceName div[rel='" + deviceUri + "']").show();
+            }
+
         });
 }
