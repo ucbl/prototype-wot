@@ -26,9 +26,6 @@
         //Modifies a call if its 'id' and 'call' are provided in args
         //Adds a new call to the list if only 'call' is given
         "post": function (values, params) {
-            console.log(!isNaN(params.id));
-            console.log(parseInt(params.id) >= 0);
-            console.log(parseInt(params.id) < calls.length);
             if(params && params['id'] && params['call'] && !isNaN(params.id) && parseInt(params.id) >= 0 && parseInt(params.id) < calls.length) {
                 calls[parseInt(params.id)] = params.call;
                 console.log("Call " + params.id + " modified.");
@@ -53,9 +50,6 @@
                     call.start = new Date();
                 } else if (i == 'end') {
                     call.end = params.end;
-                } else {
-                    //Unrecognized parameter
-                    throw 400;
                 }
             }
             if(call['number']) {

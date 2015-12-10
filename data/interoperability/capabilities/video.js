@@ -12,8 +12,8 @@
     module.exports = {
         //Returns a particular video if its id is provided, an array of references to all videos otherwise
         "get": function (values, params) {
-            if(params['id']) {
-                values.status = videos[params.id];
+            if(params["id"]) {
+                values.status = videos[parseInt(params["id"])];
             } else {
                 var results = [];
                 for(var i in videos) {
@@ -26,22 +26,22 @@
         //Modifies a video if its 'id' and 'video' are provided in args
         //Adds a new video to the list if only 'video' is given
         "post": function (values, params) {
-            if(params & params['id'] && params['video'] && params.id >= 0 && params.id < videos.length) {
-                videos[params.id] = params.video;
+            if(params && params['id'] && params['video'] && !isNaN(params.id) && parseInt(params.id) >= 0 && parseInt(params.id) < videos.length) {
+                videos[parseInt(params.id)] = params.video;
                 console.log("Video " + params.id + " modified.");
                 //Not an error
-                throw new Error(204);
-            } else if(params & params['video']) {
-                videos.add(params.video);
-                return videos.length -1;
+                throw 204;
+            } else if(params && params['video']) {
+                videos.push(params.video);
+                return {"id": videos.length -1};
             } else {
-                throw new Error(400);
+                throw 400;
             }
         },
         //Creates a new video and adds it to the list
         "put": function (values, params) {
             if(!params) {
-                return new Error(400);
+                throw 400;
             }
             var video = {};
             for (var i in params) {
@@ -50,28 +50,25 @@
                     video.start = new Date();
                 } else if (i == 'end') {
                     video.end = params.end;
-                } else {
-                    //Unrecognized parameter
-                    return new Error(400);
                 }
             }
             if(video['data']) {
-                videos.add(video);
+                videos.push(video);
                 console.log("Added new video: " + JSON.stringify(video));
                 //TODO: Should return "created" instead of a value
-                return videos.length -1;
+                return {"id": videos.length -1};
             }
             //Not an error (not modified)
-            return new Error(304);
-
+            throw 304;
         },
+        //Nullify the content of a video (instead of removing it)
         "delete": function (values, params) {
-            if(params && params['id'] && typeof(params) === 'number' && params.id >= 0 && params.id < videos.length) {
-                videos.remove(params.id);
+            if(params && params['id'] && !isNaN(params.id) && parseInt(params.id) >= 0 && parseInt(params.id) < videos.length) {
+                videos[params.id] = null;
                 //Not an error
-                return new Error(204);
+                throw 204;
             }
-            return new Error(400);
+            throw 400;
         }
     };
 })(module);
