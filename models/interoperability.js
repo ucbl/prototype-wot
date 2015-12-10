@@ -53,7 +53,7 @@
                 'devices': []
             };
             for(var i in this.devices) {
-                var device = this.getDeviceInfos(this.devices[i]["@id"]);
+                var device = this.getDeviceInfos(this.devices[i]);
                 result.devices.push(device);
             }
             return result;

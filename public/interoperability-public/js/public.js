@@ -6,6 +6,8 @@ $(document).ready(function() {
         setInterval(function () {
             reloadDevices();
         }, 5000);
+        //Convenience function to test capability invocation with a JSON body in the request and a PUT method
+        //Can be modified and re-sent using FF console...
         $("body").click(function () {
             $.ajax({
                 "url": "/interoperability/devices/phone-samsung-2554/call",
