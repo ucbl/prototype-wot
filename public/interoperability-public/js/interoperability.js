@@ -77,7 +77,7 @@ function loadDevice(deviceUri) {
         url: deviceUri,
         success: function(data) {
             $("#modalContent").append(data);
-            windo.location = "#openModal";
+            window.location = "#openModal";
         }
     })
 }
