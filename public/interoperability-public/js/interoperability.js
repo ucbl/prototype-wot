@@ -27,7 +27,7 @@ $(document).ready(function() {
 function reloadKnownDevices() {
     $.get(knownDevicesUrl, {}, function(response){
         $('.knownDevices').html($(response).find('.device').each(function(i, elt) {
-            $(this).append("<button class='deviceButton' onclick='connect(\"" + $(elt).find('div[rel]').attr('rel') + "\");'>Connect</button>");
+            $(this).append("<div class='deviceButton'><button onclick='connect(\"" + $(elt).find('div[rel]').attr('rel') + "\");'>Connect</button></div>");
         }));
         equalHeights('.device');
     });
