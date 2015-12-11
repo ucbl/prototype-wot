@@ -16,7 +16,7 @@
     //local variable to retrieve data stored in files
     var fileLocations = {
         'hydraVocabDir': __dirname + '/../data/interoperability/vocabs/',
-        'hydraVocabFile': __dirname + this.hydraVocabDir + 'interoperability.jsonld',
+        'hydraVocabFile': __dirname + '/../data/interoperability/vocabs/interoperability.jsonld',
         'contextFileDir': __dirname + '/../data/interoperability/contexts/',
         'deviceFileDir': __dirname + '/../data/interoperability/devices/'
     };
