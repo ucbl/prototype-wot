@@ -30,7 +30,7 @@
         "devices": [],
 
         //Uri of the interoperability layer vocabulary
-        "hydraVocabUri": function() {
+        "getHydraVocabUri": function() {
             return Globals.vocabularies.interoperability + 'vocab#';
         },
 
