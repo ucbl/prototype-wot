@@ -21,12 +21,16 @@
         'deviceFileDir': __dirname + '/../data/interoperability/devices/'
     };
 
+
     //Stores (at init) all the devices known by the platform, as JSON devices
     var knownDevices = [];
 
     module.exports = {
         // List of connected devices (only contains their ids)
         "devices": [],
+
+        //Uri of the interoperability layer vocabulary
+        "hydraVocabUri": Globals.vocabularies.interoperability + 'vocab#',
 
         /**
          * Service model
