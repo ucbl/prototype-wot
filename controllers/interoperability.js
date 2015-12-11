@@ -25,7 +25,7 @@ router.get('/', function(request, response, next) {
     }
 });
 
-// Sends the collection of known devices
+// Sends the collection of known devices (simple descriptions)
 router.get('/known-devices', function(request, response, next) {
     var platform = interoperabilityModel.getKnownDeviceCollection();
     if (request.accepts('html')) {
@@ -36,9 +36,9 @@ router.get('/known-devices', function(request, response, next) {
     }
 });
 
-// Returns the collection of known devices (detailed descriptions)
+// Returns the collection of connected devices (simple descriptions)
 router.get('/devices', function(request, response, next) {
-    var platform = interoperabilityModel.getKnownDeviceCollection();
+    var platform = interoperabilityModel.getConnectedDeviceCollection();
     if (request.accepts('html')) {
         response.render('interoperability/devicesSimple', {devices: platform.devices});
     } else {

@@ -1,6 +1,6 @@
 //TODO: access this through global config
 var knownDevicesUrl = '/interoperability/known-devices',
-    connectedDevicesUrl = '/interoperability/connected-devices';
+    connectedDevicesUrl = '/interoperability/devices';
 
 $(document).ready(function() {
         //Load known devices
