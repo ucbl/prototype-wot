@@ -30,7 +30,9 @@
         "devices": [],
 
         //Uri of the interoperability layer vocabulary
-        "hydraVocabUri": Globals.vocabularies.interoperability + 'vocab#',
+        "hydraVocabUri": function() {
+            return Globals.vocabularies.interoperability + 'vocab#';
+        },
 
         /**
          * Service model
