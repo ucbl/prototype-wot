@@ -16,7 +16,7 @@
     //local variable to retrieve data stored in files
     var fileLocations = {
         'hydraVocabDir': __dirname + '/../data/interoperability/vocabs/',
-        'hydraVocabFile': __dirname + '/../data/interoperability/vocabs/interoperability.jsonld',
+        "hydraVocabBaseFile": __dirname + '/../data/interoperability/vocabs/interoperability.jsonld',
         'contextFileDir': __dirname + '/../data/interoperability/contexts/',
         'deviceFileDir': __dirname + '/../data/interoperability/devices/'
     };
@@ -181,20 +181,9 @@
             "device": Globals.vocabularies.interoperability + "device"
         },
 
-        // Interoperability platform
-        "platform": function() {
-            return {
-                '@context': Globals.vocabularies.interoperability + 'context/Class',
-                '@type': 'hydra:Class',
-                '@id': Globals.vocabularies.interoperability + "platform",
-                'description': "Access to the available device collections",
-                'devices': Globals.vocabularies.interoperability + "platform/devices",
-                'connected-devices': Globals.vocabularies.interoperability + "platform/connected-devices"
-            };
-        },
-
-        "getHydraVocabulary": function()  {
-            return templateEngine(fs.readFileSync(fileLocations.hydraVocabFile, 'utf8'));
+        //Returns the Hydra vocabulary corresponding to a particular object or defaults to the interoperability platform vocab
+        "getHydraVocabulary": function(fileName)  {
+            return templateEngine(fs.readFileSync(fileName ? fileLocations.hydraVocabDir + fileName + ".jsonld" : fileLocations.hydraVocabBaseFile, 'utf8'));
         },
 
         'getHydraContext': function(contextId) {
