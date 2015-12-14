@@ -2,9 +2,6 @@
     "@context": {
         "hydra": "http://www.w3.org/ns/hydra/core#",
         "vocab": "__interoperability__vocab#",
-        "angle": "http://www.w3.org/2001/XMLSchema#int",
-        "speed": "http://www.w3.org/2001/XMLSchema#int",
-        "strength": "http://www.w3.org/2001/XMLSchema#int",
         "MotorValue": "vocab:MotorValue"
     }
 }

@@ -36,14 +36,6 @@
             }
         },
 
-        'getValue': function (attributeName) {
-            return this.values[attributeName];
-        },
-
-        'setValue': function (attributeName, value) {
-            this.values[attributeName] = value;
-        },
-
         'getCapability': function (capabilityId) {
             for (var i in this.capabilities) {
                 if (this.capabilities[i]["id"] == capabilityId) {
@@ -51,10 +43,6 @@
                 }
             }
             return null;
-        },
-
-        'setCapability': function (capabilityId, value) {
-            this.capabilities[capabilityId] = value;
         },
 
         'invokeCapability': function(capabilityId, method, params) {

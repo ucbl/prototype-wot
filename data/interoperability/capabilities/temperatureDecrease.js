@@ -14,7 +14,7 @@
                 values.state = parseInt(params);
                 return values.state;
             }
-            return new Error(400);
+            throw 400;
         }
     };
 })(module);

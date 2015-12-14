@@ -9,7 +9,10 @@
                 "status": "closed"
             };
             console.log("Closed window.");
-            return values;
+            return {
+                "@context": "__interoperability__context/WindowStatus",
+                "WindowStatus": values
+            };
         }
     };
 })(module);

@@ -21,19 +21,22 @@
                 }
                 values.status = {"apps": results};
             }
-            return values.status;
+            return {
+                "@context": "__interoperability__context/PhoneStatus",
+                "PhoneStatus": values.status
+            };
         },
         //Modifies a app if its 'id' and 'app' are provided in args
         //Adds a new app to the list if only 'app' is given
         "post": function (values, params) {
-            if(params && params['id'] && params['app'] && !isNaN(params.id) && parseInt(params.id) >= 0 && parseInt(params.id) < apps.length) {
-                apps[parseInt(params.id)] = params.app;
-                console.log("App " + params.id + " modified.");
+            if(params && params['name'] && params['app'] && values[params['name']]) {
+                apps[params.name] = params.app;
+                console.log("App " + params.name + " modified.");
                 //Not an error
                 throw 204;
-            } else if(params && params['app']) {
-                apps.push(params.app);
-                return {"id": apps.length -1};
+            } else if(params && params['name'] && params['app']) {
+                apps[params.name] = params.app;
+                throw 201;
             } else {
                 throw 400;
             }
@@ -45,16 +48,18 @@
                 throw 400;
             }
             if(params['name'] && params['status']) {
-                apps[params.name] = params.status;
+                apps[params.name] = {
+                    "name": params['name'],
+                    "status": params['status']
+                };
                 console.log("Added new app: " + JSON.stringify(apps[params.name]));
-                //TODO: Should return "created" instead of a value
-                return apps[params['name']];
+                throw 201;
             }
         },
         //Nullify the content of a app (instead of removing it)
         "delete": function (values, params) {
-            if(params && params['id'] && !isNaN(params.id) && parseInt(params.id) >= 0 && parseInt(params.id) < apps.length) {
-                apps[params.id] = null;
+            if(params && params['name']) {
+                apps[params.name] = null;
                 //Not an error
                 throw 204;
             }

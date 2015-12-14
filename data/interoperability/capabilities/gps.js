@@ -11,7 +11,10 @@
             var position = calculateCoordinates();
             values.latitude =  position.latitude;
             values.longitude =  position.longitude;
-            return values;
+            return {
+                "@context": "__interoperability__context/Position",
+                "position": position
+            };
         }
     };
 })(module);

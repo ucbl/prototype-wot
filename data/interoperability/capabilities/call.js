@@ -21,7 +21,10 @@
                 }
                 values.status = {"calls": results};
             }
-            return values.status;
+            return {
+                "@context": "__interoperability__context/PhoneStatus",
+                "PhoneStatus": values.status
+            };
         },
         //Modifies a call if its 'id' and 'call' are provided in args
         //Adds a new call to the list if only 'call' is given
@@ -33,7 +36,7 @@
                 throw 204;
             } else if(params && params['call']) {
                 calls.push(params.call);
-                return {"id": calls.length -1};
+                throw 201;
             } else {
                 throw 400;
             }
@@ -55,8 +58,7 @@
             if(call['number']) {
                 calls.push(call);
                 console.log("Added new call: " + JSON.stringify(call));
-                //TODO: Should return "created" instead of a value
-                return {"id": calls.length -1};
+                throw 201;
             }
             //Not an error (not modified)
             throw 304;

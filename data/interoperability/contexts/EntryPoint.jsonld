@@ -3,8 +3,12 @@
         "hydra": "http://www.w3.org/ns/hydra/core#",
         "vocab": "__interoperability__vocab#",
         "EntryPoint": "vocab:EntryPoint",
-        "platform": {
-            "@id": "vocab:EntryPoint/platform",
+        "devices": {
+            "@id": "vocab:EntryPoint/devices",
+            "@type": "@id"
+        },
+        "known-devices": {
+            "@id": "vocab:EntryPoint/known-devices",
             "@type": "@id"
         }
     }

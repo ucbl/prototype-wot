@@ -2,9 +2,9 @@
     "@context": {
         "hydra": "http://www.w3.org/ns/hydra/core#",
         "vocab": "__interoperability__vocab#",
-        "id": "http://www.w3.org/2001/XMLSchema#string",
-        "name": "http://www.w3.org/2001/XMLSchema#string",
-        "description": "http://www.w3.org/2001/XMLSchema#string",
-        "capabilities": "http://www.w3.org/ns/hydra/core#Collection"
+        "id": "vocab:Device/id",
+        "name": "vocab:Device/name",
+        "description": "vocab:Device/description",
+        "capabilities": "vocab:Device/capabilities"
     }
 }

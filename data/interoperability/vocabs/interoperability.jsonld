@@ -98,7 +98,7 @@
             "@id": "vocab:EntryPoint/devices",
             "@type": "hydra:Link",
             "label": "known devices",
-            "description": "The collection of all devices known by the platform",
+            "description": "The collection of all devices actually connected to the platform",
             "domain": "vocab:EntryPoint",
             "range": "vocab:Devices",
             "supportedOperation": [
@@ -106,7 +106,7 @@
                 "@id": "_:devices",
                 "@type": "hydra:Operation",
                 "method": "GET",
-                "label": "Links to the collection of all known devices",
+                "label": "Links to the collection of all connected devices",
                 "description": null,
                 "expects": null,
                 "returns": "vocab:Devices",
@@ -115,25 +115,25 @@
             ]
           },
           "hydra:title": "known devices",
-          "hydra:description": "The collection of all devices known by the platform",
+          "hydra:description": "The collection of all devices actually connected to the platform",
           "required": true,
           "readonly": true,
           "writeonly": false
         },
         {
           "property": {
-            "@id": "EntryPoint/connected-devices",
+            "@id": "EntryPoint/known-devices",
             "@type": "hydra:Link",
             "label": "connected devices",
-            "description": "The collection of access information to devices actually connected to the platform (platform-generated)",
+            "description": "The collection of access information to devices known by the platform (platform-generated)",
             "domain": "vocab:EntryPoint",
             "range": "vocab:ConnectedDeviceRefs",
             "supportedOperation": [
               {
-                "@id": "_:connected",
+                "@id": "_:known",
                 "@type": "hydra:Operation",
                 "method": "GET",
-                "label": "Links to the collection of connected devices",
+                "label": "Links to the collection of known devices",
                 "description": null,
                 "expects": null,
                 "returns": "vocab:ConnectedDeviceRefs",
@@ -142,7 +142,7 @@
             ]
           },
           "hydra:title": "connected devices",
-          "hydra:description": "The collection of references to devices actually connected to the platform",
+          "hydra:description": "The collection of references to devices known by the platform",
           "required": true,
           "readonly": true,
           "writeonly": false
@@ -274,7 +274,7 @@
     },
     {
       "@id": "vocab:Capabilities",
-      "@type": "hydra:Class",
+      "@type": ["hydra:Class", "hydra:Collection"],
       "subClassOf": "hydra:Collection",
       "hydra:title": "Capability collection",
       "hydra:description": "A collection of device capabilities",
@@ -282,7 +282,7 @@
       "supportedProperty": [
         {
           "property": {
-            "@id": "_:capabilityMember",
+            "@id": "_:Capabilities/capabilityMember",
             "@type": "hydra:Link",
             "subPropertyOf": "hydra:member",
             "label": "capability member",
@@ -306,18 +306,32 @@
       "description": "A simple capability.",
       "supportedProperty": [
         {
-          "property": "http://schema.org/url",
+          "property": {
+            "@id": "_:Capability/accessPort",
+            "@type": "hydra:Link",
+            "label": "Access port of the capability",
+            "comment": "Retrieves the port on which the capability can be accessed (through the gateway port forwarding feature)",
+            "domain": "vocab:Capability",
+            "range": "http://schema.org/url"
+          },
           "hydra:title": "accessPort",
-          "hydra:description": "The accessPort's name",
-          "required": true,
+          "hydra:description": "The port on which the capability can be accessed (through the gateway port forwarding feature)",
+          "required": false,
           "readonly": false,
           "writeonly": false
         },
         {
-          "property": "http://www.w3.org/2001/XMLSchema#string",
+          "property": {
+            "@id": "_:Capability/configuration",
+            "@type": "hydra:Link",
+            "label": "Configuration of the capability",
+            "comment": "Indicates if the capability has been configured manually or other configuration info (experimental feature)",
+            "domain": "vocab:Capability",
+            "range": "vocab:Configuration"
+          },
           "hydra:title": "configuration",
-          "hydra:description": "The capability's configuration",
-          "required": true,
+          "hydra:description": "The capability has been configured manually or other configuration info (experimental feature)",
+          "required": false,
           "readonly": false,
           "writeonly": false
         }
@@ -590,31 +604,6 @@
     },
 
     {
-      "@id": "vocab:NumericValue",
-      "@type": "hydra:Class",
-      "subClassOf": null,
-      "label": "NumericValue",
-      "description": "A value.",
-      "supportedProperty": [
-        {
-          "property": {
-            "@id": "vocab:NumericValue/value",
-            "@type": "rdf:Property",
-            "label": "value",
-            "description": "The value of a level",
-            "domain": "vocab:NumericValue",
-            "range": "http://www.w3.org/2001/XMLSchema#int",
-            "supportedOperation": []
-          },
-          "hydra:title": "value",
-          "hydra:description": "The value of a level",
-          "required": true,
-          "readonly": false,
-          "writeonly": false
-        }
-      ]
-    },
-    {
       "@id": "vocab:MotorValue",
       "@type": "hydra:Class",
       "subClassOf": null,
@@ -778,11 +767,99 @@
         }
       ]
     },
+    {
+      "@id": "vocab:PhoneStatus",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "PhoneStatus",
+      "description": "A phone status.",
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:PhoneStatus/calls",
+            "@type": "rdf:Property",
+            "label": "calls",
+            "description": "Retrieves the call list of the phone",
+            "domain": "vocab:PhoneStatus",
+            "range": "hydra:Collection",
+            "supportedOperation": []
+          },
+          "hydra:title": "calls",
+          "hydra:description": "The call list of the phone",
+          "required": false,
+          "readonly": false,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:PhoneStatus/smss",
+            "@type": "rdf:Property",
+            "label": "calls",
+            "description": "Retrieves the sms list of the phone",
+            "domain": "vocab:PhoneStatus",
+            "range": "hydra:Collection",
+            "supportedOperation": []
+          },
+          "hydra:title": "calls",
+          "hydra:description": "The sms list of the phone",
+          "required": false,
+          "readonly": false,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:PhoneStatus/photos",
+            "@type": "rdf:Property",
+            "label": "calls",
+            "description": "Retrieves the photo list of the phone",
+            "domain": "vocab:PhoneStatus",
+            "range": "hydra:Collection",
+            "supportedOperation": []
+          },
+          "hydra:title": "calls",
+          "hydra:description": "The photo list of the phone",
+          "required": false,
+          "readonly": false,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:PhoneStatus/videos",
+            "@type": "rdf:Property",
+            "label": "calls",
+            "description": "Retrieves the video list of the phone",
+            "domain": "vocab:PhoneStatus",
+            "range": "hydra:Collection",
+            "supportedOperation": []
+          },
+          "hydra:title": "calls",
+          "hydra:description": "The video list of the phone",
+          "required": false,
+          "readonly": false,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:PhoneStatus/apps",
+            "@type": "rdf:Property",
+            "label": "calls",
+            "description": "Retrieves the app list of the phone",
+            "domain": "vocab:PhoneStatus",
+            "range": "hydra:Collection",
+            "supportedOperation": []
+          },
+          "hydra:title": "calls",
+          "hydra:description": "The app list of the phone",
+          "required": false,
+          "readonly": false,
+          "writeonly": false
+        }
+      ]
+    },
 
     {
       "@id": "vocab:CapabilityActivateMotor",
-      "@type": "hydra:Class",
-      "subClassOf": "Capability",
+      "@type": ["hydra:Resource", "vocab:Capability"],
       "label": "CapabilityActivateMotor",
       "description": "Capability that activates the motor",
       "supportedOperation": [
@@ -828,8 +905,7 @@
     },
     {
       "@id": "vocab:CapabilityInformationMotor",
-      "@type": "hydra:Class",
-      "subClassOf": "Capability",
+      "@type": ["hydra:Resource", "vocab:Capability"],
       "label": "CapabilityInformationMotor",
       "description": "Capability that returns the current state of the motor",
       "supportedOperation": [
@@ -847,8 +923,7 @@
     },
     {
       "@id": "vocab:CapabilityTemperatureDecrease",
-      "@type": "hydra:Class",
-      "subClassOf": "Capability",
+      "@type": ["hydra:Resource", "vocab:Capability"],
       "label": "CapabilityTemperatureDecrease",
       "description": "Capability that actuates a device able to decrease the temperature",
       "supportedOperation": [
@@ -881,8 +956,7 @@
     },
     {
       "@id": "vocab:CapabilityTemperatureIncrease",
-      "@type": "hydra:Class",
-      "subClassOf": null,
+      "@type": ["hydra:Resource", "vocab:Capability"],
       "label": "CapabilityTemperatureIncrease",
       "description": "Capability that actuates a device able to increase the temperature",
       "supportedOperation": [
@@ -915,7 +989,7 @@
     },
     {
       "@id": "vocab:CapabilityTemperatureSense",
-      "@type": "hydra:Class",
+      "@type": ["hydra:Resource", "vocab:Capability"],
       "subClassOf": null,
       "label": "CapabilityTemperatureSense",
       "description": "Capability that queries a temperature sensor",
@@ -934,8 +1008,7 @@
     },
     {
       "@id": "vocab:CapabilityGps",
-      "@type": "hydra:Class",
-      "subClassOf": null,
+      "@type": ["hydra:Resource", "vocab:Capability"],
       "label": "CapabilityGps",
       "description": "Capability that queries a GPS sensor",
       "supportedOperation": [
@@ -953,8 +1026,7 @@
     },
     {
       "@id": "vocab:CapabilityOpenWindow",
-      "@type": "hydra:Class",
-      "subClassOf": null,
+      "@type": ["hydra:Resource", "vocab:Capability"],
       "label": "CapabilityOpenWindow",
       "description": "Capability that activates the window motor to open it",
       "supportedOperation": [
@@ -982,8 +1054,7 @@
     },
     {
       "@id": "vocab:CapabilityCloseWindow",
-      "@type": "hydra:Class",
-      "subClassOf": null,
+      "@type": ["hydra:Resource", "vocab:Capability"],
       "label": "CapabilityCloseWindow",
       "description": "Capability that activates the window motor to close it",
       "supportedOperation": [
@@ -1011,8 +1082,7 @@
     },
     {
       "@id": "vocab:CapabilityCall",
-      "@type": "hydra:Class",
-      "subClassOf": null,
+      "@type": ["hydra:Resource", "vocab:Capability"],
       "label": "CapabilityCall",
       "description": "Capability that interacts with the call management system of a phone",
       "supportedOperation": [
@@ -1079,8 +1149,7 @@
     },
     {
       "@id": "vocab:CapabilitySms",
-      "@type": "hydra:Class",
-      "subClassOf": null,
+      "@type": ["hydra:Resource", "vocab:Capability"],
       "label": "CapabilitySms",
       "description": "Capability that interacts with the sms management system of a phone",
       "supportedOperation": [
@@ -1147,8 +1216,7 @@
     },
     {
       "@id": "vocab:CapabilityPhoto",
-      "@type": "hydra:Class",
-      "subClassOf": null,
+      "@type": ["hydra:Resource", "vocab:Capability"],
       "label": "CapabilityPhoto",
       "description": "Capability that interacts with the photo management system of a phone.",
       "supportedOperation": [
@@ -1215,8 +1283,7 @@
     },
     {
       "@id": "vocab:CapabilityVideo",
-      "@type": "hydra:Class",
-      "subClassOf": null,
+      "@type": ["hydra:Resource", "vocab:Capability"],
       "label": "CapabilityVideo",
       "description": "Capability that interacts with the video management system of a phone.",
       "supportedOperation": [
@@ -1283,8 +1350,7 @@
     },
     {
       "@id": "vocab:CapabilityApp",
-      "@type": "hydra:Class",
-      "subClassOf": null,
+      "@type": ["hydra:Resource", "vocab:Capability"],
       "label": "CapabilityApp",
       "description": "Capability that interacts with the app management system of a phone.",
       "supportedOperation": [

@@ -7,7 +7,7 @@
         },
         "put": function (values, params) {
             if(!params) {
-                return new Error(400);
+                throw 400;
             }
             var changed = false;
             for (var i in params) {
@@ -22,15 +22,18 @@
                     changed = true;
                 } else {
                     //Unrecognized parameter
-                    return new Error(400);
+                    throw 400;
                 }
             }
             if(changed) {
                 console.log("Changed motor values to: " + JSON.stringify(values));
-                return values;
+                return {
+                    "@context": "__interoperability__context/MotorValue",
+                    "MotorValue": values
+                };
             }
             //Not really an error (not modified)
-            return new Error(304);
+            throw 304;
         }
     };
 })(module);

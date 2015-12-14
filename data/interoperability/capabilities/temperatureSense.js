@@ -11,8 +11,11 @@
             this.setValueToObject('sensor-ge-2442', 'temperature', temperature);
 */
             return {
-                "value": 19.2,
-                "type": "celsius"
+                "@context": "__interoperability__context/Temperature",
+                "temperature": {
+                    "value": 19.2,
+                    "type": "celsius"
+                }
             };
         }
 

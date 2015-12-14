@@ -21,7 +21,10 @@
                 }
                 values.status = {"smss": results};
             }
-            return values.status;
+            return {
+                "@context": "__interoperability__context/PhoneStatus",
+                "PhoneStatus": values.status
+            };
         },
         //Modifies a sms if its 'id' and 'sms' are provided in args
         //Adds a new sms to the list if only 'sms' is given
@@ -33,7 +36,7 @@
                 throw 204;
             } else if(params && params['sms']) {
                 smss.push(params.sms);
-                return {"id": smss.length -1};
+                throw 201;
             } else {
                 throw 400;
             }
@@ -58,8 +61,7 @@
             if(ok == 2) {
                 smss.push(sms);
                 console.log("Added new sms: " + JSON.stringify(sms));
-                //TODO: Should return "created" instead of a value
-                return {"id": smss.length -1};
+                throw 201;
             }
             //Not an error (not modified)
             throw 304;

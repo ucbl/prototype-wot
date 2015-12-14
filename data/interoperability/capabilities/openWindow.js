@@ -9,7 +9,10 @@
                 "status": "open"
             };
             console.log("Opened window.");
-            return values;
+            return {
+                "@context": "__interoperability__context/WindowStatus",
+                "WindowStatus": values
+            };
         }
     };
 })(module);

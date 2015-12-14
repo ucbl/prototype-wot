@@ -2,7 +2,6 @@
     "@context": {
         "hydra": "http://www.w3.org/ns/hydra/core#",
         "vocab": "__interoperability__vocab#",
-        "status": "http://www.w3.org/2001/XMLSchema#string",
         "WindowStatus": "vocab:WindowStatus"
     }
 }

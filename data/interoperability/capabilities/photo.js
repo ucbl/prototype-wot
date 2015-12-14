@@ -21,7 +21,10 @@
                 }
                 values.status = {"photos": results};
             }
-            return values.status;
+            return {
+                "@context": "__interoperability__context/PhoneStatus",
+                "PhoneStatus": values.status
+            };
         },
         //Modifies a photo if its 'id' and 'photo' are provided in args
         //Adds a new photo to the list if only 'photo' is given
@@ -33,7 +36,7 @@
                 throw 204;
             } else if(params && params['photo']) {
                 photos.push(params.photo);
-                return {"id": photos.length -1};
+                throw 201;
             } else {
                 throw 400;
             }
@@ -49,8 +52,7 @@
                 photo.start = new Date();
                 photos.push(photo);
                 console.log("Added new photo: " + JSON.stringify(photo));
-                //TODO: Should return "created" instead of a value
-                return {"id": photos.length - 1};
+                throw 201;
             }
             //Not an error (not modified)
             throw 304;

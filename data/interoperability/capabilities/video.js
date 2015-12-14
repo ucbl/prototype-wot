@@ -21,7 +21,10 @@
                 }
                 values.status = {"videos": results};
             }
-            return values.status;
+            return {
+                "@context": "__interoperability__context/PhoneStatus",
+                "PhoneStatus": values.status
+            };
         },
         //Modifies a video if its 'id' and 'video' are provided in args
         //Adds a new video to the list if only 'video' is given
@@ -33,7 +36,7 @@
                 throw 204;
             } else if(params && params['video']) {
                 videos.push(params.video);
-                return {"id": videos.length -1};
+                throw 201;
             } else {
                 throw 400;
             }
@@ -55,8 +58,7 @@
             if(video['data']) {
                 videos.push(video);
                 console.log("Added new video: " + JSON.stringify(video));
-                //TODO: Should return "created" instead of a value
-                return {"id": videos.length -1};
+                throw 201;
             }
             //Not an error (not modified)
             throw 304;
