@@ -13,17 +13,17 @@
             "__capability__": Globals.vocabularies.capability
         };
 
-        for(var key in variables) {
-            if(typeof(data) === "string") {
+        if(typeof(data) === "string") {
+            console.log("typeof = string");
+            for(var key in variables) {
                 while (data.indexOf(key) > -1) {
                     data = data.replace(key, variables[key]);
                 }
-            } else if(typeof(data) === "object") {
-                for(var i in data) {
-                    while (data[i].indexOf(key) > -1) {
-                        data[i] = data[i].replace(key, variables[key]);
-                    }
-                }
+            }
+        } else if(typeof(data) === "object") {
+            console.log("typeof = object");
+            for(var i in data) {
+                return require("./jsonTemplateEngine")(data[i]);
             }
         }
         return data;

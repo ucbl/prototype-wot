@@ -88,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/helpers/jsonTemplateEngine.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.672043" vertical-offset="0" max-vertical-offset="744">
-              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+              <caret line="25" column="64" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -621,12 +621,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00330" summary="Try with interoperability simple vocabulary">
-      <created>1449706476184</created>
-      <option name="number" value="00330" />
-      <option name="project" value="LOCAL" />
-      <updated>1449706476184</updated>
-    </task>
     <task id="LOCAL-00331" summary="Try with interoperability simple vocabulary">
       <created>1449706813931</created>
       <option name="number" value="00331" />
@@ -915,7 +909,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450051690750</updated>
     </task>
-    <option name="localTasksCounter" value="379" />
+    <task id="LOCAL-00379" summary="Try with interoperability simple vocabulary">
+      <created>1450052297567</created>
+      <option name="number" value="00379" />
+      <option name="project" value="LOCAL" />
+      <updated>1450052297567</updated>
+    </task>
+    <option name="localTasksCounter" value="380" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1415,7 +1415,7 @@
     <entry file="file://$PROJECT_DIR$/helpers/jsonTemplateEngine.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.672043" vertical-offset="0" max-vertical-offset="744">
-          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+          <caret line="25" column="64" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
           <folding />
         </state>
       </provider>
