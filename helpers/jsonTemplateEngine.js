@@ -14,8 +14,16 @@
         };
 
         for(var key in variables) {
-            while (data.indexOf(key) > -1) {
-                data = data.replace(key, variables[key]);
+            if(typeof(data) === "string") {
+                while (data.indexOf(key) > -1) {
+                    data = data.replace(key, variables[key]);
+                }
+            } else if(typeof(data) === "object") {
+                for(var i in data) {
+                    while (data[i].indexOf(key) > -1) {
+                        data[i] = data[i].replace(key, variables[key]);
+                    }
+                }
             }
         }
         return data;
