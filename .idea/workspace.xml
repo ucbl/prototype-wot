@@ -87,8 +87,8 @@
       <file leaf-file-name="jsonTemplateEngine.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/helpers/jsonTemplateEngine.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.672043" vertical-offset="0" max-vertical-offset="744">
-              <caret line="25" column="64" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.8064516" vertical-offset="0" max-vertical-offset="744">
+              <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -621,12 +621,6 @@
       <option name="number" value="Default" />
       <updated>1448107521951</updated>
     </task>
-    <task id="LOCAL-00331" summary="Try with interoperability simple vocabulary">
-      <created>1449706813931</created>
-      <option name="number" value="00331" />
-      <option name="project" value="LOCAL" />
-      <updated>1449706813932</updated>
-    </task>
     <task id="LOCAL-00332" summary="Try with interoperability simple vocabulary">
       <created>1449707119016</created>
       <option name="number" value="00332" />
@@ -915,7 +909,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450052297567</updated>
     </task>
-    <option name="localTasksCounter" value="380" />
+    <task id="LOCAL-00380" summary="Try with interoperability simple vocabulary">
+      <created>1450052659676</created>
+      <option name="number" value="00380" />
+      <option name="project" value="LOCAL" />
+      <updated>1450052659676</updated>
+    </task>
+    <option name="localTasksCounter" value="381" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1414,8 +1414,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/helpers/jsonTemplateEngine.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.672043" vertical-offset="0" max-vertical-offset="744">
-          <caret line="25" column="64" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.8064516" vertical-offset="0" max-vertical-offset="744">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
           <folding />
         </state>
       </provider>

@@ -23,7 +23,7 @@
         } else if(typeof(data) === "object") {
             console.log("typeof = object");
             for(var i in data) {
-                return require("./jsonTemplateEngine")(data[i]);
+                data[i] = require("./jsonTemplateEngine")(data[i]);
             }
         }
         return data;
