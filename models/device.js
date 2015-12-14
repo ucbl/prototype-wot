@@ -6,7 +6,8 @@
 
 (function(module) {
     var fs = require('fs'),
-        cloneHelper = require('../helpers/cloneHelper');
+        cloneHelper = require('../helpers/cloneHelper'),
+        templateEngine = require("../helpers/jsonTemplateEngine");
 
     module.exports = {
         'initCapabilities': function(params) {
@@ -50,7 +51,7 @@
             console.log("Invoke " + capability["@id"] + "\non " + this["@id"] + "\nwith method " + method + "\nand parameters " + JSON.stringify(params));
             if(capability) {
                 if(capability[method]) {
-                    return capability[method](this.values, params);
+                    return templateEngine(capability[method](this.values, params));
                 } else {
                     throw 400;
                 }
