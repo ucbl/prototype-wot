@@ -1,14 +1,13 @@
 //TODO: access this through global config
 var interoperabilityLayerUrl = '/interoperability';
-var urlAvatarsHtml = 'http://localhost:3000/avatars-html';
-var urlAvatars = 'http://localhost:3000/avatars';
+var urlAvatars = '/avatars';
 
 $(document).ready(function() {
 
 	reloadDevices();
 
 	reloadAvatars();
-	reloadAvatarsInterval = setInterval(function(){
+	var reloadAvatarsInterval = setInterval(function(){
 			reloadAvatars();
 		}, 2000);
 
@@ -27,21 +26,21 @@ function activateAjax() {
 			$.ajax({
 				url: urlAvatars,
 				type: 'DELETE',
-				data: {urlCima: idAvatarRel}
+				data: {deviceUri: idAvatarRel}
 			});
 			reloadAvatars();
 		} else {
 			$.ajax({
 				url: urlAvatars,
-				type: 'PUT',
-				data: {urlCima: idAvatarRel},
+				type: 'POST',
+				data: {'avatar': {'deviceUri': idAvatarRel}},
 				success: function(response) {
 					if (response!=null) {
 						self.addClass('deviceActivateDelete');
 					}
 					reloadAvatars();
 				}
-			});			
+			});
 		}
 	});
 
@@ -132,7 +131,7 @@ function reloadDevices() {
 }
 
 function reloadAvatars() {
-	$.get(urlAvatarsHtml, {}, function(response){
+	$.get(urlAvatars, {}, function(response){
 		$('.avatars').html(response);
 		//Activate buttons
 		$('.deviceName').removeClass('deviceActivateDelete');

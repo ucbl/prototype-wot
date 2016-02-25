@@ -1,0 +1,10 @@
+//
+   Created by Lionel on 16/12/2015.
+
+div.functionalityIns(rel='#{functionality.name}')
+    div.functionalityDocumentation
+        | Doc
+    div.functionalityExecute(rel='#{functionality["@id"]}')
+        | Exec
+    div.functionalityAction
+        | #{functionality["@id"]}

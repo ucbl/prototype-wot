@@ -40,6 +40,7 @@
             this.appliance = this.ontology + 'appliance/';
             this.capability = this.ontology + 'capability/';
             this.functionality = this.ontology + 'functionality/';
+            this.functionalityComposedOf = this.ontology + 'functionality-composed-of/';
             this.linkVocab = '<' + this.hydraVocab + '>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"';
             exports.vocabularies = this;
         },

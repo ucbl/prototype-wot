@@ -14,14 +14,14 @@
         };
 
         if(typeof(data) === "string") {
-            console.log("typeof = string");
+            //console.log("typeof = string");
             for(var key in variables) {
                 while (data.indexOf(key) > -1) {
                     data = data.replace(key, variables[key]);
                 }
             }
         } else if(typeof(data) === "object") {
-            console.log("typeof = object");
+            //console.log("typeof = object");
             for(var i in data) {
                 data[i] = require("./jsonTemplateEngine")(data[i]);
             }

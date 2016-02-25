@@ -1,0 +1,30 @@
+//
+   Created by Lionel on 16/12/2015.
+
+div.avatar
+    div.avatarIns
+        div.avatarName(rel='#{avatar.hostId}')
+            | #{avatar.name}
+        div.avatarDescription
+            | #{avatar.description}
+        div.avatarId
+            | #{avatar.hostId}
+        div.exposedFunctionalities
+            div.exposedFunctionalitiesSection
+                h2
+                    | Functionalities in this avatar
+                each functionality in avatar.localFunctionalities
+                    div(class='functionality functionalityLocal')
+                        include functionality
+            div.exposedFunctionalitiesSection
+                h2
+                    | Composed functionalities that can be used with other avatars
+                each functionality in avatar.composedFunctionalities
+                    div(class='functionality functionalityComposed')
+                        include functionality
+            div.exposedFunctionalitiesSection
+                h2
+                    | Incomplete functionalities found in the repository
+                each functionality in avatar.incompleteFunctionalities
+                    div(class='functionality functionalityIncomplete')
+                        include functionality

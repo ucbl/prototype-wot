@@ -10,8 +10,6 @@ var express = require('express'),
     interoperabilityModel = require('../models/interoperability'),
     jsonldHeaders = require('../middleware/jsonldHeaders');
 
-/*---WEB SERVICE---*/
-
 /*-- Entry point management --*/
 
 // Entry point and home page
@@ -25,6 +23,8 @@ router.get('/', function(request, response, next) {
         response.end(JSON.stringify(interoperabilityModel.entryPoint));
     }
 });
+
+/*---WEB SERVICE---*/
 
 // Sends the collection of known devices (simple descriptions)
 router.get('/known-devices', function(request, response, next) {
