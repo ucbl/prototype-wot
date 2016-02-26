@@ -1,14 +1,14 @@
 /**
  * Created by Lionel on 15/12/2015.
- * Model for the avatar platform (that controls and runs device avatars)
+ * Model for the WoT platform (that controls and runs device avatars)
  */
 (function(module) {
 
     var fs = require('fs'),
-        Globals = require('../globals'),
-        avatarModel = require('./avatar'),
-        cloneHelper = require('../../helpers/cloneHelper'),
-        templateEngine = require("../../helpers/jsonTemplateEngine");
+        Globals = require('../../globals'),
+        avatarModel = require('./../avatar/avatar'),
+        cloneHelper = require('../../../helpers/cloneHelper'),
+        templateEngine = require("../../../helpers/jsonTemplateEngine");
 
 
     //local variable to retrieve data stored in files
@@ -79,7 +79,7 @@
                     allSimpleFunctionalities.push(this.functionalitiesRegistry[i].functionalities[j]);
                 }
             }
-            allSimpleFunctionalities = require("../../helpers/removeDuplicatesFromArray") (allSimpleFunctionalities);
+            allSimpleFunctionalities = require("../../../helpers/removeDuplicatesFromArray") (allSimpleFunctionalities);
             // Check if there are composed functionalities that can be executed
             for (i in allComposedFunctionalities) {
                 var itemsNeeded = 0;

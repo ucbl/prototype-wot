@@ -119,9 +119,10 @@ router.delete('/devices/:deviceId', function(request, response) {
     }
 });
 
-/*-- device capability invocation --*/
+/*-- device capability invokation --*/
 //Returns the capability result with a 200 status code if it was sent using the "return" instruction
 //and a status code if the capability function ended with a "throw" instruction and a numeric argument
+// <strong>Note that the parameters must be sent in JSON and encapsulated in a "params" property.</strong>
 
 router.get('/devices/:deviceId/:capabilityId', function(request, response, next) {
     var device = interoperabilityModel.findDeviceById(request.params["deviceId"]);

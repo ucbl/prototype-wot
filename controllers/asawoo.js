@@ -8,7 +8,7 @@ var express = require('express'),
     router = express.Router(),
     jsonParser = require('body-parser').json(),
     Globals = require('../models/globals'),
-    asawooModel = require('../models/asawoo/asawoo'),
+    asawooModel = require('../models/asawoo/infrastructure/asawoo'),
     jsonldHeaders = require('../middleware/jsonldHeaders');
 
 //TODO: change that
