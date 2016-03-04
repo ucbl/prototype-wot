@@ -354,7 +354,7 @@
             "label": "deviceRef member",
             "comment": "A member of the connected device reference collection",
             "domain": "vocab:ConnectedDeviceRefs",
-            "range": "vocab:ConnectedDeviceInfo"
+            "range": "vocab:ConnectedDeviceRef"
           },
           "hydra:title": "device references",
           "hydra:description": "The device references of this collection.",
@@ -364,6 +364,17 @@
         }
       ]
     },
+
+    {
+      "@id": "vocab:ConnectedDeviceRef",
+      "@type": "hydra:Link",
+      "subClassOf": "hydra:Member",
+      "hydra:title": "Connected device reference",
+      "hydra:description": "A device id",
+      "supportedOperation": [],
+      "supportedProperty": []
+    },
+
     {
       "@id": "vocab:ConnectedDeviceInfo",
       "@type": "hydra:Class",
@@ -390,7 +401,7 @@
             "label": "deviceRef",
             "description": "The reference to the device in the known device collection",
             "domain": "vocab:ConnectedDeviceInfo",
-            "range": "http://schema.org/url",
+            "range": "vocab:ConnectedDeviceRef",
             "supportedOperation": []
           },
           "hydra:title": "deviceRef",
