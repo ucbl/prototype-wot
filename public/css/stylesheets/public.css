@@ -1,0 +1,95 @@
+@import url(/css/lib/reset.css);
+input, textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  background: #EFEFEF;
+  color: #333333;
+  height: 100%;
+  font-family: 'Muli', sans-serif;
+  font-weight: normal;
+  position: relative; }
+
+.clearer {
+  clear: both; }
+
+p {
+  padding: 0px;
+  margin: 0px; }
+
+a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  outline: 0; }
+
+strong {
+  font-weight: bold; }
+
+em {
+  font-style: italic; }
+
+input::-moz-focus-inner {
+  border: 0; }
+
+.header {
+  background: #465262;
+  padding: 20px 0px; }
+  .header h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #FFF; }
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  color: #8bbcb9; }
+
+.contentWrapper {
+  padding: 10px 0px;
+  max-width: 1000px;
+  margin: auto; }
+
+.object {
+  width: 25%;
+  float: left; }
+  .object .objectIns {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #CCCCCC;
+    background: #FFF; }
+  .object .objectName {
+    font-weight: bold;
+    color: #0367b2;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .object .objectId a {
+    display: block;
+    font-size: 0.7em;
+    font-weight: normal;
+    color: #CCCCCC;
+    padding-bottom: 5px; }
+    .object .objectId a:hover {
+      text-decoration: underline; }
+  .object .objectDescription {
+    font-size: 0.8em; }
+  .object .objectValues {
+    padding-top: 10px;
+    color: #24b375;
+    font-family: 'Source Code Pro', sans-serif;
+    font-size: 0.8em;
+    line-height: 1.3em; }

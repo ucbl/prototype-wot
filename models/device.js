@@ -51,7 +51,7 @@
             console.log("Invoke " + capability["@id"] + "\non " + this["@id"] + "\nwith method " + method + "\nand parameters " + JSON.stringify(params));
             if(capability) {
                 if(capability[method]) {
-                    return templateEngine(capability[method](this.values, params));
+                    return templateEngine(capability[method](this.values, params?params.params:null));
                 } else {
                     throw 400;
                 }
