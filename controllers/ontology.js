@@ -16,8 +16,8 @@ router.get('/', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json",
         "Link": Globals.vocabularies.linkVocab});
     var responseEntryPoint = {
-        "@context": Globals.vocabularies.base + "/context/EntryPoint",
-        "@id": Globals.vocabularies.base + "/ontology/",
+        "@context": Globals.vocabularies.base + "context/EntryPoint",
+        "@id": Globals.vocabularies.base + "ontology/",
         "@type": "EntryPoint",
         "functionalities": Globals.vocabularies.functionality,
         "capabilities": Globals.vocabularies.capability
