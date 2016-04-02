@@ -2,8 +2,11 @@
     "@context": {
         "hydra": "http://www.w3.org/ns/hydra/core#",
         "vocab": "__ontology__vocab#",
-        "Capability": "vocab:Capability",
         "name": "http://www.w3.org/2001/XMLSchema#string",
-        "description": "http://www.w3.org/2001/XMLSchema#string"
+        "description": "http://www.w3.org/2001/XMLSchema#string",
+        "invocation": {
+            "platform": "vocab:Capability/accessPort",
+            "gateway": "vocab:Capability/accessPort"
+        }
     }
 }
