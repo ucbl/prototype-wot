@@ -73,7 +73,7 @@ router.get('/known-devices/:deviceId/:capabilityId', function(request, response,
             } else {
                 request.vocabUri = interoperabilityModel.getHydraVocabUri();
                 jsonldHeaders(request, response, next);
-                response.end(JSON.stringify((require("../views/capability")(capability))));
+                response.end(JSON.stringify((require("../views/interoperability/capability")(capability))));
             }
         } else {
             response.sendStatus(404);
