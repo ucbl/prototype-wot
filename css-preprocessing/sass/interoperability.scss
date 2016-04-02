@@ -72,7 +72,7 @@ body {
 	clear: both;
 }
 p {
-	padding: 0px;
+	padding: 10px;
 	margin: 0px;
 }
 a {
@@ -225,4 +225,7 @@ h2 {
 .real-list {
 	padding-left: 30px;
 	list-style-type: square;
+	li {
+		margin-bottom: 5px;
+	}
 }
