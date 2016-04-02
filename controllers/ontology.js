@@ -19,8 +19,8 @@ router.get('/', function(request, response) {
         "@context": Globals.vocabularies.base + "context/EntryPoint",
         "@id": Globals.vocabularies.base + "ontology/",
         "@type": "EntryPoint",
-        "functionalities": Globals.vocabularies.functionality,
-        "capabilities": Globals.vocabularies.capability
+        "functionalities": Globals.vocabularies.ontology + "functionalities",
+        "capabilities": Globals.vocabularies.ontology + "capabilities"
     };
     response.end(JSON.stringify(responseEntryPoint));
 });
