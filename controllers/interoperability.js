@@ -12,7 +12,9 @@ var express = require('express'),
 
 /*---WEB SERVICE---*/
 
-/*-- Entry point management --*/
+/**
+ * -- Entry point management --
+ */
 
 // Entry point and home page
 router.get('/', function(request, response, next) {
@@ -26,61 +28,11 @@ router.get('/', function(request, response, next) {
     }
 });
 
-/*-- Known devices (not connected to the platform --*/
+/**
+ * -- Known devices (not supposed to be connected to the platform) --
+ */
 
-// Sends the collection of known devices (simple descriptions)
-router.get('/known-devices', function(request, response, next) {
-    var platform = interoperabilityModel.getKnownDeviceCollection();
-    if (request.accepts('html')) {
-        response.render('interoperability/devicesSimple', {devices: platform.devices});
-    } else {
-        request.vocabUri = interoperabilityModel.getHydraVocabUri();
-        jsonldHeaders(request, response, next);
-        response.end(JSON.stringify((require("../views/devicesSimple")(platform))));
-    }
-});
-
-// Retrieves info about a given known device (not supposed to be connected to the platform)
-router.get('/known-devices/:deviceId', function(request, response, next) {
-    //Search device by name, then by id, then provide an empty device
-    var device = interoperabilityModel.getDeviceInfos(request.params["deviceId"]) || interoperabilityModel.findDeviceById(request.params["deviceId"]);
-    if(device) {
-        if (request.accepts('html')) {
-            response.render('interoperability/deviceFullPage', {device: device});
-        } else {
-            request.vocabUri = interoperabilityModel.getHydraVocabUri();
-            jsonldHeaders(request, response, next);
-            response.end(JSON.stringify(device));
-        }
-    } else {
-        response.sendStatus(404);
-    }
-});
-
-// Retrieves info about a given capability of a known device
-router.get('/known-devices/:deviceId/:capabilityId', function(request, response, next) {
-    //Search device by name, then by id, then provide an empty device
-    var device = interoperabilityModel.getDeviceInfos(request.params["deviceId"]) || interoperabilityModel.findDeviceById(request.params["deviceId"]);
-    if(device) {
-        var capability = device.getCapability(request.params["capabilityId"]);
-        console.log("=> " + JSON.stringify(capability));
-        if(capability) {
-            if (request.accepts('html')) {
-                response.render('interoperability/capability', {capability: capability});
-            } else {
-                request.vocabUri = interoperabilityModel.getHydraVocabUri();
-                jsonldHeaders(request, response, next);
-                response.end(JSON.stringify((require("../views/interoperability/capability")(capability))));
-            }
-        } else {
-            response.sendStatus(404);
-        }
-    } else {
-        response.sendStatus(404);
-    }
-});
-
-// Returns the collection of connected devices (simple descriptions)
+// Returns the collection of known devices (simple descriptions)
 router.get('/devices', function(request, response, next) {
     var platform = interoperabilityModel.getConnectedDeviceCollection();
     if (request.accepts('html')) {
@@ -92,7 +44,7 @@ router.get('/devices', function(request, response, next) {
     }
 });
 
-// Retrieves info about a particular device
+// Retrieves info about a particular known device
 router.get('/devices/:deviceId', function(request, response, next) {
     //Search device by name, then by id, then provide an empty device
     var device = interoperabilityModel.getDeviceInfos(request.params["deviceId"]) || interoperabilityModel.findDeviceById(request.params["deviceId"]);
@@ -109,7 +61,33 @@ router.get('/devices/:deviceId', function(request, response, next) {
     }
 });
 
-// Sends a collection of interoperability (detailed descriptions)
+// Retrieves info about a given capability of a known device
+router.get('/devices/:deviceId/:capabilityId', function(request, response, next) {
+    //Search device by name, then by id, then provide an empty device
+    var device = interoperabilityModel.getDeviceInfos(request.params["deviceId"]) || interoperabilityModel.findDeviceById(request.params["deviceId"]);
+    if(device) {
+        var capability = device.getCapability(request.params["capabilityId"]);
+        if(capability) {
+            if (request.accepts('html')) {
+                response.render('interoperability/capabilitySimple', {capability: capability});
+            } else {
+                request.vocabUri = interoperabilityModel.getHydraVocabUri();
+                jsonldHeaders(request, response, next);
+                response.end(JSON.stringify((require("../views/interoperability/capabilitySimple")(capability))));
+            }
+        } else {
+            response.sendStatus(404);
+        }
+    } else {
+        response.sendStatus(404);
+    }
+});
+
+/**
+ * -- Connected devices --
+ */
+
+// Sends the collection of connected devices (short descriptions)
 router.get('/connected-devices', function(request, response, next) {
     var platform = interoperabilityModel.getConnectedDeviceCollection();
     if (request.accepts('html')) {
@@ -129,6 +107,32 @@ router.get('/connected-devices/:deviceId', function(request, response) {
         response.sendStatus(404);
     }
 });
+
+// Retrieves info about a given capability of a known device
+router.get('/connected-devices/:deviceId/:capabilityId', function(request, response, next) {
+    //Search device by name, then by id, then provide an empty device
+    var device = interoperabilityModel.getDeviceInfos(request.params["deviceId"]) || interoperabilityModel.findDeviceById(request.params["deviceId"]);
+    if(device) {
+        var capability = device.getCapability(request.params["capabilityId"]);
+        if(capability) {
+            if (request.accepts('html')) {
+                response.render('interoperability/capability', {capability: capability});
+            } else {
+                request.vocabUri = interoperabilityModel.getHydraVocabUri();
+                jsonldHeaders(request, response, next);
+                response.end(JSON.stringify((require("../views/interoperability/capability")(capability))));
+            }
+        } else {
+            response.sendStatus(404);
+        }
+    } else {
+        response.sendStatus(404);
+    }
+});
+
+/**
+ * -- Connection and disconnection management --
+ */
 
 // Add a new device to the currently connected device list
 router.put('/devices/:deviceId', function(request, response) {
@@ -161,11 +165,14 @@ router.delete('/devices/:deviceId', function(request, response) {
     }
 });
 
-/*-- device capability invocation --*/
+/**
+ * -- device capability invocation --
+ */
+
 //Returns the capability result with a 200 status code if it was sent using the "return" instruction
 //and a status code if the capability function ended with a "throw" instruction and a numeric argument
 
-router.get('/devices/:deviceId/:capabilityId', function(request, response, next) {
+router.get('/connected-devices/:deviceId/:capabilityId', function(request, response, next) {
     var device = interoperabilityModel.findDeviceById(request.params["deviceId"]);
     try {
         var result = device.invokeCapability(request.params["capabilityId"], "get", request.query);
@@ -182,7 +189,7 @@ router.get('/devices/:deviceId/:capabilityId', function(request, response, next)
     }
 });
 
-router.put('/devices/:deviceId/:capabilityId', jsonParser, function(request, response, next) {
+router.put('/connected-devices/:deviceId/:capabilityId', jsonParser, function(request, response, next) {
     var device = interoperabilityModel.findDeviceById(request.params["deviceId"]);
     console.log("body: " + JSON.stringify(request.body));
     try {
@@ -199,7 +206,7 @@ router.put('/devices/:deviceId/:capabilityId', jsonParser, function(request, res
     }
 });
 
-router.post('/devices/:deviceId/:capabilityId', jsonParser, function(request, response, next) {
+router.post('/connected-devices/:deviceId/:capabilityId', jsonParser, function(request, response, next) {
     var device = interoperabilityModel.findDeviceById(request.params["deviceId"]);
     console.log("body: " + JSON.stringify(request.body));
     try {
@@ -216,7 +223,7 @@ router.post('/devices/:deviceId/:capabilityId', jsonParser, function(request, re
     }
 });
 
-router.delete('/devices/:deviceId/:capabilityId', jsonParser, function(request, response, next) {
+router.delete('/connected-devices/:deviceId/:capabilityId', jsonParser, function(request, response, next) {
     var device = interoperabilityModel.findDeviceById(request.params["deviceId"]);
     try {
         //It seems that passing parameters in a delete request is not restful (see http://stackoverflow.com/questions/2539394/rest-http-delete-and-parameters)

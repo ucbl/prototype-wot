@@ -41,7 +41,7 @@
             var result = {
                 '@context': Globals.vocabularies.interoperability + 'context/Collection',
                 '@type': 'hydra:Collection',
-                '@id': Globals.vocabularies.interoperability + "platform/known-devices",
+                '@id': Globals.vocabularies.interoperability + "platform/devices",
                 'devices': []
             };
             for(var i in knownDevices) {
@@ -55,7 +55,7 @@
             var result = {
                 '@context': Globals.vocabularies.interoperability + 'context/Collection',
                 '@type': 'hydra:Collection',
-                '@id': Globals.vocabularies.interoperability + "devices",
+                '@id': Globals.vocabularies.interoperability + "connected-devices",
                 'devices': []
             };
             for(var i in this.devices) {

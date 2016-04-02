@@ -1,0 +1,20 @@
+//
+   Created by Lionel on 02/04/2016.
+doctype html
+html
+    head
+        title
+            | #{capability.id} description
+        link(href='/css/fonts/google-fonts.css', rel='stylesheet', type='text/css')
+        link(href="/css/stylesheets/interoperability.css", rel="stylesheet", type="text/css")
+    body
+div(class="contentWrapper")
+    div(class="header")
+        h1
+            | #{capability.id}
+    div(class='deviceId')
+        | Id:&nbsp;
+        a(href='#{capability["@id"]}') #{capability["@id"]}
+    div(class='deviceType')
+        | Type:&nbsp;
+        a(href='#{capability["@type"]}') #{capability["@type"]}

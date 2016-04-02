@@ -1,13 +1,13 @@
 {
     "@context" : "__interoperability__context/Device",
     "@type": "http://www.w3.org/ns/hydra/core#Class",
-    "@id" : "__interoperability__known-devices/sensor-ge-2442",
+    "@id" : "__interoperability__devices/sensor-ge-2442",
     "id" : "sensor-ge-2442",
     "name": "Temperature Sensor",
     "description": "A General Electric temperature sensor with the serial number 2442",
     "capabilities" : [
 		{
-	      "@id": "__interoperability__known-devices/sensor-ge-2442/temperatureSense",
+	      "@id": "__interoperability__devices/sensor-ge-2442/temperatureSense",
 	      "@type": "http://www.w3.org/ns/hydra/core#Class",
           "@context" : "__interoperability__context/Capability"
 	    }

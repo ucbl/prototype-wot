@@ -1,18 +1,18 @@
 {
   "@context" : "__interoperability__context/Device",
   "@type": "http://www.w3.org/ns/hydra/core#Class",
-  "@id" : "__interoperability__known-devices/coolerheater-swirlwind-2665",
+  "@id" : "__interoperability__devices/coolerheater-swirlwind-2665",
   "id" : "coolerheater-swirlwind-2665",
   "name": "Cooler / Heater",
   "description": "A Swirlwind cooler and heater system with the serial number 2665",
   "capabilities" : [
     {
-      "@id": "__interoperability__known-devices/coolerheater-swirlwind-2665/temperatureDecrease",
+      "@id": "__interoperability__devices/coolerheater-swirlwind-2665/temperatureDecrease",
       "@type": "http://www.w3.org/ns/hydra/core#Class",
       "@context" : "__interoperability__context/Capability"
     },
     {
-      "@id": "__interoperability__known-devices/coolerheater-swirlwind-2665/temperatureIncrease",
+      "@id": "__interoperability__devices/coolerheater-swirlwind-2665/temperatureIncrease",
       "@type": "http://www.w3.org/ns/hydra/core#Class",
       "@context" : "__interoperability__context/Capability"
     }

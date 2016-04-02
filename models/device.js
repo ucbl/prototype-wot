@@ -23,7 +23,7 @@
                 capability.id = shortId;
 
                 //Provide an URI for invocation through the interoperability platform
-                capability.platform = capability["@id"].replace("/known-devices/", "/devices/");
+                capability.platform = capability["@id"].replace("/devices/", "/connected-devices/");
 
                 //Provide the capability with an access to the object values
                 capability.getDeviceValues = function() {

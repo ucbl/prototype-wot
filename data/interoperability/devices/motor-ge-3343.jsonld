@@ -1,18 +1,18 @@
 {
   "@context" : "__interoperability__context/Device",
   "@type": "http://www.w3.org/ns/hydra/core#Class",
-  "@id" : "__interoperability__known-devices/motor-ge-3343",
+  "@id" : "__interoperability__devices/motor-ge-3343",
   "id" : "motor-ge-3343",
   "name": "Motor",
   "description": "A General Electric motor with the 3343 serial number",
 	"capabilities" : [
 		{
-      "@id": "__interoperability__known-devices/motor-ge-3343/activateMotor",
+      "@id": "__interoperability__devices/motor-ge-3343/activateMotor",
       "@context" : "__interoperability__context/Capability",
       "@type" : "http://www.w3.org/ns/hydra/core#Class"
     },
     {
-      "@id": "__interoperability__known-devices/motor-ge-3343/informationMotor",
+      "@id": "__interoperability__devices/motor-ge-3343/informationMotor",
       "@context" : "__interoperability__context/Capability",
       "@type" : "http://www.w3.org/ns/hydra/core#Class"
     }
