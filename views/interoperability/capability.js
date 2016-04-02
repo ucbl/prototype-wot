@@ -11,10 +11,10 @@
             '@type': capabilityModel['@type'],
             'invocation': capabilityModel['gateway']?
             {
-                'platform': capabilityModel['@id'],
+                'platform': capabilityModel['platform'],
                 'gateway': capabilityModel['gateway']
             }:{
-                'platform': capabilityModel['@id']
+                'platform': capabilityModel['platform']
             }
         }
     };

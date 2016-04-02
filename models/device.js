@@ -22,6 +22,9 @@
                 //Provide an easy accessor to the short id
                 capability.id = shortId;
 
+                //Provide an URI for invocation through the interoperability platform
+                capability.platform = Globals.interoperability + "devices/" + capability.id;
+
                 //Provide the capability with an access to the object values
                 capability.getDeviceValues = function() {
                     return this.values;
