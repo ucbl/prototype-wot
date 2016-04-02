@@ -62,7 +62,7 @@ router.get('/known-devices/:deviceId/:capabilityId', function(request, response,
     //Search device by name, then by id, then provide an empty device
     var device = interoperabilityModel.getDeviceInfos(request.params["deviceId"]) || interoperabilityModel.findDeviceById(request.params["deviceId"]);
     if(device) {
-        var capability = device.capabilities[request.params["capabilityId"]];
+        var capability = device.capabilities[device['@id'] + '/' + request.params["capabilityId"]];
         if(capability) {
             if (request.accepts('html')) {
                 response.render('interoperability/capability', {capability: capability});
