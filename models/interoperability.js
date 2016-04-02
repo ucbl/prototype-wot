@@ -21,7 +21,6 @@
         'deviceFileDir': __dirname + '/../data/interoperability/devices/'
     };
 
-
     //Stores (at init) all the devices known by the platform, as JSON devices
     var knownDevices = [];
 
@@ -42,7 +41,7 @@
             var result = {
                 '@context': Globals.vocabularies.interoperability + 'context/Collection',
                 '@type': 'hydra:Collection',
-                '@id': Globals.vocabularies.interoperability + "platform/devices",
+                '@id': Globals.vocabularies.interoperability + "platform/known-devices",
                 'devices': []
             };
             for(var i in knownDevices) {
@@ -56,7 +55,7 @@
             var result = {
                 '@context': Globals.vocabularies.interoperability + 'context/Collection',
                 '@type': 'hydra:Collection',
-                '@id': Globals.vocabularies.interoperability + "connected-devices",
+                '@id': Globals.vocabularies.interoperability + "devices",
                 'devices': []
             };
             for(var i in this.devices) {
@@ -76,7 +75,6 @@
                 if (files[i]!='' && files[i].indexOf('.jsonld')>0) {
                     // Read the JSON-LD file that contains all the information and use the JSON template engine to replace globals
                     fs.readFile(fileLocations.deviceFileDir + files[i], 'utf8', function(error, data) {
-                        console.log(data);
                         var deviceData = JSON.parse(templateEngine(data));
 
                         // Clone DeviceModel's methods and properties into deviceData
@@ -92,7 +90,6 @@
                         if (params && params.verbose) {
                             console.log("New device: " + deviceData['@id'] + " -> " + deviceData.length + " properties.");
                             for (var propName in deviceData) {
-                                //TODO remove this
                                 console.log("property: " + propName + "\t" + deviceData[propName]);
                             }
                         }

@@ -6,6 +6,11 @@
   "name": "Cooler",
   "description": "A Swirlwind cooler with the 2443 serial number",
 	"capabilities" : [
+		{
+      "@id": "__interoperability__known-devices/cooler-swirlwind-2443/temperatureDecrease",
+      "@context" : "__ontology__context/Capability",
+      "@type" : "http://www.w3.org/ns/hydra/core#Class"
+		}
 	],
   "values": {
   	"value": 0
