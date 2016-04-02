@@ -24,8 +24,6 @@ div(class="contentWrapper")
         | Invocation:
         if capability.gateway
             div(class="deviceValue")
-                strong Gateway&nbsp;
-                    | #{capability.gateway}
+                strong Gateway:&nbsp; #{capability.gateway}
         div(class="deviceValue")
-            strong Gateway&nbsp;
-                #{capability["@id"]}
+            strong Platform:&nbsp; #{capability["@id"]}
