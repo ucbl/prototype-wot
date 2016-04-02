@@ -34,7 +34,7 @@ router.get('/', function(request, response, next) {
 
 // Returns the collection of known devices (simple descriptions)
 router.get('/devices', function(request, response, next) {
-    var platform = interoperabilityModel.getConnectedDeviceCollection();
+    var platform = interoperabilityModel.getKnownDeviceCollection();
     if (request.accepts('html')) {
         response.render('interoperability/devicesSimple', {devices: platform.devices});
     } else {

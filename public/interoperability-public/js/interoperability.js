@@ -26,7 +26,6 @@ $(document).ready(function() {
     }
 );
 
-
 function reloadKnownDevices() {
     $.get(knownDevicesUrl, {}, function(response){
         $('.knownDevices').html($(response).find('.device').each(function() {
