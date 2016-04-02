@@ -65,7 +65,7 @@ router.get('/known-devices/:deviceId/:capabilityId', function(request, response,
     var device = interoperabilityModel.getDeviceInfos(request.params["deviceId"]) || interoperabilityModel.findDeviceById(request.params["deviceId"]);
     if(device) {
         console.log("Capability: " + device['@id'] + '/' + request.params["capabilityId"]);
-        var capability = device.getCapability(device['@id'] + '/' + request.params["capabilityId"]);
+        var capability = device.getCapability(request.params["capabilityId"]);
         console.log("=> " + capability.id);
         if(capability) {
             if (request.accepts('html')) {
