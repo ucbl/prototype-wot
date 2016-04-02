@@ -4,14 +4,14 @@ doctype html
 html
     head
         title
-            | #{capability.name} description
+            | #{capability.id} description
         link(href='/css/fonts/google-fonts.css', rel='stylesheet', type='text/css')
         link(href="/css/stylesheets/interoperability.css", rel="stylesheet", type="text/css")
     body
 div(class="contentWrapper")
     div(class="header")
         h1
-            | #{capability.name}
+            | #{capability.id}
     div(class='deviceId')
         | Id:&nbsp;
         a(href='#{capability["@id"]}') #{capability["@id"]}
@@ -25,9 +25,7 @@ div(class="contentWrapper")
         if capability.gateway
             div(class="deviceValue")
                 strong Gateway:&nbsp;
-                    a(href="#{capability.gateway}")
-                        #{capability.gateway}
+                    a(href="#{capability.gateway}") #{capability.gateway}
         div(class="deviceValue")
             strong Platform:&nbsp;
-                a(href="#{capability["@id"]}")
-                    #{capability["@id"]}
+                a(href="#{capability["@id"]}") #{capability["@id"]}
