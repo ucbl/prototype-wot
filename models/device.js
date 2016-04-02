@@ -40,11 +40,16 @@
         'connectCapability': function (capability) {
             //Provide an URI for invocation through the interoperability platform
             capability.platform = capability["@id"].replace("/devices/", "/connected-devices/");
+            //Provide an URI for direct invocation through the gateway
+            capability.gateway = capability["@id"].replace("/devices/", "/gateway/");
         },
 
         'disconnectCapability': function (capability) {
-            //Provide an URI for invocation through the interoperability platform
-            delete capability["platform"];
+            //Remove invocation properties
+            if(capability["platform"])
+                delete capability["platform"];
+            if(capability["gateway"])
+                delete capability["gateway"];
         },
 
         // Returns a capability object from its short id

@@ -19,11 +19,12 @@ div(class="contentWrapper")
         | Type:&nbsp;
         a(href='#{capability["@type"]}') #{capability["@type"]}
     div(class='deviceValues')
-        | Invocation:
+        strong Invocation:
         if capability.gateway
             div(class="deviceValue")
-                strong Gateway:&nbsp;
-                    a(href="#{capability.gateway}") #{capability.gateway}
-        div(class="deviceValue")
-            strong Platform:&nbsp;
+                | Gateway:
+                a(href="#{capability.gateway}") #{capability.gateway}
+        if capability.platform
+            div(class="deviceValue")
+                | Platform:
                 a(href='#{capability.platform}') #{capability.platform}

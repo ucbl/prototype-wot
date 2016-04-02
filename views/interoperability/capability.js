@@ -5,17 +5,20 @@
 
 (function(module) {
     module.exports = function (capabilityModel) {
-        return {
+        var result = {
             '@context': capabilityModel['@context'],
             '@id': capabilityModel['@id'],
-            '@type': capabilityModel['@type'],
-            'invocation': capabilityModel['gateway']?
-            {
-                'platform': capabilityModel['platform'],
-                'gateway': capabilityModel['gateway']
-            }:{
-                'platform': capabilityModel['platform']
+            '@type': capabilityModel['@type']
+        };
+        if (capabilityModel['gateway'] || capabilityModel['platform']) {
+            result.invocation = {};
+            if(capabilityModel['gateway']) {
+                result.invocation.platform = capabilityModel['platform'];
+            }
+            if(capabilityModel['platform']) {
+                result.invocation.gateway = capabilityModel['gateway'];
             }
         }
-    };
+        return result;
+    }
 })(module);

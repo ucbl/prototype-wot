@@ -26,7 +26,7 @@
 
     module.exports = {
         // List of connected devices (only contains their ids)
-        "devices": [],
+        "connectedDevices": [],
 
         //Uri of the interoperability layer vocabulary
         "getHydraVocabUri": function() {
@@ -58,8 +58,8 @@
                 '@id': Globals.vocabularies.interoperability + "connected-devices",
                 'devices': []
             };
-            for(var i in this.devices) {
-                var device = this.findDeviceById(this.devices[i]);
+            for(var i in this.connectedDevices) {
+                var device = this.findDeviceById(this.connectedDevices[i]);
                 result.devices.push(device);
             }
             return result;
@@ -101,14 +101,13 @@
         // Adds an device to the list of connected ones
         // Returns a boolean saying if the device is known and was not previously connected
         "connectDevice": function(deviceId) {
-            if(this.findDeviceById(deviceId) && !this.isConnected(deviceId)) {
-                var device = this.findDeviceById(deviceId);
+            var device = this.findDeviceById(deviceId);
+            if(device && !this.isConnected(deviceId)) {
                 for(var i in device.capabilities) {
                     var capability = device.capabilities[i];
-                    console.log(JSON.stringify(capability));
                     deviceModel.connectCapability(capability);
                 }
-                this.devices.push(deviceId);
+                this.connectedDevices.push(deviceId);
                 return true;
             }
             return false;
@@ -117,12 +116,19 @@
         // Removes an device from the list of connected ones
         // Returns a boolean saying if the device is known and was previously connected
         "disconnectDevice": function(deviceId) {
-            if(this.findDeviceById(deviceId) && this.isConnected(deviceId)) {
-                //Find the device index in this.devices
-                for(var i in this.devices) {
-                    if(this.devices[i] == deviceId) {
+            var device = this.findDeviceById(deviceId);
+            if(device && this.isConnected(deviceId)) {
+                //Remove invocation means to the device capabilities
+                for(var i in device.capabilities) {
+                    var capability = device.capabilities[i];
+                    deviceModel.disconnectCapability(capability);
+                }
+
+                //Find the device index in this.connectedDevices
+                for(var j in this.connectedDevices) {
+                    if(this.connectedDevices[j] == deviceId) {
                         //Remove it and shift the rest of the list
-                        this.devices.splice(i,1);
+                        this.connectedDevices.splice(j,1);
                         return true;
                     }
                 }
@@ -131,18 +137,18 @@
         },
 
         // Returns the list of actually connected devices
-        'getAllDevices': function () {
+        "getAllConnectedDevices": function () {
             var results = [];
-            for(var id in this.devices) {
-                results.push(this.getDeviceInfos(this.devices[id]));
+            for(var id in this.connectedDevices) {
+                results.push(this.getDeviceInfos(this.connectedDevices[id]));
             }
             return results;
         },
 
         // Informs if an device is actually connected to the interoperability layer
         "isConnected": function (deviceId) {
-            for (var i in this.devices) {
-                if (this.devices[i] === deviceId) {
+            for (var i in this.connectedDevices) {
+                if (this.connectedDevices[i] === deviceId) {
                     return true;
                 }
             }
