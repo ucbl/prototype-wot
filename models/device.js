@@ -6,6 +6,7 @@
 
 (function(module) {
     var fs = require('fs'),
+        Globals = require('./globals'),
         cloneHelper = require('../helpers/cloneHelper'),
         templateEngine = require("../helpers/jsonTemplateEngine");
 
