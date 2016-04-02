@@ -57,9 +57,9 @@ router.get('/capabilities', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json",
         "Link": Globals.vocabularies.linkVocab});
     var capabilitiesResponse = {};
-    capabilitiesResponse['@context'] = Globals.vocabularies.base + "/context/Collection";
+    capabilitiesResponse['@context'] = Globals.vocabularies.base + "context/Collection";
     capabilitiesResponse['@type'] = 'Collection';
-    capabilitiesResponse['@id'] = Globals.vocabularies.base + "/capabilities";
+    capabilitiesResponse['@id'] = Globals.vocabularies.base + "capabilities";
     capabilitiesResponse.capabilities = [];
 
     //TODO: move to models
@@ -77,9 +77,9 @@ router.get('/functionalities', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json",
         "Link": Globals.vocabularies.linkVocab});
     var functionalitiesResponse = {};
-    functionalitiesResponse['@context'] = Globals.vocabularies.base + "/context/Collection";
+    functionalitiesResponse['@context'] = Globals.vocabularies.base + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
-    functionalitiesResponse['@id'] = Globals.vocabularies.base + "/functionalities";
+    functionalitiesResponse['@id'] = Globals.vocabularies.base + "functionalities";
     functionalitiesResponse.functionalities = [];
 
     //TODO: move to models
@@ -97,9 +97,9 @@ router.get('/functionalities-search', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json",
         "Link": Globals.vocabularies.linkVocab});
     var functionalitiesResponse = {};
-    functionalitiesResponse['@context'] = Globals.vocabularies.base + "/context/Collection";
+    functionalitiesResponse['@context'] = Globals.vocabularies.base + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
-    functionalitiesResponse['@id'] = Globals.vocabularies.base + "/functionalities";
+    functionalitiesResponse['@id'] = Globals.vocabularies.base + "functionalities";
     functionalitiesResponse.functionalities = [];
 
     //TODO: move to models
