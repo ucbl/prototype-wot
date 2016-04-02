@@ -76,6 +76,7 @@
                 if (files[i]!='' && files[i].indexOf('.jsonld')>0) {
                     // Read the JSON-LD file that contains all the information and use the JSON template engine to replace globals
                     fs.readFile(fileLocations.deviceFileDir + files[i], 'utf8', function(error, data) {
+                        console.log(data);
                         var deviceData = JSON.parse(templateEngine(data));
 
                         // Clone DeviceModel's methods and properties into deviceData
