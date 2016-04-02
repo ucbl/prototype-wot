@@ -100,8 +100,12 @@
 
         // Adds an device to the list of connected ones
         // Returns a boolean saying if the device is known and was not previously connected
-        'addDevice': function(deviceId) {
+        "connectDevice": function(deviceId) {
             if(this.findDeviceById(deviceId) && !this.isConnected(deviceId)) {
+                var device = this.findDeviceById(deviceId);
+                for(var capability in device.capabilities) {
+                    deviceModel.connectCapability(capability);
+                }
                 this.devices.push(deviceId);
                 return true;
             }
@@ -110,7 +114,7 @@
 
         // Removes an device from the list of connected ones
         // Returns a boolean saying if the device is known and was previously connected
-        'removeDevice': function(deviceId) {
+        "disconnectDevice": function(deviceId) {
             if(this.findDeviceById(deviceId) && this.isConnected(deviceId)) {
                 //Find the device index in this.devices
                 for(var i in this.devices) {

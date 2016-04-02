@@ -22,9 +22,6 @@
                 //Provide an easy accessor to the short id
                 capability.id = shortId;
 
-                //Provide an URI for invocation through the interoperability platform
-                capability.platform = capability["@id"].replace("/devices/", "/connected-devices/");
-
                 //Provide the capability with an access to the object values
                 capability.getDeviceValues = function() {
                     return this.values;
@@ -38,6 +35,16 @@
                     }
                 }
             }
+        },
+
+        'connectCapability': function (capability) {
+            //Provide an URI for invocation through the interoperability platform
+            capability.platform = capability["@id"].replace("/devices/", "/connected-devices/");
+        },
+
+        'disconnectCapability': function (capability) {
+            //Provide an URI for invocation through the interoperability platform
+            capability.platform = capability["@id"].replace("/devices/", "/connected-devices/");
         },
 
         'getCapability': function (capabilityId) {

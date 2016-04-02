@@ -69,11 +69,11 @@ router.get('/devices/:deviceId/:capabilityId', function(request, response, next)
         var capability = device.getCapability(request.params["capabilityId"]);
         if(capability) {
             if (request.accepts('html')) {
-                response.render('interoperability/capabilitySimple', {capability: capability});
+                response.render('interoperability/capability', {capability: capability});
             } else {
                 request.vocabUri = interoperabilityModel.getHydraVocabUri();
                 jsonldHeaders(request, response, next);
-                response.end(JSON.stringify((require("../views/interoperability/capabilitySimple")(capability))));
+                response.end(JSON.stringify((require("../views/interoperability/capability")(capability))));
             }
         } else {
             response.sendStatus(404);
@@ -139,7 +139,7 @@ router.put('/devices/:deviceId', function(request, response) {
     if(interoperabilityModel.isConnected(request.params["deviceId"])) {
         response.sendStatus(405);
     } else {
-        interoperabilityModel.addDevice(request.params["deviceId"]);
+        interoperabilityModel.connectDevice(request.params["deviceId"]);
         response.sendStatus(201);
     }
 });
@@ -150,7 +150,7 @@ router.post('/devices/:deviceId', jsonParser, function(request, response) {
     if(interoperabilityModel.isConnected(request.params["deviceId"])) {
         response.sendStatus(405);
     } else {
-        interoperabilityModel.addDevice(request.params["deviceId"]);
+        interoperabilityModel.connectDevice(request.params["deviceId"]);
         response.sendStatus(201);
     }
 });
@@ -158,7 +158,7 @@ router.post('/devices/:deviceId', jsonParser, function(request, response) {
 // Remove an device from the currently connected device list
 router.delete('/devices/:deviceId', function(request, response) {
     if(interoperabilityModel.isConnected(request.params["deviceId"])) {
-        interoperabilityModel.removeDevice(request.params["deviceId"]);
+        interoperabilityModel.disconnectDevice(request.params["deviceId"]);
         response.sendStatus(204);
     } else {
         response.sendStatus(405);
