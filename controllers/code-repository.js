@@ -14,7 +14,7 @@ var express = require('express'),
 // GET the list of available codes
 router.get('/', function(request, response) {
     var responseJson = {
-        '@id': Globals.vocabularies.base + "/code-repository",
+        '@id': Globals.vocabularies.base + "code-repository",
         '@type': "vocab:Collection",
         '@context': Globals.vocabularies.base + "context/Collection",
         'codes': []

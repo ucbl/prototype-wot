@@ -51,7 +51,7 @@ var ontology = {
         var response = {};
         response['@id'] = capabilityUrl;
         response['@type'] = 'vocab:Capability';
-        response['@context'] = Globals.vocabularies.base + "context/Capability";
+        response['@context'] = Globals.vocabularies.ontology + "context/Capability";
         for (var i in info) {
             if (info[i].predicate == Globals.vocabularies.nsName ) {
                 response.name = info[i].object;
@@ -68,7 +68,7 @@ var ontology = {
         var response = {};
         response['@id'] = functionalityUrl;
         response['@type'] = 'vocab:Functionality';
-        response['@context'] = Globals.vocabularies.base + "context/Functionality";
+        response['@context'] = Globals.vocabularies.ontology + "context/Functionality";
         for (var i in info) {
             if (info[i].predicate == Globals.vocabularies.nsName) {
                 response.name = info[i].object;
