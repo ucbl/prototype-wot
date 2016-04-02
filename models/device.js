@@ -6,7 +6,6 @@
 
 (function(module) {
     var fs = require('fs'),
-        Globals = require('./globals'),
         cloneHelper = require('../helpers/cloneHelper'),
         templateEngine = require("../helpers/jsonTemplateEngine");
 
@@ -24,7 +23,7 @@
                 capability.id = shortId;
 
                 //Provide an URI for invocation through the interoperability platform
-                capability.platform = Globals.vocabularies.interoperability + "devices/" + capability.id;
+                capability.platform = capability["@id"].replace("/known-devices/", "/devices/");
 
                 //Provide the capability with an access to the object values
                 capability.getDeviceValues = function() {
