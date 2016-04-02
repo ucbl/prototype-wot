@@ -92,6 +92,7 @@
                         if (params && params.verbose) {
                             console.log("New device: " + deviceData['@id'] + " -> " + deviceData.length + " properties.");
                             for (var propName in deviceData) {
+                                //TODO remove this
                                 console.log("property: " + propName + "\t" + deviceData[propName]);
                             }
                         }
