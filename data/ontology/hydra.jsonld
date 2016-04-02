@@ -1,9 +1,9 @@
 {
-  "@id": "http://localhost:3232/vocab",
+  "@id": "__ontology__vocab",
   "@type": "ApiDocumentation",
-  "entrypoint": "http://localhost:3232/",
+  "entrypoint": "__ontology__",
   "@context": {
-    "vocab": "http://localhost:3232/vocab#",
+    "vocab": "__ontology__vocab#",
     "hydra": "http://www.w3.org/ns/hydra/core#",
     "ApiDocumentation": "hydra:ApiDocumentation",
     "property": {

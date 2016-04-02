@@ -1,9 +1,9 @@
 {
-  "@id": "http://localhost:3535/vocab",
+  "@id": "__code__vocab",
   "@type": "ApiDocumentation",
-  "entrypoint": "http://localhost:3535/",
+  "entrypoint": "__code__",
   "@context": {
-    "vocab": "http://localhost:3535/vocab#",
+    "vocab": "__code__vocab#",
     "hydra": "http://www.w3.org/ns/hydra/core#",
     "ApiDocumentation": "hydra:ApiDocumentation",
     "property": {

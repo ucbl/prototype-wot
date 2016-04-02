@@ -16,7 +16,7 @@ router.get('/', function(request, response) {
     var responseJson = {
         '@id': Globals.vocabularies.base + "/code-repository",
         '@type': "vocab:Collection",
-        '@context': Globals.vocabularies.base + "/context/Collection",
+        '@context': Globals.vocabularies.base + "context/Collection",
         'codes': []
     };
     var directoryFiles = fs.readdirSync(__dirname + '/../data/code-repository/codes-info/');
@@ -58,7 +58,7 @@ router.get('/context', function(request, response) {
 /*---WEB SERVICE---*/
 
 // GET the information of a code
-router.get('/code/:idFunctionality', function(request, response) {
+router.get('/repo/:idFunctionality', function(request, response) {
     var codeResponse = {};
     var idFunctionality = request.params.idFunctionality;
     var dataLocationFile = __dirname + '/../data/code-repository/codes-info/' + idFunctionality + '.json';
