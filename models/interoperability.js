@@ -104,7 +104,7 @@
             if(this.findDeviceById(deviceId) && !this.isConnected(deviceId)) {
                 var device = this.findDeviceById(deviceId);
                 for(var capability in device.capabilities) {
-                    deviceModel.connectCapability(capability);
+                    deviceModel.connectCapability(deviceModel.getCapability(capability));
                 }
                 this.devices.push(deviceId);
                 return true;
