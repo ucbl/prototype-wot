@@ -44,12 +44,13 @@
 
         'disconnectCapability': function (capability) {
             //Provide an URI for invocation through the interoperability platform
-            capability.platform = capability["@id"].replace("/devices/", "/connected-devices/");
+            delete capability["platform"];
         },
 
+        // Returns a capability object from its short id or URI
         'getCapability': function (capabilityId) {
             for (var i in this.capabilities) {
-                if (this.capabilities[i]["id"] == capabilityId) {
+                if (this.capabilities[i]["id"] == capabilityId || this.capabilities[i]["@id"] == capabilityId) {
                     return this.capabilities[i];
                 }
             }

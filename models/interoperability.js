@@ -105,7 +105,7 @@
                 var device = this.findDeviceById(deviceId);
                 console.log(JSON.stringify(device));
                 for(var capability in device.capabilities) {
-                    deviceModel.connectCapability(deviceModel.getCapability(capability));
+                    deviceModel.connectCapability(deviceModel.getCapability(capability["@id"]));
                 }
                 this.devices.push(deviceId);
                 return true;
