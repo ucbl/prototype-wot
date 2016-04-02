@@ -14,9 +14,9 @@ var express = require('express'),
 // GET the list of available codes
 router.get('/', function(request, response) {
     var responseJson = {
-        '@id': Globals.vocabularies.base + "code-repository",
+        '@id': Globals.vocabularies.code,
         '@type': "vocab:Collection",
-        '@context': Globals.vocabularies.base + "context/Collection",
+        '@context': Globals.vocabularies.code + "context/Collection",
         'codes': []
     };
     var directoryFiles = fs.readdirSync(__dirname + '/../data/code-repository/codes-info/');

@@ -16,8 +16,8 @@ router.get('/', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json",
         "Link": Globals.vocabularies.linkVocab});
     var responseEntryPoint = {
-        "@context": Globals.vocabularies.base + "context/EntryPoint",
-        "@id": Globals.vocabularies.base + "ontology/",
+        "@context": Globals.vocabularies.ontology + "context/EntryPoint",
+        "@id": Globals.vocabularies.ontology,
         "@type": "EntryPoint",
         "functionalities": Globals.vocabularies.ontology + "functionalities",
         "capabilities": Globals.vocabularies.ontology + "capabilities"
@@ -57,9 +57,9 @@ router.get('/capabilities', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json",
         "Link": Globals.vocabularies.linkVocab});
     var capabilitiesResponse = {};
-    capabilitiesResponse['@context'] = Globals.vocabularies.base + "context/Collection";
+    capabilitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     capabilitiesResponse['@type'] = 'Collection';
-    capabilitiesResponse['@id'] = Globals.vocabularies.base + "capabilities";
+    capabilitiesResponse['@id'] = Globals.vocabularies.ontology + "capabilities";
     capabilitiesResponse.capabilities = [];
 
     //TODO: move to models
@@ -77,9 +77,9 @@ router.get('/functionalities', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json",
         "Link": Globals.vocabularies.linkVocab});
     var functionalitiesResponse = {};
-    functionalitiesResponse['@context'] = Globals.vocabularies.base + "context/Collection";
+    functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
-    functionalitiesResponse['@id'] = Globals.vocabularies.base + "functionalities";
+    functionalitiesResponse['@id'] = Globals.vocabularies.ontology + "functionalities";
     functionalitiesResponse.functionalities = [];
 
     //TODO: move to models
@@ -97,9 +97,9 @@ router.get('/functionalities-search', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json",
         "Link": Globals.vocabularies.linkVocab});
     var functionalitiesResponse = {};
-    functionalitiesResponse['@context'] = Globals.vocabularies.base + "context/Collection";
+    functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
-    functionalitiesResponse['@id'] = Globals.vocabularies.base + "functionalities";
+    functionalitiesResponse['@id'] = Globals.vocabularies.ontology + "functionalities";
     functionalitiesResponse.functionalities = [];
 
     //TODO: move to models
@@ -124,9 +124,9 @@ router.get('/functionalities-incomplete', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json",
         "Link": Globals.vocabularies.linkVocab});
     var functionalitiesResponse = {};
-    functionalitiesResponse['@context'] = Globals.vocabularies.base + "/context/Collection";
+    functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
-    functionalitiesResponse['@id'] = Globals.vocabularies.base + "/functionalities";
+    functionalitiesResponse['@id'] = Globals.vocabularies.ontology + "functionalities";
     functionalitiesResponse.functionalities = [];
 
     //TODO: move to models
@@ -150,9 +150,9 @@ router.get('/functionalities-incomplete-all', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json",
         "Link": Globals.vocabularies.linkVocab});
     var functionalitiesResponse = {};
-    functionalitiesResponse['@context'] = Globals.vocabularies.base + "/context/Collection";
+    functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
-    functionalitiesResponse['@id'] = Globals.vocabularies.base + "/functionalities";
+    functionalitiesResponse['@id'] = Globals.vocabularies.ontology + "functionalities";
     functionalitiesResponse.functionalities = [];
 
     //TODO: move to models
@@ -178,9 +178,9 @@ router.get('/functionalities-composed', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json",
         "Link": Globals.vocabularies.linkVocab});
     var functionalitiesResponse = {};
-    functionalitiesResponse['@context'] = Globals.vocabularies.base + "/context/Collection";
+    functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
-    functionalitiesResponse['@id'] = Globals.vocabularies.base + "/functionalities";
+    functionalitiesResponse['@id'] = Globals.vocabularies.ontology + "functionalities";
     functionalitiesResponse.functionalities = [];
 
     //TODO: move to models
@@ -219,7 +219,7 @@ router.get('/functionality-composed-of/:functionality', function(request, respon
     var functionalityResponse = {
         '@id': Globals.vocabularies.functionality + request.params.functionality,
         '@type': 'vocab:Functionality',
-        '@context': Globals.vocabularies.base + "/context/Functionality"
+        '@context': Globals.vocabularies.ontology + "context/Functionality"
     };
 
     //TODO: move to models
