@@ -46,8 +46,6 @@ router.get('/known-devices/:deviceId', function(request, response, next) {
     var device = interoperabilityModel.getDeviceInfos(request.params["deviceId"]) || interoperabilityModel.findDeviceById(request.params["deviceId"]);
     if(device) {
         if (request.accepts('html')) {
-            //TODO remove this log
-            console.log(JSON.stringify(device.capabilities));
             response.render('interoperability/deviceFullPage', {device: device});
         } else {
             request.vocabUri = interoperabilityModel.getHydraVocabUri();
@@ -64,9 +62,8 @@ router.get('/known-devices/:deviceId/:capabilityId', function(request, response,
     //Search device by name, then by id, then provide an empty device
     var device = interoperabilityModel.getDeviceInfos(request.params["deviceId"]) || interoperabilityModel.findDeviceById(request.params["deviceId"]);
     if(device) {
-        console.log("Capability: " + device['@id'] + '/' + request.params["capabilityId"]);
         var capability = device.getCapability(request.params["capabilityId"]);
-        console.log("=> " + capability.id);
+        console.log("=> " + JSON.stringify(capability));
         if(capability) {
             if (request.accepts('html')) {
                 response.render('interoperability/capability', {capability: capability});
