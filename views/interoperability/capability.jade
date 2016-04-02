@@ -24,6 +24,10 @@ div(class="contentWrapper")
         | Invocation:
         if capability.gateway
             div(class="deviceValue")
-                strong Gateway:&nbsp; #{capability.gateway}
+                strong Gateway:&nbsp;
+                    a(href="#{capability.gateway}")
+                        #{capability.gateway}
         div(class="deviceValue")
-            strong Platform:&nbsp; #{capability["@id"]}
+            strong Platform:&nbsp;
+                a(href="#{capability["@id"]}")
+                    #{capability["@id"]}
