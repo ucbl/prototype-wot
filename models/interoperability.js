@@ -106,7 +106,7 @@
                 for(var i in device.capabilities) {
                     var capability = device.capabilities[i];
                     console.log(JSON.stringify(capability));
-                    deviceModel.connectCapability(deviceModel.getCapability(capability["@id"]));
+                    deviceModel.connectCapability(capability);
                 }
                 this.devices.push(deviceId);
                 return true;

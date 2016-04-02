@@ -47,10 +47,10 @@
             delete capability["platform"];
         },
 
-        // Returns a capability object from its short id or URI
+        // Returns a capability object from its short id
         'getCapability': function (capabilityId) {
             for (var i in this.capabilities) {
-                if (this.capabilities[i]["id"] == capabilityId || this.capabilities[i]["@id"] == capabilityId) {
+                if (this.capabilities[i]["id"] == capabilityId) {
                     return this.capabilities[i];
                 }
             }
