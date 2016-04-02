@@ -108,28 +108,6 @@ router.get('/connected-devices/:deviceId', function(request, response) {
     }
 });
 
-// Retrieves info about a given capability of a known device
-router.get('/connected-devices/:deviceId/:capabilityId', function(request, response, next) {
-    //Search device by name, then by id, then provide an empty device
-    var device = interoperabilityModel.getDeviceInfos(request.params["deviceId"]) || interoperabilityModel.findDeviceById(request.params["deviceId"]);
-    if(device) {
-        var capability = device.getCapability(request.params["capabilityId"]);
-        if(capability) {
-            if (request.accepts('html')) {
-                response.render('interoperability/capability', {capability: capability});
-            } else {
-                request.vocabUri = interoperabilityModel.getHydraVocabUri();
-                jsonldHeaders(request, response, next);
-                response.end(JSON.stringify((require("../views/interoperability/capability")(capability))));
-            }
-        } else {
-            response.sendStatus(404);
-        }
-    } else {
-        response.sendStatus(404);
-    }
-});
-
 /**
  * -- Connection and disconnection management --
  */
