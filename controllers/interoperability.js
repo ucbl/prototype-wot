@@ -46,6 +46,7 @@ router.get('/known-devices/:deviceId', function(request, response, next) {
     var device = interoperabilityModel.getDeviceInfos(request.params["deviceId"]) || interoperabilityModel.findDeviceById(request.params["deviceId"]);
     if(device) {
         if (request.accepts('html')) {
+            //TODO remove this log
             console.log(JSON.stringify(device.capabilities));
             response.render('interoperability/deviceFullPage', {device: device});
         } else {
@@ -64,7 +65,7 @@ router.get('/known-devices/:deviceId/:capabilityId', function(request, response,
     var device = interoperabilityModel.getDeviceInfos(request.params["deviceId"]) || interoperabilityModel.findDeviceById(request.params["deviceId"]);
     if(device) {
         console.log("Capability: " + device['@id'] + '/' + request.params["capabilityId"]);
-        var capability = device.capabilities[device['@id'] + '/' + request.params["capabilityId"]];
+        var capability = device.getCapability(device['@id'] + '/' + request.params["capabilityId"]);
         console.log("=> " + capability.id);
         if(capability) {
             if (request.accepts('html')) {
