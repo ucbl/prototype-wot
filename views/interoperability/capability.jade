@@ -18,8 +18,6 @@ div(class="contentWrapper")
     div(class='deviceType')
         | Type:&nbsp;
         a(href='#{capability["@type"]}') #{capability["@type"]}
-    div(class='deviceDescription')
-        | Description: #{capability.description}
     div(class='deviceValues')
         | Invocation:
         if capability.gateway
