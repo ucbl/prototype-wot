@@ -26,6 +26,8 @@ router.get('/', function(request, response, next) {
     }
 });
 
+/*-- Known devices (not connected to the platform --*/
+
 // Sends the collection of known devices (simple descriptions)
 router.get('/known-devices', function(request, response, next) {
     var platform = interoperabilityModel.getKnownDeviceCollection();
@@ -35,6 +37,43 @@ router.get('/known-devices', function(request, response, next) {
         request.vocabUri = interoperabilityModel.getHydraVocabUri();
         jsonldHeaders(request, response, next);
         response.end(JSON.stringify((require("../views/devicesSimple")(platform))));
+    }
+});
+
+// Retrieves info about a given known device (not supposed to be connected to the platform)
+router.get('/known-devices/:deviceId', function(request, response, next) {
+    //Search device by name, then by id, then provide an empty device
+    var device = interoperabilityModel.getDeviceInfos(request.params["deviceId"]) || interoperabilityModel.findDeviceById(request.params["deviceId"]);
+    if(device) {
+        if (request.accepts('html')) {
+            response.render('interoperability/deviceFullPage', {device: device});
+        } else {
+            request.vocabUri = interoperabilityModel.getHydraVocabUri();
+            jsonldHeaders(request, response, next);
+            response.end(JSON.stringify(device));
+        }
+    } else {
+        response.sendStatus(404);
+    }
+});
+
+// Retrieves info about a given capability of a known device
+router.get('/known-devices/:deviceId/:capabilityId', function(request, response, next) {
+    //Search device by name, then by id, then provide an empty device
+    var device = interoperabilityModel.getDeviceInfos(request.params["deviceId"]) || interoperabilityModel.findDeviceById(request.params["deviceId"]);
+    if(device) {
+        var capability = device.capabilities[request.params["capabilityId"]];
+        if(capability) {
+            if (request.accepts('html')) {
+                response.render('interoperability/capability', {capability: capability});
+            } else {
+                request.vocabUri = interoperabilityModel.getHydraVocabUri();
+                jsonldHeaders(request, response, next);
+                response.end(JSON.stringify(capability));
+            }
+        }
+    } else {
+        response.sendStatus(404);
     }
 });
 
