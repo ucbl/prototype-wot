@@ -21,8 +21,11 @@ div(class="contentWrapper")
     div(class='deviceDescription')
         | Description: #{capability.description}
     div(class='deviceValues')
-        | Access:
-        each val, index in capability.access
+        | Invocation:
+        if capability.gateway
             div(class="deviceValue")
-                strong #{index}&nbsp;
-                    | #{val}
+                strong Gateway&nbsp;
+                    | #{capability.gateway}
+        div(class="deviceValue")
+            strong Gateway&nbsp;
+                #{capability["@id"]}

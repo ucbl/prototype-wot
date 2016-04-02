@@ -9,7 +9,7 @@
             '@context': capabilityModel['@context'],
             '@id': capabilityModel['@id'],
             '@type': capabilityModel['@type'],
-            'access': capabilityModel['gateway']?
+            'invocation': capabilityModel['gateway']?
             {
                 'platform': capabilityModel['@id'],
                 'gateway': capabilityModel['gateway']
