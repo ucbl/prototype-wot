@@ -1,31 +1,21 @@
-doctype html
-html
-    head
-        title
-            | #{device.name} description
-        link(href='/css/fonts/google-fonts.css', rel='stylesheet', type='text/css')
-        link(href="/css/stylesheets/interoperability.css", rel="stylesheet", type="text/css")
-    body
-div(class="contentWrapper")
-    div(class="header")
-        h1
-            | #{device.name}
-        div(class='deviceId')
-            | Id:&nbsp;
-            a(href='#{device["@id"]}') #{device["@id"]}
-        div(class='deviceType')
-            | Type:&nbsp;
-            a(href='#{device["@type"]}') #{device["@type"]}
-        div(class='deviceDescription')
-            | Description: #{device.description}
-        div(class='deviceValues')
-            | Values:
-            each val, index in device.values
-                div(class="deviceValue")
-                    strong #{index}&nbsp;
-                        | #{val}
-        div(class='deviceCapabilities')
-            | Capabilities:
-            each capability in device.capabilities
-                div(class="deviceCapability")
-                    a(href='#{capability["@id"]}') #{capability['@id']}
+h2
+    | #{device.name}
+div(class='deviceId')
+    | Id:&nbsp;
+    a(href='#{device["@id"]}') #{device["@id"]}
+div(class='deviceType')
+    | Type:&nbsp;
+    a(href='#{device["@type"]}') #{device["@type"]}
+div(class='deviceDescription')
+    | Description: #{device.description}
+div(class='deviceValues')
+    | Values:
+    each val, index in device.values
+        div(class="deviceValue")
+            strong #{index}&nbsp;
+            | #{val}
+div(class='deviceCapabilities')
+    | Capabilities:
+    each capability in device.capabilities
+        div(class="deviceCapability")
+        a(href='#{capability["@id"]}') #{capability['@id']}

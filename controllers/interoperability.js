@@ -56,7 +56,7 @@ router.get('/devices/:deviceId', function(request, response, next) {
     var device = interoperabilityModel.getDeviceInfos(request.params["deviceId"]) || interoperabilityModel.findDeviceById(request.params["deviceId"]);
     if(device) {
         if (request.accepts('html')) {
-            response.render('interoperability/device', {device: device});
+            response.render('interoperability/deviceFullPage', {device: device});
         } else {
             request.vocabUri = interoperabilityModel.getHydraVocabUri();
             jsonldHeaders(request, response, next);
