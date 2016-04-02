@@ -1,38 +1,38 @@
 {
     "@context" : "__interoperability__context/Device",
     "@type": "http://www.w3.org/ns/hydra/core#Class",
-	"@id" : "__interoperability__devices/phone-samsung-2554",
+	"@id" : "__interoperability__known-devices/phone-samsung-2554",
 	"id" : "phone-samsung-2554",
     "name": "Phone",
     "description": "A Samsung Phone with the serial number 2554",
     "capabilities" : [
 		{
-	      "@id": "__interoperability__devices/phone-samsung-2554/call",
+	      "@id": "__interoperability__known-devices/phone-samsung-2554/call",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class"
 	    },
 		{
-	      "@id": "__interoperability__devices/phone-samsung-2554/sms",
+	      "@id": "__interoperability__known-devices/phone-samsung-2554/sms",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class"
 	    },
 		{
-	      "@id": "__interoperability__devices/phone-samsung-2554/photo",
+	      "@id": "__interoperability__known-devices/phone-samsung-2554/photo",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class"
 	    },
 		{
-	      "@id": "__interoperability__devices/phone-samsung-2554/video",
+	      "@id": "__interoperability__known-devices/phone-samsung-2554/video",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class"
 	    },
 		{
-	      "@id": "__interoperability__devices/phone-samsung-2554/app",
+	      "@id": "__interoperability__known-devices/phone-samsung-2554/app",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class"
 	    },
 		{
-	      "@id": "__interoperability__devices/phone-samsung-2554/gps",
+	      "@id": "__interoperability__known-devices/phone-samsung-2554/gps",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class"
 	    }

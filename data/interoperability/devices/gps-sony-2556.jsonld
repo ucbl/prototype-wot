@@ -1,13 +1,13 @@
 {
     "@context" : "__interoperability__context/Device",
     "@type": "http://www.w3.org/ns/hydra/core#Class",
-    "@id" : "__interoperability__devices/gps-sony-2556",
+    "@id" : "__interoperability__known-devices/gps-sony-2556",
     "id" : "gps-sony-2556",
     "name": "GPS",
     "description": "A Sony GPS with the serial number 2556",
     "capabilities" : [
 		{
-	      "@id": "__interoperability__devices/gps-sony-2556/gps",
+	      "@id": "__interoperability__known-devices/gps-sony-2556/gps",
 	      "@context" : "__interoperability__context/Capability",
           "@type" : "http://www.w3.org/ns/hydra/core#Class"
 	    }
