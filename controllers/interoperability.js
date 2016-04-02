@@ -71,6 +71,8 @@ router.get('/known-devices/:deviceId/:capabilityId', function(request, response,
                 jsonldHeaders(request, response, next);
                 response.end(JSON.stringify(capability));
             }
+        } else {
+            response.sendStatus(404);
         }
     } else {
         response.sendStatus(404);
