@@ -103,7 +103,8 @@
         "connectDevice": function(deviceId) {
             if(this.findDeviceById(deviceId) && !this.isConnected(deviceId)) {
                 var device = this.findDeviceById(deviceId);
-                for(var capability in device.capabilities) {
+                for(var i in device.capabilities) {
+                    var capability = device.capabilities[i];
                     console.log(JSON.stringify(capability));
                     deviceModel.connectCapability(deviceModel.getCapability(capability["@id"]));
                 }
