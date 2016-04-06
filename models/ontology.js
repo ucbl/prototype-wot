@@ -8,7 +8,8 @@ var fs = require('fs'),
     jsonld = require('jsonld'),
     N3Store = require('n3').Store,
     Globals = require('../models/globals'),
-    ontologyHelper = require('../helpers/ontologyHelper');
+    ontologyHelper = require('../helpers/ontologyHelper'),
+    templateEngine = require("../helpers/jsonTemplateEngine");
 /*---LOAD ONTOLOGY---*/
 
 var tripleStore = new N3Store();
@@ -43,7 +44,7 @@ var ontology = {
     'find': function(subject, predicate, object, graph) {
         var res = tripleStore.find(subject, predicate, object, graph);
         console.log("tripleStore.find: " + res.length + " result(s).");
-        return res;
+        return templateEngine(res);
     },
     // Extract the info of a capability
     'getCapabilityInfo': function(capabilityUrl) {
@@ -60,7 +61,7 @@ var ontology = {
                 response.description = info[i].object;
             }
         }
-        return response;
+        return templateEngine(response);
     },
     // Extract the info of a functionality
     'getFunctionalityInfo': function(functionalityUrl) {
@@ -91,7 +92,7 @@ var ontology = {
                 response.isComposedOf.push(isComposedOfItem);
             }
         }
-        return response;
+        return templateEngine(response);
     },
     // Info about the composed functionalities
     'findComposedFunctionalities': function() {
@@ -113,7 +114,7 @@ var ontology = {
         composedFunctionalitiesInfo = this.getSubFunctionalities(composedFunctionalitiesInfo);
         composedFunctionalitiesInfo = this.getSubFunctionalities(composedFunctionalitiesInfo);
         composedFunctionalitiesInfo = this.getSubFunctionalities(composedFunctionalitiesInfo);
-        return composedFunctionalitiesInfo;
+        return templateEngine(composedFunctionalitiesInfo);
     },
     // Format an array of composed functionalities
     'getSubFunctionalities': function(composedFunctionalitiesInfo) {
@@ -135,7 +136,7 @@ var ontology = {
                 }
             }
         }
-        return composedFunctionalitiesInfo;
+        return templateEngine(composedFunctionalitiesInfo);
     }
 };
 

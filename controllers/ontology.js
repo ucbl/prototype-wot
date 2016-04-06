@@ -69,7 +69,7 @@ router.get('/capabilities', function(request, response) {
         var graphItemEle = ontologyModel.getCapabilityInfo(triplesResponse[i].subject);
         capabilitiesResponse.capabilities.push(graphItemEle);
     }
-    response.end(JSON.stringify(capabilitiesResponse));
+    response.json(capabilitiesResponse);
 });
 
 // GET the entire list of functionalities
@@ -89,7 +89,7 @@ router.get('/functionalities', function(request, response) {
         var graphItemEle = ontologyModel.getFunctionalityInfo(triplesResponse[i].subject);
         functionalitiesResponse.functionalities.push(graphItemEle);
     }
-    response.end(JSON.stringify(functionalitiesResponse));
+    response.json(functionalitiesResponse);
 });
 
 // Search for functionalities using an array of capabilities
