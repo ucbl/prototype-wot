@@ -4,6 +4,7 @@
 var express = require('express'),
     router = express.Router(),
     fs = require('fs'),
+    jsonParser = require('body-parser').json(),
     jsonld = require('jsonld'),
     Globals = require('../models/globals'),
     ontologyModel = require('../models/ontology'),
@@ -42,7 +43,7 @@ router.get('/context', function(request, response, next) {
 });
 
 // GET the hydra contexts
-router.get('/context/:context', function(request, response, next) {
+router.get('/context/:context', jsonParser, function(request, response, next) {
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     console.log(JSON.stringify(request));
@@ -204,7 +205,7 @@ router.get('/functionalities-composed', function(request, response, next) {
 });
 
 // GET the information of a functionality
-router.get('/functionality/:functionality', function(request, response, next) {
+router.get('/functionality/:functionality', jsonParser, function(request, response, next) {
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     var requestUrl = request.protocol + '://' + request.get('host') + request.originalUrl;
@@ -214,7 +215,7 @@ router.get('/functionality/:functionality', function(request, response, next) {
 
 // GET the composition of a functionality
 //TODO: change URL to something like /functionality/:functionality/sub-functionalities
-router.get('/functionality-composed-of/:functionality', function(request, response, next) {
+router.get('/functionality-composed-of/:functionality', jsonParser, function(request, response, next) {
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
@@ -234,7 +235,7 @@ router.get('/functionality-composed-of/:functionality', function(request, respon
 });
 
 // GET the information of a capability
-router.get('/capability/:capability', function(request, response, next) {
+router.get('/capability/:capability', jsonParser, function(request, response, next) {
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     var requestUrl = request.protocol + '://' + request.get('host') + request.originalUrl;
