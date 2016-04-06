@@ -10,7 +10,7 @@
 
     module.exports = function (request, response, next) {
         response.writeHead(200, {
-                "Content-Type": "application/ld+json",
+                "Content-Type": "application/json",
                 "Link": '<' + request.vocabUri + '>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"'}
         );
         next();
