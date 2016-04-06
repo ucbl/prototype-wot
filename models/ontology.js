@@ -25,7 +25,7 @@ var ontology = {
         var dataLocation = __dirname + '/../data/ontology/functionalities/functionalities.jsonld';
         fs.readFile(dataLocation, 'utf8', function (error, data) {
             if (!error) {
-                jsonOntology["@graph"] = templateEngine(JSON.parse(data))['@graph'];
+                jsonOntology["@graph"] = JSON.parse(templateEngine(data))['@graph'];
                 jsonld.toRDF(jsonOntology, function (error, triples) {
                     for (var graphName in triples) {
                         triples[graphName].forEach(function (triple) {
@@ -50,7 +50,9 @@ var ontology = {
 
     //Returns the context corresponding to a particular object
     "getContext": function(contextName)  {
-        return templateEngine(fs.readFileSync(__dirname + '/../data/ontology/contexts/' + contextName + '.jsonld'));
+        var toto =  templateEngine(fs.readFileSync(__dirname + '/../data/ontology/contexts/' + contextName + '.jsonld'));
+        console.log(toto);
+        return toto;
     },
 
     'find': function(subject, predicate, object, graph) {
