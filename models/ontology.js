@@ -19,7 +19,7 @@ var ontology = {
     'loadOntology': function(params) {
         //Separate the context from the data, to be able to replace namespaces by their values
         var jsonOntology = {
-                "@context": require("../data/ontology/functionalities/prefixes.js")['@context']
+                "@context": templateEngine(require("../data/ontology/functionalities/prefixes.js")['@context'])
         };
 
         var dataLocation = __dirname + '/../data/ontology/functionalities/functionalities.jsonld';
