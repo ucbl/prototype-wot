@@ -25,7 +25,7 @@ var ontology = {
         var dataLocation = __dirname + '/../data/ontology/functionalities/functionalities.jsonld';
         fs.readFile(dataLocation, 'utf8', function (error, data) {
             if (!error) {
-                jsonOntology["@graph"] = JSON.parse(templateEngine(data))['@graph'];
+                jsonOntology["@graph"] = templateEngine(JSON.parse(data)['@graph']);
                 jsonld.toRDF(jsonOntology, function (error, triples) {
                     for (var graphName in triples) {
                         triples[graphName].forEach(function (triple) {
@@ -43,9 +43,13 @@ var ontology = {
         });
     },
 
+    //Uri of the ontology vocabulary
+    "getHydraVocabUri": function() {
+        return Globals.vocabularies.ontology + 'vocab#';
+    },
     //Returns the Hydra vocabulary corresponding to a particular object or defaults to the ontology vocab
     "getHydraVocabulary": function()  {
-        return templateEngine(fs.readFileSync(__dirname + '/../data/ontology/hydra.jsonld'));
+        return templateEngine(JSON.parse(fs.readFileSync(__dirname + '/../data/ontology/hydra.jsonld')));
     },
 
     //Returns the context corresponding to a particular object
@@ -60,6 +64,7 @@ var ontology = {
         console.log("tripleStore.find: " + res.length + " result(s).");
         return templateEngine(res);
     },
+
     // Extract the info of a capability
     'getCapabilityInfo': function(capabilityUrl) {
         var info = tripleStore.find(capabilityUrl, null, null);
@@ -77,6 +82,7 @@ var ontology = {
         }
         return templateEngine(response);
     },
+
     // Extract the info of a functionality
     'getFunctionalityInfo': function(functionalityUrl) {
         var info = tripleStore.find(functionalityUrl, null, null);
@@ -106,8 +112,9 @@ var ontology = {
                 response.isComposedOf.push(isComposedOfItem);
             }
         }
-        return templateEngine(response);
+        return response;
     },
+
     // Info about the composed functionalities
     'findComposedFunctionalities': function() {
         // Find functionalities that are composed of the ones we have
@@ -128,8 +135,9 @@ var ontology = {
         composedFunctionalitiesInfo = this.getSubFunctionalities(composedFunctionalitiesInfo);
         composedFunctionalitiesInfo = this.getSubFunctionalities(composedFunctionalitiesInfo);
         composedFunctionalitiesInfo = this.getSubFunctionalities(composedFunctionalitiesInfo);
-        return templateEngine(composedFunctionalitiesInfo);
+        return composedFunctionalitiesInfo;
     },
+
     // Format an array of composed functionalities
     'getSubFunctionalities': function(composedFunctionalitiesInfo) {
         for (var i in composedFunctionalitiesInfo) {
@@ -150,7 +158,7 @@ var ontology = {
                 }
             }
         }
-        return templateEngine(composedFunctionalitiesInfo);
+        return composedFunctionalitiesInfo;
     }
 };
 

@@ -7,14 +7,15 @@ var express = require('express'),
     jsonld = require('jsonld'),
     Globals = require('../models/globals'),
     ontologyModel = require('../models/ontology'),
-    ontologyView = require('../views/ontology/composedFunctionalities');
+    ontologyView = require('../views/ontology/composedFunctionalities'),
+    jsonldHeaders = require('../middleware/jsonldHeaders');
 
 /*---HYDRA ROUTER---*/
 
 // Entry point
 router.get('/', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json",
-        "Link": Globals.vocabularies.linkVocab});
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     var responseEntryPoint = {
         "@context": Globals.vocabularies.ontology + "context/EntryPoint",
         "@id": Globals.vocabularies.ontology,
@@ -27,21 +28,23 @@ router.get('/', function(request, response) {
 
 // GET the hydra vocabulary
 router.get('/vocab', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json"});
-    response.end(ontologyModel.getHydraVocabulary());
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
+    response.end(JSON.stringify(ontologyModel.getHydraVocabulary()));
     return true;
 });
 
 // GET the hydra context
 router.get('/context', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json",
-        "Link": Globals.vocabularies.linkVocab});
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     response.end('');
 });
 
 // GET the hydra contexts
 router.get('/context/:context', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json"});
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     response.end(JSON.stringify(ontologyModel.getContext(request.params.context)));
     return true;
 });
@@ -50,8 +53,8 @@ router.get('/context/:context', function(request, response) {
 
 // GET the entire list of capabilities
 router.get('/capabilities', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json",
-        "Link": Globals.vocabularies.linkVocab});
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     var capabilitiesResponse = {};
     capabilitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     capabilitiesResponse['@type'] = 'Collection';
@@ -70,8 +73,8 @@ router.get('/capabilities', function(request, response) {
 
 // GET the entire list of functionalities
 router.get('/functionalities', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json",
-        "Link": Globals.vocabularies.linkVocab});
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     var functionalitiesResponse = {};
     functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
@@ -90,8 +93,8 @@ router.get('/functionalities', function(request, response) {
 
 // Search for functionalities using an array of capabilities
 router.get('/functionalities-search', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json",
-        "Link": Globals.vocabularies.linkVocab});
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     var functionalitiesResponse = {};
     functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
@@ -117,8 +120,8 @@ router.get('/functionalities-search', function(request, response) {
 
 // Search for incomplete functionalities
 router.get('/functionalities-incomplete', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json",
-        "Link": Globals.vocabularies.linkVocab});
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     var functionalitiesResponse = {};
     functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
@@ -143,8 +146,8 @@ router.get('/functionalities-incomplete', function(request, response) {
 
 // Search for incomplete functionalities and return all the info of the composed ones
 router.get('/functionalities-incomplete-all', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json",
-        "Link": Globals.vocabularies.linkVocab});
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     var functionalitiesResponse = {};
     functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
@@ -171,8 +174,8 @@ router.get('/functionalities-incomplete-all', function(request, response) {
  * Returns composed functionalities for which all sub-functionalities are in the request body
  */
 router.get('/functionalities-composed', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json",
-        "Link": Globals.vocabularies.linkVocab});
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     var functionalitiesResponse = {};
     functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
@@ -201,7 +204,8 @@ router.get('/functionalities-composed', function(request, response) {
 
 // GET the information of a functionality
 router.get('/functionality/:functionality', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json", "Link": Globals.vocabularies.linkVocab});
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     var requestUrl = request.protocol + '://' + request.get('host') + request.originalUrl;
     var functionalityResponse = ontologyModel.getFunctionalityInfo(requestUrl);
     response.end(JSON.stringify(functionalityResponse));
@@ -210,7 +214,8 @@ router.get('/functionality/:functionality', function(request, response) {
 // GET the composition of a functionality
 //TODO: change URL to something like /functionality/:functionality/sub-functionalities
 router.get('/functionality-composed-of/:functionality', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json", "Link": Globals.vocabularies.linkVocab});
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
     var functionalityResponse = {
         '@id': Globals.vocabularies.functionality + request.params.functionality,
@@ -229,7 +234,8 @@ router.get('/functionality-composed-of/:functionality', function(request, respon
 
 // GET the information of a capability
 router.get('/capability/:capability', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json", "Link": Globals.vocabularies.linkVocab});
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     var requestUrl = request.protocol + '://' + request.get('host') + request.originalUrl;
     var capabilityResponse = ontologyModel.getCapabilityInfo(requestUrl);
     response.end(JSON.stringify(capabilityResponse));
