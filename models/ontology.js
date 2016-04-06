@@ -47,7 +47,7 @@ var ontology = {
         return templateEngine(fs.readFileSync(__dirname + '/../data/ontology/hydra.jsonld'));
     },
 
-    //Returns the context corresponding to a particular object or defaults to the ontology
+    //Returns the context corresponding to a particular object
     "getContext": function(contextName)  {
         return templateEngine(fs.readFileSync(__dirname + '/../data/ontology/contexts/' + contextName + '.jsonld'));
     },
