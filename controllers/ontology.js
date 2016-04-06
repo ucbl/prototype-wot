@@ -29,9 +29,11 @@ router.get('/', function(request, response, next) {
 
 // GET the hydra vocabulary
 router.get('/vocab', function(request, response, next) {
+    var vocab = ontologyModel.getHydraVocabulary();
+
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
-    response.end(JSON.stringify(ontologyModel.getHydraVocabulary()));
+    response.end(JSON.stringify(vocab));
     return true;
 });
 
@@ -44,7 +46,9 @@ router.get('/context', function(request, response, next) {
 
 // GET the hydra contexts
 router.get('/context/:context', jsonParser, function(request, response, next) {
+    //Need to store parameter values in a local variable...
     var context = request.params.context;
+    //As adding a property to the request happens to remove its parameters :-(
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     response.end(JSON.stringify(ontologyModel.getContext(context)));
@@ -55,8 +59,6 @@ router.get('/context/:context', jsonParser, function(request, response, next) {
 
 // GET the entire list of capabilities
 router.get('/capabilities', function(request, response, next) {
-    request.vocabUri = ontologyModel.getHydraVocabUri();
-    jsonldHeaders(request, response, next);
     var capabilitiesResponse = {};
     capabilitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     capabilitiesResponse['@type'] = 'Collection';
@@ -70,13 +72,14 @@ router.get('/capabilities', function(request, response, next) {
         var graphItemEle = ontologyModel.getCapabilityInfo(triplesResponse[i].subject);
         capabilitiesResponse.capabilities.push(graphItemEle);
     }
+
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     response.end(JSON.stringify(capabilitiesResponse));
 });
 
 // GET the entire list of functionalities
 router.get('/functionalities', function(request, response, next) {
-    request.vocabUri = ontologyModel.getHydraVocabUri();
-    jsonldHeaders(request, response, next);
     var functionalitiesResponse = {};
     functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
@@ -90,13 +93,14 @@ router.get('/functionalities', function(request, response, next) {
         var graphItemEle = ontologyModel.getFunctionalityInfo(triplesResponse[i].subject);
         functionalitiesResponse.functionalities.push(graphItemEle);
     }
+
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     response.end(JSON.stringify(functionalitiesResponse));
 });
 
 // Search for functionalities using an array of capabilities
 router.get('/functionalities-search', function(request, response, next) {
-    request.vocabUri = ontologyModel.getHydraVocabUri();
-    jsonldHeaders(request, response, next);
     var functionalitiesResponse = {};
     functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
@@ -117,13 +121,13 @@ router.get('/functionalities-search', function(request, response, next) {
         var graphItemEle = ontologyModel.getFunctionalityInfo(triplesResponse[i].subject);
         functionalitiesResponse.functionalities.push(graphItemEle);
     }
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     response.end(JSON.stringify(functionalitiesResponse));
 });
 
 // Search for incomplete functionalities
 router.get('/functionalities-incomplete', function(request, response, next) {
-    request.vocabUri = ontologyModel.getHydraVocabUri();
-    jsonldHeaders(request, response, next);
     var functionalitiesResponse = {};
     functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
@@ -143,13 +147,14 @@ router.get('/functionalities-incomplete', function(request, response, next) {
             }
         }
     }
+
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     response.end(JSON.stringify(functionalitiesResponse));
 });
 
 // Search for incomplete functionalities and return all the info of the composed ones
 router.get('/functionalities-incomplete-all', function(request, response, next) {
-    request.vocabUri = ontologyModel.getHydraVocabUri();
-    jsonldHeaders(request, response, next);
     var functionalitiesResponse = {};
     functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
@@ -169,6 +174,9 @@ router.get('/functionalities-incomplete-all', function(request, response, next) 
             }
         }
     }
+
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     response.end(JSON.stringify(functionalitiesResponse));
 });
 
@@ -176,8 +184,6 @@ router.get('/functionalities-incomplete-all', function(request, response, next) 
  * Returns composed functionalities for which all sub-functionalities are in the request body
  */
 router.get('/functionalities-composed', function(request, response, next) {
-    request.vocabUri = ontologyModel.getHydraVocabUri();
-    jsonldHeaders(request, response, next);
     var functionalitiesResponse = {};
     functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
@@ -201,23 +207,25 @@ router.get('/functionalities-composed', function(request, response, next) {
             functionalitiesResponse.functionalities.push(i);
         }
     }
+
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     response.end(JSON.stringify(functionalitiesResponse));
 });
 
 // GET the information of a functionality
 router.get('/functionality/:functionality', jsonParser, function(request, response, next) {
-    request.vocabUri = ontologyModel.getHydraVocabUri();
-    jsonldHeaders(request, response, next);
     var requestUrl = request.protocol + '://' + request.get('host') + request.originalUrl;
     var functionalityResponse = ontologyModel.getFunctionalityInfo(requestUrl);
+
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     response.end(JSON.stringify(functionalityResponse));
 });
 
 // GET the composition of a functionality
 //TODO: change URL to something like /functionality/:functionality/sub-functionalities
 router.get('/functionality-composed-of/:functionality', jsonParser, function(request, response, next) {
-    request.vocabUri = ontologyModel.getHydraVocabUri();
-    jsonldHeaders(request, response, next);
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
     var functionalityResponse = {
         '@id': Globals.vocabularies.functionality + request.params.functionality,
@@ -231,15 +239,19 @@ router.get('/functionality-composed-of/:functionality', jsonParser, function(req
             functionalityResponse.isComposedOf = composedFunctionalitiesInfo[i].isComposedOf;
         }
     }
+
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     response.end(JSON.stringify(functionalityResponse));
 });
 
 // GET the information of a capability
 router.get('/capability/:capability', jsonParser, function(request, response, next) {
-    request.vocabUri = ontologyModel.getHydraVocabUri();
-    jsonldHeaders(request, response, next);
     var requestUrl = request.protocol + '://' + request.get('host') + request.originalUrl;
     var capabilityResponse = ontologyModel.getCapabilityInfo(requestUrl);
+
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
     response.end(JSON.stringify(capabilityResponse));
 });
 
