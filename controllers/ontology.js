@@ -39,6 +39,7 @@ router.get('/context', function(request, response) {
     response.end('');
 });
 
+// GET the hydra contexts
 router.get('/context/:context', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json"});
     response.end(ontologyModel.getContext(request.params.context));
