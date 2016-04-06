@@ -38,12 +38,10 @@ router.get('/context', function(request, response) {
         "Link": Globals.vocabularies.linkVocab});
     response.end('');
 });
+
 router.get('/context/:context', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json"});
-    var contextLocation = __dirname + '/../data/ontology/contexts/' + request.params.context + '.jsonld';
-    fs.readFile(contextLocation, 'utf8', function (error, data) {
-        response.end(data);
-    });
+    response.end(ontologyModel.getContext(request.params.context));
     return true;
 });
 

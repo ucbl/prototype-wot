@@ -42,9 +42,14 @@ var ontology = {
         });
     },
 
-    //Returns the Hydra vocabulary corresponding to a particular object or defaults to the interoperability platform vocab
-    "getHydraVocabulary": function(fileName)  {
+    //Returns the Hydra vocabulary corresponding to a particular object or defaults to the ontology vocab
+    "getHydraVocabulary": function()  {
         return templateEngine(fs.readFileSync(__dirname + '/../data/ontology/hydra.jsonld'));
+    },
+
+    //Returns the context corresponding to a particular object or defaults to the ontology
+    "getContext": function(contextName)  {
+        return templateEngine(fs.readFileSync(__dirname + '/../data/ontology/contexts/' + contextName));
     },
 
     'find': function(subject, predicate, object, graph) {
