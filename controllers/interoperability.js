@@ -222,7 +222,7 @@ router.delete('/connected-devices/:deviceId/:capabilityId', jsonParser, function
 /**
  * Mock of direct access through the gateway
  */
-router.all('/connected-devices/:deviceId/:capabilityId', jsonParser, function(request, response, next) {
+router.all('/gateway/:deviceId/:capabilityId', jsonParser, function(request, response, next) {
     response.redirect('/connected-devices/:deviceId/:capabilityId');
 });
 
