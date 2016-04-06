@@ -5,6 +5,6 @@
 
 (function(module) {
     module.exports = function (devices) {
-        return JSON.stringify(devices);
+        return devices;
     };
 })(module);
