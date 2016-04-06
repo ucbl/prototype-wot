@@ -222,8 +222,8 @@ router.delete('/connected-devices/:deviceId/:capabilityId', jsonParser, function
 /**
  * Mock of direct access through the gateway
  */
-router.all('/gateway/:deviceId/:capabilityId', jsonParser, function(request, response, next) {
-    response.redirect('/connected-devices');
+router.all('/gateway/:deviceId/:capabilityId', jsonParser, function(request, response) {
+    response.redirect('/interoperability/connected-devices/' + request.params["deviceId"] + "/" + request.params["capabilityId"]);
 });
 
 /*---HYDRA---*/
