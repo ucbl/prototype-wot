@@ -220,10 +220,28 @@ router.delete('/connected-devices/:deviceId/:capabilityId', jsonParser, function
 });
 
 /**
- * Mock of direct access through the gateway
+ * Mock of direct access through the gateway: proxying requests to /interoperability
  */
-router.all('/gateway/:deviceId/:capabilityId', jsonParser, function(request, response) {
-    response.redirect('/interoperability/connected-devices/' + request.params["deviceId"] + "/" + request.params["capabilityId"]);
+router.get('/gateway/:deviceId/:capabilityId', jsonParser, function(request, response) {
+        request({
+            url: '/interoperability/connected-devices/' + request.params["deviceId"] + "/" + request.params["capabilityId"],
+            headers: request.headers,
+        }, function(err, remoteResponse, remoteBody) {
+            if (err) {
+                return response.status(500).end('Error');
+            }
+            //response.writeHead(...); // copy all headers from remoteResponse
+            response.end(remoteBody);
+        });
+});
+
+router.post('/gateway/:deviceId/:capabilityId', jsonParser, function(request, response) {
+            request({ url: '/interoperability/connected-devices' + req.path, headers: req.headers, body: req.body }, function(err, remoteResponse, remoteBody) {
+                if (err) { return response.status(500).end('Error'); }
+                //response.writeHead(...); // copy all headers from remoteResponse
+                response.end(remoteBody);
+            });
+            response.redirect('/interoperability/connected-devices/' + request.params["deviceId"] + "/" + request.params["capabilityId"]);
 });
 
 /*---HYDRA---*/
