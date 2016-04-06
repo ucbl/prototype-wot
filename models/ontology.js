@@ -10,6 +10,7 @@ var fs = require('fs'),
     Globals = require('../models/globals'),
     ontologyHelper = require('../helpers/ontologyHelper'),
     templateEngine = require("../helpers/jsonTemplateEngine");
+
 /*---LOAD ONTOLOGY---*/
 
 var tripleStore = new N3Store();
@@ -24,7 +25,7 @@ var ontology = {
         var dataLocation = __dirname + '/../data/ontology/functionalities/functionalities.jsonld';
         fs.readFile(dataLocation, 'utf8', function (error, data) {
             if (!error) {
-                jsonOntology["@graph"] = JSON.parse(data)['@graph'];
+                jsonOntology["@graph"] = JSON.parse(templateEngine(data))['@graph'];
                 jsonld.toRDF(jsonOntology, function (error, triples) {
                     for (var graphName in triples) {
                         triples[graphName].forEach(function (triple) {
