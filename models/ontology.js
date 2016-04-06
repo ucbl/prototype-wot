@@ -50,7 +50,7 @@ var ontology = {
 
     //Returns the context corresponding to a particular object
     "getContext": function(contextName)  {
-        var toto =  JSON.parse(fs.readFileSync(__dirname + '/../data/ontology/contexts/' + contextName + '.jsonld'));
+        var toto =  templateEngine(JSON.parse(fs.readFileSync(__dirname + '/../data/ontology/contexts/' + contextName + '.jsonld')));
         console.log(toto);
         return toto;
     },
