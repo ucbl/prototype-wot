@@ -41,6 +41,12 @@ var ontology = {
             }
         });
     },
+
+    //Returns the Hydra vocabulary corresponding to a particular object or defaults to the interoperability platform vocab
+    "getHydraVocabulary": function(fileName)  {
+        return templateEngine(fs.readFileSync(__dirname + '/../data/ontology/hydra.jsonld'));
+    },
+
     'find': function(subject, predicate, object, graph) {
         var res = tripleStore.find(subject, predicate, object, graph);
         console.log("tripleStore.find: " + res.length + " result(s).");

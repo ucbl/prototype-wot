@@ -28,10 +28,7 @@ router.get('/', function(request, response) {
 // GET the hydra vocabulary
 router.get('/vocab', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json"});
-    var vocabLocation = __dirname + '/../data/ontology/hydra.jsonld';
-    fs.readFile(vocabLocation, 'utf8', function (error, data) {
-        response.end(data);
-    });
+    response.end(ontologyModel.getHydraVocabulary());
     return true;
 });
 
