@@ -45,7 +45,7 @@ router.get('/context', function(request, response, next) {
 router.get('/context/:context', function(request, response, next) {
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
-    console.log(JSON.stringify(request);
+    console.log(JSON.stringify(request));
     response.end(JSON.stringify(ontologyModel.getContext(request.params.context)));
     return true;
 });
