@@ -16,6 +16,7 @@
             "__capability__": Globals.vocabularies.capability,
             "__functionality__": Globals.vocabularies.functionality
         };
+        console.log(typeof(data));
 
         if(typeof(data) === "string") {
             for(var key in variables) {
