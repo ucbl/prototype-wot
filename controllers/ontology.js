@@ -13,7 +13,7 @@ var express = require('express'),
 /*---HYDRA ROUTER---*/
 
 // Entry point
-router.get('/', function(request, response) {
+router.get('/', function(request, response, next) {
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     var responseEntryPoint = {
@@ -27,7 +27,7 @@ router.get('/', function(request, response) {
 });
 
 // GET the hydra vocabulary
-router.get('/vocab', function(request, response) {
+router.get('/vocab', function(request, response, next) {
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     response.end(JSON.stringify(ontologyModel.getHydraVocabulary()));
@@ -35,14 +35,14 @@ router.get('/vocab', function(request, response) {
 });
 
 // GET the hydra context
-router.get('/context', function(request, response) {
+router.get('/context', function(request, response, next) {
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     response.end('');
 });
 
 // GET the hydra contexts
-router.get('/context/:context', function(request, response) {
+router.get('/context/:context', function(request, response, next) {
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     response.end(JSON.stringify(ontologyModel.getContext(request.params.context)));
@@ -52,7 +52,7 @@ router.get('/context/:context', function(request, response) {
 /*---WEB SERVICE---*/
 
 // GET the entire list of capabilities
-router.get('/capabilities', function(request, response) {
+router.get('/capabilities', function(request, response, next) {
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     var capabilitiesResponse = {};
@@ -72,7 +72,7 @@ router.get('/capabilities', function(request, response) {
 });
 
 // GET the entire list of functionalities
-router.get('/functionalities', function(request, response) {
+router.get('/functionalities', function(request, response, next) {
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     var functionalitiesResponse = {};
@@ -92,7 +92,7 @@ router.get('/functionalities', function(request, response) {
 });
 
 // Search for functionalities using an array of capabilities
-router.get('/functionalities-search', function(request, response) {
+router.get('/functionalities-search', function(request, response, next) {
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     var functionalitiesResponse = {};
@@ -119,7 +119,7 @@ router.get('/functionalities-search', function(request, response) {
 });
 
 // Search for incomplete functionalities
-router.get('/functionalities-incomplete', function(request, response) {
+router.get('/functionalities-incomplete', function(request, response, next) {
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     var functionalitiesResponse = {};
@@ -145,7 +145,7 @@ router.get('/functionalities-incomplete', function(request, response) {
 });
 
 // Search for incomplete functionalities and return all the info of the composed ones
-router.get('/functionalities-incomplete-all', function(request, response) {
+router.get('/functionalities-incomplete-all', function(request, response, next) {
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     var functionalitiesResponse = {};
@@ -173,7 +173,7 @@ router.get('/functionalities-incomplete-all', function(request, response) {
 /** Search for composed functionalities
  * Returns composed functionalities for which all sub-functionalities are in the request body
  */
-router.get('/functionalities-composed', function(request, response) {
+router.get('/functionalities-composed', function(request, response, next) {
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     var functionalitiesResponse = {};
@@ -203,7 +203,7 @@ router.get('/functionalities-composed', function(request, response) {
 });
 
 // GET the information of a functionality
-router.get('/functionality/:functionality', function(request, response) {
+router.get('/functionality/:functionality', function(request, response, next) {
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     var requestUrl = request.protocol + '://' + request.get('host') + request.originalUrl;
@@ -213,7 +213,7 @@ router.get('/functionality/:functionality', function(request, response) {
 
 // GET the composition of a functionality
 //TODO: change URL to something like /functionality/:functionality/sub-functionalities
-router.get('/functionality-composed-of/:functionality', function(request, response) {
+router.get('/functionality-composed-of/:functionality', function(request, response, next) {
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
@@ -233,7 +233,7 @@ router.get('/functionality-composed-of/:functionality', function(request, respon
 });
 
 // GET the information of a capability
-router.get('/capability/:capability', function(request, response) {
+router.get('/capability/:capability', function(request, response, next) {
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     var requestUrl = request.protocol + '://' + request.get('host') + request.originalUrl;
