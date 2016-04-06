@@ -49,7 +49,7 @@ var ontology = {
 
     //Returns the context corresponding to a particular object or defaults to the ontology
     "getContext": function(contextName)  {
-        return templateEngine(fs.readFileSync(__dirname + '/../data/ontology/contexts/' + contextName));
+        return templateEngine(fs.readFileSync(__dirname + '/../data/ontology/contexts/' + contextName + '.jsonld'));
     },
 
     'find': function(subject, predicate, object, graph) {
