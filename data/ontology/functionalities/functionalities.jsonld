@@ -557,35 +557,3 @@
     }
   ]
 }
-
-/*
-,
-    {
-      "@id": "asawooVocab:Actuator",
-      "@type": "owl:Class",
-      "rdfs:subClassOf": {
-        "@id": "asawooVocab:Capability"
-      }
-    },
-    {
-      "@id": "asawooVocab:Sensor",
-      "@type": "owl:Class",
-      "rdfs:subClassOf": {
-        "@id": "asawooVocab:Capability"
-      }
-    },
-    {
-      "@id": "asawooVocab:Network",
-      "@type": "owl:Class",
-      "rdfs:subClassOf": {
-        "@id": "asawooVocab:Capability"
-      }
-    },
-    {
-      "@id": "asawooVocab:Processor",
-      "@type": "owl:Class",
-      "rdfs:subClassOf": {
-        "@id": "asawooVocab:Capability"
-      }
-    }
-*/
