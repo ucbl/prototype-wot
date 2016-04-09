@@ -194,7 +194,7 @@
         "entryPoint": {
             "@context": Globals.vocabularies.interoperability + "context/EntryPoint",
             "@type": "hydra:EntryPoint",
-            "@id": Globals.vocabularies.base + "/interoperability",
+            "@id": Globals.vocabularies.base + "interoperability",
             "device": Globals.vocabularies.interoperability + "device"
         },
 

@@ -24,7 +24,7 @@ router.get('/', function(request, response, next) {
     } else {
         request.vocabUri = interoperabilityModel.getHydraVocabUri();
         jsonldHeaders(request, response, next);
-        response.end(JSON.stringify(interoperabilityModel.entryPoint));
+        response.end(JSON.stringify(require("../views/interoperability/entryPoint")));
     }
 });
 
