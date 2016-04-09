@@ -43,6 +43,7 @@
             this.linkVocab = '<' + this.hydraVocab + '>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"';
             exports.vocabularies = this;
         },
+
         //Define a mechanism for late binding of the base Hydra resources URIs to the server URI.
         'updateBaseUri': function (value) {
             this.base = value;

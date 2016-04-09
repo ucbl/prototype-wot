@@ -4,8 +4,8 @@
         "@context": {
             "asawoo": Globals.vocabularies.base,
             "asawooVocab": Globals.vocabularies.hydraVocab,
-            "asawooFunctionality": Globals.vocabularies.functionality,
-            "asawooCapability": Globals.vocabularies.capability,
+            "applicationCapability": Globals.vocabularies.capability,
+            "applicationFunctionality": Globals.vocabularies.functionality,
             "asawooAppliance": Globals.vocabularies.appliance,
             "owl": "http://www.w3.org/2002/07/owl#",
             "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
