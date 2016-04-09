@@ -57,13 +57,13 @@
       "@type": "hydra:Class",
       "subClassOf": null,
       "label": "EntryPoint",
-      "description": "Main entry point of an ASAWoO semantic repository",
+      "description": "Main entry point of the ASAWoO ontology documentation",
       "supportedOperation": [
         {
           "@id": "_:entry_point",
           "@type": "hydra:Operation",
           "method": "GET",
-          "label": "Main entry point of an ASAWoO semantic repository",
+          "label": "Main entry point of the ASAWoO ontology documentation",
           "description": null,
           "expects": null,
           "returns": "vocab:EntryPoint",
@@ -76,7 +76,7 @@
             "@id": "vocab:EntryPoint/capabilities",
             "@type": "hydra:Link",
             "label": "capabilities",
-            "description": "Retrieves the list of all known capabilities",
+            "description": "Retrieves a collection of capabilities",
             "domain": "vocab:EntryPoint",
             "range": "vocab:CapabilityCollection",
             "supportedOperation": [
@@ -93,7 +93,7 @@
             ]
           },
           "hydra:title": "capabilities",
-          "hydra:description": "The list of all known capabilities",
+          "hydra:description": "A collection of capabilities",
           "required": null,
           "readonly": true,
           "writeonly": false
@@ -103,7 +103,7 @@
             "@id": "vocab:EntryPoint/functionalities",
             "@type": "hydra:Link",
             "label": "functionalities",
-            "description": "Retrieves the list of all known functionalities",
+            "description": "Retrieves a collection of functionalities",
             "domain": "vocab:EntryPoint",
             "range": "vocab:FunctionalityCollection",
             "supportedOperation": [
@@ -120,7 +120,7 @@
             ]
           },
           "hydra:title": "functionalities",
-          "hydra:description": "The list of all the functionalities. It can be filtered sending an array of capabilities.",
+          "hydra:description": "A collection of functionalities.",
           "required": null,
           "readonly": true,
           "writeonly": false
