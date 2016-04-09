@@ -53,26 +53,76 @@
       "supportedProperty": []
     },
     {
-      "@id": "http://www.w3.org/ns/hydra/core#Collection",
+      "@id": "vocab:EntryPoint",
       "@type": "hydra:Class",
-      "hydra:title": "Collection",
-      "hydra:description": null,
-      "supportedOperation": [],
+      "subClassOf": null,
+      "label": "EntryPoint",
+      "description": "Main entry point of an ASAWoO semantic repository",
+      "supportedOperation": [
+        {
+          "@id": "_:entry_point",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "Main entry point of an ASAWoO semantic repository",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:EntryPoint",
+          "statusCodes": []
+        }
+      ],
       "supportedProperty": [
         {
-          "property": "http://www.w3.org/ns/hydra/core#member",
+          "property": {
+            "@id": "vocab:EntryPoint/capabilities",
+            "@type": "hydra:Link",
+            "label": "capabilities",
+            "description": "Retrieves the list of all known capabilities",
+            "domain": "vocab:EntryPoint",
+            "range": "vocab:CapabilityCollection",
+            "supportedOperation": [
+              {
+                "@id": "_:capabilities",
+                "@type": "hydra:Operation",
+                "method": "GET",
+                "label": "The list of all the capabilities",
+                "description": null,
+                "expects": null,
+                "returns": "hydra:Collection",
+                "statusCodes": []
+              }
+            ]
+          },
           "hydra:title": "capabilities",
-          "hydra:description": "The capabilities of this collection.",
+          "hydra:description": "The list of all known capabilities",
           "required": null,
-          "readonly": false,
+          "readonly": true,
           "writeonly": false
         },
         {
-          "property": "http://www.w3.org/ns/hydra/core#member",
+          "property": {
+            "@id": "vocab:EntryPoint/functionalities",
+            "@type": "hydra:Link",
+            "label": "functionalities",
+            "description": "Retrieves the list of all known functionalities",
+            "domain": "vocab:EntryPoint",
+            "range": "vocab:FunctionalityCollection",
+            "supportedOperation": [
+              {
+                "@id": "_:functionalities",
+                "@type": "hydra:Operation",
+                "method": "GET",
+                "label": "The list of all known functionalities",
+                "description": null,
+                "expects": null,
+                "returns": "hydra:Collection",
+                "statusCodes": []
+              }
+            ]
+          },
           "hydra:title": "functionalities",
-          "hydra:description": "The functionalities of this collection.",
+          "hydra:description": "The list of all the functionalities. It can be filtered sending an array of capabilities.",
           "required": null,
-          "readonly": false,
+          "readonly": true,
           "writeonly": false
         }
       ]
@@ -96,76 +146,19 @@
       ]
     },
     {
-      "@id": "vocab:EntryPoint",
+      "@id": "http://www.w3.org/ns/hydra/core#FunctionalityCollection",
       "@type": "hydra:Class",
-      "subClassOf": null,
-      "label": "EntryPoint",
-      "description": "Main entry point of an ASAWoO semantic repository",
-      "supportedOperation": [
-        {
-          "@id": "_:entry_point",
-          "@type": "hydra:Operation",
-          "method": "GET",
-          "label": "Main entry point of an ASAWoO semantic repository",
-          "description": null,
-          "expects": null,
-          "returns": "vocab:EntryPoint",
-          "statusCodes": []
-        }
-      ],
+      "subClassOf": "hydra:Collection",
+      "hydra:title": "FunctionalityCollection",
+      "hydra:description": "A collection of functionality URIs",
+      "supportedOperation": [],
       "supportedProperty": [
         {
-          "property": {
-            "@id": "vocab:EntryPoint/functionalities",
-            "@type": "hydra:Link",
-            "label": "functionalities",
-            "description": "Retrieves the list of all known functionalities",
-            "domain": "vocab:EntryPoint",
-            "range": "http://www.w3.org/ns/hydra/core#Collection",
-            "supportedOperation": [
-              {
-                "@id": "_:functionalities",
-                "@type": "hydra:Operation",
-                "method": "GET",
-                "label": "The list of all known functionalities",
-                "description": null,
-                "expects": null,
-                "returns": "hydra:Collection",
-                "statusCodes": []
-              }
-            ]
-          },
+          "property": "http://www.w3.org/ns/hydra/core#member",
           "hydra:title": "functionalities",
-          "hydra:description": "The list of all the functionalities. It can be filtered sending an array of capabilities.",
+          "hydra:description": "The functionalities of this collection.",
           "required": null,
-          "readonly": true,
-          "writeonly": false
-        },
-        {
-          "property": {
-            "@id": "vocab:EntryPoint/capabilities",
-            "@type": "hydra:Link",
-            "label": "functionalities",
-            "description": "Retrieves the list of all known capabilities",
-            "domain": "vocab:EntryPoint",
-            "range": "http://www.w3.org/ns/hydra/core#Collection",
-            "supportedOperation": [
-              {
-                "@id": "_:capabilities",
-                "@type": "hydra:Operation",
-                "method": "GET",
-                "label": "The list of all the capabilities",
-                "description": null,
-                "expects": null,
-                "returns": "hydra:Collection",
-                "statusCodes": []
-              }
-            ]
-          },
-          "hydra:title": "capabilities",
-          "hydra:description": "The list of all known capabilities",
-          "required": null,
-          "readonly": true,
+          "readonly": false,
           "writeonly": false
         }
       ]
