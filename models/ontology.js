@@ -52,6 +52,11 @@ var ontology = {
         return templateEngine(JSON.parse(fs.readFileSync(__dirname + '/../data/ontology/hydra.jsonld')));
     },
 
+    //Returns the vocabulary corresponding to a particular object
+    "getVocab": function(contextName)  {
+        return  templateEngine(JSON.parse(fs.readFileSync(__dirname + '/../data/ontology/vocabs/' + contextName + '.jsonld')));
+    },
+
     //Returns the context corresponding to a particular object
     "getContext": function(contextName)  {
         return  templateEngine(JSON.parse(fs.readFileSync(__dirname + '/../data/ontology/contexts/' + contextName + '.jsonld')));

@@ -194,7 +194,7 @@
           },
           "hydra:title": "name",
           "hydra:description": "The explicit name of the capability",
-          "required": null,
+          "required": true,
           "readonly": true,
           "writeonly": false
         },
@@ -210,7 +210,52 @@
           },
           "hydra:title": "description",
           "hydra:description": "The description of the capability",
-          "required": null,
+          "required": true,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "_:Capability/configuration",
+            "@type": "hydra:Link",
+            "label": "Configuration of the capability",
+            "comment": "Indicates if the capability has been configured manually or other configuration info (experimental feature)",
+            "domain": "vocab:Capability",
+            "range": "vocab:Configuration"
+          },
+          "hydra:title": "configuration",
+          "hydra:description": "The capability has been configured manually or other configuration info (experimental feature)",
+          "required": false,
+          "readonly": false,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "_:Capability/platform",
+            "@type": "hydra:Link",
+            "label": "platform",
+            "comment": "Link to invoke the capability through the interoperability platform",
+            "domain": "vocab:Capability",
+            "range": "http://schema.org/url"
+          },
+          "hydra:title": "platform",
+          "hydra:description": "Link to invoke the capability through the interoperability platform",
+          "required": false,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "_:Capability/gateway",
+            "@type": "hydra:Link",
+            "label": "gateway",
+            "comment": "Link to invoke the capability through the gateway",
+            "domain": "vocab:Capability",
+            "range": "http://schema.org/url"
+          },
+          "hydra:title": "gateway",
+          "hydra:description": "Link to invoke the capability through the gateway",
+          "required": false,
           "readonly": true,
           "writeonly": false
         }
@@ -247,7 +292,7 @@
           },
           "hydra:title": "name",
           "hydra:description": "The explicit name of the functionality",
-          "required": null,
+          "required": true,
           "readonly": true,
           "writeonly": false
         },
@@ -263,7 +308,7 @@
           },
           "hydra:title": "description",
           "hydra:description": "The description of the functionality",
-          "required": null,
+          "required": true,
           "readonly": true,
           "writeonly": false
         },
@@ -279,7 +324,7 @@
           },
           "hydra:title": "isImplementedBy",
           "hydra:description": "The functionality is implemented by a capacity",
-          "required": null,
+          "required": false,
           "readonly": true,
           "writeonly": false
         },
@@ -296,6 +341,21 @@
           "hydra:title": "isComposedOf",
           "hydra:description": "The functionality is composed of other functionalities",
           "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "_:Functionality/invocation",
+            "@type": "hydra:Link",
+            "label": "invocation",
+            "comment": "Link to invoke the functionality",
+            "domain": "vocab:Functionality",
+            "range": "http://schema.org/url"
+          },
+          "hydra:title": "invocation",
+          "hydra:description": "Link to invoke the functionality",
+          "required": false,
           "readonly": true,
           "writeonly": false
         }

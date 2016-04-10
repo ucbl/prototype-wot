@@ -37,6 +37,16 @@ router.get('/vocab', function(request, response, next) {
     return true;
 });
 
+router.get('/vocab/:vocabId', jsonParser, function(request, response, next) {
+    //Need to store parameter values in a local variable...
+    var vocabId = request.params.vocabId;
+    //As adding a property to the request happens to remove its parameters :-(
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
+    response.end(JSON.stringify(ontologyModel.getVocab(vocabId)));
+    return true;
+});
+
 // GET the hydra context
 router.get('/context', function(request, response, next) {
     request.vocabUri = ontologyModel.getHydraVocabUri();
