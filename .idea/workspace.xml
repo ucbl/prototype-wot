@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/interoperability/knownDevices.js" afterPath="$PROJECT_DIR$/views/interoperability/knownDevices.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/interoperability/connectedDevices.js" afterPath="$PROJECT_DIR$/views/interoperability/connectedDevices.js" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,21 +78,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="knownDevices.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="knownDevices.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/interoperability/knownDevices.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+            <state relative-caret-position="374">
+              <caret line="17" column="9" selection-start-line="15" selection-start-column="8" selection-end-line="17" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connectedDevices.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="connectedDevices.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/interoperability/connectedDevices.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+            <state relative-caret-position="374">
+              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -223,8 +223,8 @@
         <option value="$PROJECT_DIR$/views/interoperability/devicesSimple.jade" />
         <option value="$PROJECT_DIR$/controllers/interoperability.js" />
         <option value="$PROJECT_DIR$/models/interoperability.js" />
-        <option value="$PROJECT_DIR$/views/interoperability/connectedDevices.js" />
         <option value="$PROJECT_DIR$/views/interoperability/knownDevices.js" />
+        <option value="$PROJECT_DIR$/views/interoperability/connectedDevices.js" />
       </list>
     </option>
   </component>
@@ -482,14 +482,7 @@
       <workItem from="1460083036436" duration="3347000" />
       <workItem from="1460128327271" duration="10154000" />
       <workItem from="1460210586757" duration="17396000" />
-      <workItem from="1460288090213" duration="4957000" />
-    </task>
-    <task id="LOCAL-00456" summary="Interoperability controller redirects gateway requests">
-      <created>1459966564649</created>
-      <option name="number" value="00456" />
-      <option name="presentableId" value="LOCAL-00456" />
-      <option name="project" value="LOCAL" />
-      <updated>1459966564649</updated>
+      <workItem from="1460288090213" duration="5031000" />
     </task>
     <task id="LOCAL-00457" summary="Interoperability controller redirects gateway requests">
       <created>1459966730246</created>
@@ -827,11 +820,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460293937480</updated>
     </task>
-    <option name="localTasksCounter" value="505" />
+    <task id="LOCAL-00505" summary="Interoperability hydra vocab">
+      <created>1460294057636</created>
+      <option name="number" value="00505" />
+      <option name="presentableId" value="LOCAL-00505" />
+      <option name="project" value="LOCAL" />
+      <updated>1460294057636</updated>
+    </task>
+    <option name="localTasksCounter" value="506" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83052000" />
+    <option name="totallyTimeSpent" value="83126000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1261,14 +1261,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/interoperability/connectedDevices.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -1303,8 +1295,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/interoperability/knownDevices.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        <state relative-caret-position="374">
+          <caret line="17" column="9" selection-start-line="15" selection-start-column="8" selection-end-line="17" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/interoperability/connectedDevices.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding />
         </state>
       </provider>
