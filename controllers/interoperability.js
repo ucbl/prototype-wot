@@ -36,7 +36,7 @@ router.get('/', function(request, response, next) {
 router.get('/devices', function(request, response, next) {
     var knownDevices = interoperabilityModel.getKnownDeviceCollection();
     if (request.accepts('html')) {
-        response.render('interoperability/devicesSimple', knownDevices);
+        response.render('interoperability/devicesSimple', {'devices': knownDevices});
     } else {
         request.vocabUri = interoperabilityModel.getHydraVocabUri();
         jsonldHeaders(request, response, next);
@@ -91,7 +91,7 @@ router.get('/devices/:deviceId/:capabilityId', function(request, response, next)
 router.get('/connected-devices', function(request, response, next) {
     var connectedDevices = interoperabilityModel.getConnectedDeviceCollection();
     if (request.accepts('html')) {
-        response.render('interoperability/devicesSimple', connectedDevices);
+        response.render('interoperability/devicesSimple', {'devices': connectedDevices});
     } else {
         request.vocabUri = interoperabilityModel.getHydraVocabUri();
         jsonldHeaders(request, response, next);
