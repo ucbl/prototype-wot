@@ -40,7 +40,7 @@ router.get('/devices', function(request, response, next) {
     } else {
         request.vocabUri = interoperabilityModel.getHydraVocabUri();
         jsonldHeaders(request, response, next);
-        response.end(JSON.stringify((require("../views/devicesSimple")(platform))));
+        response.end(JSON.stringify((require("../views/interoperability/devicesSimple")(platform))));
     }
 });
 
