@@ -8,7 +8,7 @@
         var Globals = require('../../models/globals');
 
         var result = {
-            '@context': Globals.vocabularies.interoperability + 'context/Collection',
+            '@context': Globals.vocabularies.interoperability + 'context/ConnectedDeviceRefs',
             '@type': 'vocab:ConnectedDeviceRefs',
             '@id': Globals.vocabularies.interoperability + "connected-devices",
             'connectedDevices': []

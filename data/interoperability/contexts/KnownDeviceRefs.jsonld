@@ -1,0 +1,6 @@
+{
+    "@context": {
+        "vocab": "__interoperability__vocab#",
+        "knownDevices": "vocab:KnownDeviceRefs"
+    }
+}
