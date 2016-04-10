@@ -163,7 +163,7 @@
             "@id": "_:knownDeviceRefMember",
             "@type": "hydra:Link",
             "subPropertyOf": "hydra:member",
-            "label": "knownDeviceRef member",
+            "label": "knownDeviceRefs member",
             "comment": "A member of the known device references collection",
             "domain": "vocab:KnownDeviceRefs",
             "range": "vocab:KnownDeviceRef"
@@ -189,7 +189,7 @@
             "@id": "_:connectedDeviceRefMember",
             "@type": "hydra:Link",
             "subPropertyOf": "hydra:member",
-            "label": "connectedDeviceRef member",
+            "label": "connectedDeviceRefs member",
             "comment": "A member of the connected device references collection",
             "domain": "vocab:ConnectedDeviceRefs",
             "range": "vocab:ConnectedDeviceRef"

@@ -7,12 +7,11 @@
     module.exports = function (devicesModel) {
         var Globals = require('../../models/globals');
 
-        var result = {
+        return {
             '@context': Globals.vocabularies.interoperability + 'context/Collection',
-            '@type': 'hydra:Collection',
+            '@type': 'vocab:ConnectedDeviceRefs',
             '@id': Globals.vocabularies.interoperability + "connected-devices",
+            'connectedDevices': devicesModel
         };
-        result.devices = devicesModel;
-        return result;
     }
 })(module);

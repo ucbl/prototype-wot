@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/interoperability.js" afterPath="$PROJECT_DIR$/controllers/interoperability.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/interoperability/entryPoint.js" afterPath="$PROJECT_DIR$/views/interoperability/entryPoint.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/vocabs/interoperability.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/vocabs/interoperability.jsonld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/interoperability/connectedDevices.js" afterPath="$PROJECT_DIR$/views/interoperability/connectedDevices.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/interoperability/knownDevices.js" afterPath="$PROJECT_DIR$/views/interoperability/knownDevices.js" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="entryPoint.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="entryPoint.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/interoperability/entryPoint.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
@@ -72,31 +73,30 @@
       <file leaf-file-name="interoperability.jsonld" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/interoperability/vocabs/interoperability.jsonld">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="463" column="28" selection-start-line="463" selection-start-column="28" selection-end-line="463" selection-end-column="28" />
+            <state relative-caret-position="254">
+              <caret line="153" column="35" selection-start-line="153" selection-start-column="14" selection-end-line="153" selection-end-column="35" />
               <folding>
                 <element signature="n#!!block;n#@context#0;n#!!top" expanded="false" />
                 <element signature="e#1331#1553#0" expanded="false" />
                 <element signature="e#1559#2064#0" expanded="false" />
                 <element signature="e#2071#4748#0" expanded="false" />
-                <element signature="e#4755#5663#0" expanded="false" />
-                <element signature="e#6620#7204#0" expanded="false" />
-                <element signature="e#7210#7818#0" expanded="false" />
-                <element signature="e#7825#10212#0" expanded="false" />
-                <element signature="e#8083#8390#0" expanded="false" />
-                <element signature="e#8429#9036#0" expanded="false" />
-                <element signature="e#9046#10198#0" expanded="false" />
-                <element signature="e#10218#13402#0" expanded="false" />
-                <element signature="e#10529#10848#0" expanded="false" />
-                <element signature="e#10887#11514#0" expanded="false" />
-                <element signature="e#11524#12188#0" expanded="false" />
-                <element signature="e#12198#13388#0" expanded="false" />
-                <element signature="e#13409#14365#0" expanded="false" />
-                <element signature="e#15187#15528#0" expanded="false" />
-                <element signature="e#15538#15882#0" expanded="false" />
-                <element signature="e#16105#16761#0" expanded="false" />
-                <element signature="e#17457#18970#0" expanded="false" />
-                <element signature="e#18976#20580#0" expanded="false" />
+                <element signature="e#6622#7206#0" expanded="false" />
+                <element signature="e#7212#7820#0" expanded="false" />
+                <element signature="e#7827#10214#0" expanded="false" />
+                <element signature="e#8085#8392#0" expanded="false" />
+                <element signature="e#8431#9038#0" expanded="false" />
+                <element signature="e#9048#10200#0" expanded="false" />
+                <element signature="e#10220#13404#0" expanded="false" />
+                <element signature="e#10531#10850#0" expanded="false" />
+                <element signature="e#10889#11516#0" expanded="false" />
+                <element signature="e#11526#12190#0" expanded="false" />
+                <element signature="e#12200#13390#0" expanded="false" />
+                <element signature="e#13411#14367#0" expanded="false" />
+                <element signature="e#15189#15530#0" expanded="false" />
+                <element signature="e#15540#15884#0" expanded="false" />
+                <element signature="e#16107#16763#0" expanded="false" />
+                <element signature="e#17459#18972#0" expanded="false" />
+                <element signature="e#18978#20582#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -105,18 +105,18 @@
       <file leaf-file-name="knownDevices.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/interoperability/knownDevices.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="51" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="51" />
+            <state relative-caret-position="242">
+              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connectedDevices.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="connectedDevices.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/interoperability/connectedDevices.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+            <state relative-caret-position="352">
+              <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -211,12 +211,12 @@
         <option value="$PROJECT_DIR$/models/globals.js" />
         <option value="$PROJECT_DIR$/views/interoperability/entrypoint.js" />
         <option value="$PROJECT_DIR$/views/interoperability/toto.js" />
-        <option value="$PROJECT_DIR$/views/interoperability/knownDevices.js" />
-        <option value="$PROJECT_DIR$/views/interoperability/connectedDevices.js" />
         <option value="$PROJECT_DIR$/models/interoperability.js" />
-        <option value="$PROJECT_DIR$/data/interoperability/vocabs/interoperability.jsonld" />
         <option value="$PROJECT_DIR$/controllers/interoperability.js" />
         <option value="$PROJECT_DIR$/views/interoperability/entryPoint.js" />
+        <option value="$PROJECT_DIR$/data/interoperability/vocabs/interoperability.jsonld" />
+        <option value="$PROJECT_DIR$/views/interoperability/knownDevices.js" />
+        <option value="$PROJECT_DIR$/views/interoperability/connectedDevices.js" />
       </list>
     </option>
   </component>
@@ -420,14 +420,7 @@
       <workItem from="1460083036436" duration="3347000" />
       <workItem from="1460128327271" duration="10154000" />
       <workItem from="1460210586757" duration="17396000" />
-      <workItem from="1460288090213" duration="770000" />
-    </task>
-    <task id="LOCAL-00449" summary="Trying to change MIME type in middleware/jsonldHeaders to allow parsing in clients">
-      <created>1459949814925</created>
-      <option name="number" value="00449" />
-      <option name="presentableId" value="LOCAL-00449" />
-      <option name="project" value="LOCAL" />
-      <updated>1459949814925</updated>
+      <workItem from="1460288090213" duration="1279000" />
     </task>
     <task id="LOCAL-00450" summary="Trying to change MIME type in middleware/jsonldHeaders to allow parsing in clients">
       <created>1459960384724</created>
@@ -765,11 +758,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460264869112</updated>
     </task>
-    <option name="localTasksCounter" value="498" />
+    <task id="LOCAL-00498" summary="Interoperability hydra vocab">
+      <created>1460288866837</created>
+      <option name="number" value="00498" />
+      <option name="presentableId" value="LOCAL-00498" />
+      <option name="project" value="LOCAL" />
+      <updated>1460288866847</updated>
+    </task>
+    <option name="localTasksCounter" value="499" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78865000" />
+    <option name="totallyTimeSpent" value="79374000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -816,28 +816,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1403118" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850778" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20496084" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21805112" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33289817" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24900925" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1195,58 +1173,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/interoperability/knownDevices.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="51" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/interoperability/connectedDevices.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/vocabs/interoperability.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="463" column="28" selection-start-line="463" selection-start-column="28" selection-end-line="463" selection-end-column="28" />
-          <folding>
-            <element signature="n#!!block;n#@context#0;n#!!top" expanded="false" />
-            <element signature="e#1331#1553#0" expanded="false" />
-            <element signature="e#1559#2064#0" expanded="false" />
-            <element signature="e#2071#4748#0" expanded="false" />
-            <element signature="e#4755#5663#0" expanded="false" />
-            <element signature="e#6620#7204#0" expanded="false" />
-            <element signature="e#7210#7818#0" expanded="false" />
-            <element signature="e#7825#10212#0" expanded="false" />
-            <element signature="e#8083#8390#0" expanded="false" />
-            <element signature="e#8429#9036#0" expanded="false" />
-            <element signature="e#9046#10198#0" expanded="false" />
-            <element signature="e#10218#13402#0" expanded="false" />
-            <element signature="e#10529#10848#0" expanded="false" />
-            <element signature="e#10887#11514#0" expanded="false" />
-            <element signature="e#11524#12188#0" expanded="false" />
-            <element signature="e#12198#13388#0" expanded="false" />
-            <element signature="e#13409#14365#0" expanded="false" />
-            <element signature="e#15187#15528#0" expanded="false" />
-            <element signature="e#15538#15882#0" expanded="false" />
-            <element signature="e#16105#16761#0" expanded="false" />
-            <element signature="e#17457#18970#0" expanded="false" />
-            <element signature="e#18976#20580#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1262,6 +1193,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/vocabs/interoperability.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="153" column="35" selection-start-line="153" selection-start-column="14" selection-end-line="153" selection-end-column="35" />
+          <folding>
+            <element signature="n#!!block;n#@context#0;n#!!top" expanded="false" />
+            <element signature="e#1331#1553#0" expanded="false" />
+            <element signature="e#1559#2064#0" expanded="false" />
+            <element signature="e#2071#4748#0" expanded="false" />
+            <element signature="e#6622#7206#0" expanded="false" />
+            <element signature="e#7212#7820#0" expanded="false" />
+            <element signature="e#7827#10214#0" expanded="false" />
+            <element signature="e#8085#8392#0" expanded="false" />
+            <element signature="e#8431#9038#0" expanded="false" />
+            <element signature="e#9048#10200#0" expanded="false" />
+            <element signature="e#10220#13404#0" expanded="false" />
+            <element signature="e#10531#10850#0" expanded="false" />
+            <element signature="e#10889#11516#0" expanded="false" />
+            <element signature="e#11526#12190#0" expanded="false" />
+            <element signature="e#12200#13390#0" expanded="false" />
+            <element signature="e#13411#14367#0" expanded="false" />
+            <element signature="e#15189#15530#0" expanded="false" />
+            <element signature="e#15540#15884#0" expanded="false" />
+            <element signature="e#16107#16763#0" expanded="false" />
+            <element signature="e#17459#18972#0" expanded="false" />
+            <element signature="e#18978#20582#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/interoperability/knownDevices.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/interoperability/connectedDevices.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
           <folding />
         </state>
       </provider>
