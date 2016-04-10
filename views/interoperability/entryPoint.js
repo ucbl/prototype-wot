@@ -6,7 +6,7 @@
 (function(module) {
     module.exports = function (entrypointModel) {
         var Globals = require('../../models/globals');
-        //TODO add the devices
+
         var result = {
             "@context": Globals.vocabularies.interoperability + "context/EntryPoint",
             "@type": "hydra:EntryPoint",

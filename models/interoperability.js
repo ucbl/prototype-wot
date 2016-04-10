@@ -40,8 +40,8 @@
         "getKnownDeviceCollection": function() {
             var result = [];
             for(var i in knownDevices) {
-                var device = this.findDeviceById(knownDevices[i]);
-                result.push(device['@id]']);
+                var device = knownDevices[i];
+                result.push(device['@id']);
             }
             return result;
         },
@@ -51,7 +51,7 @@
             var result = [];
             for(var i in this.connectedDevices) {
                 var device = this.findDeviceById(this.connectedDevices[i]);
-                result.push(device['@id]']);
+                result.push(device['@id']);
             }
             return result;
         },
