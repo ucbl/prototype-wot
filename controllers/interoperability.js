@@ -24,6 +24,7 @@ router.get('/', function(request, response, next) {
     } else {
         request.vocabUri = interoperabilityModel.getHydraVocabUri();
         jsonldHeaders(request, response, next);
+        var platform = interoperabilityModel.getKnownDeviceCollection();
         response.end(JSON.stringify((require("../views/interoperability/entryPoint")(platform))));
     }
 });
