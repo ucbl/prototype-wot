@@ -51,8 +51,8 @@
       <file leaf-file-name="devicesSimple.jade" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/interoperability/devicesSimple.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+            <state relative-caret-position="22">
+              <caret line="1" column="24" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -398,14 +398,7 @@
       <workItem from="1460083036436" duration="3347000" />
       <workItem from="1460128327271" duration="10154000" />
       <workItem from="1460210586757" duration="17396000" />
-      <workItem from="1460288090213" duration="2329000" />
-    </task>
-    <task id="LOCAL-00451" summary="Trying to change MIME type in middleware/jsonldHeaders to allow parsing in clients">
-      <created>1459961122559</created>
-      <option name="number" value="00451" />
-      <option name="presentableId" value="LOCAL-00451" />
-      <option name="project" value="LOCAL" />
-      <updated>1459961122559</updated>
+      <workItem from="1460288090213" duration="2556000" />
     </task>
     <task id="LOCAL-00452" summary="Trying to change MIME type in middleware/jsonldHeaders to allow parsing in clients">
       <created>1459961190476</created>
@@ -743,11 +736,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460289374761</updated>
     </task>
-    <option name="localTasksCounter" value="500" />
+    <task id="LOCAL-00500" summary="Interoperability hydra vocab">
+      <created>1460291382776</created>
+      <option name="number" value="00500" />
+      <option name="presentableId" value="LOCAL-00500" />
+      <option name="project" value="LOCAL" />
+      <updated>1460291382779</updated>
+    </task>
+    <option name="localTasksCounter" value="501" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80424000" />
+    <option name="totallyTimeSpent" value="80651000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1217,8 +1217,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/interoperability/devicesSimple.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        <state relative-caret-position="22">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="24" />
           <folding />
         </state>
       </provider>
