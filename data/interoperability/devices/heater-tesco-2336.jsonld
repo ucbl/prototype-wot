@@ -1,6 +1,6 @@
 {
     "@context" : "__ontology__context/Device",
-    "@type": "http://www.w3.org/ns/hydra/core#Class",
+    "@type": "vocab:Device",
     "@id" : "__interoperability__devices/heater-tesco-2336",
     "id" : "heater-tesco-2336",
     "name": "Heater",

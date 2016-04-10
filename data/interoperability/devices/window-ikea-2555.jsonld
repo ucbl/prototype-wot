@@ -1,6 +1,6 @@
 {
     "@context" : "__ontology__context/Device",
-    "@type": "http://www.w3.org/ns/hydra/core#Class",
+    "@type": "vocab:Device",
     "@id": "__interoperability__devices/window-ikea-2555",
     "id": "window-ikea-2555",
     "name": "Window",

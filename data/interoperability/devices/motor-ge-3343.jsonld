@@ -1,6 +1,6 @@
 {
   "@context" : "__ontology__context/Device",
-  "@type": "http://www.w3.org/ns/hydra/core#Class",
+  "@type": "vocab:Device",
   "@id" : "__interoperability__devices/motor-ge-3343",
   "id" : "motor-ge-3343",
   "name": "Motor",

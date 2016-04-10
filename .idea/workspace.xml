@@ -3,7 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/vocabs/interoperability.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/vocabs/interoperability.jsonld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/cooler-swirlwind-2443.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/cooler-swirlwind-2443.jsonld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/coolerheater-swirlwind-2665.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/coolerheater-swirlwind-2665.jsonld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/gps-sony-2556.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/gps-sony-2556.jsonld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/heater-tesco-2336.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/heater-tesco-2336.jsonld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/motor-ge-3343.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/motor-ge-3343.jsonld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/phone-samsung-2554.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/phone-samsung-2554.jsonld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/sensor-ge-2442.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/sensor-ge-2442.jsonld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/devices/window-ikea-2555.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/devices/window-ikea-2555.jsonld" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ontology/contexts/Device.jsonld" afterPath="$PROJECT_DIR$/data/ontology/contexts/Device.jsonld" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
@@ -29,122 +36,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="91" column="68" selection-start-line="91" selection-start-column="68" selection-end-line="91" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="devicesSimple.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/interoperability/devicesSimple.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deviceSimple.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/interoperability/deviceSimple.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="devices.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/interoperability/devices.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/interoperability.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="knownDevices.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/interoperability/knownDevices.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="9" selection-start-line="15" selection-start-column="8" selection-end-line="17" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="connectedDevices.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/interoperability/connectedDevices.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Device.jsonld" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/ontology/contexts/Device.jsonld">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cooler-swirlwind-2443.jsonld" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cooler-swirlwind-2443.jsonld" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/interoperability/devices/cooler-swirlwind-2443.jsonld">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+            <state relative-caret-position="44">
+              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="interoperability.jsonld" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/interoperability/vocabs/interoperability.jsonld">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="512" column="44" selection-start-line="512" selection-start-column="20" selection-end-line="512" selection-end-column="44" />
-              <folding>
-                <element signature="n#!!block;n#@context#0;n#!!top" expanded="false" />
-                <element signature="e#1331#1553#0" expanded="false" />
-                <element signature="e#1559#2064#0" expanded="false" />
-                <element signature="e#2071#4748#0" expanded="false" />
-                <element signature="e#4755#5664#0" expanded="false" />
-                <element signature="e#8085#8392#0" expanded="false" />
-                <element signature="e#9031#10183#0" expanded="false" />
-                <element signature="e#10514#10833#0" expanded="false" />
-                <element signature="e#11488#12152#0" expanded="false" />
-                <element signature="e#12162#13352#0" expanded="false" />
-                <element signature="e#13373#14329#0" expanded="false" />
-                <element signature="e#14335#15860#0" expanded="false" />
-                <element signature="e#15151#15492#0" expanded="false" />
-                <element signature="e#15502#15846#0" expanded="false" />
-                <element signature="e#18142#19689#0" expanded="false" />
-                <element signature="e#18344#19000#0" expanded="false" />
-                <element signature="e#19696#21209#0" expanded="false" />
-                <element signature="e#21215#22819#0" expanded="false" />
-                <marker date="1460299973502" expanded="false" signature="5670:6615" placeholder="{&quot;@id&quot;: &quot;vocab:ConnectedDeviceRefs&quot;...}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -173,8 +70,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/data/code-repository/codes-info/ventilateRoom.json" />
-        <option value="$PROJECT_DIR$/data/code-repository/codes-info/temperatureRegulationUsingWeatherService.json" />
         <option value="$PROJECT_DIR$/data/code-repository/codes-info/temperatureRegulationBySMS.json" />
         <option value="$PROJECT_DIR$/data/code-repository/codes-info/temperatureRegulation.json" />
         <option value="$PROJECT_DIR$/data/code-repository/codes-info/temperatureChange.json" />
@@ -194,14 +89,6 @@
         <option value="$PROJECT_DIR$/views/interoperability/capability.js" />
         <option value="$PROJECT_DIR$/models/device.js" />
         <option value="$PROJECT_DIR$/data/ontology/contexts/Capability.jsonld" />
-        <option value="$PROJECT_DIR$/data/interoperability/devices/motor-ge-3343.jsonld" />
-        <option value="$PROJECT_DIR$/data/interoperability/devices/cooler-swirlwind-2443.jsonld" />
-        <option value="$PROJECT_DIR$/data/interoperability/devices/heater-tesco-2336.jsonld" />
-        <option value="$PROJECT_DIR$/data/interoperability/devices/coolerheater-swirlwind-2665.jsonld" />
-        <option value="$PROJECT_DIR$/data/interoperability/devices/sensor-ge-2442.jsonld" />
-        <option value="$PROJECT_DIR$/data/interoperability/devices/gps-sony-2556.jsonld" />
-        <option value="$PROJECT_DIR$/data/interoperability/devices/window-ikea-2555.jsonld" />
-        <option value="$PROJECT_DIR$/data/interoperability/devices/phone-samsung-2554.jsonld" />
         <option value="$PROJECT_DIR$/views/interoperability/deviceSimple.js" />
         <option value="$PROJECT_DIR$/middleware/jsonldHeaders.js" />
         <option value="$PROJECT_DIR$/views/interoperability/devicesSimple.js" />
@@ -220,10 +107,20 @@
         <option value="$PROJECT_DIR$/views/interoperability/devicesSimple.jade" />
         <option value="$PROJECT_DIR$/controllers/interoperability.js" />
         <option value="$PROJECT_DIR$/models/interoperability.js" />
+        <option value="$PROJECT_DIR$/data/interoperability/vocabs/interoperability.jsonld" />
+        <option value="$PROJECT_DIR$/data/interoperability/contexts/KnownDeviceRefs.jsonld" />
+        <option value="$PROJECT_DIR$/data/interoperability/contexts/ConnectedDeviceRefs.jsonld" />
         <option value="$PROJECT_DIR$/views/interoperability/knownDevices.js" />
         <option value="$PROJECT_DIR$/views/interoperability/connectedDevices.js" />
-        <option value="$PROJECT_DIR$/data/interoperability/vocabs/interoperability.jsonld" />
         <option value="$PROJECT_DIR$/data/ontology/contexts/Device.jsonld" />
+        <option value="$PROJECT_DIR$/data/interoperability/devices/window-ikea-2555.jsonld" />
+        <option value="$PROJECT_DIR$/data/interoperability/devices/sensor-ge-2442.jsonld" />
+        <option value="$PROJECT_DIR$/data/interoperability/devices/phone-samsung-2554.jsonld" />
+        <option value="$PROJECT_DIR$/data/interoperability/devices/motor-ge-3343.jsonld" />
+        <option value="$PROJECT_DIR$/data/interoperability/devices/heater-tesco-2336.jsonld" />
+        <option value="$PROJECT_DIR$/data/interoperability/devices/gps-sony-2556.jsonld" />
+        <option value="$PROJECT_DIR$/data/interoperability/devices/coolerheater-swirlwind-2665.jsonld" />
+        <option value="$PROJECT_DIR$/data/interoperability/devices/cooler-swirlwind-2443.jsonld" />
       </list>
     </option>
   </component>
@@ -410,6 +307,28 @@
               <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interoperability" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contexts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -430,19 +349,19 @@
     <property name="js-jscs-nodeInterpreter" value="F:\Serveurs\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\temp\Prototype-wot-hydra\modif_proto_pour_compatibilite_Jordan\prototype-wot\data\interoperability\contexts" />
+      <recent name="E:\temp\Prototype-wot-hydra\modif_proto_pour_compatibilite_Jordan\prototype-wot\views\interoperability" />
+      <recent name="E:\temp\Prototype-wot-hydra\modif_proto_pour_compatibilite_Jordan\prototype-wot\data\ontology\vocabs" />
+      <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\data\interoperability\vocabs" />
+      <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\middleware" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\css-preprocessing" />
       <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public\interoperability-public\css\sass" />
       <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public\css\lib" />
       <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public\lib" />
       <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\temp\Prototype-wot-hydra\modif_proto_pour_compatibilite_Jordan\prototype-wot\views\interoperability" />
-      <recent name="E:\temp\Prototype-wot-hydra\modif_proto_pour_compatibilite_Jordan\prototype-wot\data\ontology\vocabs" />
-      <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\data\interoperability\vocabs" />
-      <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\middleware" />
-      <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\models" />
     </key>
   </component>
   <component name="RunManager">
@@ -521,21 +440,7 @@
       <workItem from="1460083036436" duration="3347000" />
       <workItem from="1460128327271" duration="10154000" />
       <workItem from="1460210586757" duration="17396000" />
-      <workItem from="1460288090213" duration="9647000" />
-    </task>
-    <task id="LOCAL-00459" summary="Interoperability controller redirects gateway requests">
-      <created>1459967740128</created>
-      <option name="number" value="00459" />
-      <option name="presentableId" value="LOCAL-00459" />
-      <option name="project" value="LOCAL" />
-      <updated>1459967740128</updated>
-    </task>
-    <task id="LOCAL-00460" summary="Interoperability controller redirects gateway requests">
-      <created>1459975320145</created>
-      <option name="number" value="00460" />
-      <option name="presentableId" value="LOCAL-00460" />
-      <option name="project" value="LOCAL" />
-      <updated>1459975320145</updated>
+      <workItem from="1460288090213" duration="12053000" />
     </task>
     <task id="LOCAL-00461" summary="Interoperability controller redirects gateway requests">
       <created>1459975395083</created>
@@ -866,11 +771,25 @@
       <option name="project" value="LOCAL" />
       <updated>1460294197811</updated>
     </task>
-    <option name="localTasksCounter" value="508" />
+    <task id="LOCAL-00508" summary="Interoperability hydra vocab">
+      <created>1460299977151</created>
+      <option name="number" value="00508" />
+      <option name="presentableId" value="LOCAL-00508" />
+      <option name="project" value="LOCAL" />
+      <updated>1460299977151</updated>
+    </task>
+    <task id="LOCAL-00509" summary="Interoperability hydra vocab">
+      <created>1460307483741</created>
+      <option name="number" value="00509" />
+      <option name="presentableId" value="LOCAL-00509" />
+      <option name="project" value="LOCAL" />
+      <updated>1460307483742</updated>
+    </task>
+    <option name="localTasksCounter" value="510" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87742000" />
+    <option name="totallyTimeSpent" value="90148000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -896,12 +815,12 @@
     <frame x="-9" y="-9" width="1298" height="928" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21246007" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15734825" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33289817" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22062664" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22193211" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24900925" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -967,77 +886,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/interoperability/capability.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/temperatureDecrease.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/heater-tesco-2336.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="99" selection-start-line="11" selection-start-column="99" selection-end-line="11" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/motor-ge-3343.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="16" column="92" selection-start-line="16" selection-start-column="92" selection-end-line="16" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/phone-samsung-2554.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="36" column="45" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/sensor-ge-2442.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="95" selection-start-line="10" selection-start-column="95" selection-end-line="10" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/window-ikea-2555.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="90" selection-start-line="15" selection-start-column="90" selection-end-line="15" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/coolerheater-swirlwind-2665.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="94" selection-start-line="15" selection-start-column="94" selection-end-line="15" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/gps-sony-2556.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/contexts/Capability.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/ontology/vocabs/interoperability.jsonld" />
     <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/activateMotor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1081,13 +929,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/ontology/contexts/Functionality.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/ontology/contexts/EntryPoint.jsonld">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1099,13 +940,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/ontology/contexts/Capability.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1123,17 +957,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/ontology/vocabs/capabilities.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/ontology/vocabs/functionalities.jsonld">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1141,6 +969,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1148,6 +977,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!block;n#@context#0;n#!!top" expanded="false" />
+            <element signature="e#1221#1443#0" expanded="false" />
+            <element signature="e#2391#2768#0" expanded="false" />
+            <element signature="e#3348#3733#0" expanded="false" />
+            <element signature="e#5393#5692#0" expanded="false" />
+            <element signature="e#5731#6286#0" expanded="false" />
+            <element signature="e#6296#6868#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1155,6 +993,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1190,6 +1029,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1197,6 +1037,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1216,14 +1057,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/interoperability/deviceSimple.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="43" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/interoperability/capability.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -1232,33 +1065,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/interoperability/devicesSimple.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/interoperability/entryPoint.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="91" column="68" selection-start-line="91" selection-start-column="68" selection-end-line="91" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/interoperability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1283,30 +1093,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/interoperability/knownDevices.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="9" selection-start-line="15" selection-start-column="8" selection-end-line="17" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/interoperability/connectedDevices.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/cooler-swirlwind-2443.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -1339,10 +1125,178 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="276" column="50" selection-start-line="276" selection-start-column="50" selection-end-line="276" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/interoperability.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/contexts/EntryPoint.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/contexts/Device.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/contexts/KnownDeviceRefs.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/contexts/ConnectedDeviceRefs.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/interoperability/connectedDevices.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/interoperability/knownDevices.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="88" selection-start-line="10" selection-start-column="88" selection-end-line="10" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ontology/contexts/Capability.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/ontology/contexts/Device.jsonld">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/interoperability/deviceSimple.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/interoperability/devicesSimple.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ontology/contexts/Functionality.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ontology/vocabs/capabilities.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/window-ikea-2555.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/sensor-ge-2442.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/phone-samsung-2554.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/motor-ge-3343.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/heater-tesco-2336.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/gps-sony-2556.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/coolerheater-swirlwind-2665.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/cooler-swirlwind-2443.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
           <folding />
         </state>
       </provider>

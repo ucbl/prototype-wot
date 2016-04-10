@@ -1,6 +1,6 @@
 {
     "@context" : "__ontology__context/Device",
-    "@type": "http://www.w3.org/ns/hydra/core#Class",
+    "@type": "vocab:Device",
 	"@id" : "__interoperability__devices/phone-samsung-2554",
 	"id" : "phone-samsung-2554",
     "name": "Phone",
