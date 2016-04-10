@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/interoperability.js" afterPath="$PROJECT_DIR$/models/interoperability.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/interoperability/entryPoint.js" afterPath="$PROJECT_DIR$/views/interoperability/entryPoint.js" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -639,14 +637,7 @@
       <workItem from="1459878888018" duration="20415000" />
       <workItem from="1460083036436" duration="3347000" />
       <workItem from="1460128327271" duration="10154000" />
-      <workItem from="1460210586757" duration="10924000" />
-    </task>
-    <task id="LOCAL-00446" summary="Integration with infra-wot prototype">
-      <created>1459942366366</created>
-      <option name="number" value="00446" />
-      <option name="presentableId" value="LOCAL-00446" />
-      <option name="project" value="LOCAL" />
-      <updated>1459942366367</updated>
+      <workItem from="1460210586757" duration="10980000" />
     </task>
     <task id="LOCAL-00447" summary="Integration with infra-wot prototype">
       <created>1459944508430</created>
@@ -984,11 +975,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460258381896</updated>
     </task>
-    <option name="localTasksCounter" value="495" />
+    <task id="LOCAL-00495" summary="For unused files">
+      <created>1460258597624</created>
+      <option name="number" value="00495" />
+      <option name="presentableId" value="LOCAL-00495" />
+      <option name="project" value="LOCAL" />
+      <updated>1460258597624</updated>
+    </task>
+    <option name="localTasksCounter" value="496" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71623000" />
+    <option name="totallyTimeSpent" value="71679000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
