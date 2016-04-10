@@ -13,9 +13,8 @@
             '@id': Globals.vocabularies.interoperability + "devices",
             'knownDevices': []
         };
-        for(var device in devices) {
-            console.log(JSON.stringify(device));
-            result.knownDevices.push(device['@id']);
+        for(var i in devices) {
+            result.knownDevices.push(devices[i]['@id']);
         }
         return result;
     }
