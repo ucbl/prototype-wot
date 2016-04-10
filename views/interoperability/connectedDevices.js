@@ -14,7 +14,7 @@
             'connectedDevices': []
         };
         for(var i in devices) {
-            result.knownDevices.push(devices[i]['@id']);
+            result.connectedDevices.push(devices[i]['@id']);
         }
         return result;
     }
