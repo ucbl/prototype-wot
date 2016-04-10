@@ -95,45 +95,45 @@
       "supportedProperty": [
         {
           "property": {
-            "@id": "vocab:EntryPoint/devices",
+            "@id": "vocab:EntryPoint/knownDevices",
             "@type": "hydra:Link",
             "label": "known devices",
-            "description": "The collection of all devices actually connected to the platform",
+            "description": "The collection of all devices known by the platform",
             "domain": "vocab:EntryPoint",
-            "range": "vocab:Devices",
+            "range": "vocab:KnownDeviceRefs",
             "supportedOperation": [
               {
-                "@id": "_:devices",
+                "@id": "_:knownDevices",
                 "@type": "hydra:Operation",
                 "method": "GET",
-                "label": "Links to the collection of all connected devices",
+                "label": "Links to the collection of all known devices",
                 "description": null,
                 "expects": null,
-                "returns": "vocab:Devices",
+                "returns": "vocab:KnownDeviceRefs",
                 "statusCodes": []
               }
             ]
           },
-          "hydra:title": "known devices",
-          "hydra:description": "The collection of all devices actually connected to the platform",
+          "hydra:title": "knownDevices",
+          "hydra:description": "The collection of all devices known by the platform",
           "required": true,
           "readonly": true,
           "writeonly": false
         },
         {
           "property": {
-            "@id": "EntryPoint/known-devices",
+            "@id": "EntryPoint/connectedDevices",
             "@type": "hydra:Link",
             "label": "connected devices",
-            "description": "The collection of access information to devices known by the platform (platform-generated)",
+            "description": "The collection of access information to devices actually connected to the platform (platform-generated)",
             "domain": "vocab:EntryPoint",
             "range": "vocab:ConnectedDeviceRefs",
             "supportedOperation": [
               {
-                "@id": "_:known",
+                "@id": "_:connectedDevices",
                 "@type": "hydra:Operation",
                 "method": "GET",
-                "label": "Links to the collection of known devices",
+                "label": "Links to the collection of actually connected devices",
                 "description": null,
                 "expects": null,
                 "returns": "vocab:ConnectedDeviceRefs",
@@ -141,8 +141,8 @@
               }
             ]
           },
-          "hydra:title": "connected devices",
-          "hydra:description": "The collection of references to devices known by the platform",
+          "hydra:title": "connectedDevices",
+          "hydra:description": "The collection of references to devices actually connected to the platform",
           "required": true,
           "readonly": true,
           "writeonly": false
@@ -151,212 +151,50 @@
     },
 
     {
-      "@id": "vocab:Devices",
+      "@id": "vocab:KnownDeviceRefs",
       "@type": "hydra:Class",
       "subClassOf": "hydra:Collection",
-      "hydra:title": "Device collection",
-      "hydra:description": "A collection of physical devices",
+      "hydra:title": "Known device references",
+      "hydra:description": "A collection of known device references (URIs)",
       "supportedOperation": [],
       "supportedProperty": [
         {
           "property": {
-            "@id": "_:deviceMember",
+            "@id": "_:knownDeviceRefMember",
             "@type": "hydra:Link",
             "subPropertyOf": "hydra:member",
-            "label": "device member",
-            "comment": "A member of the device collection",
-            "domain": "vocab:Devices",
-            "range": "vocab:Device"
+            "label": "knownDeviceRef member",
+            "comment": "A member of the known device references collection",
+            "domain": "vocab:KnownDeviceRefs",
+            "range": "vocab:KnownDeviceRef"
           },
-          "hydra:title": "devices",
-          "hydra:description": "The physical devices of this collection.",
+          "hydra:title": "knownDevices",
+          "hydra:description": "The device references of this collection.",
           "required": null,
           "readonly": false,
           "writeonly": false
         }
       ]
     },
-    {
-      "@id": "vocab:Device",
-      "@type": "hydra:Class",
-      "subClassOf": null,
-      "label": "device",
-      "description": "A physical device, potentially connected to the interoperability platform.",
-      "supportedOperation": [
-        {
-          "@id": "_:device",
-          "@type": "hydra:Operation",
-          "method": "GET",
-          "label": "Retrieves a device",
-          "description": null,
-          "expects": null,
-          "returns": "vocab:Device",
-          "statusCodes": []
-        }
-      ],
-      "supportedProperty": [
-        {
-          "property": {
-            "@id": "vocab:Device/id",
-            "@type": "rdf:Property",
-            "label": "id",
-            "description": "The id of the device",
-            "domain": "vocab:Device",
-            "range": "http://www.w3.org/2001/XMLSchema#string",
-            "supportedOperation": []
-          },
-          "hydra:title": "id",
-          "hydra:description": "The id of the device",
-          "required": null,
-          "readonly": true,
-          "writeonly": false
-        },
-        {
-          "property": {
-            "@id": "vocab:Device/name",
-            "@type": "rdf:Property",
-            "label": "name",
-            "description": "The explicit name of the device",
-            "domain": "vocab:Device",
-            "range": "http://www.w3.org/2001/XMLSchema#string",
-            "supportedOperation": []
-          },
-          "hydra:title": "name",
-          "hydra:description": "The explicit name of the device",
-          "required": null,
-          "readonly": true,
-          "writeonly": false
-        },
-        {
-          "property": {
-            "@id": "vocab:Device/description",
-            "@type": "rdf:Property",
-            "label": "description",
-            "description": "The description of the device",
-            "domain": "vocab:Device",
-            "range": "http://www.w3.org/2001/XMLSchema#string",
-            "supportedOperation": []
-          },
-          "hydra:title": "description",
-          "hydra:description": "The description of the device",
-          "required": null,
-          "readonly": true,
-          "writeonly": false
-        },
-        {
-          "property": {
-            "@id": "vocab:Device/capabilities",
-            "@type": "rdf:Property",
-            "label": "capabilities",
-            "description": "The capabilities of the device",
-            "domain": "vocab:Device",
-            "range": "vocab:Capabilities",
-            "supportedOperation": [
-              {
-                "@id": "_:capabilities",
-                "@type": "hydra:Operation",
-                "method": "GET",
-                "label": "Links to the collection of capabilities",
-                "description": null,
-                "expects": null,
-                "returns": "vocab:Capabilities",
-                "statusCodes": []
-              }
-            ]
-          },
-          "hydra:title": "capabilities",
-          "hydra:description": "The capabilities of the device",
-          "required": true,
-          "readonly": true,
-          "writeonly": false
-        }
-      ]
-    },
-    {
-      "@id": "vocab:Capabilities",
-      "@type": ["hydra:Class", "hydra:Collection"],
-      "subClassOf": "hydra:Collection",
-      "hydra:title": "Capability collection",
-      "hydra:description": "A collection of device capabilities",
-      "supportedOperation": [],
-      "supportedProperty": [
-        {
-          "property": {
-            "@id": "_:Capabilities/capabilityMember",
-            "@type": "hydra:Link",
-            "subPropertyOf": "hydra:member",
-            "label": "capability member",
-            "comment": "A member of the capability collection",
-            "domain": "vocab:Capabilities",
-            "range": "vocab:Capability"
-          },
-          "hydra:title": "capabilities",
-          "hydra:description": "The physical capabilities of this collection.",
-          "required": null,
-          "readonly": false,
-          "writeonly": false
-        }
-      ]
-    },
-    {
-      "@id": "vocab:Capability",
-      "@type": "hydra:Class",
-      "subClassOf": null,
-      "label": "Capability",
-      "description": "A simple capability.",
-      "supportedProperty": [
-        {
-          "property": {
-            "@id": "_:Capability/accessPort",
-            "@type": "hydra:Link",
-            "label": "Access port of the capability",
-            "comment": "Retrieves the port on which the capability can be accessed (through the gateway port forwarding feature)",
-            "domain": "vocab:Capability",
-            "range": "http://schema.org/url"
-          },
-          "hydra:title": "accessPort",
-          "hydra:description": "The port on which the capability can be accessed (through the gateway port forwarding feature)",
-          "required": false,
-          "readonly": false,
-          "writeonly": false
-        },
-        {
-          "property": {
-            "@id": "_:Capability/configuration",
-            "@type": "hydra:Link",
-            "label": "Configuration of the capability",
-            "comment": "Indicates if the capability has been configured manually or other configuration info (experimental feature)",
-            "domain": "vocab:Capability",
-            "range": "vocab:Configuration"
-          },
-          "hydra:title": "configuration",
-          "hydra:description": "The capability has been configured manually or other configuration info (experimental feature)",
-          "required": false,
-          "readonly": false,
-          "writeonly": false
-        }
-      ]
-    },
-
     {
       "@id": "vocab:ConnectedDeviceRefs",
       "@type": "hydra:Class",
       "subClassOf": "hydra:Collection",
-      "hydra:title": "Connected device reference collection",
-      "hydra:description": "A collection of device ids",
+      "hydra:title": "Connected device references",
+      "hydra:description": "A collection of connected device references (URIs)",
       "supportedOperation": [],
       "supportedProperty": [
         {
           "property": {
-            "@id": "_:deviceRefMember",
+            "@id": "_:connectedDeviceRefMember",
             "@type": "hydra:Link",
             "subPropertyOf": "hydra:member",
-            "label": "deviceRef member",
-            "comment": "A member of the connected device reference collection",
+            "label": "connectedDeviceRef member",
+            "comment": "A member of the connected device references collection",
             "domain": "vocab:ConnectedDeviceRefs",
             "range": "vocab:ConnectedDeviceRef"
           },
-          "hydra:title": "device references",
+          "hydra:title": "connectedDevices",
           "hydra:description": "The device references of this collection.",
           "required": null,
           "readonly": false,
@@ -366,15 +204,110 @@
     },
 
     {
+      "@id": "vocab:KnownDeviceRef",
+      "@type": "hydra:Link",
+      "subClassOf": "hydra:Member",
+      "hydra:title": "Known device reference",
+      "hydra:description": "A known device URI",
+      "supportedOperation": [
+        {
+          "@id": "_:knownDevice",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "Link to the known device description",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:KnownDeviceInfo",
+          "statusCodes": []
+        }
+      ],
+      "supportedProperty": []
+    },
+    {
       "@id": "vocab:ConnectedDeviceRef",
       "@type": "hydra:Link",
       "subClassOf": "hydra:Member",
       "hydra:title": "Connected device reference",
-      "hydra:description": "A device id",
-      "supportedOperation": [],
+      "hydra:description": "A connected device URI",
+      "supportedOperation": [
+        {
+          "@id": "_:connectedDevice",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "Link to the connected device description",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:ConnectedDeviceInfo",
+          "statusCodes": []
+        }
+      ],
       "supportedProperty": []
     },
 
+    {
+      "@id": "vocab:KnownDeviceInfo",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "known device",
+      "description": "The information about a physical device known by the interoperability platform",
+      "supportedOperation": [
+        {
+          "@id": "_:knownDevice",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "Retrieves a known device",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:KnownDeviceInfo",
+          "statusCodes": []
+        }
+      ],
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:KnownDeviceInfo/deviceRef",
+            "@type": "rdf:Property",
+            "label": "deviceRef",
+            "description": "The reference to the device in the known device collection",
+            "domain": "vocab:KnownDeviceInfo",
+            "range": "vocab:KnownDeviceRef",
+            "supportedOperation": []
+          },
+          "hydra:title": "deviceRef",
+          "hydra:description": "The reference to the device in the known device collection",
+          "required": true,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:KnownDeviceInfo/capabilityInfoCollection",
+            "@type": "rdf:Property",
+            "label": "capabilityInfoCollection",
+            "description": "The collection of information objects to access the capability of the device",
+            "domain": "vocab:KnownDeviceInfo",
+            "range": "vocab:CapabilityInfoCollection",
+            "supportedOperation": [
+              {
+                "@id": "_:capabilityInfoCollection",
+                "@type": "hydra:Operation",
+                "method": "GET",
+                "label": "Links to the collection of information objects to access the capability of the device",
+                "description": null,
+                "expects": null,
+                "returns": "vocab:CapabilityInfoCollection",
+                "statusCodes": []
+              }
+            ]
+          },
+          "hydra:title": "capabilityInfoCollection",
+          "hydra:description": "The collection of information objects to access the capability of the device",
+          "required": true,
+          "readonly": true,
+          "writeonly": false
+        }
+      ]
+    },
     {
       "@id": "vocab:ConnectedDeviceInfo",
       "@type": "hydra:Class",
@@ -399,13 +332,13 @@
             "@id": "vocab:ConnectedDeviceInfo/deviceRef",
             "@type": "rdf:Property",
             "label": "deviceRef",
-            "description": "The reference to the device in the known device collection",
+            "description": "The reference to the device in the connected device collection",
             "domain": "vocab:ConnectedDeviceInfo",
             "range": "vocab:ConnectedDeviceRef",
             "supportedOperation": []
           },
           "hydra:title": "deviceRef",
-          "hydra:description": "The reference to the device in the known device collection",
+          "hydra:description": "The reference to the device in the connected device collection",
           "required": true,
           "readonly": true,
           "writeonly": false
@@ -455,12 +388,13 @@
         }
       ]
     },
+
     {
       "@id": "vocab:CapabilityInfoCollection",
       "@type": "hydra:Class",
       "subClassOf": "hydra:Collection",
       "hydra:title": "capabilityInfoCollection",
-      "hydra:description": "The collection useful information to access device capabilities",
+      "hydra:description": "The collection of useful information to access device capabilities",
       "supportedOperation": [],
       "supportedProperty": [
         {
@@ -473,7 +407,7 @@
             "domain": "vocab:CapabilityInfoCollection",
             "range": "vocab:CapabilityInfo"
           },
-          "hydra:title": "capabilityInfoCollection",
+          "hydra:title": "capabilityInfos",
           "hydra:description": "A member of the capability information collection",
           "required": null,
           "readonly": false,
@@ -490,16 +424,16 @@
       "supportedProperty": [
         {
           "property": {
-            "@id": "vocab:CapabilityInfo/capabilityRef",
+            "@id": "vocab:CapabilityInfo/capability",
             "@type": "rdf:Property",
-            "label": "capabilityRef",
-            "description": "The reference to the capability in the known device description",
+            "label": "capability",
+            "description": "The full capability description",
             "domain": "vocab:CapabilityInfo",
-            "range": "http://schema.org/url",
+            "range": "vocab:Capability",
             "supportedOperation": []
           },
-          "hydra:title": "capabilityRef",
-          "hydra:description": "The reference to the capability in the known device description",
+          "hydra:title": "capability",
+          "hydra:description": "The full capability description",
           "required": true,
           "readonly": true,
           "writeonly": false
@@ -519,12 +453,44 @@
           "required": false,
           "readonly": true,
           "writeonly": false
+        }
+      ]
+    },
+
+    {
+      "@id": "vocab:Capability",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "Capability",
+      "description": "A simple capability.",
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "_:Capability/accessPort",
+            "@type": "hydra:Link",
+            "label": "Access port of the capability",
+            "comment": "Retrieves the port on which the capability can be accessed (through the gateway port forwarding feature)",
+            "domain": "vocab:Capability",
+            "range": "http://schema.org/url"
+          },
+          "hydra:title": "accessPort",
+          "hydra:description": "The port on which the capability can be accessed (through the gateway port forwarding feature)",
+          "required": false,
+          "readonly": false,
+          "writeonly": false
         },
         {
-          "property": "vocab:Configuration",
+          "property": {
+            "@id": "_:Capability/configuration",
+            "@type": "hydra:Link",
+            "label": "Configuration of the capability",
+            "comment": "Indicates if the capability has been configured manually or other configuration info (experimental feature)",
+            "domain": "vocab:Capability",
+            "range": "vocab:Configuration"
+          },
           "hydra:title": "configuration",
-          "hydra:description": "The capability configuration",
-          "required": true,
+          "hydra:description": "The capability has been configured manually or other configuration info (experimental feature)",
+          "required": false,
           "readonly": false,
           "writeonly": false
         }
@@ -613,6 +579,8 @@
         }
       ]
     },
+
+
 
     {
       "@id": "vocab:MotorValue",
