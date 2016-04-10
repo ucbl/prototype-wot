@@ -265,15 +265,15 @@
       "supportedProperty": [
         {
           "property": {
-            "@id": "vocab:KnownDeviceInfo/deviceRef",
+            "@id": "vocab:KnownDeviceInfo/device",
             "@type": "rdf:Property",
-            "label": "deviceRef",
+            "label": "device",
             "description": "The reference to the device in the known device collection",
             "domain": "vocab:KnownDeviceInfo",
-            "range": "vocab:KnownDeviceRef",
+            "range": "vocab:Device",
             "supportedOperation": []
           },
-          "hydra:title": "deviceRef",
+          "hydra:title": "device",
           "hydra:description": "The reference to the device in the known device collection",
           "required": true,
           "readonly": true,
@@ -329,15 +329,15 @@
       "supportedProperty": [
         {
           "property": {
-            "@id": "vocab:ConnectedDeviceInfo/deviceRef",
+            "@id": "vocab:ConnectedDeviceInfo/device",
             "@type": "rdf:Property",
-            "label": "deviceRef",
+            "label": "device",
             "description": "The reference to the device in the connected device collection",
             "domain": "vocab:ConnectedDeviceInfo",
-            "range": "vocab:ConnectedDeviceRef",
+            "range": "vocab:Device",
             "supportedOperation": []
           },
-          "hydra:title": "deviceRef",
+          "hydra:title": "device",
           "hydra:description": "The reference to the device in the connected device collection",
           "required": true,
           "readonly": true,
@@ -451,6 +451,76 @@
           "hydra:title": "accessPort",
           "hydra:description": "The port through which the capability should be accessed by clients (can be a dedicated port of the gateway)",
           "required": false,
+          "readonly": true,
+          "writeonly": false
+        }
+      ]
+    },
+
+    {
+      "@id": "vocab:Device",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "device",
+      "description": "A physical device, potentially connected to the interoperability platform.",
+      "supportedOperation": [
+        {
+          "@id": "_:device",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "Retrieves a device",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:Device",
+          "statusCodes": []
+        }
+      ],
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:Device/id",
+            "@type": "rdf:Property",
+            "label": "id",
+            "description": "The id of the device",
+            "domain": "vocab:Device",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "id",
+          "hydra:description": "The id of the device",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:Device/name",
+            "@type": ["rdf:Property", "http://schema.org/name"],
+            "label": "name",
+            "description": "The explicit name of the device",
+            "domain": "vocab:Device",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "name",
+          "hydra:description": "The explicit name of the device",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:Device/description",
+            "@type": "rdf:Property",
+            "label": ["description", "http://schema.org/description"],
+            "description": "The description of the device",
+            "domain": "vocab:Device",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "description",
+          "hydra:description": "The description of the device",
+          "required": null,
           "readonly": true,
           "writeonly": false
         }
