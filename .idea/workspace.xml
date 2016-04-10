@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helpers/jsonTemplateEngine.js" afterPath="$PROJECT_DIR$/helpers/jsonTemplateEngine.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/interoperability/connectedDevices.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/interoperability/knownDevices.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/interoperability.js" afterPath="$PROJECT_DIR$/controllers/interoperability.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/interoperability.js" afterPath="$PROJECT_DIR$/models/interoperability.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/interoperability/entryPoint.js" afterPath="$PROJECT_DIR$/views/interoperability/entryPoint.js" />
+    </list>
+    <list id="43fe9877-d8e4-4eb1-afa2-98c05eca1f9e" name="project-files" comment="For unused files">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/prototype_wot_js_v2_node_modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/prototype-wot-js-v2.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -18,9 +33,6 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="E:\Projets\Test_node_MVC\prototype-wot-js-v2" />
   </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
-  </component>
   <component name="ErrorTreeViewConfiguration">
     <option name="autoscrollToSource" value="true" />
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
@@ -30,91 +42,96 @@
     <favorites_list name="prototype-wot-js-v2" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="globals.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/globals.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-440">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.7241379" vertical-offset="0" max-vertical-offset="4680">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="19" />
+            <state relative-caret-position="-308">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interoperability.jsonld" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/interoperability/vocabs/interoperability.jsonld">
+      <file leaf-file-name="entryPoint.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/interoperability/entryPoint.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.793103" vertical-offset="540" max-vertical-offset="2300">
-              <caret line="938" column="10" selection-start-line="938" selection-start-column="10" selection-end-line="938" selection-end-column="10" />
-              <folding>
-                <element signature="n#!!block;n#@context#0;n#!!top" expanded="false" />
-                <element signature="e#1331#1553#0" expanded="false" />
-                <element signature="e#1559#2064#0" expanded="false" />
-                <element signature="e#2071#4701#0" expanded="false" />
-                <element signature="e#4708#5533#0" expanded="false" />
-                <element signature="e#5539#8678#0" expanded="false" />
-                <element signature="e#8684#9587#0" expanded="false" />
-                <element signature="e#9593#11140#0" expanded="false" />
-                <element signature="e#9795#10451#0" expanded="false" />
-                <element signature="e#10461#11126#0" expanded="false" />
-                <element signature="e#11147#12060#0" expanded="false" />
-                <element signature="e#12066#15239#0" expanded="false" />
-                <element signature="e#15245#16207#0" expanded="false" />
-                <element signature="e#16213#18073#0" expanded="false" />
-                <element signature="e#18080#19593#0" expanded="false" />
-                <element signature="e#19599#21203#0" expanded="false" />
-                <element signature="e#21210#23055#0" expanded="false" />
-                <element signature="e#23061#23816#0" expanded="false" />
-                <element signature="e#23822#25112#0" expanded="false" />
-                <element signature="e#25118#26407#0" expanded="false" />
-                <element signature="e#26413#29321#0" expanded="false" />
-                <element signature="e#29328#30915#0" expanded="false" />
-                <element signature="e#30921#31564#0" expanded="false" />
-                <element signature="e#34180#34816#0" expanded="false" />
-                <element signature="e#34822#35368#0" expanded="false" />
-                <element signature="e#35374#36246#0" expanded="false" />
-                <element signature="e#36252#37132#0" expanded="false" />
-                <element signature="e#37138#39677#0" expanded="false" />
-                <element signature="e#39683#42133#0" expanded="false" />
-                <element signature="e#42139#44639#0" expanded="false" />
-                <element signature="e#44645#47204#0" expanded="false" />
-                <element signature="e#47210#49761#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jsonTemplateEngine.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/helpers/jsonTemplateEngine.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8064516" vertical-offset="0" max-vertical-offset="744">
-              <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+            <state relative-caret-position="286">
+              <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="8.75862" vertical-offset="768" max-vertical-offset="4160">
-              <caret line="13" column="22" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="22" />
+            <state relative-caret-position="-352">
+              <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="device.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/device.js">
+      <file leaf-file-name="knownDevices.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/interoperability/knownDevices.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1360">
-              <caret line="53" column="83" selection-start-line="53" selection-start-column="83" selection-end-line="53" selection-end-column="83" />
+            <state relative-caret-position="330">
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connectedDevices.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/interoperability/connectedDevices.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="capability.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/interoperability/capability.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="21" column="22" selection-start-line="20" selection-start-column="9" selection-end-line="21" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deviceSimple.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/interoperability/deviceSimple.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="43" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jade File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -130,68 +147,72 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/data/interoperability/objects/motor-ge-3343.jsonld" />
-        <option value="$PROJECT_DIR$/data/interoperability/objects/sensor-ge-2442.jsonld" />
-        <option value="$PROJECT_DIR$/data/interoperability/objects/window-ikea-2555.jsonld" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/data/interoperability/capabilities/activateMotor.json" />
-        <option value="$PROJECT_DIR$/data/interoperability/capabilities/stopApp.js" />
-        <option value="$PROJECT_DIR$/views/interoperability/capability.js" />
-        <option value="$PROJECT_DIR$/models/object.js" />
-        <option value="$PROJECT_DIR$/views/interoperability/object.jade" />
-        <option value="$PROJECT_DIR$/views/interoperability/objects.jade" />
-        <option value="$PROJECT_DIR$/views/interoperability/objectSimple.jade" />
-        <option value="$PROJECT_DIR$/views/interoperability/objectSimple.js" />
-        <option value="$PROJECT_DIR$/views/interoperability/objectsSimple.jade" />
-        <option value="$PROJECT_DIR$/views/interoperability/platform.jade" />
-        <option value="$PROJECT_DIR$/data/interoperability/capabilities/startApp.js" />
-        <option value="$PROJECT_DIR$/data/interoperability/devices/phone-samsung-2554.jsonld" />
-        <option value="$PROJECT_DIR$/data/interoperability/devices/sensor-ge-2442.jsonld" />
-        <option value="$PROJECT_DIR$/data/interoperability/contexts/Temperature.jsonld" />
-        <option value="$PROJECT_DIR$/data/interoperability/contexts/Capability.jsonld" />
-        <option value="$PROJECT_DIR$/data/interoperability/capabilities/temperatureIncrease.js" />
-        <option value="$PROJECT_DIR$/data/interoperability/hydra.jsonld" />
-        <option value="$PROJECT_DIR$/models/capability.js" />
-        <option value="$PROJECT_DIR$/middleware/initVariables.js" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/public/test.html" />
-        <option value="$PROJECT_DIR$/public/interoperability-public/js/public.js" />
-        <option value="$PROJECT_DIR$/views/interoperability/device.jade" />
+        <option value="$PROJECT_DIR$/data/code-repository/contexts/EntryPoint.jsonld" />
+        <option value="$PROJECT_DIR$/data/code-repository/contexts/Collection.jsonld" />
+        <option value="$PROJECT_DIR$/data/code-repository/contexts/Code.jsonld" />
+        <option value="$PROJECT_DIR$/data/code-repository/codes-info/ventilateRoom.json" />
+        <option value="$PROJECT_DIR$/data/code-repository/codes-info/temperatureRegulationUsingWeatherService.json" />
+        <option value="$PROJECT_DIR$/data/code-repository/codes-info/temperatureRegulationBySMS.json" />
+        <option value="$PROJECT_DIR$/data/code-repository/codes-info/temperatureRegulation.json" />
+        <option value="$PROJECT_DIR$/data/code-repository/codes-info/temperatureChange.json" />
+        <option value="$PROJECT_DIR$/data/code-repository/codes-info/operateWindow.json" />
+        <option value="$PROJECT_DIR$/data/code-repository/codes-info/communicate.json" />
+        <option value="$PROJECT_DIR$/data/code-repository/hydra.jsonld" />
+        <option value="$PROJECT_DIR$/controllers/code-repository.js" />
+        <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/public/interoperability-public/index.html" />
-        <option value="$PROJECT_DIR$/views/interoperability/deviceSimple.jade" />
         <option value="$PROJECT_DIR$/css-preprocessing/sass/interoperability.scss" />
+        <option value="$PROJECT_DIR$/views/interoperability/deviceFullPage.jade" />
+        <option value="$PROJECT_DIR$/views/interoperability/device.jade" />
+        <option value="$PROJECT_DIR$/views/interoperability/capabilitySimple.jade" />
+        <option value="$PROJECT_DIR$/views/interoperability/capabilitySimple.js" />
         <option value="$PROJECT_DIR$/public/interoperability-public/js/interoperability.js" />
-        <option value="$PROJECT_DIR$/middleware/jsonldHeaders.js" />
-        <option value="$PROJECT_DIR$/models/interoperability.js" />
-        <option value="$PROJECT_DIR$/data/interoperability/vocabs/interoperability.jsonld" />
-        <option value="$PROJECT_DIR$/controllers/interoperability.js" />
-        <option value="$PROJECT_DIR$/data/interoperability/contexts/MotorValue.jsonld" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/data/interoperability/capabilities/activateMotor.js" />
-        <option value="$PROJECT_DIR$/data/interoperability/capabilities/temperatureSense.js" />
-        <option value="$PROJECT_DIR$/data/interoperability/capabilities/app.js" />
-        <option value="$PROJECT_DIR$/data/interoperability/capabilities/call.js" />
-        <option value="$PROJECT_DIR$/data/interoperability/capabilities/photo.js" />
-        <option value="$PROJECT_DIR$/data/interoperability/capabilities/sms.js" />
-        <option value="$PROJECT_DIR$/data/interoperability/capabilities/video.js" />
-        <option value="$PROJECT_DIR$/data/interoperability/capabilities/gps.js" />
-        <option value="$PROJECT_DIR$/data/interoperability/capabilities/closeWindow.js" />
-        <option value="$PROJECT_DIR$/data/interoperability/capabilities/openWindow.js" />
-        <option value="$PROJECT_DIR$/data/interoperability/capabilities/informationMotor.js" />
-        <option value="$PROJECT_DIR$/data/interoperability/capabilities/temperatureDecrease.js" />
+        <option value="$PROJECT_DIR$/views/interoperability/capability.jade" />
+        <option value="$PROJECT_DIR$/views/interoperability/capability.js" />
         <option value="$PROJECT_DIR$/models/device.js" />
+        <option value="$PROJECT_DIR$/data/ontology/contexts/Capability.jsonld" />
+        <option value="$PROJECT_DIR$/data/interoperability/devices/motor-ge-3343.jsonld" />
+        <option value="$PROJECT_DIR$/data/interoperability/devices/cooler-swirlwind-2443.jsonld" />
+        <option value="$PROJECT_DIR$/data/interoperability/devices/heater-tesco-2336.jsonld" />
+        <option value="$PROJECT_DIR$/data/interoperability/devices/coolerheater-swirlwind-2665.jsonld" />
+        <option value="$PROJECT_DIR$/data/interoperability/devices/sensor-ge-2442.jsonld" />
+        <option value="$PROJECT_DIR$/data/interoperability/devices/gps-sony-2556.jsonld" />
+        <option value="$PROJECT_DIR$/data/interoperability/devices/window-ikea-2555.jsonld" />
+        <option value="$PROJECT_DIR$/data/interoperability/devices/phone-samsung-2554.jsonld" />
+        <option value="$PROJECT_DIR$/views/interoperability/deviceSimple.js" />
+        <option value="$PROJECT_DIR$/middleware/jsonldHeaders.js" />
+        <option value="$PROJECT_DIR$/views/interoperability/devicesSimple.js" />
+        <option value="$PROJECT_DIR$/controllers/gateway.js" />
+        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/helpers/jsonTemplateEngine.js" />
+        <option value="$PROJECT_DIR$/models/ontology.js" />
+        <option value="$PROJECT_DIR$/controllers/ontology.js" />
+        <option value="$PROJECT_DIR$/data/ontology/functionalities/prefixes.js" />
+        <option value="$PROJECT_DIR$/data/ontology/functionalities/functionalities.jsonld" />
+        <option value="$PROJECT_DIR$/data/ontology/vocabs/asawoo.jsonld" />
+        <option value="$PROJECT_DIR$/models/globals.js" />
+        <option value="$PROJECT_DIR$/views/interoperability/entrypoint.js" />
+        <option value="$PROJECT_DIR$/views/interoperability/toto.js" />
+        <option value="$PROJECT_DIR$/views/interoperability/entryPoint.js" />
+        <option value="$PROJECT_DIR$/views/interoperability/knownDevices.js" />
+        <option value="$PROJECT_DIR$/views/interoperability/connectedDevices.js" />
+        <option value="$PROJECT_DIR$/controllers/interoperability.js" />
+        <option value="$PROJECT_DIR$/models/interoperability.js" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true">
+    <package-json value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1298" />
+    <option name="height" value="928" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -214,8 +235,11 @@
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -230,7 +254,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemId" value="prototype-wot" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -240,7 +264,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemId" value="prototype-wot" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -254,7 +278,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ontology" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -272,119 +314,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interoperability-public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interoperability-public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemId" value="prototype-wot" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -398,7 +328,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemId" value="prototype-wot" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -412,7 +342,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemId" value="prototype-wot" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -426,11 +356,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemId" value="prototype-wot" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ontology" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -440,7 +374,73 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ontology" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ontology" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functionalities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ontology" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contexts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -462,7 +462,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemId" value="prototype-wot" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -471,10 +471,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="interoperability" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devices" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -484,7 +480,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemId" value="prototype-wot" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -492,7 +488,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="interoperability" />
+              <option name="myItemId" value="functionalities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functionalities" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -506,19 +520,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemId" value="prototype-wot" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interoperability" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="capabilities" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -528,7 +534,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemId" value="prototype-wot" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -538,29 +544,24 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Infrastructure_WoT/p1105634-terinfrawot" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="FullScreen" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="options.lastSelected" value="preferences.fileTypes" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="js-jscs-nodeInterpreter" value="F:\Serveurs\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\data\interoperability\vocabs" />
-      <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\middleware" />
-      <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\models" />
-      <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\controllers" />
-      <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\data\ontology\functionalities" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\css-preprocessing" />
       <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public\interoperability-public\css\sass" />
@@ -568,29 +569,31 @@
       <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public\lib" />
       <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\temp\Prototype-wot-hydra\modif_proto_pour_compatibilite_Jordan\prototype-wot\views\interoperability" />
+      <recent name="E:\temp\Prototype-wot-hydra\modif_proto_pour_compatibilite_Jordan\prototype-wot\data\ontology\vocabs" />
+      <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\data\interoperability\vocabs" />
+      <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\middleware" />
+      <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\models" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
-      <setting name="configLocationType" value="CONFIG_FILE" />
-      <setting name="settingsFile" value="" />
-      <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="Chrome" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
     <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
@@ -600,6 +603,7 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
       <tasks />
@@ -608,315 +612,397 @@
       <envs />
       <method />
     </configuration>
-    <list size="0" />
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="" />
+      <changelist id="43fe9877-d8e4-4eb1-afa2-98c05eca1f9e" name="project-files" comment="For unused files" />
       <created>1448107521951</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1448107521951</updated>
+      <workItem from="1459560408711" duration="25340000" />
+      <workItem from="1459681801399" duration="17000" />
+      <workItem from="1459762916787" duration="1426000" />
+      <workItem from="1459878888018" duration="20415000" />
+      <workItem from="1460083036436" duration="3347000" />
+      <workItem from="1460128327271" duration="10154000" />
+      <workItem from="1460210586757" duration="10596000" />
     </task>
-    <task id="LOCAL-00332" summary="Try with interoperability simple vocabulary">
-      <created>1449707119016</created>
-      <option name="number" value="00332" />
+    <task id="LOCAL-00444" summary="Capability description of known devices">
+      <created>1459607722655</created>
+      <option name="number" value="00444" />
+      <option name="presentableId" value="LOCAL-00444" />
       <option name="project" value="LOCAL" />
-      <updated>1449707119016</updated>
+      <updated>1459607722655</updated>
     </task>
-    <task id="LOCAL-00333" summary="Try with interoperability simple vocabulary">
-      <created>1449707837698</created>
-      <option name="number" value="00333" />
+    <task id="LOCAL-00445" summary="Capability description of known devices">
+      <created>1459609547255</created>
+      <option name="number" value="00445" />
+      <option name="presentableId" value="LOCAL-00445" />
       <option name="project" value="LOCAL" />
-      <updated>1449707837698</updated>
+      <updated>1459609547255</updated>
     </task>
-    <task id="LOCAL-00334" summary="Try with interoperability simple vocabulary">
-      <created>1449708012861</created>
-      <option name="number" value="00334" />
+    <task id="LOCAL-00446" summary="Integration with infra-wot prototype">
+      <created>1459942366366</created>
+      <option name="number" value="00446" />
+      <option name="presentableId" value="LOCAL-00446" />
       <option name="project" value="LOCAL" />
-      <updated>1449708012861</updated>
+      <updated>1459942366367</updated>
     </task>
-    <task id="LOCAL-00335" summary="Try with interoperability simple vocabulary">
-      <created>1449708864471</created>
-      <option name="number" value="00335" />
+    <task id="LOCAL-00447" summary="Integration with infra-wot prototype">
+      <created>1459944508430</created>
+      <option name="number" value="00447" />
+      <option name="presentableId" value="LOCAL-00447" />
       <option name="project" value="LOCAL" />
-      <updated>1449708864471</updated>
+      <updated>1459944508430</updated>
     </task>
-    <task id="LOCAL-00336" summary="Try with interoperability simple vocabulary">
-      <created>1449709641441</created>
-      <option name="number" value="00336" />
+    <task id="LOCAL-00448" summary="Trying to change MIME type in middleware/jsonldHeaders to allow parsing in clients">
+      <created>1459949197659</created>
+      <option name="number" value="00448" />
+      <option name="presentableId" value="LOCAL-00448" />
       <option name="project" value="LOCAL" />
-      <updated>1449709641441</updated>
+      <updated>1459949197659</updated>
     </task>
-    <task id="LOCAL-00337" summary="Try with interoperability simple vocabulary">
-      <created>1449709686654</created>
-      <option name="number" value="00337" />
+    <task id="LOCAL-00449" summary="Trying to change MIME type in middleware/jsonldHeaders to allow parsing in clients">
+      <created>1459949814925</created>
+      <option name="number" value="00449" />
+      <option name="presentableId" value="LOCAL-00449" />
       <option name="project" value="LOCAL" />
-      <updated>1449709686654</updated>
+      <updated>1459949814925</updated>
     </task>
-    <task id="LOCAL-00338" summary="Try with interoperability simple vocabulary">
-      <created>1449710448522</created>
-      <option name="number" value="00338" />
+    <task id="LOCAL-00450" summary="Trying to change MIME type in middleware/jsonldHeaders to allow parsing in clients">
+      <created>1459960384724</created>
+      <option name="number" value="00450" />
+      <option name="presentableId" value="LOCAL-00450" />
       <option name="project" value="LOCAL" />
-      <updated>1449710448522</updated>
+      <updated>1459960384724</updated>
     </task>
-    <task id="LOCAL-00339" summary="Try with interoperability simple vocabulary">
-      <created>1449710742064</created>
-      <option name="number" value="00339" />
+    <task id="LOCAL-00451" summary="Trying to change MIME type in middleware/jsonldHeaders to allow parsing in clients">
+      <created>1459961122559</created>
+      <option name="number" value="00451" />
+      <option name="presentableId" value="LOCAL-00451" />
       <option name="project" value="LOCAL" />
-      <updated>1449710742064</updated>
+      <updated>1459961122559</updated>
     </task>
-    <task id="LOCAL-00340" summary="Try with interoperability simple vocabulary">
-      <created>1449711376812</created>
-      <option name="number" value="00340" />
+    <task id="LOCAL-00452" summary="Trying to change MIME type in middleware/jsonldHeaders to allow parsing in clients">
+      <created>1459961190476</created>
+      <option name="number" value="00452" />
+      <option name="presentableId" value="LOCAL-00452" />
       <option name="project" value="LOCAL" />
-      <updated>1449711376812</updated>
+      <updated>1459961190476</updated>
     </task>
-    <task id="LOCAL-00341" summary="Try with interoperability simple vocabulary">
-      <created>1449711903932</created>
-      <option name="number" value="00341" />
+    <task id="LOCAL-00453" summary="Trying to change MIME type in middleware/jsonldHeaders to allow parsing in clients">
+      <created>1459961258671</created>
+      <option name="number" value="00453" />
+      <option name="presentableId" value="LOCAL-00453" />
       <option name="project" value="LOCAL" />
-      <updated>1449711903932</updated>
+      <updated>1459961258671</updated>
     </task>
-    <task id="LOCAL-00342" summary="Try with interoperability simple vocabulary">
-      <created>1449713158902</created>
-      <option name="number" value="00342" />
+    <task id="LOCAL-00454" summary="Trying to change MIME type in middleware/jsonldHeaders to allow parsing in clients">
+      <created>1459961556290</created>
+      <option name="number" value="00454" />
+      <option name="presentableId" value="LOCAL-00454" />
       <option name="project" value="LOCAL" />
-      <updated>1449713158902</updated>
+      <updated>1459961556290</updated>
     </task>
-    <task id="LOCAL-00343" summary="Try with interoperability simple vocabulary">
-      <created>1449713579313</created>
-      <option name="number" value="00343" />
+    <task id="LOCAL-00455" summary="Interoperability controller redirects gateway requests">
+      <created>1459965559737</created>
+      <option name="number" value="00455" />
+      <option name="presentableId" value="LOCAL-00455" />
       <option name="project" value="LOCAL" />
-      <updated>1449713579313</updated>
+      <updated>1459965559737</updated>
     </task>
-    <task id="LOCAL-00344" summary="Try with interoperability simple vocabulary">
-      <created>1449714474910</created>
-      <option name="number" value="00344" />
+    <task id="LOCAL-00456" summary="Interoperability controller redirects gateway requests">
+      <created>1459966564649</created>
+      <option name="number" value="00456" />
+      <option name="presentableId" value="LOCAL-00456" />
       <option name="project" value="LOCAL" />
-      <updated>1449714474910</updated>
+      <updated>1459966564649</updated>
     </task>
-    <task id="LOCAL-00345" summary="Try with interoperability simple vocabulary">
-      <created>1449715145291</created>
-      <option name="number" value="00345" />
+    <task id="LOCAL-00457" summary="Interoperability controller redirects gateway requests">
+      <created>1459966730246</created>
+      <option name="number" value="00457" />
+      <option name="presentableId" value="LOCAL-00457" />
       <option name="project" value="LOCAL" />
-      <updated>1449715145292</updated>
+      <updated>1459966730246</updated>
     </task>
-    <task id="LOCAL-00346" summary="Try with interoperability simple vocabulary">
-      <created>1449715267447</created>
-      <option name="number" value="00346" />
+    <task id="LOCAL-00458" summary="Interoperability controller redirects gateway requests">
+      <created>1459967460964</created>
+      <option name="number" value="00458" />
+      <option name="presentableId" value="LOCAL-00458" />
       <option name="project" value="LOCAL" />
-      <updated>1449715267447</updated>
+      <updated>1459967460964</updated>
     </task>
-    <task id="LOCAL-00347" summary="Try with interoperability simple vocabulary">
-      <created>1449739147574</created>
-      <option name="number" value="00347" />
+    <task id="LOCAL-00459" summary="Interoperability controller redirects gateway requests">
+      <created>1459967740128</created>
+      <option name="number" value="00459" />
+      <option name="presentableId" value="LOCAL-00459" />
       <option name="project" value="LOCAL" />
-      <updated>1449739147574</updated>
+      <updated>1459967740128</updated>
     </task>
-    <task id="LOCAL-00348" summary="Try with interoperability simple vocabulary">
-      <created>1449739762351</created>
-      <option name="number" value="00348" />
+    <task id="LOCAL-00460" summary="Interoperability controller redirects gateway requests">
+      <created>1459975320145</created>
+      <option name="number" value="00460" />
+      <option name="presentableId" value="LOCAL-00460" />
       <option name="project" value="LOCAL" />
-      <updated>1449739762351</updated>
+      <updated>1459975320145</updated>
     </task>
-    <task id="LOCAL-00349" summary="Try with interoperability simple vocabulary">
-      <created>1449740404291</created>
-      <option name="number" value="00349" />
+    <task id="LOCAL-00461" summary="Interoperability controller redirects gateway requests">
+      <created>1459975395083</created>
+      <option name="number" value="00461" />
+      <option name="presentableId" value="LOCAL-00461" />
       <option name="project" value="LOCAL" />
-      <updated>1449740404291</updated>
+      <updated>1459975395083</updated>
     </task>
-    <task id="LOCAL-00350" summary="Try with interoperability simple vocabulary">
-      <created>1449740814571</created>
-      <option name="number" value="00350" />
+    <task id="LOCAL-00462" summary="Interoperability controller redirects gateway requests">
+      <created>1459976464369</created>
+      <option name="number" value="00462" />
+      <option name="presentableId" value="LOCAL-00462" />
       <option name="project" value="LOCAL" />
-      <updated>1449740814571</updated>
+      <updated>1459976464369</updated>
     </task>
-    <task id="LOCAL-00351" summary="Try with interoperability simple vocabulary">
-      <created>1449743318584</created>
-      <option name="number" value="00351" />
+    <task id="LOCAL-00463" summary="Interoperability controller redirects gateway requests">
+      <created>1459976528587</created>
+      <option name="number" value="00463" />
+      <option name="presentableId" value="LOCAL-00463" />
       <option name="project" value="LOCAL" />
-      <updated>1449743318584</updated>
+      <updated>1459976528587</updated>
     </task>
-    <task id="LOCAL-00352" summary="Try with interoperability simple vocabulary">
-      <created>1449743734336</created>
-      <option name="number" value="00352" />
+    <task id="LOCAL-00464" summary="Interoperability controller redirects gateway requests">
+      <created>1459977030919</created>
+      <option name="number" value="00464" />
+      <option name="presentableId" value="LOCAL-00464" />
       <option name="project" value="LOCAL" />
-      <updated>1449743734337</updated>
+      <updated>1459977030920</updated>
     </task>
-    <task id="LOCAL-00353" summary="Try with interoperability simple vocabulary">
-      <created>1449744078263</created>
-      <option name="number" value="00353" />
+    <task id="LOCAL-00465" summary="Interoperability controller redirects gateway requests">
+      <created>1459977102822</created>
+      <option name="number" value="00465" />
+      <option name="presentableId" value="LOCAL-00465" />
       <option name="project" value="LOCAL" />
-      <updated>1449744078263</updated>
+      <updated>1459977102822</updated>
     </task>
-    <task id="LOCAL-00354" summary="Try with interoperability simple vocabulary">
-      <created>1449744646768</created>
-      <option name="number" value="00354" />
+    <task id="LOCAL-00466" summary="Interoperability controller redirects gateway requests">
+      <created>1459977294548</created>
+      <option name="number" value="00466" />
+      <option name="presentableId" value="LOCAL-00466" />
       <option name="project" value="LOCAL" />
-      <updated>1449744646768</updated>
+      <updated>1459977294548</updated>
     </task>
-    <task id="LOCAL-00355" summary="Try with interoperability simple vocabulary">
-      <created>1449745294369</created>
-      <option name="number" value="00355" />
+    <task id="LOCAL-00467" summary="Interoperability controller redirects gateway requests">
+      <created>1459977686446</created>
+      <option name="number" value="00467" />
+      <option name="presentableId" value="LOCAL-00467" />
       <option name="project" value="LOCAL" />
-      <updated>1449745294369</updated>
+      <updated>1459977686446</updated>
     </task>
-    <task id="LOCAL-00356" summary="Try with interoperability simple vocabulary">
-      <created>1449746150867</created>
-      <option name="number" value="00356" />
+    <task id="LOCAL-00468" summary="Interoperability controller redirects gateway requests">
+      <created>1459978075086</created>
+      <option name="number" value="00468" />
+      <option name="presentableId" value="LOCAL-00468" />
       <option name="project" value="LOCAL" />
-      <updated>1449746150867</updated>
+      <updated>1459978075086</updated>
     </task>
-    <task id="LOCAL-00357" summary="Try with interoperability simple vocabulary">
-      <created>1449746670125</created>
-      <option name="number" value="00357" />
+    <task id="LOCAL-00469" summary="Interoperability controller redirects gateway requests">
+      <created>1459978385594</created>
+      <option name="number" value="00469" />
+      <option name="presentableId" value="LOCAL-00469" />
       <option name="project" value="LOCAL" />
-      <updated>1449746670125</updated>
+      <updated>1459978385594</updated>
     </task>
-    <task id="LOCAL-00358" summary="Try with interoperability simple vocabulary">
-      <created>1449747277449</created>
-      <option name="number" value="00358" />
+    <task id="LOCAL-00470" summary="Interoperability controller redirects gateway requests">
+      <created>1459978512802</created>
+      <option name="number" value="00470" />
+      <option name="presentableId" value="LOCAL-00470" />
       <option name="project" value="LOCAL" />
-      <updated>1449747277449</updated>
+      <updated>1459978512802</updated>
     </task>
-    <task id="LOCAL-00359" summary="Try with interoperability simple vocabulary">
-      <created>1449747368844</created>
-      <option name="number" value="00359" />
+    <task id="LOCAL-00471" summary="Interoperability controller redirects gateway requests">
+      <created>1459979451455</created>
+      <option name="number" value="00471" />
+      <option name="presentableId" value="LOCAL-00471" />
       <option name="project" value="LOCAL" />
-      <updated>1449747368844</updated>
+      <updated>1459979451455</updated>
     </task>
-    <task id="LOCAL-00360" summary="Try with interoperability simple vocabulary">
-      <created>1449747459122</created>
-      <option name="number" value="00360" />
+    <task id="LOCAL-00472" summary="Interoperability controller redirects gateway requests">
+      <created>1459979612341</created>
+      <option name="number" value="00472" />
+      <option name="presentableId" value="LOCAL-00472" />
       <option name="project" value="LOCAL" />
-      <updated>1449747459122</updated>
+      <updated>1459979612341</updated>
     </task>
-    <task id="LOCAL-00361" summary="Try with interoperability simple vocabulary">
-      <created>1449747709103</created>
-      <option name="number" value="00361" />
+    <task id="LOCAL-00473" summary="Interoperability controller redirects gateway requests">
+      <created>1459979963108</created>
+      <option name="number" value="00473" />
+      <option name="presentableId" value="LOCAL-00473" />
       <option name="project" value="LOCAL" />
-      <updated>1449747709103</updated>
+      <updated>1459979963108</updated>
     </task>
-    <task id="LOCAL-00362" summary="Try with interoperability simple vocabulary">
-      <created>1449748125276</created>
-      <option name="number" value="00362" />
+    <task id="LOCAL-00474" summary="Interoperability controller redirects gateway requests">
+      <created>1459980009052</created>
+      <option name="number" value="00474" />
+      <option name="presentableId" value="LOCAL-00474" />
       <option name="project" value="LOCAL" />
-      <updated>1449748125276</updated>
+      <updated>1459980009052</updated>
     </task>
-    <task id="LOCAL-00363" summary="Try with interoperability simple vocabulary">
-      <created>1449748394470</created>
-      <option name="number" value="00363" />
+    <task id="LOCAL-00475" summary="Interoperability controller redirects gateway requests">
+      <created>1459980142124</created>
+      <option name="number" value="00475" />
+      <option name="presentableId" value="LOCAL-00475" />
       <option name="project" value="LOCAL" />
-      <updated>1449748394471</updated>
+      <updated>1459980142124</updated>
     </task>
-    <task id="LOCAL-00364" summary="Try with interoperability simple vocabulary">
-      <created>1449748540787</created>
-      <option name="number" value="00364" />
+    <task id="LOCAL-00476" summary="Interoperability controller redirects gateway requests">
+      <created>1459980215200</created>
+      <option name="number" value="00476" />
+      <option name="presentableId" value="LOCAL-00476" />
       <option name="project" value="LOCAL" />
-      <updated>1449748540787</updated>
+      <updated>1459980215200</updated>
     </task>
-    <task id="LOCAL-00365" summary="Try with interoperability simple vocabulary">
-      <created>1449748890533</created>
-      <option name="number" value="00365" />
+    <task id="LOCAL-00477" summary="Interoperability controller redirects gateway requests">
+      <created>1459980448974</created>
+      <option name="number" value="00477" />
+      <option name="presentableId" value="LOCAL-00477" />
       <option name="project" value="LOCAL" />
-      <updated>1449748890534</updated>
+      <updated>1459980448974</updated>
     </task>
-    <task id="LOCAL-00366" summary="Try with interoperability simple vocabulary">
-      <created>1449749076835</created>
-      <option name="number" value="00366" />
+    <task id="LOCAL-00478" summary="Interoperability controller redirects gateway requests">
+      <created>1459980483173</created>
+      <option name="number" value="00478" />
+      <option name="presentableId" value="LOCAL-00478" />
       <option name="project" value="LOCAL" />
-      <updated>1449749076835</updated>
+      <updated>1459980483173</updated>
     </task>
-    <task id="LOCAL-00367" summary="Try with interoperability simple vocabulary">
-      <created>1449749126104</created>
-      <option name="number" value="00367" />
+    <task id="LOCAL-00479" summary="Interoperability controller redirects gateway requests">
+      <created>1459980835488</created>
+      <option name="number" value="00479" />
+      <option name="presentableId" value="LOCAL-00479" />
       <option name="project" value="LOCAL" />
-      <updated>1449749126104</updated>
+      <updated>1459980835488</updated>
     </task>
-    <task id="LOCAL-00368" summary="Try with interoperability simple vocabulary">
-      <created>1449766775717</created>
-      <option name="number" value="00368" />
+    <task id="LOCAL-00480" summary="Interoperability controller redirects gateway requests">
+      <created>1459981739327</created>
+      <option name="number" value="00480" />
+      <option name="presentableId" value="LOCAL-00480" />
       <option name="project" value="LOCAL" />
-      <updated>1449766775719</updated>
+      <updated>1459981739327</updated>
     </task>
-    <task id="LOCAL-00369" summary="Try with interoperability simple vocabulary">
-      <created>1449774328119</created>
-      <option name="number" value="00369" />
+    <task id="LOCAL-00481" summary="Turned applicative capability and functionality descriptions in the main ontology  from owl:individuals to owl:classes">
+      <created>1460170735437</created>
+      <option name="number" value="00481" />
+      <option name="presentableId" value="LOCAL-00481" />
       <option name="project" value="LOCAL" />
-      <updated>1449774328120</updated>
+      <updated>1460170735437</updated>
     </task>
-    <task id="LOCAL-00370" summary="Try with interoperability simple vocabulary">
-      <created>1449774390554</created>
-      <option name="number" value="00370" />
+    <task id="LOCAL-00482" summary="Turned applicative capability and functionality descriptions in the main ontology  from owl:individuals to owl:classes">
+      <created>1460206477453</created>
+      <option name="number" value="00482" />
+      <option name="presentableId" value="LOCAL-00482" />
       <option name="project" value="LOCAL" />
-      <updated>1449774390554</updated>
+      <updated>1460206477453</updated>
     </task>
-    <task id="LOCAL-00371" summary="Try with interoperability simple vocabulary">
-      <created>1449832502725</created>
-      <option name="number" value="00371" />
+    <task id="LOCAL-00483" summary="Turned applicative capability and functionality descriptions in the main ontology  from owl:individuals to owl:classes">
+      <created>1460219107288</created>
+      <option name="number" value="00483" />
+      <option name="presentableId" value="LOCAL-00483" />
       <option name="project" value="LOCAL" />
-      <updated>1449832502726</updated>
+      <updated>1460219107288</updated>
     </task>
-    <task id="LOCAL-00372" summary="Try with interoperability simple vocabulary">
-      <created>1449832614000</created>
-      <option name="number" value="00372" />
+    <task id="LOCAL-00484" summary="Turned applicative capability and functionality descriptions in the main ontology  from owl:individuals to owl:classes">
+      <created>1460219310832</created>
+      <option name="number" value="00484" />
+      <option name="presentableId" value="LOCAL-00484" />
       <option name="project" value="LOCAL" />
-      <updated>1449832614000</updated>
+      <updated>1460219310832</updated>
     </task>
-    <task id="LOCAL-00373" summary="Try with interoperability simple vocabulary">
-      <created>1449855570417</created>
-      <option name="number" value="00373" />
+    <task id="LOCAL-00485" summary="Turned applicative capability and functionality descriptions in the main ontology  from owl:individuals to owl:classes">
+      <created>1460244804923</created>
+      <option name="number" value="00485" />
+      <option name="presentableId" value="LOCAL-00485" />
       <option name="project" value="LOCAL" />
-      <updated>1449855570417</updated>
+      <updated>1460244804923</updated>
     </task>
-    <task id="LOCAL-00374" summary="Try with interoperability simple vocabulary">
-      <created>1449859717744</created>
-      <option name="number" value="00374" />
+    <task id="LOCAL-00486" summary="Turned applicative capability and functionality descriptions in the main ontology  from owl:individuals to owl:classes">
+      <created>1460245559129</created>
+      <option name="number" value="00486" />
+      <option name="presentableId" value="LOCAL-00486" />
       <option name="project" value="LOCAL" />
-      <updated>1449859717744</updated>
+      <updated>1460245559130</updated>
     </task>
-    <task id="LOCAL-00375" summary="Try with interoperability simple vocabulary">
-      <created>1449860058542</created>
-      <option name="number" value="00375" />
+    <task id="LOCAL-00487" summary="Turned applicative capability and functionality descriptions in the main ontology  from owl:individuals to owl:classes">
+      <created>1460254192042</created>
+      <option name="number" value="00487" />
+      <option name="presentableId" value="LOCAL-00487" />
       <option name="project" value="LOCAL" />
-      <updated>1449860058542</updated>
+      <updated>1460254192043</updated>
     </task>
-    <task id="LOCAL-00376" summary="Try with interoperability simple vocabulary">
-      <created>1449860165469</created>
-      <option name="number" value="00376" />
+    <task id="LOCAL-00488" summary="Turned applicative capability and functionality descriptions in the main ontology  from owl:individuals to owl:classes">
+      <created>1460254379191</created>
+      <option name="number" value="00488" />
+      <option name="presentableId" value="LOCAL-00488" />
       <option name="project" value="LOCAL" />
-      <updated>1449860165469</updated>
+      <updated>1460254379191</updated>
     </task>
-    <task id="LOCAL-00377" summary="Try with interoperability simple vocabulary">
-      <created>1450051272110</created>
-      <option name="number" value="00377" />
+    <task id="LOCAL-00489" summary="Turned applicative capability and functionality descriptions in the main ontology  from owl:individuals to owl:classes">
+      <created>1460254647773</created>
+      <option name="number" value="00489" />
+      <option name="presentableId" value="LOCAL-00489" />
       <option name="project" value="LOCAL" />
-      <updated>1450051272112</updated>
+      <updated>1460254647774</updated>
     </task>
-    <task id="LOCAL-00378" summary="Try with interoperability simple vocabulary">
-      <created>1450051690750</created>
-      <option name="number" value="00378" />
+    <task id="LOCAL-00490" summary="Turned applicative capability and functionality descriptions in the main ontology  from owl:individuals to owl:classes">
+      <created>1460255301388</created>
+      <option name="number" value="00490" />
+      <option name="presentableId" value="LOCAL-00490" />
       <option name="project" value="LOCAL" />
-      <updated>1450051690750</updated>
+      <updated>1460255301388</updated>
     </task>
-    <task id="LOCAL-00379" summary="Try with interoperability simple vocabulary">
-      <created>1450052297567</created>
-      <option name="number" value="00379" />
+    <task id="LOCAL-00491" summary="Turned applicative capability and functionality descriptions in the main ontology  from owl:individuals to owl:classes">
+      <created>1460255343136</created>
+      <option name="number" value="00491" />
+      <option name="presentableId" value="LOCAL-00491" />
       <option name="project" value="LOCAL" />
-      <updated>1450052297567</updated>
+      <updated>1460255343136</updated>
     </task>
-    <task id="LOCAL-00380" summary="Try with interoperability simple vocabulary">
-      <created>1450052659676</created>
-      <option name="number" value="00380" />
+    <task id="LOCAL-00492" summary="Turned applicative capability and functionality descriptions in the main ontology  from owl:individuals to owl:classes">
+      <created>1460255478553</created>
+      <option name="number" value="00492" />
+      <option name="presentableId" value="LOCAL-00492" />
       <option name="project" value="LOCAL" />
-      <updated>1450052659676</updated>
+      <updated>1460255478554</updated>
     </task>
-    <option name="localTasksCounter" value="381" />
+    <option name="localTasksCounter" value="493" />
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="71295000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -939,28 +1025,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1298" height="928" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1403118" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2594655" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24966975" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16174921" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21805112" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33289817" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20496084" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24900925" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1403118" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850778" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -975,14 +1062,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
-    </option>
-    <MESSAGE value="Fix require issue in ontology controller" />
-    <MESSAGE value="Fix export issue in ontology controller" />
-    <MESSAGE value="Test in models/ontology" />
     <MESSAGE value="/ontology part works" />
     <MESSAGE value="Updated index.jade" />
     <MESSAGE value="Updated interoperability layer URL in public JS files" />
@@ -990,238 +1072,291 @@
     <MESSAGE value="First try with interoperability layer complete" />
     <MESSAGE value="Try with interoperability layer complete" />
     <MESSAGE value="Try with interoperability simple vocabulary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Try with interoperability simple vocabulary" />
+    <MESSAGE value="Updated package.json" />
+    <MESSAGE value="Small fixes" />
+    <MESSAGE value="Fixed double slash bug in ontology" />
+    <MESSAGE value="Fixed source links from /ontology" />
+    <MESSAGE value="Updated gitignore, to try to get rid of these f...g .idea/xxx files" />
+    <MESSAGE value="Still some double slashes" />
+    <MESSAGE value="Fixed URL issues in /ontology and /code-repository" />
+    <MESSAGE value="More URL issues" />
+    <MESSAGE value="More URIs" />
+    <MESSAGE value="CSS in main entry page" />
+    <MESSAGE value="Interoperability-public index" />
+    <MESSAGE value="SCSS" />
+    <MESSAGE value="HTML device description" />
+    <MESSAGE value="Capability description of known devices" />
+    <MESSAGE value="Integration with infra-wot prototype" />
+    <MESSAGE value="Trying to change MIME type in middleware/jsonldHeaders to allow parsing in clients" />
+    <MESSAGE value="Interoperability controller redirects gateway requests" />
+    <MESSAGE value="Turned applicative capability and functionality descriptions in the main ontology  from owl:individuals to owl:classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Turned applicative capability and functionality descriptions in the main ontology  from owl:individuals to owl:classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/functionalities/hydra.jsonld">
+    <entry file="file://$PROJECT_DIR$/views/interoperability/capability.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4857143" vertical-offset="5680" max-vertical-offset="6380">
-          <caret line="301" column="41" selection-start-line="301" selection-start-column="37" selection-end-line="301" selection-end-column="41" />
+        <state relative-caret-position="581">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/ontology/functionalities/prefixes.js">
+    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/temperatureDecrease.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37174723" vertical-offset="0" max-vertical-offset="807">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/ontology/functionalities/functionalities.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.0277777" vertical-offset="0" max-vertical-offset="11840">
-          <caret line="253" column="42" selection-start-line="253" selection-start-column="31" selection-end-line="253" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/ontology/contexts/Capability.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="807">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/interoperability/devicesSimple.jade">
+    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/cooler-swirlwind-2443.jsonld">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="754">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="242">
+          <caret line="11" column="95" selection-start-line="11" selection-start-column="95" selection-end-line="11" selection-end-column="95" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/interoperability/devices.jade">
+    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/heater-tesco-2336.jsonld">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="754">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/sensor-ge-2442.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.586207" vertical-offset="0" max-vertical-offset="520">
-          <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/gps-sony-2556.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.793103" vertical-offset="0" max-vertical-offset="520">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/contexts/WindowStatus.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.827586" vertical-offset="0" max-vertical-offset="260">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/contexts/Position.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="754">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/contexts/Device.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="754">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css-preprocessing/sass/functionality.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82857144" vertical-offset="7000" max-vertical-offset="7700">
-          <caret line="379" column="0" selection-start-line="379" selection-start-column="0" selection-end-line="379" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/interoperability-public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="800">
-          <caret line="30" column="1237" selection-start-line="30" selection-start-column="1237" selection-end-line="30" selection-end-column="1237" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/interoperability/device.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7582418" vertical-offset="39" max-vertical-offset="858">
-          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/interoperability/deviceSimple.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08058608" vertical-offset="0" max-vertical-offset="819">
-          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css-preprocessing/sass/interoperability.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.3333335" vertical-offset="0" max-vertical-offset="7524">
-          <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/interoperability-public/js/interoperability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1760">
-          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/contexts/AppStatus.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0689654" vertical-offset="0" max-vertical-offset="260">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/interoperability/deviceSimple.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3968254" vertical-offset="0" max-vertical-offset="756">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/middleware/initVariables.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58201057" vertical-offset="0" max-vertical-offset="756">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/globals.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1240">
-          <caret line="36" column="55" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/middleware/jsonldHeaders.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="242">
+          <caret line="11" column="99" selection-start-line="11" selection-start-column="99" selection-end-line="11" selection-end-column="99" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/interoperability/devices/motor-ge-3343.jsonld">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60522693" vertical-offset="0" max-vertical-offset="727">
-          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        <state relative-caret-position="289">
+          <caret line="16" column="92" selection-start-line="16" selection-start-column="92" selection-end-line="16" selection-end-column="92" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/phone-samsung-2554.jsonld">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5849057" vertical-offset="630" max-vertical-offset="1160">
-          <caret line="47" column="118" selection-start-line="47" selection-start-column="118" selection-end-line="47" selection-end-column="157" />
+        <state relative-caret-position="326">
+          <caret line="36" column="45" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/sensor-ge-2442.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="95" selection-start-line="10" selection-start-column="95" selection-end-line="10" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/window-ikea-2555.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="90" selection-start-line="15" selection-start-column="90" selection-end-line="15" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/coolerheater-swirlwind-2665.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="94" selection-start-line="15" selection-start-column="94" selection-end-line="15" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/gps-sony-2556.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/contexts/Capability.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ontology/vocabs/interoperability.jsonld" />
+    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/activateMotor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/gateway.js" />
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers/jsonTemplateEngine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ontology/hydra.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/middleware/jsonldHeaders.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/functionalities/contexts/UrlCima.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ontology/contexts/Functionality.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ontology/contexts/EntryPoint.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ontology/contexts/Collection.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ontology/contexts/Capability.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ontology/contexts/Device.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/interoperability/vocabs/interoperability.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ontology/functionalities/prefixes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ontology/functionalities/functionalities.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ontology/vocabs/capabilities.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ontology/vocabs/functionalities.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/functionalities/hydra.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ontology/vocabs/asawoo.jsonld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!block;n#@context#0;n#!!top" expanded="false" />
+            <element signature="e#1221#1443#0" expanded="false" />
+            <element signature="e#2391#2768#0" expanded="false" />
+            <element signature="e#3348#3733#0" expanded="false" />
+            <element signature="e#5393#5692#0" expanded="false" />
+            <element signature="e#5731#6286#0" expanded="false" />
+            <element signature="e#6296#6868#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/ontology.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ontology.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9683099" vertical-offset="250" max-vertical-offset="1120">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="330">
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/temperatureIncrease.js">
+    <entry file="file://$PROJECT_DIR$/middleware/initVariables.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5965463" vertical-offset="0" max-vertical-offset="637">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        <state relative-caret-position="462">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/contexts/Temperature.jsonld">
+    <entry file="file://$PROJECT_DIR$/views/ontology/composedFunctionalities.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6896552" vertical-offset="0" max-vertical-offset="240">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="4" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/contexts/MotorValue.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7586207" vertical-offset="0" max-vertical-offset="240">
-          <caret line="4" column="22" selection-start-line="1" selection-start-column="4" selection-end-line="4" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/interoperability/capability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4709576" vertical-offset="0" max-vertical-offset="637">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8618421" vertical-offset="56" max-vertical-offset="840">
-          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/heater-tesco-2336.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1229,196 +1364,138 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/capability.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31397173" vertical-offset="0" max-vertical-offset="880">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/activateMotor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5651491" vertical-offset="240" max-vertical-offset="880">
-          <caret line="30" column="60" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/contexts/Capability.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0689654" vertical-offset="0" max-vertical-offset="260">
-          <caret line="3" column="46" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/call.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3091537" vertical-offset="1041" max-vertical-offset="1620">
-          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/photo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8981002" vertical-offset="0" max-vertical-offset="1500">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/video.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8981002" vertical-offset="0" max-vertical-offset="1640">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/sms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60967183" vertical-offset="167" max-vertical-offset="1680">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/gps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5965463" vertical-offset="0" max-vertical-offset="637">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/informationMotor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28257456" vertical-offset="0" max-vertical-offset="637">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/openWindow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43956044" vertical-offset="0" max-vertical-offset="637">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/closeWindow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43956044" vertical-offset="0" max-vertical-offset="637">
-          <caret line="14" column="13" selection-start-line="11" selection-start-column="19" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/temperatureSense.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5965463" vertical-offset="0" max-vertical-offset="660">
-          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/contexts/PhoneStatus.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16447368" vertical-offset="0" max-vertical-offset="608">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46938777" vertical-offset="121" max-vertical-offset="1480">
-          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/temperatureDecrease.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5965463" vertical-offset="0" max-vertical-offset="637">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/vocabs/interoperability.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.793103" vertical-offset="540" max-vertical-offset="2300">
-          <caret line="938" column="10" selection-start-line="938" selection-start-column="10" selection-end-line="938" selection-end-column="10" />
-          <folding>
-            <element signature="n#!!block;n#@context#0;n#!!top" expanded="false" />
-            <element signature="e#1331#1553#0" expanded="false" />
-            <element signature="e#1559#2064#0" expanded="false" />
-            <element signature="e#2071#4701#0" expanded="false" />
-            <element signature="e#4708#5533#0" expanded="false" />
-            <element signature="e#5539#8678#0" expanded="false" />
-            <element signature="e#8684#9587#0" expanded="false" />
-            <element signature="e#9593#11140#0" expanded="false" />
-            <element signature="e#9795#10451#0" expanded="false" />
-            <element signature="e#10461#11126#0" expanded="false" />
-            <element signature="e#11147#12060#0" expanded="false" />
-            <element signature="e#12066#15239#0" expanded="false" />
-            <element signature="e#15245#16207#0" expanded="false" />
-            <element signature="e#16213#18073#0" expanded="false" />
-            <element signature="e#18080#19593#0" expanded="false" />
-            <element signature="e#19599#21203#0" expanded="false" />
-            <element signature="e#21210#23055#0" expanded="false" />
-            <element signature="e#23061#23816#0" expanded="false" />
-            <element signature="e#23822#25112#0" expanded="false" />
-            <element signature="e#25118#26407#0" expanded="false" />
-            <element signature="e#26413#29321#0" expanded="false" />
-            <element signature="e#29328#30915#0" expanded="false" />
-            <element signature="e#30921#31564#0" expanded="false" />
-            <element signature="e#34180#34816#0" expanded="false" />
-            <element signature="e#34822#35368#0" expanded="false" />
-            <element signature="e#35374#36246#0" expanded="false" />
-            <element signature="e#36252#37132#0" expanded="false" />
-            <element signature="e#37138#39677#0" expanded="false" />
-            <element signature="e#39683#42133#0" expanded="false" />
-            <element signature="e#42139#44639#0" expanded="false" />
-            <element signature="e#44645#47204#0" expanded="false" />
-            <element signature="e#47210#49761#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7241379" vertical-offset="0" max-vertical-offset="4680">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/interoperability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="8.75862" vertical-offset="768" max-vertical-offset="4160">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="22" />
+        <state relative-caret-position="136">
+          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/device.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1360">
-          <caret line="53" column="83" selection-start-line="53" selection-start-column="83" selection-end-line="53" selection-end-column="83" />
+        <state relative-caret-position="92">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helpers/jsonTemplateEngine.js">
+    <entry file="file://$PROJECT_DIR$/views/interoperability/entryPoint.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8064516" vertical-offset="0" max-vertical-offset="744">
-          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+        <state relative-caret-position="352">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/globals.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-440">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/interoperability/deviceSimple.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/interoperability/capability.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="22" selection-start-line="20" selection-start-column="9" selection-end-line="21" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/interoperability/entryPoint.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/interoperability/devices.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/interoperability/deviceSimple.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/interoperability/devicesSimple.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/interoperability/connectedDevices.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/interoperability/devicesSimple.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/interoperability/knownDevices.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-308">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/interoperability.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-352">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
