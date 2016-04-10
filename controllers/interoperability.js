@@ -22,9 +22,12 @@ router.get('/', function(request, response, next) {
         //Send the interoperability platform homepage
         response.redirect('/interoperability-public');
     } else {
+        var platform = {
+            "knownDevices": interoperabilityModel.getKnownDeviceCollection(),
+            "connectedDevices": interoperabilityModel.getConnectedDeviceCollection()
+        };
         request.vocabUri = interoperabilityModel.getHydraVocabUri();
         jsonldHeaders(request, response, next);
-        var platform = interoperabilityModel.getKnownDeviceCollection();
         response.end(JSON.stringify((require("../views/interoperability/entryPoint")(platform))));
     }
 });
@@ -35,13 +38,13 @@ router.get('/', function(request, response, next) {
 
 // Returns the collection of known devices (simple descriptions)
 router.get('/devices', function(request, response, next) {
-    var platform = interoperabilityModel.getKnownDeviceCollection();
+    var knownDevices = interoperabilityModel.getKnownDeviceCollection();
     if (request.accepts('html')) {
-        response.render('interoperability/devicesSimple', {devices: platform.devices});
+        response.render('interoperability/devicesSimple', knownDevices);
     } else {
         request.vocabUri = interoperabilityModel.getHydraVocabUri();
         jsonldHeaders(request, response, next);
-        response.end(JSON.stringify((require("../views/interoperability/devicesSimple")(platform))));
+        response.end(JSON.stringify((require("../views/interoperability/knownDevices")(knownDevices))));
     }
 });
 
@@ -90,13 +93,13 @@ router.get('/devices/:deviceId/:capabilityId', function(request, response, next)
 
 // Sends the collection of connected devices (short descriptions)
 router.get('/connected-devices', function(request, response, next) {
-    var platform = interoperabilityModel.getConnectedDeviceCollection();
+    var connectedDevices = interoperabilityModel.getConnectedDeviceCollection();
     if (request.accepts('html')) {
-        response.render('interoperability/devicesSimple', {devices: platform.devices});
+        response.render('interoperability/devicesSimple', connectedDevices);
     } else {
         request.vocabUri = interoperabilityModel.getHydraVocabUri();
         jsonldHeaders(request, response, next);
-        response.end(JSON.stringify((require("../views/interoperability/devicesSimple")(platform))));
+        response.end(JSON.stringify((require("../views/interoperability/connectedDevices")(connectedDevices))));
     }
 });
 
@@ -220,6 +223,7 @@ router.delete('/connected-devices/:deviceId/:capabilityId', jsonParser, function
     }
 });
 
+//TODO Finish the 4 methods
 /**
  * Mock of direct access through the gateway: proxying requests to /interoperability
  */
@@ -255,9 +259,10 @@ router.get('/vocab', function(request, response, next) {
 });
 
 router.get('/vocab/:vocabId', function(request, response, next) {
+    var vocabId = request.params["vocabId"];
     request.vocabUri = interoperabilityModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
-    response.end(interoperabilityModel.getHydraVocabulary(request.params["vocabId"]));
+    response.end(interoperabilityModel.getHydraVocabulary(vocabId));
 });
 
 // GET the hydra context
@@ -269,12 +274,12 @@ router.get('/context', function(request, response, next) {
 });
 
 router.get('/context/:contextId', function(request, response, next) {
-    var result = interoperabilityModel.getHydraContext(request.params["contextId"]);
-    if(result) {
-        request.vocabUri = interoperabilityModel.getHydraVocabUri();
-        jsonldHeaders(request, response, next);
-        response.end(result);
-    } else {
+    var contextId = request.params["contextId"];
+    request.vocabUri = interoperabilityModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
+    try {
+        response.end(interoperabilityModel.getHydraContext(contextId));
+    } catch(error) {
         response.sendStatus(404);
     }
 });

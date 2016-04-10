@@ -5,14 +5,15 @@
 
 (function(module) {
     module.exports = function (entrypointModel) {
-        var Globals = require('./globals');
+        var Globals = require('../../models/globals');
         //TODO add the devices
-        return {
+        var result = {
             "@context": Globals.vocabularies.interoperability + "context/EntryPoint",
             "@type": "hydra:EntryPoint",
-            "@id": Globals.vocabularies.base + "interoperability",
-            "knownDevices": [],
-            "connectedDevices": []
+            "@id": Globals.vocabularies.base + "interoperability"
         };
+        result.knownDevices = entrypointModel.devices;
+        result.connectedDevices = entrypointModel.connectedDevices;
+        return result;
     }
 })(module);

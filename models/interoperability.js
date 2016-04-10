@@ -38,29 +38,20 @@
          */
         // Known devices collection
         "getKnownDeviceCollection": function() {
-            var result = {
-                '@context': Globals.vocabularies.interoperability + 'context/Collection',
-                '@type': 'hydra:Collection',
-                '@id': Globals.vocabularies.interoperability + "platform/devices",
-                'devices': []
-            };
+            var result = [];
             for(var i in knownDevices) {
-                result.devices.push(knownDevices[i]);
+                var device = this.findDeviceById(knownDevices[i]);
+                result.push(device['@id]']);
             }
             return result;
         },
 
         // Connected devices collection
         "getConnectedDeviceCollection": function() {
-            var result = {
-                '@context': Globals.vocabularies.interoperability + 'context/Collection',
-                '@type': 'hydra:Collection',
-                '@id': Globals.vocabularies.interoperability + "connected-devices",
-                'devices': []
-            };
+            var result = [];
             for(var i in this.connectedDevices) {
                 var device = this.findDeviceById(this.connectedDevices[i]);
-                result.devices.push(device);
+                result.push(device['@id]']);
             }
             return result;
         },
@@ -190,25 +181,15 @@
         /**
          * Hydra description model
          */
-        // Entrypoint
-        "entryPoint": {
-            "@context": Globals.vocabularies.interoperability + "context/EntryPoint",
-            "@type": "hydra:EntryPoint",
-            "@id": Globals.vocabularies.base + "interoperability",
-            "device": Globals.vocabularies.interoperability + "device"
-        },
 
         //Returns the Hydra vocabulary corresponding to a particular object or defaults to the interoperability platform vocab
         "getHydraVocabulary": function(fileName)  {
             return templateEngine(fs.readFileSync(fileName ? fileLocations.hydraVocabDir + fileName + ".jsonld" : fileLocations.hydraVocabBaseFile, 'utf8'));
         },
 
+        //Returns the context corresponding to a given id or throws an error
         'getHydraContext': function(contextId) {
-            try {
-                return templateEngine(fs.readFileSync(fileLocations.contextFileDir + contextId + '.jsonld', 'utf8'));
-            } catch (error) {
-                return null;
-            }
+            return templateEngine(fs.readFileSync(fileLocations.contextFileDir + contextId + '.jsonld', 'utf8'));
         }
     };
 })(module);
