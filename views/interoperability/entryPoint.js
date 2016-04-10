@@ -4,16 +4,15 @@
 //View returning a JSON-LD description of the interoperability platform entrypoint
 
 (function(module) {
-    module.exports = function (entrypointModel) {
+    module.exports = function () {
         var Globals = require('../../models/globals');
 
-        var result = {
+        return  {
             "@context": Globals.vocabularies.interoperability + "context/EntryPoint",
             "@type": "hydra:EntryPoint",
-            "@id": Globals.vocabularies.base + "interoperability"
+            "@id": Globals.vocabularies.base + "interoperability",
+            "knownDevices": Globals.vocabularies.interoperability + "devices",
+            "connectedDevices": Globals.vocabularies.interoperability + "connected-devices"
         };
-        result.knownDevices = entrypointModel.devices;
-        result.connectedDevices = entrypointModel.connectedDevices;
-        return result;
     }
 })(module);

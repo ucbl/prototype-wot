@@ -22,13 +22,9 @@ router.get('/', function(request, response, next) {
         //Send the interoperability platform homepage
         response.redirect('/interoperability-public');
     } else {
-        var platform = {
-            "knownDevices": interoperabilityModel.getKnownDeviceCollection(),
-            "connectedDevices": interoperabilityModel.getConnectedDeviceCollection()
-        };
         request.vocabUri = interoperabilityModel.getHydraVocabUri();
         jsonldHeaders(request, response, next);
-        response.end(JSON.stringify((require("../views/interoperability/entryPoint")(platform))));
+        response.end(JSON.stringify((require("../views/interoperability/entryPoint")())));
     }
 });
 
