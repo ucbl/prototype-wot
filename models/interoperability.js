@@ -36,22 +36,22 @@
         /**
          * Service model
          */
-        // Known devices collection
-        "getKnownDeviceCollection": function() {
+        // Known devices collections
+        "getKnownDevices": function() {
             var result = [];
             for(var i in knownDevices) {
                 var device = knownDevices[i];
-                result.push(device['@id']);
+                result.push(device);
             }
             return result;
         },
 
-        // Connected devices collection
-        "getConnectedDeviceCollection": function() {
+        // Connected devices collections
+        "getConnectedDevices": function() {
             var result = [];
             for(var i in this.connectedDevices) {
                 var device = this.findDeviceById(this.connectedDevices[i]);
-                result.push(device['@id']);
+                result.push(device);
             }
             return result;
         },
@@ -125,15 +125,6 @@
                 }
             }
             return false;
-        },
-
-        // Returns the list of actually connected devices
-        "getAllConnectedDevices": function () {
-            var results = [];
-            for(var id in this.connectedDevices) {
-                results.push(this.getDeviceInfos(this.connectedDevices[id]));
-            }
-            return results;
         },
 
         // Informs if an device is actually connected to the interoperability layer

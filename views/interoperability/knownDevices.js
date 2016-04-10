@@ -4,14 +4,18 @@
 //View returning a JSON-LD description of the interoperability platform entrypoint
 
 (function(module) {
-    module.exports = function (devicesModel) {
+    module.exports = function (devices) {
         var Globals = require('../../models/globals');
 
-        return {
+        var result = {
             '@context': Globals.vocabularies.interoperability + 'context/Collection',
             '@type': 'vocab:KnownDeviceRefs',
             '@id': Globals.vocabularies.interoperability + "devices",
-            'knownDevices': devicesModel
+            'knownDevices': []
         };
+        for(var device in devices) {
+            result.knownDevices.push(device['@id']);
+        }
+        return result;
     }
 })(module);

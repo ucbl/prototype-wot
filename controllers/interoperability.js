@@ -34,7 +34,7 @@ router.get('/', function(request, response, next) {
 
 // Returns the collection of known devices (simple descriptions)
 router.get('/devices', function(request, response, next) {
-    var knownDevices = interoperabilityModel.getKnownDeviceCollection();
+    var knownDevices = interoperabilityModel.getKnownDevices();
     if (request.accepts('html')) {
         response.render('interoperability/devicesSimple', {'devices': knownDevices});
     } else {
@@ -89,7 +89,7 @@ router.get('/devices/:deviceId/:capabilityId', function(request, response, next)
 
 // Sends the collection of connected devices (short descriptions)
 router.get('/connected-devices', function(request, response, next) {
-    var connectedDevices = interoperabilityModel.getConnectedDeviceCollection();
+    var connectedDevices = interoperabilityModel.getConnectedDevices();
     if (request.accepts('html')) {
         response.render('interoperability/devicesSimple', {'devices': connectedDevices});
     } else {
