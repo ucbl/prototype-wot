@@ -10,7 +10,8 @@
             "@context": Globals.vocabularies.interoperability + "context/EntryPoint",
             "@type": "hydra:EntryPoint",
             "@id": Globals.vocabularies.base + "interoperability",
-            "devices": []
+            "knownDevices": [],
+            "connectedDevices": []
         };
     }
 })(module);
