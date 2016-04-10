@@ -5,6 +5,7 @@
 
 (function(module) {
     module.exports = function (entrypointModel) {
+        var Globals = require('./globals');
         //TODO add the devices
         return {
             "@context": Globals.vocabularies.interoperability + "context/EntryPoint",
