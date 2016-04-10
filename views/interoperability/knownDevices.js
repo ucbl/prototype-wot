@@ -14,6 +14,7 @@
             'knownDevices': []
         };
         for(var device in devices) {
+            console.log(JSON.stringify(device));
             result.knownDevices.push(device['@id']);
         }
         return result;
