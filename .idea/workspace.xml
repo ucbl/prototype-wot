@@ -63,8 +63,8 @@
       <file leaf-file-name="ontology.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/ontology.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="374">
+              <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -470,14 +470,7 @@
       <workItem from="1460083036436" duration="3347000" />
       <workItem from="1460128327271" duration="10154000" />
       <workItem from="1460210586757" duration="17396000" />
-      <workItem from="1460288090213" duration="29831000" />
-    </task>
-    <task id="LOCAL-00467" summary="Interoperability controller redirects gateway requests">
-      <created>1459977686446</created>
-      <option name="number" value="00467" />
-      <option name="presentableId" value="LOCAL-00467" />
-      <option name="project" value="LOCAL" />
-      <updated>1459977686446</updated>
+      <workItem from="1460288090213" duration="30035000" />
     </task>
     <task id="LOCAL-00468" summary="Interoperability controller redirects gateway requests">
       <created>1459978075086</created>
@@ -815,11 +808,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460394369129</updated>
     </task>
-    <option name="localTasksCounter" value="516" />
+    <task id="LOCAL-00516" summary="All vocabularies in /ontology">
+      <created>1460394596057</created>
+      <option name="number" value="00516" />
+      <option name="presentableId" value="LOCAL-00516" />
+      <option name="project" value="LOCAL" />
+      <updated>1460394596057</updated>
+    </task>
+    <option name="localTasksCounter" value="517" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107926000" />
+    <option name="totallyTimeSpent" value="108130000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1352,8 +1352,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/ontology.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="374">
+          <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
           <folding />
         </state>
       </provider>

@@ -45,7 +45,7 @@ router.get('/vocabs/:vocabId', jsonParser, function(request, response, next) {
     //As adding a property to the request happens to remove its parameters :-(
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
-    response.end(JSON.stringify(ontologyModel.getVocab(vocabId)));
+    response.end(JSON.stringify(ontologyModel.getHydraVocab(vocabId)));
     return true;
 });
 
