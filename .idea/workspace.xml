@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/ontology.js" afterPath="$PROJECT_DIR$/models/ontology.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/ontology.js" afterPath="$PROJECT_DIR$/controllers/ontology.js" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,11 +50,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ontology.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ontology.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/ontology.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
               <caret line="24" column="76" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ontology.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/ontology.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="880">
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -123,7 +133,6 @@
         <option value="$PROJECT_DIR$/data/interoperability/devices/coolerheater-swirlwind-2665.jsonld" />
         <option value="$PROJECT_DIR$/data/interoperability/devices/cooler-swirlwind-2443.jsonld" />
         <option value="$PROJECT_DIR$/data/ontology/vocabs/capabilities.jsonld" />
-        <option value="$PROJECT_DIR$/controllers/ontology.js" />
         <option value="$PROJECT_DIR$/data/ontology/vocabs/functionalities.jsonld" />
         <option value="$PROJECT_DIR$/models/interoperability.js" />
         <option value="$PROJECT_DIR$/data/interoperability/contexts/WindowStatus.jsonld" />
@@ -145,6 +154,7 @@
         <option value="$PROJECT_DIR$/controllers/code-repository.js" />
         <option value="$PROJECT_DIR$/controllers/interoperability.js" />
         <option value="$PROJECT_DIR$/models/ontology.js" />
+        <option value="$PROJECT_DIR$/controllers/ontology.js" />
       </list>
     </option>
   </component>
@@ -460,14 +470,7 @@
       <workItem from="1460083036436" duration="3347000" />
       <workItem from="1460128327271" duration="10154000" />
       <workItem from="1460210586757" duration="17396000" />
-      <workItem from="1460288090213" duration="29605000" />
-    </task>
-    <task id="LOCAL-00466" summary="Interoperability controller redirects gateway requests">
-      <created>1459977294548</created>
-      <option name="number" value="00466" />
-      <option name="presentableId" value="LOCAL-00466" />
-      <option name="project" value="LOCAL" />
-      <updated>1459977294548</updated>
+      <workItem from="1460288090213" duration="29831000" />
     </task>
     <task id="LOCAL-00467" summary="Interoperability controller redirects gateway requests">
       <created>1459977686446</created>
@@ -805,11 +808,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460394136051</updated>
     </task>
-    <option name="localTasksCounter" value="515" />
+    <task id="LOCAL-00515" summary="All vocabularies in /ontology">
+      <created>1460394369128</created>
+      <option name="number" value="00515" />
+      <option name="presentableId" value="LOCAL-00515" />
+      <option name="project" value="LOCAL" />
+      <updated>1460394369129</updated>
+    </task>
+    <option name="localTasksCounter" value="516" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107700000" />
+    <option name="totallyTimeSpent" value="107926000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -976,14 +986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="263" column="9" selection-start-line="263" selection-start-column="9" selection-end-line="263" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ontology.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1344,6 +1346,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="24" column="76" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/ontology.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
       </provider>
