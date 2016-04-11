@@ -2,43 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/ontology/vocabs/asawoo_old.jsonld" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/interoperability/vocabs/interoperability.jsonld" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/code-repository.js" afterPath="$PROJECT_DIR$/controllers/code-repository.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/interoperability.js" afterPath="$PROJECT_DIR$/controllers/interoperability.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/ontology.js" afterPath="$PROJECT_DIR$/controllers/ontology.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/code-repository/contexts/Argument.jsonld" afterPath="$PROJECT_DIR$/data/code-repository/contexts/Argument.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/code-repository/contexts/Code.jsonld" afterPath="$PROJECT_DIR$/data/code-repository/contexts/Code.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/code-repository/contexts/Collection.jsonld" afterPath="$PROJECT_DIR$/data/code-repository/contexts/Collection.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/code-repository/contexts/EntryPoint.jsonld" afterPath="$PROJECT_DIR$/data/code-repository/contexts/EntryPoint.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/code-repository/contexts/Functionality.jsonld" afterPath="$PROJECT_DIR$/data/code-repository/contexts/Functionality.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/code-repository/contexts/Object.jsonld" afterPath="$PROJECT_DIR$/data/code-repository/contexts/Object.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/contexts/AppStatus.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/contexts/AppStatus.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/contexts/Capability.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/contexts/Capability.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/contexts/ConnectedDeviceRefs.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/contexts/ConnectedDeviceRefs.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/contexts/Device.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/contexts/Device.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/contexts/EntryPoint.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/contexts/EntryPoint.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/contexts/KnownDeviceRefs.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/contexts/KnownDeviceRefs.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/contexts/MotorValue.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/contexts/MotorValue.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/contexts/PhoneStatus.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/contexts/PhoneStatus.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/contexts/Position.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/contexts/Position.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/contexts/Temperature.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/contexts/Temperature.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/interoperability/contexts/WindowStatus.jsonld" afterPath="$PROJECT_DIR$/data/interoperability/contexts/WindowStatus.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ontology/contexts/Capability.jsonld" afterPath="$PROJECT_DIR$/data/ontology/contexts/Capability.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ontology/contexts/Collection.jsonld" afterPath="$PROJECT_DIR$/data/ontology/contexts/Collection.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ontology/contexts/Device.jsonld" afterPath="$PROJECT_DIR$/data/ontology/contexts/Device.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ontology/contexts/EntryPoint.jsonld" afterPath="$PROJECT_DIR$/data/ontology/contexts/EntryPoint.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ontology/contexts/Functionality.jsonld" afterPath="$PROJECT_DIR$/data/ontology/contexts/Functionality.jsonld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/interoperability.js" afterPath="$PROJECT_DIR$/models/interoperability.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/ontology.js" afterPath="$PROJECT_DIR$/models/ontology.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/ontology/composedFunctionalities.js" afterPath="$PROJECT_DIR$/views/ontology/composedFunctionalities.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/code-repository/hydra.jsonld" afterPath="$PROJECT_DIR$/data/ontology/vocabs/code-repository.jsonld" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/ontology/functionalities/functionalities.jsonld" afterPath="$PROJECT_DIR$/data/ontology/ontologies/functionalities.jsonld" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/ontology/functionalities/prefixes.js" afterPath="$PROJECT_DIR$/data/ontology/ontologies/prefixes.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/ontology/hydra.jsonld" afterPath="$PROJECT_DIR$/data/ontology/vocabs/ontology.jsonld" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/ontology/vocabs/capabilities.jsonld" afterPath="$PROJECT_DIR$/data/ontology/vocabs/interoperability.jsonld" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/ontology/vocabs/functionalities.jsonld" afterPath="$PROJECT_DIR$/data/ontology/vocabs/asawoo.jsonld" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,11 +40,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="601">
-              <caret line="285" column="19" selection-start-line="285" selection-start-column="19" selection-end-line="285" selection-end-column="19" />
+            <state relative-caret-position="139">
+              <caret line="264" column="2" selection-start-line="264" selection-start-column="2" selection-end-line="264" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ontology.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/ontology.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="21" column="79" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prefixes.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/ontology/ontologies/prefixes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -148,7 +133,6 @@
         <option value="$PROJECT_DIR$/data/interoperability/devices/coolerheater-swirlwind-2665.jsonld" />
         <option value="$PROJECT_DIR$/data/interoperability/devices/cooler-swirlwind-2443.jsonld" />
         <option value="$PROJECT_DIR$/data/ontology/vocabs/capabilities.jsonld" />
-        <option value="$PROJECT_DIR$/models/ontology.js" />
         <option value="$PROJECT_DIR$/controllers/ontology.js" />
         <option value="$PROJECT_DIR$/data/ontology/vocabs/functionalities.jsonld" />
         <option value="$PROJECT_DIR$/models/interoperability.js" />
@@ -170,6 +154,7 @@
         <option value="$PROJECT_DIR$/data/ontology/vocabs/asawoo.jsonld" />
         <option value="$PROJECT_DIR$/controllers/code-repository.js" />
         <option value="$PROJECT_DIR$/controllers/interoperability.js" />
+        <option value="$PROJECT_DIR$/models/ontology.js" />
       </list>
     </option>
   </component>
@@ -485,14 +470,7 @@
       <workItem from="1460083036436" duration="3347000" />
       <workItem from="1460128327271" duration="10154000" />
       <workItem from="1460210586757" duration="17396000" />
-      <workItem from="1460288090213" duration="29110000" />
-    </task>
-    <task id="LOCAL-00463" summary="Interoperability controller redirects gateway requests">
-      <created>1459976528587</created>
-      <option name="number" value="00463" />
-      <option name="presentableId" value="LOCAL-00463" />
-      <option name="project" value="LOCAL" />
-      <updated>1459976528587</updated>
+      <workItem from="1460288090213" duration="29329000" />
     </task>
     <task id="LOCAL-00464" summary="Interoperability controller redirects gateway requests">
       <created>1459977030919</created>
@@ -830,11 +808,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460320433071</updated>
     </task>
-    <option name="localTasksCounter" value="512" />
+    <task id="LOCAL-00512" summary="All vocabularies in /ontology">
+      <created>1460393889221</created>
+      <option name="number" value="00512" />
+      <option name="presentableId" value="LOCAL-00512" />
+      <option name="project" value="LOCAL" />
+      <updated>1460393889221</updated>
+    </task>
+    <option name="localTasksCounter" value="513" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107205000" />
+    <option name="totallyTimeSpent" value="107424000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -858,14 +843,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1298" height="928" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23642172" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35900784" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19060053" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19060053" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24840255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -897,7 +882,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Updated interoperability layer URL in public JS files" />
     <MESSAGE value="Started including /interoperability" />
     <MESSAGE value="First try with interoperability layer complete" />
     <MESSAGE value="Try with interoperability layer complete" />
@@ -922,7 +906,8 @@
     <MESSAGE value="Turned applicative capability and functionality descriptions in the main ontology  from owl:individuals to owl:classes" />
     <MESSAGE value="For unused files" />
     <MESSAGE value="Interoperability hydra vocab" />
-    <option name="LAST_COMMIT_MESSAGE" value="Interoperability hydra vocab" />
+    <MESSAGE value="All vocabularies in /ontology" />
+    <option name="LAST_COMMIT_MESSAGE" value="All vocabularies in /ontology" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -971,14 +956,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/ontology/ontologies/prefixes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/ontology/vocabs/asawoo_old.jsonld">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-153">
@@ -1009,14 +986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="263" column="9" selection-start-line="263" selection-start-column="9" selection-end-line="263" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/ontology.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1367,8 +1336,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="285" column="19" selection-start-line="285" selection-start-column="19" selection-end-line="285" selection-end-column="19" />
+        <state relative-caret-position="139">
+          <caret line="264" column="2" selection-start-line="264" selection-start-column="2" selection-end-line="264" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ontology.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="21" column="79" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ontology/ontologies/prefixes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
           <folding />
         </state>
       </provider>
