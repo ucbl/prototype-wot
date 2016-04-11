@@ -50,7 +50,7 @@
             this.setServerUris();
             this.setOtherUris();
             exports.baseUriUpdated = true;
-            console.log("base URI updated: " + this.base);
+            //console.log("base URI updated: " + this.base);
         }
     };
     vocabularies.setServerUris();
