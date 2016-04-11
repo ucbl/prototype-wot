@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/ontology.js" afterPath="$PROJECT_DIR$/controllers/ontology.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/globals.js" afterPath="$PROJECT_DIR$/models/globals.js" />
     </list>
     <ignored path="prototype-wot-js-v2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,14 +28,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="globals.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/globals.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="107">
+              <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="code-repository.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/code-repository.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="220">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,7 +80,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ontology.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ontology.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/ontology.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
@@ -114,7 +134,6 @@
         <option value="$PROJECT_DIR$/helpers/jsonTemplateEngine.js" />
         <option value="$PROJECT_DIR$/data/ontology/functionalities/prefixes.js" />
         <option value="$PROJECT_DIR$/data/ontology/functionalities/functionalities.jsonld" />
-        <option value="$PROJECT_DIR$/models/globals.js" />
         <option value="$PROJECT_DIR$/views/interoperability/entrypoint.js" />
         <option value="$PROJECT_DIR$/views/interoperability/toto.js" />
         <option value="$PROJECT_DIR$/views/interoperability/entryPoint.js" />
@@ -155,6 +174,7 @@
         <option value="$PROJECT_DIR$/controllers/interoperability.js" />
         <option value="$PROJECT_DIR$/models/ontology.js" />
         <option value="$PROJECT_DIR$/controllers/ontology.js" />
+        <option value="$PROJECT_DIR$/models/globals.js" />
       </list>
     </option>
   </component>
@@ -470,14 +490,7 @@
       <workItem from="1460083036436" duration="3347000" />
       <workItem from="1460128327271" duration="10154000" />
       <workItem from="1460210586757" duration="17396000" />
-      <workItem from="1460288090213" duration="30035000" />
-    </task>
-    <task id="LOCAL-00468" summary="Interoperability controller redirects gateway requests">
-      <created>1459978075086</created>
-      <option name="number" value="00468" />
-      <option name="presentableId" value="LOCAL-00468" />
-      <option name="project" value="LOCAL" />
-      <updated>1459978075086</updated>
+      <workItem from="1460288090213" duration="30234000" />
     </task>
     <task id="LOCAL-00469" summary="Interoperability controller redirects gateway requests">
       <created>1459978385594</created>
@@ -815,11 +828,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460394596057</updated>
     </task>
-    <option name="localTasksCounter" value="517" />
+    <task id="LOCAL-00517" summary="All vocabularies in /ontology">
+      <created>1460394799536</created>
+      <option name="number" value="00517" />
+      <option name="presentableId" value="LOCAL-00517" />
+      <option name="project" value="LOCAL" />
+      <updated>1460394799536</updated>
+    </task>
+    <option name="localTasksCounter" value="518" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108130000" />
+    <option name="totallyTimeSpent" value="108329000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -916,14 +936,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/interoperability/devices/coolerheater-swirlwind-2665.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/call.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -936,14 +948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="526">
           <caret line="1466" column="0" selection-start-line="654" selection-start-column="0" selection-end-line="1466" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/globals.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1292,16 +1296,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/code-repository.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/capability.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1354,6 +1348,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/code-repository.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/globals.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
           <folding />
         </state>
       </provider>

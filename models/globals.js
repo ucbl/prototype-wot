@@ -28,7 +28,7 @@
             //Ontology repository
             this.ontology = this.base + 'ontology/';
             //Functionality code repository
-            this.code = this.base + 'code/';
+            this.code = this.base + 'code-repository/';
         },
 
         //Define all other URIs depending on the base one
