@@ -22,7 +22,7 @@ var ontology = {
                 "@context": templateEngine(require("../data/ontology/ontologies/prefixes.js")['@context'])
         };
 
-        var dataLocation = __dirname + '/../data/ontology/ontologies/ontologies.jsonld';
+        var dataLocation = __dirname + '/../data/ontology/ontologies/functionalities.jsonld';
         fs.readFile(dataLocation, 'utf8', function (error, data) {
             if (!error) {
                 jsonOntology["@graph"] = templateEngine(JSON.parse(data)['@graph']);
