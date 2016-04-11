@@ -7,7 +7,7 @@ var express = require('express'),
     router = express.Router(),
     jsonParser = require('body-parser').json(),
     Globals = require('../models/globals'),
-    interoperabilityModel = require('../models/interoperability'),
+    interoperabilityModel = require('../models/interoperability/platform'),
     jsonldHeaders = require('../middleware/jsonldHeaders');
 
 /*---WEB SERVICE---*/
@@ -277,7 +277,7 @@ router.get('/context/:contextId', function(request, response, next) {
     request.vocabUri = interoperabilityModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     try {
-        response.end(interoperabilityModel.getHydraContext(contextId));
+        response.end(interoperabilityModel.getContext(contextId));
     } catch(error) {
         response.sendStatus(404);
     }

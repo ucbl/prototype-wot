@@ -6,8 +6,8 @@
 
 (function(module) {
     var fs = require('fs'),
-        cloneHelper = require('../helpers/cloneHelper'),
-        templateEngine = require("../helpers/jsonTemplateEngine");
+        cloneHelper = require('../../helpers/cloneHelper'),
+        templateEngine = require("../../helpers/jsonTemplateEngine");
 
     module.exports = {
         'initCapabilities': function(params) {

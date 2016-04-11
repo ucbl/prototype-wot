@@ -8,10 +8,10 @@
 (function(module) {
 
     var fs = require('fs'),
-        Globals = require('./globals'),
+        Globals = require('./../globals'),
         deviceModel = require('./device'),
-        cloneHelper = require('../helpers/cloneHelper'),
-        templateEngine = require("../helpers/jsonTemplateEngine");
+        cloneHelper = require('../../helpers/cloneHelper'),
+        templateEngine = require("../../helpers/jsonTemplateEngine");
 
     //local variable to retrieve data stored in files
     var fileLocations = {
@@ -179,7 +179,7 @@
         },
 
         //Returns the context corresponding to a given id or throws an error
-        'getHydraContext': function(contextId) {
+        'getContext': function(contextId) {
             return templateEngine(fs.readFileSync(fileLocations.contextFileDir + contextId + '.jsonld', 'utf8'));
         }
     };

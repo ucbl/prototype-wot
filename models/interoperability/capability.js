@@ -7,7 +7,7 @@
 
 (function(module) {
     var fs = require('fs'),
-        Globals = require('../models/globals'),
+        Globals = require('../globals'),
         objectModel = require('./device');
 
     module.exports = {

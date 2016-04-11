@@ -5,3 +5,4 @@ tasks.xml
 .idea/.xml
 node_modules/
 /npm-debug.log
+/.idea

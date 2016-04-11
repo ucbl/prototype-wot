@@ -2,9 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/code-repository.js" afterPath="$PROJECT_DIR$/controllers/code-repository.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/asawoo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/asawoo/platform.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/prototype_wot_js_v2_node_modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/prototype-wot-js-v2.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/index.js" afterPath="$PROJECT_DIR$/controllers/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/interoperability.js" afterPath="$PROJECT_DIR$/controllers/interoperability.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/middleware/initVariables.js" afterPath="$PROJECT_DIR$/middleware/initVariables.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/functionalities/contexts/Avatar.jsonld" afterPath="$PROJECT_DIR$/data/asawoo/contexts/Avatar.jsonld" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/functionalities/contexts/Collection.jsonld" afterPath="$PROJECT_DIR$/data/asawoo/contexts/Collection.jsonld" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/functionalities/contexts/EntryPoint.jsonld" afterPath="$PROJECT_DIR$/data/asawoo/contexts/EntryPoint.jsonld" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/functionalities/contexts/Functionality.jsonld" afterPath="$PROJECT_DIR$/data/asawoo/contexts/Functionality.jsonld" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/functionalities/contexts/UrlCima.jsonld" afterPath="$PROJECT_DIR$/data/asawoo/contexts/UrlCima.jsonld" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/functionalities/hydra.jsonld" afterPath="$PROJECT_DIR$/data/asawoo/hydra.jsonld" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/models/capability.js" afterPath="$PROJECT_DIR$/models/interoperability/capability.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/models/device.js" afterPath="$PROJECT_DIR$/models/interoperability/device.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/models/interoperability.js" afterPath="$PROJECT_DIR$/models/interoperability/platform.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/index.html" afterPath="$PROJECT_DIR$/public/asawoo-public/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/jquery/jquery-1.10.2.min.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/jquery/jquery-1.10.2.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/jquery/jquery-ui-1.10.3.custom.min.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/jquery/jquery-ui-1.10.3.custom.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/jquery/jquery.form.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/jquery/jquery.form.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/README.md" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/css/jjsonviewer.css" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/css/jjsonviewer.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/images/example.png" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/images/example.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/index.html" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/js/jjsonviewer.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/js/jjsonviewer.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/js/lib/jquery.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/js/lib/jquery.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/specs/SpecRunner.html" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/specs/SpecRunner.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/specs/jasmine/jasmine-html.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/specs/jasmine/jasmine-html.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/specs/jasmine/jasmine-jquery.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/specs/jasmine/jasmine-jquery.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/specs/jasmine/jasmine.css" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/specs/jasmine/jasmine.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/specs/jasmine/jasmine.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/specs/jasmine/jasmine.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/specs/jjsonviewerSpec.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/specs/jjsonviewerSpec.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/public.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/public.js" />
     </list>
+    <list id="e82bb406-3943-486e-9c1d-4dd443950585" name="devnull" comment="" />
     <ignored path="prototype-wot-js-v2.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,24 +69,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="code-repository.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controllers/code-repository.js">
+      <file leaf-file-name="globals.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/globals.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="721">
+              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntryPoint.jsonld" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/code-repository/contexts/EntryPoint.jsonld">
+      <file leaf-file-name="asawoo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/asawoo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
-              <folding />
+            <state relative-caret-position="110">
+              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#43#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,29 +94,51 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="220">
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/interoperability.js">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="65" selection-start-line="12" selection-start-column="55" selection-end-line="13" selection-end-column="65" />
+            <state relative-caret-position="330">
+              <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interoperability.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/asawoo-public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="279" column="50" selection-start-line="279" selection-start-column="50" selection-end-line="279" selection-end-column="50" />
+            <state relative-caret-position="726">
+              <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jade" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/index.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="platform.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/asawoo/platform.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#43#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,16 +158,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
               <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="temperatureRegulation.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/code-repository/codes/temperatureRegulation.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -134,11 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/interoperability/capability.js" />
-        <option value="$PROJECT_DIR$/models/device.js" />
-        <option value="$PROJECT_DIR$/views/interoperability/deviceSimple.js" />
-        <option value="$PROJECT_DIR$/middleware/jsonldHeaders.js" />
-        <option value="$PROJECT_DIR$/views/interoperability/devicesSimple.js" />
         <option value="$PROJECT_DIR$/controllers/gateway.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/helpers/jsonTemplateEngine.js" />
@@ -180,11 +228,16 @@
         <option value="$PROJECT_DIR$/data/ontology/vocabs/code-repository.jsonld" />
         <option value="$PROJECT_DIR$/data/ontology/vocabs/interoperability.jsonld" />
         <option value="$PROJECT_DIR$/data/ontology/vocabs/asawoo.jsonld" />
-        <option value="$PROJECT_DIR$/controllers/interoperability.js" />
         <option value="$PROJECT_DIR$/models/ontology.js" />
         <option value="$PROJECT_DIR$/controllers/ontology.js" />
-        <option value="$PROJECT_DIR$/models/globals.js" />
         <option value="$PROJECT_DIR$/controllers/code-repository.js" />
+        <option value="$PROJECT_DIR$/models/globals.js" />
+        <option value="$PROJECT_DIR$/controllers/index.js" />
+        <option value="$PROJECT_DIR$/models/asawoo/platform.js" />
+        <option value="$PROJECT_DIR$/controllers/interoperability.js" />
+        <option value="$PROJECT_DIR$/models/interoperability/platform.js" />
+        <option value="$PROJECT_DIR$/controllers/asawoo.js" />
+        <option value="$PROJECT_DIR$/views/index.jade" />
       </list>
     </option>
   </component>
@@ -198,8 +251,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
-    <option name="width" value="1298" />
-    <option name="height" value="928" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -256,7 +309,89 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asawoo-public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interoperability" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asawoo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -357,8 +492,22 @@
               <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="functionalities" />
+              <option name="myItemId" value="prototype-wot-js-v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-wot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asawoo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -376,7 +525,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="code-repository" />
+              <option name="myItemId" value="asawoo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contexts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -421,11 +574,11 @@
       <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\middleware" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\temp\Prototype-wot-hydra\modif_proto_pour_compatibilite_Jordan\prototype-wot\models\interoperability" />
       <recent name="E:\temp\Prototype-wot-hydra\modif_proto_pour_compatibilite_Jordan\prototype-wot\data\ontology\vocabs" />
       <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\css-preprocessing" />
       <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public\interoperability-public\css\sass" />
       <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public\css\lib" />
-      <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\public\lib" />
     </key>
   </component>
   <component name="RunManager">
@@ -493,6 +646,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="" />
+      <changelist id="e82bb406-3943-486e-9c1d-4dd443950585" name="devnull" comment="" />
       <created>1448107521951</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -504,21 +658,7 @@
       <workItem from="1460083036436" duration="3347000" />
       <workItem from="1460128327271" duration="10154000" />
       <workItem from="1460210586757" duration="17396000" />
-      <workItem from="1460288090213" duration="30590000" />
-    </task>
-    <task id="LOCAL-00470" summary="Interoperability controller redirects gateway requests">
-      <created>1459978512802</created>
-      <option name="number" value="00470" />
-      <option name="presentableId" value="LOCAL-00470" />
-      <option name="project" value="LOCAL" />
-      <updated>1459978512802</updated>
-    </task>
-    <task id="LOCAL-00471" summary="Interoperability controller redirects gateway requests">
-      <created>1459979451455</created>
-      <option name="number" value="00471" />
-      <option name="presentableId" value="LOCAL-00471" />
-      <option name="project" value="LOCAL" />
-      <updated>1459979451455</updated>
+      <workItem from="1460288090213" duration="34146000" />
     </task>
     <task id="LOCAL-00472" summary="Interoperability controller redirects gateway requests">
       <created>1459979612341</created>
@@ -849,11 +989,25 @@
       <option name="project" value="LOCAL" />
       <updated>1460394998446</updated>
     </task>
-    <option name="localTasksCounter" value="519" />
+    <task id="LOCAL-00519" summary="All vocabularies in /ontology">
+      <created>1460395355462</created>
+      <option name="number" value="00519" />
+      <option name="presentableId" value="LOCAL-00519" />
+      <option name="project" value="LOCAL" />
+      <updated>1460395355462</updated>
+    </task>
+    <task id="LOCAL-00520" summary="All vocabularies in /ontology">
+      <created>1460395510974</created>
+      <option name="number" value="00520" />
+      <option name="presentableId" value="LOCAL-00520" />
+      <option name="project" value="LOCAL" />
+      <updated>1460395510974</updated>
+    </task>
+    <option name="localTasksCounter" value="521" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108685000" />
+    <option name="totallyTimeSpent" value="112241000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -876,15 +1030,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1298" height="928" extended-state="6" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23642172" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1564482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35900784" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3589165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19060053" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16478555" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24840255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -942,6 +1096,7 @@
     <MESSAGE value="Interoperability hydra vocab" />
     <MESSAGE value="All vocabularies in /ontology" />
     <option name="LAST_COMMIT_MESSAGE" value="All vocabularies in /ontology" />
+    <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -950,62 +1105,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/call.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/ontology/vocabs/interoperability_old.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="1466" column="0" selection-start-line="654" selection-start-column="0" selection-end-line="1466" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/interoperability/vocabs/interoperability.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/ontology/vocabs/asawoo_old.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!block;n#@context#0;n#!!top" expanded="false" />
-            <element signature="e#1235#1457#0" expanded="false" />
-            <element signature="e#3009#3974#0" expanded="false" />
-            <element signature="e#3994#4598#0" expanded="false" />
-            <element signature="e#5229#8514#0" expanded="false" />
-            <element signature="e#5567#6124#0" expanded="false" />
-            <element signature="e#6134#6708#0" expanded="false" />
-            <element signature="e#6718#7385#0" expanded="false" />
-            <element signature="e#7972#8500#0" expanded="false" />
-            <element signature="e#8520#11787#0" expanded="false" />
-            <element signature="e#8870#9439#0" expanded="false" />
-            <element signature="e#9449#10035#0" expanded="false" />
-            <element signature="e#10045#10642#0" expanded="false" />
-            <element signature="e#10652#11254#0" expanded="false" />
-            <element signature="e#11264#11773#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/ontology/vocabs/hydra.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="263" column="9" selection-start-line="263" selection-start-column="9" selection-end-line="263" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/code-repository/hydra.jsonld">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-264">
@@ -1014,7 +1113,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/functionalities/hydra.jsonld">
+    <entry file="file://$PROJECT_DIR$/data/asawoo/hydra.jsonld">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
@@ -1166,7 +1265,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/functionalities/contexts/Avatar.jsonld">
+    <entry file="file://$PROJECT_DIR$/data/asawoo/contexts/Avatar.jsonld">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1291,7 +1390,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/capability.js">
+    <entry file="file://$PROJECT_DIR$/models/interoperability/capability.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1299,7 +1398,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/device.js">
+    <entry file="file://$PROJECT_DIR$/models/interoperability/device.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-462">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1339,22 +1438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/globals.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/code-repository/contexts/EntryPoint.jsonld">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -1363,29 +1446,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="279" column="50" selection-start-line="279" selection-start-column="50" selection-end-line="279" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/interoperability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="65" selection-start-line="12" selection-start-column="55" selection-end-line="13" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/code-repository.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+        <state relative-caret-position="575">
+          <caret line="90" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="90" selection-end-column="24" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="279" column="46" selection-start-line="279" selection-start-column="46" selection-end-line="279" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/interoperability/platform.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="185" column="11" selection-start-line="185" selection-start-column="11" selection-end-line="185" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/asawoo/platform.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/globals.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/asawoo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/asawoo-public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+          <folding />
         </state>
       </provider>
     </entry>
