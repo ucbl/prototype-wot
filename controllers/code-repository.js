@@ -5,7 +5,8 @@ var express = require('express'),
     router = express.Router(),
     fs = require('fs'),
     bodyParser = require('body-parser'),
-    Globals = require('../models/globals');
+    Globals = require('../models/globals'),
+    templateEngine = require("../helpers/jsonTemplateEngine");
 
 
 /*---HYDRA ROUTER---*/
@@ -34,7 +35,7 @@ router.get('/context/:context', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json"});
     var contextLocation = __dirname + '/../data/code-repository/contexts/' + request.params.context + '.jsonld';
     fs.readFile(contextLocation, 'utf8', function (error, data) {
-        response.end(data);
+        response.end(templateEngine(data));
     });
     return true;
 });
