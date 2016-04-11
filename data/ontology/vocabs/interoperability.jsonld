@@ -1,6 +1,7 @@
 {
   "@context": {
-    "vocab": "__interoperability__vocab#",
+    "vocab": "__ontology__vocabs/interoperability#",
+    "asawoo": "__ontology__vocabs/asawoo#",
     "hydra": "http://www.w3.org/ns/hydra/core#",
     "ApiDocumentation": "hydra:ApiDocumentation",
     "property": {
@@ -44,7 +45,7 @@
       "@type": "@id"
     }
   },
-  "@id": "__interoperability__vocab",
+  "@id": "__ontology__vocabs/interoperability",
   "@type": "ApiDocumentation",
   "entrypoint": "__interoperability__",
   "supportedClass": [
@@ -288,7 +289,7 @@
             "label": "capability member",
             "comment": "A member of the capability collection",
             "domain": "vocab:Capabilities",
-            "range": "vocab:Capability"
+            "range": "asawoo:Capability"
           },
           "hydra:title": "capabilities",
           "hydra:description": "The physical capabilities of this collection.",
@@ -299,7 +300,7 @@
       ]
     },
     {
-      "@id": "vocab:Capability",
+      "@id": "asawoo:Capability",
       "@type": "hydra:Class",
       "subClassOf": null,
       "label": "Capability",
@@ -311,7 +312,7 @@
             "@type": "hydra:Link",
             "label": "Access port of the capability",
             "comment": "Retrieves the port on which the capability can be accessed (through the gateway port forwarding feature)",
-            "domain": "vocab:Capability",
+            "domain": "asawoo:Capability",
             "range": "http://schema.org/url"
           },
           "hydra:title": "accessPort",
@@ -326,7 +327,7 @@
             "@type": "hydra:Link",
             "label": "Configuration of the capability",
             "comment": "Indicates if the capability has been configured manually or other configuration info (experimental feature)",
-            "domain": "vocab:Capability",
+            "domain": "asawoo:Capability",
             "range": "vocab:Configuration"
           },
           "hydra:title": "configuration",
@@ -433,7 +434,7 @@
             "label": "capabilityInfoCollection",
             "description": "The collection of information objects to access the capability of the connected device",
             "domain": "vocab:ConnectedDeviceInfo",
-            "range": "vocab:CapabilityInfoCollection",
+            "range": "asawoo:CapabilityInfoCollection",
             "supportedOperation": [
               {
                 "@id": "_:capabilityInfoCollection",
@@ -870,7 +871,7 @@
 
     {
       "@id": "vocab:CapabilityActivateMotor",
-      "@type": ["hydra:Resource", "vocab:Capability"],
+      "@type": ["hydra:Resource", "asawoo:Capability"],
       "label": "CapabilityActivateMotor",
       "description": "Capability that activates the motor",
       "supportedOperation": [
@@ -916,7 +917,7 @@
     },
     {
       "@id": "vocab:CapabilityInformationMotor",
-      "@type": ["hydra:Resource", "vocab:Capability"],
+      "@type": ["hydra:Resource", "asawoo:Capability"],
       "label": "CapabilityInformationMotor",
       "description": "Capability that returns the current state of the motor",
       "supportedOperation": [
@@ -934,7 +935,7 @@
     },
     {
       "@id": "vocab:CapabilityTemperatureDecrease",
-      "@type": ["hydra:Resource", "vocab:Capability"],
+      "@type": ["hydra:Resource", "asawoo:Capability"],
       "label": "CapabilityTemperatureDecrease",
       "description": "Capability that actuates a device able to decrease the temperature",
       "supportedOperation": [
@@ -967,7 +968,7 @@
     },
     {
       "@id": "vocab:CapabilityTemperatureIncrease",
-      "@type": ["hydra:Resource", "vocab:Capability"],
+      "@type": ["hydra:Resource", "asawoo:Capability"],
       "label": "CapabilityTemperatureIncrease",
       "description": "Capability that actuates a device able to increase the temperature",
       "supportedOperation": [
@@ -1000,7 +1001,7 @@
     },
     {
       "@id": "vocab:CapabilityTemperatureSense",
-      "@type": ["hydra:Resource", "vocab:Capability"],
+      "@type": ["hydra:Resource", "asawoo:Capability"],
       "subClassOf": null,
       "label": "CapabilityTemperatureSense",
       "description": "Capability that queries a temperature sensor",
@@ -1019,7 +1020,7 @@
     },
     {
       "@id": "vocab:CapabilityGps",
-      "@type": ["hydra:Resource", "vocab:Capability"],
+      "@type": ["hydra:Resource", "asawoo:Capability"],
       "label": "CapabilityGps",
       "description": "Capability that queries a GPS sensor",
       "supportedOperation": [
@@ -1037,7 +1038,7 @@
     },
     {
       "@id": "vocab:CapabilityOpenWindow",
-      "@type": ["hydra:Resource", "vocab:Capability"],
+      "@type": ["hydra:Resource", "asawoo:Capability"],
       "label": "CapabilityOpenWindow",
       "description": "Capability that activates the window motor to open it",
       "supportedOperation": [
@@ -1065,7 +1066,7 @@
     },
     {
       "@id": "vocab:CapabilityCloseWindow",
-      "@type": ["hydra:Resource", "vocab:Capability"],
+      "@type": ["hydra:Resource", "asawoo:Capability"],
       "label": "CapabilityCloseWindow",
       "description": "Capability that activates the window motor to close it",
       "supportedOperation": [
@@ -1093,7 +1094,7 @@
     },
     {
       "@id": "vocab:CapabilityCall",
-      "@type": ["hydra:Resource", "vocab:Capability"],
+      "@type": ["hydra:Resource", "asawoo:Capability"],
       "label": "CapabilityCall",
       "description": "Capability that interacts with the call management system of a phone",
       "supportedOperation": [
@@ -1160,7 +1161,7 @@
     },
     {
       "@id": "vocab:CapabilitySms",
-      "@type": ["hydra:Resource", "vocab:Capability"],
+      "@type": ["hydra:Resource", "asawoo:Capability"],
       "label": "CapabilitySms",
       "description": "Capability that interacts with the sms management system of a phone",
       "supportedOperation": [
@@ -1227,7 +1228,7 @@
     },
     {
       "@id": "vocab:CapabilityPhoto",
-      "@type": ["hydra:Resource", "vocab:Capability"],
+      "@type": ["hydra:Resource", "asawoo:Capability"],
       "label": "CapabilityPhoto",
       "description": "Capability that interacts with the photo management system of a phone.",
       "supportedOperation": [
@@ -1294,7 +1295,7 @@
     },
     {
       "@id": "vocab:CapabilityVideo",
-      "@type": ["hydra:Resource", "vocab:Capability"],
+      "@type": ["hydra:Resource", "asawoo:Capability"],
       "label": "CapabilityVideo",
       "description": "Capability that interacts with the video management system of a phone.",
       "supportedOperation": [
@@ -1361,7 +1362,7 @@
     },
     {
       "@id": "vocab:CapabilityApp",
-      "@type": ["hydra:Resource", "vocab:Capability"],
+      "@type": ["hydra:Resource", "asawoo:Capability"],
       "label": "CapabilityApp",
       "description": "Capability that interacts with the app management system of a phone.",
       "supportedOperation": [

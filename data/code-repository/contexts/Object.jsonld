@@ -1,7 +1,7 @@
 {
     "@context": {
         "hydra": "http://www.w3.org/ns/hydra/core#",
-        "vocab": "__code__vocab#",
+        "vocab": "__ontology__vocabs/code-repository#",
         "label": "http://www.w3.org/2001/XMLSchema#string",
         "description": "http://www.w3.org/2001/XMLSchema#string"
     }

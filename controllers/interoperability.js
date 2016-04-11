@@ -246,13 +246,15 @@ router.post('/gateway/:deviceId/:capabilityId', jsonParser, function(request, re
 });
 
 /*---HYDRA---*/
-
+/*
 // GET the hydra vocabulary
+
 router.get('/vocab', function(request, response, next) {
     request.vocabUri = interoperabilityModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     response.end(interoperabilityModel.getHydraVocabulary());
 });
+
 
 router.get('/vocab/:vocabId', function(request, response, next) {
     var vocabId = request.params["vocabId"];
@@ -260,8 +262,9 @@ router.get('/vocab/:vocabId', function(request, response, next) {
     jsonldHeaders(request, response, next);
     response.end(interoperabilityModel.getHydraVocabulary(vocabId));
 });
+*/
 
-// GET the hydra context
+// GET contexts
 router.get('/context', function(request, response, next) {
     request.vocabUri = interoperabilityModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);

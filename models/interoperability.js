@@ -30,7 +30,7 @@
 
         //Uri of the interoperability layer vocabulary
         "getHydraVocabUri": function() {
-            return Globals.vocabularies.interoperability + 'vocab#';
+            return Globals.vocabularies.ontology + 'vocabs/interoperability#';
         },
 
         /**

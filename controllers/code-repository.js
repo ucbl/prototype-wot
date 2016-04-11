@@ -29,17 +29,7 @@ router.get('/', function(request, response) {
     response.end(JSON.stringify(responseJson));
 });
 
-// GET the hydra vocabulary
-router.get('/vocab', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json"});
-    var hydraLocation = __dirname + '/../data/code-repository/hydra.jsonld';
-    fs.readFile(hydraLocation, 'utf8', function (error, data) {
-        response.end(data);
-    });
-    return true;
-});
-
-// GET the hydra context
+// GET contexts
 router.get('/context/:context', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json"});
     var contextLocation = __dirname + '/../data/code-repository/contexts/' + request.params.context + '.jsonld';

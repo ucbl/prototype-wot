@@ -29,7 +29,7 @@ router.get('/', function(request, response, next) {
 
 // GET the hydra vocabulary
 router.get('/vocab', function(request, response, next) {
-    var vocab = ontologyModel.getHydraVocabulary();
+    var vocab = ontologyModel.getHydraVocab("ontology");
 
     request.vocabUri = ontologyModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
@@ -88,8 +88,8 @@ router.get('/capabilities', function(request, response, next) {
     response.end(JSON.stringify(capabilitiesResponse));
 });
 
-// GET the entire list of functionalities
-router.get('/functionalities', function(request, response, next) {
+// GET the entire list of ontologies
+router.get('/ontologies', function(request, response, next) {
     var functionalitiesResponse = {};
     functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
@@ -109,8 +109,8 @@ router.get('/functionalities', function(request, response, next) {
     response.end(JSON.stringify(functionalitiesResponse));
 });
 
-// Search for functionalities using an array of capabilities
-router.get('/functionalities-search', function(request, response, next) {
+// Search for ontologies using an array of capabilities
+router.get('/ontologies-search', function(request, response, next) {
     var functionalitiesResponse = {};
     functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
@@ -136,8 +136,8 @@ router.get('/functionalities-search', function(request, response, next) {
     response.end(JSON.stringify(functionalitiesResponse));
 });
 
-// Search for incomplete functionalities
-router.get('/functionalities-incomplete', function(request, response, next) {
+// Search for incomplete ontologies
+router.get('/ontologies-incomplete', function(request, response, next) {
     var functionalitiesResponse = {};
     functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
@@ -148,7 +148,7 @@ router.get('/functionalities-incomplete', function(request, response, next) {
     //To test
     //var functionalitiesArray = ["http://192.168.56.101:3000/ontology/functionality/temperatureSense"];
     var functionalitiesArray = request.body.functionalities || [];
-    // Relate the array of the functionalities that we have and search if there are composed functionalities
+    // Relate the array of the ontologies that we have and search if there are composed ontologies
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
     for (var i in composedFunctionalitiesInfo) {
         for (var j in (composedFunctionalitiesInfo[i]).isComposedOf) {
@@ -163,8 +163,8 @@ router.get('/functionalities-incomplete', function(request, response, next) {
     response.end(JSON.stringify(functionalitiesResponse));
 });
 
-// Search for incomplete functionalities and return all the info of the composed ones
-router.get('/functionalities-incomplete-all', function(request, response, next) {
+// Search for incomplete ontologies and return all the info of the composed ones
+router.get('/ontologies-incomplete-all', function(request, response, next) {
     var functionalitiesResponse = {};
     functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
@@ -175,7 +175,7 @@ router.get('/functionalities-incomplete-all', function(request, response, next) 
     //To test:
     //var functionalitiesArray = ["http://192.168.56.101:3000/ontology/functionality/temperatureSense"];
     var functionalitiesArray = request.body.functionalities || [];
-    // Relate the array of the functionalities that we have and search if there are composed functionalities
+    // Relate the array of the ontologies that we have and search if there are composed ontologies
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
     for (var i in composedFunctionalitiesInfo) {
         for (var j in (composedFunctionalitiesInfo[i]).isComposedOf) {
@@ -190,10 +190,10 @@ router.get('/functionalities-incomplete-all', function(request, response, next) 
     response.end(JSON.stringify(functionalitiesResponse));
 });
 
-/** Search for composed functionalities
- * Returns composed functionalities for which all sub-functionalities are in the request body
+/** Search for composed ontologies
+ * Returns composed ontologies for which all sub-ontologies are in the request body
  */
-router.get('/functionalities-composed', function(request, response, next) {
+router.get('/ontologies-composed', function(request, response, next) {
     var functionalitiesResponse = {};
     functionalitiesResponse['@context'] = Globals.vocabularies.ontology + "context/Collection";
     functionalitiesResponse['@type'] = 'Collection';
@@ -204,7 +204,7 @@ router.get('/functionalities-composed', function(request, response, next) {
     //To test:
     //var functionalitiesArray = ["http://192.168.56.101:3000/ontology/functionality/temperatureIncrease","http://192.168.56.101:3000/ontology/functionality/temperatureDecrease","http://192.168.56.101:3000/ontology/functionality/temperatureSense"];
     var functionalitiesArray = request.body.functionalities || [];
-    // Relate the array of the functionalities that we have and search if there are composed functionalities
+    // Relate the array of the ontologies that we have and search if there are composed ontologies
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
     for (var i in composedFunctionalitiesInfo) {
         var functionalitiesFound = 0;
@@ -234,7 +234,7 @@ router.get('/functionality/:functionality', jsonParser, function(request, respon
 });
 
 // GET the composition of a functionality
-//TODO: change URL to something like /functionality/:functionality/sub-functionalities
+//TODO: change URL to something like /functionality/:functionality/sub-ontologies
 router.get('/functionality-composed-of/:functionality', jsonParser, function(request, response, next) {
     var composedFunctionalitiesInfo = ontologyModel.findComposedFunctionalities();
     var functionalityResponse = {

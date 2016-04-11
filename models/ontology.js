@@ -19,10 +19,10 @@ var ontology = {
     'loadOntology': function(params) {
         //Separate the context from the data, to be able to replace namespaces by their values
         var jsonOntology = {
-                "@context": templateEngine(require("../data/ontology/functionalities/prefixes.js")['@context'])
+                "@context": templateEngine(require("./prefixes.js")['@context'])
         };
 
-        var dataLocation = __dirname + '/../data/ontology/functionalities/functionalities.jsonld';
+        var dataLocation = __dirname + '/../data/ontology/ontologies/ontologies.jsonld';
         fs.readFile(dataLocation, 'utf8', function (error, data) {
             if (!error) {
                 jsonOntology["@graph"] = templateEngine(JSON.parse(data)['@graph']);
@@ -38,7 +38,7 @@ var ontology = {
                 });
             } else {
                 //TODO: throw an error here
-                console.log('Could not read file "functionalities.jsonld" in ' + dataLocation);
+                console.log('Could not read file "ontologies.jsonld" in ' + dataLocation);
             }
         });
     },
@@ -47,13 +47,9 @@ var ontology = {
     "getHydraVocabUri": function() {
         return Globals.vocabularies.ontology + 'vocab#';
     },
-    //Returns the Hydra vocabulary corresponding to a particular object or defaults to the ontology vocab
-    "getHydraVocabulary": function()  {
-        return templateEngine(JSON.parse(fs.readFileSync(__dirname + '/../data/ontology/hydra.jsonld')));
-    },
 
     //Returns the vocabulary corresponding to a particular object
-    "getVocab": function(contextName)  {
+    "getHydraVocab": function(contextName)  {
         return  templateEngine(JSON.parse(fs.readFileSync(__dirname + '/../data/ontology/vocabs/' + contextName + '.jsonld')));
     },
 
@@ -118,9 +114,9 @@ var ontology = {
         return response;
     },
 
-    // Info about the composed functionalities
+    // Info about the composed ontologies
     'findComposedFunctionalities': function() {
-        // Find functionalities that are composed of the ones we have
+        // Find ontologies that are composed of the ones we have
         var composedFunctionalities = tripleStore.find(null, Globals.vocabularies.hydraVocab + "isComposedOf", null);
         var composedFunctionalitiesInfo = {};
         for (var i in composedFunctionalities) {
@@ -132,7 +128,7 @@ var ontology = {
             }
             composedFunctionalitiesInfo[((composedFunctionalities[i]).subject)].isComposedOf.push(((composedFunctionalities[i]).object));
         }
-        // Fill the functionalities that are also composed of other functionalities
+        // Fill the ontologies that are also composed of other ontologies
         // We use three depth steps (this is obviously not the best way to do it... it should be a reasoner that does this work)
         //TODO: add a boolean and loop until nothing is done.
         composedFunctionalitiesInfo = this.getSubFunctionalities(composedFunctionalitiesInfo);
@@ -141,7 +137,7 @@ var ontology = {
         return composedFunctionalitiesInfo;
     },
 
-    // Format an array of composed functionalities
+    // Format an array of composed ontologies
     'getSubFunctionalities': function(composedFunctionalitiesInfo) {
         for (var i in composedFunctionalitiesInfo) {
             for (var j in composedFunctionalitiesInfo[i].isComposedOf) {
@@ -153,7 +149,7 @@ var ontology = {
                 }
             }
         }
-        // Clean the composed functionalities
+        // Clean the composed ontologies
         for (i in composedFunctionalitiesInfo) {
             for (j in composedFunctionalitiesInfo[i].isComposedOf) {
                 if (composedFunctionalitiesInfo[i].isComposedOf[j] == null) {

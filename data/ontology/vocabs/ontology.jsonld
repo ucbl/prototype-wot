@@ -1,9 +1,9 @@
 {
-  "@id": "__ontology__vocab",
+  "@id": "__ontology__vocabs/ontology",
   "@type": "ApiDocumentation",
   "entrypoint": "__ontology__",
   "@context": {
-    "vocab": "__ontology__vocab#",
+    "vocab": "__ontology__vocabs/ontology#",
     "hydra": "http://www.w3.org/ns/hydra/core#",
     "ApiDocumentation": "hydra:ApiDocumentation",
     "property": {

@@ -1,9 +1,9 @@
 {
-  "@id": "__ontology__vocab",
+  "@id": "__ontology__vocabs/asawoo",
   "@type": "ApiDocumentation",
-  "entrypoint": "__ontology__",
+  "entrypoint": "http://__asawoo__",
   "@context": {
-    "vocab": "__ontology__vocab#",
+    "vocab": "__ontology__vocabs/asawoo#",
     "hydra": "http://www.w3.org/ns/hydra/core#",
     "ApiDocumentation": "hydra:ApiDocumentation",
     "property": {
@@ -53,106 +53,20 @@
       "supportedProperty": []
     },
     {
-      "@id": "vocab:EntryPoint",
+      "@id": "http://www.w3.org/ns/hydra/core#Collection",
       "@type": "hydra:Class",
-      "subClassOf": null,
-      "label": "EntryPoint",
-      "description": "Main entry point of the ASAWoO ontology documentation",
-      "supportedOperation": [
-        {
-          "@id": "_:entry_point",
-          "@type": "hydra:Operation",
-          "method": "GET",
-          "label": "Main entry point of the ASAWoO ontology documentation",
-          "description": null,
-          "expects": null,
-          "returns": "vocab:EntryPoint",
-          "statusCodes": []
-        }
-      ],
-      "supportedProperty": [
-        {
-          "property": {
-            "@id": "vocab:EntryPoint/capabilities",
-            "@type": "hydra:Link",
-            "label": "capabilities",
-            "description": "Retrieves a collection of capabilities",
-            "domain": "vocab:EntryPoint",
-            "range": "vocab:CapabilityCollection",
-            "supportedOperation": [
-              {
-                "@id": "_:capabilities",
-                "@type": "hydra:Operation",
-                "method": "GET",
-                "label": "The list of all the capabilities",
-                "description": null,
-                "expects": null,
-                "returns": "hydra:Collection",
-                "statusCodes": []
-              }
-            ]
-          },
-          "hydra:title": "capabilities",
-          "hydra:description": "A collection of capabilities",
-          "required": null,
-          "readonly": true,
-          "writeonly": false
-        },
-        {
-          "property": {
-            "@id": "vocab:EntryPoint/functionalities",
-            "@type": "hydra:Link",
-            "label": "functionalities",
-            "description": "Retrieves a collection of functionalities",
-            "domain": "vocab:EntryPoint",
-            "range": "vocab:FunctionalityCollection",
-            "supportedOperation": [
-              {
-                "@id": "_:functionalities",
-                "@type": "hydra:Operation",
-                "method": "GET",
-                "label": "The list of all known functionalities",
-                "description": null,
-                "expects": null,
-                "returns": "hydra:Collection",
-                "statusCodes": []
-              }
-            ]
-          },
-          "hydra:title": "functionalities",
-          "hydra:description": "A collection of functionalities.",
-          "required": null,
-          "readonly": true,
-          "writeonly": false
-        }
-      ]
-    },
-    {
-      "@id": "http://www.w3.org/ns/hydra/core#CapabilityCollection",
-      "@type": "hydra:Class",
-      "subClassOf": "hydra:Collection",
-      "hydra:title": "CapabilityCollection",
-      "hydra:description": "A collection of capability URIs",
+      "hydra:title": "Collection",
+      "hydra:description": null,
       "supportedOperation": [],
       "supportedProperty": [
         {
           "property": "http://www.w3.org/ns/hydra/core#member",
-          "hydra:title": "capabilities",
-          "hydra:description": "The capabilities of this collection.",
+          "hydra:title": "avatars",
+          "hydra:description": "The avatars of this collection.",
           "required": null,
           "readonly": false,
           "writeonly": false
-        }
-      ]
-    },
-    {
-      "@id": "http://www.w3.org/ns/hydra/core#FunctionalityCollection",
-      "@type": "hydra:Class",
-      "subClassOf": "hydra:Collection",
-      "hydra:title": "FunctionalityCollection",
-      "hydra:description": "A collection of functionality URIs",
-      "supportedOperation": [],
-      "supportedProperty": [
+        },
         {
           "property": "http://www.w3.org/ns/hydra/core#member",
           "hydra:title": "functionalities",
@@ -164,98 +78,130 @@
       ]
     },
     {
-      "@id": "vocab:Capability",
+      "@id": "vocab:EntryPoint",
       "@type": "hydra:Class",
       "subClassOf": null,
-      "label": "Capability",
-      "description": "A capability.",
+      "label": "EntryPoint",
+      "description": "The main entry point of the ASAWoO Prototype.",
       "supportedOperation": [
         {
-          "@id": "_:capability",
+          "@id": "_:entry_point",
           "@type": "hydra:Operation",
           "method": "GET",
-          "label": "Retrieves a capability",
+          "label": "The ASAWoO Prototype main entry point.",
           "description": null,
           "expects": null,
-          "returns": "vocab:Capability",
+          "returns": "vocab:EntryPoint",
           "statusCodes": []
         }
       ],
       "supportedProperty": [
         {
           "property": {
-            "@id": "vocab:Capability/name",
+            "@id": "vocab:EntryPoint/avatars",
+            "@type": "hydra:Link",
+            "label": "avatars",
+            "description": "The entrypoint for the avatars",
+            "domain": "vocab:EntryPoint",
+            "range": "http://www.w3.org/ns/hydra/core#Collection",
+            "supportedOperation": [
+              {
+                "@id": "_:avatars",
+                "@type": "hydra:Operation",
+                "method": "GET",
+                "label": "The list of all the avatars",
+                "description": null,
+                "expects": null,
+                "returns": "hydra:Collection",
+                "statusCodes": []
+              }
+            ]
+          },
+          "hydra:title": "avatars",
+          "hydra:description": "The list of all the avatars."
+        }
+      ]
+    },
+    {
+      "@id": "vocab:Avatar",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "Avatar",
+      "description": "An avatar.",
+      "supportedOperation": [
+        {
+          "@id": "_:avatar",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "Retrieves an avatar",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:Avatar",
+          "statusCodes": []
+        }
+      ],
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:Avatar/name",
             "@type": "rdf:Property",
             "label": "name",
-            "description": "The explicit name of the capability",
-            "domain": "vocab:Capability",
+            "description": "The explicit name of the avatar",
+            "domain": "vocab:Avatar",
             "range": "http://www.w3.org/2001/XMLSchema#string",
             "supportedOperation": []
           },
           "hydra:title": "name",
-          "hydra:description": "The explicit name of the capability",
-          "required": true,
+          "hydra:description": "The explicit name of the avatar",
+          "required": null,
           "readonly": true,
           "writeonly": false
         },
         {
           "property": {
-            "@id": "vocab:Capability/description",
+            "@id": "vocab:Avatar/description",
             "@type": "rdf:Property",
             "label": "description",
-            "description": "The description of the capability",
-            "domain": "vocab:Capability",
+            "description": "The description of the avatar",
+            "domain": "vocab:Avatar",
             "range": "http://www.w3.org/2001/XMLSchema#string",
             "supportedOperation": []
           },
           "hydra:title": "description",
-          "hydra:description": "The description of the capability",
-          "required": true,
+          "hydra:description": "The description of the avatar",
+          "required": null,
           "readonly": true,
           "writeonly": false
         },
         {
           "property": {
-            "@id": "_:Capability/configuration",
-            "@type": "hydra:Link",
-            "label": "Configuration of the capability",
-            "comment": "Indicates if the capability has been configured manually or other configuration info (experimental feature)",
-            "domain": "vocab:Capability",
-            "range": "vocab:Configuration"
+            "@id": "vocab:Avatar/capabilities",
+            "@type": "rdf:Property",
+            "label": "functionalities",
+            "description": "The capabilities of the avatar",
+            "domain": "vocab:Avatar",
+            "range": "vocab:Collection",
+            "supportedOperation": []
           },
-          "hydra:title": "configuration",
-          "hydra:description": "The capability has been configured manually or other configuration info (experimental feature)",
-          "required": false,
-          "readonly": false,
-          "writeonly": false
-        },
-        {
-          "property": {
-            "@id": "_:Capability/platform",
-            "@type": "hydra:Link",
-            "label": "platform",
-            "comment": "Link to invoke the capability through the interoperability platform",
-            "domain": "vocab:Capability",
-            "range": "http://schema.org/url"
-          },
-          "hydra:title": "platform",
-          "hydra:description": "Link to invoke the capability through the interoperability platform",
-          "required": false,
+          "hydra:title": "capabilities",
+          "hydra:description": "The capabilities of the avatar",
+          "required": null,
           "readonly": true,
           "writeonly": false
         },
         {
           "property": {
-            "@id": "_:Capability/gateway",
-            "@type": "hydra:Link",
-            "label": "gateway",
-            "comment": "Link to invoke the capability through the gateway",
-            "domain": "vocab:Capability",
-            "range": "http://schema.org/url"
+            "@id": "vocab:Avatar/functionalities",
+            "@type": "rdf:Property",
+            "label": "functionalities",
+            "description": "The functionalities of the avatar",
+            "domain": "vocab:Avatar",
+            "range": "vocab:Collection",
+            "supportedOperation": []
           },
-          "hydra:title": "gateway",
-          "hydra:description": "Link to invoke the capability through the gateway",
-          "required": false,
+          "hydra:title": "functionalities",
+          "hydra:description": "The functionalities of the avatar",
+          "required": null,
           "readonly": true,
           "writeonly": false
         }
@@ -292,7 +238,7 @@
           },
           "hydra:title": "name",
           "hydra:description": "The explicit name of the functionality",
-          "required": true,
+          "required": null,
           "readonly": true,
           "writeonly": false
         },
@@ -308,54 +254,23 @@
           },
           "hydra:title": "description",
           "hydra:description": "The description of the functionality",
-          "required": true,
-          "readonly": true,
-          "writeonly": false
-        },
-        {
-          "property": {
-            "@id": "vocab:Functionality/isImplementedBy",
-            "@type": "rdf:Property",
-            "label": "isImplementedBy",
-            "description": "The functionality is implemented by a capacity",
-            "domain": "vocab:Functionality",
-            "range": "vocab:Capability",
-            "supportedOperation": []
-          },
-          "hydra:title": "isImplementedBy",
-          "hydra:description": "The functionality is implemented by a capacity",
-          "required": false,
-          "readonly": true,
-          "writeonly": false
-        },
-        {
-          "property": {
-            "@id": "vocab:Functionality/isComposedOf",
-            "@type": "rdf:Property",
-            "label": "isComposedOf",
-            "description": "The functionality is composed of other functionalities",
-            "domain": "vocab:Functionality",
-            "range": "hydra:Collection",
-            "supportedOperation": []
-          },
-          "hydra:title": "isComposedOf",
-          "hydra:description": "The functionality is composed of other functionalities",
           "required": null,
           "readonly": true,
           "writeonly": false
         },
         {
           "property": {
-            "@id": "_:Functionality/invocation",
-            "@type": "hydra:Link",
-            "label": "invocation",
-            "comment": "Link to invoke the functionality",
+            "@id": "vocab:Functionality/supportedOperation",
+            "@type": "rdf:Property",
+            "label": "Supported Operations",
+            "description": "The supported operations of the functionality",
             "domain": "vocab:Functionality",
-            "range": "http://schema.org/url"
+            "range": "vocab:Collection",
+            "supportedOperation": []
           },
-          "hydra:title": "invocation",
-          "hydra:description": "Link to invoke the functionality",
-          "required": false,
+          "hydra:title": "supportedOperation",
+          "hydra:description": "The supported operations of the functionality",
+          "required": null,
           "readonly": true,
           "writeonly": false
         }
