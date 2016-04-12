@@ -15,8 +15,8 @@
 
     //local variable to retrieve data stored in files
     var fileLocations = {
-        'contextFileDir': __dirname + '/../data/interoperability/contexts/',
-        'deviceFileDir': __dirname + '/../data/interoperability/devices/'
+        'contextFileDir': __dirname + '/../../data/interoperability/contexts/',
+        'deviceFileDir': __dirname + '/../../data/interoperability/devices/'
     };
 
     //Stores (at init) all the devices known by the platform, as JSON devices
