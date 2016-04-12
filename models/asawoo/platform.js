@@ -17,7 +17,7 @@
         'deviceFileDir': __dirname + '/../data/interoperability/devices/'
     };
 
-    //var infrastructureController = new infraController();
+    var infrastructureController = new infraController();
     //Loop each 10 seconds
     //setInterval(infrastructureController.getUpdate, 10000);
 
