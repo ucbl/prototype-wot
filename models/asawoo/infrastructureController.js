@@ -10,7 +10,7 @@ const Globals = require('../globals'),
 var functionalityDirectory = new Directory();
 
 //const helper = require('../helper/global.js');
-//const Avatar = require('../../js-avatar');
+const Avatar = require('../../../../avatar/p1201336-js-avatar');
 
 class InfrastructureController {
     constructor() {
@@ -34,7 +34,7 @@ class InfrastructureController {
             if(!error && response.statusCode == 200) {
                 var jsonDevices = JSON.parse(body)['devices'];
                 console.log(JSON.stringify(jsonDevices));
-                console.log(this);
+                console.log("body : " + body);
                 if(jsonDevices) {
                     jsonDevices.forEach((obj, key) => {
                         if (this.deviceList.has(obj.id) == true) {
