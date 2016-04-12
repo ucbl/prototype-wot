@@ -28,7 +28,7 @@
             var dataLocation = __dirname + '/../data/ontology/ontologies/functionalities.jsonld';
             fs.readFile(dataLocation, 'utf8', function (error, data) {
                 if (!error) {
-                    asawooOntology["@graph"] = templateEngine(JSON.parse(data));
+                    asawooOntology["@graph"] = templateEngine(JSON.parse(data)['@graph']);
                     jsonld.toRDF(asawooOntology, function (error, triples) {
                         for (var graphName in triples) {
                             triples[graphName].forEach(function (triple) {
