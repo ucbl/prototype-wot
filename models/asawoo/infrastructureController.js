@@ -41,8 +41,6 @@ class InfrastructureController {
                  "connectedDevices":["http://192.168.56.102:3000/interoperability/devices/sensor-ge-2442"]}
 
                  */
-                console.log(JSON.stringify(jsonDevices));
-                console.log("body : " + body);
                 if(jsonDevices) {
                     jsonDevices.forEach((obj, key) => {
                         if (this.deviceList.has(obj.id) == true) {
