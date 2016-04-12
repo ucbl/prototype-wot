@@ -29,7 +29,7 @@ class InfrastructureController {
         request({
             "url": interopPlatformUrl,
             "headers": {"Accept": "application/ld+json"}
-        }, function(error, response, body){
+        }, (error, response, body) => {
             //data && console.log(data);
             if(!error && response.statusCode == 200) {
                 var jsonDevices = JSON.parse(body)['devices'];
