@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/interoperability/device.js" afterPath="$PROJECT_DIR$/models/interoperability/device.js" />
     </list>
     <list id="e82bb406-3943-486e-9c1d-4dd443950585" name="devnull" comment="" />
     <ignored path="prototype-wot-js-v2.iws" />
@@ -530,14 +529,7 @@
       <workItem from="1460083036436" duration="3347000" />
       <workItem from="1460128327271" duration="10154000" />
       <workItem from="1460210586757" duration="17396000" />
-      <workItem from="1460288090213" duration="41900000" />
-    </task>
-    <task id="LOCAL-00476" summary="Interoperability controller redirects gateway requests">
-      <created>1459980215200</created>
-      <option name="number" value="00476" />
-      <option name="presentableId" value="LOCAL-00476" />
-      <option name="project" value="LOCAL" />
-      <updated>1459980215200</updated>
+      <workItem from="1460288090213" duration="41938000" />
     </task>
     <task id="LOCAL-00477" summary="Interoperability controller redirects gateway requests">
       <created>1459980448974</created>
@@ -875,11 +867,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460427900888</updated>
     </task>
-    <option name="localTasksCounter" value="525" />
+    <task id="LOCAL-00525" summary="Adding ASAWoO platform">
+      <created>1460428036722</created>
+      <option name="number" value="00525" />
+      <option name="presentableId" value="LOCAL-00525" />
+      <option name="project" value="LOCAL" />
+      <updated>1460428036722</updated>
+    </task>
+    <option name="localTasksCounter" value="526" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119995000" />
+    <option name="totallyTimeSpent" value="120033000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
