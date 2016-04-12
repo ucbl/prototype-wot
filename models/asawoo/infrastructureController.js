@@ -33,14 +33,6 @@ class InfrastructureController {
             //data && console.log(data);
             if(!error && response.statusCode == 200) {
                 var jsonDevices = JSON.parse(body)['connectedDevices'];
-                /*
-                 {
-                 "@context":"http://192.168.56.102:3000/interoperability/context/ConnectedDeviceRefs",
-                 "@type":"vocab:ConnectedDeviceRefs",
-                 "@id":"http://192.168.56.102:3000/interoperability/connected-devices",
-                 "connectedDevices":["http://192.168.56.102:3000/interoperability/devices/sensor-ge-2442"]}
-
-                 */
                 if(jsonDevices) {
                     jsonDevices.forEach((device) => {
                         if (this.deviceList.has(device) == true) {
@@ -54,7 +46,7 @@ class InfrastructureController {
 
                             //Create new avatar
                             var avatar = Avatar.buildAvatar({
-                                name: device,
+                                deviceUri: device,
                                 http_port: this.getAvailablePort()
                             });
                             //Stores a JSON serialization of the avatar (not the object itself)
