@@ -17,14 +17,14 @@ var express = require('express'),
 
 // Entry point and home page
 // GET the list of available codes
-router.get('/', function(request, response) {
+router.get('/', function(request, response, next) {
     if (request.accepts('html')) {
         //Send the interoperability platform homepage
         response.redirect('/asawoo-public');
     } else {
         request.vocabUri = asawooModel.getHydraVocabUri();
         jsonldHeaders(request, response, next);
-        response.end(JSON.stringify((require("../views/interoperability/entryPoint")())));
+        response.end(JSON.stringify((require("../views/asawoo/entryPoint")())));
     }
 });
 
