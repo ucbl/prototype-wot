@@ -85,7 +85,7 @@ router.get('/asawoo-ontology', function(request, response, next) {
     jsonldHeaders(request, response, next);
     response.end(JSON.stringify(ontologyModel.getOntology()));
 
-}
+},
 
 // GET the entire list of ontologies
 router.get('/ontologies', function(request, response, next) {
