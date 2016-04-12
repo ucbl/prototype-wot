@@ -24,7 +24,7 @@ class InfrastructureController {
     getUpdate() {
         var interopPlatformUrl = Globals.vocabularies.interoperability + "connected-devices";
     	//var deviceList = this.deviceList;
-        console.log("Call getUpdate on " + interopPlatformUrl);
+        //console.log("Call getUpdate on " + interopPlatformUrl);
 
         request({
             "url": interopPlatformUrl,
@@ -55,7 +55,7 @@ class InfrastructureController {
                             //create new avatar
                             var avatar = Avatar.buildAvatar(obj.capabilities, {
                                 name: obj.id,
-                                http_port: this.getNewPortAvatar()
+                                http_port: this.getAvailablePort()
                             });
                             this.avatars_serialized.push(avatar.toJson());
                             //io.emit('avatars_updated', this.avatars_serialized);
@@ -80,9 +80,9 @@ class InfrastructureController {
     }
 
     showDeviceList() {
-    	console.log("===>deviceList");
+    	//console.log("Call showDeviceList");
 		for (let key of this.deviceList.values()) 
-		    console.log(key);
+		    console.log("Device[" + key + "]: " + this.deviceList[key]);
     }
 
     getDeviceList ()    { return this.deviceList;}
@@ -90,7 +90,7 @@ class InfrastructureController {
     getAvatarList ()    { return this.avatarList;}
 
     //returns a free port between 4000 and 5000
-    getNewPortAvatar() {
+    getAvailablePort() {
         var port = Math.floor(Math.random() * (5000 - 4000 + 1)) + 4000;
         while(this.portArray.indexOf(port)>0){
             port = Math.floor(Math.random() * (5000 - 4000 + 1)) + 4000;
