@@ -60,7 +60,7 @@ class InfrastructureController {
                                 http_port: this.getNewPortAvatar()
                             });
                             this.avatars_serialized.push(avatar.toJson());
-                            io.emit('avatars_updated', this.avatars_serialized);
+                            //io.emit('avatars_updated', this.avatars_serialized);
                             //self.avatarList.add(obj.id,avatar);
                         }
                     });
