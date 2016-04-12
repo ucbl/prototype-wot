@@ -10,8 +10,8 @@ var express = require('express'),
     asawooModel = require('../models/asawoo/platform'),
     bodyParser = require('body-parser'),
     Globals = require('../models/globals'),
-    
-    templateEngine = require("../helpers/jsonTemplateEngine");
+    templateEngine = require("../helpers/jsonTemplateEngine"),
+    jsonldHeaders = require('../middleware/jsonldHeaders');
 
 
 /*---HYDRA ROUTER---*/
