@@ -1,7 +1,7 @@
 {
     "@context": {
         "hydra": "http://www.w3.org/ns/hydra/core#",
-        "vocab": "__asawoo__vocabs/asawoo#",
+        "vocab": "__ontology__vocabs/asawoo#",
         "Collection": "http://www.w3.org/ns/hydra/core#Collection",
         "avatars": "http://www.w3.org/ns/hydra/core#member",
         "functionalities": "http://www.w3.org/ns/hydra/core#member",
