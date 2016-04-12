@@ -6,7 +6,6 @@
 var express = require('express'),
     router = express.Router(),
     jsonParser = require('body-parser').json(),
-    Globals = require('../models/globals'),
     interoperabilityModel = require('../models/interoperability/platform'),
     jsonldHeaders = require('../middleware/jsonldHeaders');
 
@@ -246,23 +245,6 @@ router.post('/gateway/:deviceId/:capabilityId', jsonParser, function(request, re
 });
 
 /*---HYDRA---*/
-/*
-// GET the hydra vocabulary
-
-router.get('/vocab', function(request, response, next) {
-    request.vocabUri = interoperabilityModel.getHydraVocabUri();
-    jsonldHeaders(request, response, next);
-    response.end(interoperabilityModel.getHydraVocabulary());
-});
-
-
-router.get('/vocab/:vocabId', function(request, response, next) {
-    var vocabId = request.params["vocabId"];
-    request.vocabUri = interoperabilityModel.getHydraVocabUri();
-    jsonldHeaders(request, response, next);
-    response.end(interoperabilityModel.getHydraVocabulary(vocabId));
-});
-*/
 
 // GET contexts
 router.get('/context', function(request, response, next) {

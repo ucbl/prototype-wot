@@ -15,8 +15,6 @@
 
     //local variable to retrieve data stored in files
     var fileLocations = {
-        'hydraVocabDir': __dirname + '/../data/interoperability/vocabs/',
-        "hydraVocabBaseFile": __dirname + '/../data/interoperability/vocabs/interoperability.jsonld',
         'contextFileDir': __dirname + '/../data/interoperability/contexts/',
         'deviceFileDir': __dirname + '/../data/interoperability/devices/'
     };
@@ -172,11 +170,6 @@
         /**
          * Hydra description model
          */
-
-        //Returns the Hydra vocabulary corresponding to a particular object or defaults to the interoperability platform vocab
-        "getHydraVocabulary": function(fileName)  {
-            return templateEngine(fs.readFileSync(fileName ? fileLocations.hydraVocabDir + fileName + ".jsonld" : fileLocations.hydraVocabBaseFile, 'utf8'));
-        },
 
         //Returns the context corresponding to a given id or throws an error
         'getContext': function(contextId) {

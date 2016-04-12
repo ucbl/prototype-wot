@@ -5,7 +5,7 @@
 
     var fs = require('fs'),
         Globals = require('./../globals'),
-        deviceModel = require('./device'),
+        infraController = require('./infrastructureController'),
         cloneHelper = require('../../helpers/cloneHelper'),
         templateEngine = require("../../helpers/jsonTemplateEngine");
 
@@ -16,6 +16,10 @@
         'contextFileDir': __dirname + '/../data/interoperability/contexts/',
         'deviceFileDir': __dirname + '/../data/interoperability/devices/'
     };
+
+    var infrastructureController = new infraController();
+    //Loop each 10 seconds
+    setInterval(infrastructureController.getUpdate, 10000);
 
     module.exports = {
 
@@ -35,7 +39,7 @@
          */
 
         //Returns the Hydra vocabulary corresponding to a particular object or defaults to the interoperability platform vocab
-        "getHydraVocabulary": function(fileName)  {
+        "getHydraVocabulary": function(fileName) {
             return templateEngine(fs.readFileSync(fileName ? fileLocations.hydraVocabDir + fileName + ".jsonld" : fileLocations.hydraVocabBaseFile, 'utf8'));
         },
 

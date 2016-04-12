@@ -2,48 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/asawoo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/asawoo/platform.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/prototype_wot_js_v2_node_modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/prototype-wot-js-v2.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/index.js" afterPath="$PROJECT_DIR$/controllers/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/asawoo/functionalityDirectory.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/asawoo/infrastructureController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/interoperability.js" afterPath="$PROJECT_DIR$/controllers/interoperability.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/middleware/initVariables.js" afterPath="$PROJECT_DIR$/middleware/initVariables.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/functionalities/contexts/Avatar.jsonld" afterPath="$PROJECT_DIR$/data/asawoo/contexts/Avatar.jsonld" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/functionalities/contexts/Collection.jsonld" afterPath="$PROJECT_DIR$/data/asawoo/contexts/Collection.jsonld" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/functionalities/contexts/EntryPoint.jsonld" afterPath="$PROJECT_DIR$/data/asawoo/contexts/EntryPoint.jsonld" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/functionalities/contexts/Functionality.jsonld" afterPath="$PROJECT_DIR$/data/asawoo/contexts/Functionality.jsonld" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/functionalities/contexts/UrlCima.jsonld" afterPath="$PROJECT_DIR$/data/asawoo/contexts/UrlCima.jsonld" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/functionalities/hydra.jsonld" afterPath="$PROJECT_DIR$/data/asawoo/hydra.jsonld" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/models/capability.js" afterPath="$PROJECT_DIR$/models/interoperability/capability.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/models/device.js" afterPath="$PROJECT_DIR$/models/interoperability/device.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/models/interoperability.js" afterPath="$PROJECT_DIR$/models/interoperability/platform.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/index.html" afterPath="$PROJECT_DIR$/public/asawoo-public/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/jquery/jquery-1.10.2.min.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/jquery/jquery-1.10.2.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/jquery/jquery-ui-1.10.3.custom.min.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/jquery/jquery-ui-1.10.3.custom.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/jquery/jquery.form.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/jquery/jquery.form.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/README.md" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/css/jjsonviewer.css" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/css/jjsonviewer.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/images/example.png" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/images/example.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/index.html" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/js/jjsonviewer.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/js/jjsonviewer.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/js/lib/jquery.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/js/lib/jquery.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/specs/SpecRunner.html" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/specs/SpecRunner.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/specs/jasmine/jasmine-html.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/specs/jasmine/jasmine-html.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/specs/jasmine/jasmine-jquery.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/specs/jasmine/jasmine-jquery.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/specs/jasmine/jasmine.css" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/specs/jasmine/jasmine.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/specs/jasmine/jasmine.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/specs/jasmine/jasmine.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/lljson/specs/jjsonviewerSpec.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/lljson/specs/jjsonviewerSpec.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/functionalities-public/js/public.js" afterPath="$PROJECT_DIR$/public/asawoo-public/js/public.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/asawoo/platform.js" afterPath="$PROJECT_DIR$/models/asawoo/platform.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/interoperability/platform.js" afterPath="$PROJECT_DIR$/models/interoperability/platform.js" />
     </list>
     <list id="e82bb406-3943-486e-9c1d-4dd443950585" name="devnull" comment="" />
     <ignored path="prototype-wot-js-v2.iws" />
@@ -72,8 +37,8 @@
       <file leaf-file-name="globals.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/globals.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="721">
-              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state relative-caret-position="990">
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -91,41 +56,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/index.js">
+      <file leaf-file-name="infrastructureController.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/asawoo/infrastructureController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+            <state relative-caret-position="682">
+              <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
+      <file leaf-file-name="functionalityDirectory.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/asawoo/functionalityDirectory.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/asawoo-public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jade" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/index.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+            <state relative-caret-position="66">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -134,31 +79,11 @@
       <file leaf-file-name="platform.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/asawoo/platform.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="171">
+              <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ontology.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/ontology.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="24" column="76" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ontology.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/ontology.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -187,8 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/controllers/gateway.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/helpers/jsonTemplateEngine.js" />
         <option value="$PROJECT_DIR$/data/ontology/functionalities/prefixes.js" />
         <option value="$PROJECT_DIR$/data/ontology/functionalities/functionalities.jsonld" />
@@ -233,11 +156,13 @@
         <option value="$PROJECT_DIR$/controllers/code-repository.js" />
         <option value="$PROJECT_DIR$/models/globals.js" />
         <option value="$PROJECT_DIR$/controllers/index.js" />
-        <option value="$PROJECT_DIR$/models/asawoo/platform.js" />
-        <option value="$PROJECT_DIR$/controllers/interoperability.js" />
-        <option value="$PROJECT_DIR$/models/interoperability/platform.js" />
         <option value="$PROJECT_DIR$/controllers/asawoo.js" />
         <option value="$PROJECT_DIR$/views/index.jade" />
+        <option value="$PROJECT_DIR$/models/asawoo/functionalityDirectory.js" />
+        <option value="$PROJECT_DIR$/controllers/interoperability.js" />
+        <option value="$PROJECT_DIR$/models/asawoo/platform.js" />
+        <option value="$PROJECT_DIR$/models/interoperability/platform.js" />
+        <option value="$PROJECT_DIR$/models/asawoo/infrastructureController.js" />
       </list>
     </option>
   </component>
@@ -251,8 +176,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="width" value="1298" />
+    <option name="height" value="928" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -521,28 +446,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="asawoo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contexts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot-js-v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-wot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -561,17 +464,19 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="F:\Serveurs\nodejs\node.exe" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\temp\Prototype-wot-hydra\modif_proto_pour_compatibilite_Jordan\prototype-wot\models\asawoo" />
       <recent name="E:\temp\Prototype-wot-hydra\modif_proto_pour_compatibilite_Jordan\prototype-wot\data\ontology\vocabs" />
       <recent name="E:\temp\Prototype-wot-hydra\modif_proto_pour_compatibilite_Jordan\prototype-wot\data\interoperability\contexts" />
       <recent name="E:\temp\Prototype-wot-hydra\modif_proto_pour_compatibilite_Jordan\prototype-wot\views\interoperability" />
       <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\data\interoperability\vocabs" />
-      <recent name="E:\Projets\Test_node_MVC\prototype-wot-js-v2\middleware" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\temp\Prototype-wot-hydra\modif_proto_pour_compatibilite_Jordan\prototype-wot\models\interoperability" />
@@ -658,14 +563,7 @@
       <workItem from="1460083036436" duration="3347000" />
       <workItem from="1460128327271" duration="10154000" />
       <workItem from="1460210586757" duration="17396000" />
-      <workItem from="1460288090213" duration="34146000" />
-    </task>
-    <task id="LOCAL-00472" summary="Interoperability controller redirects gateway requests">
-      <created>1459979612341</created>
-      <option name="number" value="00472" />
-      <option name="presentableId" value="LOCAL-00472" />
-      <option name="project" value="LOCAL" />
-      <updated>1459979612341</updated>
+      <workItem from="1460288090213" duration="41382000" />
     </task>
     <task id="LOCAL-00473" summary="Interoperability controller redirects gateway requests">
       <created>1459979963108</created>
@@ -1003,11 +901,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460395510974</updated>
     </task>
-    <option name="localTasksCounter" value="521" />
+    <task id="LOCAL-00521" summary="Adding ASAWoO platform">
+      <created>1460406417039</created>
+      <option name="number" value="00521" />
+      <option name="presentableId" value="LOCAL-00521" />
+      <option name="project" value="LOCAL" />
+      <updated>1460406417039</updated>
+    </task>
+    <option name="localTasksCounter" value="522" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112241000" />
+    <option name="totallyTimeSpent" value="119477000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1030,15 +935,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1298" height="928" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1564482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23642172" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3589165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35770234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39954853" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16478555" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16449086" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24840255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1050,7 +956,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1070,7 +975,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Started including /interoperability" />
     <MESSAGE value="First try with interoperability layer complete" />
     <MESSAGE value="Try with interoperability layer complete" />
     <MESSAGE value="Try with interoperability simple vocabulary" />
@@ -1095,7 +999,8 @@
     <MESSAGE value="For unused files" />
     <MESSAGE value="Interoperability hydra vocab" />
     <MESSAGE value="All vocabularies in /ontology" />
-    <option name="LAST_COMMIT_MESSAGE" value="All vocabularies in /ontology" />
+    <MESSAGE value="Adding ASAWoO platform" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding ASAWoO platform" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
   <component name="XDebuggerManager">
@@ -1105,22 +1010,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/code-repository/hydra.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/asawoo/hydra.jsonld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/interoperability/capabilities/activateMotor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-235">
@@ -1430,14 +1319,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ontology.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/code-repository/contexts/EntryPoint.jsonld">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -1452,50 +1333,6 @@
           <caret line="90" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="90" selection-end-column="24" />
           <folding>
             <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="279" column="46" selection-start-line="279" selection-start-column="46" selection-end-line="279" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/interoperability/platform.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="185" column="11" selection-start-line="185" selection-start-column="11" selection-end-line="185" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/asawoo/platform.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/globals.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/asawoo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1528,6 +1365,80 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+          <folding>
+            <marker date="1460406090728" expanded="true" signature="244:799" placeholder="..." />
+            <marker date="1460406090728" expanded="true" signature="252:799" placeholder="..." />
+            <marker date="1460406090728" expanded="true" signature="518:799" placeholder="..." />
+            <marker date="1460406090728" expanded="true" signature="548:612" placeholder="..." />
+            <marker date="1460406090728" expanded="true" signature="737:799" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/asawoo/functionalityDirectory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/asawoo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/interoperability.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4043">
+          <caret line="266" column="0" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/globals.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/ontology.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/interoperability/platform.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/asawoo/platform.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/asawoo/infrastructureController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
           <folding />
         </state>
       </provider>
