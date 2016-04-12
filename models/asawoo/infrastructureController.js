@@ -1,7 +1,7 @@
 'use strict';
 
 //Node Modules
-const httpClient = require('client-http'),
+const request = require('request'),
     fs = require('fs');
 
 //Infrastructure Modules
@@ -26,7 +26,10 @@ class InfrastructureController {
     	//var deviceList = this.deviceList;
         console.log("Call getUpdate on " + interopPlatformUrl);
 
-        httpClient.request(interopPlatformUrl, function(data){
+        request({
+            "url": interopPlatformUrl,
+            "headers": {"Accept": "application/json"}
+        }, function(data){
             //data && console.log(data);
             if(data) {
                 var jsonDevices = JSON.parse(data)['devices'];
@@ -56,7 +59,7 @@ class InfrastructureController {
             } else {
                 console.log("No Response from CIMA");
             }
-        }, null, {"Accept": "application/json"});
+        });
     }
 
     updateDevice(device, capabilityList) {
