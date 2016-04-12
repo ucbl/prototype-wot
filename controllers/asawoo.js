@@ -13,7 +13,6 @@ var express = require('express'),
     templateEngine = require("../helpers/jsonTemplateEngine"),
     jsonldHeaders = require('../middleware/jsonldHeaders');
 
-
 /*---HYDRA ROUTER---*/
 
 // Entry point and home page
