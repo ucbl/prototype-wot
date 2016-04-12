@@ -14,7 +14,7 @@
             for (var i in this.capabilities) {
                 var capability = this.capabilities[i];
                 var shortId = capability["@id"].substring(capability["@id"].lastIndexOf("/") + 1);
-                var capabilityData = require("../data/interoperability/capabilities/" + shortId);
+                var capabilityData = require("../../data/interoperability/capabilities/" + shortId);
 
                 // Clone capability file's methods and properties into device capability
                 cloneHelper(capabilityData, capability);

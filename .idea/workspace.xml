@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c6001e82-eef7-4752-b576-2e967e375677" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/interoperability/device.js" afterPath="$PROJECT_DIR$/models/interoperability/device.js" />
     </list>
     <list id="e82bb406-3943-486e-9c1d-4dd443950585" name="devnull" comment="" />
     <ignored path="prototype-wot-js-v2.iws" />
@@ -60,11 +61,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="platform.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="platform.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/interoperability/platform.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="191">
               <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="device.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/interoperability/device.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -116,7 +127,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/helpers/jsonTemplateEngine.js" />
         <option value="$PROJECT_DIR$/data/ontology/functionalities/prefixes.js" />
         <option value="$PROJECT_DIR$/data/ontology/functionalities/functionalities.jsonld" />
         <option value="$PROJECT_DIR$/views/interoperability/entrypoint.js" />
@@ -167,6 +177,7 @@
         <option value="$PROJECT_DIR$/models/asawoo/platform.js" />
         <option value="$PROJECT_DIR$/models/asawoo/infrastructureController.js" />
         <option value="$PROJECT_DIR$/models/interoperability/platform.js" />
+        <option value="$PROJECT_DIR$/models/interoperability/device.js" />
       </list>
     </option>
   </component>
@@ -519,14 +530,7 @@
       <workItem from="1460083036436" duration="3347000" />
       <workItem from="1460128327271" duration="10154000" />
       <workItem from="1460210586757" duration="17396000" />
-      <workItem from="1460288090213" duration="41764000" />
-    </task>
-    <task id="LOCAL-00475" summary="Interoperability controller redirects gateway requests">
-      <created>1459980142124</created>
-      <option name="number" value="00475" />
-      <option name="presentableId" value="LOCAL-00475" />
-      <option name="project" value="LOCAL" />
-      <updated>1459980142124</updated>
+      <workItem from="1460288090213" duration="41900000" />
     </task>
     <task id="LOCAL-00476" summary="Interoperability controller redirects gateway requests">
       <created>1459980215200</created>
@@ -864,11 +868,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460427730867</updated>
     </task>
-    <option name="localTasksCounter" value="524" />
+    <task id="LOCAL-00524" summary="Adding ASAWoO platform">
+      <created>1460427900888</created>
+      <option name="number" value="00524" />
+      <option name="presentableId" value="LOCAL-00524" />
+      <option name="project" value="LOCAL" />
+      <updated>1460427900888</updated>
+    </task>
+    <option name="localTasksCounter" value="525" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119859000" />
+    <option name="totallyTimeSpent" value="119995000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1243,14 +1254,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/interoperability/device.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-462">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/code-repository/codes/temperatureRegulation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1395,6 +1398,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/interoperability/device.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
           <folding />
         </state>
       </provider>
