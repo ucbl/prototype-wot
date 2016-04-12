@@ -34,14 +34,15 @@ class InfrastructureController {
             if(!error && response.statusCode == 200) {
                 var jsonDevices = JSON.parse(body)['devices'];
                 if(jsonDevices) {
+                    console.log(JSON.stringify(jsonDevices));
                     jsonDevices.forEach((obj, key) => {
                         if (this.deviceList.has(obj.id) == true) {
-                            //console.log("obj exist "+obj.id);
+                            console.log("Device exists " + obj.id);
                             this.updateDevice(obj.id,obj.capabilities)
                         } else {
                             //new device
                             this.deviceList.add(obj.id);
-                            console.log("Adding device "+obj.id);
+                            console.log("Adding device " + obj.id);
                             //console.log(obj.capabilities);
                             //TODO
                             //create new avatar
