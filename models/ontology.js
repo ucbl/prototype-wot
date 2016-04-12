@@ -19,7 +19,7 @@ var ontology = {
     'loadOntology': function(params) {
         //Separate the context from the data, to be able to replace namespaces by their values
         var jsonOntology = {
-                "@context": templateEngine(require("../data/ontology/ontologies/prefixes.js")['@context'])
+            "@context": templateEngine(require("../data/ontology/ontologies/prefixes.js")['@context'])
         };
 
         var dataLocation = __dirname + '/../data/ontology/ontologies/functionalities.jsonld';
@@ -41,6 +41,11 @@ var ontology = {
                 console.log('Could not read file "ontologies.jsonld" in ' + dataLocation);
             }
         });
+    },
+
+    //Return the entire ontology
+    "getOntology": function() {
+        return ontology;
     },
 
     //Uri of the ontology vocabulary

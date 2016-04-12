@@ -28,17 +28,6 @@ router.get('/', function(request, response, next) {
 });
 
 // GET hydra vocabularies
-/*
-router.get('/vocab', function(request, response, next) {
-    var vocab = ontologyModel.getHydraVocab("ontology");
-
-    request.vocabUri = ontologyModel.getHydraVocabUri();
-    jsonldHeaders(request, response, next);
-    response.end(JSON.stringify(vocab));
-    return true;
-});
-*/
-
 router.get('/vocabs/:vocabId', jsonParser, function(request, response, next) {
     //Need to store parameter values in a local variable...
     var vocabId = request.params.vocabId;
@@ -89,6 +78,14 @@ router.get('/capabilities', function(request, response, next) {
     jsonldHeaders(request, response, next);
     response.end(JSON.stringify(capabilitiesResponse));
 });
+
+// GET the entire list ASAWoO ontology
+router.get('/asawoo-ontology', function(request, response, next) {
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
+    response.end(JSON.stringify(ontologyModel.getOntology()));
+
+}
 
 // GET the entire list of ontologies
 router.get('/ontologies', function(request, response, next) {
