@@ -42,24 +42,24 @@ class InfrastructureController {
 
                  */
                 if(jsonDevices) {
-                    jsonDevices.forEach((obj, key) => {
-                        if (this.deviceList.has(obj.id) == true) {
-                            console.log("Device exists " + obj.id);
-                            this.updateDevice(obj.id,obj.capabilities)
+                    jsonDevices.forEach((device, key) => {
+                        if (this.deviceList.has(device["@id"]) == true) {
+                            console.log("Device exists " + device["@id"]);
+                            this.updateDevice(device["@id"],device.capabilities)
                         } else {
                             //new device
-                            this.deviceList.add(obj.id);
-                            console.log("Adding device " + obj.id);
-                            //console.log(obj.capabilities);
+                            this.deviceList.add(device["@id"]);
+                            console.log("Adding device " + device["@id"]);
+                            //console.log(device.capabilities);
                             //TODO
                             //create new avatar
-                            var avatar = Avatar.buildAvatar(obj.capabilities, {
-                                name: obj.id,
+                            var avatar = Avatar.buildAvatar(device.capabilities, {
+                                name: device["@id"],
                                 http_port: this.getAvailablePort()
                             });
                             this.avatars_serialized.push(avatar.toJson());
                             //io.emit('avatars_updated', this.avatars_serialized);
-                            //self.avatarList.add(obj.id,avatar);
+                            //self.avatarList.add(device["@id"],avatar);
                         }
                     });
                 }
