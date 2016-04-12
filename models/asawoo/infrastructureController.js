@@ -28,11 +28,11 @@ class InfrastructureController {
 
         request({
             "url": interopPlatformUrl,
-            "headers": {"Accept": "application/json"}
-        }, function(data){
+            "headers": {"Accept": "application/ld+json"}
+        }, function(error, response, body){
             //data && console.log(data);
-            if(data) {
-                var jsonDevices = JSON.parse(data)['devices'];
+            if(!error && response.statusCode == 200) {
+                var jsonDevices = JSON.parse(body)['devices'];
                 if(jsonDevices) {
                     jsonDevices.forEach((obj, key) => {
                         if (this.deviceList.has(obj.id) == true) {
@@ -57,7 +57,7 @@ class InfrastructureController {
                 }
                 this.showDeviceList();
             } else {
-                console.log("No Response from CIMA");
+                console.error("Error loading connected devices list from " + interopPlatformUrl);
             }
         });
     }
