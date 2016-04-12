@@ -9,8 +9,8 @@ const Globals = require('../globals'),
     Directory = require('./functionalityDirectory.js');
 var functionalityDirectory = new Directory();
 
-const helper = require('../helper/global.js');
-const Avatar = require('../../js-avatar');
+//const helper = require('../helper/global.js');
+//const Avatar = require('../../js-avatar');
 
 class InfrastructureController {
     constructor() {
