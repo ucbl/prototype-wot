@@ -5,8 +5,8 @@ const request = require('request'),
     fs = require('fs');
 
 //Infrastructure Modules
-const Globals = require('../models/globals'),
-    Directory = require('../models/asawoo/functionalityDirectory.js');
+const Globals = require('../globals'),
+    Directory = require('./functionalityDirectory.js');
 var functionalityDirectory = new Directory();
 
 const helper = require('../helper/global.js');
