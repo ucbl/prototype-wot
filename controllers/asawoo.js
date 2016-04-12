@@ -7,7 +7,7 @@
 var express = require('express'),
     router = express.Router(),
     fs = require('fs'),
-    asawooModel = ('../models/asawoo/platform'),
+    asawooModel = require('../models/asawoo/platform'),
     bodyParser = require('body-parser'),
     Globals = require('../models/globals'),
     
