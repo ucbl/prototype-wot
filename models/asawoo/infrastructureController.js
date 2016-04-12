@@ -32,7 +32,15 @@ class InfrastructureController {
         }, (error, response, body) => {
             //data && console.log(data);
             if(!error && response.statusCode == 200) {
-                var jsonDevices = JSON.parse(body)['devices'];
+                var jsonDevices = JSON.parse(body)['connectedDevices'];
+                /*
+                 {
+                 "@context":"http://192.168.56.102:3000/interoperability/context/ConnectedDeviceRefs",
+                 "@type":"vocab:ConnectedDeviceRefs",
+                 "@id":"http://192.168.56.102:3000/interoperability/connected-devices",
+                 "connectedDevices":["http://192.168.56.102:3000/interoperability/devices/sensor-ge-2442"]}
+
+                 */
                 console.log(JSON.stringify(jsonDevices));
                 console.log("body : " + body);
                 if(jsonDevices) {
