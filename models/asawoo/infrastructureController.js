@@ -33,8 +33,9 @@ class InfrastructureController {
             //data && console.log(data);
             if(!error && response.statusCode == 200) {
                 var jsonDevices = JSON.parse(body)['devices'];
+                console.log(JSON.stringify(jsonDevices));
+                console.log(this);
                 if(jsonDevices) {
-                    console.log(JSON.stringify(jsonDevices));
                     jsonDevices.forEach((obj, key) => {
                         if (this.deviceList.has(obj.id) == true) {
                             console.log("Device exists " + obj.id);
@@ -56,7 +57,7 @@ class InfrastructureController {
                         }
                     });
                 }
-                showDeviceList();
+                this.showDeviceList();
             } else {
                 console.error("Error loading connected devices list from " + interopPlatformUrl);
             }
