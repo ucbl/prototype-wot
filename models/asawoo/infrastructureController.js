@@ -17,7 +17,7 @@ class InfrastructureController {
       	//console.log('call InfrastructureController constructor!');
       	this.deviceList = new Set();
       	this.avatarList = new Map();
-        this.avatars_serialized = [];
+        this.avatars = [];
         this.portArray = [];
     }
 
@@ -42,23 +42,23 @@ class InfrastructureController {
 
                  */
                 if(jsonDevices) {
-                    jsonDevices.forEach((device, key) => {
-                        if (this.deviceList.has(device["@id"]) == true) {
-                            console.log("Device exists " + device["@id"]);
-                            this.updateDevice(device["@id"],device.capabilities)
+                    jsonDevices.forEach((device) => {
+                        if (this.deviceList.has(device) == true) {
+                            console.log("Device exists " + device);
+                            this.avatars.get(device).update();
                         } else {
-                            //new device
-                            this.deviceList.add(device["@id"]);
-                            console.log("Adding device " + device["@id"]);
-                            //console.log(device.capabilities);
-                            //TODO
-                            //create new avatar
+                            //Add new device
+                            console.log("Adding device " + device);
+                            this.deviceList.add(device);
+
+                            //Create new avatar
                             var avatar = Avatar.buildAvatar(device.capabilities, {
-                                name: device["@id"],
+                                name: device,
                                 http_port: this.getAvailablePort()
                             });
-                            this.avatars_serialized.push(avatar.toJson());
-                            //io.emit('avatars_updated', this.avatars_serialized);
+                            this.avatars.push(avatar.toJson());
+
+                            //io.emit('avatars_updated', this.avatars);
                             //self.avatarList.add(device["@id"],avatar);
                         }
                     });
@@ -84,10 +84,6 @@ class InfrastructureController {
 		for (let key of this.deviceList.values()) 
 		    console.log("Device[" + key + "]: " + this.deviceList[key]);
     }
-
-    getDeviceList ()    { return this.deviceList;}
-
-    getAvatarList ()    { return this.avatarList;}
 
     //returns a free port between 4000 and 5000
     getAvailablePort() {
