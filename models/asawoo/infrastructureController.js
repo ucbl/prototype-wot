@@ -16,8 +16,8 @@ class InfrastructureController {
     constructor() {
       	//console.log('call InfrastructureController constructor!');
       	this.deviceList = new Set();
-      	this.avatarList = new Map();
-        this.avatars = [];
+      	//this.avatarList = new Map();
+        this.avatars = new Map();
         this.portArray = [];
     }
 
@@ -45,18 +45,20 @@ class InfrastructureController {
                     jsonDevices.forEach((device) => {
                         if (this.deviceList.has(device) == true) {
                             console.log("Device exists " + device);
-                            this.avatars.get(device).update();
+                            var avatarUri = this.avatars.get(device).uri;
+                            //TODO send an HTTP request to tell the avatar to update its capabilities
                         } else {
                             //Add new device
                             console.log("Adding device " + device);
                             this.deviceList.add(device);
 
                             //Create new avatar
-                            var avatar = Avatar.buildAvatar(device.capabilities, {
+                            var avatar = Avatar.buildAvatar({
                                 name: device,
                                 http_port: this.getAvailablePort()
                             });
-                            this.avatars.push(avatar.toJson());
+                            //Stores a JSON serialization of the avatar (not the object itself)
+                            this.avatars.put(device, avatar);
 
                             //io.emit('avatars_updated', this.avatars);
                             //self.avatarList.add(device["@id"],avatar);
@@ -70,6 +72,7 @@ class InfrastructureController {
         });
     }
 
+/*
     updateDevice(device, capabilityList) {
     	console.log("Update device "+ device);
         //TODO
@@ -78,6 +81,7 @@ class InfrastructureController {
         //io.emit('functionalities_updated', directories.functionality);
     	//return avatar;
     }
+*/
 
     showDeviceList() {
     	//console.log("Call showDeviceList");
