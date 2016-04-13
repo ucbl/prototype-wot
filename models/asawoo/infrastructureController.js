@@ -49,6 +49,7 @@ class InfrastructureController {
                             //Create new avatar
                             Avatar.buildAvatar({
                                 deviceUri: device,
+                                name: device.replace(Globals.vocabularies.interoperability + "devices", Globals.vocabularies.asawoo + "avatars"),
                                 http_port: this.getAvailablePort()
                             }).then((avatar) => {
                                  console.log("Build avatar returned " + avatar);
