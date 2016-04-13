@@ -1,0 +1,1 @@
+Correction de la plupart des promesses. Parsing JSON pour les capabilities renvoyes par le wserver.
