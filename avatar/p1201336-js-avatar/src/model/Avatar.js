@@ -83,9 +83,9 @@ class Avatar {
 				cfm.init(avatar, ctxm, wsclient, lfm);
 				fpm.init(avatar, ctxm, lfm, cfm);
 				fdm.init(avatar, ctxm);
-				return avatar.toJSON();
+				return avatar.toJson();
 			}).catch((error) => {
-				console.error("Something got wrong");
+				console.error(error);
 				throw error;
 			});
 		});

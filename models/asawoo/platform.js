@@ -25,7 +25,7 @@
             .then(() => {
                 setTimeout(function () {
                     doUpdate();
-                }, 2000);
+                }, 10000);
             })
             .catch((error) => {
                 throw error;

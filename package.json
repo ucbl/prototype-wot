@@ -17,17 +17,25 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.14.1",
+    "colors": "^1.1.2",
+    "deasync": "^0.1.4",
     "express": "^4.12.3",
     "jade": "^1.9.2",
     "node-sass-middleware": "^0.9.8",
     "debug": "~2.1.1",
     "ejs": "~2.2.3",
+    "fs": "0.0.2",
     "n3": "^0.4.0",
     "jsonld": "^0.3.0",
+    "q": "^1.4.1",
+    "rdf-ext": "^0.3.0",
+    "rdf-formats-common": "^0.3.0",
     "request": "2.53.0",
     "request-promise" : "2.0.1",
     "ldf-client" : "1.2.6",
-    "rdfstore": "0.9.4"
+    "rdf-ext": "^0.3.0",
+    "rdf-formats-common": "^0.3.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "mocha": "^2.2.4",

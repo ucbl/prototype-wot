@@ -1,1 +1,1 @@
-Mise a jour des champs capabilities - id - et de leur ajout en tant que triple d'un type precis de capability
+corrected avatar.toJson()
