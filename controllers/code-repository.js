@@ -5,7 +5,8 @@ var express = require('express'),
     router = express.Router(),
     fs = require('fs'),
     bodyParser = require('body-parser'),
-    Globals = require('../models/globals');
+    Globals = require('../models/globals'),
+    templateEngine = require("../helpers/jsonTemplateEngine");
 
 
 /*---HYDRA ROUTER---*/
@@ -14,9 +15,9 @@ var express = require('express'),
 // GET the list of available codes
 router.get('/', function(request, response) {
     var responseJson = {
-        '@id': Globals.vocabularies.base + "/code-repository",
+        '@id': Globals.vocabularies.code,
         '@type': "vocab:Collection",
-        '@context': Globals.vocabularies.base + "/context/Collection",
+        '@context': Globals.vocabularies.code + "context/Collection",
         'codes': []
     };
     var directoryFiles = fs.readdirSync(__dirname + '/../data/code-repository/codes-info/');
@@ -29,22 +30,12 @@ router.get('/', function(request, response) {
     response.end(JSON.stringify(responseJson));
 });
 
-// GET the hydra vocabulary
-router.get('/vocab', function(request, response) {
-    response.writeHead(200, {"Content-Type": "application/ld+json"});
-    var hydraLocation = __dirname + '/../data/code-repository/hydra.jsonld';
-    fs.readFile(hydraLocation, 'utf8', function (error, data) {
-        response.end(data);
-    });
-    return true;
-});
-
-// GET the hydra context
+// GET contexts
 router.get('/context/:context', function(request, response) {
     response.writeHead(200, {"Content-Type": "application/ld+json"});
     var contextLocation = __dirname + '/../data/code-repository/contexts/' + request.params.context + '.jsonld';
     fs.readFile(contextLocation, 'utf8', function (error, data) {
-        response.end(data);
+        response.end(templateEngine(data));
     });
     return true;
 });
@@ -58,7 +49,7 @@ router.get('/context', function(request, response) {
 /*---WEB SERVICE---*/
 
 // GET the information of a code
-router.get('/code/:idFunctionality', function(request, response) {
+router.get('/repo/:idFunctionality', function(request, response) {
     var codeResponse = {};
     var idFunctionality = request.params.idFunctionality;
     var dataLocationFile = __dirname + '/../data/code-repository/codes-info/' + idFunctionality + '.json';

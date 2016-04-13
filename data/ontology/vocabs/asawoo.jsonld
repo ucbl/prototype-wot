@@ -1,0 +1,280 @@
+{
+  "@id": "__ontology__vocabs/asawoo",
+  "@type": "ApiDocumentation",
+  "entrypoint": "http://__asawoo__",
+  "@context": {
+    "vocab": "__ontology__vocabs/asawoo#",
+    "hydra": "http://www.w3.org/ns/hydra/core#",
+    "ApiDocumentation": "hydra:ApiDocumentation",
+    "property": {
+      "@id": "hydra:property",
+      "@type": "@id"
+    },
+    "readonly": "hydra:readonly",
+    "writeonly": "hydra:writeonly",
+    "supportedClass": "hydra:supportedClass",
+    "supportedProperty": "hydra:supportedProperty",
+    "supportedOperation": "hydra:supportedOperation",
+    "method": "hydra:method",
+    "expects": {
+      "@id": "hydra:expects",
+      "@type": "@id"
+    },
+    "returns": {
+      "@id": "hydra:returns",
+      "@type": "@id"
+    },
+    "statusCodes": "hydra:statusCodes",
+    "code": "hydra:statusCode",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "description": "rdfs:comment",
+    "domain": {
+      "@id": "rdfs:domain",
+      "@type": "@id"
+    },
+    "range": {
+      "@id": "rdfs:range",
+      "@type": "@id"
+    },
+    "subClassOf": {
+      "@id": "rdfs:subClassOf",
+      "@type": "@id"
+    }
+  },
+  "supportedClass": [
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#Resource",
+      "@type": "hydra:Class",
+      "hydra:title": "Resource",
+      "hydra:description": null,
+      "supportedOperation": [],
+      "supportedProperty": []
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#Collection",
+      "@type": "hydra:Class",
+      "hydra:title": "Collection",
+      "hydra:description": null,
+      "supportedOperation": [],
+      "supportedProperty": [
+        {
+          "property": "http://www.w3.org/ns/hydra/core#member",
+          "hydra:title": "avatars",
+          "hydra:description": "The avatars of this collection.",
+          "required": null,
+          "readonly": false,
+          "writeonly": false
+        },
+        {
+          "property": "http://www.w3.org/ns/hydra/core#member",
+          "hydra:title": "functionalities",
+          "hydra:description": "The functionalities of this collection.",
+          "required": null,
+          "readonly": false,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:EntryPoint",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "EntryPoint",
+      "description": "The main entry point of the ASAWoO Prototype.",
+      "supportedOperation": [
+        {
+          "@id": "_:entry_point",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "The ASAWoO Prototype main entry point.",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:EntryPoint",
+          "statusCodes": []
+        }
+      ],
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:EntryPoint/avatars",
+            "@type": "hydra:Link",
+            "label": "avatars",
+            "description": "The entrypoint for the avatars",
+            "domain": "vocab:EntryPoint",
+            "range": "http://www.w3.org/ns/hydra/core#Collection",
+            "supportedOperation": [
+              {
+                "@id": "_:avatars",
+                "@type": "hydra:Operation",
+                "method": "GET",
+                "label": "The list of all the avatars",
+                "description": null,
+                "expects": null,
+                "returns": "hydra:Collection",
+                "statusCodes": []
+              }
+            ]
+          },
+          "hydra:title": "avatars",
+          "hydra:description": "The list of all the avatars."
+        }
+      ]
+    },
+    {
+      "@id": "vocab:Avatar",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "Avatar",
+      "description": "An avatar.",
+      "supportedOperation": [
+        {
+          "@id": "_:avatar",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "Retrieves an avatar",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:Avatar",
+          "statusCodes": []
+        }
+      ],
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:Avatar/name",
+            "@type": "rdf:Property",
+            "label": "name",
+            "description": "The explicit name of the avatar",
+            "domain": "vocab:Avatar",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "name",
+          "hydra:description": "The explicit name of the avatar",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:Avatar/description",
+            "@type": "rdf:Property",
+            "label": "description",
+            "description": "The description of the avatar",
+            "domain": "vocab:Avatar",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "description",
+          "hydra:description": "The description of the avatar",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:Avatar/capabilities",
+            "@type": "rdf:Property",
+            "label": "functionalities",
+            "description": "The capabilities of the avatar",
+            "domain": "vocab:Avatar",
+            "range": "vocab:Collection",
+            "supportedOperation": []
+          },
+          "hydra:title": "capabilities",
+          "hydra:description": "The capabilities of the avatar",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:Avatar/functionalities",
+            "@type": "rdf:Property",
+            "label": "functionalities",
+            "description": "The functionalities of the avatar",
+            "domain": "vocab:Avatar",
+            "range": "vocab:Collection",
+            "supportedOperation": []
+          },
+          "hydra:title": "functionalities",
+          "hydra:description": "The functionalities of the avatar",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "vocab:Functionality",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "Functionality",
+      "description": "A functionality.",
+      "supportedOperation": [
+        {
+          "@id": "_:functionality",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "Retrieves a functionality",
+          "description": null,
+          "expects": null,
+          "returns": "vocab:Functionality",
+          "statusCodes": []
+        }
+      ],
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "vocab:Functionality/name",
+            "@type": "rdf:Property",
+            "label": "name",
+            "description": "The explicit name of the functionality",
+            "domain": "vocab:Functionality",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "name",
+          "hydra:description": "The explicit name of the functionality",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:Functionality/description",
+            "@type": "rdf:Property",
+            "label": "description",
+            "description": "The description of the functionality",
+            "domain": "vocab:Functionality",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "description",
+          "hydra:description": "The description of the functionality",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "vocab:Functionality/supportedOperation",
+            "@type": "rdf:Property",
+            "label": "Supported Operations",
+            "description": "The supported operations of the functionality",
+            "domain": "vocab:Functionality",
+            "range": "vocab:Collection",
+            "supportedOperation": []
+          },
+          "hydra:title": "supportedOperation",
+          "hydra:description": "The supported operations of the functionality",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        }
+      ]
+    }
+  ]
+}

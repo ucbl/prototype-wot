@@ -1,0 +1,24 @@
+{
+  "@context" : "__ontology__context/Device",
+  "@type": "vocab:Device",
+  "@id" : "__interoperability__devices/coolerheater-swirlwind-2665",
+  "id" : "coolerheater-swirlwind-2665",
+  "name": "Cooler / Heater",
+  "description": "A Swirlwind cooler and heater system with the serial number 2665",
+  "capabilities" : [
+    {
+      "@id": "__interoperability__devices/coolerheater-swirlwind-2665/temperatureDecrease",
+      "@type": ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityTemperatureDecrease"],
+      "@context" : "__ontology__context/Capability"
+    },
+    {
+      "@id": "__interoperability__devices/coolerheater-swirlwind-2665/temperatureIncrease",
+      "@type": ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityTemperatureIncrease"],
+      "@context" : "__ontology__context/Capability"
+    }
+	],
+    "values": {
+    	"valueIncreaser": 0,
+    	"valueDecreaser": 0
+    }
+}

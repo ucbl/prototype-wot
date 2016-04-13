@@ -13,7 +13,7 @@ module.exports = function(composedFunctionalitiesInfo) {
             }
         }
     }
-    // Clean the composed functionalities
+    // Clean the composed ontologies
     for (i in composedFunctionalitiesInfo) {
         for (j in composedFunctionalitiesInfo[i].isComposedOf) {
             if (composedFunctionalitiesInfo[i].isComposedOf[j] == null) {

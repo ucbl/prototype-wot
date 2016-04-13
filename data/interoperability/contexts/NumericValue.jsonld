@@ -1,8 +1,0 @@
-{
-    "@context": {
-        "hydra": "http://www.w3.org/ns/hydra/core#",
-        "vocab": "__interoperability__vocab#",
-        "value": "http://www.w3.org/2001/XMLSchema#int",
-        "NumericValue": "vocab:NumericValue"
-    }
-}

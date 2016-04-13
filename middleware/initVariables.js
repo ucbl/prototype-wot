@@ -5,7 +5,7 @@
 
 (function(module) {
     var Globals = require('../models/globals'),
-        interoperabilityModel = require('../models/interoperability'),
+        interoperabilityModel = require('../models/interoperability/platform'),
         ontologyModel = require('../models/ontology');
 
 
@@ -16,7 +16,7 @@
 
             //Initiate the object discovery and construct their URIs
             ontologyModel.loadOntology({verbose: false});
-            interoperabilityModel.loadObjects({verbose: true});
+            interoperabilityModel.loadDevices({verbose: false});
         }
         next();
     };

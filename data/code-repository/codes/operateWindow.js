@@ -1,1 +1,1 @@
-console.log('Opearting window');
+console.log('Operating window');

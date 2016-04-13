@@ -1,9 +1,12 @@
 {
     "@context": {
         "hydra": "http://www.w3.org/ns/hydra/core#",
-        "vocab": "http://localhost:3232/vocab#",
-        "Capability": "vocab:Capability",
+        "vocab": "__ontology__vocabs/interoperability#",
         "name": "http://www.w3.org/2001/XMLSchema#string",
-        "description": "http://www.w3.org/2001/XMLSchema#string"
+        "description": "http://www.w3.org/2001/XMLSchema#string",
+        "invocation": {
+            "platform": "vocab:Capability/accessPort",
+            "gateway": "vocab:Capability/accessPort"
+        }
     }
 }

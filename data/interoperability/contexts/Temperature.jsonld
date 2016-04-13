@@ -1,9 +1,7 @@
 {
     "@context": {
         "hydra": "http://www.w3.org/ns/hydra/core#",
-        "vocab": "__interoperability__vocab#",
-        "value": "http://www.w3.org/2001/XMLSchema#double",
-        "type": "http://www.w3.org/2001/XMLSchema#string",
-        "Temperature": "vocab:Temperature"
+        "vocab": "__ontology__vocabs/interoperability#",
+        "temperature": "vocab:Temperature"
     }
 }

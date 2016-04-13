@@ -1,18 +1,19 @@
 /**
  * Created by Lionel on 22/11/2015.
- * Controller for a mock of interoperability platform that provides access to the connected objects
+ * Controller for a mock of interoperability platform that provides access to the connected devices
  */
 
 var express = require('express'),
     router = express.Router(),
-    Globals = require('../models/globals'),
-    interoperabilityModel = require('../models/interoperability'),
-    capabilityModel = require('../models/capability'),
+    jsonParser = require('body-parser').json(),
+    interoperabilityModel = require('../models/interoperability/platform'),
     jsonldHeaders = require('../middleware/jsonldHeaders');
 
 /*---WEB SERVICE---*/
 
-/*-- Entry point management --*/
+/**
+ * -- Entry point management --
+ */
 
 // Entry point and home page
 router.get('/', function(request, response, next) {
@@ -20,249 +21,246 @@ router.get('/', function(request, response, next) {
         //Send the interoperability platform homepage
         response.redirect('/interoperability-public');
     } else {
+        request.vocabUri = interoperabilityModel.getHydraVocabUri();
         jsonldHeaders(request, response, next);
-        response.end(JSON.stringify(interoperabilityModel.entryPoint));
+        response.end(JSON.stringify((require("../views/interoperability/entryPoint")())));
     }
 });
 
-// Sends the collection of known objects
-router.get('/platform', function(request, response, next) {
-    var platform = interoperabilityModel.platform;
+/**
+ * -- Known devices (not supposed to be connected to the platform) --
+ */
+
+// Returns the collection of known devices (simple descriptions)
+router.get('/devices', function(request, response, next) {
+    var knownDevices = interoperabilityModel.getKnownDevices();
     if (request.accepts('html')) {
-        response.render('interoperability/platform', {platform: platform});
+        response.render('interoperability/devicesSimple', {'devices': knownDevices});
     } else {
+        request.vocabUri = interoperabilityModel.getHydraVocabUri();
         jsonldHeaders(request, response, next);
-        response.end(JSON.stringify(require("../views/objectsSimple")(platform)));
+        response.end(JSON.stringify((require("../views/interoperability/knownDevices")(knownDevices))));
     }
 });
 
-// Sends a collection of interoperability (detailed descriptions)
-router.get('/object', function(request, response, next) {
-    var platform = interoperabilityModel.getKnownObjectCollection();
-    if (request.accepts('html')) {
-        response.render('interoperability/objectsSimple', {objects: platform.objects});
-    } else {
-        jsonldHeaders(request, response, next);
-        response.end(JSON.stringify((require("../views/objectsSimple")(platform))));
-    }
-});
-
-// Retrieves info about a particular object
-router.get('/object/:objectId', function(request, response, next) {
-    //Search object by name, then by id, then provide an empty object
-    var object = interoperabilityModel.getObjectInfos(request.params.objectId) || interoperabilityModel.findObjectById(request.params.objectId);
-    if(object) {
+// Retrieves info about a particular known device
+router.get('/devices/:deviceId', function(request, response, next) {
+    //Search device by name, then by id, then provide an empty device
+    var device = interoperabilityModel.getDeviceInfos(request.params["deviceId"]) || interoperabilityModel.findDeviceById(request.params["deviceId"]);
+    if(device) {
         if (request.accepts('html')) {
-            response.render('interoperability/object', {object: object});
+            response.render('interoperability/deviceFullPage', {device: device});
         } else {
+            request.vocabUri = interoperabilityModel.getHydraVocabUri();
             jsonldHeaders(request, response, next);
-            response.end(JSON.stringify(object));
+            response.end(JSON.stringify(device));
         }
     } else {
         response.sendStatus(404);
     }
 });
 
-// Sends a collection of interoperability (detailed descriptions)
-router.get('/connected-object', function(request, response, next) {
-    var platform = interoperabilityModel.getConnectedObjectCollection();
-    if (request.accepts('html')) {
-        response.render('interoperability/objectsSimple', {objects: platform.objects});
-    } else {
-        jsonldHeaders(request, response, next);
-        response.end(JSON.stringify((require("../views/objectsSimple")(platform))));
-    }
-});
-
-// Retrieves info about a particular object
-router.get('/connected-object/:objectId', function(request, response) {
-    if(interoperabilityModel.isConnected(request.params.objectId)) {
-        response.redirect("../object/" + request.params.objectId);
+// Retrieves info about a given capability of a known device
+router.get('/devices/:deviceId/:capabilityId', function(request, response, next) {
+    //Search device by name, then by id, then provide an empty device
+    var device = interoperabilityModel.getDeviceInfos(request.params["deviceId"]) || interoperabilityModel.findDeviceById(request.params["deviceId"]);
+    if(device) {
+        var capability = device.getCapability(request.params["capabilityId"]);
+        if(capability) {
+            if (request.accepts('html')) {
+                response.render('interoperability/capability', {capability: capability});
+            } else {
+                request.vocabUri = interoperabilityModel.getHydraVocabUri();
+                jsonldHeaders(request, response, next);
+                response.end(JSON.stringify((require("../views/interoperability/capability")(capability))));
+            }
+        } else {
+            response.sendStatus(404);
+        }
     } else {
         response.sendStatus(404);
     }
 });
 
-// Add a new object to the currently connected object list
-router.put('/object/:objectId', function(request, response) {
-    if(interoperabilityModel.isConnected(request.params.objectId)) {
+/**
+ * -- Connected devices --
+ */
+
+// Sends the collection of connected devices (short descriptions)
+router.get('/connected-devices', function(request, response, next) {
+    var connectedDevices = interoperabilityModel.getConnectedDevices();
+    if (request.accepts('html')) {
+        response.render('interoperability/devicesSimple', {'devices': connectedDevices});
+    } else {
+        request.vocabUri = interoperabilityModel.getHydraVocabUri();
+        jsonldHeaders(request, response, next);
+        response.end(JSON.stringify((require("../views/interoperability/connectedDevices")(connectedDevices))));
+    }
+});
+
+// Retrieves info about a particular device
+router.get('/connected-devices/:deviceId', function(request, response) {
+    if(interoperabilityModel.isConnected(request.params["deviceId"])) {
+        response.redirect("../device/" + request.params["deviceId"]);
+    } else {
+        response.sendStatus(404);
+    }
+});
+
+/**
+ * -- Connection and disconnection management --
+ */
+
+// Add a new device to the currently connected device list
+router.put('/devices/:deviceId', function(request, response) {
+    if(interoperabilityModel.isConnected(request.params["deviceId"])) {
         response.sendStatus(405);
     } else {
-        interoperabilityModel.addObject(request.params.objectId);
+        interoperabilityModel.connectDevice(request.params["deviceId"]);
         response.sendStatus(201);
     }
 });
 
-// Add a new object to the currently connected object list
-//TODO: do something more if a graph is posted to the object
-router.post('/object/:objectId', function(request, response) {
-    if(interoperabilityModel.isConnected(request.params.objectId)) {
+// Add a new device to the currently connected device list
+//TODO: do something more interesting if a graph is posted to the device
+router.post('/devices/:deviceId', jsonParser, function(request, response) {
+    if(interoperabilityModel.isConnected(request.params["deviceId"])) {
         response.sendStatus(405);
     } else {
-        interoperabilityModel.addObject(request.params.objectId);
+        interoperabilityModel.connectDevice(request.params["deviceId"]);
         response.sendStatus(201);
     }
 });
 
-// Remove an object from the currently connected object list
-router.delete('/object/:objectId', function(request, response) {
-    if(interoperabilityModel.isConnected(request.params.objectId)) {
-        interoperabilityModel.removeObject(request.params.objectId);
+// Remove an device from the currently connected device list
+router.delete('/devices/:deviceId', function(request, response) {
+    if(interoperabilityModel.isConnected(request.params["deviceId"])) {
+        interoperabilityModel.disconnectDevice(request.params["deviceId"]);
         response.sendStatus(204);
     } else {
         response.sendStatus(405);
     }
 });
 
-/*-- Object capability management --*/
+/**
+ * -- device capability invocation --
+ */
 
-//TODO: REFACTOR THAT ASAP!
-// GET and PUT operations on the real interoperability
-router.get('/object/:objectId/:capabilityId', function(request, response, next) {
-    var object = interoperabilityModel.findObjectById(request.params.objectId);
-    var capability = request.params.capabilityId;
-    var responseJson = {"@id": Globals.vocabularies.interoperability + request.params["objectId"] + '/' + capability};
-    switch (capability) {
-        case 'gps':
-            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/Position';
-            responseJson['@type'] = 'vocab:Position';
-            responseJson.latitude = object.getValue('latitude');
-            responseJson.longitude = object.getValue('longitude');
-            break;
-        case 'temperatureSense':
-            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/Temperature';
-            responseJson['@type'] = 'vocab:Temperature';
-            responseJson.value = capabilityModel.calculateTemperature();
-            responseJson.type = object.getValue('type');
-            break;
-        case 'informationMotor':
-            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/MotorValue';
-            responseJson['@type'] = 'vocab:MotorValue';
-            responseJson.angle = object.getValue('angle');
-            responseJson.speed = object.getValue('speed');
-            responseJson.strength = object.getValue('strength');
-            break;
+//Returns the capability result with a 200 status code if it was sent using the "return" instruction
+//and a status code if the capability function ended with a "throw" instruction and a numeric argument
+
+router.get('/connected-devices/:deviceId/:capabilityId', function(request, response, next) {
+    var device = interoperabilityModel.findDeviceById(request.params["deviceId"]);
+    try {
+        var result = device.invokeCapability(request.params["capabilityId"], "get", request.query);
+        request.vocabUri = interoperabilityModel.getHydraVocabUri();
+        jsonldHeaders(request, response, next);
+        response.end(JSON.stringify(result));
+    } catch(error) {
+        if(typeof(error) === "number") {
+            response.sendStatus(error);
+        } else {
+            console.log(error.message);
+            response.sendStatus(500);
+        }
     }
-    jsonldHeaders(request, response, next);
-    response.end(JSON.stringify(responseJson));
 });
 
-router.put('/object/:objectId/:capability', function(request, response, next) {
-    jsonldHeaders(request, response, next);
-    var object = interoperabilityModel.findObjectById(request.params.objectId);
-    var capability = request.params.capability;
-    var responseJson = {"@id": Globals.vocabularies.interoperability + request.originalUrl};
-    switch (capability) {
-        case 'temperatureDecrease':
-            var newValue = request.body.value;
-            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/NumericValue';
-            responseJson['@type'] = 'vocab:NumericValue';
-            if (request.params.objectId == 'coolerheater-swirlwind-2665') {
-                object.setValue('valueDecreaser', newValue);
-                responseJson.value = object.getValue('valueDecreaser');
-            } else {
-                object.setValue('value', newValue);
-                responseJson.value = object.getValue('value');
-            }
-            capabilityModel.calculateTemperature();
-            break;
-        case 'temperatureIncrease':
-            newValue = request.body.value;
-            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/NumericValue';
-            responseJson['@type'] = 'vocab:NumericValue';
-            if (request.params.objectId == 'coolerheater-swirlwind-2665') {
-                object.setValue('valueIncreaser', newValue);
-                responseJson.value = object.getValue('valueIncreaser');
-            } else {
-                object.setValue('value', newValue);
-                responseJson.value = object.getValue('value');
-            }
-            capabilityModel.calculateTemperature();
-            break;
-        case 'closeWindow':
-            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/WindowStatus';
-            responseJson['@type'] = 'vocab:WindowStatus';
-            object.setValue('status', 'closed');
-            responseJson.status = object.getValue('status');
-            capabilityModel.calculateTemperature();
-            break;
-        case 'openWindow':
-            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/WindowStatus';
-            responseJson['@type'] = 'vocab:WindowStatus';
-            object.setValue('status', 'open');
-            responseJson.status = object.getValue('status');
-            capabilityModel.calculateTemperature();
-            break;
-        case 'call':
-        case 'sms':
-        case 'video':
-        case 'photo':
-            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/PhoneStatus';
-            responseJson['@type'] = 'vocab:PhoneStatus';
-            object.setValue('status', capability);
-            responseJson.status = object.getValue('status');
-            break;
-        case 'startApp':
-            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/AppStatus';
-            responseJson['@type'] = 'vocab:AppStatus';
-            object.setValue('statusApp', 'started');
-            responseJson.status = object.getValue('statusApp');
-            break;
-        case 'stopApp':
-            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/AppStatus';
-            responseJson['@type'] = 'vocab:AppStatus';
-            object.setValue('statusApp', 'stopped');
-            responseJson.status = object.getValue('statusApp');
-            break;
+router.put('/connected-devices/:deviceId/:capabilityId', jsonParser, function(request, response, next) {
+    var device = interoperabilityModel.findDeviceById(request.params["deviceId"]);
+    console.log("body: " + JSON.stringify(request.body));
+    try {
+        var result = device.invokeCapability(request.params["capabilityId"], "put", request.body);
+        request.vocabUri = interoperabilityModel.getHydraVocabUri();
+        jsonldHeaders(request, response, next);
+        response.end(JSON.stringify(result));
+    } catch(error) {
+        if(typeof(error) === "number") {
+            response.sendStatus(error);
+        } else {
+            response.sendStatus(500);
+        }
     }
-    response.end(JSON.stringify(responseJson));
 });
 
-router.post('/object/:objectId/:capability', function(request, response, next) {
-    jsonldHeaders(request, response, next);
-    var object = interoperabilityModel.findObjectById(request.params.objectId);
-    var capability = request.params.capability;
-    var responseJson = {"@id": Globals.vocabularies.interoperability + request.originalUrl};
-    switch (capability) {
-        case 'activateMotor':
-            var newAngle = request.body.angle;
-            var newSpeed = request.body.speed;
-            var newStrength = request.body.strength;
-            responseJson['@context'] = Globals.vocabularies.interoperability + 'context/MotorValue';
-            responseJson['@type'] = 'vocab:MotorValue';
-            object.setValue('activated', 'true');
-            object.setValue('angle', newAngle);
-            object.setValue('speed', newSpeed);
-            object.setValue('strength', newStrength);
-            responseJson.angle = object.getValue('angle');
-            responseJson.speed = object.getValue('speed');
-            responseJson.strength = object.getValue('strength');
-            break;
+router.post('/connected-devices/:deviceId/:capabilityId', jsonParser, function(request, response, next) {
+    var device = interoperabilityModel.findDeviceById(request.params["deviceId"]);
+    console.log("body: " + JSON.stringify(request.body));
+    try {
+        var result = device.invokeCapability(request.params["capabilityId"], "post", request.body);
+        request.vocabUri = interoperabilityModel.getHydraVocabUri();
+        jsonldHeaders(request, response, next);
+        response.end(JSON.stringify(result));
+    } catch(error) {
+        if(typeof(error) === "number") {
+            response.sendStatus(error);
+        } else {
+            response.sendStatus(500);
+        }
     }
-    response.end(JSON.stringify(responseJson));
+});
+
+router.delete('/connected-devices/:deviceId/:capabilityId', jsonParser, function(request, response, next) {
+    var device = interoperabilityModel.findDeviceById(request.params["deviceId"]);
+    try {
+        //It seems that passing parameters in a delete request is not restful (see http://stackoverflow.com/questions/2539394/rest-http-delete-and-parameters)
+        //TODO: improve the argument passing model to address sub-resources of the capabilities. ...Or just use post to delete sub-resources.
+        var result = device.invokeCapability(request.params["capabilityId"], "delete", request.body);
+        request.vocabUri = interoperabilityModel.getHydraVocabUri();
+        jsonldHeaders(request, response, next);
+        response.end(JSON.stringify(result));
+    } catch(error) {
+        if(typeof(error) === "number") {
+            response.sendStatus(error);
+        } else {
+            response.sendStatus(500);
+        }
+    }
+});
+
+//TODO Finish the 4 methods
+/**
+ * Mock of direct access through the gateway: proxying requests to /interoperability
+ */
+router.get('/gateway/:deviceId/:capabilityId', jsonParser, function(request, response) {
+        request({
+            url: '/interoperability/connected-devices/' + request.params["deviceId"] + "/" + request.params["capabilityId"],
+            headers: request.headers,
+        }, function(err, remoteResponse, remoteBody) {
+            if (err) {
+                return response.status(500).end('Error');
+            }
+            //response.writeHead(...); // copy all headers from remoteResponse
+            response.end(remoteBody);
+        });
+});
+
+router.post('/gateway/:deviceId/:capabilityId', jsonParser, function(request, response) {
+            request({ url: '/interoperability/connected-devices' + req.path, headers: req.headers, body: req.body }, function(err, remoteResponse, remoteBody) {
+                if (err) { return response.status(500).end('Error'); }
+                //response.writeHead(...); // copy all headers from remoteResponse
+                response.end(remoteBody);
+            });
+            response.redirect('/interoperability/connected-devices/' + request.params["deviceId"] + "/" + request.params["capabilityId"]);
 });
 
 /*---HYDRA---*/
 
-// GET the hydra vocabulary
-router.get('/vocab', function(request, response, next) {
-    jsonldHeaders(request, response, next);
-    response.end(interoperabilityModel.getHydraVocabulary());
-});
-
-// GET the hydra context
+// GET contexts
 router.get('/context', function(request, response, next) {
+    request.vocabUri = interoperabilityModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     //TODO: find what should be returned here
     response.end("{}");
 });
 
 router.get('/context/:contextId', function(request, response, next) {
-    var result = interoperabilityModel.getHydraContext(request.params.contextId);
-    if(result) {
-        jsonldHeaders(request, response, next);
-        response.end(result);
-    } else {
+    var contextId = request.params["contextId"];
+    request.vocabUri = interoperabilityModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
+    try {
+        response.end(interoperabilityModel.getContext(contextId));
+    } catch(error) {
         response.sendStatus(404);
     }
 });

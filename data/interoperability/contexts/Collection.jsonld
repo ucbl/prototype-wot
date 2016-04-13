@@ -1,9 +1,0 @@
-{
-    "@context": {
-        "hydra": "http://www.w3.org/ns/hydra/core#",
-        "vocab": "__interoperability__vocab#",
-        "Collection": "http://www.w3.org/ns/hydra/core#Collection",
-        "objects": "http://www.w3.org/ns/hydra/core#member",
-        "capabilities": "http://www.w3.org/ns/hydra/core#member"
-    }
-}

@@ -1,0 +1,11 @@
+{
+    "@context": {
+        "hydra": "http://www.w3.org/ns/hydra/core#",
+        "vocab": "__ontology__vocabs/asawoo#",
+        "EntryPoint": "vocab:EntryPoint",
+        "avatars": {
+            "@id": "vocab:EntryPoint/avatars",
+            "@type": "@id"
+        }
+    }
+}

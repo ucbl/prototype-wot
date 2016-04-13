@@ -1,17 +1,18 @@
 (function(module) {
 
     module.exports = {
-        "get": function (values, params) {
-            if(params[name]) {
-                return values[params.name];
-            }
-            throw new Error("Not Found");
-        },
         "post": function (values, params) {
+            return this.put(values, params);
         },
-        "put": function (values, params) {
-        },
-        "delete": function (values, params) {
+        "put": function (values) {
+            values = {
+                "status": "open"
+            };
+            console.log("Opened window.");
+            return {
+                "@context": "__interoperability__context/WindowStatus",
+                "WindowStatus": values
+            };
         }
     };
 })(module);

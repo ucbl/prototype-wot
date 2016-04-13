@@ -1,0 +1,19 @@
+{
+    "@context" : "__ontology__context/Device",
+    "@type": "vocab:Device",
+    "@id" : "__interoperability__devices/sensor-ge-2442",
+    "id" : "sensor-ge-2442",
+    "name": "Temperature Sensor",
+    "description": "A General Electric temperature sensor with the serial number 2442",
+    "capabilities" : [
+		{
+	      "@id": "__interoperability__devices/sensor-ge-2442/temperatureSense",
+	      "@type": ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityTemperatureSense"],
+          "@context" : "__ontology__context/Capability"
+	    }
+	],
+    "values": {
+        "temperature": 10,
+        "type": "celcius"
+    }
+}

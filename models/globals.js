@@ -28,13 +28,16 @@
             //Ontology repository
             this.ontology = this.base + 'ontology/';
             //Functionality code repository
-            this.code = this.base + 'code/';
+            this.code = this.base + 'code-repository/';
         },
 
         //Define all other URIs depending on the base one
         'setOtherUris': function () {
             this.nsType = this.rdf + 'type';
             this.hydraVocab = this.ontology + 'vocab#';
+            this.interoperabilityVocab = this.ontology + 'vocabs/interoperability#';
+            this.ontologyVocab = this.ontology + 'vocabs/ontology#';
+            this.asawooVocab = this.ontology + 'vocabs/asawoo#';
             this.nsName = this.base + 'name';
             this.nsDescription = this.base + 'description';
             this.appliance = this.ontology + 'appliance/';
@@ -43,12 +46,14 @@
             this.linkVocab = '<' + this.hydraVocab + '>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"';
             exports.vocabularies = this;
         },
+
         //Define a mechanism for late binding of the base Hydra resources URIs to the server URI.
         'updateBaseUri': function (value) {
             this.base = value;
             this.setServerUris();
             this.setOtherUris();
             exports.baseUriUpdated = true;
+            //console.log("base URI updated: " + this.base);
         }
     };
     vocabularies.setServerUris();

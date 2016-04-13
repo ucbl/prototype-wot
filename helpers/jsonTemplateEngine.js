@@ -10,12 +10,22 @@
     module.exports = function(data) {
         var variables = {
             "__interoperability__": Globals.vocabularies.interoperability,
-            "__capability__": Globals.vocabularies.capability
+            "__ontology__": Globals.vocabularies.ontology,
+            "__code__": Globals.vocabularies.code,
+            "__asawoo__": Globals.vocabularies.asawoo,
+            "__capability__": Globals.vocabularies.capability,
+            "__functionality__": Globals.vocabularies.functionality
         };
 
-        for(var key in variables) {
-            while (data.indexOf(key) > -1) {
-                data = data.replace(key, variables[key]);
+        if(typeof(data) === "string") {
+            for(var key in variables) {
+                while (data.indexOf(key) > -1) {
+                    data = data.replace(key, variables[key]);
+                }
+            }
+        } else if(typeof(data) === "object") {
+            for(var i in data) {
+                data[i] = require("./jsonTemplateEngine")(data[i]);
             }
         }
         return data;

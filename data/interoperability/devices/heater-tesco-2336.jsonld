@@ -1,0 +1,18 @@
+{
+    "@context" : "__ontology__context/Device",
+    "@type": "vocab:Device",
+    "@id" : "__interoperability__devices/heater-tesco-2336",
+    "id" : "heater-tesco-2336",
+    "name": "Heater",
+    "description": "A Tesco heater with the serial number 2336",
+    "capabilities" : [
+    	{
+          "@id": "__interoperability__devices/heater-tesco-2336/temperatureIncrease",
+          "@context" : "__ontology__context/Capability",
+          "@type" : ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityTemperatureIncrease"]
+        }
+    ],
+    "values": {
+    	"value": 0
+    }
+}

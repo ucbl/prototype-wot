@@ -1,0 +1,343 @@
+{
+  "@id": "__ontology__vocab/asawoo#",
+  "@type": "ApiDocumentation",
+  "entrypoint": "__asawoo__",
+  "@context": {
+    "asawoo": "__ontology__vocab/asawoo#",
+    "hydra": "http://www.w3.org/ns/hydra/core#",
+    "ApiDocumentation": "hydra:ApiDocumentation",
+    "property": {
+      "@id": "hydra:property",
+      "@type": "@id"
+    },
+    "readonly": "hydra:readonly",
+    "writeonly": "hydra:writeonly",
+    "supportedClass": "hydra:supportedClass",
+    "supportedProperty": "hydra:supportedProperty",
+    "supportedOperation": "hydra:supportedOperation",
+    "method": "hydra:method",
+    "expects": {
+      "@id": "hydra:expects",
+      "@type": "@id"
+    },
+    "returns": {
+      "@id": "hydra:returns",
+      "@type": "@id"
+    },
+    "statusCodes": "hydra:statusCodes",
+    "code": "hydra:statusCode",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "description": "rdfs:comment",
+    "domain": {
+      "@id": "rdfs:domain",
+      "@type": "@id"
+    },
+    "range": {
+      "@id": "rdfs:range",
+      "@type": "@id"
+    },
+    "subClassOf": {
+      "@id": "rdfs:subClassOf",
+      "@type": "@id"
+    }
+  },
+  "supportedClass": [
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#Resource",
+      "@type": "hydra:Class",
+      "hydra:title": "Resource",
+      "hydra:description": null,
+      "supportedOperation": [],
+      "supportedProperty": []
+    },
+    {
+      "@id": "asawoo:EntryPoint",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "EntryPoint",
+      "description": "Main entry point of the ASAWoO platform documentation",
+      "supportedOperation": [
+        {
+          "@id": "_:entry_point",
+          "@type": "hydra:Operation",
+          "method": "GET",
+          "label": "Main entry point of the ASAWoO platform documentation",
+          "description": null,
+          "expects": null,
+          "returns": "asawoo:EntryPoint",
+          "statusCodes": []
+        }
+      ],
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "asawoo:EntryPoint/capabilities",
+            "@type": "hydra:Link",
+            "label": "capabilities",
+            "description": "Retrieves a collection of capabilities",
+            "domain": "asawoo:EntryPoint",
+            "range": "asawoo:CapabilityCollection",
+            "supportedOperation": [
+              {
+                "@id": "_:capabilities",
+                "@type": "hydra:Operation",
+                "method": "GET",
+                "label": "The list of all the capabilities",
+                "description": null,
+                "expects": null,
+                "returns": "hydra:Collection",
+                "statusCodes": []
+              }
+            ]
+          },
+          "hydra:title": "capabilities",
+          "hydra:description": "A collection of capabilities",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "asawoo:EntryPoint/functionalities",
+            "@type": "hydra:Link",
+            "label": "functionalities",
+            "description": "Retrieves a collection of functionalities",
+            "domain": "asawoo:EntryPoint",
+            "range": "asawoo:FunctionalityCollection",
+            "supportedOperation": [
+              {
+                "@id": "_:functionalities",
+                "@type": "hydra:Operation",
+                "method": "GET",
+                "label": "The list of all known functionalities",
+                "description": null,
+                "expects": null,
+                "returns": "hydra:Collection",
+                "statusCodes": []
+              }
+            ]
+          },
+          "hydra:title": "functionalities",
+          "hydra:description": "A collection of functionalities.",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#CapabilityCollection",
+      "@type": "hydra:Class",
+      "subClassOf": "hydra:Collection",
+      "hydra:title": "CapabilityCollection",
+      "hydra:description": "A collection of capability URIs",
+      "supportedOperation": [],
+      "supportedProperty": [
+        {
+          "property": "http://www.w3.org/ns/hydra/core#member",
+          "hydra:title": "capabilities",
+          "hydra:description": "The capabilities of this collection.",
+          "required": null,
+          "readonly": false,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#FunctionalityCollection",
+      "@type": "hydra:Class",
+      "subClassOf": "hydra:Collection",
+      "hydra:title": "FunctionalityCollection",
+      "hydra:description": "A collection of functionality URIs",
+      "supportedOperation": [],
+      "supportedProperty": [
+        {
+          "property": "http://www.w3.org/ns/hydra/core#member",
+          "hydra:title": "functionalities",
+          "hydra:description": "The functionalities of this collection.",
+          "required": null,
+          "readonly": false,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "asawoo:Capability",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "Capability",
+      "description": "The top class of all capabilities. Will be derived (and operations will be added) for each type of capability (subclasses).",
+      "supportedOperation": [],
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "asawoo:Capability/name",
+            "@type": "rdf:Property",
+            "label": "name",
+            "description": "The explicit name of the capability",
+            "domain": "asawoo:Capability",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "name",
+          "hydra:description": "The explicit name of the capability",
+          "required": true,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "asawoo:Capability/description",
+            "@type": "rdf:Property",
+            "label": "description",
+            "description": "The description of the capability",
+            "domain": "asawoo:Capability",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "description",
+          "hydra:description": "The description of the capability",
+          "required": true,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "_:Capability/configuration",
+            "@type": "hydra:Link",
+            "label": "Configuration of the capability",
+            "comment": "Indicates if the capability has been configured manually or other configuration info (experimental feature)",
+            "domain": "asawoo:Capability",
+            "range": "asawoo:Configuration"
+          },
+          "hydra:title": "configuration",
+          "hydra:description": "The capability has been configured manually or other configuration info (experimental feature)",
+          "required": false,
+          "readonly": false,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "_:Capability/platform",
+            "@type": "hydra:Link",
+            "label": "platform",
+            "comment": "Link to invoke the capability through the interoperability platform",
+            "domain": "asawoo:Capability",
+            "range": "http://schema.org/url"
+          },
+          "hydra:title": "platform",
+          "hydra:description": "Link to invoke the capability through the interoperability platform",
+          "required": false,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "_:Capability/gateway",
+            "@type": "hydra:Link",
+            "label": "gateway",
+            "comment": "Link to invoke the capability through the gateway",
+            "domain": "asawoo:Capability",
+            "range": "http://schema.org/url"
+          },
+          "hydra:title": "gateway",
+          "hydra:description": "Link to invoke the capability through the gateway",
+          "required": false,
+          "readonly": true,
+          "writeonly": false
+        }
+      ]
+    },
+    {
+      "@id": "asawoo:Functionality",
+      "@type": "hydra:Class",
+      "subClassOf": null,
+      "label": "Functionality",
+      "description": "The top class of all functionalities. Will be derived (and operations will be added) for each type of functionality (subclasses).",
+      "supportedOperation": [],
+      "supportedProperty": [
+        {
+          "property": {
+            "@id": "asawoo:Functionality/name",
+            "@type": "rdf:Property",
+            "label": "name",
+            "description": "The explicit name of the functionality",
+            "domain": "asawoo:Functionality",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "name",
+          "hydra:description": "The explicit name of the functionality",
+          "required": true,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "asawoo:Functionality/description",
+            "@type": "rdf:Property",
+            "label": "description",
+            "description": "The description of the functionality",
+            "domain": "asawoo:Functionality",
+            "range": "http://www.w3.org/2001/XMLSchema#string",
+            "supportedOperation": []
+          },
+          "hydra:title": "description",
+          "hydra:description": "The description of the functionality",
+          "required": true,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "asawoo:Functionality/isImplementedBy",
+            "@type": "rdf:Property",
+            "label": "isImplementedBy",
+            "description": "The functionality is implemented by a capacity",
+            "domain": "asawoo:Functionality",
+            "range": "asawoo:Capability",
+            "supportedOperation": []
+          },
+          "hydra:title": "isImplementedBy",
+          "hydra:description": "The functionality is implemented by a capacity",
+          "required": false,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "asawoo:Functionality/isComposedOf",
+            "@type": "rdf:Property",
+            "label": "isComposedOf",
+            "description": "The functionality is composed of other functionalities",
+            "domain": "asawoo:Functionality",
+            "range": "hydra:Collection",
+            "supportedOperation": []
+          },
+          "hydra:title": "isComposedOf",
+          "hydra:description": "The functionality is composed of other functionalities",
+          "required": null,
+          "readonly": true,
+          "writeonly": false
+        },
+        {
+          "property": {
+            "@id": "_:Functionality/invocation",
+            "@type": "hydra:Link",
+            "label": "invocation",
+            "comment": "Link to invoke the functionality",
+            "domain": "asawoo:Functionality",
+            "range": "http://schema.org/url"
+          },
+          "hydra:title": "invocation",
+          "hydra:description": "Link to invoke the functionality",
+          "required": false,
+          "readonly": true,
+          "writeonly": false
+        }
+      ]
+    }
+  ]
+}

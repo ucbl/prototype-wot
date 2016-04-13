@@ -1,0 +1,5 @@
+div.device(rel='#{device["@id"]}')
+    div.deviceName
+        a(onclick='loadDevice("#{device["@id"]}")') #{device.name}
+    div.deviceDescription
+        | #{device.description}

@@ -1,0 +1,19 @@
+{
+    "@context" : "__ontology__context/Device",
+    "@type": "vocab:Device",
+    "@id" : "__interoperability__devices/gps-sony-2556",
+    "id" : "gps-sony-2556",
+    "name": "GPS",
+    "description": "A Sony GPS with the serial number 2556",
+    "capabilities" : [
+		{
+	      "@id": "__interoperability__devices/gps-sony-2556/gps",
+	      "@context" : "__ontology__context/Capability",
+          "@type" : ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityGps"]
+	    }
+	],
+    "values": {
+    	"latitude": 3.5544,
+    	"longitude": 5.4332
+    }
+}

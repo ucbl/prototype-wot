@@ -1,0 +1,18 @@
+{
+  "@context" : "__ontology__context/Device",
+  "@type": "vocab:Device",
+  "@id" : "__interoperability__devices/cooler-swirlwind-2443",
+  "id" : "cooler-swirlwind-2443",
+  "name": "Cooler",
+  "description": "A Swirlwind cooler with the 2443 serial number",
+	"capabilities" : [
+		{
+      "@id": "__interoperability__devices/cooler-swirlwind-2443/temperatureDecrease",
+      "@context" : "__ontology__context/Capability",
+      "@type" : ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityTemperatureDecrease"]
+		}
+	],
+  "values": {
+  	"value": 0
+  }
+}

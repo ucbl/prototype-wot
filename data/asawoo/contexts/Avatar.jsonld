@@ -1,0 +1,11 @@
+{
+    "@context": {
+        "hydra": "http://www.w3.org/ns/hydra/core#",
+        "vocab": "__ontology__vocabs/asawoo#",
+        "Avatar": "vocab:Avatar",
+        "name": "http://www.w3.org/2001/XMLSchema#string",
+        "description": "http://www.w3.org/2001/XMLSchema#string",
+        "functionalities": "vocab:Collection",
+        "values": "vocab:Collection"
+    }
+}

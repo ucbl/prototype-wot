@@ -1,0 +1,46 @@
+{
+    "@context" : "__ontology__context/Device",
+    "@type": "vocab:Device",
+	"@id" : "__interoperability__devices/phone-samsung-2554",
+	"id" : "phone-samsung-2554",
+    "name": "Phone",
+    "description": "A Samsung Phone with the serial number 2554",
+    "capabilities" : [
+		{
+	      "@id": "__interoperability__devices/phone-samsung-2554/call",
+	      "@context" : "__ontology__context/Capability",
+          "@type" : ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityCall"]
+	    },
+		{
+	      "@id": "__interoperability__devices/phone-samsung-2554/sms",
+	      "@context" : "__ontology__context/Capability",
+          "@type" : ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilitySms"]
+	    },
+		{
+	      "@id": "__interoperability__devices/phone-samsung-2554/photo",
+	      "@context" : "__ontology__context/Capability",
+          "@type" : ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityPhoto"]
+	    },
+		{
+	      "@id": "__interoperability__devices/phone-samsung-2554/video",
+	      "@context" : "__ontology__context/Capability",
+          "@type" : ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityVideo"]
+	    },
+		{
+	      "@id": "__interoperability__devices/phone-samsung-2554/app",
+	      "@context" : "__ontology__context/Capability",
+          "@type" : ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityApp"]
+	    },
+		{
+	      "@id": "__interoperability__devices/phone-samsung-2554/gps",
+	      "@context" : "__ontology__context/Capability",
+          "@type" : ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityGps"]
+	    }
+	],
+    "values": {
+    	"status": "",
+    	"statusApp": "stopped",
+    	"latitude": 6.4544,
+    	"longitude": 2.4555
+    }
+}

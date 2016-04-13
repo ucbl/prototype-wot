@@ -1,0 +1,615 @@
+{
+  "@graph": [ {
+    "@id" : "_:genid1",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+    "http://www.w3.org/2002/07/owl#onProperty" : [ {
+      "@id" : "asawooVocab:isComposedOf"
+    } ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "_:genid2",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+    "http://www.w3.org/2002/07/owl#onProperty" : [ {
+      "@id" : "asawooVocab:isImplementedBy"
+    } ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+      "@id" : "asawooVocab:Capability"
+    } ]
+  }, {
+    "@id" : "_:genid794484084",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+  }, {
+    "@id" : "applicationCapability:activateMotor",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Activate a motor"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Activate a motor"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Capability"
+    } ]
+  }, {
+    "@id" : "applicationCapability:call",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Call someone"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Call"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Capability"
+    } ]
+  }, {
+    "@id" : "applicationCapability:callWebService",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Call a web service"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Call web service"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Capability"
+    } ]
+  }, {
+    "@id" : "applicationCapability:closeWindow",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Close a window"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Close window"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Capability"
+    } ]
+  }, {
+    "@id" : "applicationCapability:download",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Download an application"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Download"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Capability"
+    } ]
+  }, {
+    "@id" : "applicationCapability:gps",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Get the position using a GPS"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "GPS"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Capability"
+    } ]
+  }, {
+    "@id" : "applicationCapability:informationMotor",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Information of a motor"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Information of a motor"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Capability"
+    } ]
+  }, {
+    "@id" : "applicationCapability:openWindow",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Open a window"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Open window"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Capability"
+    } ]
+  }, {
+    "@id" : "applicationCapability:photo",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Take a picture"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Photo"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Capability"
+    } ]
+  }, {
+    "@id" : "applicationCapability:sms",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Send a SMS"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "SMS"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Capability"
+    } ]
+  }, {
+    "@id" : "applicationCapability:startApp",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Start an application"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Start App"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Capability"
+    } ]
+  }, {
+    "@id" : "applicationCapability:stopApp",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Stop an application"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Stop App"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Capability"
+    } ]
+  }, {
+    "@id" : "applicationCapability:temperatureDecrease",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Decrease the temperature"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Temperature Decrease"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Capability"
+    } ]
+  }, {
+    "@id" : "applicationCapability:temperatureIncrease",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Increase the temperature"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Temperature Increase"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Capability"
+    } ]
+  }, {
+    "@id" : "applicationCapability:temperatureSense",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Sense the temperature"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Temperature Sense"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Capability"
+    } ]
+  }, {
+    "@id" : "applicationCapability:video",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Register a video"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Video"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Capability"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:activateMotor",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Activate a motor"
+    } ],
+    "asawooVocab:isImplementedBy" : [ {
+      "@id" : "applicationCapability:activateMotor"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Activate a motor"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:call",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Call someone"
+    } ],
+    "asawooVocab:isImplementedBy" : [ {
+      "@id" : "applicationCapability:call"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Call"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:callWebService",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Call a web service"
+    } ],
+    "asawooVocab:isImplementedBy" : [ {
+      "@id" : "applicationCapability:callWebService"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Call web service"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:closeWindow",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Close a window"
+    } ],
+    "asawooVocab:isImplementedBy" : [ {
+      "@id" : "applicationCapability:closeWindow"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Close window"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:communicate",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Communicate with someone else"
+    } ],
+    "asawooVocab:isComposedOf" : [ {
+      "@id" : "applicationFunctionality:call"
+    }, {
+      "@id" : "applicationFunctionality:sms"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Communicate"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:download",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Download an application"
+    } ],
+    "asawooVocab:isImplementedBy" : [ {
+      "@id" : "applicationCapability:download"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Download"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:gps",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Get the position using a GPS"
+    } ],
+    "asawooVocab:isImplementedBy" : [ {
+      "@id" : "applicationCapability:gps"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "GPS"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:informationMotor",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Information of a motor"
+    } ],
+    "asawooVocab:isImplementedBy" : [ {
+      "@id" : "applicationCapability:informationMotor"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Information of a motor"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:openWindow",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Open a window"
+    } ],
+    "asawooVocab:isImplementedBy" : [ {
+      "@id" : "applicationCapability:openWindow"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Open window"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:operateWindow",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Operate a window using a phone application"
+    } ],
+    "asawooVocab:isComposedOf" : [ {
+      "@id" : "applicationFunctionality:closeWindow"
+    }, {
+      "@id" : "applicationFunctionality:openWindow"
+    }],
+    "asawooVocab:name" : [ {
+      "@value" : "Operate a window"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:photo",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Take a picture"
+    } ],
+    "asawooVocab:isImplementedBy" : [ {
+      "@id" : "applicationCapability:photo"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Photo"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:sms",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Send a SMS"
+    } ],
+    "asawooVocab:isImplementedBy" : [ {
+      "@id" : "applicationCapability:sms"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "SMS"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:startApp",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Start an application"
+    } ],
+    "asawooVocab:isImplementedBy" : [ {
+      "@id" : "applicationCapability:startApp"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Start App"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:stopApp",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Stop an application"
+    } ],
+    "asawooVocab:isImplementedBy" : [ {
+      "@id" : "applicationCapability:stopApp"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Stop App"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:temperatureChange",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Change the temperature of a place"
+    } ],
+    "asawooVocab:isComposedOf" : [{
+      "@id" : "applicationFunctionality:operateWindow"
+    }],
+    "asawooVocab:name" : [ {
+      "@value" : "Temperature Change"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:temperatureDecrease",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Decrease the temperature"
+    } ],
+    "asawooVocab:isImplementedBy" : [ {
+      "@id" : "applicationCapability:temperatureDecrease"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Temperature Decrease"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:temperatureIncrease",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Increase the temperature"
+    } ],
+    "asawooVocab:isImplementedBy" : [ {
+      "@id" : "applicationCapability:temperatureIncrease"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Temperature Increase"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:temperatureRegulation",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Regulate the temperature"
+    } ],
+    "asawooVocab:isComposedOf" : [ {
+      "@id" : "applicationFunctionality:temperatureChange"
+    }, {
+      "@id" : "applicationFunctionality:temperatureSense"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Temperature Regulation"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:temperatureRegulationBySMS",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Regulate the temperature by SMS"
+    } ],
+    "asawooVocab:isComposedOf" : [ {
+      "@id" : "applicationFunctionality:sms"
+    }, {
+      "@id" : "applicationFunctionality:temperatureRegulation"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Temperature Regulation by SMS"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:temperatureRegulationUsingWeatherService",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Regulate the temperature using a Web Service that calls some website to get the temperature of the place"
+    } ],
+    "asawooVocab:isComposedOf" : [ {
+      "@id" : "applicationFunctionality:callWebService"
+    }, {
+      "@id" : "applicationFunctionality:gps"
+    }, {
+      "@id" : "applicationFunctionality:temperatureRegulation"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Temperature Regulation using a Web Service"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:temperatureSense",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Sense the temperature"
+    } ],
+    "asawooVocab:isImplementedBy" : [ {
+      "@id" : "applicationCapability:temperatureSense"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Temperature Sense"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "applicationFunctionality:video",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:description" : [ {
+      "@value" : "Register a video"
+    } ],
+    "asawooVocab:isImplementedBy" : [ {
+      "@id" : "applicationCapability:video"
+    } ],
+    "asawooVocab:name" : [ {
+      "@value" : "Video"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:Functionality"
+    } ]
+  }, {
+    "@id" : "asawooVocab:Appliance",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  }, {
+    "@id" : "asawooVocab:Capability",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  }, {
+    "@id" : "asawooVocab:Functionality",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "_:genid1"
+    }, {
+      "@id" : "_:genid2"
+    } ]
+  }, {
+    "@id" : "asawooVocab:description",
+    "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+    "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+      "@id" : "asawooVocab:Capability"
+    }, {
+      "@id" : "asawooVocab:Functionality"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+      "@id" : "http://www.w3.org/2001/XMLSchema#String"
+    } ]
+  }, {
+    "@id" : "asawooVocab:hasCapability",
+    "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+    "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+      "@value" : "Specify that an appliance has the given capability"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+      "@id" : "asawooVocab:Appliance"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+      "@id" : "asawooVocab:Capability"
+    } ]
+  }, {
+    "@id" : "asawooVocab:isComposedOf",
+    "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ]
+  }, {
+    "@id" : "asawooVocab:isImplementedBy",
+    "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ]
+  }, {
+    "@id" : "asawooVocab:name",
+    "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+    "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+      "@id" : "asawooVocab:Capability"
+    }, {
+      "@id" : "asawooVocab:Functionality"
+    } ],
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+      "@id" : "http://www.w3.org/2001/XMLSchema#String"
+    } ]
+  }, {
+    "@id" : "http://www.w3.org/2001/XMLSchema#String",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  } ]
+}
