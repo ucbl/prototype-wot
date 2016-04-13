@@ -49,7 +49,8 @@ class InfrastructureController {
                                 deviceUri: device,
                                 http_port: this.getAvailablePort()
                             });
-                            //Stores a JSON serialization of the avatar (not the object itself)
+                            console.log("Build avatar returned " + avatar);
+                            //Store a JSON serialization of the avatar (not the object itself)
                             this.avatars.set(device, avatar);
 
                             //io.emit('avatars_updated', this.avatars);
