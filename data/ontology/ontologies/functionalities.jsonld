@@ -21,7 +21,7 @@
     "@id" : "_:genid794484084",
     "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/capability/activateMotor",
+    "@id" : "applicationCapability:activateMotor",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Activate a motor"
@@ -33,7 +33,7 @@
       "@id" : "asawooVocab:Capability"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/capability/call",
+    "@id" : "applicationCapability:call",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Call someone"
@@ -45,7 +45,7 @@
       "@id" : "asawooVocab:Capability"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/capability/callWebService",
+    "@id" : "applicationCapability:callWebService",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Call a web service"
@@ -57,7 +57,7 @@
       "@id" : "asawooVocab:Capability"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/capability/closeWindow",
+    "@id" : "applicationCapability:closeWindow",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Close a window"
@@ -69,7 +69,7 @@
       "@id" : "asawooVocab:Capability"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/capability/download",
+    "@id" : "applicationCapability:download",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Download an application"
@@ -81,7 +81,7 @@
       "@id" : "asawooVocab:Capability"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/capability/gps",
+    "@id" : "applicationCapability:gps",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Get the position using a GPS"
@@ -93,7 +93,7 @@
       "@id" : "asawooVocab:Capability"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/capability/informationMotor",
+    "@id" : "applicationCapability:informationMotor",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Information of a motor"
@@ -105,7 +105,7 @@
       "@id" : "asawooVocab:Capability"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/capability/openWindow",
+    "@id" : "applicationCapability:openWindow",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Open a window"
@@ -117,7 +117,7 @@
       "@id" : "asawooVocab:Capability"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/capability/photo",
+    "@id" : "applicationCapability:photo",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Take a picture"
@@ -129,7 +129,7 @@
       "@id" : "asawooVocab:Capability"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/capability/sms",
+    "@id" : "applicationCapability:sms",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Send a SMS"
@@ -141,7 +141,7 @@
       "@id" : "asawooVocab:Capability"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/capability/startApp",
+    "@id" : "applicationCapability:startApp",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Start an application"
@@ -153,7 +153,7 @@
       "@id" : "asawooVocab:Capability"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/capability/stopApp",
+    "@id" : "applicationCapability:stopApp",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Stop an application"
@@ -165,7 +165,7 @@
       "@id" : "asawooVocab:Capability"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/capability/temperatureDecrease",
+    "@id" : "applicationCapability:temperatureDecrease",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Decrease the temperature"
@@ -177,7 +177,7 @@
       "@id" : "asawooVocab:Capability"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/capability/temperatureIncrease",
+    "@id" : "applicationCapability:temperatureIncrease",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Increase the temperature"
@@ -189,7 +189,7 @@
       "@id" : "asawooVocab:Capability"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/capability/temperatureSense",
+    "@id" : "applicationCapability:temperatureSense",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Sense the temperature"
@@ -201,7 +201,7 @@
       "@id" : "asawooVocab:Capability"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/capability/video",
+    "@id" : "applicationCapability:video",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Register a video"
@@ -213,13 +213,13 @@
       "@id" : "asawooVocab:Capability"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/activateMotor",
+    "@id" : "applicationFunctionality:activateMotor",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Activate a motor"
     } ],
     "asawooVocab:isImplementedBy" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/capability/activateMotor"
+      "@id" : "applicationCapability:activateMotor"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "Activate a motor"
@@ -228,13 +228,13 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/call",
+    "@id" : "applicationFunctionality:call",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Call someone"
     } ],
     "asawooVocab:isImplementedBy" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/capability/call"
+      "@id" : "applicationCapability:call"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "Call"
@@ -243,13 +243,13 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/callWebService",
+    "@id" : "applicationFunctionality:callWebService",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Call a web service"
     } ],
     "asawooVocab:isImplementedBy" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/capability/callWebService"
+      "@id" : "applicationCapability:callWebService"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "Call web service"
@@ -258,13 +258,13 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/closeWindow",
+    "@id" : "applicationFunctionality:closeWindow",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Close a window"
     } ],
     "asawooVocab:isImplementedBy" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/capability/closeWindow"
+      "@id" : "applicationCapability:closeWindow"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "Close window"
@@ -273,15 +273,15 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/communicate",
+    "@id" : "applicationFunctionality:communicate",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Communicate with someone else"
     } ],
     "asawooVocab:isComposedOf" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/functionality/call"
+      "@id" : "applicationFunctionality:call"
     }, {
-      "@id" : "http://liris.cnrs.fr/asawoo/functionality/sms"
+      "@id" : "applicationFunctionality:sms"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "Communicate"
@@ -290,13 +290,13 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/download",
+    "@id" : "applicationFunctionality:download",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Download an application"
     } ],
     "asawooVocab:isImplementedBy" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/capability/download"
+      "@id" : "applicationCapability:download"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "Download"
@@ -305,13 +305,13 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/gps",
+    "@id" : "applicationFunctionality:gps",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Get the position using a GPS"
     } ],
     "asawooVocab:isImplementedBy" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/capability/gps"
+      "@id" : "applicationCapability:gps"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "GPS"
@@ -320,13 +320,13 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/informationMotor",
+    "@id" : "applicationFunctionality:informationMotor",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Information of a motor"
     } ],
     "asawooVocab:isImplementedBy" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/capability/informationMotor"
+      "@id" : "applicationCapability:informationMotor"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "Information of a motor"
@@ -335,13 +335,13 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/openWindow",
+    "@id" : "applicationFunctionality:openWindow",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Open a window"
     } ],
     "asawooVocab:isImplementedBy" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/capability/openWindow"
+      "@id" : "applicationCapability:openWindow"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "Open window"
@@ -350,15 +350,15 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/operateWindow",
+    "@id" : "applicationFunctionality:operateWindow",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Operate a window using a phone application"
     } ],
     "asawooVocab:isComposedOf" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/functionality/closeWindow"
+      "@id" : "applicationFunctionality:closeWindow"
     }, {
-      "@id" : "http://liris.cnrs.fr/asawoo/functionality/openWindow"
+      "@id" : "applicationFunctionality:openWindow"
     }],
     "asawooVocab:name" : [ {
       "@value" : "Operate a window"
@@ -367,13 +367,13 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/photo",
+    "@id" : "applicationFunctionality:photo",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Take a picture"
     } ],
     "asawooVocab:isImplementedBy" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/capability/photo"
+      "@id" : "applicationCapability:photo"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "Photo"
@@ -382,13 +382,13 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/sms",
+    "@id" : "applicationFunctionality:sms",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Send a SMS"
     } ],
     "asawooVocab:isImplementedBy" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/capability/sms"
+      "@id" : "applicationCapability:sms"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "SMS"
@@ -397,13 +397,13 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/startApp",
+    "@id" : "applicationFunctionality:startApp",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Start an application"
     } ],
     "asawooVocab:isImplementedBy" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/capability/startApp"
+      "@id" : "applicationCapability:startApp"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "Start App"
@@ -412,13 +412,13 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/stopApp",
+    "@id" : "applicationFunctionality:stopApp",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Stop an application"
     } ],
     "asawooVocab:isImplementedBy" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/capability/stopApp"
+      "@id" : "applicationCapability:stopApp"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "Stop App"
@@ -427,13 +427,13 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/temperatureChange",
+    "@id" : "applicationFunctionality:temperatureChange",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Change the temperature of a place"
     } ],
     "asawooVocab:isComposedOf" : [{
-      "@id" : "http://liris.cnrs.fr/asawoo/functionality/operateWindow"
+      "@id" : "applicationFunctionality:operateWindow"
     }],
     "asawooVocab:name" : [ {
       "@value" : "Temperature Change"
@@ -442,13 +442,13 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/temperatureDecrease",
+    "@id" : "applicationFunctionality:temperatureDecrease",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Decrease the temperature"
     } ],
     "asawooVocab:isImplementedBy" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/capability/temperatureDecrease"
+      "@id" : "applicationCapability:temperatureDecrease"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "Temperature Decrease"
@@ -457,13 +457,13 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/temperatureIncrease",
+    "@id" : "applicationFunctionality:temperatureIncrease",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Increase the temperature"
     } ],
     "asawooVocab:isImplementedBy" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/capability/temperatureIncrease"
+      "@id" : "applicationCapability:temperatureIncrease"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "Temperature Increase"
@@ -472,15 +472,15 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/temperatureRegulation",
+    "@id" : "applicationFunctionality:temperatureRegulation",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Regulate the temperature"
     } ],
     "asawooVocab:isComposedOf" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/functionality/temperatureChange"
+      "@id" : "applicationFunctionality:temperatureChange"
     }, {
-      "@id" : "http://liris.cnrs.fr/asawoo/functionality/temperatureSense"
+      "@id" : "applicationFunctionality:temperatureSense"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "Temperature Regulation"
@@ -489,15 +489,15 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/temperatureRegulationBySMS",
+    "@id" : "applicationFunctionality:temperatureRegulationBySMS",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Regulate the temperature by SMS"
     } ],
     "asawooVocab:isComposedOf" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/functionality/sms"
+      "@id" : "applicationFunctionality:sms"
     }, {
-      "@id" : "http://liris.cnrs.fr/asawoo/functionality/temperatureRegulation"
+      "@id" : "applicationFunctionality:temperatureRegulation"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "Temperature Regulation by SMS"
@@ -506,17 +506,17 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/temperatureRegulationUsingWeatherService",
+    "@id" : "applicationFunctionality:temperatureRegulationUsingWeatherService",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Regulate the temperature using a Web Service that calls some website to get the temperature of the place"
     } ],
     "asawooVocab:isComposedOf" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/functionality/callWebService"
+      "@id" : "applicationFunctionality:callWebService"
     }, {
-      "@id" : "http://liris.cnrs.fr/asawoo/functionality/gps"
+      "@id" : "applicationFunctionality:gps"
     }, {
-      "@id" : "http://liris.cnrs.fr/asawoo/functionality/temperatureRegulation"
+      "@id" : "applicationFunctionality:temperatureRegulation"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "Temperature Regulation using a Web Service"
@@ -525,13 +525,13 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/temperatureSense",
+    "@id" : "applicationFunctionality:temperatureSense",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Sense the temperature"
     } ],
     "asawooVocab:isImplementedBy" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/capability/temperatureSense"
+      "@id" : "applicationCapability:temperatureSense"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "Temperature Sense"
@@ -540,13 +540,13 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
-    "@id" : "http://liris.cnrs.fr/asawoo/functionality/video",
+    "@id" : "applicationFunctionality:video",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Register a video"
     } ],
     "asawooVocab:isImplementedBy" : [ {
-      "@id" : "http://liris.cnrs.fr/asawoo/capability/video"
+      "@id" : "applicationCapability:video"
     } ],
     "asawooVocab:name" : [ {
       "@value" : "Video"
