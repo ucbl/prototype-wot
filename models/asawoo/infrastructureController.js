@@ -40,8 +40,6 @@ class InfrastructureController {
                         for (let device of jsonDevices) {
                             if (this.deviceList.has(device) == true) {
                                 console.log("Device exists " + device);
-                                // Pb ici car on get un avatar qui n'a pas encore été build
-                                // càd avant que la promesse Avatar.buildAvatar soit retournée.
                                 var avatarUri = this.avatars.get(device).uri;
                                 //TODO send an HTTP request to tell the avatar to update its capabilities
                             } else {
@@ -49,20 +47,14 @@ class InfrastructureController {
                                 //console.log("Adding device " + device);
                                 this.deviceList.add(device);
                                 //Create new avatar
-                                promises.push(Avatar.buildAvatar({
-                                    deviceUri: device,
-                                    name: device.replace(Globals.vocabularies.interoperability + "devices", Globals.vocabularies.asawoo + "avatars"),
-                                    http_port: this.getAvailablePort()
-                                }).then((avatar) => {
+                                var avatarInfo = new avatarInfo(device.replace(Globals.vocabularies.interoperability + "devices", ""), device, this.getAvailablePort(), device.replace(Globals.vocabularies.interoperability + "devices", Globals.vocabularies.asawoo + "avatars"))
+                                promises.push(Avatar.buildAvatar(avatarInfo).then((avatar) => {
                                      console.log("Build avatar returned " + avatar);
                                     //Store a JSON serialization of the avatar (not the object itself)
                                     this.avatars.set(device, avatar);
                                 }).catch((error) => {
                                     console.error(error);
                                 }));
-
-                                //io.emit('avatars_updated', this.avatars);
-                                //self.avatarList.add(device["@id"],avatar);
                             }
                         }
                     }
@@ -75,17 +67,6 @@ class InfrastructureController {
             });
         });
     }
-
-/*
-    updateDevice(device, capabilityList) {
-    	console.log("Update device "+ device);
-        //TODO
-    	var avatar = this.avatarList.get(device);
-    	//avatar.updateDevice(capabilityList);
-        //io.emit('functionalities_updated', directories.functionality);
-    	//return avatar;
-    }
-*/
 
     showDeviceList() {
     	console.log("\n\nConnected device list:");

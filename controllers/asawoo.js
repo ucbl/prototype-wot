@@ -38,6 +38,23 @@ router.get('/context/:context', function(request, response) {
     return true;
 });
 
+// GET avatars
+router.get('/avatars/:avatarId', function(request, response, next) {
+    var avatarId = request.params["avatarId"];
+    var avatar = asawooModel.getAvatar(avatarId);
+    if(avatar) {
+        if (request.accepts('html')) {
+            response.render('asawoo/avatar', {avatar: avatar});
+        } else {
+            request.vocabUri = asawooModel.getHydraVocabUri();
+            jsonldHeaders(request, response, next);
+            response.end(JSON.stringify((require("../views/asawoo/avatar")(avatar))));
+        }
+    } else {
+        response.sendStatus(404);
+    }
+});
+
 /*---WEB SERVICE---*/
 
 //TODO

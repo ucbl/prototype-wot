@@ -18,7 +18,9 @@
     };
 
     var infrastructureController = new infraController();
-    //Loop each 10 seconds
+
+    //Map of avatarInfo objects, representing the avatars known by the platform
+     var avatarInfos = new Map();
 
     (function doUpdate() {
         infrastructureController.getUpdate()
@@ -44,6 +46,56 @@
          * Service model
          */
 
+        //Get all avatars
+        "getAllAvatars": function() {
+            var result = [];
+            for(var key in avatarInfos) {
+                result.push(avatarInfos.get(key));
+            }
+            return result;
+        },
+
+        //Get an avatar
+        "getAvatar": function(avatarId) {
+            if(avatarInfos.has(avatarId) || avatarInfos.has(Globals.vocabularies.asawoo + "avatars/" + avatarId)) {
+                return avatarInfos.get(avatarId)?avatarInfos.get(avatarId):avatarInfos.get(Globals.vocabularies.asawoo + "avatars/" + avatarId);
+            }
+            return null;
+        },
+        /**
+         * Adds an avatar to the list:
+         * by using its @id property or its id property if no @id
+         * returns the id used or throws an error
+         */
+        "addAvatar": function(avatar) {
+            if(avatar) {
+                if (avatar["@id"]) {
+                    avatarInfos.set(avatar["@id"], avatar);
+                    return avatar["@id"];
+                } else if (avatar["id"]) {
+                    avatarInfos.set(avatar["id"], avatar);
+                    return avatar["id"];
+                }
+            }
+            throw "Error in adding avatar to the list: no object or object incorrectly structured: " + JSON.stringify(avatar);
+        },
+        /**
+         * Removes an avatar from the list:
+         * by using its @id property or its id property if no @id
+         * returns the id used or throws an error
+         */
+        "removeAvatar": function(avatar) {
+            if(avatar) {
+                if (avatar["@id"]) {
+                    avatarInfos.remove(avatar["@id"]);
+                    return avatar["@id"];
+                } else if (avatar["id"]) {
+                    avatarInfos.remove(avatar["id"]);
+                    return avatar["id"];
+                }
+            }
+            throw "Error in removing avatar to the list: no object or object incorrectly structured: " + JSON.stringify(avatar);
+        },
         //TODO
 
         /**

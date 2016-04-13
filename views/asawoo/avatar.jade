@@ -1,0 +1,16 @@
+h2
+    | #{avatar.id}
+div(class='deviceId')
+    | Id:&nbsp;
+    a(href='#{avatar["@id"]}') #{avatar["@id"]}
+div(class='deviceType')
+    | Device:&nbsp;
+    a(href='#{avatar.device}') #{avatar.device}
+div(class='deviceValues')
+    | Root access point:
+    a(href='#{avatar.avatar_uri}') #{avatar.avatar_uri}
+div(class='deviceCapabilities')
+    | Functionalities:
+    each functionality in avatar.functionalities
+        div(class="deviceCapability")
+        a(href='#{functionality["@id"]}') #{functionality['@id']}
