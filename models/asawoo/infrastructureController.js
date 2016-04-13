@@ -45,13 +45,14 @@ class InfrastructureController {
                             this.deviceList.add(device);
 
                             //Create new avatar
-                            var avatar = Avatar.buildAvatar({
+                            Avatar.buildAvatar({
                                 deviceUri: device,
                                 http_port: this.getAvailablePort()
+                            }).then((avatar) => {
+                                 console.log("Build avatar returned " + avatar);
+                                //Store a JSON serialization of the avatar (not the object itself)
+                                this.avatars.set(device, avatar);
                             });
-                            console.log("Build avatar returned " + avatar);
-                            //Store a JSON serialization of the avatar (not the object itself)
-                            this.avatars.set(device, avatar);
 
                             //io.emit('avatars_updated', this.avatars);
                             //self.avatarList.add(device["@id"],avatar);
