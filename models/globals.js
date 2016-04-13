@@ -35,6 +35,9 @@
         'setOtherUris': function () {
             this.nsType = this.rdf + 'type';
             this.hydraVocab = this.ontology + 'vocab#';
+            this.interoperabilityVocab = this.ontology + 'vocabs/interoperability#';
+            this.ontologyVocab = this.ontology + 'vocabs/ontology#';
+            this.asawooVocab = this.ontology + 'vocabs/asawoo#';
             this.nsName = this.base + 'name';
             this.nsDescription = this.base + 'description';
             this.appliance = this.ontology + 'appliance/';

@@ -2,7 +2,7 @@
     var Globals = require("../../../models/globals");
     module.exports = {
         "@context": {
-            "asawooVocab": Globals.vocabularies.hydraVocab,
+            "asawooVocab": Globals.vocabularies.asawooVocab,
             "applicationCapability": Globals.vocabularies.capability,
             "applicationFunctionality": Globals.vocabularies.functionality,
             "owl": "http://www.w3.org/2002/07/owl#",
