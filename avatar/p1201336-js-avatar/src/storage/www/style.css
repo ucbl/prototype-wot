@@ -1,0 +1,164 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300);
+
+html {
+    font-family: Ubuntu, sans-serif;
+    background: #EBE9D7;
+    color: #333333;
+    font-size: 16px;
+}
+
+body {
+    padding: 15px 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    background: #8BC34A;
+    padding: 10px 25px;
+    color: #fff;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.2);
+    margin: 5px;
+}
+button:hover {
+    cursor: pointer;
+    background: #79af48;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+}
+button[disabled] {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.no-content {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgba(0,0,0,.1);
+}
+
+.main-title {
+    font-weight: lighter;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.author {
+    margin-top: 5px;
+    font-size: 1.1rem;
+    font-variant: small-caps;
+}
+
+.cat-title{
+    font-weight: lighter;
+    margin-bottom: 2rem;
+    border-left: solid 5px;
+    padding-left: 10px;
+}
+
+.controls-title {
+    font-size: 1rem;
+}
+
+.avatars, .functionalities {
+    float: left;
+}
+
+.content {
+    padding: 40px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.avatars {
+    width: 30%;
+    padding-right: 10px;
+}
+.functionalities {
+    width: 70%;
+    padding-left: 10px;
+    margin-bottom: 100px;
+}
+
+#available-functionalities {
+    text-align: center;
+}
+
+#avatars li, #available-functionalities li {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 0.25em;
+    list-style: none;
+    text-align: center;
+}
+
+#avatars li {
+    display: block;
+    padding: 15px 25px;
+    margin: 5px;
+    background: #ED5F5E;
+    color: #fad3d2;
+}
+
+#available-functionalities li.f-collaborative {
+    background-image: url(collaborative.svg);
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    background-size: 25px;
+    padding-left: 50px;
+    border-left: solid 6px #AEE0BA;
+}
+
+#available-functionalities li {
+    display: inline-block;
+    width: 275px;
+    padding: 15px 20px;
+    margin: 5px;
+    background: #87D599;
+    color: #32673E;
+    text-transform: capitalize;
+    word-wrap: break-word;
+    vertical-align: middle;
+}
+
+.box:hover .details {
+    display: block;
+    transform: translate(-50%, 0%);
+    transition: transform .5s .2s ease, opacity .5s .2s;
+    opacity: 1;
+}
+.details {
+    opacity: 0;
+    position: fixed;
+    font-family: monospace;
+    z-index: 10;
+    background: rgba(255, 255, 255, 1);
+    padding: 15px 20px;
+    text-transform: none;
+    text-align: left;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    border-radius: 5px 5px 0 0;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 105%);
+    color: #333;
+    transition: transform 0s .8s,  opacity .3s .5s;
+}
+.id, .uri, .capability {
+    display: block;
+    white-space: nowrap;
+    margin: 9px 0;
+}
+
+.capability span {
+    display: block;
+}

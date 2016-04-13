@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <title>Prototype Visualize</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="socket.io-1.4.5.js"></script>
+    <script src="jquery-1.12.1.min.js"></script>
+    <script src="core.js"></script>
+</head>
+<body>
+
+<div class="main-title">
+    <h1>ASAWoO WoT prototype visualizer</h1>
+    <div class="author">Developped by Jordan Martin</div>
+</div>
+
+<div class="avatars">
+    <div class="content">
+        <h2 class="cat-title controls-title">Connect things</h2>
+        <!--<button type="button" id="start-demo">▶ Start démo</button>-->
+        <button type="button" class="connect-btn" id="phone">Mobile phone</button>
+        <button type="button" class="connect-btn" id="motor">Window motor</button>
+        <button type="button" class="connect-btn" id="temp-sensor">Temperature sensor</button>
+    </div>
+    <div class="content">
+        <h2 class="cat-title">Avatars</h2>
+        <ul id="avatars"></ul>
+    </div>
+</div>
+
+<div class="functionalities">
+    <div class="content">
+        <h2 class="cat-title">Available functionalities</h2>
+        <ul id="available-functionalities"></ul>
+    </div>
+
+</div>
+
+</body>
+</html>

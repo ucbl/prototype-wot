@@ -1,108 +1,143 @@
 @import url(/css/lib/reset.css);
-input, textarea {
+input,
+textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 pre {
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: pre-wrap;
   white-space: -o-pre-wrap;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+}
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-size: 1em;
   background: #EFEFEF;
   color: #333333;
   height: 100%;
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
   font-weight: normal;
-  position: relative; }
+  position: relative;
+}
 
 .clearer {
-  clear: both; }
+  clear: both;
+}
 
 p {
-  padding: 0px;
-  margin: 0px; }
+  padding: 10px;
+  margin: 0px;
+}
 
 a {
   font-weight: bold;
-  color: #000;
+  color: #465262;
   text-decoration: none;
-  outline: 0; }
+  outline: 0;
+}
 
 strong {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 em {
-  font-style: italic; }
+  font-style: italic;
+}
 
 input::-moz-focus-inner {
-  border: 0; }
+  border: 0;
+}
 
 .separator {
   margin-top: 10px;
-  text-align: center; }
+  text-align: center;
+}
 
 .header {
   background: #465262;
-  padding: 20px 0px; }
-  .header h1 {
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.2em;
-    color: #FFF; }
+  padding: 20px 0px;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #FFF;
+}
 
 h2 {
   text-align: center;
   font-weight: bold;
   font-size: 1em;
-  color: #8bbcb9; }
+  color: #8bbcb9;
+}
 
 .contentWrapper {
   padding: 10px 0px;
   max-width: 1000px;
-  margin: auto; }
+  margin: auto;
+}
 
 .device {
   width: 25%;
   float: left;
-  margin-bottom: 10px; }
-  .device .deviceIns {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #CCCCCC;
-    background: #FFF; }
-  .device .deviceId a {
-    display: block;
-    font-size: 0.7em;
-    font-weight: normal;
-    color: #CCCCCC;
-    padding-bottom: 5px; }
-    .device .deviceId a:hover {
-      text-decoration: underline; }
-  .device .deviceName {
-    font-weight: bold;
-    color: #0367b2;
-    padding-top: 10px;
-    padding-bottom: 10px; }
-    .device .deviceName a {
-      color: #0367b2; }
-  .device .deviceDescription {
-    font-size: 0.8em; }
-  .device .deviceValues {
-    padding-top: 10px;
-    color: #24b375;
-    font-family: 'Source Code Pro', sans-serif;
-    font-size: 0.8em;
-    line-height: 1.3em; }
-  .device .deviceButton {
-    position: relative;
-    bottom: 0px; }
+  margin-bottom: 10px;
+}
+
+.device .deviceIns {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #CCCCCC;
+  background: #FFF;
+}
+
+.device .deviceId a {
+  display: block;
+  font-size: 0.7em;
+  font-weight: normal;
+  color: #CCCCCC;
+  padding-bottom: 5px;
+}
+
+.device .deviceId a:hover {
+  text-decoration: underline;
+}
+
+.device .deviceName {
+  font-weight: bold;
+  color: #0367b2;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.device .deviceName a {
+  color: #0367b2;
+}
+
+.device .deviceDescription {
+  font-size: 0.8em;
+}
+
+.device .deviceValues {
+  padding-top: 10px;
+  color: #24b375;
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 0.8em;
+  line-height: 1.3em;
+}
+
+.device .deviceButton {
+  position: relative;
+  bottom: 0px;
+}
 
 /* Modal widget: http://jsfiddle.net/kumarmuthaliar/GG9Sa/1/ */
 .modalDialog {
@@ -118,11 +153,13 @@ h2 {
   -webkit-transition: opacity 400ms ease-in;
   -moz-transition: opacity 400ms ease-in;
   transition: opacity 400ms ease-in;
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 .modalDialog:target {
   opacity: 1;
-  pointer-events: auto; }
+  pointer-events: auto;
+}
 
 .modalDialog > div {
   width: 400px;
@@ -133,7 +170,8 @@ h2 {
   background: #fff;
   background: -moz-linear-gradient(#fff, #999);
   background: -webkit-linear-gradient(#fff, #999);
-  background: -o-linear-gradient(#fff, #999); }
+  background: -o-linear-gradient(#fff, #999);
+}
 
 .close {
   background: #606061;
@@ -151,7 +189,22 @@ h2 {
   border-radius: 12px;
   -moz-box-shadow: 1px 1px 3px #000;
   -webkit-box-shadow: 1px 1px 3px #000;
-  box-shadow: 1px 1px 3px #000; }
+  box-shadow: 1px 1px 3px #000;
+}
 
 .close:hover {
-  background: #00d9ff; }
+  background: #00d9ff;
+}
+
+.real-list {
+  padding-left: 30px;
+  list-style-type: square;
+}
+
+.real-list li {
+  margin-bottom: 5px;
+}
+
+.knownDevices, .connectedDevices {
+  margin: 5px;
+}
