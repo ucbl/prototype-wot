@@ -50,7 +50,7 @@ class InfrastructureController {
                                 http_port: this.getAvailablePort()
                             });
                             //Stores a JSON serialization of the avatar (not the object itself)
-                            this.avatars.put(device, avatar);
+                            this.avatars.set(device, avatar);
 
                             //io.emit('avatars_updated', this.avatars);
                             //self.avatarList.add(device["@id"],avatar);
