@@ -48,16 +48,15 @@ class InfrastructureController {
                                 //Add new device
                                 //console.log("Adding device " + device);
                                 this.deviceList.add(device);
-
                                 //Create new avatar
                                 promises.push(Avatar.buildAvatar({
                                     deviceUri: device,
+                                    name: device.replace(Globals.vocabularies.interoperability + "devices", Globals.vocabularies.asawoo + "avatars"),
                                     http_port: this.getAvailablePort()
                                 }).then((avatar) => {
-                                    console.log("Build avatar returned " + avatar);
+                                     console.log("Build avatar returned " + avatar);
                                     //Store a JSON serialization of the avatar (not the object itself)
                                     this.avatars.set(device, avatar);
-                                    return;
                                 }).catch((error) => {
                                     console.error(error);
                                 }));
