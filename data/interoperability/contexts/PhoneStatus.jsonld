@@ -1,7 +1,7 @@
 {
     "@context": {
         "hydra": "http://www.w3.org/ns/hydra/core#",
-        "vocab": "__interoperability__vocab#",
+        "vocab": "__ontology__vocabs/interoperability#",
         "status": "http://www.w3.org/2001/XMLSchema#string",
         "PhoneStatus": "vocab:PhoneStatus"
     }

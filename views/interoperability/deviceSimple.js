@@ -1,7 +1,7 @@
 /**
  * Created by Lionel on 25/11/2015.
  */
-//View returning a JSON-LD description of an device
+//View returning a JSON-LD description of a single device
 
 (function(module) {
         var Globals = require('./globals');

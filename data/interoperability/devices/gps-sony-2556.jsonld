@@ -1,6 +1,6 @@
 {
-    "@context" : "__interoperability__context/Device",
-    "@type": "http://www.w3.org/ns/hydra/core#Class",
+    "@context" : "__ontology__context/Device",
+    "@type": "vocab:Device",
     "@id" : "__interoperability__devices/gps-sony-2556",
     "id" : "gps-sony-2556",
     "name": "GPS",
@@ -8,8 +8,8 @@
     "capabilities" : [
 		{
 	      "@id": "__interoperability__devices/gps-sony-2556/gps",
-	      "@context" : "__interoperability__context/Capability",
-          "@type" : "http://www.w3.org/ns/hydra/core#Class"
+	      "@context" : "__ontology__context/Capability",
+          "@type" : ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityGps"]
 	    }
 	],
     "values": {

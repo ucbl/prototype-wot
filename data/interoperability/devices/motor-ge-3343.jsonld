@@ -1,6 +1,6 @@
 {
-  "@context" : "__interoperability__context/Device",
-  "@type": "http://www.w3.org/ns/hydra/core#Class",
+  "@context" : "__ontology__context/Device",
+  "@type": "vocab:Device",
   "@id" : "__interoperability__devices/motor-ge-3343",
   "id" : "motor-ge-3343",
   "name": "Motor",
@@ -8,13 +8,13 @@
 	"capabilities" : [
 		{
       "@id": "__interoperability__devices/motor-ge-3343/activateMotor",
-      "@context" : "__interoperability__context/Capability",
-      "@type" : "http://www.w3.org/ns/hydra/core#Class"
+      "@context" : "__ontology__context/Capability",
+      "@type" : ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityActivateMotor"]
     },
     {
       "@id": "__interoperability__devices/motor-ge-3343/informationMotor",
-      "@context" : "__interoperability__context/Capability",
-      "@type" : "http://www.w3.org/ns/hydra/core#Class"
+      "@context" : "__ontology__context/Capability",
+      "@type" : ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityInformationMotor"]
     }
 	],
   "values": {

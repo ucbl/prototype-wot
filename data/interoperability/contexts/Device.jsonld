@@ -1,7 +1,7 @@
 {
     "@context": {
         "hydra": "http://www.w3.org/ns/hydra/core#",
-        "vocab": "__interoperability__vocab#",
+        "vocab": "__ontology__vocabs/interoperability#",
         "id": "vocab:Device/id",
         "name": "vocab:Device/name",
         "description": "vocab:Device/description",

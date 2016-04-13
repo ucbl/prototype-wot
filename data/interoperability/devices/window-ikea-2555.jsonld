@@ -1,6 +1,6 @@
 {
-    "@context" : "__interoperability__context/Device",
-    "@type": "http://www.w3.org/ns/hydra/core#Class",
+    "@context" : "__ontology__context/Device",
+    "@type": "vocab:Device",
     "@id": "__interoperability__devices/window-ikea-2555",
     "id": "window-ikea-2555",
     "name": "Window",
@@ -8,13 +8,13 @@
     "capabilities" : [
 		{
 	      "@id": "__interoperability__devices/window-ikea-2555/openWindow",
-	      "@type": "http://www.w3.org/ns/hydra/core#Class",
-          "@context": "__interoperability__context/Capability"
+	      "@type": ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityOpenWindow"],
+          "@context": "__ontology__context/Capability"
 	    },
 		{
 	      "@id": "__interoperability__devices/window-ikea-2555/closeWindow",
-	      "@type": "http://www.w3.org/ns/hydra/core#Class",
-          "@context": "__interoperability__context/Capability"
+	      "@type": ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityCloseWindow"],
+          "@context": "__ontology__context/Capability"
 	    }
 	],
     "values": {

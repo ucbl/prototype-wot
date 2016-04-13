@@ -1,0 +1,6 @@
+{
+    "@context": {
+        "vocab": "__ontology__vocabs/interoperability#",
+        "connectedDevices": "vocab:ConnectedDeviceRefs"
+    }
+}

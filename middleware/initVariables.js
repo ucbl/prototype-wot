@@ -5,7 +5,7 @@
 
 (function(module) {
     var Globals = require('../models/globals'),
-        interoperabilityModel = require('../models/interoperability'),
+        interoperabilityModel = require('../models/interoperability/platform'),
         ontologyModel = require('../models/ontology');
 
 

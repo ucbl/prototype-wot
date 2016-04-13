@@ -1,5 +1,5 @@
 {
-  "@id": "http://localhost:3535/code/communicate",
+  "@id": "__code__repo/communicate",
   "@type": "hydra:Operation",
   "method": "POST", 
   "label": "Communicate with someone",

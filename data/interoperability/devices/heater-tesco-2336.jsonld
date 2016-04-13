@@ -1,6 +1,6 @@
 {
-    "@context" : "__interoperability__context/Device",
-    "@type": "http://www.w3.org/ns/hydra/core#Class",
+    "@context" : "__ontology__context/Device",
+    "@type": "vocab:Device",
     "@id" : "__interoperability__devices/heater-tesco-2336",
     "id" : "heater-tesco-2336",
     "name": "Heater",
@@ -8,8 +8,8 @@
     "capabilities" : [
     	{
           "@id": "__interoperability__devices/heater-tesco-2336/temperatureIncrease",
-          "@context" : "__interoperability__context/Capability",
-          "@type" : "http://www.w3.org/ns/hydra/core#Class"
+          "@context" : "__ontology__context/Capability",
+          "@type" : ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityTemperatureIncrease"]
         }
     ],
     "values": {

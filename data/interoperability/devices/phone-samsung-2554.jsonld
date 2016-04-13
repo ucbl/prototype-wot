@@ -1,6 +1,6 @@
 {
-    "@context" : "__interoperability__context/Device",
-    "@type": "http://www.w3.org/ns/hydra/core#Class",
+    "@context" : "__ontology__context/Device",
+    "@type": "vocab:Device",
 	"@id" : "__interoperability__devices/phone-samsung-2554",
 	"id" : "phone-samsung-2554",
     "name": "Phone",
@@ -8,33 +8,33 @@
     "capabilities" : [
 		{
 	      "@id": "__interoperability__devices/phone-samsung-2554/call",
-	      "@context" : "__interoperability__context/Capability",
-          "@type" : "http://www.w3.org/ns/hydra/core#Class"
+	      "@context" : "__ontology__context/Capability",
+          "@type" : ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityCall"]
 	    },
 		{
 	      "@id": "__interoperability__devices/phone-samsung-2554/sms",
-	      "@context" : "__interoperability__context/Capability",
-          "@type" : "http://www.w3.org/ns/hydra/core#Class"
+	      "@context" : "__ontology__context/Capability",
+          "@type" : ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilitySms"]
 	    },
 		{
 	      "@id": "__interoperability__devices/phone-samsung-2554/photo",
-	      "@context" : "__interoperability__context/Capability",
-          "@type" : "http://www.w3.org/ns/hydra/core#Class"
+	      "@context" : "__ontology__context/Capability",
+          "@type" : ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityPhoto"]
 	    },
 		{
 	      "@id": "__interoperability__devices/phone-samsung-2554/video",
-	      "@context" : "__interoperability__context/Capability",
-          "@type" : "http://www.w3.org/ns/hydra/core#Class"
+	      "@context" : "__ontology__context/Capability",
+          "@type" : ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityVideo"]
 	    },
 		{
 	      "@id": "__interoperability__devices/phone-samsung-2554/app",
-	      "@context" : "__interoperability__context/Capability",
-          "@type" : "http://www.w3.org/ns/hydra/core#Class"
+	      "@context" : "__ontology__context/Capability",
+          "@type" : ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityApp"]
 	    },
 		{
 	      "@id": "__interoperability__devices/phone-samsung-2554/gps",
-	      "@context" : "__interoperability__context/Capability",
-          "@type" : "http://www.w3.org/ns/hydra/core#Class"
+	      "@context" : "__ontology__context/Capability",
+          "@type" : ["http://www.w3.org/ns/hydra/core#Class", "vocab:CapabilityGps"]
 	    }
 	],
     "values": {
