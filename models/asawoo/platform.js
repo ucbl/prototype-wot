@@ -19,7 +19,16 @@
 
     var infrastructureController = new infraController();
     //Loop each 10 seconds
-    setInterval(function() {infrastructureController.getUpdate()}, 10000);
+
+    infrastructureController.getUpdate()
+        .then(() => {
+            setTimeout(function(){},1000);
+            infrastructureController.getUpdate();
+        })
+        .catch((error) => {
+            throw error;
+        });
+
 
     module.exports = {
 

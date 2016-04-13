@@ -22,51 +22,58 @@ class InfrastructureController {
     }
 
     getUpdate() {
-        var interopPlatformUrl = Globals.vocabularies.interoperability + "connected-devices";
+        //
+        var interopPlatformUrl = 'http://localhost:3000/interoperability/' /*Globals.vocabularies.interoperability*/ + "connected-devices",
+            promises = [];
     	//var deviceList = this.deviceList;
         //console.log("Call getUpdate on " + interopPlatformUrl);
 
-        request({
-            "url": interopPlatformUrl,
-            "headers": {"Accept": "application/ld+json"}
-        }, (error, response, body) => {
-            //data && console.log(data);
-            if(!error && response.statusCode == 200) {
-                var jsonDevices = JSON.parse(body)['connectedDevices'];
-                if(jsonDevices) {
-                    jsonDevices.forEach((device) => {
-                        if (this.deviceList.has(device) == true) {
-                            console.log("Device exists " + device);
-                            // Pb ici car on get un avatar qui n'a pas encore été build
-                            // càd avant que la promesse Avatar.buildAvatar soit retournée.
-                            var avatarUri = this.avatars.get(device).uri;
-                            //TODO send an HTTP request to tell the avatar to update its capabilities
-                        } else {
-                            //Add new device
-                            //console.log("Adding device " + device);
-                            this.deviceList.add(device);
+        return new Promise((resolve, reject) => {
+            request({
+                "url": interopPlatformUrl,
+                "headers": {"Accept": "application/ld+json"}
+            }, (error, response, body) => {
+                //data && console.log(data);
+                if(!error && response.statusCode == 200) {
+                    var jsonDevices = JSON.parse(body)['connectedDevices'];
+                    if(jsonDevices) {
+                        for (let device of jsonDevices) {
+                            if (this.deviceList.has(device) == true) {
+                                console.log("Device exists " + device);
+                                // Pb ici car on get un avatar qui n'a pas encore été build
+                                // càd avant que la promesse Avatar.buildAvatar soit retournée.
+                                var avatarUri = this.avatars.get(device).uri;
+                                //TODO send an HTTP request to tell the avatar to update its capabilities
+                            } else {
+                                //Add new device
+                                //console.log("Adding device " + device);
+                                this.deviceList.add(device);
 
-                            //Create new avatar
-                            Avatar.buildAvatar({
-                                deviceUri: device,
-                                http_port: this.getAvailablePort()
-                            }).then((avatar) => {
-                                 console.log("Build avatar returned " + avatar);
-                                //Store a JSON serialization of the avatar (not the object itself)
-                                this.avatars.set(device, avatar);
-                            }).catch((error) => {
-                                console.error(error);
-                            });
+                                //Create new avatar
+                                promises.push(Avatar.buildAvatar({
+                                    deviceUri: device,
+                                    http_port: this.getAvailablePort()
+                                }).then((avatar) => {
+                                    console.log("Build avatar returned " + avatar);
+                                    //Store a JSON serialization of the avatar (not the object itself)
+                                    this.avatars.set(device, avatar);
+                                    return;
+                                }).catch((error) => {
+                                    console.error(error);
+                                }));
 
-                            //io.emit('avatars_updated', this.avatars);
-                            //self.avatarList.add(device["@id"],avatar);
+                                //io.emit('avatars_updated', this.avatars);
+                                //self.avatarList.add(device["@id"],avatar);
+                            }
                         }
-                    });
+                    }
+                    this.showDeviceList();
+                    resolve(Promise.all(promises));
+                } else {
+                    console.error("Error loading connected devices list from " + interopPlatformUrl);
+                    reject();
                 }
-                this.showDeviceList();
-            } else {
-                console.error("Error loading connected devices list from " + interopPlatformUrl);
-            }
+            });
         });
     }
 
