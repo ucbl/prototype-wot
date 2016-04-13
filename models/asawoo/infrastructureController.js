@@ -78,9 +78,9 @@ class InfrastructureController {
 */
 
     showDeviceList() {
-    	//console.log("Call showDeviceList");
+    	console.log("\n\nConnected device list:");
 		for (let key of this.deviceList.values()) 
-		    console.log("Device[" + key + "]: " + this.deviceList[key]);
+		    console.log("Device: " + key);
     }
 
     //returns a free port between 4000 and 5000
