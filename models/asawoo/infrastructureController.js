@@ -41,7 +41,7 @@ class InfrastructureController {
                             //TODO send an HTTP request to tell the avatar to update its capabilities
                         } else {
                             //Add new device
-                            console.log("Adding device " + device);
+                            //console.log("Adding device " + device);
                             this.deviceList.add(device);
 
                             //Create new avatar
@@ -52,6 +52,8 @@ class InfrastructureController {
                                  console.log("Build avatar returned " + avatar);
                                 //Store a JSON serialization of the avatar (not the object itself)
                                 this.avatars.set(device, avatar);
+                            }).catch((error) => {
+                                console.error(error);
                             });
 
                             //io.emit('avatars_updated', this.avatars);
