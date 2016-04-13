@@ -36,12 +36,12 @@ class CapabilityManager extends EventEmitter {
         return this.acm.getCapabilityList()
             .then((capabilities) => {
                 this.capabilities = capabilities;
-                global.debug(`Capabilities of object:`, this.capabilities, true);
+                //global.debug(`Capabilities of object:`, this.capabilities, true);
 
                 // Inserting capabilities instances in the avatar's reasoner
                 for (let c of this.capabilities) {
-                    global.debug(`├── Capability ${c.ontology}`, this.avatar.deviceUri);
-                    triplesCapabilities.push(`<${c.access.platform}> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <${c.ontology}> .`);
+                    global.debug(`├── Capability ${c['@id']}`, this.avatar.deviceUri);
+                    triplesCapabilities.push(`<${c['@id']}> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://liris.cnrs.fr/asawoo/capability/${c.id}> .`);
                 }
 
                 global.debug(`✔ ${_.size(capabilities)} capabilities inserted in the reasoner.`, this.avatar.deviceUri, true);

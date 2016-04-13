@@ -37,6 +37,8 @@ class InfrastructureController {
                     jsonDevices.forEach((device) => {
                         if (this.deviceList.has(device) == true) {
                             console.log("Device exists " + device);
+                            // Pb ici car on get un avatar qui n'a pas encore été build
+                            // càd avant que la promesse Avatar.buildAvatar soit retournée.
                             var avatarUri = this.avatars.get(device).uri;
                             //TODO send an HTTP request to tell the avatar to update its capabilities
                         } else {

@@ -83,11 +83,11 @@ class Avatar {
 				cfm.init(avatar, ctxm, wsclient, lfm);
 				fpm.init(avatar, ctxm, lfm, cfm);
 				fdm.init(avatar, ctxm);
-				resolve(avatar.toJSON());
-			})/*.catch((error) => {
-				console.error("y a une merde");
-				reject(error);
-			});*/
+				return avatar.toJSON();
+			}).catch((error) => {
+				console.error("Something got wrong");
+				throw error;
+			});
 		});
     }
 

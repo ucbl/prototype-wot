@@ -29,7 +29,7 @@ class ApplianceCommunicationManager {
 	 */
 	getCapabilityList() {
 		return this.wsclient.sendHttpRequest({"url": this.deviceUri}).then((deviceDescription) => {
-			console.log("getCapabilityList: " + deviceDescription);
+			//console.log("getCapabilityList: " + deviceDescription);
 			return JSON.parse(deviceDescription)["capabilities"];
 		}).catch((error) => {
 			throw error;
