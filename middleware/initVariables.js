@@ -6,7 +6,8 @@
 (function(module) {
     var Globals = require('../models/globals'),
         interoperabilityModel = require('../models/interoperability/platform'),
-        ontologyModel = require('../models/ontology');
+        ontologyModel = require('../models/ontology'),
+        infrastructureController = require('../models/asawoo/infrastructureController');
 
 
     module.exports = function (request, response, next) {
@@ -17,6 +18,22 @@
             //Initiate the object discovery and construct their URIs
             ontologyModel.loadOntology({verbose: false});
             interoperabilityModel.loadDevices({verbose: false});
+
+            // Start the ASAWoO infrastructure controller regular updates
+            // (send requests to localhost -> shouldn't be the first to send a request)
+            (function doUpdate() {
+                infrastructureController.getUpdate()
+                    .then(() => {
+                        setTimeout(function () {
+                            doUpdate();
+                        }, 10000);
+                    })
+                    .catch((error) => {
+                        throw error;
+                    });
+            })();
+
+
         }
         next();
     };

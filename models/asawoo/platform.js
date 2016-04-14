@@ -22,19 +22,6 @@
     //Map of avatarInfo objects, representing the avatars known by the platform
      var avatarInfos = new Map();
 
-    (function doUpdate() {
-        infrastructureController.getUpdate()
-            .then(() => {
-                setTimeout(function () {
-                    doUpdate();
-                }, 10000);
-            })
-            .catch((error) => {
-                throw error;
-            });
-    })();
-
-
     module.exports = {
 
         //Uri of the interoperability layer vocabulary
