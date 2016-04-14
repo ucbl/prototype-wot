@@ -9,7 +9,6 @@ var express = require('express'),
     fs = require('fs'),
     asawooModel = require('../models/asawoo/platform'),
     jsonParser = require('body-parser').json(),
-    Globals = require('../models/globals'),
     templateEngine = require("../helpers/jsonTemplateEngine"),
     jsonldHeaders = require('../middleware/jsonldHeaders');
 
