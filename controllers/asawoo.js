@@ -40,6 +40,12 @@ router.get('/context/:context', function(request, response) {
 });
 
 // GET avatars
+router.get('/avatars', function(request, response, next) {
+    request.vocabUri = asawooModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
+response.end(JSON.stringify((require("../views/asawoo/avatars")({avatars: asawooModel.getAllAvatars()}))));
+});
+
 router.get('/avatars/:avatarId', function(request, response, next) {
     var avatarId = request.params["avatarId"];
     var avatar = asawooModel.getAvatar(avatarId);
