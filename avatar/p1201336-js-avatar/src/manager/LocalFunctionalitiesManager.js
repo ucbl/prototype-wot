@@ -39,9 +39,8 @@ module.exports = class extends EventEmitter {
         this.cm = cm;
 		this.wsclient = wsclient;
 
-        this.cm.on('CAPABILITIES_UPDATED', () => this.searcLocalFunctionalities());
-
-        return this;
+        this.cm.on('CAPABILITIES_UPDATED', () => { return this.searcLocalFunctionalities() });
+        return this.searcLocalFunctionalities();
     }
 
     /**
