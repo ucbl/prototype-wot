@@ -5,7 +5,8 @@ const request = require('request'),
     fs = require('fs');
 
 //Infrastructure Modules
-const Globals = require('../globals');
+const asawooModel = require('./platform'),
+    Globals = require('../globals');
 
 //const helper = require('../helper/global.js');
 const Avatar = require('../../avatar/p1201336-js-avatar'),
@@ -51,6 +52,7 @@ class InfrastructureController {
                                      console.log("Build avatar returned " + avatar);
                                     //Store a JSON serialization of the avatar (not the object itself)
                                     this.avatars.set(device, avatar);
+                                    asawooModel.addAvatar(avatar);
                                 }).catch((error) => {
                                     console.error(error);
                                 }));
