@@ -7,6 +7,7 @@ var express = require('express'),
     router = express.Router(),
     jsonParser = require('body-parser').json(),
     interoperabilityModel = require('../models/interoperability/platform'),
+    request = require('request'),
     jsonldHeaders = require('../middleware/jsonldHeaders');
 
 /*---WEB SERVICE---*/
