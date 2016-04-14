@@ -38,7 +38,7 @@ class InfrastructureController {
                     if(jsonDevices) {
                         for (let device of jsonDevices) {
                             if (this.deviceList.has(device) == true) {
-                                console.log("Device exists: " + device);
+                                //console.log("Device exists: " + device);
                                 //TODO send an HTTP request to tell the avatar to update its capabilities
                                 //var avatarUri = this.avatars.get(device).uri;
                             } else {
