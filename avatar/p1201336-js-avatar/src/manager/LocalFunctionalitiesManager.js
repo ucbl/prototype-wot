@@ -5,6 +5,7 @@
 'use strict';
 
 const EventEmitter = require('events'),
+    Globals = require('../../../../models/globals'),
     global = require('./../helper/global'),
     request = require('request'),
     rdf = require('rdf-ext'),
@@ -64,9 +65,9 @@ module.exports = class extends EventEmitter {
         global.debug('Searching for local functionalities...', this.avatar.deviceUri, true);
 
         let completeImcompleteFuncQuery1 = `
-            PREFIX asawoo: <http://liris.cnrs.fr/asawoo/vocab/>
-            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX asawoo: <${Globals.vocabularies.asawooVocab}>
+            PREFIX rdf: <${Globals.vocabularies.rdf}>
+            PREFIX rdfs: <${Globals.vocabularies.rdfs}>
             CONSTRUCT { ?functType rdf:type ?functType }
             WHERE {
             	?capInstance rdf:type ?capType .
@@ -80,10 +81,9 @@ module.exports = class extends EventEmitter {
             }`;
 
         let completeImcompleteFuncQuery2 = `
-            PREFIX asawoo: <http://liris.cnrs.fr/asawoo/vocab/>
-            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+            PREFIX asawoo: <${Globals.vocabularies.asawooVocab}>
+            PREFIX rdf: <${Globals.vocabularies.rdf}>
+            PREFIX rdfs: <${Globals.vocabularies.rdfs}>
             CONSTRUCT { ?functType rdf:type ?functType }
             WHERE {
             		?functType asawoo:isComposedOf ?primaryFunctType .
@@ -151,8 +151,8 @@ module.exports = class extends EventEmitter {
         return new Promise((resolve, reject) => {
 
             let imcompleteFuncQuery =`
-                PREFIX asawoo: <http://liris.cnrs.fr/asawoo/vocab/>
-                PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                PREFIX asawoo: <${Globals.vocabularies.asawooVocab}>
+                PREFIX rdf: <${Globals.vocabularies.rdf}>
                 SELECT DISTINCT ?incompleteFunctType ?missingFunctType WHERE {
                     ?incompleteFunctType asawoo:isComposedOf* ?missingFunctType .
                     ?incompleteFunctType asawoo:isComposedOf* ?functCompType2 .
