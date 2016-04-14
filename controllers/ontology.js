@@ -56,6 +56,16 @@ router.get('/context/:context', jsonParser, function(request, response, next) {
     return true;
 });
 
+// GET the ASAWoO
+router.get('/asawoo', jsonParser, function(request, response, next) {
+    //Need to store parameter values in a local variable...
+    //As adding a property to the request happens to remove its parameters :-(
+    request.vocabUri = ontologyModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
+    response.end(JSON.stringify(ontologyModel.getOntology()));
+    return true;
+});
+
 /*---WEB SERVICE---*/
 
 // GET the entire list of capabilities
