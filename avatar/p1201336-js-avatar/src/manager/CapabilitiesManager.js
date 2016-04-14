@@ -41,7 +41,7 @@ class CapabilityManager extends EventEmitter {
 
                 // Inserting capabilities instances in the avatar's reasoner
                 for (let c of this.capabilities) {
-                    global.debug(`├── Capability ${c['@id']}`, this.avatar.deviceUri);
+                    global.debug(`├── Capability ${c['@id']}`, this.avatar.displayName);
                     triplesCapabilities.push(`<${c['@id']}> <${Globals.vocabularies.nsType}> <${Globals.vocabularies.capability + c.id}> .`);
                 }
 

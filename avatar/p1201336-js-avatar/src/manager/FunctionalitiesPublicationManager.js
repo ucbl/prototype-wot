@@ -67,7 +67,7 @@ module.exports = class extends EventEmitter {
 
         // Start the server
         app.listen(this.http_port, () => {
-            global.debug(`✔ Avatar listening on port ${this.http_port}`, this.avatar.deviceUri, true);
+            global.debug(`✔ Avatar listening on port ${this.http_port}`, this.avatar.displayName, true);
         });
 
 
@@ -118,7 +118,7 @@ module.exports = class extends EventEmitter {
          * Invokation of the functionality
          */
         app.get('/invoke', (req, res) => {
-            global.debug(`***** Invokation of ${req.query.id}`, this.avatar.deviceUri);
+            global.debug(`***** Invokation of ${req.query.id}`, this.avatar.displayName);
             res.end();
         });
 
@@ -144,7 +144,7 @@ module.exports = class extends EventEmitter {
                 return;
             }
 
-            global.debug(`Incoming negotiation request for ${req.query.id} ...`, this.avatar.deviceUri, true);
+            global.debug(`Incoming negotiation request for ${req.query.id} ...`, this.avatar.displayName, true);
 
             // If it already exists
             // for (let f of _.union(this.cfm.collaborativeFunctionalitiesAsSlave, this.cfm.collaborativeFunctionalitiesAsMaster)) {
@@ -166,7 +166,7 @@ module.exports = class extends EventEmitter {
             // TODO we alaways accept collaboration an be the slave
             res.json({confirmation: true});
 
-            global.debug(`✔ Negociation succeeded: accepte collaboration`, this.avatar.deviceUri);
+            global.debug(`✔ Negociation succeeded: accepte collaboration`, this.avatar.displayName);
         });
     }
 
@@ -202,7 +202,7 @@ module.exports = class extends EventEmitter {
         l_funcs = this.ctxm.getExposableFunctionnalities(l_funcs);
         // Register to directory
         this.registerFunctionalitiesToDirectory(l_funcs);
-        global.debug('Publish collaborative functionalities to the directory', this.avatar.deviceUri, true);
+        global.debug('Publish collaborative functionalities to the directory', this.avatar.displayName, true);
     }
 
     /**
@@ -216,7 +216,7 @@ module.exports = class extends EventEmitter {
         // Register to directory
         this.registerFunctionalitiesToDirectory(c_funcs);
 
-        global.debug('Publish local functionalities to the directory', this.avatar.deviceUri, true);
+        global.debug('Publish local functionalities to the directory', this.avatar.displayName, true);
     }
 
     /**

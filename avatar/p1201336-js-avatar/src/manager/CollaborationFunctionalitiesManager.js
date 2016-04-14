@@ -61,7 +61,7 @@ module.exports = class extends EventEmitter {
      */
     searcCollaborativeFunctionalities(incomplete_local_funcs) {
 
-        global.debug('Searching for collaborative functionalities...', this.avatar.deviceUri, true);
+        global.debug('Searching for collaborative functionalities...', this.avatar.displayName, true);
 
         let incomplete_funcs = {},
             collabPromises = [];
@@ -85,18 +85,18 @@ module.exports = class extends EventEmitter {
 
         if (global.config.debug) {
             for (let f in incomplete_funcs) {
-                global.debug(`For functionality ${f} missing : `, this.avatar.deviceUri, true);
-                for (let missing_f of incomplete_funcs[f]) global.debug(`├── ${missing_f}`, this.avatar.deviceUri);
+                global.debug(`For functionality ${f} missing : `, this.avatar.displayName, true);
+                for (let missing_f of incomplete_funcs[f]) global.debug(`├── ${missing_f}`, this.avatar.displayName);
             }
         }
 
         // Get the running functionalities from the directory
         request.get(global.config.directory.fonctionality.getAll, (err, res, data) => {
 
-            global.debug('✔ Get avaialble functionalities from the directory', this.avatar.deviceUri, true);
+            global.debug('✔ Get avaialble functionalities from the directory', this.avatar.displayName, true);
 
             if (err) {
-                global.debug(err, this.avatar.deviceUri);
+                global.debug(err, this.avatar.displayName);
             }
             data = JSON.parse(data);
 
@@ -145,7 +145,7 @@ module.exports = class extends EventEmitter {
      */
     collaborationNegociationPhase1(func, remote_func) {
 
-        global.debug(`Collaboration possible for '${func}' with: `, this.avatar.deviceUri, true);
+        global.debug(`Collaboration possible for '${func}' with: `, this.avatar.displayName, true);
 
         let negotiations = {};
         let negotiationPromises = [];
@@ -166,7 +166,7 @@ module.exports = class extends EventEmitter {
 
                     // Failure
                     if (err || !data.negotiate) {
-                        global.debug(`✘ Can't collaborate with ${negocations[index].functionality.uri}`, this.avatar.deviceUri, true);
+                        global.debug(`✘ Can't collaborate with ${negocations[index].functionality.uri}`, this.avatar.displayName, true);
                         return new Promise();
                     }
 
@@ -181,7 +181,7 @@ module.exports = class extends EventEmitter {
         };
 
         for (let f of remote_func) {
-            global.debug(` ├── ${f.id} at ${f.uri}`, this.avatar.deviceUri);
+            global.debug(` ├── ${f.id} at ${f.uri}`, this.avatar.displayName);
 
             negotiations[f.id] = {functionality: f};
             negotiationPromises.push(getUri(negotiations, f.id));
@@ -271,7 +271,7 @@ module.exports = class extends EventEmitter {
         // Check if all negocations succeed
         for (let index in negotiations) {
             if (!negotiations[index].success) {
-                global.debug('✘ Neogication failed or refused', this.avatar.deviceUri);
+                global.debug('✘ Neogication failed or refused', this.avatar.displayName);
                 rollback();
                 return;
             }
@@ -287,7 +287,7 @@ module.exports = class extends EventEmitter {
             })
         );
 
-        global.debug('✔ Negotiation succeeded', this.avatar.deviceUri);
+        global.debug('✔ Negotiation succeeded', this.avatar.displayName);
 
         // Notify that the collaborative functionalities has changed
         this.emit('COLLABORATIVE_FUNC_UPDATED');

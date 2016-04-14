@@ -24,7 +24,6 @@ const ACM = require('./../manager/ApplianceCommunicationManager'),
 class Avatar {
 
     constructor(hylar, acm, cm, lfm, cfm, fpm, fdm, ctxm, wsclient, opts) {
-
 		this.hylar = hylar;
         this.acm = acm;
         this.cm = cm;
@@ -35,6 +34,7 @@ class Avatar {
         this.ctxm = ctxm;
         this.wsclient = wsclient;
         this.deviceUri = opts.deviceUri;
+        this.displayName = this.deviceUri.split('/')[this.deviceUri.split('/').length-1];
         this.name = opts.deviceUri || crypto.randomBytes(10).toString('hex');
 
         this.avatar_uri = `http://${utils.getLocalIp()}:${this.fpm.http_port}`;

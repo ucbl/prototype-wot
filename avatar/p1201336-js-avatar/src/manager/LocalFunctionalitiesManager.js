@@ -121,11 +121,11 @@ module.exports = class extends EventEmitter {
                 }
             }
 
-            global.debug(`Functionalites found:`, this.avatar.deviceUri, true);
+            global.debug(`Functionalites found:`, this.avatar.displayName, true);
 
             for (let f of completeIncompleteFuncts) {
                 if(f) {
-                    global.debug(`├── ✔ Functionality ${f.subject.nominalValue}`, this.avatar.deviceUri);
+                    global.debug(`├── ✔ Functionality ${f.subject.nominalValue}`, this.avatar.displayName);
                     this.localFunctionalities.push(new Functionality(f.subject.nominalValue, `${this.avatar.avatar_uri}/functionality?id=${f.subject.nominalValue}`));
                     f.subject.nominalValue = `${this.avatar.avatar_uri}/functionality?id=${f.subject.nominalValue}`;
                 }
