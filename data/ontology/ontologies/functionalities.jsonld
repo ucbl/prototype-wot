@@ -427,14 +427,31 @@
       "@id" : "asawooVocab:Functionality"
     } ]
   }, {
+    "@id" : "applicationFunctionality:temperatureChangeUsingWindow",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:isComposedOf" : [{
+      "@id" : "applicationFunctionality:operateWindow"
+    }],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:temperatureChange"
+    }]
+  }, {
+    "@id" : "applicationFunctionality:temperatureChangeDecreaseIncrease",
+    "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+    "asawooVocab:isComposedOf" : [{
+      "@id" : "applicationFunctionality:temperatureIncrease"
+    }, {
+     "@id" : "applicationFunctionality:temperatureDecrease"
+    }],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+      "@id" : "asawooVocab:temperatureChange"
+    } ]
+  }, {
     "@id" : "applicationFunctionality:temperatureChange",
     "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
     "asawooVocab:description" : [ {
       "@value" : "Change the temperature of a place"
     } ],
-    "asawooVocab:isComposedOf" : [{
-      "@id" : "applicationFunctionality:operateWindow"
-    }],
     "asawooVocab:name" : [ {
       "@value" : "Temperature Change"
     } ],
