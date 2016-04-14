@@ -5,8 +5,9 @@
  'use strict';
 
 const EventEmitter = require('events'),
-      global = require('../helper/global'),
-      _ = require('underscore');
+    Globals = require('../../../../models/globals'),
+    global = require('../helper/global'),
+    _ = require('underscore');
 
 /**
  * This class is used to manage the capabilities
@@ -41,7 +42,7 @@ class CapabilityManager extends EventEmitter {
                 // Inserting capabilities instances in the avatar's reasoner
                 for (let c of this.capabilities) {
                     global.debug(`├── Capability ${c['@id']}`, this.avatar.deviceUri);
-                    triplesCapabilities.push(`<${c['@id']}> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://liris.cnrs.fr/asawoo/capability/${c.id}> .`);
+                    triplesCapabilities.push(`<${c['@id']}> <${Globals.vocabularies.nsType}> <${Globals.vocabularies.capability + c.id}> .`);
                 }
 
                 global.debug(`✔ ${_.size(capabilities)} capabilities inserted in the reasoner.`, this.avatar.deviceUri, true);
