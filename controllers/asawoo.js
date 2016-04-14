@@ -69,9 +69,14 @@ router.get('/directory', function(request, response, next) {
 
 router.get('/directory/:functionalityClassId', function(request, response, next) {
     var functionalityId = request.params.functionalityId;
-    request.vocabUri = asawooModel.getHydraVocabUri();
-    jsonldHeaders(request, response, next);
-    response.end(JSON.stringify(functionalityDirectory.lookup(functionalityId)));
+    var functionalityInstances = functionalityDirectory.lookup(functionalityId);
+    if(functionalityInstances) {
+        request.vocabUri = asawooModel.getHydraVocabUri();
+        jsonldHeaders(request, response, next);
+        response.end(JSON.stringify(functionalityInstances));
+    } else {
+        response.sendStatus(404);
+    }
 });
 
 router.put('/directory/:functionalityId/:functionalityInstanceId', jsonParser, function(request, response, next) {
