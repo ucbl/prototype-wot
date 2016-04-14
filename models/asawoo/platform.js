@@ -6,6 +6,7 @@
     var fs = require('fs'),
         Globals = require('./../globals'),
         infraController = require('./infrastructureController'),
+        functDirectory = require('./functionalityDirectory'),
         cloneHelper = require('../../helpers/cloneHelper'),
         templateEngine = require("../../helpers/jsonTemplateEngine");
 
@@ -23,6 +24,8 @@
      var avatarInfos = {};
 
     module.exports = {
+        //Convenience property for preventing the controller from doing initialization tasks
+        "functionalityDirectory": new functDirectory(),
 
         //Initialization
         "initialize": function() {

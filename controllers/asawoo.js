@@ -8,10 +8,12 @@ var express = require('express'),
     router = express.Router(),
     fs = require('fs'),
     asawooModel = require('../models/asawoo/platform'),
-    bodyParser = require('body-parser'),
+    jsonParser = require('body-parser').json(),
     Globals = require('../models/globals'),
     templateEngine = require("../helpers/jsonTemplateEngine"),
     jsonldHeaders = require('../middleware/jsonldHeaders');
+
+var functionalityDirectory = asawooModel.functionalityDirectory;
 
 /*---HYDRA ROUTER---*/
 
@@ -57,6 +59,28 @@ router.get('/avatars/:avatarId', function(request, response, next) {
 
 /*---WEB SERVICE---*/
 
+//Query functionality directory
+//TODO: ADD JSON-LD CONTEXTS !!!
+router.get('/directory', function(request, response, next) {
+    request.vocabUri = asawooModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
+    response.end(JSON.stringify(functionalityDirectory.showAll()));
+});
+
+router.get('/directory/:functionalityClassId', function(request, response, next) {
+    var functionalityId = request.params.functionalityId;
+    request.vocabUri = asawooModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
+    response.end(JSON.stringify(functionalityDirectory.lookup(functionalityId)));
+});
+
+router.put('/directory/:functionalityId/:functionalityInstanceId', jsonParser, function(request, response, next) {
+    var functionalityClassId = request.params.functionalityId;
+    var functionalityInstanceId = request.params.functionalityInstanceId;
+    request.vocabUri = asawooModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
+    response.end(JSON.stringify(functionalityDirectory.bind(functionalityClassId, functionalityInstanceId)));
+});
 //TODO
 
 module.exports = router;

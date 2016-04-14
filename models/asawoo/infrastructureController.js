@@ -5,9 +5,7 @@ const request = require('request'),
     fs = require('fs');
 
 //Infrastructure Modules
-const Globals = require('../globals'),
-    Directory = require('./functionalityDirectory.js');
-var functionalityDirectory = new Directory();
+const Globals = require('../globals');
 
 //const helper = require('../helper/global.js');
 const Avatar = require('../../avatar/p1201336-js-avatar'),
