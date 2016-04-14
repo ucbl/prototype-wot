@@ -41,12 +41,12 @@ module.exports = class extends EventEmitter {
         this.lfm.on('LOCAL_FUNC_UPDATED', () => {
 
             return this.lfm.getImcompleteFunctionalities()
-            .then((imcompletes) => {
-                return this.searcCollaborativeFunctionalities(imcompletes);
-            })
-            .catch((err) => {
-                console.log('failed:', err, imcompletes);
-            });
+                .then((imcompletes) => {
+                    return this.searcCollaborativeFunctionalities(imcompletes);
+                })
+                .catch((err) => {
+                    console.log('failed:', err, imcompletes);
+                });
         });
 
 
@@ -63,7 +63,8 @@ module.exports = class extends EventEmitter {
 
         global.debug('Searching for collaborative functionalities...', this.avatar.deviceUri, true);
 
-        let incomplete_funcs = {};
+        let incomplete_funcs = {},
+            collabPromises = [];
 
         // Copie the list
         for (let f in incomplete_local_funcs) {
@@ -131,8 +132,10 @@ module.exports = class extends EventEmitter {
                 if (!dep_ok) continue;
 
                 // We can do an incomplete functionality
-                return this.collaborationNegociationPhase1(f, dep_found);
+                collabPromises.push(this.collaborationNegociationPhase1(f, dep_found));
             }
+
+            return Promise.all(collabPromises);
         });
     }
 
@@ -145,6 +148,7 @@ module.exports = class extends EventEmitter {
         global.debug(`Collaboration possible for '${func}' with: `, this.avatar.deviceUri, true);
 
         let negotiations = {};
+        let negotiationPromises = [];
         let remaining = remote_func.length;
 
         /**
@@ -163,7 +167,7 @@ module.exports = class extends EventEmitter {
                     // Failure
                     if (err || !data.negotiate) {
                         global.debug(`✘ Can't collaborate with ${negocations[index].functionality.uri}`, this.avatar.deviceUri, true);
-                        return;
+                        return new Promise();
                     }
 
                     negotiations[index].negotiate_uri = data.negotiate;
@@ -180,8 +184,10 @@ module.exports = class extends EventEmitter {
             global.debug(` ├── ${f.id} at ${f.uri}`, this.avatar.deviceUri);
 
             negotiations[f.id] = {functionality: f};
-            getUri(negotiations, f.id);
+            negotiationPromises.push(getUri(negotiations, f.id));
         }
+
+        return Promise.all(negotiationPromises);
     }
 
     /**
@@ -285,15 +291,6 @@ module.exports = class extends EventEmitter {
 
         // Notify that the collaborative functionalities has changed
         this.emit('COLLABORATIVE_FUNC_UPDATED');
-        return this.exposeFunctionalities(this.collaborativeFunctionalitiesAsMaster);
-    }
-
-    exposeFunctionalities(functionalityList) {
-        return this.avatar.wsclient.sendHttpRequest({
-            method: 'PUT',
-            json: functionalityList,
-            url: Globals.vocabularies.asawoo + 'directory'
-        });
     }
 
     /**

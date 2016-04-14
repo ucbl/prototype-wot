@@ -1,1 +1,1 @@
-corrected avatar.toJson()
+Correction du bug rdfstore pour deux insertions successives. Maj requetes du lfm pour appeler Globals. Modification (temporaire?) du functionalities.jsonld
