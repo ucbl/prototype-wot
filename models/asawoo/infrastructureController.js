@@ -5,7 +5,7 @@ const request = require('request'),
     fs = require('fs');
 
 //Infrastructure Modules
-const asawooModel = require('../models/asawoo/platform'),
+const asawooModel = require('./platform'),
     Globals = require('../globals');
 
 //const helper = require('../helper/global.js');
