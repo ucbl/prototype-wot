@@ -17,12 +17,32 @@
         'deviceFileDir': __dirname + '/../data/interoperability/devices/'
     };
 
-    var infrastructureController = new infraController();
+    var infrastructureController = {};
 
-    //Map of avatarInfo objects, representing the avatars known by the platform
-     var avatarInfos = new Map();
+    //Map of avatarInfo objects, representing the avatars of the devices connected to the platform
+     var avatarInfos = {};
 
     module.exports = {
+
+        //Initialization
+        "initialize": function() {
+            infrastructureController = new infraController();
+            avatarInfos = new Map();
+
+            // Start the ASAWoO infrastructure controller regular updates
+            // (send requests to localhost -> shouldn't be the first to send a request)
+            (function doUpdate() {
+                infrastructureController.getUpdate()
+                    .then(() => {
+                        setTimeout(function () {
+                            doUpdate();
+                        }, 10000);
+                    })
+                    .catch((error) => {
+                        throw error;
+                    });
+            })();
+        },
 
         //Uri of the interoperability layer vocabulary
         "getHydraVocabUri": function() {
