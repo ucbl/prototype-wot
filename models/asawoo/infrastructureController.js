@@ -57,7 +57,7 @@ class InfrastructureController {
                             }
                         }
                     }
-                    this.showDeviceList();
+                    //this.showDeviceList();
                     resolve(Promise.all(promises));
                 } else {
                     console.error("Error loading connected devices list from " + interopPlatformUrl);

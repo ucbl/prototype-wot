@@ -19,8 +19,7 @@ module.exports = class {
     serialize() {
         return {
             id: this.id,
-            uri: this.uri,
-            collaborative: this.collaborative
+            uri: this.uri
         }
     }
 };
