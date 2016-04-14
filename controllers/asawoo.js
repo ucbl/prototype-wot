@@ -63,7 +63,7 @@ router.get('/avatars/:avatarId', function(request, response, next) {
 router.get('/directory', function(request, response, next) {
     request.vocabUri = asawooModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
-    response.end(JSON.stringify((require("../views/asawoo/directory")(functionalityDirectory.getAll()))));
+    response.end(JSON.stringify((require("../views/asawoo/directory")({functionalities: functionalityDirectory.getAll()}))));
 });
 
 router.get('/directory/:functionalityClassId', function(request, response, next) {
