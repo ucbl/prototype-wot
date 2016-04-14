@@ -1,7 +1,7 @@
 /**
  * Created by Lionel on 12/04/2016.
  */
-//View returning a JSON-LD description of the ASAWoO platform entrypoint
+//View returning a JSON-LD description of an avatar
 
 (function(module) {
     module.exports = function (avatar) {
