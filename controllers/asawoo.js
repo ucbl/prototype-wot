@@ -78,12 +78,15 @@ router.get('/directory/:functionalityClassId', function(request, response, next)
     }
 });
 
-router.put('/directory/:functionalityId/:functionalityInstanceId', jsonParser, function(request, response, next) {
-    var functionalityClassId = request.params.functionalityId;
-    var functionalityInstanceId = request.params.functionalityInstanceId;
+router.put('/directory', jsonParser, function(request, response, next) {
+    var functionality;
     request.vocabUri = asawooModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
-    response.end(JSON.stringify(functionalityDirectory.bind(functionalityClassId, functionalityInstanceId)));
+    for (var i = 0; i < request.body.length; i++) {
+        functionality = request.body[i];
+        functionalityDirectory.bind(functionality.id, functionality.uri);
+    }
+    response.end();
 });
 //TODO
 

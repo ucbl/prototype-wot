@@ -5,6 +5,7 @@
 'use strict';
 
 const EventEmitter = require('events'),
+    Globals = require('../../../../models/globals'),
     request = require('request'),
     Functionality = require('../model/Functionality'),
     _ = require('underscore'),
@@ -39,9 +40,9 @@ module.exports = class extends EventEmitter {
         // When local functionalities are know or changed
         this.lfm.on('LOCAL_FUNC_UPDATED', () => {
 
-            this.lfm.getImcompleteFunctionalities()
+            return this.lfm.getImcompleteFunctionalities()
             .then((imcompletes) => {
-                this.searcCollaborativeFunctionalities(imcompletes);
+                return this.searcCollaborativeFunctionalities(imcompletes);
             })
             .catch((err) => {
                 console.log('failed:', err, imcompletes);
@@ -98,9 +99,9 @@ module.exports = class extends EventEmitter {
             }
             data = JSON.parse(data);
 
-            let remote_funcs = data.functionalities;
+            let remote_funcs = data;
 
-            if (!remote_funcs || !Array.isArray(remote_funcs)) {
+            if (!remote_funcs || (typeof remote_funcs != 'object')) {
                 return;
             }
 
@@ -115,8 +116,9 @@ module.exports = class extends EventEmitter {
 
                     dep_ok = false;
 
-                    for (let remote_f of remote_funcs) {
-                        if (remote_f.id == dep) {
+                    for (var key in remote_funcs) {
+                        var remote_f = remote_funcs[key];
+                        if (key == dep) {
                             dep_found.push(remote_f);
                             dep_ok = true;
                             break;
@@ -129,7 +131,7 @@ module.exports = class extends EventEmitter {
                 if (!dep_ok) continue;
 
                 // We can do an incomplete functionality
-                this.collaborationNegociationPhase1(f, dep_found);
+                return this.collaborationNegociationPhase1(f, dep_found);
             }
         });
     }
@@ -153,23 +155,25 @@ module.exports = class extends EventEmitter {
          */
         let getUri = (negocations, index) => {
 
-            request.get(negocations[index].functionality.uri, (err, res, data) => {
+            for (let functionalityUri of negocations[index].functionality) {
+                request.get(functionalityUri, (err, res, data) => {
 
-                data = JSON.parse(data || {});
+                    data = JSON.parse(data || {});
 
-                // Failure
-                if (err || !data.negotiate) {
-                    global.debug(`✘ Can't collaborate with ${negocations[index].functionality.uri}`, this.avatar.deviceUri, true);
-                    return;
-                }
+                    // Failure
+                    if (err || !data.negotiate) {
+                        global.debug(`✘ Can't collaborate with ${negocations[index].functionality.uri}`, this.avatar.deviceUri, true);
+                        return;
+                    }
 
-                negotiations[index].negotiate_uri = data.negotiate;
+                    negotiations[index].negotiate_uri = data.negotiate;
 
-                // If we have all URI => second phase
-                if (--remaining == 0) {
-                    this.collaborationNegociationPhase2(func, negocations);
-                }
-            });
+                    // If we have all URI => second phase
+                    if (--remaining == 0) {
+                        return this.collaborationNegociationPhase2(func, negocations);
+                    }
+                });
+            }
         };
 
         for (let f of remote_func) {
@@ -222,7 +226,7 @@ module.exports = class extends EventEmitter {
 
                 // When all negocations done => phase 3
                 if (remained == 0) {
-                    this.collaborationNegociationPhase3(func, negotiations);
+                    return this.collaborationNegociationPhase3(func, negotiations);
                 }
 
             });
@@ -280,7 +284,16 @@ module.exports = class extends EventEmitter {
         global.debug('✔ Negotiation succeeded', this.avatar.deviceUri);
 
         // Notify that the collaborative functionalities has changed
-        this.emit('CALLABORATIVE_FUNC_UPDATED');
+        this.emit('COLLABORATIVE_FUNC_UPDATED');
+        return this.exposeFunctionalities(this.collaborativeFunctionalitiesAsMaster);
+    }
+
+    exposeFunctionalities(functionalityList) {
+        return this.avatar.wsclient.sendHttpRequest({
+            method: 'PUT',
+            json: functionalityList,
+            url: Globals.vocabularies.asawoo + 'directory'
+        });
     }
 
     /**

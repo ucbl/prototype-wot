@@ -57,7 +57,11 @@ class FunctionalityDirectory {
 	}
 
 	getAll() {
-		return this.registry;
+		var allPairs = {};
+		this.registry.forEach(function(valeur, clé) {
+			allPairs[clé] = valeur;
+		});
+		return allPairs;
 	}
 }
 module.exports = FunctionalityDirectory;

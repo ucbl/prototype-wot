@@ -135,6 +135,10 @@ module.exports = class extends EventEmitter {
             return this.avatar.hylar.query('INSERT DATA { ' + completeIncompleteFuncts.join('') + '}');
         })
         .then(() => {
+            // Expose functionalities to the directory
+            return this.exposeFunctionalities(this.localFunctionalities);
+        })
+        .then(() => {
             // Notify that the local functionalities has changed
             this.emit('LOCAL_FUNC_UPDATED');
         })
@@ -146,36 +150,41 @@ module.exports = class extends EventEmitter {
     /**
      * Get the imcomplete fonctionalities
      */
-    getImcompleteFunctionalities(){
+    getImcompleteFunctionalities() {
 
-        return new Promise((resolve, reject) => {
+        let imcompleteFuncQuery =`
+            PREFIX asawoo: <${Globals.vocabularies.asawooVocab}>
+            PREFIX rdf: <${Globals.vocabularies.rdf}>
+            SELECT DISTINCT ?incompleteFunctType ?missingFunctType WHERE {
+                ?incompleteFunctType asawoo:isComposedOf* ?missingFunctType .
+                ?incompleteFunctType asawoo:isComposedOf* ?functCompType2 .
+                ?functInstance2 rdf:type ?functCompType2 .
+                FILTER NOT EXISTS { ?functInstance rdf:type ?missingFunctType . }
+                FILTER (str(?incompleteFunctType) != str(?missingFunctType))
+            }`;
 
-            let imcompleteFuncQuery =`
-                PREFIX asawoo: <${Globals.vocabularies.asawooVocab}>
-                PREFIX rdf: <${Globals.vocabularies.rdf}>
-                SELECT DISTINCT ?incompleteFunctType ?missingFunctType WHERE {
-                    ?incompleteFunctType asawoo:isComposedOf* ?missingFunctType .
-                    ?incompleteFunctType asawoo:isComposedOf* ?functCompType2 .
-                    ?functInstance2 rdf:type ?functCompType2 .
-                    FILTER NOT EXISTS { ?functInstance rdf:type ?missingFunctType . }
-                    FILTER (str(?incompleteFunctType) != str(?missingFunctType))
-                }`;
-
-            this.avatar.hylar.query(imcompleteFuncQuery)
-            .then((data) => {
-                let imcompleteFunctionalities = {};
-                if(!data) return;
-                for(let couple of data){
-                    if(couple){
-                        if(!imcompleteFunctionalities[couple.incompleteFunctType.value]){
-                            imcompleteFunctionalities[couple.incompleteFunctType.value] = [];
-                        }
-                        imcompleteFunctionalities[couple.incompleteFunctType.value].push(couple.missingFunctType.value);
+        return this.avatar.hylar.query(imcompleteFuncQuery)
+        .then((data) => {
+            let imcompleteFunctionalities = {};
+            if(!data) return;
+            for(let couple of data){
+                if(couple){
+                    if(!imcompleteFunctionalities[couple.incompleteFunctType.value]){
+                        imcompleteFunctionalities[couple.incompleteFunctType.value] = [];
                     }
+                    imcompleteFunctionalities[couple.incompleteFunctType.value].push(couple.missingFunctType.value);
                 }
+            }
 
-                resolve(imcompleteFunctionalities);
-            });
+            return imcompleteFunctionalities;
         });
+    }
+
+    exposeFunctionalities(functionalityList) {
+        return this.avatar.wsclient.sendHttpRequest({
+                method: 'PUT',
+                json: functionalityList,
+                url: Globals.vocabularies.asawoo + 'directory'
+            });
     }
 };
