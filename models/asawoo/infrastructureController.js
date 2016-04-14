@@ -10,7 +10,8 @@ const Globals = require('../globals'),
 var functionalityDirectory = new Directory();
 
 //const helper = require('../helper/global.js');
-const Avatar = require('../../avatar/p1201336-js-avatar');
+const Avatar = require('../../avatar/p1201336-js-avatar'),
+    AvatarInfo = require('./avatarInfo');
 
 class InfrastructureController {
     constructor() {
@@ -47,7 +48,7 @@ class InfrastructureController {
                                 //console.log("Adding device " + device);
                                 this.deviceList.add(device);
                                 //Create new avatar
-                                var avatarInfo = new avatarInfo(device.replace(Globals.vocabularies.interoperability + "devices", ""), device, this.getAvailablePort(), device.replace(Globals.vocabularies.interoperability + "devices", Globals.vocabularies.asawoo + "avatars"))
+                                var avatarInfo = new AvatarInfo(device.replace(Globals.vocabularies.interoperability + "devices", ""), device, this.getAvailablePort(), device.replace(Globals.vocabularies.interoperability + "devices", Globals.vocabularies.asawoo + "avatars"))
                                 promises.push(Avatar.buildAvatar(avatarInfo).then((avatar) => {
                                      console.log("Build avatar returned " + avatar);
                                     //Store a JSON serialization of the avatar (not the object itself)
