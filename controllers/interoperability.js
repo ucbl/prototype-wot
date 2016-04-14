@@ -224,7 +224,7 @@ router.delete('/connected-devices/:deviceId/:capabilityId', jsonParser, function
  * Mock of direct access through the gateway: proxying requests to /interoperability
  */
 router.get('/gateway/:deviceId/:capabilityId', jsonParser, function(request, response) {
-        request({
+        request.get({
             url: '/interoperability/connected-devices/' + request.params["deviceId"] + "/" + request.params["capabilityId"],
             headers: request.headers,
         }, function(err, remoteResponse, remoteBody) {
