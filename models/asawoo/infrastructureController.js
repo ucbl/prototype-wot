@@ -85,5 +85,5 @@ class InfrastructureController {
         this.portArray.push(port);
         return port;  
     }
-  }
+}
 module.exports = InfrastructureController;

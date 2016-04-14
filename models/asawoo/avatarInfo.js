@@ -43,3 +43,4 @@ class AvatarInfo {
         return this.functionalities;
     }
 }
+module.exports = AvatarInfo;
