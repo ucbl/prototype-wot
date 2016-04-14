@@ -45,7 +45,7 @@ class CapabilityManager extends EventEmitter {
                     triplesCapabilities.push(`<${c['@id']}> <${Globals.vocabularies.nsType}> <${Globals.vocabularies.capability + c.id}> .`);
                 }
 
-                global.debug(`✔ ${_.size(capabilities)} capabilities inserted in the reasoner.`, this.avatar.deviceUri, true);
+                global.debug(`✔ ${_.size(capabilities)} capabilities inserted in the reasoner.`, this.avatar.displayName, true);
                 return avatar.hylar.query(`INSERT DATA { ${triplesCapabilities.join('\n')} }`)
             })
             .then(() => {

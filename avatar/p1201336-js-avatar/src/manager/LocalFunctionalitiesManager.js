@@ -62,7 +62,7 @@ module.exports = class extends EventEmitter {
         let functionalities = [];
         let incomplete_functionalities = {};
 
-        global.debug('Searching for local functionalities...', this.avatar.deviceUri, true);
+        global.debug('Searching for local functionalities...', this.avatar.displayName, true);
 
         let completeImcompleteFuncQuery1 = `
             PREFIX asawoo: <${Globals.vocabularies.asawooVocab}>
