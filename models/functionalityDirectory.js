@@ -4,13 +4,13 @@ class FunctionalityDirectory {
 	constructor(){
         // The map of functionality instances, indexed by types (Functionality class)
 		this.registry = new Map();
-        console.log("Constructor");
 	}
 
 	/**
      * Bind a functionality serialization to the directory, according to its "@type" property
      */
 	bind(functionality) {
+        console.log("bind");
         for (let type of functionality['@type']) {
             let functionalities;
             if (this.registry.get(type) === undefined) {
@@ -84,7 +84,6 @@ class FunctionalityDirectory {
      * @returns {{}} a JSON object containing all functionalities (structured according to their types)
      */
 	getAll() {
-        console.log("getAll");
 		var result = {};
 		for (let functionalityClass in this.registry) {
 			result.functionalityClass = this.registry.get(functionalityClass);
