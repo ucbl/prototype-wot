@@ -37,13 +37,17 @@ router.get('/:functionalityClassId', function(request, response, next) {
     }
 });
 
+/**
+ * Adds new functionalities to the directory.
+ * The request must be of type application/json and contain an array of functionality serializations.
+ * These serializations must contain at least an "@id" and an "@type" properties.
+ */
 router.put('/', jsonParser, function(request, response, next) {
     console.log("PUT: " + JSON.stringify(request.body));
-    var functionality = request.body;
+    var functionalities = request.body;
     request.vocabUri = asawooModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
-    for (var i = 0; i < request.body.length; i++) {
-        functionality = request.body[i];
+    for (let functionality of functionalities) {
         functionalityDirectory.bind(functionality);
     }
     response.end();
