@@ -47,7 +47,7 @@ router.put('/', jsonParser, function(request, response, next) {
     var functionalities = request.body;
     request.vocabUri = asawooModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
-    for (let functionality of functionalities) {
+    for (var functionality of functionalities) {
         functionalityDirectory.bind(functionality);
     }
     response.end();
