@@ -8,12 +8,12 @@ var express = require('express'),
     router = express.Router(),
     fs = require('fs'),
     asawooModel = require('../models/asawoo/platform'), //We keep the asawoo platform model to ne able to retrieve JSON-LD contexts
-    directoryModel = require('../models/functionalityDirectory'),
+    functionalityDirectory = require('../models/functionalityDirectory'),
     jsonParser = require('body-parser').json(),
     templateEngine = require("../helpers/jsonTemplateEngine"),
     jsonldHeaders = require('../middleware/jsonldHeaders');
 
-var functionalityDirectory = new directoryModel();
+//var functionalityDirectory = new directoryModel();
 
 /*---WEB SERVICE---*/
 
