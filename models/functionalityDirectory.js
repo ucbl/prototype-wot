@@ -11,6 +11,7 @@ class FunctionalityDirectory {
      */
 	bind(functionality) {
         console.log("bind : " + functionality['@type']);
+        let type = functionality['@type'];
             let functionalities;
             if (this.registry.get(type) === undefined) {
                 console.log("Patrouvé");
