@@ -84,6 +84,7 @@ class FunctionalityDirectory {
      * @returns {{}} a JSON object containing all functionalities (structured according to their types)
      */
 	getAll() {
+        console.log("getAll");
 		var result = {};
 		for (let functionalityClass in this.registry) {
 			result.functionalityClass = this.registry.get(functionalityClass);
