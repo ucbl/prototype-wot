@@ -11,7 +11,6 @@ class FunctionalityDirectory {
      */
 	bind(functionality) {
         console.log("bind : " + functionality['@type']);
-        for (let type of functionality['@type']) {
             let functionalities;
             if (this.registry.get(type) === undefined) {
                 console.log("Patrouvé");
@@ -25,7 +24,6 @@ class FunctionalityDirectory {
             functionalities.push(functionality);
             this.registry.set(type, functionalities);
             console.log("[bind] Directory: " + this.registry.size);
-        }
 	}
 
 	/**
