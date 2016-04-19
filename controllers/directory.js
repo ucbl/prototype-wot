@@ -43,11 +43,12 @@ router.get('/:functionalityClassId', function(request, response, next) {
  * These serializations must contain at least an "@id" and an "@type" properties.
  */
 router.put('/', jsonParser, function(request, response, next) {
-    console.log("PUT: " + JSON.stringify(request.body));
     var functionalities = request.body;
+    console.log("PUT: " + functionalities);
     request.vocabUri = asawooModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
-    for (var functionality of functionalities) {
+    for (var i in functionalities) {
+        var functionality = functionalities[i];
         functionalityDirectory.bind(functionality);
     }
     response.end();
