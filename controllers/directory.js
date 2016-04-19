@@ -38,6 +38,7 @@ router.get('/:functionalityClassId', function(request, response, next) {
 });
 
 router.put('/', jsonParser, function(request, response, next) {
+    console.log("PUT");
     var functionality = request.body;
     request.vocabUri = asawooModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
