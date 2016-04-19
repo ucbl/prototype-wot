@@ -87,7 +87,7 @@ class FunctionalityDirectory {
      */
 	getAll() {
 		var result = {};
-		for (let functionalityClass in this.registry) {
+		for (let functionalityClass of this.registry) {
 			result.functionalityClass = this.registry.get(functionalityClass);
 		}
 		return result;
