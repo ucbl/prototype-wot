@@ -22,6 +22,7 @@ var functionalityDirectory = new directoryModel();
 router.get('/', function(request, response, next) {
     request.vocabUri = asawooModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
+    console.log(JSON.stringify({functionalities: functionalityDirectory.getAll()}));
     response.end(JSON.stringify((require("../views/asawoo/directory")({functionalities: functionalityDirectory.getAll()}))));
 });
 
