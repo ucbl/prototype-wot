@@ -44,7 +44,6 @@ router.get('/:functionalityClassId', function(request, response, next) {
  */
 router.put('/', jsonParser, function(request, response, next) {
     var functionalities = request.body;
-    console.log("PUT: " + functionalities);
     request.vocabUri = asawooModel.getHydraVocabUri();
     jsonldHeaders(request, response, next);
     for (var i in functionalities) {
@@ -54,16 +53,32 @@ router.put('/', jsonParser, function(request, response, next) {
     response.end();
 });
 
+/**
+ * Adds (if non-existent) / replaces (if existent) functionalities to the directory.
+ * The request must be of type application/json and contain an array of functionality serializations.
+ * These serializations must contain at least an "@id" and an "@type" properties.
+ */
+router.post('/', jsonParser, function(request, response, next) {
+    var functionalities = request.body;
+    request.vocabUri = asawooModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
+    for (var i in functionalities) {
+        var functionality = functionalities[i];
+        functionalityDirectory.rebind(functionality);
+    }
+    response.end();
+});
+
 router.delete('/:functionalityId', function(request, response, next) {
     var functionalityId = request.params.functionalityId;
     var result = functionalityDirectory.unbind(functionalityId);
-    request.vocabUri = asawooModel.getHydraVocabUri();
-    jsonldHeaders(request, response, next);
     if(result) {
         response.sendStatus(204);
     } else {
         response.sendStatus(404);
     }
+    request.vocabUri = asawooModel.getHydraVocabUri();
+    jsonldHeaders(request, response, next);
 });
 
 module.exports = router;
