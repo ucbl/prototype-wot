@@ -77,8 +77,6 @@ router.delete('/:functionalityId', function(request, response, next) {
     } else {
         response.sendStatus(404);
     }
-    request.vocabUri = asawooModel.getHydraVocabUri();
-    jsonldHeaders(request, response, next);
 });
 
 module.exports = router;
