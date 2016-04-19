@@ -6,7 +6,7 @@
     var fs = require('fs'),
         Globals = require('./../globals'),
         infraController = require('./infrastructureController'),
-        functDirectory = require('./functionalityDirectory'),
+        functDirectory = require('./../functionalityDirectory'),
         cloneHelper = require('../../helpers/cloneHelper'),
         templateEngine = require("../../helpers/jsonTemplateEngine");
 

@@ -11,7 +11,7 @@
             "@context": Globals.vocabularies.asawoo + "context/EntryPoint",
             "@type": "hydra:EntryPoint",
             "@id": Globals.vocabularies.base + "asawoo",
-            "available-functionalities": Globals.vocabularies.asawoo + "directory",
+            "available-functionalities": Globals.vocabularies.directory,
             "avatars": Globals.vocabularies.asawoo + "avatars"
         };
     }

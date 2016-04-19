@@ -52,7 +52,7 @@ class InfrastructureController {
                                      console.log("Build avatar returned " + avatar);
                                     //Store a JSON serialization of the avatar (not the object itself)
                                     this.avatars.set(device, avatar);
-                                    //asawooModel.addAvatar(avatar);
+                                    asawooModel.addAvatar(avatar);
                                 }).catch((error) => {
                                     console.error(error);
                                 }));

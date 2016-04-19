@@ -6,6 +6,7 @@
     router.use('/code-repository', require('./code-repository'));
     router.use('/ontology', require('./ontology'));
     router.use('/asawoo', require('./asawoo'));
+    router.use('/directory', require('./directory'));
 
     router.get('/', function(req, res) {
         res.render('index');
