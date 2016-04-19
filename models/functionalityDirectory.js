@@ -17,9 +17,11 @@ class FunctionalityDirectory {
             } else {
                 functionalities = this.registry.get(type);
             }
+            console.log("[bind] functionalities: " + JSON.stringify(functionalities));
 
             functionalities.push(functionality);
             this.registry.set(type, functionalities);
+            console.log("[bind] Directory: " + this.registry.size);
         }
 	}
 
