@@ -4,6 +4,7 @@ class FunctionalityDirectory {
 	constructor(){
         // The map of functionality instances, indexed by types (Functionality class)
 		this.registry = new Map();
+        console.log("Constructor");
 	}
 
 	/**
