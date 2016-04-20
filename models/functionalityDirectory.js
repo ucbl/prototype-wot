@@ -10,21 +10,17 @@ class FunctionalityDirectory {
      * Bind a functionality serialization to the directory, according to its "@type" property
      */
 	bind(functionality) {
-        console.log("bind : " + functionality['@type']);
         let type = functionality['@type'];
             let functionalities;
             if (this.registry.get(type) === undefined) {
-                console.log("Patrouvé");
                 functionalities = [];
             } else {
-                console.log("Trouvé");
                 functionalities = this.registry.get(type);
             }
             console.log("[bind] fin de boucle : functionalities = " + JSON.stringify(functionalities));
 
             functionalities.push(functionality);
             this.registry.set(type, functionalities);
-            console.log("[bind] Directory: " + this.registry.size);
 	}
 
 	/**
@@ -38,12 +34,11 @@ class FunctionalityDirectory {
         //Iterate ovr each functionality type
 		for (let functionalities of this.registry) {
             let positions = [];
-//			let functionalities = this.registry.get(funcType);
             //Find the functionalities that have the same @id as the one given in parameters
             //(should only be one, but...)
             console.log("[Unbind] 1ere boucle : " + JSON.stringify(functionalities));
             for(let i in functionalities) {
-                console.log("[Unbind] 2eme boucle : " + JSON.stringify(functionalities[i]));
+                console.log("[Unbind] 2eme boucle : " + JSON.stringify(functionalities[i]) + " -> " + functionalities[i]["@id"]);
                 if(functionalities[i]["@id"] === functionalityId) {
                     positions.push(i);
                 }
