@@ -36,9 +36,7 @@ class FunctionalityDirectory {
             let positions = [];
             //Find the functionalities that have the same @id as the one given in parameters
             //(should only be one, but...)
-            console.log("[Unbind] 1ere boucle : " + JSON.stringify(functionalities));
             for(let i=0; i< functionalities.length; i++) {
-                console.log("[Unbind] 2eme boucle : " + JSON.stringify(functionalities[i]) + " -> " + functionalities[i]["@id"]);
                 if(functionalities[i]["@id"] === functionalityId) {
                     positions.push(i);
                 }
@@ -54,7 +52,6 @@ class FunctionalityDirectory {
 				result = true;
 			}
 		}
-        console.log("[Unbind] result: " + result);
         return result;
 	}
 
