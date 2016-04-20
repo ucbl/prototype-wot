@@ -61,7 +61,7 @@ class FunctionalityDirectory {
      * @returns {*}
      */
     rebind (functionality) {
-        this.unbind(functionality["@id"]);
+        console.log("[Rebind] unbind: " + this.unbind(functionality["@id"]));
         return this.bind(functionality);
     }
 
