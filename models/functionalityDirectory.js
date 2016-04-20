@@ -9,19 +9,17 @@ class FunctionalityDirectory {
 	/**
      * Bind a functionality serialization to the directory, according to its "@type" property
      */
-	bind(functionality) {
+    bind(functionality) {
         let type = functionality['@type'];
-            let functionalities;
-            if (this.registry.get(type) === undefined) {
-                functionalities = [];
-            } else {
-                functionalities = this.registry.get(type);
-            }
-            console.log("[bind] fin de boucle : functionalities = " + JSON.stringify(functionalities));
-
-            functionalities.push(functionality);
-            this.registry.set(type, functionalities);
-	}
+        let functionalities;
+        if (this.registry.get(type) === undefined) {
+            functionalities = [];
+        } else {
+            functionalities = this.registry.get(type);
+        }
+        functionalities.push(functionality);
+        this.registry.set(type, functionalities);
+    }
 
 	/**
 	 * Unbinds all occurrences of a functionality from the registry, according to its "@id" property
@@ -34,7 +32,7 @@ class FunctionalityDirectory {
         //Iterate ovr each functionality type
 
 		for (let functionalities of this.registry) {
-            console.log("[Unbind] 0tieme boucle : " + JSON.stringify(this.registry));
+            console.log("[Unbind] 0tieme boucle : " + this.registry);
             let positions = [];
             //Find the functionalities that have the same @id as the one given in parameters
             //(should only be one, but...)
