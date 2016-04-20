@@ -31,7 +31,7 @@ class FunctionalityDirectory {
 		let result = false;
         //Iterate ovr each functionality type
 
-		for (let funcType in this.registry.keys()) {
+		for (let funcType of this.registry.keys()) {
             let functionalities = this.registry.get(funcType);
             let positions = [];
             //Find the functionalities that have the same @id as the one given in parameters
