@@ -33,7 +33,6 @@ class FunctionalityDirectory {
 
 		for (let funcType in this.registry.keys()) {
             let functionalities = this.registry.get(funcType);
-            console.log("[Unbind] 0tieme boucle : " + this.registry);
             let positions = [];
             //Find the functionalities that have the same @id as the one given in parameters
             //(should only be one, but...)
