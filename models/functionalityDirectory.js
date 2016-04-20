@@ -37,15 +37,15 @@ class FunctionalityDirectory {
             //Find the functionalities that have the same @id as the one given in parameters
             //(should only be one, but...)
             console.log("[Unbind] 1ere boucle : " + JSON.stringify(functionalities));
-            for(let i in functionalities) {
+            for(let i=0; i< functionalities.length; i++) {
                 console.log("[Unbind] 2eme boucle : " + JSON.stringify(functionalities[i]) + " -> " + functionalities[i]["@id"]);
                 if(functionalities[i]["@id"] === functionalityId) {
                     positions.push(i);
                 }
             }
             //Remove each of those
-			for (i of positions) {
-				functionalities.splice(i, 1);
+			for (let pos of positions) {
+				functionalities.splice(pos, 1);
 				if (functionalities.length > 0) {
 					this.registry.set(funcType, functionalities);
 				} else {
