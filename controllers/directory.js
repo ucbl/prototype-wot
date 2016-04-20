@@ -75,7 +75,7 @@ router.delete('/:functionalityId', function(request, response, next) {
     if(result) {
         response.sendStatus(204);
     } else {
-        response.sendStatus(404);
+        response.sendStatus(404).end();
     }
 });
 
