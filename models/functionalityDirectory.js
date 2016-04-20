@@ -54,6 +54,7 @@ class FunctionalityDirectory {
 				result = true;
 			}
 		}
+        console.log("[Unbind] result: " + result);
         return result;
 	}
 
