@@ -73,9 +73,9 @@ router.delete('/:functionalityId', function(request, response, next) {
     var functionalityId = request.params.functionalityId;
     var result = functionalityDirectory.unbind(functionalityId);
     if(result) {
-        response.sendStatus(204);
+        response.sendStatus(204).end();
     } else {
-        response.sendStatus(404).end();
+        response.sendStatus(404);
     }
 });
 
